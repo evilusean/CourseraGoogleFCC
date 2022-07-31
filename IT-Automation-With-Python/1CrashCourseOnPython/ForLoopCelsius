@@ -1,0 +1,5 @@
+#converts from fahrenheit to celsius in steps of 10 degrees and prints result
+def to_celsius(x):
+  return (x-32)*5/9
+for x in range(0,121,10):
+  print(x, to_celsius(x))

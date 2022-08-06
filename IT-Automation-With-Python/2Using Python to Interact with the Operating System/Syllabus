@@ -1,0 +1,218 @@
+Using Python to Interact with the Operating System
+by Google
+
+About this Course
+By the end of this course, you’ll be able to manipulate files and processes on your computer’s operating system. You’ll also have learned about regular expressions -- a very powerful tool for processing text files -- and you’ll get practice using the Linux command line on a virtual machine. And, this might feel like a stretch right now, but you’ll also write a program that processes a bunch of errors in an actual log file and then generates a summary file. That’s a super useful skill for IT Specialists to know.
+
+We’ll kick off by exploring how to execute Python locally, and organize and use code across different Python files. We'll then learn how to read and write different types of files, and use subprocesses and input streams. We'll also dive into Bash scripting and regular expressions -- both very powerful tools for anyone working with systems. We'll even touch on automatic testing, which allow us to automate how we check if our code is correct. To finish, we’ll put all this together by using the tools that we’ve acquired to process data and generate automatic reports.
+
+We’ll also explain how to set up your own developer environment in your machine. This is a key step in being able to write and deploy powerful automation tools.
+
+
+ More
+Basic Info	
+Course 2 of 6 in the Google IT Automation with Python Specialization
+Level	Beginner
+Language	
+English, Subtitles: Arabic, French, Portuguese (European), Italian, Vietnamese, German, Russian, Spanish
+Volunteer to translate subtitles for this course
+How To Pass	Pass all graded assignments to complete the course.
+User Ratings	
+Average User Rating 4.7
+Syllabus
+WEEK 1
+Getting Your Python On
+In this module, you’ll learn about the different types of operating systems, and how you can get your python code ready to interact with the operating system. We’ll learn about getting your environment set up and installing additional Python modules that will help you along the way. We’ll rundown interpreted versus compiled language, and how they differ from each other. We’ll dive into the benefits of automation, and point out common pitfalls so you can avoid them. Finally, we’ll learn about Qwiklabs, which will be used for graded assessments.
+
+16 videos, 5 readings, 3 practice quizzes
+Video: Course Introduction
+Reading: Welcome to the Course
+Discussion Prompt: Meet & Greet
+Video: Intro to Module 1: Getting Your Python On
+Video: Getting Familiar with the Operating System
+Video: Getting Your Computer Ready for Python
+Video: Setting up Your Environment on Windows (Optional)
+Video: Setting up Your Environment on MacOS (Optional)
+Video: Setting up Your Environment on Linux (Optional)
+Reading: Pointers for Getting Your Environment Setup
+Practice Quiz: Practice Quiz: Getting Ready for Python
+Video: Interpreted vs. Compiled Languages
+Video: How to Run a Python Script
+Video: Your Own Python Modules
+Video: What is an IDE?
+Reading: Setting up Your Environment
+Practice Quiz: Practice Quiz: Running Python Locally
+Video: Benefits of Automation
+Video: Pitfalls of Automation
+Video: Practical Automation Example
+Reading: Is it worth the time?
+Practice Quiz: Practice Quiz: Automation
+Video: What is Qwiklabs?
+Reading: How to Log in to Qwiklabs
+Video: Module 1 Wrap Up: Getting Your Python On
+Discussion Prompt: Discussion Prompt
+
+Show lessweek 1 material
+Graded: Qwiklabs Assessment: Working with Python Scripts
+WEEK 2
+Managing Files with Python
+In this module, you’ll learn about reading and writing to files and the commands that will enable you to do this. We’ll learn the importance of managing files and how we can navigate through different directories. We’ll understand how to work with files and how there is a layer of abstraction between Python and the operating system. Finally, we’ll dive into learning about CSV files and how to best utilize them.
+
+12 videos, 3 readings, 2 practice quizzes
+Video: Programming with Files
+Discussion Prompt: Discussion Prompt
+Video: Reading Files
+Video: Iterating through Files
+Video: Writing Files
+Reading: Reading and Writing Files Cheat-Sheet
+Ungraded Lab: Practice Notebook: Text Files
+Video: Working with Files
+Video: More File Information
+Video: Directories
+Reading: Files and Directories Cheat-Sheet
+Practice Quiz: Practice Quiz: Managing Files & Directories
+Video: What is a CSV file?
+Video: Reading CSV Files
+Video: Generating CSV
+Video: Reading and Writing CSV Files with Dictionaries
+Reading: CSV Files Cheat Sheet
+Practice Quiz: Practice Quiz: Reading & Writing CSV Files
+Video: Module 2 Wrap Up: Managing Files with Python
+Discussion Prompt: Where did you struggle?
+
+Show lessweek 2 material
+Graded: Qwiklabs Assessment: Handling Files
+WEEK 3
+Regular Expressions
+In this module, you’ll learn about what a regular expression is and why you would use one. We’ll dive into the basics of regular expressions and give examples of wildcards, repetition qualifiers, escapare characters, and more. Next up, we’ll explore advanced regular expressions and deep dive on repetition qualifiers. You’ll tackle new exercises like capturing groups and extracting PIDs using regexes. Finally, we’ll provide a cheat sheet to serve as your go-to guide for regular expressions.
+
+14 videos, 2 readings, 3 practice quizzes
+Video: Intro to Module 3: Regular Expressions
+Video: What are regular expressions?
+Video: Why use regular expressions?
+Video: Basic Matching with grep
+Practice Quiz: Practice Quiz: Regular Expressions
+Video: Simple Matching in Python
+Video: Wildcards and Character Classes
+Video: Repetition Qualifiers
+Video: Escaping Characters
+Video: Regular Expressions in Action
+Reading: Regular Expressions Cheat-Sheet
+Practice Quiz: Practice Quiz: Basic Regular Expressions
+Discussion Prompt: When could you use regular expressions?
+Video: Capturing Groups
+Video: More on Repetition Qualifiers
+Video: Extracting a PID Using regexes in Python
+Video: Splitting and Replacing
+Reading: Advanced Regular Expressions Cheat-Sheet
+Practice Quiz: Practice Quiz: Advanced Regular Expressions
+Video: Module 3 Wrap Up: Regular Expressions
+Discussion Prompt: Share Your Experience
+
+Show lessweek 3 material
+Graded: Qwiklabs Assessment: Working with Regular Expressions
+WEEK 4
+Managing Data and Processes
+In this module, we’ll learn about reading and writing to data files based on an interaction with the user. Along the way, we’ll dive into standard streams, environment variables, and command line arguments. Next, we’ll jump into Python subprocesses, including system commands and how they can be used. We’ll review how to obtain output from a system command, and dive into subprocess management, including how to check exit values and manipulate the normal versus error exit values. Finally, we’ll rundown processing log files, and will cover what a log file is, how to filter log files using regular expressions, and how to understand the output captured from log files.
+
+Show less
+12 videos, 2 readings, 3 practice quizzes
+Video: Intro to Module 4: Managing Data and Processes
+Discussion Prompt: Discussion Prompt
+Video: Reading Data interactively
+Video: Standard Streams
+Video: Environment Variables
+Video: Command-Line Arguments and Exit Status
+Reading: More About Input Functions
+Practice Quiz: Practice Quiz: Data Streams
+Video: Running System Commands in Python
+Video: Obtaining the Output of a System Command
+Video: Advanced Subprocess Management
+Reading: Python Subprocesses Cheat Sheet
+Practice Quiz: Practice Quiz: Python Subprocesses
+Video: What are log files?
+Video: Filtering Log Files with Regular Expressions
+Video: Making Sense out of the Data
+Practice Quiz: Practice Quiz: Processing Log Files
+Video: Module 4 Wrap Up: Managing Data and Processes
+Discussion Prompt: Discussion Prompt
+
+Show lessweek 4 material
+Graded: Qwiklabs Assessment: Working with Log Files
+WEEK 5
+Testing in Python
+In this module, you’ll learn how to create tests in Python. We’ll cover what testing is all about and dive into the differences between manual versus automated testing. Next, we’ll explore what unit tests are intended to do and how to write them. Then, we’ll learn about other test concepts like black box versus white box tests and how test-driven development can frame how you design and write your code. Finally, you’ll learn about errors and exceptions, and how to combat them.
+
+14 videos, 4 readings, 2 practice quizzes
+Video: Intro to Module 5: Testing in Python
+Video: What is testing?
+Video: Manual Testing and Automated Testing
+Practice Quiz: Practice Quiz: Simple Tests
+Video: Unit Tests
+Video: Writing Unit Tests in Python
+Video: Edge Cases
+Video: Additional Test Cases
+Reading: Unit Test Cheat-Sheet
+Reading: Help with Jupyter Notebooks
+Ungraded Lab: Unit Tests: Practice Jupyter Notebook
+Video: Black Box vs. White Box
+Video: Other Test Types
+Video: Test-Driven Development
+Reading: More About Tests
+Practice Quiz: Practice Quiz: Other Test Concepts
+Video: The Try-Except Construct
+Video: Raising Errors
+Video: Testing for Expected Errors
+Reading: Handling Errors Cheat-Sheet
+Ungraded Lab: Errors & Exceptions: Practice Notebook
+Video: Module 5 Wrap Up: Testing in Python
+Discussion Prompt: Discussion Prompt
+
+Show lessweek 5 material
+Graded: Qwiklabs Assessment: Implementing Unit Testing
+WEEK 6
+Bash Scripting
+In this module, you’ll be exposed to what the Linux OS has to offer and you'll learn about Bash scripting. We’ll go over basic Linux commands and explore the many processes Linux has to offer, including a key concept called redirection. We’ll then deep dive into creating bash scripts using variables and globs. Finally, we’ll learn about advanced bash concepts and develop an understanding of when to use bash versus Python.
+
+13 videos, 3 readings, 3 practice quizzes
+Video: Intro to Module 6: Bash Scripting
+Video: Basic Linux Commands
+Video: Redirecting Streams
+Video: Pipes and Pipelines
+Video: Signalling Processes
+Reading: Basic Linux Commands Cheat-Sheet
+Reading: Redirections, Pipes and Signals
+Practice Quiz: Practice Quiz: Interacting with the Command Line
+Video: Creating Bash Scripts
+Video: Using Variables and Globs
+Video: Conditional Execution in Bash
+Reading: Bash Scripting Resources
+Practice Quiz: Practice Quiz: Bash Scripting
+Video: While Loops in Bash Scripts
+Video: For Loops in Bash Scripts
+Video: Advanced Command Interaction
+Video: Choosing Between Bash and Python
+Practice Quiz: Practice Quiz - Advanced Bash Concepts
+Video: Module 6 Wrap Up: Bash Scripting
+Discussion Prompt: Discussion Prompt
+
+Show lessweek 6 material
+Graded: Qwiklabs Assessment: Editing Files Using Substrings
+WEEK 7
+Final Project
+In this module, you’ll put everything you’ve learned so far into action! You’ll apply your scripting knowledge to tackle a challenging final project: writing a script that scans for a specific error in the log files.
+
+You'll create a problem statement to understand the challenge, conduct some research to see what options are available, then begin planning how you intend to solve the problem. Lastly, you'll write the code to implement your solution!
+
+Show less
+6 videos
+Video: Intro to Your Final Project
+Video: Writing a Script from the Ground Up
+Video: Project Problem Statement
+Video: Help with Research and Planning
+Video: Congratulations!
+Discussion Prompt: Your Learner Journey
+Video: Sneak Peek of the Next Course
+
+Show lessweek 7 material
+Graded: Qwiklabs Assessment: Log Analysis Using Regular Expressions

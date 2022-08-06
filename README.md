@@ -6,13 +6,6 @@ Start:29July2022
 
 End:
 
-## 1Crash Course on Python
-
-https://www.coursera.org/learn/python-crash-course?specialization=google-it-automation
-
-Start:29July2022
-
-End:06August2022
 
 # Google Project Management: Professional Certificate:
 
@@ -22,19 +15,4 @@ Start:28July2022
 
 End:
 
-## 1Google Project Management Foundations:
-
-https://www.coursera.org/learn/project-management-foundations
-
-Start:28July2022
-
-End:31July2022
-
-## 2Project Initiation: Starting a Successful Project
-
-https://www.coursera.org/learn/project-initiation-google
-
-Start:01August2022
-
-End:
 

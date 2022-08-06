@@ -12,7 +12,7 @@ https://www.coursera.org/learn/python-crash-course?specialization=google-it-auto
 
 Start:29July2022
 
-End:
+End:06August2022
 
 # Google Project Management: Professional Certificate:
 

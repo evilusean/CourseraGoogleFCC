@@ -13,8 +13,17 @@ Start:28July2022
 End:31July2022
 
 ## 2Project Initiation: Starting a Successful Project
+
 https://www.coursera.org/learn/project-initiation-google
 
 Start:01August2022
+
+End:07August2022
+
+## Project Planning: Putting It All Together
+
+https://www.coursera.org/learn/project-planning-google
+
+Start:08August2022
 
 End:

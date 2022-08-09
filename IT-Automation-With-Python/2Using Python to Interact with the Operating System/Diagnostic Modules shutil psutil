@@ -16,7 +16,7 @@ psutil.cpu_percent(0.1)
 #functions below
 #create a function to show disk usage return true if it's more than 20% free or false if less
 #add a shebang(#!) to make a python script run like an executable
-#!/usr/bin/env python 
+#!/usr/bin/env python3
 def check_disk_usage(disk):
   du=shutil.disk_usage(disk)
   free = du.free / du.total * 100

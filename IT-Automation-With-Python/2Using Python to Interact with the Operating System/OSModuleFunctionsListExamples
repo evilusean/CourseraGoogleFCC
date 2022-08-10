@@ -14,7 +14,20 @@ os.path.getmtime("filename")
 #gets absolute path that can be used on any operating system
 os.path.abspath("filename")
 
-
+#gets current working directory
+print(os.getcwd())
+#makes directory located in current working directory
+os.mkdir("new_dir")
+#changes directory
+os.chdir("new_dir")
+#removes directory-can only remove if there are no files
+os.rmdir("new_dir")
+#lists all files in a directory
+os.listdir("directory")
+#joins a directory, creates a string containing cross-platform concatenated directories.
+os.path.join(dir, name)
+#checks if a file is a directory
+os.path.isdir(fullname)
 
 
 Website Link:

@@ -6,6 +6,17 @@ os.rename("old_name", "new_name")
 os.remove("filename")
 #check if a file exists
 os.path.exists("filename")
+#gets filesize in bytes
+os.path.getsize("filename")
+#gets last modified time in unix timestamp seconds since january 1st 1970
+#use datetime module to get actual date: datetime.datetime.fromtimestamp("timestamp_variable")
+os.path.getmtime("filename")
+#gets absolute path that can be used on any operating system
+os.path.abspath("filename")
+
+
+
+
 Website Link:
 #https://data-flair.training/blogs/python-os-module/
 1. access(path,mode)

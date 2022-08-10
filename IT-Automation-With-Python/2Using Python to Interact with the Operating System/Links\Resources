@@ -8,4 +8,9 @@ Python IDE Tutorial: The Top 5 Python IDEs For Data Science:
 https://www.datacamp.com/tutorial/data-science-python-ide
 Reading and Writing Files:
 https://docs.python.org/3/library/functions.html#open
-
+OS module official documentation:
+https://docs.python.org/3/library/os.html
+OS.path official documentation:
+https://docs.python.org/3/library/os.path.html
+Unix time summary(January 1st 1970):
+https://en.wikipedia.org/wiki/Unix_time

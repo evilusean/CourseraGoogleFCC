@@ -30,6 +30,11 @@ os.path.join(dir, name)
 os.path.isdir(fullname)
 
 
+OS Official Documentation:
+https://docs.python.org/3/library/os.html
+OS.path:
+https://docs.python.org/3/library/os.path.html
+
 Website Link:
 #https://data-flair.training/blogs/python-os-module/
 1. access(path,mode)

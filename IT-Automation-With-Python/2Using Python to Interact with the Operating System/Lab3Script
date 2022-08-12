@@ -25,7 +25,6 @@ def write_report(dictionary, report_file):
         f.close()
 
 employee_list = read_employees('/home/student-00-ef1-afff/data/employees.csv')
-#print(employee_list)
 dictionary = process_data(employee_list)
-print(dictionary)
+
 write_report(dictionary, '/home/student-00-ef1-afff/data/report.txt')

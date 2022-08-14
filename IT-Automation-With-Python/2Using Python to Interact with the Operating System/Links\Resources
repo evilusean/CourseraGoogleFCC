@@ -22,4 +22,13 @@ CSV CheatSheet:
 https://realpython.com/python-csv/
 
 
+Regular Expression official docs:
+https://docs.python.org/3/howto/regex.html
+re module official docs:
+https://docs.python.org/3/library/re.html
+Greedy vs NonGreedy RegEx:
+https://docs.python.org/3/howto/regex.html#greedy-versus-non-greedy
+Regular Expression Testing:
+regex101.com
+
 

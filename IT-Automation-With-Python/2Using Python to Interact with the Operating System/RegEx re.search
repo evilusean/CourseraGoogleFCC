@@ -1,0 +1,3 @@
+#use re module for regular expressions: best practice is to use raw strings
+result = re.search(r"aza", "plaza")
+#above searches for "aza" in "plaza" and gives index

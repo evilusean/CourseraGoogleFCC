@@ -1,0 +1,20 @@
+# adding '\' backslash turns a '.' wildcard into a '.com'
+print(re.search(r"\.com", "pysean.com"))
+#\n new line
+#\t tab
+#\d matching digits
+#\s whitespace characters
+#\w any alphanumeric character and underscores
+print(re/search(r"\w*", "This_is_an_entire_index"))
+
+#Fill in the code to check if the text passed has at least 2 groups of alphanumeric characters (including letters, numbers, and underscores) 
+#separated by one or more whitespace characters.
+import re
+def check_character_groups(text):
+  result = re.search(r"[0-9]\w", text)
+  return result != None
+
+print(check_character_groups("One")) # False
+print(check_character_groups("123  Ready Set GO")) # True
+print(check_character_groups("username user_01")) # True
+print(check_character_groups("shopping_list: milk, bread, eggs.")) # False

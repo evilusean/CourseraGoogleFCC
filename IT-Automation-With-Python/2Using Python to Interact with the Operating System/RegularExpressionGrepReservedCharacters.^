@@ -1,0 +1,10 @@
+#searches all words in a built in spell checking dictionary(directory below) for 'thon' using grep regular expression, case sensitive
+grep thon /usr/share/dict/words
+#to remove case sensitive pass -i parameter
+grep -i python /usr/share/dict/words
+#reserved characters '.' is used for a wildcard(can be any character
+grep l.rts /usr/share/dict/words
+#'^'(circumflex) indicates the beginning of line --->
+grep ^fruit /usr/share/dict/words
+#'$' indicates the end of line <---
+grep cat$ /usr/share/dict/words

@@ -1,0 +1,21 @@
+# '.*' matches any character any number of times including spaces
+#matches any character after 'Py' any number of times followed by 'n'
+print(re.search(r"Py.*n", "Pygmalion"))
+
+#'+' matches one more character of any that came before it
+print(re.search(r"o+l+", "woolly"))
+
+#'?' optional character if there are either 0 or 1 of the character before it will return
+print(re.search(r"p?each", "To each their own."))
+
+#The repeating_letter_a function checks if the text passed includes the letter "a" (lowercase or uppercase) at least twice. For example, 
+#repeating_letter_a("banana") is True, while repeating_letter_a("pineapple") is False. Fill in the code to make this work. 
+import re
+def repeating_letter_a(text):
+  result = re.search(r"[Aa].*[Aa]", text)
+  return result != None
+
+print(repeating_letter_a("banana")) # True
+print(repeating_letter_a("pineapple")) # False
+print(repeating_letter_a("Animal Kingdom")) # True
+print(repeating_letter_a("A is for apple")) # True

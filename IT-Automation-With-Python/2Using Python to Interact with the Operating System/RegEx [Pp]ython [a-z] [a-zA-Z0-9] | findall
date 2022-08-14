@@ -3,9 +3,21 @@ print(re.search(r"[Pp]ython", "Python"))
 #use [a-z] to encapsulate any lower case letter
 print(re.search(r"[a-z]way", "the end of the highway")
 #result is index of hway
+
 #use [A-Z] for uppercase
 #encapsulate all upper/lower and numbers = [a-zA-Z0-9]
 print(re.search(r"cloud[a-zA-Z0-9]", "cloud9"))
+
+#add a circumflex for characters you DONT want to find 
+print(re.search(r"[^a-zA-z ]", "This is a sentence that ignores letters and spaces."))
+
+#use '|' for or to match either/or
+print(re.search(r"cat|dog", "I like dogs."))
+
+#re.search only finds the first instance of word
+#use re.findall to find ALL instances of it
+print(re.findall(r"cat|dog", "I like both cats and dogs."))
+
 
 #Fill in the code to check if the text passed contains punctuation symbols: commas, periods, colons, semicolons, question marks, and exclamation points.
 import re

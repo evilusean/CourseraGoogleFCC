@@ -1,0 +1,6 @@
+#splits below at . ! or ? add ([.!?]) parenthesis to capture the notations as well
+re.split(r"[.!?]","This is a sentence. This is a sentance? THIS is a sentance")
+#similar to replace, used for creating new strings by substituting all or part of them 
+#replaces email with [REDACTED] for state secrets and hiding the guilty
+re.sub(r"[\w.%+-]+@[\w.-]+","[REDACTED]", "received an email for temesy@hotmail.com"
+

@@ -1,0 +1,6 @@
+#obtains the output of a system command and saves it as a variable
+#host command converts a host name to ip address and vice versa
+result = subprocess.run(["host", "8.8.8.8"], capture_output=True)
+print(result.returncode)#prints return code 0=success
+#result saved as an array, need to decode into UTF8
+print(result.stdout.decode().split())

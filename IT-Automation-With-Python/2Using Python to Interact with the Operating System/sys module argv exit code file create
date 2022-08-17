@@ -4,6 +4,7 @@ import sys
 print(sys.argv)
 
 #exit code=when a script is run it gives an exit code 0=successful others indicate error
+#check exit code by typing 'echo $?' in shell
 #simple script below to create a file if none exists
 import os
 import sys

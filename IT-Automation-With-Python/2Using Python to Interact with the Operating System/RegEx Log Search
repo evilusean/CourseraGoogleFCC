@@ -8,5 +8,5 @@ with open(logfile) as f:
       if "CRON" not in line:
         continue
       pattern=r"USER \((\w+)\)$"
-      
+      result=re.search(pattern, line)
       print(line.strip())

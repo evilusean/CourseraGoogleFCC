@@ -1,0 +1,12 @@
+#searches a log file for "CRON" and gets user id with regex
+import re
+import sys
+
+logfile = sys.argv[1]
+with open(logfile) as f:
+  for line in f:
+      if "CRON" not in line:
+        continue
+      pattern=r"USER \((\w+)\)$"
+      
+      print(line.strip())

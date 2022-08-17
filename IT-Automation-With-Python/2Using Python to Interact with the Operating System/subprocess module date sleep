@@ -1,0 +1,7 @@
+#subprocess can run any command using .run that you would use in a shell
+#uses subprocess module as a system command to get current date as an object
+import subprocess
+suprocess.run(["date"])
+
+#uses subprocess to run sleep command in number of seconds ["2"]
+subprocess.run(["sleep"], ["2"])

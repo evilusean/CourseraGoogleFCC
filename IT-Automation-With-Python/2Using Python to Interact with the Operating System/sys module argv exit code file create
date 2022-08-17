@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+#very simple script that uses sys module to print sys modules argv parameters list in linux bash shell 
+import sys
+print(sys.argv)
+
+#exit code=when a script is run it gives an exit code 0=successful others indicate error
+#simple script below to create a file if none exists
+import os
+import sys
+
+if not as.path.exists(filename):
+  with open(filename, "w") as f:
+      f.write("New File created\r")
+else:
+  print("Error, the file {} already exists!".format(filename))
+  sys.exit(1)

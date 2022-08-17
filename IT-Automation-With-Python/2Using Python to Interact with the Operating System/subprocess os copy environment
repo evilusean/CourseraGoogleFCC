@@ -1,0 +1,25 @@
+#copies environment of childprocess(subprocess),creates a new path and saves the copy there where we can make any neccessary changes
+#without altering original environment
+import os
+import subprocess
+#copies current environment
+my_env = os.environ.copy()
+#new path location, adds a directory
+my_env["PATH"] = os.pathsep.join(["/opt/myapp/", my_env["PATH"]])
+#myapp name of file
+result = subprocess.run(["myapp"], env=my_env)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

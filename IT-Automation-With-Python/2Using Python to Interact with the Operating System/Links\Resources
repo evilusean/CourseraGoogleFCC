@@ -47,6 +47,7 @@ Unittest module through command line:
 https://docs.python.org/3/library/unittest.html#command-line-interface
 Understand various Unit Test Design Patterns:
 https://docs.python.org/3/library/unittest.html#organizing-test-code
-
+Understand more specific assertions such as assertRaises
+https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertRaises
 
 

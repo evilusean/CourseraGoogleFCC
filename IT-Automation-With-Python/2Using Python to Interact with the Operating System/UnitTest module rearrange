@@ -17,6 +17,29 @@ class TestRearrange(unittest.TestCase):
       testcase = "Lovelace, Ada"
       expected = "Ada Lovelace"
       self.assertEqual(rearrange_name(testcase),expected)
+    
+  def test_empy(self):#produces an abnormal edge case, type error
+      testcase= ""
+      expected= ""
+      self.assertEqual(rearrange_name(testcase),expected)
+"""
+add if result=None
+  return "" to rearrange.py to fix
+"""
+  def test_double_name(self):
+    testcase = "Hopper, Grace M."
+    expected = "Grace M. Hopper"
+    self.assertEqual(reannge_name(testcase),expected)
 
+  def test_one_name(self):#returns an abnormal edge case, assertion error
+    testcase = "Voltaire"
+    expected = "Voltaire"
+    self.assertEqual(reannge_name(testcase),expected)
+"""
+add
+if result=None
+  return name
+to rearrange.py to fix
+"""
 unittest.main()
  

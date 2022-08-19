@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+#rearrange.py
+#rearranges name and puts last name first
+import re
+rearrange_name(name):
+result = re.search(r"^([\w .]*), ([\w .]*)$, name)
+  return "{} {}".format9result[1], result[2])
+
+#!/usr/bin/env python3
+#import rearrange function from rearrange.py
+from rearrange import rearrange.py
+#import unit test module
+import unittest
+#create new testing class with testcase and result
+class TestRearrange(unittest.TestCase):
+  def test_basic(self)
+      testcase = "Lovelace, Ada"
+      expected = "Ada Lovelace"
+      self.assertEqual(rearrange_name(testcase),expected)
+
+unittest.main()
+ 

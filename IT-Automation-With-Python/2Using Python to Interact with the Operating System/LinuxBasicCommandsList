@@ -66,5 +66,7 @@ free: shows the amount of unused memory on the current system
 
 <input> >> <outputfile>: >> appends stream into a file, does not overwrite previous contents
 
+ping <website>: sends ICMP once per second getting latency/response time
+
 
 

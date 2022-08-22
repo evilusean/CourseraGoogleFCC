@@ -70,3 +70,6 @@ ping <website>: sends ICMP once per second getting latency/response time
 
 |: pipe command, can tie together multiple commands into different programs
 
+ps: list processes
+ps ax: lists all available running processes
+kill <process>: stops any running process

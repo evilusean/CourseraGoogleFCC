@@ -68,5 +68,5 @@ free: shows the amount of unused memory on the current system
 
 ping <website>: sends ICMP once per second getting latency/response time
 
-
+|: pipe command, can tie together multiple commands into different programs
 

@@ -1,0 +1,7 @@
+#!/bin/bash
+#iterates over the log file finding most frequent cuts at ' 'space and removes end of logs and sorts prints top 5 lines in each file
+
+for logfile in /var/log/*log; do
+  echo "Processing: $logfile"
+  cut -d' ' -f5- $logfile | sort | uniq -c | sort -nr | head -5
+done

@@ -66,6 +66,21 @@ free: shows the amount of unused memory on the current system
 
 <input> >> <outputfile>: >> appends stream into a file, does not overwrite previous contents
 
+Variables:
+When assigning a variable insure there are no spaces between = and <Variable> or it will error
+<VariableName>=<Variable> 
+
+When Calling a variable you need to prefix $<VariableName>
+echo $<VariableName>
+
+Globs:
+can be used to match all file names that match file format specified
+echo *.py #gets all .py files in directory
+echo c* #gets all files that start with letter 'c'
+echo * #gets all files of any type in directory
+? = wildcard can be used to replace any character
+echo ?????.py #finds any .py script 5 characters long
+
 ping <website>: sends ICMP once per second getting latency/response time
 
 |: pipe command, can tie together multiple commands into different programs

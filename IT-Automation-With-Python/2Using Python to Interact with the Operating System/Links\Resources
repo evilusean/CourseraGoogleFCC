@@ -80,3 +80,8 @@ Except is used to catch and handle the exception(s) that are encountered in the 
 https://docs.python.org/3/library/exceptions.html#bltin-exceptions
 Other interesting Exception handling readings:
 https://doughellmann.com/posts/python-exception-handling-techniques/
+
+Bash Scripting Resources
+https://ryanstutorials.net/bash-scripting-tutorial/
+https://linuxconfig.org/bash-scripting-tutorial-for-beginners
+https://www.shellscript.sh

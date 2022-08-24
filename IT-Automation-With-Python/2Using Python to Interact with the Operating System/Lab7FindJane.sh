@@ -37,4 +37,17 @@ for file in $files; do
         else
                 echo "File doesn't exist"; fi
 done
+###ATTEMPT 4(WORKS)
+#./findJane.sh > oldFiles.txt
+#!/bin/bash
+>oldFiles.txt
+
+files= grep " jane " /home/student-00-b5c7881ca4c3/data/list.txt | cut -d ' ' -$
+for file in $files; do
+        if test -e ~/data/$file; then
+                echo $file >> oldFiles.txt;
+        else
+                echo "File does not exist"; fi
+done
+
 

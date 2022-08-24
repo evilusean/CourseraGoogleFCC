@@ -30,7 +30,7 @@ for line in f.readlines():
         new_name= old_name.replace("jane", "jdoe")
         subprocess.run(["mv",path+old_name,path+new_name])
 f.close()
-####Try above; if fails try below tomorrow
+####ATTEMPT 3
 #!/usr/bin/env python3
 import sys
 import subprocess
@@ -41,3 +41,17 @@ with open(sys.argv[1], 'r') as f:
     res = dict(zip(content2, content3))
     for key, value in res.items():
         subprocess.run(['mv', '/home/student-00-b5c7881ca4c3/'+key, '/home/student-00-b5c7881ca4c3/'+value])
+###ATTEMPT 4(works)
+#./changeJane oldFiles.txt
+#!/usr/bin/env python3
+import sys
+import subprocess
+
+f=open(sys.argv[1], "r")
+path='/home/student-00-b5c7881ca4c3'
+for line in f.readlines():
+        old_name=line.strip()
+        new_name=old_name.replace("jane", "jdoe")
+        subprocess.run(["mv", path+old_name,path+new_name])
+f.close()
+

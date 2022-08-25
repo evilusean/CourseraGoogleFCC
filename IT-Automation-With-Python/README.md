@@ -20,4 +20,12 @@ https://www.coursera.org/learn/python-operating-system?specialization=google-it-
 
 Start: 07August2022
 
+End:25August2022
+
+## 3Introduction to Git and GitHub
+
+https://www.coursera.org/learn/introduction-git-github?specialization=google-it-automation
+
+Start:08August2022
+
 End:

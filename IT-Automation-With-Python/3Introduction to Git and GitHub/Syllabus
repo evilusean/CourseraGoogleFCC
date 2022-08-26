@@ -1,0 +1,151 @@
+Introduction to Git and GitHub
+by Google
+
+About this Course
+In this course, you’ll learn how to keep track of the different versions of your code and configuration files using a popular version control system (VCS) called Git. We'll also go through how to setup an account with a service called GitHub so that you can create your very own remote repositories to store your code and configuration. 
+
+Throughout this course, you'll learn about Git's core functionality so you can understand how and why it’s used in organizations. We’ll look into both basic and more advanced features, like branches and merging. We'll demonstrate how having a working knowledge of a VCS like Git can be a lifesaver in emergency situations or when debugging. And then we'll explore how to use a VCS to work with others through remote repositories, like the ones provided by GitHub.
+
+By the end of this course, you'll be able to store your code's history in Git and collaborate with others in GitHub, where you’ll also start creating your own portfolio! 
+
+In order to follow along and complete the assessments, you’ll need a computer where you can install Git or ask your administrator to install it for you.
+
+
+ More
+Basic Info	
+Course 3 of 6 in the Google IT Automation with Python Specialization
+Level	Beginner
+Language	
+English, Subtitles: Arabic, French, Portuguese (European), Italian, Vietnamese, German, Russian, Spanish
+Volunteer to translate subtitles for this course
+How To Pass	Pass all graded assignments to complete the course.
+User Ratings	
+Average User Rating 4.8
+Syllabus
+WEEK 1
+Introduction to Version Control
+In this module, you'll be introduced to the concept of version control, which will make managing and rolling back your code look super easy. You’ll learn how to differentiate between files and the tools at your disposal to make this happen. Next, you'll be introduced to Git and how you can leverage that platform to improve your coding abilities. Once you’ve got a grasp on what Git is, you’ll install it and start using it to create and clone code repositories. Last up, you’ll deep dive into Git in order to get more familiar with the different tools and commands it has to offer.
+
+Show less
+16 videos, 6 readings, 3 practice quizzes
+Video: Course Introduction
+Reading: Welcome to the Course
+Discussion Prompt: Meet & Greet
+Video: Intro to Module 1: Version Control
+Video: Keeping Historical Copies
+Video: Diffing Files
+Video: Applying Changes
+Video: Practical Application of diff and patch
+Practice Quiz: Practice Quiz: Before Version Control
+Reading: diff and patch Cheat Sheet
+Video: What is version control?
+Video: Version Control and Automation
+Video: What is Git?
+Reading: More Information About Git
+Video: Installing Git
+Video: Installing Git on Windows (Optional)
+Reading: Installing Git
+Practice Quiz: Practice Quiz: Version Control Systems
+Video: First Steps with Git
+Video: Tracking Files
+Video: The Basic Git Workflow
+Video: Anatomy of a Commit Message
+Reading: Initial Git Cheat Sheet
+Practice Quiz: Practice Quiz: Using Git
+Video: Module 1 Wrap Up: Intro to Version Control
+Reading: How to Log in to Qwiklabs
+Discussion Prompt: Discussion Prompt
+
+Show lessweek 1 material
+Graded: Qwiklabs Assessment: Introduction to Git
+WEEK 2
+Using Git Locally
+In this module, you’ll dive into advanced Git interactions by skipping the staging area for small code changes, and understand how Git uses the HEAD alias to represent checked-out snapshots. Next, you’ll explore how to move and remove files before finally getting a cheat sheet to help you in your Git explorations! The next step of your learning will include how to undo changes before committing and how to amend commits once they’re submitted. Finally, you’ll be able to identify errors in commits that were submitted a while back. In the final section of this module, you’ll explore the concept of branching and merging. You’ll learn what a branch is, how to create one, and how they work in harmony with you and your code. Once you’re comfortable with branching, you’ll dive into merging, how it works with branched data, and how to deal with merge conflicts.
+
+Show less
+14 videos, 3 readings, 3 practice quizzes
+Video: Intro to Module 2: Using Git Locally
+Discussion Prompt: Discussion Prompt
+Video: Skipping the Staging Area
+Video: Getting More Information About Our Changes
+Video: Deleting and Renaming Files
+Reading: Advanced Git Cheat Sheet
+Practice Quiz: Practice Quiz: Advanced Git Interaction
+Video: Undoing Changes Before Committing
+Video: Amending Commits
+Video: Rollbacks
+Video: Identifying a Commit
+Reading: Git Revert Cheat Sheet
+Practice Quiz: Practice Quiz: Undoing Things
+Video: What is a branch?
+Video: Creating New Branches
+Video: Working with Branches
+Video: Merging
+Video: Merge Conflicts
+Reading: Git Branches and Merging Cheat Sheet
+Practice Quiz: Practice Quiz: Branching & Merging
+Video: Module 2 Wrap Up: Using Git Locally
+Discussion Prompt: Discussion Prompt
+
+Show lessweek 2 material
+Graded: Qwiklabs Assessment: Merging Branches in Git
+WEEK 3
+Working with Remotes
+In this module, you’ll be introduced to GitHub and learn how it works with Git. You’ll create new repositories and clone those repositories onto your computer. Next, we’ll explain what a remote repository is, how we can work with them, and how we can host them. You’ll get familiar with commands like modify, stage, and commit, which will be used for local changes, as well as the fetch command, which can pull any changes from remote repositories. Our final lesson will focus on learning about conflicts. This will allow you to explore the concepts of pull-merge-push workflows, pushing remote branches and rebasing your changes.
+
+Show less
+13 videos, 3 readings, 3 practice quizzes
+Video: Intro to Module 3: Working with Remotes
+Discussion Prompt: Discussion Prompt
+Video: What is GitHub?
+Video: Basic Interaction with GitHub
+Reading: Basic Interaction with GitHub Cheat-Sheet
+Practice Quiz: Practice Quiz: Introduction to GitHub
+Video: What is a remote?
+Video: Working with Remotes
+Video: Fetching New Changes
+Video: Updating the Local Repository
+Reading: Git Remotes Cheat-Sheet
+Practice Quiz: Practice Quiz: Using a Remote Repository
+Video: The Pull-Merge-Push Workflow
+Video: Pushing Remote Branches
+Video: Rebasing Your Changes
+Video: Another Rebasing Example
+Video: Best Practices for Collaboration
+Reading: Conflict Resolution Cheat Sheet
+Practice Quiz: Practice Quiz: Solving Conflicts
+Video: Module 3 Wrap Up: Working with Remotes
+Discussion Prompt: Discussion Prompt
+
+Show lessweek 3 material
+Graded: Qwiklabs Assessment: Introduction to Github
+WEEK 4
+Collaboration
+In this module, you’ll continue to explore the collaboration tools available in Git. You’ll learn about the tools that are available to help improve the quality of your code and to better track your code. This includes an overview of pull requests and how the typical workflow of a pull request looks like on GitHub. Next, you’ll dive into how you can squash changes in your code. We’ll finish up by providing you with a cheat sheet on fork and pull requests. Next up, we’ll cover what code reviews are and what the code review workflow looks like. Then, you’ll learn about how to use code reviews on GitHub. The final lesson of this module will focus on managing projects. We’ll take a rundown of best practices on managing projects and how to manage collaboration within those projects. We’ll explore different ways of tracking issues and finish up by discussing the concept of continuous integration with your projects.
+
+Show less
+14 videos, 3 readings, 3 practice quizzes
+Video: Intro to Module 4: Collaboration
+Video: A Simple Pull Request on GitHub
+Video: The Typical Pull Request Workflow on GitHub
+Video: Updating an Existing Pull Request
+Video: Squashing Changes
+Reading: Git Fork and Pull Request Cheat Sheet
+Practice Quiz: Practice Quiz: Pull Requests
+Video: What are code reviews?
+Video: The Code Review Workflow
+Video: How to Use Code Reviews in GitHub
+Reading: More Information on Code Reviews
+Practice Quiz: Practice Quiz: Code Reviews
+Video: Managing Collaboration
+Video: Tracking Issues
+Video: Continuous Integration
+Reading: Additional Tools
+Practice Quiz: Practice Quiz: Managing Collaboration
+Video: Module 4 Wrap Up: Collaboration
+Video: Congratulations!
+Discussion Prompt: Your Learner Journey
+Video: Sneak Peek of the Next Course
+
+Show lessweek 4 material
+Graded: Qwiklabs Assessment: Pushing Local Commits to Github

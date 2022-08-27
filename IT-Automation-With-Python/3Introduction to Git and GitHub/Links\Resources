@@ -20,6 +20,12 @@ https://git-scm.com/downloads
 For Each Platform:
 https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
+Git Commit Messages Official Docs:
+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/process/submitting-patches.rst?id=HEAD
+Github Messages:
+https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address
+5 Useful Tips For A Better Commit Message:
+https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message
  
 
 

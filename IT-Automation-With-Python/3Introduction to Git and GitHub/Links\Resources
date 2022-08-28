@@ -27,8 +27,25 @@ https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-pers
 5 Useful Tips For A Better Commit Message:
 https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message
  
-
-
+Git commit -a
+https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---all
+git log -p
+https://git-scm.com/docs/git-log#_generating_patch_text_with_p
+git show
+https://git-scm.com/docs/git-show
+git diff
+git diff -staged
+https://git-scm.com/docs/git-diff
+git add -p
+https://git-scm.com/docs/git-add
+git mv
+https://git-scm.com/docs/git-mv
+git rm
+https://git-scm.com/docs/git-rm
+gitignore
+https://git-scm.com/docs/gitignore
+exclude file patterns for .gitignore
+https://gist.github.com/octocat/9257657
 
 
 

@@ -47,9 +47,19 @@ https://git-scm.com/docs/gitignore
 exclude file patterns for .gitignore
 https://gist.github.com/octocat/9257657
 
+git checkout
+https://git-scm.com/docs/git-checkout
+git reset
+https://git-scm.com/docs/git-reset#_examples
+https://jwiegley.github.io/git-from-the-bottom-up/3-Reset/4-doing-a-hard-reset.html
+git commit -amend
+https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---amend
+git revert
+https://git-scm.com/docs/git-revert
+https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things
 
-
-
-
+git hashcod=SHA1:
+https://en.wikipedia.org/wiki/SHA-1
+https://github.blog/2017-03-20-sha-1-collision-detection-on-github-com/
 
 

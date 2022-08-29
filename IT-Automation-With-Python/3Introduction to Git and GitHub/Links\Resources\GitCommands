@@ -58,6 +58,26 @@ git revert
 https://git-scm.com/docs/git-revert
 https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things
 
+git branch
+https://git-scm.com/docs/git-branch
+git branch <name>
+https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+git branch -d <name>
+https://git-scm.com/docs/git-branch#Documentation/git-branch.txt--D
+git branch -D <name>
+https://git-scm.com/docs/git-branch#Documentation/git-branch.txt--D
+git checkout <branch>
+https://git-scm.com/docs/git-checkout
+git checkout -b <branch>
+https://git-scm.com/docs/git-checkout#Documentation/git-checkout.txt--bltnewbranchgt
+git merge <branch>
+https://git-scm.com/docs/git-merge
+git merge --abort
+If there are merge conflicts (meaning files are incompatible), --abort can be used to abort the merge action.
+git log --graph --oneline
+
+
+
 git hashcod=SHA1:
 https://en.wikipedia.org/wiki/SHA-1
 https://github.blog/2017-03-20-sha-1-collision-detection-on-github-com/

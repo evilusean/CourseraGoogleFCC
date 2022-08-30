@@ -87,6 +87,19 @@ https://help.github.com/en/articles/caching-your-github-password-in-git
 Creating a SSH key handshake:
 https://help.github.com/en/articles/generating-an-ssh-key
 
+git remote
+https://git-scm.com/docs/git-remote
+git remote -v
+https://git-scm.com/docs/git-remote#Documentation/git-remote.txt--v
+git remote show <name>
+https://git-scm.com/docs/git-remote#Documentation/git-remote.txt-emshowem
+git remote update
+https://git-scm.com/docs/git-remote#Documentation/git-remote.txt-emupdateem
+git fetch
+https://git-scm.com/docs/git-fetch
+git branch -r
+https://git-scm.com/docs/git-branch#Documentation/git-branch.txt--r
+
 git hashcod=SHA1:
 https://en.wikipedia.org/wiki/SHA-1
 https://github.blog/2017-03-20-sha-1-collision-detection-on-github-com/

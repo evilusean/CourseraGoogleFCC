@@ -82,7 +82,10 @@ git push
 https://git-scm.com/docs/git-push
 git pull
 https://git-scm.com/docs/git-pull
-
+Github Cache Password:
+https://help.github.com/en/articles/caching-your-github-password-in-git
+Creating a SSH key handshake:
+https://help.github.com/en/articles/generating-an-ssh-key
 
 git hashcod=SHA1:
 https://en.wikipedia.org/wiki/SHA-1

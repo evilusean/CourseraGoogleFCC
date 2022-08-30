@@ -76,10 +76,21 @@ git merge --abort
 If there are merge conflicts (meaning files are incompatible), --abort can be used to abort the merge action.
 git log --graph --oneline
 
+git clone <url>
+https://git-scm.com/docs/git-clone
+git push
+https://git-scm.com/docs/git-push
+git pull
+https://git-scm.com/docs/git-pull
 
 
 git hashcod=SHA1:
 https://en.wikipedia.org/wiki/SHA-1
 https://github.blog/2017-03-20-sha-1-collision-detection-on-github-com/
-
+Git Repository Websites:
+github.com
+BitBucket:
+https://bitbucket.org/product
+GitLab:
+https://about.gitlab.com/
 

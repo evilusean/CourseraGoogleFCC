@@ -100,6 +100,14 @@ https://git-scm.com/docs/git-fetch
 git branch -r
 https://git-scm.com/docs/git-branch#Documentation/git-branch.txt--r
 
+MergeConflict Resolution:
+https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-merge-conflicts
+https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line
+Rebase:
+https://git-scm.com/book/en/v2/Git-Branching-Rebasing
+https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
+
+
 git hashcod=SHA1:
 https://en.wikipedia.org/wiki/SHA-1
 https://github.blog/2017-03-20-sha-1-collision-detection-on-github-com/

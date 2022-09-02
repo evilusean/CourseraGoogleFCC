@@ -110,6 +110,13 @@ https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
 Github Forking and Pull Requests:
 https://help.github.com/en/articles/about-pull-request-merges
 
+CodeReviews:
+Style Guide:
+http://google.github.io/styleguide/
+https://help.github.com/en/articles/about-pull-request-reviews
+https://medium.com/osedea/the-perfect-code-review-process-845e6ba5c31
+https://smartbear.com/learn/code-review/what-is-code-review/
+
 git hashcod=SHA1:
 https://en.wikipedia.org/wiki/SHA-1
 https://github.blog/2017-03-20-sha-1-collision-detection-on-github-com/

@@ -34,4 +34,12 @@ https://www.coursera.org/learn/project-execution-google
 
 Start:22August2022
 
+End:03September2022
+
+## 5Agile Project Management
+
+https://www.coursera.org/learn/agile-project-management
+
+Start:04September2022
+
 End:

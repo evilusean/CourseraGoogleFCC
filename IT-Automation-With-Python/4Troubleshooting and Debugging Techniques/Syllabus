@@ -1,0 +1,155 @@
+Troubleshooting and Debugging Techniques
+by Google
+
+About this Course
+In this course, we'll give you the tools to quickly identify and solve real-world problems that you might come across in your IT role. We'll look at a bunch of different strategies and approaches for tackling the most common pitfalls of your code and IT infrastructure. You'll learn strategies for approaching almost any technical problem and then see how those apply to solving different real-world scenarios. 
+
+We picked examples that include general system issues, issues with software that someone else wrote, and issues with programs that we wrote. We'll talk about problems that can affect any operating system, and we'll also look at challenges specific to certain platforms and scripting languages.
+
+We strongly recommend that you’ve taken the prior courses in this program, or already have knowledge of Python and Linux so that you can follow along with our troubleshooting examples.
+
+
+ Show less
+Basic Info	
+Course 4 of 6 in the Google IT Automation with Python Specialization
+Level	Beginner
+Language	
+English, Subtitles: Arabic, French, Portuguese (European), Italian, Vietnamese, German, Russian, Spanish
+Volunteer to translate subtitles for this course
+How To Pass	Pass all graded assignments to complete the course.
+User Ratings	
+Average User Rating 4.6
+Syllabus
+WEEK 1
+Troubleshooting Concepts
+In this module, you’ll be introduced to the fundamentals of troubleshooting and you’ll learn different strategies and approaches to tackle problems that you might encounter. You’ll learn about the concept of debugging and how debugging is one of the core principles of troubleshooting. You’ll be introduced to some tools that will help you in the debugging process, like tcpdump, ps, top, itrace, and lots more. Next, you’ll explore how to “understand the problem.” This might sound like a no brainer, but it's not as easy as you might think! Next, we’ll dive into the different approaches when troubleshooting reproducing errors versus intermittent errors. Finally, you’ll learn about “binary searching a problem.” We’ll explore the different types of searches, including binary and linear searches. Then, we’ll learn about the concept of bisecting and how it can be used in your troubleshooting approach, and finish up with finding invalid data in a CSV file.
+
+Show less
+14 videos, 3 readings, 3 practice quizzes
+Video: Course Introduction
+Reading: Welcome to the Course
+Discussion Prompt: Meet & Greet
+Video: Intro to Module 1: Troubleshooting Concepts
+Discussion Prompt: Discussion Prompt
+Video: What is debugging?
+Video: Problem Solving Steps
+Video: Silently Crashing Application
+Practice Quiz: Practice Quiz: Introduction to Debugging
+Video: "It Doesn't Work"
+Video: Creating a Reproduction Case
+Video: Finding the Root Cause
+Video: Dealing with Intermittent Issues
+Video: Intermittently Failing Script
+Practice Quiz: Practice Quiz: Understanding the Problem
+Video: What is binary search?
+Reading: Linear and Binary Search (Optional)
+Video: Applying Binary Search in Troubleshooting
+Video: Finding Invalid Data
+Practice Quiz: Practice Quiz: Binary Searching a Problem
+Video: Module 1 Wrap Up: Troubleshooting Concepts
+Reading: How to Log in to Qwiklabs
+Discussion Prompt: Discussion Prompt
+
+Show lessweek 1 material
+Graded: Qwiklabs Assessment: Debugging Python Scripts
+WEEK 2
+Slowness
+In this module, you’ll learn about what factors can cause a machine or program to act slowly. You’ll dive into ways of addressing slowness by identifying the bottleneck that might be causing the slowness. You’ll learn about tools to identify which resources are being exhausted, including iotop, iftop, and activity monitor in MacOS. Next, you’ll learn how computers use resources, and understand the differences between CPU, RAM, and Cache in order to help you find the possible causes for slowness in our machines or scripts.
+
+Next up, you’ll learn how to write efficient code, then explore profilers to help you identify where your code is spending most of its time. Next, you’ll dive into data structures and understand which ones are right for you to use. These include lists, tuples, dictionaries, sets, and expensive loops. Then, you’ll dive into complex slowness problems and how utilizing concurrency and adding a caching service can improve the execution of your code. Finally, you’ll understand how using threads can make the execution of your code much quicker.
+
+Show less
+15 videos, 3 readings, 3 practice quizzes
+Video: Intro to Module 2: Slowness
+Discussion Prompt: Discussion Prompt
+Video: Why is my computer slow?
+Video: How Computers Use Resources
+Video: Possible Causes of Slowness
+Video: Slow Web Server
+Reading: Monitoring Tools
+Practice Quiz: Practice Quiz: Understanding Slowness
+Video: Writing Efficient Code
+Video: Using the Right Data Structures
+Video: Expensive Loops
+Video: Keeping Local Results
+Video: Slow Script with Expensive Loop
+Reading: More About Improving Our Code
+Practice Quiz: Practice Quiz: Slow Code
+Video: Parallelizing Operations
+Video: Slowly Growing in Complexity
+Video: Dealing with Complex Slow Systems
+Video: Using Threads to Make Things Go Faster
+Reading: More About Complex Slow Systems
+Practice Quiz: Practice Quiz: When Slowness Problems Get Complex
+Video: Module 2 Wrap Up: Slowness
+Discussion Prompt: Discussion Prompt
+
+Show lessweek 2 material
+Graded: Qwiklabs Assessment: Performance Tuning in Python Scripts
+WEEK 3
+Crashing Programs
+In this module, you’ll get introduced to the age old question, “Why has my program crashed?” You’ll learn how to troubleshoot system crashes and application crashes, what tools you can be used to help identify the cause of the crash, and what log files to look at in order to find what might have gone wrong. Next, you’ll dive into investigating why code crashes, and what you can do to prevent that from happening. Then, you’ll explore what happens when an unhandled error occurs and throws an exception. You’ll learn about the printf debugging technique, which will help you identify these errors and exceptions. Finally, you’ll explore the concept of handling crashes and incidents at a much larger scale.
+
+You’ll delve into a scenario where a large eCommerce site will throw an error 20% of the time. Once that issue has been fixed, you’ll understand the importance of communication and documentation during these incidents, and how writing a post mortem can prevent issues from happening again.
+
+Show less
+14 videos, 2 readings, 3 practice quizzes
+Video: Intro to Module 3: Crashing Programs
+Discussion Prompt: Discussion Prompt
+Video: Systems That Crash
+Video: Understanding Crashing Applications
+Video: What to do when you can't fix the program?
+Video: Internal Server Error
+Reading: Resources for Understanding Crashes
+Practice Quiz: Practice Quiz: Why Programs Crash
+Video: Accessing Invalid Memory
+Video: Unhandled Errors and Exceptions
+Video: Fixing Someone Else's Code
+Video: Debugging a Segmentation Fault
+Video: Debugging a Python Crash
+Reading: Resources for Debugging Crashes
+Practice Quiz: Practice Quiz: Code that Crashes
+Video: Crashes in Complex Systems
+Video: Communication and Documentation During Incidents
+Video: Writing Effective Postmortems
+Practice Quiz: Practice Quiz: Handling Bigger Incidents
+Video: Module 3 Wrap Up: Crashing Programs
+Discussion Prompt: Discussion Prompt
+
+Show lessweek 3 material
+Graded: Qwiklabs Assessment: Fixing Errors in Python Scripts
+WEEK 4
+Managing Resources
+In this module, you’ll learn how to manage your applications. You’ll dive into some common issues that may cause your application to crash. You’ll also understand what memory leaks are, and how to troubleshoot and prevent them. Up next, you’ll run down managing disk space; you’ll see some scenarios of how this happens and how to identify what process or application is taking up all your disk space. Then, you'll learn what network saturation is, how it can be caused, and some useful tools and techniques to solve a network saturation problem.
+
+Next, we’ll shift from managing applications to managing your time. You’ll get tips on how to prioritize tasks, estimate how long a particular task will take before finishing, and communicate expectations when dealing with important tasks. The final lesson delves into how to deal with hard and complex problems by breaking it down into small, digestible chunks while keeping your eyes on a clear goal. You’ll learn that using proactive approaches, like continuous integration, can help you with future issues that might come up. You’ll also explore how to plan for future resource usage by making good use of monitoring.
+
+Show less
+16 videos, 3 readings, 3 practice quizzes
+Video: Intro to Module 4: Managing Resources
+Discussion Prompt: Discussion Prompt
+Video: Memory Leaks and How to Prevent Them
+Video: Managing Disk Space
+Video: Network Saturation
+Video: Dealing with Memory Leaks
+Reading: More About Managing Resources
+Practice Quiz: Practice Quiz: Managing Computer Resources
+Video: Getting to the Important Tasks
+Video: Prioritizing Tasks
+Video: Estimating the Time Tasks Will Take
+Video: Communicating Expectations
+Reading: More About Making the Best Use of Our Time
+Practice Quiz: Practice Quiz: Managing Our Time
+Video: Dealing with Hard Problems
+Video: Proactive Practices
+Video: Planning Future Resource Usage
+Video: Preventing Future Problems
+Reading: More About Preventing Future Breakage
+Practice Quiz: Practice Quiz: Making Our Future Lives Easier
+Video: Module 4 Wrap Up: Managing Resources
+Video: Congratulations!
+Discussion Prompt: Your Learner Journey
+Video: Sneak Peek of Next Course
+
+Show lessweek 4 material
+Graded: Qwiklabs Assessment: Debugging and Solving Software Problems

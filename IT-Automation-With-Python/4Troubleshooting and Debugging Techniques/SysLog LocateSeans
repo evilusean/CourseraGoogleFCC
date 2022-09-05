@@ -1,0 +1,9 @@
+Linux:
+/var/log/syslog
+.xsession-errors
+
+Mac:
+/Library/Logs
+
+Windows:
+EventViewer Tool

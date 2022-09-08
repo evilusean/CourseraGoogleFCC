@@ -13,8 +13,14 @@ Linux:
 Top
 iotop
 iftop
+
 MacOS:
 Activity Monitor
+
 Windows:
 Resource Monitor
 Performance Monitor
+
+Network:
+Appache Benchmark
+ab -n 500 #sends 500 requests

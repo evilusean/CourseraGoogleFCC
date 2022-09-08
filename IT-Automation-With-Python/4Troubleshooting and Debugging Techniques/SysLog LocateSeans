@@ -7,3 +7,14 @@ Mac:
 
 Windows:
 EventViewer Tool
+
+Speed Diagnostics:
+Linux:
+Top
+iotop
+iftop
+MacOS:
+Activity Monitor
+Windows:
+Resource Monitor
+Performance Monitor

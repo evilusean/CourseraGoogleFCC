@@ -1,12 +1,30 @@
 Linux:
 /var/log/syslog
 .xsession-errors
+use:
+https://brendangregg.com/usemethod.html
+perf:
+https://www.brendangregg.com/linuxperf.html
+nice/renice levels:
+https://www.reddit.com/r/linux/comments/d7hx2c/why_nice_levels_are_a_placebo_and_have_been_for_a/
 
 Mac:
 /Library/Logs
+https://support.apple.com/en-ca/guide/activity-monitor/welcome/mac
 
 Windows:
 EventViewer Tool
+Process Monitor:
+https://docs.microsoft.com/en-us/sysinternals/downloads/procmon
+Windows 10 Performance Monitor:
+https://www.windowscentral.com/how-use-performance-monitor-windows-10
+Windows 7:
+https://www.digitalcitizen.life/how-use-resource-monitor-windows-7/
+Process Explorer:
+https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer
+
+Caches:
+https://en.wikipedia.org/wiki/Cache_(computing)
 
 Speed Diagnostics:
 Linux:

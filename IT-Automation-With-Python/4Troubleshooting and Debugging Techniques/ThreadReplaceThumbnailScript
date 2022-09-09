@@ -1,0 +1,40 @@
+"""
+used for processing and replacing thumbnails using threading(multiple processing sources)
+using futures module executors
+"""
+import argparse
+from concurrent import futures
+import logging
+import os
+import sys
+
+import PIL
+import PIL.Image
+
+from tqdm import tqdm
+
+def progress_bar(files):
+  return tqdm(files, desc='Processing', total=len(files), dynamic_ncols=True)
+  
+def main():
+  process_options()
+    #create the thumbnails directory
+    if not os.path.exists('thumbnails'):
+      os.mkdir('thumbnails')
+    
+    executor = futures.ProcessPoolExecutor()
+    for root, _, files in os.walk('images'):
+      for basename in progress_bar(files):
+        if not basename.endswith('.jpg'):
+          continue
+        executor.submit(process_file, root, basename)
+    print('Waiting for all threads to finish.')
+    executor.shutdown()
+    return 0
+    
+if __name__ = "__main__":
+  sys.exit(main())
+      
+      
+      
+      

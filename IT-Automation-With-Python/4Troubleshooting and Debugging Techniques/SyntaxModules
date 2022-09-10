@@ -1,0 +1,62 @@
+
+
+
+psutil:
+psutil (process and system utilities) is a cross-platform library for retrieving information on running processes and system utilization
+(CPU, memory, disks, network, sensors) in Python. It's mainly useful for system monitoring, profiling, and limiting process resources and 
+management of running processes.
+import psutil
+psutil.cpu_percent()
+psutil.disk_io_counters() #Now, using psutil.disk_io_counters() and psutil.net_io_counters() you'll get byte read and byte write for disk I/O and byte received and byte sent for the network I/O bandwidth. For checking disk I/O, you can use the following command:
+psutil.net_io_counters() #For checking the network I/O bandwidth:
+
+rsync:
+https://www.linuxtechi.com/rsync-command-examples-linux/
+#rsync(remote sync) is a utility for efficiently transferring and synchronizing files between a computer and an external hard drive and across networked computers by comparing the modification time and size of files. One of the important features of rsync is that it works on the delta transfer algorithm, which means it'll only sync or copy the changes from the source to the destination instead of copying the whole file. This ultimately reduces the amount of data sent over the network.
+rsync [Options] [Source-Files-Dir] [Destination]
+Some of the commonly used options in rsync command are listed below:
+-v
+Verbose output
+-q
+Suppress message output
+-a
+Archive files and directory while synchronizing
+-r
+Sync files and directories recursively
+-b
+Take the backup during synchronization
+-z
+Compress file data during the transfer
+
+Copy or sync files locally:
+rsync -zvh [Source-Files-Dir] [Destination]
+Copy or sync directory locally:
+rsync -zavh [Source-Files-Dir] [Destination]
+Copy files and directories recursively locally:
+rsync -zrvh [Source-Files-Dir] [Destination]
+
+subprocess:
+ in Python, use the subprocess module by calling call methods and passing a list as an argument. 
+ import the subprocess module and call the call method and pass the arguments:
+import subprocess
+src = "<source-path>" # replace <source-path> with the source directory
+dest = "<destination-path>" # replace <destination-path> with the destination directory
+
+subprocess.call(["rsync", "-arq", src, dest])
+#By using the above script, you can sync your data recursively from the source path to the destination path.
+
+import os
+#allows you to interact with the OS using python
+
+# multiprocessing, which takes advantage of the idle CPU cores for parallel processing.
+from multiprocessing import pool
+
+
+
+
+
+
+
+
+
+

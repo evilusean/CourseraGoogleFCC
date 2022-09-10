@@ -20,6 +20,9 @@ https://www.digitalcitizen.life/how-use-resource-monitor-windows-7/
 Process Explorer:
 https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer
 
+psutil Basic Commands:
+https://www.linuxtechi.com/rsync-command-examples-linux/
+
 Caches:
 https://en.wikipedia.org/wiki/Cache_(computing)
 
@@ -27,7 +30,10 @@ Profiling(Code Improvement):
 https://en.wikipedia.org/wiki/Profiling_(computer_programming)
 
 Parralel/Concurrent Programming(slow programs):
+MultiProcessing:
 https://realpython.com/python-concurrency/
 https://hackernoon.com/threaded-asynchronous-magic-and-how-to-wield-it-bba9ed602c32
+
+
 
 

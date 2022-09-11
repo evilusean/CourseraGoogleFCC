@@ -2,6 +2,9 @@ Network Connections:
 tcpdump
 wireshark
 iftop
+Appache Benchmark:
+ab -n 500 <website> #gets average time for 500 requests to website
+
 
 Resource use:
 ps
@@ -16,6 +19,8 @@ ionice
 Virtual Memory:
 vmstat
 
+LogFiles(too big):
+logrotate
 
 System calls:
 strace 
@@ -26,9 +31,22 @@ strace -o <filename> program.py #-o flag saves output to file for further review
 Library Calls:
 ltrace
 
-kill -stop
+killall -stop #-stop argument doesn't kill all immediately
+cont #continues process
+for pid in $(pidof ffmpeg); do while kill -CONT $pid; do sleep 1; done #runs a while loop that tries every onesecond to continue ffmpeg processes
 
+process priority:
+nice
+renice #(highest0-19lowest)
+pidof #gets process id
+for pid in $(pidof ffmpeg); do renice 19 $pid; done #goes over all processes currently running ffmpeg and changes priority to 19(lowest)
+ps ax #shows all running processes on computer
+ps ax | less #shows all processes with less
+locate <file> #finds location of file on pc
 
+Analyze program speeds:
+gprof
+cProfile
 
 psutil:
 psutil (process and system utilities) is a cross-platform library for retrieving information on running processes and system utilization

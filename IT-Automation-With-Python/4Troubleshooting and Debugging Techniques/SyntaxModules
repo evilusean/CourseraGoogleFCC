@@ -1,4 +1,17 @@
+Network Connections:
+tcpdump
+wireshark
 
+Resource use:
+ps
+top
+free
+
+System calls:
+strace
+
+Library Calls:
+ltrace
 
 
 psutil:

@@ -1,17 +1,33 @@
 Network Connections:
 tcpdump
 wireshark
+iftop
 
 Resource use:
 ps
 top
 free
 
+Input  Check:
+iotop
+iostat
+ionice
+
+Virtual Memory:
+vmstat
+
+
 System calls:
-strace
+strace 
+strace ./program.py
+strace ./program.py | less #use less pipe command to show less calls
+strace -o <filename> program.py #-o flag saves output to file for further review
 
 Library Calls:
 ltrace
+
+kill -stop
+
 
 
 psutil:
@@ -64,7 +80,8 @@ import os
 # multiprocessing, which takes advantage of the idle CPU cores for parallel processing.
 from multiprocessing import pool
 
-
+hesienbug: observer effect 
+'have you tried turning it off and on again?'
 
 
 

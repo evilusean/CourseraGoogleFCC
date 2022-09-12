@@ -31,6 +31,9 @@ strace -o <filename> program.py #-o flag saves output to file for further review
 Library Calls:
 ltrace
 
+Cacheing:
+memcached
+
 killall -stop #-stop argument doesn't kill all immediately
 cont #continues process
 for pid in $(pidof ffmpeg); do while kill -CONT $pid; do sleep 1; done #runs a while loop that tries every onesecond to continue ffmpeg processes
@@ -47,6 +50,9 @@ locate <file> #finds location of file on pc
 Analyze program speeds:
 gprof
 cProfile
+time <program> #checks speed of a program
+pprofile3 -f callgrind -0 profile.out <program>#profiler gets data about program -f specifies file format -o specifies output
+kcachegrind profile.out #a graphical program to look at other programs and how they interact as well as speeds
 
 psutil:
 psutil (process and system utilities) is a cross-platform library for retrieving information on running processes and system utilization
@@ -56,6 +62,10 @@ import psutil
 psutil.cpu_percent()
 psutil.disk_io_counters() #Now, using psutil.disk_io_counters() and psutil.net_io_counters() you'll get byte read and byte write for disk I/O and byte received and byte sent for the network I/O bandwidth. For checking disk I/O, you can use the following command:
 psutil.net_io_counters() #For checking the network I/O bandwidth:
+
+Threading:
+asyncio
+from concurrent import futures
 
 rsync:
 https://www.linuxtechi.com/rsync-command-examples-linux/

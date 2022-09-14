@@ -50,6 +50,19 @@ Segmentation Fault(segfault) memory error:
 valgrind(linux mac)
 Dr. Memory(linux windows)
 
+Debugging Tools:
+Python:
+pdb
+gdb(linux)
+gdb -c core <core file>
+backtrace #used for further debugging core files
+up #used for further debugging core files
+list #used for further debugging core files
+adding print statements(printf debugging)
+
+generate a debugging core file(linux):
+ulimit -c unlimited
+
 killall -stop #-stop argument doesn't kill all immediately
 cont #continues process
 for pid in $(pidof ffmpeg); do while kill -CONT $pid; do sleep 1; done #runs a while loop that tries every onesecond to continue ffmpeg processes

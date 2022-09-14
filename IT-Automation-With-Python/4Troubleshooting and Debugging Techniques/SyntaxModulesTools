@@ -53,6 +53,7 @@ Dr. Memory(linux windows)
 Debugging Tools:
 Python:
 pdb
+pdb3 <python program/script>
 gdb(linux)
 gdb -c core <core file>
 backtrace #used for further debugging core files

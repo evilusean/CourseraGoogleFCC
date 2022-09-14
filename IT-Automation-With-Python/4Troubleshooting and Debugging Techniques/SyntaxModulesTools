@@ -46,6 +46,10 @@ memcached
 Memory Testing(Ram):
 memtest86(from boot)
 
+Segmentation Fault(segfault) memory error:
+valgrind(linux mac)
+Dr. Memory(linux windows)
+
 killall -stop #-stop argument doesn't kill all immediately
 cont #continues process
 for pid in $(pidof ffmpeg); do while kill -CONT $pid; do sleep 1; done #runs a while loop that tries every onesecond to continue ffmpeg processes

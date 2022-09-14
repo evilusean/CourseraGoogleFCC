@@ -4,7 +4,14 @@ wireshark
 iftop
 Appache Benchmark:
 ab -n 500 <website> #gets average time for 500 requests to website
-
+netstat
+sudo netstat -nlp | grep :80 #-n=numerical l=listening p=print process id grep=searches for :80 port 80
+#check lists of network files in linux
+ls -l /etc/nginx #where files are stored for webserver
+ls -l /etc/nginx/sites-enabled/
+ls -l /etc/uwsgi/
+ls -l /etc/uwsgi/apps-enabled/ #where sites are stored
+/var/log/site.log #log file stored here
 
 Resource use:
 ps
@@ -23,7 +30,9 @@ LogFiles(too big):
 logrotate
 
 System calls:
-strace 
+dtruss(mac)
+Process Monitor(windows)
+strace(linux)
 strace ./program.py
 strace ./program.py | less #use less pipe command to show less calls
 strace -o <filename> program.py #-o flag saves output to file for further review
@@ -33,6 +42,9 @@ ltrace
 
 Cacheing:
 memcached
+
+Memory Testing(Ram):
+memtest86(from boot)
 
 killall -stop #-stop argument doesn't kill all immediately
 cont #continues process

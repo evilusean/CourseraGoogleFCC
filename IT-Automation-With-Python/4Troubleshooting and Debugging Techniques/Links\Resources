@@ -34,6 +34,21 @@ MultiProcessing:
 https://realpython.com/python-concurrency/
 https://hackernoon.com/threaded-asynchronous-magic-and-how-to-wield-it-bba9ed602c32
 
-
-
+Crashing:
+Article:
+https://www.scientificamerican.com/article/why-do-computers-crash/
+Blue Screen of Death:
+https://en.wikipedia.org/wiki/Blue_screen_of_death
+Windows 10 Logs:
+https://www.digitalmastersmag.com/magazine/tip-of-the-day-how-to-find-crash-logs-on-windows-10/
+Process Monitor:
+https://docs.microsoft.com/en-us/sysinternals/downloads/procmon
+Mac Logs:
+https://www.howtogeek.com/356942/how-to-view-the-system-log-on-a-mac/
+Mac Trace Calls:
+https://etcnotes.com/posts/system-call/
+Linux Logs:
+https://www.fosslinux.com/8984/how-to-check-system-logs-on-linux-complete-usage-guide.htm
+Strace:
+https://www.howtoforge.com/linux-strace-command/
 

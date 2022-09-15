@@ -55,3 +55,17 @@ https://www.fosslinux.com/8984/how-to-check-system-logs-on-linux-complete-usage-
 Strace:
 https://www.howtoforge.com/linux-strace-command/
 
+Segmentation Faults(memory issue):
+https://stackoverflow.com/questions/33047452/definitive-list-of-common-reasons-for-segmentation-faults
+https://sites.google.com/a/case.edu/hpcc/home/important-notes-for-new-users/debugging-segmentation-faults
+
+Readable Python code on GitHub:
+https://github.com/fogleman/Minecraft
+https://github.com/cherrypy/cherrypy
+https://github.com/pallets/flask
+https://github.com/tornadoweb/tornado
+https://github.com/gleitz/howdoi
+https://github.com/bottlepy/bottle/blob/master/bottle.py
+https://github.com/sqlalchemy/sqlalchemy
+
+

@@ -50,6 +50,10 @@ Segmentation Fault(segfault) memory error:
 valgrind(linux mac)
 Dr. Memory(linux windows)
 
+Memory leaks profiler:
+valgrind(c/c++)
+
+
 Debugging Tools:
 Python:
 pdb

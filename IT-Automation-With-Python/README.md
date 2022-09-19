@@ -36,4 +36,12 @@ https://www.coursera.org/learn/troubleshooting-debugging-techniques?specializati
 
 Start:04September2022
 
+End:18September2022
+
+## 5Configuration Management and the Cloud
+
+https://www.coursera.org/learn/configuration-management-cloud?specialization=google-it-automation
+
+Start:19September2022
+
 End:

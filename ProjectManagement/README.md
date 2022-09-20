@@ -42,4 +42,10 @@ https://www.coursera.org/learn/agile-project-management
 
 Start:04September2022
 
+End:19September2022
+
+## 6Capstone: Applying Project Management in the Real World
+
+Start:20September2022
+
 End:

@@ -46,6 +46,8 @@ End:19September2022
 
 ## 6Capstone: Applying Project Management in the Real World
 
+https://www.coursera.org/learn/applying-project-management#syllabus
+
 Start:20September2022
 
 End:

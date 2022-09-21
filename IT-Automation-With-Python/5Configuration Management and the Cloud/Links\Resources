@@ -3,3 +3,8 @@ Official Docs:
 https://puppet.com/
 https://puppet.com/docs/puppet/7/lang_resources.html
 https://puppet.com/docs/bolt/latest/bolt_examples.html#deploy-a-package-with-bolt-and-chocolatey
+Design Philosophy:
+http://radar.oreilly.com/2015/04/the-puppet-design-philosophy.html
+
+Domain Specific Languages(DSL):
+https://en.wikipedia.org/wiki/Domain-specific_language

@@ -10,6 +10,14 @@ Google Cloud
 SECM
 Windows Group Policy
 
+Package Management Systems:
+APT(linux)
+Yum(linux)
+DNF(linux)
+Apple Provider(Mac)
+MacPorts(Mac)
+Choclatey(windows)
+
 Puppet:
 Official Docs:
 https://puppet.com/
@@ -21,7 +29,6 @@ Style Guide:
 https://puppet.com/docs/puppet/latest/style_guide.html
 Install from Packages:
 https://puppet.com/docs/puppetserver/latest/install_from_packages.html
-
 
 Domain Specific Languages(DSL):
 https://en.wikipedia.org/wiki/Domain-specific_language

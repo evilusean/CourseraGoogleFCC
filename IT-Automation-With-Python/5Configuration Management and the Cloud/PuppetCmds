@@ -1,0 +1,24 @@
+
+
+
+#basic syntax for a file class
+class sysctl {
+
+#makes syre the directory exists, some distros don't have it
+file { '/etc/sysctl.d':
+  ensure => directory,
+ }
+
+}
+
+#basic syntax for timezone file
+class timezone {
+
+#explicitly states it will be a file, sets contents to UTC time, replace contents of previous file if it exists
+file { '/etc/timezone':
+  ensure => file,
+  content => "UTC\n",
+  replace => true,
+ }
+
+}

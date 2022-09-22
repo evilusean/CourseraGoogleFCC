@@ -5,6 +5,11 @@ https://puppet.com/docs/puppet/7/lang_resources.html
 https://puppet.com/docs/bolt/latest/bolt_examples.html#deploy-a-package-with-bolt-and-chocolatey
 Design Philosophy:
 http://radar.oreilly.com/2015/04/the-puppet-design-philosophy.html
+Style Guide:
+https://puppet.com/docs/puppet/latest/style_guide.html
+Install from Packages:
+https://puppet.com/docs/puppetserver/latest/install_from_packages.html
+
 
 Domain Specific Languages(DSL):
 https://en.wikipedia.org/wiki/Domain-specific_language

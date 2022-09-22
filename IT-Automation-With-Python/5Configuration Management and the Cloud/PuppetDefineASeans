@@ -1,0 +1,15 @@
+Scale:
+Have larger impacts with the same amount of effort
+Unmanaged:
+Manually deploying a server, more servers=more time
+Configuration Management Systems:
+Configuration management is a systems engineering process for establishing and maintaining consistency of a product's(or fleet) performance
+Infrastructure as code(IAC):
+When all the configuration necessary to deploy and manage a node in the infrastructure is stored in version control
+deployed using automatic tools for the configuration
+
+In puppet the client connects to server and uploads a list of facts to the server, the server then updates itself according to the list of rules
+Client=Puppet Agent 
+Server=Puppet Master
+
+Resources=The basic unit for modeling the configuration that we want to manage(service, package, file)

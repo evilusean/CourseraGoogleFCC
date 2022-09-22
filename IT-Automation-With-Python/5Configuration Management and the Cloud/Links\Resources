@@ -3,6 +3,12 @@ Puppet
 Chef
 Ansible
 CFEngine
+Cloud Integrated:
+Amazon EC2
+Microsoft Azure
+Google Cloud
+SECM
+Windows Group Policy
 
 Puppet:
 Official Docs:

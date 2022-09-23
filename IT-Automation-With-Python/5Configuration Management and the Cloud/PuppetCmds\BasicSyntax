@@ -1,7 +1,7 @@
 #puppet files use the .pp file extension
+#all variable names are preceded by a '$' in puppet
 
-
-#basic syntax for a file class
+"""basic syntax for a file class"""
 class sysctl {
 
 #makes syre the directory exists, some distros don't have it
@@ -11,7 +11,7 @@ file { '/etc/sysctl.d':
 
 }
 
-#basic syntax for timezone file
+"""basic syntax for timezone file"""
 class timezone {
 
 #explicitly states it will be a file, sets contents to UTC time, replace contents of previous file if it exists
@@ -22,3 +22,46 @@ file { '/etc/timezone':
  }
 
 }
+
+"""basic syntax for a class with multiple resources: a package, a file and a service. It is best practice to group related resources"""
+class ntp {
+ ensure => latest,
+ }
+file {'/etc/ntp.conf':
+ source =>'puppet://modules/ntp/ntp.conf'
+ replace => true,
+}
+ service {'ntp':
+  enable => true,
+  ensure => running,
+  }
+ }
+ 
+ """basic syntax for a virtual machine using a fact variable removes a package if it is a VM installs if isnt"""
+ if $facts['is_virtual']{
+  package { 'smartmontools':
+    ensure => purged,
+    
+  }
+} else {
+ package {'smartmontools':
+  ensure => installed,
+ }
+}
+
+"""basic syntax for onlyif idempotent command"""
+exec { 'move example file':
+ command => 'mv /home/user/example.txt /home/user/Desktop',
+ onlyif => 'test -e /home/user/example.txt',
+}
+
+
+
+
+
+
+
+
+
+
+

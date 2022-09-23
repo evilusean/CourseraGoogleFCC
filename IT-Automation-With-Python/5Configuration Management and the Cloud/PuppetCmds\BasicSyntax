@@ -4,6 +4,7 @@
 
 sudo apt install puppet-master #installs locally on a linux machine
 sudo puppet apply -v tools.pp #installs any package in the tools manifest -v argument=verbose output, shows progress
+
 sudo apt install puppet-module-puppetlabs-apache #installs a prebuilt ruleset for an apache server in 8 seconds
 #new manifest, contents below: webserver.pp
 include ::apache
@@ -80,8 +81,22 @@ exec { 'move example file':
  onlyif => 'test -e /home/user/example.txt',
 }
 
+"""basic syntax for a node fleet"""
+node default {
+ class { 'sudo': }
+ class { 'ntp':
+    servers => ['ntp1.example.com', 'ntp2.example.com']
+  }
+}
 
-
+"""basic syntax for apache webserver nodes"""
+node webserver.example.com {
+ class { 'sudo': }
+ class { 'ntp':
+    servers => ['ntp1.example.com', 'ntp2.example.com']
+  }
+  class { 'apache': }
+}
 
 
 

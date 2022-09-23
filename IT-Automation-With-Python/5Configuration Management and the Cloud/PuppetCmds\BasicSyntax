@@ -1,10 +1,18 @@
 #puppet files use the .pp file extension
 #all variable names are preceded by a '$' in puppet
+#write resource types in lowercase when declaring them, upppercase when calling them
+
+sudo apt install puppet-master #installs locally on a linux machine
+sudo puppet apply -v tools.pp #installs any package in the tools manifest -v argument=verbose output, shows progress
+sudo apt install puppet-module-puppetlabs-apache #installs a prebuilt ruleset for an apache server in 8 seconds
+#new manifest, contents below: webserver.pp
+include ::apache
+sudo puppet apply -v webserver.pp #installs a prebuilt ruleset for an apache server in 8 seconds
 
 """basic syntax for a file class"""
 class sysctl {
 
-#makes syre the directory exists, some distros don't have it
+#makes sure the directory exists, some distros don't have it
 file { '/etc/sysctl.d':
   ensure => directory,
  }
@@ -37,7 +45,24 @@ file {'/etc/ntp.conf':
   }
  }
  
- """basic syntax for a virtual machine using a fact variable removes a package if it is a VM installs if isnt"""
+ """updated ntp package above with requires and notify added configuration file
+ class ntp {
+ ensure => latest,
+ }
+file {'/etc/ntp.conf':
+ source =>'puppet://modules/ntp/ntp.conf'
+ replace => true,
+ require => Package['ntp'],
+ notify => Service['ntp']
+}
+ service {'ntp':
+  enable => true,
+  ensure => running,
+  }
+ }
+include ntp
+
+"""basic syntax for a virtual machine using a fact variable removes a package if it is a VM installs if isnt"""
  if $facts['is_virtual']{
   package { 'smartmontools':
     ensure => purged,

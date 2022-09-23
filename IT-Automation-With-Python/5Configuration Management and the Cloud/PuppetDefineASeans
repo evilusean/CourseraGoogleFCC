@@ -11,6 +11,7 @@ deployed using automatic tools for the configuration
 In puppet the client connects to server and uploads a list of facts to the server, the server then updates itself according to the list of rules
 Client=Puppet Agent 
 Server=Puppet Master
+puppet is consistent, versionable, reliable, repeatable
 
 Resources=The basic unit for modeling the configuration that we want to manage(service, package, file)
 Puppet Syntax=Variables, Conditional Statements, Functions

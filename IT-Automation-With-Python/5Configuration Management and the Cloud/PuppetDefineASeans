@@ -13,3 +13,16 @@ Client=Puppet Agent
 Server=Puppet Master
 
 Resources=The basic unit for modeling the configuration that we want to manage(service, package, file)
+Puppet Syntax=Variables, Conditional Statements, Functions
+Facts=Variables that represent the charasteristics of the system using Factor(OS/Memory/VM/IP/etc)
+
+idempotent=An action can be performed over and over again without changing the system after the first time the action was performed with
+no unintented side effects
+
+test and repair paradigm=actions are taken only if necessary to acheive a goal
+
+stateless=no state being kept inbetween runs of puppet 
+
+
+
+

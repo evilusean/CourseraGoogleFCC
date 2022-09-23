@@ -16,6 +16,16 @@ puppet is consistent, versionable, reliable, repeatable
 Resources=The basic unit for modeling the configuration that we want to manage(service, package, file)
 Puppet Syntax=Variables, Conditional Statements, Functions
 Facts=Variables that represent the charasteristics of the system using Factor(OS/Memory/VM/IP/etc)
+manifest=a puppet file with .pp extension
+catalog=the list of rules that are generated for one specific computer once the server has evaluated all variables, conditionals, and functions
+module=collection of manifests and associated data(contains manfiests, files, templates)
+Node=any system where we can run a puppet agent
+
+Fully qualified domain name=sometimes also referred to as an absolute domain name, is a domain name that specifies its exact location in the tree
+hierarchy of the Domain Name System (DNS).
+Public Key Inrastructure(PKI):used by puppet to form connections between server and clients
+Secure Sockets Layer(SSL): used by Puppet/HTTPS as a PKI for verification of identity, encrypted
+Certificate Authority(CA): Verifies public and private keys for verification
 
 idempotent=An action can be performed over and over again without changing the system after the first time the action was performed with
 no unintented side effects

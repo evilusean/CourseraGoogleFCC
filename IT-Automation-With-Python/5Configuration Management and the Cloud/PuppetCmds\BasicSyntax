@@ -17,6 +17,13 @@ sudo puppet agent -v --test #does a test run with verbose output
 sudo systemctl enable puppet #systemctl controls what programs are started on boot, enable puppet on boot
 sudo systemctl start puppet #start puppet on boot
 
+"""to test puppet syntax before deploying use 'puppet parser validate' command or run --noop parameter or test machines with rspec tests"""
+#below is test syntax
+describe 'gksu', :type => :class do
+  let (:facts) { { 'is_virtual' => 'false' } }
+  it { should contain_package{'gksu'}.with_ensure{'latest'} }
+end
+
 """basic syntax for a file class"""
 class sysctl {
 

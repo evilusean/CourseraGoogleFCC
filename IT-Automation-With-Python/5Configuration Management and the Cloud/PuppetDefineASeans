@@ -27,6 +27,9 @@ Public Key Inrastructure(PKI):used by puppet to form connections between server 
 Secure Sockets Layer(SSL): used by Puppet/HTTPS as a PKI for verification of identity, encrypted
 Certificate Authority(CA): Verifies public and private keys for verification
 
+production= the parts of the infrastructure where a service is executed and served to its users
+always test before putting on production machines
+
 idempotent=An action can be performed over and over again without changing the system after the first time the action was performed with
 no unintented side effects
 

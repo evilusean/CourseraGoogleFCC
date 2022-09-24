@@ -29,6 +29,8 @@ Style Guide:
 https://puppet.com/docs/puppet/latest/style_guide.html
 Install from Packages:
 https://puppet.com/docs/puppetserver/latest/install_from_packages.html
+Deploying to Clients:
+http://www.masterzen.fr/2010/11/14/puppet-ssl-explained/
 
 Domain Specific Languages(DSL):
 https://en.wikipedia.org/wiki/Domain-specific_language

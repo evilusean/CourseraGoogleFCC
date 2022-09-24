@@ -10,6 +10,13 @@ sudo apt install puppet-module-puppetlabs-apache #installs a prebuilt ruleset fo
 include ::apache
 sudo puppet apply -v webserver.pp #installs a prebuilt ruleset for an apache server in 8 seconds
 
+sudo puppet config --section master set autosign true #sets certification to autosign for verification
+ssh webserver
+sudo puppet config set server ubuntu.example.com #sets server to ubuntu.example.com
+sudo puppet agent -v --test #does a test run with verbose output
+sudo systemctl enable puppet #systemctl controls what programs are started on boot, enable puppet on boot
+sudo systemctl start puppet #start puppet on boot
+
 """basic syntax for a file class"""
 class sysctl {
 

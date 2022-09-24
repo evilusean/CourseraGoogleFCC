@@ -31,6 +31,9 @@ Install from Packages:
 https://puppet.com/docs/puppetserver/latest/install_from_packages.html
 Deploying to Clients:
 http://www.masterzen.fr/2010/11/14/puppet-ssl-explained/
+Update Testing:
+https://rspec-puppet.com/tutorial/
+http://puppet-lint.com/
 
 Domain Specific Languages(DSL):
 https://en.wikipedia.org/wiki/Domain-specific_language

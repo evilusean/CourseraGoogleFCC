@@ -10,6 +10,11 @@ Google Cloud
 SECM
 Windows Group Policy
 
+Platform as a Service/Managed Web Applications:
+Amazon Elastic Beanstalk
+Microsoft App Service
+Google App Engine
+
 Package Management Systems:
 APT(linux)
 Yum(linux)

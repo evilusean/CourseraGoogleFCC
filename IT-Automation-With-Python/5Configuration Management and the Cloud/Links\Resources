@@ -44,3 +44,11 @@ Domain Specific Languages(DSL):
 https://en.wikipedia.org/wiki/Domain-specific_language
 General Purpose Language(GPL):
 Python, Ruby, Go, Java
+
+
+Managing VMs in GCP(Google Cloud Platform):
+https://cloud.google.com/compute/docs/quickstart-linux
+Templates:
+https://cloud.google.com/compute/docs/instances/create-vm-from-instance-template
+Official Docs:
+https://cloud.google.com/sdk/docs

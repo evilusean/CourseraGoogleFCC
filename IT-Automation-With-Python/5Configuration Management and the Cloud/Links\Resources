@@ -3,6 +3,7 @@ Puppet
 Chef
 Ansible
 CFEngine
+Terraform(Cloud infrastructure DSL)
 Cloud Integrated:
 Amazon EC2
 Microsoft Azure
@@ -52,3 +53,13 @@ Templates:
 https://cloud.google.com/compute/docs/instances/create-vm-from-instance-template
 Official Docs:
 https://cloud.google.com/sdk/docs
+Getting started with GCP and Terraform:
+https://cloud.google.com/community/tutorials/getting-started-on-gcp-with-terraform
+Creating groups of unmanned instances:
+https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-unmanaged-instances
+Load Balancing Official Docs:
+https://cloud.google.com/load-balancing/docs/https/
+Hybrid Setups:
+https://blog.inkubate.io/create-a-centos-7-terraform-template-for-vmware-vsphere/
+https://www.terraform.io/docs/enterprise/before-installing/reference-architecture/gcp.html
+https://www.hashicorp.com/resources/terraform-on-premises-hybrid-cloud-wayfair

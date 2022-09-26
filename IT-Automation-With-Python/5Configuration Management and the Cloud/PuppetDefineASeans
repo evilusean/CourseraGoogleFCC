@@ -63,6 +63,8 @@ Containers=Applications that are packaged together with their configuration and 
 Reference Image=Store the contents of a machine in a reuseable format
 Disk Image=Snapshot of a virtual machines disk at a given point in time
 
-
-
+Load Balanacer: Ensures that each node receives a balanced number of requests
+Orchestration=Automated configuration and coordination of complex IT systems and services
+Long Lived Node:Contents Need to be updated periodically(storage)
+Short Lived Node:Updates need to be made by deleting old instances and deploying new ones(configuration applied at start)
 

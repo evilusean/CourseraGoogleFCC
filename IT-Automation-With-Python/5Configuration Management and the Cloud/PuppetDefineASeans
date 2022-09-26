@@ -60,3 +60,9 @@ Hybrid Cloud=A mixture of both public and private clouds
 Multi Cloud=A mixture of both public/and or private clouds accross vendors
 
 Containers=Applications that are packaged together with their configuration and dependancies
+Reference Image=Store the contents of a machine in a reuseable format
+Disk Image=Snapshot of a virtual machines disk at a given point in time
+
+
+
+

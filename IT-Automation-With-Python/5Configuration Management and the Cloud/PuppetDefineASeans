@@ -54,3 +54,9 @@ Horizontal Scaling=Adding more nodes
 Vertical Scaling=Adding more resources(RAM,CPU, Diskspace) to a node
 Automatic Scaling=the service offered by provider will use metrics to automatically increase or decrease the capacity of the system(bill also scales)
 Manual Scaling=Scaling done by humans instead of software
+Public Cloud=The cloud services provided to you by a third party
+Private Cloud=when your company owns the services and infrastructure, whether that;s on-site or in a remote data center
+Hybrid Cloud=A mixture of both public and private clouds
+Multi Cloud=A mixture of both public/and or private clouds accross vendors
+
+Containers=Applications that are packaged together with their configuration and dependancies

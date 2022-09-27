@@ -25,11 +25,17 @@ In this lab, you will be using gcloud command-line interface, which is a tool th
 
 To install Google Cloud SDK follow the instructions given below based on your device's operating system:
 
-Windows
-Linux
-Debian and Ubuntu
-Red Hat and Cento
-macOS
+Windows:
+https://cloud.google.com/sdk/docs/quickstart-windows
+Linux:
+https://cloud.google.com/sdk/docs/quickstart-linux
+Debian and Ubuntu:
+https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu
+Red Hat and Cento:
+https://cloud.google.com/sdk/docs/quickstart-redhat-centos
+macOS:
+https://cloud.google.com/sdk/docs/quickstart-macos
+
 You'll have 90 minutes to complete this lab.
 
 Start your lab by signing in to the Console

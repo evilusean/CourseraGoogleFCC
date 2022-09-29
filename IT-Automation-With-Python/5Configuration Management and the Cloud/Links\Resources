@@ -63,3 +63,17 @@ Hybrid Setups:
 https://blog.inkubate.io/create-a-centos-7-terraform-template-for-vmware-vsphere/
 https://www.terraform.io/docs/enterprise/before-installing/reference-architecture/gcp.html
 https://www.hashicorp.com/resources/terraform-on-premises-hybrid-cloud-wayfair
+
+Google Cloud Platform(GCP):
+gcloud init #login from cmd
+InstallGuides:
+Windows:
+https://cloud.google.com/sdk/docs/quickstart-windows
+Linux:
+https://cloud.google.com/sdk/docs/quickstart-linux
+Debian and Ubuntu:
+https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu
+Red Hat and Cento:
+https://cloud.google.com/sdk/docs/quickstart-redhat-centos
+macOS:
+https://cloud.google.com/sdk/docs/quickstart-macos

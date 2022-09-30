@@ -68,3 +68,15 @@ Orchestration=Automated configuration and coordination of complex IT systems and
 Long Lived Node:Contents Need to be updated periodically(storage)
 Short Lived Node:Updates need to be made by deleting old instances and deploying new ones(configuration applied at start)
 
+Shared File Systems Solutions=Data can be accessed through network protocols like NFS CFIS
+Block Storage=Physical Drive Storage... But in the Cloud!
+  Persitent Storage=used for instances that are long lived and need to keep data accross reboots and upgrades
+  Ephemeral Storage=used for instances that are only temporary and only need to keep local data while they're running
+Object Storage/Blob Storage=Lets you place and retrieve objects in a storage bucket. Each Object has a unique name, no file system.
+Need to ask for file by name using an API. Use SQL(uses Query Language) or NoSQL(uses API) format for storage
+Blob=Binary Large Object
+Throughput=The amount of data that you can read and write in a given amount of time
+Input Output Operations Per Second(IOPAS)=Measures how many reads or writes you can do in one second, no matter how much data being accessed
+Latency=The amount of time it takes to complete a read or write operation
+Hot Data= Accessed frequently and stored in hot storage(Solid State Discs=SSD)
+Cold Data=Accessed infrequently and stored in cold storage

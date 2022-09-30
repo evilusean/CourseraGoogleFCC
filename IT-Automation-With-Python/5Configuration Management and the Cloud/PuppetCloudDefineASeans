@@ -86,3 +86,18 @@ Input Output Operations Per Second(IOPAS)=Measures how many reads or writes you 
 Latency=The amount of time it takes to complete a read or write operation
 Hot Data= Accessed frequently and stored in hot storage(Solid State Discs=SSD)
 Cold Data=Accessed infrequently and stored in cold storage
+
+Unit Tests Vs Integration Tests
+Continuous Integration= Will build and test our code every time theres a change
+Continuous Integration Systems:
+Travis CI(Github)
+Jenkins
+By Cloud Providers as a service
+Continuous Deployment(CD)=Automatically deploys build 
+Test Environment Vs Production Environment(Prod)=Real environment used by users
+A/B testing=Some requests are served using one set of code and configuration(A) and other requests are used testing another configuration(B)
+Rate Limits=Prevent one service from overloading the whole system
+Utilization limits=Cap the total amount of a certain resource that you can provision
+
+
+

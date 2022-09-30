@@ -64,6 +64,12 @@ Reference Image=Store the contents of a machine in a reuseable format
 Disk Image=Snapshot of a virtual machines disk at a given point in time
 
 Load Balanacer: Ensures that each node receives a balanced number of requests
+Round Robin DNS(domain name system):Sends a list of ip addresses connected to website, try's first at top if fails, goes to next.
+Dedicated Load Balance Server: proxy server distributes client traffic to servers to ensure consistent, high-performance application delivery.
+Sticky Sessions=All requests from the same client always go to the same backend server
+GeoDNS/GeoIP=Directs clients to closest geographical load balancer
+Content Delivery Network(CDN)=Make up a network of physical hosts that are geographically located as close to the end users as possible
+
 Orchestration=Automated configuration and coordination of complex IT systems and services
 Long Lived Node:Contents Need to be updated periodically(storage)
 Short Lived Node:Updates need to be made by deleting old instances and deploying new ones(configuration applied at start)

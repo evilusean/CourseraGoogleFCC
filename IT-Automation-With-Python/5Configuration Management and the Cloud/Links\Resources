@@ -77,3 +77,11 @@ Red Hat and Cento:
 https://cloud.google.com/sdk/docs/quickstart-redhat-centos
 macOS:
 https://cloud.google.com/sdk/docs/quickstart-macos
+
+Cloud Provider Quotas:
+Google Cloud Platform:
+https://cloud.google.com/compute/quotas#understanding_vm_cpu_and_ip_address_quotas
+Amazon Web Services:
+https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html
+Microsoft Azure:
+https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits#service-specific-limits

@@ -24,6 +24,15 @@ Apple Provider(Mac)
 MacPorts(Mac)
 Choclatey(windows)
 
+Monitoring Systems:
+Prometheus
+DataDog
+Nagios
+Cloud:
+AWS CloudWatch
+Google Stack Driver
+Azure Metrics
+
 Puppet:
 Official Docs:
 https://puppet.com/

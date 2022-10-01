@@ -100,3 +100,11 @@ https://www.datadoghq.com/blog/monitoring-101-collecting-data/
 https://www.digitalocean.com/community/tutorials/an-introduction-to-metrics-monitoring-and-alerting
 https://en.wikipedia.org/wiki/High_availability
 https://landing.google.com/sre/books/
+
+Debugging Problems on the Cloud:
+Google:
+https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-instances
+Microsoft:
+https://docs.microsoft.com/en-us/azure/virtual-machines/troubleshooting/
+Amazon:
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-troubleshoot.htm

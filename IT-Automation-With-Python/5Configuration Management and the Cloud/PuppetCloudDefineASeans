@@ -105,3 +105,12 @@ Push Model:Periodically connects to monitoring system to send metrics
 You only want to store the metrics that you care about, since storing all these metrics in the system takes space=money
 Whitebox Monitoring=Checks the behavior of the system from inside
 Blackbox Monitoring=Checks the behavior of the system from outside
+
+Alerts:
+Best approach is to run a job periodically(CRON) that checks the health of a systems and sends an email if it isn't working
+metrics you collect represent your state, raising an alert if your metrics meet a conditional
+Raising an alert signals something is broken and a human needs to respond
+Page=Need immediate attention
+Ticket=Non immediate attention
+Noise=unneccessary queries
+If you are getting too many alerts change the job to raise an alert instead of every time if you get 3 consecutive failed queries

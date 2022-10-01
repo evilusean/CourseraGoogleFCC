@@ -114,3 +114,7 @@ Page=Need immediate attention
 Ticket=Non immediate attention
 Noise=unneccessary queries
 If you are getting too many alerts change the job to raise an alert instead of every time if you get 3 consecutive failed queries
+
+Service Level Objectives(SLO's):Pre established performance goals for a specific service
+Service Level Agreement=A commitment between a provider and a client
+

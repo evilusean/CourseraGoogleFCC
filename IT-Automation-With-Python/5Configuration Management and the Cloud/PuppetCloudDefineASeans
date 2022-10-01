@@ -117,4 +117,5 @@ If you are getting too many alerts change the job to raise an alert instead of e
 
 Service Level Objectives(SLO's):Pre established performance goals for a specific service
 Service Level Agreement=A commitment between a provider and a client
-
+Backups:If you operate a service that stores any kind of datam it's critical that you implement automatic backups, and that you periodically check
+that those backups are working correctly by performing restores.

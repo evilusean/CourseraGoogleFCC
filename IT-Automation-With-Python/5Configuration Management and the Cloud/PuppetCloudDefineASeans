@@ -99,5 +99,9 @@ A/B testing=Some requests are served using one set of code and configuration(A) 
 Rate Limits=Prevent one service from overloading the whole system
 Utilization limits=Cap the total amount of a certain resource that you can provision
 
-
-
+Monitoring:
+Pull Model:Monitoring Infrastructure Peridoically queries the service to get metrics
+Push Model:Periodically connects to monitoring system to send metrics
+You only want to store the metrics that you care about, since storing all these metrics in the system takes space=money
+Whitebox Monitoring=Checks the behavior of the system from inside
+Blackbox Monitoring=Checks the behavior of the system from outside

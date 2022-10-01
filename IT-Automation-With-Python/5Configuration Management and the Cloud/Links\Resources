@@ -94,3 +94,9 @@ Amazon Web Services:
 https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html
 Microsoft Azure:
 https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits#service-specific-limits
+
+Monitoring and Alerting:
+https://www.datadoghq.com/blog/monitoring-101-collecting-data/
+https://www.digitalocean.com/community/tutorials/an-introduction-to-metrics-monitoring-and-alerting
+https://en.wikipedia.org/wiki/High_availability
+https://landing.google.com/sre/books/

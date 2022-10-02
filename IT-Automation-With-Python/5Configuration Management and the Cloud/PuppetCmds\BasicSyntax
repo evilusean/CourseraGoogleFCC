@@ -150,9 +150,27 @@ node webserver.example.com {
   class { 'apache': }
 }
 
-
-
-
+"""Below is cloud syntax used for linux apache server debugging from Lab 4"""
+#systemctl is a utility for controlling the systemd system and service manager. It comes with a long list of options for different functionality,
+#including starting, stopping, restarting, or reloading a daemon.
+sudo systemctl status apache2 #checks status
+sudo systemctl restart apache2 #restart
+#find which processes are using a port
+sudo netstat -nlp
+#finds which process is using port(python3) using grep
+ps -ax | grep python3
+#check code from file found
+cat /usr/local/bin/jimmytest.py
+#kills process found
+sudo kill pid 2517
+#checks for service named jimmy
+sudo systemctl --type=service | grep jimmy
+#stops service
+sudo systemctl stop jimmytest && sudo systemctl disable jimmytest
+#uses netstat to check 
+sudo netstat -nlp
+#restarts server
+sudo systemctl start apache2
 
 
 

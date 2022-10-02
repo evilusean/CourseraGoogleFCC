@@ -44,4 +44,12 @@ https://www.coursera.org/learn/configuration-management-cloud?specialization=goo
 
 Start:19September2022
 
+End:01October2022
+
+## 6Automating Real-World Tasks with Python
+
+https://www.coursera.org/learn/automating-real-world-tasks-python?specialization=google-it-automation
+
+Start:02October2022
+
 End:

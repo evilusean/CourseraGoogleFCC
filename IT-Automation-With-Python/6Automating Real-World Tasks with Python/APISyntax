@@ -1,0 +1,28 @@
+sudo apt install python3-pil #linux install
+pip3 install pillow #other OS install
+import pil
+#get documentation/docstrings for PIL
+help(PIL)
+
+#Basic Syntax from PIL image API
+#opens an image called bride.jpg, rotates it 45 degrees, and then shows it on the screen.
+from PIL import Image
+im = Image.open("bride.jpg")
+im.rotate(45).show()
+
+# if we want to rotate an image, we can use code like this:
+from PIL import Image
+im = Image.open("example.jpg")
+new_im = im.rotate(90)
+new_im.save("example_rotated.jpg")
+
+#resize an image and save the new image with a new name, we could do it with:
+from PIL import Image
+im = Image.open("example.jpg")
+new_im = im.resize((640,480))
+new_im.save("example_resized.jpg")
+
+# combine these operations into just one line that rotates, resizes, and saves:
+from PIL import Image
+im = Image.open("example.jpg")
+im.rotate(180).resize((640,480)).save("flipped_and_resized.jpg")

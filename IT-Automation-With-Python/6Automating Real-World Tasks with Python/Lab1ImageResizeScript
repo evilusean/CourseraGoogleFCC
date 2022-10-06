@@ -1,0 +1,118 @@
+#attempt 1:
+#!/usr/bin/python3
+from PIL import Image
+import os, sys
+
+path = "/home/student-00-f525c13b1a30/images/"
+dirs = os.listdir( path )
+
+def resize():
+    for img in dirs:
+        if os.path.isfile(path+img):
+            im = Image.open(path+img)
+            f, e = os.path.splitext(path+img)
+            imResize = im.resize((128,128), Image.ANTIALIAS)
+            imResize.save(f + ' resized.jpg', 'JPEG', quality=90)
+
+resize()
+
+
+#attempt 2
+#!/usr/bin/env python3
+from PIL import Image
+import os, sys
+
+path = "/opt/icons/"
+dirs = "/home/student-00-f525c13b1a30/images/"
+
+if not os.path.exists(dirs):
+    os.makedirs(dirs)
+
+def resize():
+    for img in dirs:
+        if os.path.isfile(path+img):
+            im = Image.open(path+img)
+            f, e = os.path.splitext(path+img)
+            imResize = im.rotate(90).resize((128,128), Image.ANTIALIAS)
+            imResize.save(path + ' resized.jpg', 'JPEG', quality=90)
+
+resize()
+
+#attempt 3
+#!/usr/bin/env python3
+from PIL import Image
+import glob
+import os
+
+# new folder path (may need to alter for Windows OS)
+# change path to your path
+ORI_PATH = '/home/student-00-f525c13b1a30/images/'
+NEW_SIZE = 128
+PATH = '/opt/icons/' #the path where to save resized images
+
+# create new folder
+if not os.path.exists(PATH):
+    os.makedirs(PATH)
+
+# loop over existing images and resize
+# change path to your path
+for filename in glob.glob(ORI_PATH+'**/*.jpg'): #path of raw images with is subdirectory
+    img = Image.open(filename).resize((NEW_SIZE,NEW_SIZE))
+    
+    # get the original location and find its subdir
+    loc = os.path.split(filename)[0]
+    subdir = loc.split('\\')[1]
+    
+    # assembly with its full new directory
+    fullnew_subdir = PATH+"/"+subdir
+    name = os.path.split(filename)[1]
+    
+    # check if the subdir is already created or not
+    if not os.path.exists(fullnew_subdir):
+        os.makedirs(fullnew_subdir)
+    
+    # save resized images to new folder with existing filename
+    img.save('{}{}{}'.format(fullnew_subdir,'/',name))
+
+#attempt 4
+#!/usr/bin/env python3
+from genericpath import isdir
+from PIL import Image
+import os, sys
+
+path = "/home/student-00-f525c13b1a30/images/"
+save_path = "/opt/icons/"
+images = os.listdir(path)
+
+if not os.path.isdir(save_path):
+    os.makedirs(save_path)
+
+
+for image in images:
+    image_path = os.path.join(path, image)
+    image_save_path = os.path.join(save_path, image)
+    if image.split(".")[1] not in ["jpg", "png"]:
+        continue
+    if os.path.exists(image_path):
+        im = Image.open(image_path)
+        image_resized = im.rotate(90).resize((128,128))
+        image_resized.save(image_save_path + ' resized.jpg', 'JPEG', quality=90)
+        # print("saved")
+        
+ #attemmpt 5
+ #place python file in images file, rotate !!!270!!! WORKS!
+ #!/usr/bin/env python3
+import os, sys
+from PIL import Image
+
+size = (128, 128)
+
+for infile in os.listdir():
+    outfile = os.path.splitext(infile)[0]
+    try:
+        with Image.open(infile).convert('RGB') as im:
+            im.thumbnail(size)
+            im.rotate(270).save("/opt/icons/" + outfile, "JPEG")
+    except OSError:
+        pass
+ 

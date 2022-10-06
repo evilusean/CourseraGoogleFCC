@@ -99,9 +99,9 @@ for image in images:
         image_resized.save(image_save_path + ' resized.jpg', 'JPEG', quality=90)
         # print("saved")
         
- #attemmpt 5
- #place python file in images file, rotate !!!270!!! WORKS!
- #!/usr/bin/env python3
+#attemmpt 5
+#place python file in images file, rotate !!!270!!! WORKS!
+#!/usr/bin/env python3
 import os, sys
 from PIL import Image
 

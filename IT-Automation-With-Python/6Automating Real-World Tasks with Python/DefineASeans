@@ -1,3 +1,12 @@
 web application= is an application that you interact with over HTTP.
 Web Service=Web applications that have an API are also known as web services.
 API Call=The part of the program that listens on the network for API calls is called an API endpoint.
+Data serialization=is the process of taking an in-memory data structure, like a Python object, and turning it into something that can be stored on
+  disk or transmitted across a network. Later, the file can be read, or the network transmission can be received by another program and turned 
+  back into an object again. Turning the serialized object back into an in-memory object is called deserialization.
+
+
+
+
+
+

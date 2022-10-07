@@ -1,6 +1,12 @@
 #https://requests.readthedocs.io/
 #https://requests.readthedocs.io/en/master/api/#requests.Response
 #https://requests.readthedocs.io/en/latest/api/#requests.Response.text
+#https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml
+"""
+The Python Requests library makes it super easy to write programs that send and receive HTTP. Instead of having to understand the HTTP protocol in
+great detail, you can just make very simple HTTP connections using Python objects, and then send and receive messages using the methods of those 
+objects. Let's look at an example:  
+"""
 >>> import requests
 >>> response = requests.get('https://www.google.com')
 
@@ -20,3 +26,20 @@ b'\x1f\x8b\x08\x00\x00\x00\x00\x00\x02\xff\xc5Z\xdbz\x9b\xc8\x96\xbe\xcfS`\xf2\x
 #server told us that the content had actually been compressed.  
 >>> response.headers['Content-Encoding']
 'gzip'
+
+#How do we know if a request we made got a successful response? You can check out the value of Response.ok, which will be True if the response was good, and False if it wasn't.  
+>>> response.ok
+True
+
+#If the boolean isn’t specific enough for your needs, you can get the HTTP response code that was returned by looking at Response.status_code:  
+>>> response.status_code
+200
+
+#raises an error message if response.ok is false and prints status code
+response = requests.get(url)
+if not response.ok:
+    raise Exception("GET failed with status code {}".format(response.status_code))
+    
+#But you don't really need to do that. Requests has us covered here, too! We can use the Response.raise_for_status() method, which will raise an HTTPError exception only if the response wasn’t successful.  
+response = requests.get(url)
+response.raise_for_status()

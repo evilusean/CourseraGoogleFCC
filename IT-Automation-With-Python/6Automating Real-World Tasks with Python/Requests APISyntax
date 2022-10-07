@@ -1,0 +1,22 @@
+#https://requests.readthedocs.io/
+#https://requests.readthedocs.io/en/master/api/#requests.Response
+#https://requests.readthedocs.io/en/latest/api/#requests.Response.text
+>>> import requests
+>>> response = requests.get('https://www.google.com')
+
+#gets HTML document as a single line up to :300 character
+>>> print(response.text[:300])
+<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="de"><head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image"><title>Google</title><script nonce="dZfbIAn803LDGXS9
+
+#gets raw response up to :100 characters machine code The response was compressed with gzip, so it had to be decompressed before we could even read the text of the HTML.
+>>> response = requests.get('https://www.google.com', stream=True)
+>>> print(response.raw.read()[:100])
+b'\x1f\x8b\x08\x00\x00\x00\x00\x00\x02\xff\xc5Z\xdbz\x9b\xc8\x96\xbe\xcfS`\xf2\xb5-\xc6X\x02$t\xc28\xe3v\xdc\xdd\xee\xce\xa9\xb7\xdd;\xe9\x9d\xce\xf6W@\t\x88\x11`@>D\xd6\x9b\xce\xe5<\xc3\\\xcd\xc5\xfc\xab8\x08\xc9Nz\x1f.&\x8e1U\xb5j\xd5:\xfc\xb5jU\x15\x87;^\xe2\x16\xf7)\x97\x82b\x1e\x1d\x1d\xd2S'
+
+#makes above code readable
+>>> response.request.headers['Accept-Encoding']
+'gzip, deflate'
+
+#server told us that the content had actually been compressed.  
+>>> response.headers['Content-Encoding']
+'gzip'

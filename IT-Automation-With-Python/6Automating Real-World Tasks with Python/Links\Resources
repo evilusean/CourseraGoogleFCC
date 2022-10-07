@@ -16,6 +16,9 @@ Requests Library(Python):
 https://requests.readthedocs.io/
 HyperTextMarkupLanguage(HTML) standards docs:
 https://html.spec.whatwg.org/multipage/
+HTTP Response codes:
+https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml
+
 
 gzip(raw code compression):
 https://www.gzip.org/

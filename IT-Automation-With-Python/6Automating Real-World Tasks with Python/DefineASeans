@@ -1,0 +1,3 @@
+web application= is an application that you interact with over HTTP.
+Web Service=Web applications that have an API are also known as web services.
+API Call=The part of the program that listens on the network for API calls is called an API endpoint.

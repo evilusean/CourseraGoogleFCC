@@ -12,5 +12,19 @@ https://pillow.readthedocs.io/en/stable/handbook/tutorial.html
 Image API:
 https://pillow.readthedocs.io/en/stable/reference/Image.html
 
+Data Serialization Formats:
 Java Script Object Notation(JSON):
 https://www.json.org/json-en.html
+Python Vs JSON Official Docs:
+https://docs.python.org/3/library/json.html#py-to-json-table
+Yet Another Markup Language(YAML):
+https://yaml.org/
+Python Pickle:
+https://docs.python.org/3/library/pickle.html
+Protocol Buffers:
+https://developers.google.com/protocol-buffers
+eXtensible Markup Language(XML):
+https://www.w3.org/XML/
+
+
+

@@ -17,6 +17,9 @@ https://requests.readthedocs.io/
 HyperTextMarkupLanguage(HTML) standards docs:
 https://html.spec.whatwg.org/multipage/
 
+gzip(raw code compression):
+https://www.gzip.org/
+
 Data Serialization Formats:
 Java Script Object Notation(JSON):
 https://www.json.org/json-en.html

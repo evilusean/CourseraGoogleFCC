@@ -18,6 +18,16 @@ HyperTextMarkupLanguage(HTML) standards docs:
 https://html.spec.whatwg.org/multipage/
 HTTP Response codes:
 https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml
+HTML Methods(GET, POST, PUT, DELETE):
+https://tools.ietf.org/html/rfc7231#section-4.3
+HTML GET Method:
+https://www.rfc-editor.org/rfc/rfc7231#section-4.3.1
+POST Method:
+https://www.rfc-editor.org/rfc/rfc7231#section-4.3.3
+Query String(Part of Uniform Resource Link(URL)):
+https://en.wikipedia.org/wiki/Query_string
+Requests Docs:
+https://requests.readthedocs.io/en/latest/user/quickstart/
 
 
 gzip(raw code compression):

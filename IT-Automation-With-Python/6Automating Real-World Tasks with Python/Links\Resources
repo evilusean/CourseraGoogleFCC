@@ -29,9 +29,20 @@ https://en.wikipedia.org/wiki/Query_string
 Requests Docs:
 https://requests.readthedocs.io/en/latest/user/quickstart/
 
-
 gzip(raw code compression):
 https://www.gzip.org/
+
+Full Stack Web Frameworks:
+Django:
+https://djangoproject.com/
+Flask:
+https://www.fullstackpython.com/flask.html
+Bottle:
+https://bottlepy.org/docs/dev/
+CherryPy:
+https://cherrypy.org/
+CubicWeb:
+https://www.cubicweb.org/
 
 Data Serialization Formats:
 Java Script Object Notation(JSON):

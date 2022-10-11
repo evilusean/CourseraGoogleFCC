@@ -1,0 +1,24 @@
+
+#! /usr/bin/env python3
+import os
+import requests
+
+
+dir="/data/feedback/"
+url= "http://34.69.219.208/feedback/"
+
+for file in os.listdir(dir):
+    #create dictionaries for posting
+    tipos = ["title","name","date","feedback"]
+    datos = {}
+    lineas = []
+    print(file)
+    #goes through each text file on webserver
+    with open(dir+"/"+file,"r") as txtfile:
+        x = 0
+        for line in txtfile:
+            datos[tipos[x]] = line.rstrip('\n')
+            x += 1
+    print(datos)
+    #posts to http webserver 
+    response = requests.post(url,json=datos)

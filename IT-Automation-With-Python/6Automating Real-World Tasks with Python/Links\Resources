@@ -61,11 +61,16 @@ https://www.w3.org/XML/
 Mail:
 Simple Mail Transfer Protocol(SMTP):
 https://tools.ietf.org/html/rfc2821.html
+Built in SMTP Python API:
+https://docs.python.org/3/library/smtplib.html
 Multipurpose Internet Mail Extensions(MIME):
 https://www.rfc-editor.org/rfc/rfc2045
-Built in Python API official Docs:
+Built in Python MIME API official Docs:
 https://docs.python.org/3/library/email.html
 Internet Assigned Numbers Authority(IANA):
 https://iana.org/
 Registered MIME types:
 https://www.iana.org/assignments/media-types/media-types.xhtml
+
+GetPass Module:
+https://docs.python.org/3/library/getpass.html

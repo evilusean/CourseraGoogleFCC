@@ -65,4 +65,7 @@ Multipurpose Internet Mail Extensions(MIME):
 https://www.rfc-editor.org/rfc/rfc2045
 Built in Python API official Docs:
 https://docs.python.org/3/library/email.html
-
+Internet Assigned Numbers Authority(IANA):
+https://iana.org/
+Registered MIME types:
+https://www.iana.org/assignments/media-types/media-types.xhtml

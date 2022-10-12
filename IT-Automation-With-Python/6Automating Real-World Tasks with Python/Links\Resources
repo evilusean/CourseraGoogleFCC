@@ -58,5 +58,11 @@ https://developers.google.com/protocol-buffers
 eXtensible Markup Language(XML):
 https://www.w3.org/XML/
 
-
+Mail:
+Simple Mail Transfer Protocol(SMTP):
+https://tools.ietf.org/html/rfc2821.html
+Multipurpose Internet Mail Extensions(MIME):
+https://www.rfc-editor.org/rfc/rfc2045
+Built in Python API official Docs:
+https://docs.python.org/3/library/email.html
 

@@ -1,0 +1,54 @@
+"""
+Built in Official Docs:
+https://docs.python.org/3/library/email.html
+"""
+#Using the email.message.EmailMessage class to create an empty email message.
+>>> from email.message import EmailMessage
+>>> message = EmailMessage()
+>>> print(message)
+
+#y adding the sender and recipient to the message and see how that looks.
+#We'll define a couple of variables so that we can reuse them later.
+>>> sender = "me@example.com"
+>>> recipient = "you@example.com"
+
+#now, add them to the From and To fields of the message.
+>>> message['From'] = sender
+>>> message['To'] = recipient
+>>> print(message)
+From: me@example.com
+To: you@example.com
+
+#add subject line
+>>> message['Subject'] = 'Greetings from {} to {}!'.format(sender, recipient)
+>>> print(message)
+From: me@example.com
+To: you@example.com
+Subject: Greetings from me@example.com to you@example.com!
+
+#From, To, and Subject are examples of email header fields. They’re key-value pairs of labels and instructions used by email clients and 
+#servers to route and display the email. They’re separate from the email's message body, which is the main content of the message.
+#Let's go ahead and add a message body!
+>>> body = """Hey there!
+...
+... I'm learning to send emails using Python!"""
+>>> message.set_content(body)
+
+#now what does that look like?
+>>> print(message)
+From: me@example.com
+To: you@example.com
+Subject: Greetings from me@example.com to you@example.com!
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Hey there!
+
+I'm learning to send email using Python!
+
+
+
+
+
+

@@ -5,7 +5,8 @@ Data serialization=is the process of taking an in-memory data structure, like a 
   disk or transmitted across a network. Later, the file can be read, or the network transmission can be received by another program and turned 
   back into an object again. Turning the serialized object back into an in-memory object is called deserialization.
 HTTP (HyperText Transfer Protocol): is the protocol of the world-wide web
-
+ Simple Mail Transfer Protocol (SMTP) 
+ Multipurpose Internet Mail Extensions (MIME)
 
 
 

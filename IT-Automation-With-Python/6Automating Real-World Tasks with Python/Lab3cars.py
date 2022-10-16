@@ -274,7 +274,7 @@ if __name__ == "__main__":
   
   
   
-"""ATTEMPT 3: Works?"""
+"""ATTEMPT 3: Works!"""
 #!/usr/bin/env python3
 
 import json
@@ -357,14 +357,14 @@ def pdf_generator(summary,data):
   result=''
   for line in summary:
     result=result+line+'<br/>'
-  reports.generate("/tmp/Cars.pdf", "Sales Summary for last month",result,table_data)
+  reports.generate("/tmp/cars.pdf", "Sales Summary for last month",result,table_data)
 
 def email_send_report(summary):
   sender="automation@example.com"
   receiver="{}@example.com".format(os.environ.get('USER'))
   subject= "Sales summary for last month"
   body= '\n'.join(summary)
-  message = emails.generate(sender, receiver, subject, body, "/tmp/Cars.pdf")
+  message = emails.generate(sender, receiver, subject, body, "/tmp/cars.pdf")
   emails.send(message)
 
 def main(argv):

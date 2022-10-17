@@ -19,7 +19,7 @@ Start:28July2022
 
 End:17October2022
 
-# Rutgers Supply Chain Management Specialization:
+# Rutgers: Supply Chain Management Specialization:
 
 https://www.coursera.org/specializations/supply-chain-management
 

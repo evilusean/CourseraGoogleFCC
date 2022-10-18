@@ -1,8 +1,10 @@
 # Finished Final Project Plan with all links:
 
+Project Plan:
+
 https://docs.google.com/spreadsheets/d/1oQwYEMKILqX10N03fG8Ei1Saudgv_LBJ/edit?usp=sharing&ouid=113094715498170936423&rtpof=true&sd=true
 
-## All peer reviewed completed assignments
+## All peer reviewed completed assignments:
 
 10-10-2022	Finished Peer Reviewed Email Coalition:
 

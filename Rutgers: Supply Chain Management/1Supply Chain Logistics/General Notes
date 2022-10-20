@@ -13,3 +13,8 @@ Terminals Take products from one truck, sort them and put them on another truck(
 1)Pickup/Delivery Terminal: City truck -> Line Haul Vehicle
 2)Cross Docks Terminal: connect networks of transportation together
 3)Relay Terminal: Switch out Cab/driver with new one, same trailer keeps going
+
+Motor Carriers:
+TruckLoad(TL)=Shipper rents out entire truck(s)
+Less-Than-Truckload(LTL)=You own a share of that truck(s) shipment and pay by weight
+Parcel Freight=Faster, more expensive, smaller shipments

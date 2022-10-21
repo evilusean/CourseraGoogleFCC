@@ -18,3 +18,18 @@ Motor Carriers:
 TruckLoad(TL)=Shipper rents out entire truck(s)
 Less-Than-Truckload(LTL)=You own a share of that truck(s) shipment and pay by weight
 Parcel Freight=Faster, more expensive, smaller shipments
+
+
+Flight Freight:
+Benefits of Air Freight:
+1)Speed
+2)Capacity
+3)Accesibility-any destination
+When [speed > cost], air wins
+Cargo planes Vs Narrow Bodied Vs Commercial Airlines(belly cargo)
+
+1:All Cargo(entire plane is cargo)
+2:Commercial Airlines(Belly Cargo)
+Quote done by weight, a certain density is required 1kg=6,000cc(cubic centremeters)
+Largest Expense is fuel
+Delays are also a concern

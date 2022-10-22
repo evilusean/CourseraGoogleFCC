@@ -14,3 +14,8 @@ user = os.getenv('USER')
 
 #image directory
 image_directory = '/home/{}/supplier-data/images/'.format(user)
+
+url = "http://localhost/upload/"
+
+with open('/usr/share/apache2/icons/icon.sheet.png', 'rb') as opened:
+    r = requests.post(url, files={'file': opened})

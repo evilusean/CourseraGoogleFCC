@@ -1,0 +1,128 @@
+Transportation Evaluation
+
+The goal of this assignment is to help you review the different types of transportation in a format that most of you are familiar with. 
+This assignment will also help you determine how companies make decisions regarding routing, mode of transportation, and timing.
+
+Now it is your turn:
+
+Select an Express Delivery firm that is active in the United States and explain how their transportation network is set up. In detail,
+I would like you to take a look at one shipment and analyze how the transportation company managed the delivery of the product from origin to 
+destination.
+
+
+
+Review criteria
+less 
+
+Please complete the following:
+
+Calculate the distances and time between the locations mentioned on the tracking statement.
+
+Identify the role that each leg of the journey plays (e.g. pick-up, line haul, delivery, etc.).
+
+Identify the mode of transportation that is likely used.
+
+Explain the routing between origin and destination (e.g. how much of a straight line between origin and destination).
+
+Analyze the efficiency of the routing (e.g. why the company likely chose this routing).
+
+Express any areas of difficulty.
+
+Reflect on what you learned in this assignment.
+
+If you do not have access to a tracking statement, please use one of the two below:
+less 
+FedEx Example:
+
+Date/Time          Activity
+                                Location 
+
+ 
+
+Wednesday 
+
+10:04 am              Shipment
+information sent to FedEx                       
+
+4:00 pm                Picked
+up                                            ROGERS,
+MN
+
+5:54 pm                Arrived
+at FedEx location              ROGERS, MN
+
+ 
+
+Thursday 
+
+1:37 am Left FedEx
+origin facility                ROGERS, MN
+
+ 
+
+Sunday 
+
+3:47 pm                Arrived
+at FedEx location              HAGERSTOWN,
+MD
+
+9:34 pm                Departed
+FedEx location              HAGERSTOWN, MD
+
+ 
+
+Monday 
+
+4:52 am At local
+FedEx facility                      NORTH
+WALES, PA
+
+7:30 am On FedEx
+vehicle for delivery     NORTH WALES, PA
+
+1:56 pm                Delivered                                            VALLEY
+FORGE, PA
+
+ 
+
+ 
+
+UPS Example:
+
+Day/Time            Activity                                                 Location
+
+ 
+
+Tuesday
+
+10:27 AM             BILLING
+INFORMATION RECEIVED 
+
+09:01 PM             ORIGIN
+SCAN                                    WINDSOR LOCKS, CT 
+
+09:37 PM             DEPARTURE
+SCAN                           WINDSOR LOCKS, CT 
+
+ 
+
+Wednesday
+
+12:54 AM             ARRIVAL
+SCAN                                  PARSIPPANY, NJ 
+
+03:38 AM             DEPARTURE
+SCAN                           PARSIPPANY, NJ 
+
+05:44 AM             ARRIVAL
+SCAN                                  WEST CHESTER, PA 
+
+ 
+
+Friday
+
+05:29 AM             OUT
+FOR DELIVERY                          WEST CHESTER, PA 
+
+01:36 PM             DELIVERED
+                                         KING OF PRUSSIA, PA 

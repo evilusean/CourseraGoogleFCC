@@ -38,18 +38,27 @@ just been a call to a module function! Remember, we’ve covered these modules i
 if you need a refresher!
 
 Python Image Library (PIL) - Tutorial
+https://pillow.readthedocs.io/
+https://pillow.readthedocs.io/en/stable/handbook/tutorial.html
 
-Requests (HTTP client library) - Quickstart
+Requests (HTTP client library) - Quickstart:
+https://requests.readthedocs.io/
+https://requests.readthedocs.io/en/master/user/quickstart/
 
-ReportLab (PDF creation library)
+ReportLab (PDF creation library):
+https://www.reportlab.com/docs/reportlab-userguide.pdf
 
-email (constructing email)
+email (constructing email):
+https://docs.python.org/3/library/email.examples.html
 
-psutil (processes and system utilization)
+psutil (processes and system utilization):
+https://psutil.readthedocs.io/
 
-shutil (file operations)
+shutil (file operations):
+https://docs.python.org/3/library/shutil.html
 
-smtplib (sending email)
+smtplib (sending email):
+https://docs.python.org/3/library/smtplib.html
 
 Read the lab instructions carefully! Following the instructions and implementing your solution to the specifications that you’re given are 
 critical to completing the task, and to being accurately graded! 

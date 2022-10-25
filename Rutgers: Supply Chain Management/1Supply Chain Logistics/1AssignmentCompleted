@@ -1,0 +1,109 @@
+1)Calculate the distances and time between the locations mentioned on the tracking statement.
+
+2)Identify the role that each leg of the journey plays (e.g. pick-up, line haul, delivery, etc.).
+
+3)Identify the mode of transportation that is likely used.
+
+4)Explain the routing between origin and destination (e.g. how much of a straight line between origin and destination).
+
+5)Analyze the efficiency of the routing (e.g. why the company likely chose this routing).
+
+6)Express any areas of difficulty.
+
+7)Reflect on what you learned in this assignment.
+
+======================Answers=========================
+
+1)Calculate the distances and time between the locations mentioned on the tracking statement.
+Date/Time          Activity
+Location 
+
+Wednesday 
+10:04 am              Shipment
+information sent to FedEx                       
+
+4:00 pm                Picked up                                            
+ROGERS, MN
+
+5:54 pm                Arrived at FedEx location
+ROGERS, MN
+
+=4:00PM-5:54PM=1 hour 54 minutes
+-Delivery to FedEx Location by Pickup Delivery Truck in same city.
+
+Thursday 
+1:37 am
+Left FedEx origin facility               
+ROGERS, MN
+
+ARRIVED
+Sunday 
+3:47 pm                
+Arrived at FedEx location              
+HAGERSTOWN, MD
+=======DISTANCE DATA FROM GOOGLE MAPS=================
+Driving distance	1,068 mi	1,718.67 km
+ROGERS MINNESOTA TO HAGERSTOWN MARYLAND
+=Thursday 1:37AM-Sunday 3:47PM=3Days 14 hours and 10 minutes
+
+Sunday
+9:34 pm                
+Departed FedEx location              
+HAGERSTOWN, MD
+
+ARRIVED
+Monday 
+4:52 am
+At local FedEx facility                      
+NORTH WALES, PA
+=======DISTANCE DATA FROM GOOGLE MAPS=================
+HAGERSTOWN MARYLAND to NORTH WALES PENNSYLVANIA
+=180.6miles Sunday 9:34PM-4:52AM=6Hours and 26 Minutes
+
+In FedEx Facility For 2 Hours and 38 Minutes
+7:30 am 
+On FedEx vehicle for delivery     
+NORTH WALES, PA
+
+1:56 pm                Delivered                                            
+VALLEY FORGE, PA
+=======DISTANCE DATA FROM GOOGLE MAPS=================
+NORTH WALES PENNSYLVANIA to VALLEY FORGE PENNSYLVANIA
+=15.6 Miles Sunday 7:30AM - 1:56PM = 6 Hours and 26 minutes
+
+2)Identify the role that each leg of the journey plays (e.g. pick-up, line haul, delivery, etc.).
+A)ROGERS MN -> ROGERS MN
+A pickup truck went to collect the package
+B)ROGERS MN -> HAGERSTOWN MD
+The distance was less than 1,700 miles which would of been done by intermodal train transportation for most efficiency so-
+It was probably done by a long haul truck but potentially by intermodal train or line haul trucking
+C)HAGERSTOWN MD -> NORTH WALES PA
+Likely done by an overnight flight service or overnight trucker
+D)NORTH WALES PA -> VALLEY FORGE PA
+Finished off with a delivery truck to its destination
+
+3)Identify the mode of transportation that is likely used.
+Read above
+
+4)Explain the routing between origin and destination (e.g. how much of a straight line between origin and destination).
+ROGERS MINNESOTA TO HAGERSTOWN MARYLAND
+Driving distance	1,068 mi	1,718.67 km
+It is a fairly straight shot with one major stopover in chicago
+
+HAGERSTOWN MARYLAND to NORTH WALES PENNSYLVANIA
+=180.6miles
+Short distance with multiple branches to small towns in the periphery, 4 potential course changes in less than 200 miles
+
+NORTH WALES PENNSYLVANIA to VALLEY FORGE PENNSYLVANIA
+=15.6 Miles
+extremely short distance, a maneuverable delivery truck would be of most use in this general area
+
+5)Analyze the efficiency of the routing (e.g. why the company likely chose this routing).
+Potentially Hagerstown was a central sorting hub and then sent out to another terminal and then sent to it's final destination after
+reaching a collection station
+6)Express any areas of difficulty.
+I made alot of assumptions based on little to no data/information, seems excessive for a simple assignment. Used google judiciously.
+7)Reflect on what you learned in this assignment.
+When transporting goods there are essentialy three phases; the pickup phase, the main portion of the trip, and the final delivery. 
+Some or all of these phases could require multiple stops at terminals or hubs, each using potentially different forms of logistics, 
+while trying to maintain a balance between cost and speed.

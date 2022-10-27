@@ -2,9 +2,13 @@
 
 https://www.coursera.org/professional-certificates/google-it-automation
 
+Certificate:
+
+https://www.credly.com/badges/bd3ab22d-87f1-4bb6-99ab-d0edf661f93a/public_url
+
 Start:29July2022
 
-End:
+End:27October2022
 
 
 # Google Project Management: Professional Certificate:

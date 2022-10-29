@@ -75,3 +75,13 @@ Redundancy built in to the process + Maintain as much throughput as possible
 
 Unloading -> Put away and storage -> Picking -> Packing -> Staging and Loading
 Entire process controlled by warehouse management system
+
+
+Inventory:
+How Much?
+Cycle Stock vs Safety Stock
+Cycle Stock: Inventory that goes up and down during regular sales and replenishment
+Safety Stock: held just in case something unanticipated happens(demand vs logistics-supply not received)
+When to order Inventory?
+s.Q. Method: 's'=reorder point(when are you going to reorder) 'Q'=Fixed quantity
+s.S. Method: 'S'=Variable Quantity

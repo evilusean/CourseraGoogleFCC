@@ -88,3 +88,27 @@ s.S. Method: 'S'=Variable Quantity
 
 ==========================================Week 3:
 Logistics Network Design:
+Facilities:
+How many and where?
+When in fewer locations you need less inventory(safety stock can be spread)
+More locations, each location needs their own safety stock, more inventory
+Warehouse as close to customer as possible
+you don't need to stock every item in every warehouse
+transportation network as storage device(keep inventory on trucks)
+
+Factors Influencing Logistics Networks:
+Cost Vs Service
+Better service = higher cost(generally)
+Minimize cost for best service possible
+Two major factors=Cost of money(interest rates), cost of fuel(cost of crude)
+High interest rates=high cost of inventory(cash could be used otherwise)
+
+Lead time=time from order submission to time of order received
+You want low lead time variance, short as possible, avoid delays
+Fill rate=percentage of orders shipped from inventory
+
+Overall Goal of Logistics(7 R's):
+Deliver the right product, at the right price, to the right customer, at the right place, at the right time, in the right quantity, in the right
+condition
+SKU=Stock Keeping Unit(A items sell most, B, C sell less, not as critically important)
+A items need best fill rate and lower lead times

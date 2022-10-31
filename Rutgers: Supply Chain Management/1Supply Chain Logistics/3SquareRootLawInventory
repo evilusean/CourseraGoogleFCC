@@ -1,0 +1,19 @@
+The Square Root Law
+The Square Root Law 
+It is nice rule of thumb for  estimating the changes in overall inventory as a result of changing the  number of warehouses.
+These calculations are assuming that nothing else  changes.
+
+X2 = (X1) * √ (n2/n1)
+
+n1 = number of existing warehouses n2 = number of future warehouses X1 = existing inventory X2 = future inventory
+
+Examples:
+Example 1:
+Current inventory is 10,000 units
+2 facilities become to 3
+Estimated future inventory = (10,000) * √ (3/2) = 10,000 * 1.225 = 12,500 units.
+
+Example 2:
+Current inventory = 20,000 units
+1 facility becomes to 4 facilities
+Estimated future inventory = (20,000) * √ (4/1) = 20,000 * 2 = 40,000 units.

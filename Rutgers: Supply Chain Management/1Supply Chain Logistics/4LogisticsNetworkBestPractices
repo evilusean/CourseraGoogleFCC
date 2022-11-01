@@ -1,0 +1,14 @@
+Logistics Networks Best Practices
+#1 Use the fewest number of warehouses that are close to the largest number of customers
+Since each warehouse adds cost you should be careful about the number of warehouses you have. Depending on how the network is set up,
+there are no good or bad numbers, but as the number of warehouses changes, other factors must adapt as well, such as which warehouse certain 
+customers are serviced by changes, so does the amount of inventory held in each warehouse, and of course the transportation part of your network.
+
+#2 Keep your miles-per-delivery (MPD) as low as possible
+A good starting point is to look at each warehouse and calculate the MPD for all customers. Here are some good rules of thumb:
+The farthest customer should not be more than 1,000 miles from the warehouse (if we assume that we seek a 2 day ground delivery).
+The average MPD should be between 300 and 400 miles.
+
+#3 Find a balance
+It is most important that you pick the network that make sense for you. That means you will not overspend in any one area or make a critical mistake.
+Conservative approaches with careful considerations of the specific requirements will usually lead to the best results.

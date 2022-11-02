@@ -1,10 +1,14 @@
-The goal of this assignment is to demonstrate that you are able to build a logistics network. You will imagine that you run a company that markets a product on Amazon and you need to stock your product at various locations throughout the United States. A successful assignment will illustrate that you are able to use transportation modes, warehouses and and overall understanding of efficiency to create a logistics network that could be implemented in real-life.
+The goal of this assignment is to demonstrate that you are able to build a logistics network. You will imagine that you run a company that markets
+a product on Amazon and you need to stock your product at various locations throughout the United States. A successful assignment will illustrate
+that you are able to use transportation modes, warehouses and and overall understanding of efficiency to create a logistics network that could be 
+implemented in real-life.
 
 Step-By-Step Assignment Instructions
 less 
 Assignment Topic:
 
-You are the seller of a product on Amazon.com. This product represents your country, region, city, etc. or something you really enjoy. In order to start selling the product, you will have to design a logistics network. Now, let's get started!
+You are the seller of a product on Amazon.com. This product represents your country, region, city, etc. or something you really enjoy.
+In order to start selling the product, you will have to design a logistics network. Now, let's get started!
 
 How to submit:
 
@@ -24,21 +28,32 @@ Documentation of your warehouse locations and the time to customers.
 
 A justification of why your warehouse network is ideal for your product and the current economic situation.
 
-There is no need to include any cost calculations, but if you believe there is value in that you can certainly do so to impress your fellow learners.
+There is no need to include any cost calculations, but if you believe there is value in that you can certainly do so to impress your fellow 
+learners.
 
 How to create your assignment:
 
 Follow the instructions below to prepare your assignment:
 
-Decide how many warehouses you will need. You can only use existing Amazon warehouses. For a list of warehouse locations, please see the document below. A good reference to the implications of more or less warehouses is an annual study on the best warehouse networks in the US. Of course there are trade-offs between having more warehouses of less warehouses. It will be up to your judgement to decide.
+Decide how many warehouses you will need. You can only use existing Amazon warehouses. For a list of warehouse locations, please see the 
+document below. A good reference to the implications of more or less warehouses is an annual study on the best warehouse networks in the US. 
+Of course there are trade-offs between having more warehouses of less warehouses. It will be up to your judgement to decide.
+http://www.chicago-consulting.com/ten-best-warehouse-networks/
 
-Once you decide on how many warehouses you will use and where they are located, I want you to visualize it on a map. You can use various tools, but I would use Google Maps as it would be freely accessible to most. Here is an example of how you can add multiple locations to a map. In case you are not sure how it could look, here is an example of a map I created.
+Once you decide on how many warehouses you will use and where they are located, I want you to visualize it on a map. You can use various tools,
+but I would use Google Maps as it would be freely accessible to most. Here is an example of how you can add multiple locations to a map. In case
+you are not sure how it could look, here is an example of a map I created.
 
-Now let's look at possible customers. To get your product marketed, you will send a sample to the mayors of the ten largest metro areas. You hope that they will like it so much, that they will tell everyone they know. Please see the list of city halls addresses, where the mayors work.
+Now let's look at possible customers. To get your product marketed, you will send a sample to the mayors of the ten largest metro areas. 
+You hope that they will like it so much, that they will tell everyone they know. Please see the list of city halls addresses, 
+where the mayors work.
 
-You must also decide from which of your warehouses to send the sample to each mayor. I want you to determine the lead time from your warehouse to each customer. You can use resources by UPS and FedEx to determine the transit time from your warehouse to each customer (in days).
+You must also decide from which of your warehouses to send the sample to each mayor. I want you to determine the lead time from your warehouse to
+each customer. You can use resources by UPS and FedEx to determine the transit time from your warehouse to each customer (in days).
 
-Please justify why your logistics network is the best you can make it for now and the forseeable future. Be sure to talk about what the expectations of your customers will be; what the current economic environment looks like; and, where you expect interest rates and fuel prices to go in the future.
+Please justify why your logistics network is the best you can make it for now and the forseeable future. Be sure to talk about what the 
+expectations of your customers will be; what the current economic environment looks like; and, where you expect interest rates and fuel prices to
+go in the future.
 
 Finally, please write a short memo about the following topics (ungraded):
 
@@ -50,7 +65,8 @@ Which part of the assignment was the most fun?
 
 Guidelines for the assignment:
 
-Follow these instructions to understand the required format of your assignment. There will be step-by-step prompts asking you to either upload or write out the specific steps of the assignment.
+Follow these instructions to understand the required format of your assignment. There will be step-by-step prompts asking you to either upload
+or write out the specific steps of the assignment.
 
 
 
@@ -58,13 +74,17 @@ y
 
 Grading Criteria Overview
 less 
-Your assignment will be graded based on a successful demonstration of the concepts covered in this course. Specifically, you will be assessed on your ability to put together a cohesive logistics network.
+Your assignment will be graded based on a successful demonstration of the concepts covered in this course. Specifically, you will be assessed 
+on your ability to put together a cohesive logistics network.
 
-You will be required to include at least a map of your warehouse network, a table showing your lead time calculations, and an overall justification of the viability of your logistics network.
+You will be required to include at least a map of your warehouse network, a table showing your lead time calculations, and an overall 
+justification of the viability of your logistics network.
 
-We recommend that you also think about what the implications are of the network that you have designed. That part is to create an exchange between you and your peer reviewers, rather than an objective evaluation.
+We recommend that you also think about what the implications are of the network that you have designed. That part is to create an exchange
+between you and your peer reviewers, rather than an objective evaluation.
 
-Please don’t penalize grades based on transit times or the number of warehouses. There are many different logistics networks and the goal of the assignment is to go through the steps, rather than picking one specific example.
+Please don’t penalize grades based on transit times or the number of warehouses. There are many different logistics networks and the goal
+of the assignment is to go through the steps, rather than picking one specific example.
 
 Example Submissions
 less 
@@ -73,15 +93,27 @@ Here are some examples to help you understand what your assignment should look l
 This example is a good illustration of a map depicting three warehouses I created:
 
 
-Notice how the learner has selected three locations covering the majority of the population in the United States. The warehouse in California  two warehouses are more towards the east coast, as it represents where the more densly populated areas are.
+Notice how the learner has selected three locations covering the majority of the population in the United States.
+The warehouse in California  two warehouses are more towards the east coast, as it represents where the more densly populated areas are.
 
 Now let's look at the customers:
 
 
-Notice how the using a warehouse in California would not be very efficient? We should move the west coast warehouse to Texas to remedy this problem.
+Notice how the using a warehouse in California would not be very efficient? We should move the west coast warehouse to Texas to remedy
+this problem.
 
 Here is a map with customers and warehouses:
 
 
 
-      In this example, the learner has created a network with three warehouses located in proximity to most of the customers. I hope this example made it easier to understand the assignment guidelines more thoroughly. All that is left to do now is to calculate the distances from each warehouse to each customer. I hope you enjoy the assignment as much as I do!
+      In this example, the learner has created a network with three warehouses located in proximity to most of the customers. 
+      I hope this example made it easier to understand the assignment guidelines more thoroughly.
+      All that is left to do now is to calculate the distances from each warehouse to each customer.
+      I hope you enjoy the assignment as much as I do!
+
+Resources:
+http://www.chicago-consulting.com/ten-best-warehouse-networks/
+https://www.create.net/support/218-how-to-pin-point-multiple-locations-on-google-maps.html
+https://drive.google.com/open?id=1g7nSt6MJNheesie24q8gpDRUp8g&usp=sharing
+https://www.ups.com/maps
+http://www.fedex.com/grd/maps/ShowMapEntry.do

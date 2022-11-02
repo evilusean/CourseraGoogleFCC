@@ -26,3 +26,17 @@ Richard Stallmen=First Free OS(GNU) Open Source
 Ken Thompson/Dennis Richey=Unix
 Linus Torvald=Linux
 PDA's(Personal Digital Assistant)=First 'pocketable' computer(Nokia 90's)
+
+Light bulb example 0=off, 1=on
+A bit is a binary digit-0 or 1
+A byte is 8 bits, 2 to the 8th power-256 possible outcomes
+8 bits per character
+
+Character Encoding=Assigns binary values to characters, so that we can read them as mere humans
+ASCII=127 Values originally
+UTF-8
+RGB=colors
+Logic Gates=Allow our transistors to do more complex tasks, like decide where to send electrical signals depending on logical conditions
+
+Binary form Addition=128 + 64 + 32 + 16 + 8 + 4 + 1=Adds up to character through addition if switch is on
+Vs Decimal Form

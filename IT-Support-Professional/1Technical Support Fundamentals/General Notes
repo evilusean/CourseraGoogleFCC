@@ -49,3 +49,12 @@ Random Access Memory(RAM)=Short term memory
 Hard Drive=holds all data
 Motherboard=Holds and connects all computer components in place, circulatory system of the computer
 Power Supply Unit(PSU)=Converts power from wall outlet into usable type by computer
+External Data Bus(EDB)=Row of wires that interconnect wires of computer when voltage is on state is 1, no voltage is 0, veins of PC
+Register=Inside CPU, allows it to store data
+Memory Controller Chip(MCC)=Bridge between CPU and RAM, brain nerves of PC
+Address Bus=Connects CPU to MCC, sends location of data to CPU, then sends data through EDB
+Cache=Smaller than ram, stores data, faster than RAM, used to store frequently used data
+  3 types of caches=L1 L2 L3 (L1 is smallest, fastest cache)
+Clock Wire=CPU internal clock, keeps operations in sync, one clock cycle is a set of instructions
+Clock Speed= Maximum amount of clock cycles that can happen in a certain time period(3.4GHz(gigahertz)=3.4 billion cycles per second)
+Overclocking increases rate of CPU

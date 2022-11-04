@@ -55,6 +55,8 @@ Memory Controller Chip(MCC)=Bridge between CPU and RAM, brain nerves of PC
 Address Bus=Connects CPU to MCC, sends location of data to CPU, then sends data through EDB
 Cache=Smaller than ram, stores data, faster than RAM, used to store frequently used data
   3 types of caches=L1 L2 L3 (L1 is smallest, fastest cache)
+
+CPU:
 Clock Wire=CPU internal clock, keeps operations in sync, one clock cycle is a set of instructions
 Clock Speed= Maximum amount of clock cycles that can happen in a certain time period(3.4GHz(gigahertz)=3.4 billion cycles per second)
 Overclocking increases rate of CPU
@@ -65,3 +67,27 @@ Requires a heat sink(fan)
 32 bit vs 64 bit architecture on CPU= How much data they can efficiently handle
 https://support.microsoft.com/en-us/help/15056/windows-7-32-64-bit-faq
 https://en.wikipedia.org/wiki/64-bit_computing#32-bit_vs_64-bit%E2%80%A6
+
+Ram:
+PC's Short term memory
+Memory is volatile(once you power off machine, data is cleared)
+DRAM=Dynamic Random Access Memory=1 or 0 stored in microscopic capactors on RAM
+DIMM=Dual Inline Memory Module=have different size pins on them
+SDRAM=Synchronous DRAM=Synchronized to systems clock speed, allows quicker processing
+DDR SDRM=Double Data Rate SDRAM=DDR1 Vs DDR2 Vs DDR3 Vs DDR4(DDR4 currently fastest type short term memory for PC)
+Before buying RAM ensure it is compatible with the motherboard
+
+Motherboard:
+The computers foundation
+Chipset=Determines how components 'talk' to each other on our machine
+2 chips:
+  North Bridge=Interconnects RAM, Videocards, and CPU
+  South Bridge=Interconnects I/O controllers, harddrives, USB devices, peripherals(mouse, keyboard, monitor)
+  Some motherboards have NorthBridge integrated with CPU
+Expansion slots=Give the ability to increase the functionality of the computer
+PCI Express(Peripheral Component Interconnect Express): allows for expansion
+Form Factor=Determines the amount of 'stuff' you can fit on motherboard
+ATX=Advanced Technology eXtended=most common PC
+ITX=Information Technology eXtended=Smaller form factor
+
+Storage:

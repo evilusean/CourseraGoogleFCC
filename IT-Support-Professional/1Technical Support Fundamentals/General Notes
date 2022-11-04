@@ -58,3 +58,10 @@ Cache=Smaller than ram, stores data, faster than RAM, used to store frequently u
 Clock Wire=CPU internal clock, keeps operations in sync, one clock cycle is a set of instructions
 Clock Speed= Maximum amount of clock cycles that can happen in a certain time period(3.4GHz(gigahertz)=3.4 billion cycles per second)
 Overclocking increases rate of CPU
+Intel Vs AMD Vs Qualcomm=CPU manufacturers
+Check CPU Compatibility with motherboard before installing
+CPU sockets=Land Grid Array(LGA) Vs Pin Grid Array(PGA)
+Requires a heat sink(fan)
+32 bit vs 64 bit architecture on CPU= How much data they can efficiently handle
+https://support.microsoft.com/en-us/help/15056/windows-7-32-64-bit-faq
+https://en.wikipedia.org/wiki/64-bit_computing#32-bit_vs_64-bit%E2%80%A6

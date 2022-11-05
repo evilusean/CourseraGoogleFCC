@@ -104,3 +104,13 @@ Solid State Drives(SSDs)=no moving parts, data stored on microchips, more expens
 ATA interfaces used to connect hard drives to motherboard
 SATA most common drive interface, uses cables
 NVMExpress(NVME)=faster interface, uses expansion slot, no cables
+
+Power Supply Unit(PSU):
+2 Types of Power:Direct Current(DC) Flows in one Direction Vs Alternating Current(AC) Flows in both directions
+Computers use DC voltage, power comes out of wall as AC, PSU converts it
+Voltage is the amount of 'power pressure' being transmitted
+Ensure that you are always plugging your hardware into the correct voltage outlets or it could damage/destroy the machine
+Amperage(AMPs) refers to the amount of electricity pulled out
+Amps pull, voltages push electricity
+Wattage=amount of volts and amps a device needs
+Err on the side of large Power supplys if not sure which is needed

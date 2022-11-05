@@ -18,3 +18,19 @@ https://www.worldstandards.eu/electricity/plug-voltage-by-country/
 How to Diagnose and Replace a Failed PC Power Supply - Step-by-step illustrated instructions on how to diagnose a power supply failure and 
 replace it on a desktop PC.
 https://www.wikihow.com/Diagnose-and-Replace-a-Failed-PC-Power-Supply
+
+Charging Resources:
+Inductive Charging:
+https://en.wikipedia.org/wiki/Inductive_charging
+Batteries/Charge Cycles:
+Windows:
+https://docs.microsoft.com/windows-hardware/design/device-experiences/powercfg-command-line-options#option_batteryreport
+Mac:
+https://support.apple.com/HT201585
+Safe handling of Lithium Ion Batteries:
+https://www.osha.gov/sites/default/files/publications/shib011819.pdf
+Maximize Batteries:
+MacOS:
+https://www.apple.com/batteries/maximizing-performance/
+Android:
+https://support.google.com/android/answer/7664358

@@ -91,3 +91,16 @@ ATX=Advanced Technology eXtended=most common PC
 ITX=Information Technology eXtended=Smaller form factor
 
 Storage:
+1 bit = 0 or 1
+Byte = 8 bits
+KB(kilobyte) = 1024 bytes
+MB(Megabyte) = 1024 KB
+GB(Gigabyte) = 1024 MB
+TB(Terabyte) = 1024 GB
+Hard drive failure happens frequently, use backups
+Hard Disk Drives(HDDs)=uses a spinning platter and mechanical arm to read and write data (RPM=revolution per minute, higher=faster)
+Hard Disk Drives are cheaper but more prone to failure, more moving parts
+Solid State Drives(SSDs)=no moving parts, data stored on microchips, more expensive, less risk
+ATA interfaces used to connect hard drives to motherboard
+SATA most common drive interface, uses cables
+NVMExpress(NVME)=faster interface, uses expansion slot, no cables

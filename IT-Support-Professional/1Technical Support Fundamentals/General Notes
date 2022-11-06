@@ -146,3 +146,11 @@ Monitors:
 DVI = just do video
 HDMI = Audio and video
 Displayport = Audio and Video
+
+BIOS(Basic Input Output Software):
+Drivers Contain the instructions your CPU needs to understand external devices
+ROM(Read Only Memory):ROM Chip on motherboard
+UEFI(Unifidied Extensible Firmware Interface): New ROM on hardware
+Power On Self Test(POST):Computer runs a test every time it boots up to make sure all hardware is working correctly
+CMOS Battery: Stores Basic Data about booting your computer, can change setting in BIOS menu
+Reimaging=Wiping and reinstalling an Operating System

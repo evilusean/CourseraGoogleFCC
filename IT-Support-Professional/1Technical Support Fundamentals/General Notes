@@ -154,3 +154,28 @@ UEFI(Unifidied Extensible Firmware Interface): New ROM on hardware
 Power On Self Test(POST):Computer runs a test every time it boots up to make sure all hardware is working correctly
 CMOS Battery: Stores Basic Data about booting your computer, can change setting in BIOS menu
 Reimaging=Wiping and reinstalling an Operating System
+
+Assembly:
+Always ground yourself-ElectroStatic Discharge can do 100's of dollars in damage
+Standoffs are used to raise and attach motherboard to case
+1)Attach Mobo to right location in chasis
+2)Install CPU making sure it aligns in socket
+3)lock socket
+4)Apply Thermal Paste evenly
+5)attach heat sink
+6)plug heat sink into mobo
+7)Install RAM in DIMM slots-click in-ensure it is aligned correctly to avoid damaging pins
+8)HardDrive-slide into case-clicks
+9)connect SATA cable to harddrive and MOBO
+10)Install case fan-clicks in
+11)attach case fan cable to mobo
+12)connect power supply-slides in-careful not to damage MOBO
+13)secure PSU with screws
+14)attach PSU cables-big one connects to MOBO-4 pin molex=older hard drives-smaller ones=SATA Drives, 8 pin molex=CPU
+15)Attach button and light case cables to MOBO
+16)Fasten cables clean and tight
+17)Attach graphics card to PCIExpress slot-clicks in
+18)Secure graphics with screw
+19)cover
+20)connect peripherals
+21)power on and load BIOS/install Operating System

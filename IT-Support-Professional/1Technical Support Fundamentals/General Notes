@@ -188,3 +188,25 @@ remove all proprietary and personal data before sending a device for repair
 Factory Reset-Removes all data, apps, and customizations from device
 keep parts organized and labeled-take pictures before dissasembly
 follow vendor documentation
+
+
+
+============================================Week 3:
+Operating Systems:
+Remote Connection:Allows us to manage multiple machines from anywhere in the world
+Secure Shell(SSH):A protocol implemented by other programs to securely access one computer from another
+Requires an SSH client installed on the connecting computer and SSH server(software) to the one you are attempting to connect to
+On the remote machine the SSH server is running as a background program
+Linux: OpenSSH
+Windows:PuTTY = A free open source software that you can use to make remote connection through several network protocols, including SSH
+Windows: Remote Desktop Protocol(RDP)=Gives a GUI to remote computer
+Microsoft Terminal Services Client(MSTSC.exe)=Remote Desktop for Windows
+To enable: right click this pc -> go to remote settings -> 'allow remote connections'
+search 'MSTSC' in start menu run box or 'Remote Desktop Connections' in Start menu
+Requires: login account name/host name or IP address
+Use a password or SSH authentication key public(locks) vs private(unlocks)
+After making a connection you can launch a GUI(Graphical user interface) to use server computer on something other than command line
+Virtual Private Network(VPN): Allows you to connect to a private network, over the internet
+command line: 
+putty.exe -ssh sean@104.131.122.215 22 
+

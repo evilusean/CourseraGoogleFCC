@@ -210,3 +210,9 @@ Virtual Private Network(VPN): Allows you to connect to a private network, over t
 command line: 
 putty.exe -ssh sean@104.131.122.215 22 
 
+Operating System=The whole package that manages our computer's resources and lets us interact with it
+2 main parts of OS:
+  Kernel Space=Process manager/Memory Manager/File Manager/ I/O Manager
+  User Space=Applications
+Mac vs Windows vs Linux
+Linux Distributions=Ubuntu/Debian/Redhat

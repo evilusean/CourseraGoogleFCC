@@ -31,3 +31,26 @@ B!Lean Thinking-James P Womack Daniel T Jones
   3)Make Value Flow-Discontinue activity that do not add value, and accelerate those that do
   4)Pull Back from Customer-Rather than push/nudgeing a product onto a customer-wait for them to ask for the product
   5)Strive for Perfection-eliminate all defects
+
+Theory of Constraints:
+Another philosophy that seeks to remove constraints from the production system that enable you to produce the most with given resources
+X3 measurment variables:
+  1)Inventory-What you put in prod
+  2)Throughput-What customers buy
+  3)Operational Expense-Converting inventory into throughput
+Eliminate as many constraints as possible to acheive highest throughput
+X3 Classes of constraints:
+  1)Machinery-How fast can machines go
+  2)People-Skilled employees to operate machines
+  3)Policies-hinder throughput
+X5 Step Procedures removing constraints:
+  1)Identify Constraint-What factor in production system is a constraint
+  2)Elevate Constraint-Make that piece of your system work better
+  3)Subordinate everything else-Sometimes you need to make other parts work worse to increase overall system
+  4)Exploit Constraint-
+  5)Eliminate Constraint-Maintain total output and prevent reverting back to old ways
+Slow machines limit the entire system from producing more
+Drum Buffer Rope System-A drum creates the speed for the entire factory should never be faster than the slowest machine
+  Buffer=Place buffers in front of bottleneck machines to ensure they never run out of materials to produce
+  Rope=Tie Rope around every worker to ensure they all produce at same speed(metaphorical rope)
+

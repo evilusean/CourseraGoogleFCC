@@ -12,3 +12,22 @@ Optimization=You need to define your objective; Minimize cost, Increase speed, a
 change your parameters within constraints, change how you use machinery, change order of production, etc
 Economies of scale=You make more, it'll be cheaper to produce each individual unit
 Cheaper Product=More Customers=More Profit
+
+Lean Operations:
+Lean is a management philosophy that started at Toyota-The goal is to produce as much product given a set of resources
+Kaizen = Continuous Improvement 
+Muda=Elimination of waste(x7):
+  Transport=Moving products that are not actually required to be moved to perform the processing
+  Inventory=All components, work in process and finished product not being processed
+  Motion=People or equipment moving or walking more tjam os required to perform the processing
+  Waiting=waiting for the next production step
+  Overproduction=Production ahead of demand
+  OverProcessing=resulting from poor tool or product design creating activity
+  Defects=the effort involved iin inspecting for and fixing defects
+B!Lean Thinking-James P Womack Daniel T Jones
+5 Central Lessons of Lean:
+  1)Specify Value-from the customers perspective
+  2)Map Value Stream-Look at supply chain, map out where that value is created
+  3)Make Value Flow-Discontinue activity that do not add value, and accelerate those that do
+  4)Pull Back from Customer-Rather than push/nudgeing a product onto a customer-wait for them to ask for the product
+  5)Strive for Perfection-eliminate all defects

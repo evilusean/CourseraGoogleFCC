@@ -53,4 +53,5 @@ Slow machines limit the entire system from producing more
 Drum Buffer Rope System-A drum creates the speed for the entire factory should never be faster than the slowest machine
   Buffer=Place buffers in front of bottleneck machines to ensure they never run out of materials to produce
   Rope=Tie Rope around every worker to ensure they all produce at same speed(metaphorical rope)
-
+B!The Goal-Goldratt Summary:
+https://www.tocinstitute.org/the-goal-summary.html

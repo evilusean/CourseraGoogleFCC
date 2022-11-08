@@ -216,3 +216,43 @@ Operating System=The whole package that manages our computer's resources and let
   User Space=Applications
 Mac vs Windows vs Linux
 Linux Distributions=Ubuntu/Debian/Redhat
+
+Files:
+Kernel Handles Files in 3 ways=File Data/MetaData/File System
+NTFS-File Handling System used in Microsoft
+HFS/APFS-File Handling System used in MacOS
+ext4-File Handling System for Linux
+File Handling Systems do not interact well with eachother
+File Data is stored onto harddrives as data blocks
+Block Storage=Improves faster handling of data because the data isn't stored as one long piece and can be accesssed quicker
+MEtadata=Who created it/when created/File owner/Permissions/File Size/Date Modified/File type
+File Extension=Appended part of a filename that tells us what type of file it is in certain operating systems
+
+Process Management:
+Process=A program that is executing
+Each open tab in chrome is a new process
+Each process requires limited hardware like RAM
+Time slice=A very short interval of time that gets allocated to a process for CPU execution
+Kernel creates processses, efficiently schedules them, and manages how processes are terminated
+
+Memory Management:
+Virtual Memory=Combination of hard drive space and RAM that acts like memory that our processes can use
+Allocated space on hard Drive=Swap Space
+
+I/O Management:
+All I/O peripherals are managed by the kernel
+
+Interacting with OS/User Space:
+2 ways to interact with OS: A shell(Cmd line/text commands) or GUI(Graphical user Interface)
+Shell=A program that interprets text commands and sends them to the OS to execute
+Power user=Above average users(should know how to use a shell/command lines)
+BASH(Bourne Again Shell)=Linux Shell
+
+Logs:
+Logs=Files that record system events on our computer, just like a systems diary
+
+The Boot Process:
+Follows a general pattern
+Powered on -> BIOS/UEFI -> POST(Power on self test) -> Boot Device selected -> Boot Loader -> OS -> Kernels+drivers ->Essential system processes
+BIOS/UEFI=Low level software that initializes our computers hardware to makesure everything is good to go
+

@@ -274,4 +274,13 @@ Installing Linux(Ubuntu, most popular):
   Pick Default Settings
   Create First Account(Name/Username/PW/Hostname=name used to talk to other computers)
   Change System Settings
-  
+
+Mac OS X:
+  Comes Preinstalled on Apple
+  2 finger click=right click for more info
+
+Chrome OS:
+Unlike other OS's, Chrome OS has one main purpose: to be a secure and simple way for the user to interact with the web(Web Browser Based OS)
+Can Run android and linux applications in containers
+ChromeOS Machines are interchangable because most data is stored in the cloud, not locally
+

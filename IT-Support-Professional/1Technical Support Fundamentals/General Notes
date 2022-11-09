@@ -267,3 +267,11 @@ Installing Windows:
   Reboot
   Create first User(Username/PW)
   Update System Settings
+
+Installing Linux(Ubuntu, most popular):
+  Create a bootable USB drive with Opensource Ubuntu OS
+  Boot from USB device
+  Pick Default Settings
+  Create First Account(Name/Username/PW/Hostname=name used to talk to other computers)
+  Change System Settings
+  

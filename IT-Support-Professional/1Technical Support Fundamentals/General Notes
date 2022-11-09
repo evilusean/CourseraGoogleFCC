@@ -256,3 +256,14 @@ Follows a general pattern
 Powered on -> BIOS/UEFI -> POST(Power on self test) -> Boot Device selected -> Boot Loader -> OS -> Kernels+drivers ->Essential system processes
 BIOS/UEFI=Low level software that initializes our computers hardware to makesure everything is good to go
 
+Installing OS's:
+Virtual Machine(Virtual Machine)-just a copy of a real machine-Use software specific to one OS
+
+Installing Windows:
+  Hit F12(possibly other key) while booting to enter BIOS settings
+  Boot from USB with OS on it
+  Select drive you want to install it on
+  Update(multiple times)
+  Reboot
+  Create first User(Username/PW)
+  Update System Settings

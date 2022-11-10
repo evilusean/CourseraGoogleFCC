@@ -81,3 +81,12 @@ In grocery stores-They get inventory every day-Every day customers are buying it
   Only replenish what you use
 
 EoQ(Economic Order Quantity):
+Economic Order Quantity Terms and Notation:
+The Economic Order Quantity Calculation(Can Calculate in Google Sheets)
+Please remember the following notation of the formulas:
+TC = Total Cost of Ordering and Holding Inventory
+Q = Order Quantity (how much we order each time)
+D = Demand (how much we sell in a given period – usually one year)
+V = Value of the item (purchase cost or production cost)
+O = Order Cost (on-time cost of placing and receiving an order)
+C = Inventory Carrying Cost (expressed as a percentage of the value of the item)

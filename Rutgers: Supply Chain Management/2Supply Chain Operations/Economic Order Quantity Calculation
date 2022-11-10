@@ -9,4 +9,8 @@ V = Value of the item (purchase cost or production cost)
 O = Order Cost (on-time cost of placing and receiving an order)
 C = Inventory Carrying Cost (expressed as a percentage of the value of the item)
 
+Total Cost= Sum of Order Receiving Cost + Order Holding Cost
+Total Cost = Order Receiving Cost(Order Cost*Demand / Order Quantity) + Order Holding Cost(Value of Product*Carrying Cost%*Quantity Ordered / 2)
 TC(Q) = OD/Q + VCQ / 2
+
+

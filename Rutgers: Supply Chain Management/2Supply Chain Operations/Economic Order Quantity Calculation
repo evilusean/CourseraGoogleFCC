@@ -13,4 +13,7 @@ Total Cost= Sum of Order Receiving Cost + Order Holding Cost
 Total Cost = Order Receiving Cost(Order Cost*Demand / Order Quantity) + Order Holding Cost(Value of Product*Carrying Cost%*Quantity Ordered / 2)
 TC(Q) = OD/Q + VCQ / 2
 
-
+https://github.com/evilusean/CourseraGoogle/blob/main/Rutgers:%20Supply%20Chain%20Management/2Supply%20Chain%20Operations/Economic%20Order%20Quantity2.jpg
+Economic Order Quantity2.jpg
+Get orange line(Total Cost) to minimum
+When Blue(Order Receiving Cost) and Red line(Inventory Holding Cost) intersect

@@ -8,3 +8,5 @@ D = Demand (how much we sell in a given period – usually one year)
 V = Value of the item (purchase cost or production cost)
 O = Order Cost (on-time cost of placing and receiving an order)
 C = Inventory Carrying Cost (expressed as a percentage of the value of the item)
+
+TC(Q) = OD/Q + VCQ / 2

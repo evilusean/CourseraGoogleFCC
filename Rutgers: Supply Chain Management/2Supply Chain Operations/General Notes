@@ -55,3 +55,29 @@ Drum Buffer Rope System-A drum creates the speed for the entire factory should n
   Rope=Tie Rope around every worker to ensure they all produce at same speed(metaphorical rope)
 B!The Goal-Goldratt Summary:
 https://www.tocinstitute.org/the-goal-summary.html
+
+
+========================================================Week 2
+Lean Inventory:
+Just in time Inventory System: Some get a delivery every day/Some car manufacturers get inventory every 2 hours keeping it at lowest possible level
+Your Transportation system acts like a warehouse
+Holding Cost=Capital Costs(what you could do if money wasn't held up in inventory)+Inventory Cost(Taxes+Insurance)+Store Space Cost(Equipment+
+Labor)+Risk Costs(Out of style/break/expire)
+Higher Holding Costs=Smaller Optimal Inventory Levels
+Order Costs=Order Submission(Can use automation to generate automatic orders)+Order Received(unloading trucks+Storing goods)
+Safety stock is for uncertainty-Remove fluctuation in demand and remove need for safety stock-
+  Remove variation in lead times also removes need for safety sock
+
+Kan Ban Inventory System:
+In grocery stores-They get inventory every day-Every day customers are buying items-only the items that were used were purchased/delivered the 
+  following day-Constant turnover but Low Inventory buildup
+3 Different Bins:
+  1st Bin)On production floor-ready to be used for making product
+  2nd Bin)Sits in warehouse facility-ready to go
+  3rd Bin)Sits at supplier location-ready to ship to us
+  As soon as Bin 1 is empty-place an order to supplier and start working on Bin 2-Bin 3 Arrives before you empty Bin 2
+  Continuous supply and just enough inventory
+  Size Of Bin=Lead Time Demand=Demand you experience before average shipment time, 1 day lead time=1 day of bin supply
+  Only replenish what you use
+
+EoQ(Economic Order Quantity):

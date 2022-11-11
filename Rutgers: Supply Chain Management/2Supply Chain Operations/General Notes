@@ -103,6 +103,8 @@ d = average daily sales
 St = standard deviation of replenishment cycle
 
 KanBan:
-
+Calculate Average Demand
+Calculate Average Lead Time
+Calculate Average Demand * Average Lead time
 
 

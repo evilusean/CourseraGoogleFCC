@@ -284,3 +284,41 @@ Unlike other OS's, Chrome OS has one main purpose: to be a secure and simple way
 Can Run android and linux applications in containers
 ChromeOS Machines are interchangable because most data is stored in the cloud, not locally
 
+
+============================================Week 4:
+The Internet(Created by Al Gore):
+You can create a network of just 2 computers, Internet is just a network of billions of computers
+The Internet=The Physical Connection of computers and wires around the world(and satellites)
+The Web=The information on the internet
+Networking=Managing, Building, Designing Networks
+Servers connect directly to the internet and Store the websites for the internet
+Clients(Machines/Phones/Video Game Consoles) request the content from the servers
+Clients don't connect directly to the internet-They Connect to an ISP(Internet Service Provider) connected to the internet and other ISP's
+Computers on a network have an identifier called an IP address
+Computers that connect to a network also have a MAC address-generally hard coded to each device
+When you send and receive data through a network you need to have both an IP address and a MAC address
+Data sent through a network is sent through packets(little bits of data)
+
+Networking Hardware:
+Ethernet Cable-Physical Network Connection
+WIFI(Wireless Networking)-
+Fibre Optics-Most Expensive Method-Sends data through glass fibres/light instead of wires
+Router=Connects lots of different devices together and helps route network traffic
+Switches/Hubs similar to routers
+Network Stack=A set of hardware or software that provides the infrastructure for a computer network
+When diagnosing network errors, work your way up the network stack or potential points of failures, End user computer -> Cables -> switches
+
+Network Protocols:
+Network Protocols=A set of rules for how we transfer data in a network
+Transmission Control Protocol(TCP): Protocol that handles reliable delivery from one network to another
+Internet Protocol(IP): Responsible for delivering packets to right computers
+
+The Web:
+All web pages can be accessed through the web
+HTML(Hyper Text Markup Language):Coding language used by web browsers
+URL(Uniform Resource Locater):Domain Name
+WWW.(World wide web):
+ICANN:Domain name Register-unique identifier for URL
+DNS(Domain Name System):Internet Directory, uses human readable words to map to IP addresses. 172.217.6.46=Google Home Page
+
+

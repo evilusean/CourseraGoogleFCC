@@ -321,4 +321,16 @@ WWW.(World wide web):
 ICANN:Domain name Register-unique identifier for URL
 DNS(Domain Name System):Internet Directory, uses human readable words to map to IP addresses. 172.217.6.46=Google Home Page
 
+History of The Internet:
+1960's DARPA=ARPANET earliest version of internet remotely access computer
+1970's Transmission Control Protcol+Internet Protocol(TCPIP)
+1990's World Wide Web WWW.
+today: panopticon
+
+Limitations of Internet:
+Internet Protocol V4=32 bits(4 bytes) seperated into 4 groups
+<4.3Billion potential addresses
+Internet Protocol V6(IPV6)=128Bits(16bytes, 4x)
+2 to the 128th power possible addresses
+NAT(Network Address Translation): Let's organizations use one public IP address and many private IP addresses within the network
 

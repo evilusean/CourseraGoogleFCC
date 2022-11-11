@@ -81,6 +81,7 @@ In grocery stores-They get inventory every day-Every day customers are buying it
   Only replenish what you use
 
 EoQ(Economic Order Quantity):
+https://github.com/evilusean/CourseraGoogle/blob/main/Rutgers:%20Supply%20Chain%20Management/2Supply%20Chain%20Operations/Economic%20Order%20Quantity-Calculation.pdf
 Economic Order Quantity Terms and Notation:
 The Economic Order Quantity Calculation(Can Calculate in Google Sheets)
 Please remember the following notation of the formulas:
@@ -90,3 +91,18 @@ D = Demand (how much we sell in a given period – usually one year)
 V = Value of the item (purchase cost or production cost)
 O = Order Cost (on-time cost of placing and receiving an order)
 C = Inventory Carrying Cost (expressed as a percentage of the value of the item)
+
+Safety Stock Calculation:
+https://github.com/evilusean/CourseraGoogle/blob/main/Rutgers:%20Supply%20Chain%20Management/2Supply%20Chain%20Operations/2The-Safety-Stock-Calculation.pdf
+SS = safety stock
+k = service factor (the number of standard deviations to cover for a given service level)
+Sc = combined standard deviation of lead time and demand
+t = average replenishment lead time
+Sd = standard deviation of daily sales
+d = average daily sales
+St = standard deviation of replenishment cycle
+
+KanBan:
+
+
+

@@ -13,3 +13,92 @@ Step 2: Use the values below to calculate safety stock:
 https://d3c33hcgiwev3.cloudfront.net/_cdde2f530947f61aad26199d42cb9de8_Safety-Stock-Assignment.csv?Expires=1668297600&Signature=HpM0XwCSvH5quPNCZ79Wy8-EFW2JzbWj-cL4OVVgJa9u7OP2RCiWpyKw6J5qs5uJ8F0NOf81BGEOMEZg4C76mR7oI7BdvLK5eWeKYONAQcM2oMB3xDjYRoEkw6W2WDr4pAiCmbRYSSexub71sQwEbEw57u1eNylzRpJdLGW1slM_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
 Step 3: Use the values above (from the Safety Stock Assignment) to calculate lead-time-demand:
 Step 4: Once you have made all those calculations, save your answers in a convenient place and you have all the answers to the quiz questions.
+
+
+1.
+Question 1
+For Product A, what is the total Inventory Holding Cost? (please enter it in the following format xxx, xxxx, or xxxxx)
+
+1 point
+Enter answer here
+2.
+Question 2
+For Product B, what is the Inventory Holding Cost? (please enter it in the following format xxx, xxxx, or xxxxx)
+
+1 point
+Enter answer here
+3.
+Question 3
+For product C, what is the Total Cost (of holding and ordering inventory)? (please enter it in the following format xxx, xxxx, or xxxxx)
+
+1 point
+Enter answer here
+4.
+Question 4
+For product D, what is the Inventory Holding Cost? (please enter it in the following format xxx, xxxx, or xxxxx)
+
+1 point
+Enter answer here
+5.
+Question 5
+For product E, what is the Inventory Holding Cost? (please enter it in the following format xxx, xxxx, or xxxxx)
+
+1 point
+Enter answer here
+6.
+Question 6
+For Product A, what is the combined standard deviation of lead time and demand? (rounded to the nearest integer, e.g. xx.xx-->xx)
+
+1 point
+Enter answer here
+7.
+Question 7
+For Product B, what is the safety stock you would hold if you wanted to reach a 97.5% fill rate? (rounded to the nearest integer, e.g. xx.xx-->xx)
+
+1 point
+Enter answer here
+8.
+Question 8
+For Product C, what is the combined standard deviation of lead time and demand? (rounded to the nearest integer, e.g. xx.xx-->xx)
+
+1 point
+Enter answer here
+9.
+Question 9
+For Product D, what is the combined standard deviation of lead time and demand? (rounded to the nearest integer, e.g. xx.xx-->xx)
+
+1 point
+Enter answer here
+10.
+Question 10
+For Product E, what is the safety stock you would hold if you wanted to reach a 90% fill rate? (rounded to the nearest integer, e.g. xx.xx-->xx)
+
+1 point
+Enter answer here
+11.
+Question 11
+For Product A, how large should the Kanban bin be? (rounded to the nearest integer, e.g. xx.xx-->xx)
+
+1 point
+Enter answer here
+12.
+Question 12
+For Product B, how large should the Kanban bin be? (rounded to the nearest integer, e.g. xx.xx-->xx)
+
+1 point
+Enter answer here
+13.
+Question 13
+For Product C, how large should the Kanban bin be? (rounded to the nearest integer, e.g. xx.xx-->xx)
+
+1 point
+Enter answer here
+14.
+Question 14
+For Product D, how large should the Kanban bin be? (rounded to the nearest integer, e.g. xx.xx-->xx)
+
+1 point
+Enter answer here
+15.
+Question 15
+For Product E, how large should the Kanban bin be? (rounded to the nearest integer, e.g. xx.xx-->xx)

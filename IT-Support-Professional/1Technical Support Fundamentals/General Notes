@@ -355,3 +355,33 @@ Coding=Translating One Language into another
 Scripting=Coding in a scripting Language
   Scripts=Mainly used to perform a single or limited range task
 Programming=Coding in a programming language
+
+Using Scripts:
+Basic automation: Python is an excellent script for automation. It’s one of the most commonly used, with many available automation libraries.
+Restarting machines: Many power users use PowerShell (.ps1) scripts to restart machines (Windows). For Linux machines, they can use .sh (shell) scripts.
+Mapping network drives: In the past, mapping network drives was accomplished with .bat or .vbs scripts. However, PowerShell scripts are most commonly used to map drives in Windows environments today. For Linux users, shell scripts can be used for this purpose.
+Installing applications: Batch files and shell scripts are often used for automated software installation.
+Automated Backups: Windows PowerShell and Linux/Unix shell scripts can automate backups.
+Gathering of information and data: Python is a popular choice for gathering data. Python has many available libraries to help with this task.
+Initiating Updates: Powershell and shell scripts can be used for initiating updates in Windows and Linux, respectively.
+
+Commercial Software=Pay for a license to use software-controlled
+OpenSource-Free software
+Application Software=Any software created to fulfull a specific need, like a text editor, web browser or graphic editor
+System Software=Software used to keep our core sustem running, like operating system tools and utilities
+Firmware=Software that is permanently stored on a computer component
+Drivers=Allow you to interact with hardware
+
+Software Versioning:
+https://en.wikipedia.org/wiki/Software_versioning
+
+Assembly Language=Punch cards->Allowed computer scientist to use human readable instructions, assembled into code that machines could understand
+Compiled programming language=Uses human readable instructions, then send them through a compiler
+Interpreted Language=The script is run by an interpreter, which interprets the code into CPU instructions just in time to run them
+
+Managing Software:
+Always test software before pushing updates to company
+Old Software might be outdated and allow attacks through bugs
+Git=Version control system that helps keep track of changes made to files and directories
+sudo(SuperUser Do)=Linux command for giving administrator privileges
+

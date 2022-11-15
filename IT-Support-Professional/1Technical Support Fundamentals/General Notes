@@ -385,3 +385,18 @@ Old Software might be outdated and allow attacks through bugs
 Git=Version control system that helps keep track of changes made to files and directories
 sudo(SuperUser Do)=Linux command for giving administrator privileges
 
+
+============================================Week 6:
+Troubleshooting:
+Ask Questions
+  When did the problem start
+  what were you doing when it happened
+  Have you changed anything since it last worked
+  
+Even if they did something stupid, try not to make them feel dumb
+Isolate the problem; shrink the scope to find root cause
+Start with the quickest step first to find root cause
+
+
+  
+  

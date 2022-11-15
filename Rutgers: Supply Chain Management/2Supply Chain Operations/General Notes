@@ -134,6 +134,12 @@ X5 Steps:
   5)Controlling the process
 
 DMAIC(Define, Measure, Analyze, Improve, Control):
+https://sixsigmastudyguide.com/dmaic/#:~:text=The%20Five%20DMAIC%20Stages&text=Define%3A%20Collate%20what%20we%20already,%2C%20test%2C%20and%20implement%20solutions.
   1)Define=Clearly state how this problem affects the customer/List and gather available resources/Build Team/Establish Timeline/Create Project Charter
     Project Charter=Background and goals+Scope+Milestones+Project Budget
-  2)Measure=
+  2)Measure=Establish Baseline performance of process, Identify performance indicators, develop a data collection plan, validate the data
+  3)Analyze=find root Cause, Cause and effect diagram, Process/Subprocess Mapping, Regression Analysis, ANOVA, Chi Square(Data analysis)
+  4)Improve=Identify feasible solutions for the identified root cause(s), perform cost-benefit analysis, test the solution, asses effectiveness
+  5)Control=Develop Control Plan, Validate Solution, Implement plan, Cost/benefit analysis, Formal project closure
+
+

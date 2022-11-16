@@ -414,3 +414,16 @@ Buddhism-The last five minutes of the interaction will set the tone for how the 
   End on a positive note :)
   -When ending; Reiterate the resolution, state the next steps, then ask if they have any further questions
 
+Ticket Systems:
+Document your work in case you or someone else has the same problem, it will take less time to fix.
+Tickets=Common way of documenting issues
+Bugs=Issues with the system that dont that weren't caused by an external source
+Tracking Systems:
+  Bugzilla
+  JIRA
+  Redmine
+Update the ticket with what the issue is, the steps you are trying to resolve, and the solution you arrived at
+Write down procedures and policies to create a documentation trail
+It's a technical document, be concise, don't write a short story
+
+

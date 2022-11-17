@@ -11,5 +11,15 @@ https://www.coursera.org/learn/technical-support-fundamentals?specialization=goo
 
 Start:28October2022
 
+End:17Nov2022
+
+## 2The Bits and Bytes of Computer Networking
+
+https://www.coursera.org/learn/computer-networking?specialization=google-it-support
+
+Start:18Nov2022
+
 End:
+
+
 

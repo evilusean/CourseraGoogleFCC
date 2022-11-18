@@ -1,3 +1,4 @@
+Week 1:
 46 min of videos left
 
 1h 21m of readings left
@@ -116,3 +117,465 @@ Networking Basics
 Due, Nov 28, 3:59 AM AST
 Quiz•12 questions
 •Grade: --
+
+Week 2:
+Introduction to The Network Layer
+
+Video•. Duration: 1 minute1 min
+The Network Layer
+
+Video•. Duration: 1 minute1 min
+IP Addresses
+
+Video•. Duration: 2 minutes2 min
+IP Datagrams and Encapsulation
+
+Video•. Duration: 6 minutes6 min
+IP Address Classes
+
+Video•. Duration: 3 minutes3 min
+Address Resolution Protocol
+
+Video•. Duration: 2 minutes2 min
+This item will be unlocked when the session begins.
+Looking up IP Addresses
+
+Discussion Prompt•. Duration: 10 minutes10 min
+Sergio Path
+
+Video•. Duration: 1 minute1 min
+This item will be unlocked when the session begins.
+The Network Layer
+
+Practice Quiz•5 questions
+Subnetting
+
+Video•. Duration: 2 minutes2 min
+Subnet Masks
+
+Video•. Duration: 7 minutes7 min
+Basic Binary Math
+
+Video•. Duration: 6 minutes6 min
+CIDR
+
+Video•. Duration: 4 minutes4 min
+Motivation
+
+Video•. Duration: 1 minute1 min
+This item will be unlocked when the session begins.
+Subnetting
+
+Practice Quiz•5 questions
+Basic Routing Concepts
+
+Video•. Duration: 8 minutes8 min
+Routing Tables
+
+Video•. Duration: 3 minutes3 min
+Interior Gateway Protocols
+
+Video•. Duration: 5 minutes5 min
+Exterior Gateway Protocols
+
+Video•. Duration: 3 minutes3 min
+Supplemental Reading for Routing Protocol Examples
+
+Reading•. Duration: 10 minutes10 min
+Non-Routable Address Space
+
+Video•. Duration: 3 minutes3 min
+Supplemental Reading for RFCs and Standards
+
+Reading•. Duration: 10 minutes10 min
+Alex Good Story
+
+Video•. Duration: 1 minute1 min
+This item will be unlocked when the session begins.
+Routing
+
+Practice Quiz•5 questions
+
+Graded Plugin
+
+Reading•. Duration: 10 minutes10 min
+This item will be unlocked when the session begins.
+Routing Paths and Subnets
+
+Due, Dec 5, 3:59 AM AST
+Quiz•1 question
+•Grade: --
+
+This item will be unlocked when the session begins.
+The Network Layer
+
+Due, Dec 5, 3:59 AM AST
+Quiz•10 questions
+•Grade: --
+
+Week 3:
+Introduction to the Transport and Application Layers
+
+Video•. Duration: 1 minute1 min
+The Transport Layer
+
+Video•. Duration: 3 minutes3 min
+Dissection of a TCP Segment
+
+Video•. Duration: 5 minutes5 min
+TCP Control Flags and the Three-way Handshake
+
+Video•. Duration: 5 minutes5 min
+TCP Socket States
+
+Video•. Duration: 3 minutes3 min
+Connection-oriented and Connectionless Protocols
+
+Video•. Duration: 4 minutes4 min
+Supplemental Reading for System Ports versus Ephemeral Ports
+
+Reading•. Duration: 10 minutes10 min
+Firewalls
+
+Video•. Duration: 2 minutes2 min
+This item will be unlocked when the session begins.
+The Transport Layer
+
+Practice Quiz•5 questions
+The Application Layer
+
+Video•. Duration: 3 minutes3 min
+The Application Layer and the OSI Model
+
+Video•. Duration: 2 minutes2 min
+All the Layers Working in Unison
+
+Video•. Duration: 11 minutes11 min
+Learner Story: Daniel
+
+Video•. Duration: 1 minute1 min
+This item will be unlocked when the session begins.
+The Application Layer
+
+Practice Quiz•3 questions
+
+This item will be unlocked when the session begins.
+The Transport and Application Layer
+
+Due, Dec 12, 3:59 AM AST
+Quiz•10 questions
+•Grade: --
+
+This item will be unlocked when the session begins.
+The Five-Layer Network Model
+
+Due, Dec 12, 3:59 AM AST
+Quiz•10 questions
+•Grade: --
+
+Week 4:
+Introduction to Network Services
+
+Video•. Duration: 1 minute1 min
+Why do we need DNS?
+
+Video•. Duration: 4 minutes4 min
+The Many Steps of Name Resolution
+
+Video•. Duration: 8 minutes8 min
+DNS and UDP
+
+Video•. Duration: 6 minutes6 min
+Sergio IT Great Field
+
+Video•. Duration: 1 minute1 min
+This item will be unlocked when the session begins.
+Your Personal Website
+
+Discussion Prompt•. Duration: 10 minutes10 min
+This item will be unlocked when the session begins.
+Name Resolution
+
+Practice Quiz•5 questions
+Resource Record Types
+
+Video•. Duration: 8 minutes8 min
+Anatomy of a Domain Name
+
+Video•. Duration: 3 minutes3 min
+DNS Zones
+
+Video•. Duration: 4 minutes4 min
+This item will be unlocked when the session begins.
+Name Resolution in Practice
+
+Practice Quiz•5 questions
+Overview of DHCP
+
+Video•. Duration: 4 minutes4 min
+DHCP in Action
+
+Video•. Duration: 5 minutes5 min
+This item will be unlocked when the session begins.
+Dynamic Host Configuration Protocol
+
+Practice Quiz•5 questions
+Basics of NAT
+
+Video•. Duration: 4 minutes4 min
+NAT and the Transport Layer
+
+Video•. Duration: 4 minutes4 min
+NAT, Non-Routable Address Space and the Limits of IPv4
+
+Video•. Duration: 3 minutes3 min
+Supplemental Reading for IPv4 Address Exhaustion
+
+Reading•. Duration: 10 minutes10 min
+This item will be unlocked when the session begins.
+Network Address Translation
+
+Practice Quiz•5 questions
+Virtual Private Networks
+
+Video•. Duration: 4 minutes4 min
+Proxy Services
+
+Video•. Duration: 4 minutes4 min
+This item will be unlocked when the session begins.
+VPNs: Legal or Illegal?
+
+Discussion Prompt•. Duration: 10 minutes10 min
+This item will be unlocked when the session begins.
+VPNs & Proxies
+
+Practice Quiz•5 questions
+
+Graded Plugin
+
+Reading•. Duration: 10 minutes10 min
+This item will be unlocked when the session begins.
+Networking Services Simulation
+
+Due, Dec 19, 3:59 AM AST
+Quiz•1 question
+•Grade: --
+
+This item will be unlocked when the session begins.
+Networking Services
+
+Due, Dec 19, 3:59 AM AST
+Quiz•10 questions
+•Grade: --
+
+Week 5:
+Introduction to Connecting to the Internet
+
+Video•. Duration: 1 minute1 min
+Dial-up, Modems and Point-to-Point Protocols
+
+Video•. Duration: 4 minutes4 min
+This item will be unlocked when the session begins.
+POTS and Dial-up
+
+Practice Quiz•5 questions
+What is broadband?
+
+Video•. Duration: 3 minutes3 min
+T-Carrier Technologies
+
+Video•. Duration: 2 minutes2 min
+Digital Subscriber Lines
+
+Video•. Duration: 3 minutes3 min
+Cable Broadband
+
+Video•. Duration: 4 minutes4 min
+Fiber Connections
+
+Video•. Duration: 2 minutes2 min
+Supplemental Reading for Broadband Protocols
+
+Reading•. Duration: 10 minutes10 min
+This item will be unlocked when the session begins.
+Broadband Internet
+
+Practice Quiz•5 questions
+Wide Area Network Technologies
+
+Video•. Duration: 3 minutes3 min
+Supplemental Reading for WAN Protocols
+
+Reading•. Duration: 10 minutes10 min
+Point-to-Point VPNs
+
+Video•. Duration: 2 minutes2 min
+This item will be unlocked when the session begins.
+WANs
+
+Practice Quiz•4 questions
+Introduction to Wireless Networking Technologies
+
+Video•. Duration: 5 minutes5 min
+Wi-Fi 6
+
+Reading•. Duration: 10 minutes10 min
+Supplemental Reading for Alphabet Soup
+
+Reading•. Duration: 10 minutes10 min
+SupplementalReading for IoT Data Transfer Protocols
+
+Reading•. Duration: 10 minutes10 min
+Wireless Network Configurations
+
+Video•. Duration: 2 minutes2 min
+Wireless Channels
+
+Video•. Duration: 4 minutes4 min
+Wireless Security
+
+Video•. Duration: 2 minutes2 min
+Protocols & Encryption
+
+Reading•. Duration: 10 minutes10 min
+Cellular Networking
+
+Video•. Duration: 1 minute1 min
+Mobile Device Networks
+
+Video•. Duration: 4 minutes4 min
+Supplemental Readings for Mobile Device Networks
+
+Reading•. Duration: 10 minutes10 min
+This item will be unlocked when the session begins.
+Your Daily Connection
+
+Discussion Prompt•. Duration: 10 minutes10 min
+This item will be unlocked when the session begins.
+Wireless Networking
+
+Practice Quiz•5 questions
+
+Graded Plugin
+
+Reading•. Duration: 10 minutes10 min
+This item will be unlocked when the session begins.
+Wireless Channels
+
+Due, Dec 26, 3:59 AM AST
+Quiz•1 question
+•Grade: --
+
+This item will be unlocked when the session begins.
+Limitations of the Internet
+
+Due, Dec 26, 3:59 AM AST
+Quiz•10 questions
+•Grade: --
+
+Week 6:
+Introduction to Troubleshooting and the Future of Networking
+
+Video•. Duration: 1 minute1 min
+Ping: Internet Control Message Protocol
+
+Video•. Duration: 5 minutes5 min
+Command Line Troubleshooting Tools
+
+Reading•. Duration: 10 minutes10 min
+Traceroute
+
+Video•. Duration: 2 minutes2 min
+Testing Port Connectivity
+
+Video•. Duration: 2 minutes2 min
+Supplemental Reading for Testing Port Connectivity
+
+Reading•. Duration: 10 minutes10 min
+This item will be unlocked when the session begins.
+Verifying Connectivity
+
+Practice Quiz•5 questions
+Name Resolution Tools
+
+Video•. Duration: 2 minutes2 min
+Public DNS Servers
+
+Video•. Duration: 3 minutes3 min
+DNS Registration and Expiration
+
+Video•. Duration: 2 minutes2 min
+Hosts Files
+
+Video•. Duration: 3 minutes3 min
+This item will be unlocked when the session begins.
+Digging into DNS
+
+Practice Quiz•5 questions
+What is The Cloud?
+
+Video•. Duration: 6 minutes6 min
+Everything as a Service
+
+Video•. Duration: 3 minutes3 min
+Cloud Storage
+
+Video•. Duration: 2 minutes2 min
+This item will be unlocked when the session begins.
+Digital Footprints in the Cloud
+
+Discussion Prompt•. Duration: 10 minutes10 min
+This item will be unlocked when the session begins.
+The Cloud
+
+Practice Quiz•5 questions
+IPv6 Addressing and Subnetting
+
+Video•. Duration: 7 minutes7 min
+IPv6 Headers
+
+Video•. Duration: 2 minutes2 min
+IPv6 and IPv4 Harmony
+
+Video•. Duration: 3 minutes3 min
+Supplemental Reading for IPv6 and IPv4 Harmony
+
+Reading•. Duration: 10 minutes10 min
+This item will be unlocked when the session begins.
+IPv6
+
+Practice Quiz•5 questions
+Interview Role Play: Networking
+
+Video•. Duration: 4 minutes4 min
+
+Graded Plugin
+
+Reading•. Duration: 10 minutes10 min
+This item will be unlocked when the session begins.
+IPv6 Compression
+
+Due, Jan 2, 3:59 AM AST
+Quiz•1 question
+•Grade: --
+
+This item will be unlocked when the session begins.
+Troubleshooting and the Future of Networking
+
+Due, Jan 2, 3:59 AM AST
+Quiz•10 questions
+•Grade: --
+
+This item will be unlocked when the session begins.
+Your Learning Journey
+
+Discussion Prompt•. Duration: 10 minutes10 min
+Course Wrap Up
+
+Video•. Duration: 1 minute1 min
+Alex Career Path
+
+Video•. Duration: 1 minute1 min
+Congratulations!
+
+Video•. Duration: 13 seconds13 sec

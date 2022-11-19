@@ -1,0 +1,29 @@
+=====================================================================Week 1:
+Networks:
+COMPTIA A+ With Google Certificate Dual Credential(Validate Skills):
+https://www.comptia.org/blog/google-and-comptia-high-growth-tech-jobs
+
+TCP/IP Five Layer Network Model:
+Bottom:
+  1)Physical=Represents physical devices that interconnect computers(Cables, etc)
+  2)Data Link Layer=Responsible for defining a common way of interpreting signals so network devices can communicate(Ethernet)
+    Ethernet Standards also define a protocol responsible for getting data to nodes on the same network or link
+  3)Network Layer(Internet Layer):Allows different networks to communicate with each other through devices known as routers
+    Internetwork=A collection of networks connected together through routers, the most famous of these being the internet
+      IP(Internet Protocol)=The heart of the internet and most smaller networks around the world
+      Client Vs Server= Client initiates request, Server answers request and sends requested data
+  4)Transport Layer=Sorts out which client and server programs are supposed to get that data
+    TCP(Transmission Control Protocol)=Provides mechanisms to ensure data is reliably delivered to right machine/program
+    UDP(User Datagram Protocol)
+  5)Application Layer=Protocols that allow you to browse the web or send and receive emails
+
+In addition to the five layer model we are working with, it’s important to note that other models exist. 
+The traditional TCP/IP Model only has four layers, as it doesn’t differentiate between the physical layer and the data link layer,
+but is otherwise very similar to the one we’ll be working with. The most well known other model is the OSI model.
+It’s the model taught by many other networking certificate programs, like Net+ and Cisco’s many networking certifications.
+The primary difference between our five layer model and the seven layer OSI model is that the OSI model abstracts the application layer into 
+three layers total.
+
+OSI Model(7 Layers) Links:
+https://www.sans.org/reading-room/whitepapers/standards/osi-model-overview-543
+https://en.wikipedia.org/wiki/OSI_model

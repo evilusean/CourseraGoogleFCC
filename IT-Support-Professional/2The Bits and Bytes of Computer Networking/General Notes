@@ -27,3 +27,27 @@ three layers total.
 OSI Model(7 Layers) Links:
 https://www.sans.org/reading-room/whitepapers/standards/osi-model-overview-543
 https://en.wikipedia.org/wiki/OSI_model
+
+Networking Devices:
+Cables=Copper vs Fiber
+  Copper wires communicate by changing voltage representing a 1 or 0
+    Types: Cat5, Cat5e, Cat6, Cat6a, Cat7 (cat=category, different physical charasteristics, all cables look same exterior, diferent speeds)
+    CrossTalk=When an electrical Pulse on one wire is accidently detected on another wire
+  Fiber=Contain invididual optical fibers, which are tiny tubes made out of glass about the width of a human hair-Transport light to rep 1 or 0
+Hubs and Switches:
+`Hub=Physical Layer 1(Physical) device that allows for connections from many computers at once
+  'Talks' with all other devices connected to hub at same time, up to each machine to decide whether or not to ignore data
+  Collision Domain=A network segment where only one device can communicate at a time, slows down entire network
+  If Multiple systems try sending data at the same time, the electrical pulses sent accross the cable can interfere with one another
+Network Switch=Similar to a hub with many devices communicating, except Layer 2(Data link) inspects contents, determines which system, sends it
+  to the one system that requires it
+Hubs and switches are the primary devices used to connect computers on a single network, usually referred to as a LAN(Local Area Network)
+Routers=A Layer 3(Network)device that knows how to forward data between independant networks
+  Can inspect IP data to determine where to send data
+  Stores internal tables containing information on how to route traffic(generally to and from home -> ISP)
+  BGP(Border Gateway Protocol)=Routers share data with each other via this protocol, which lets them learn about the most optimal paths to forward
+  Home Network Router vs Core Router(ISP)=More advanced routers -Backbone of internet -handle much more traffic/complexity
+Servers=Provides Data Vs Clients=Receive Data
+  
+
+  

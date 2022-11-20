@@ -48,6 +48,22 @@ Routers=A Layer 3(Network)device that knows how to forward data between independ
   BGP(Border Gateway Protocol)=Routers share data with each other via this protocol, which lets them learn about the most optimal paths to forward
   Home Network Router vs Core Router(ISP)=More advanced routers -Backbone of internet -handle much more traffic/complexity
 Servers=Provides Data Vs Clients=Receive Data
-  
 
+The Physical Layer:
+Consists of devices transmitting data(bits/packets)accross networks to server you are interacting with
+Modulation=A way of varying the voltage of this charge(data sent) moving accross the cable known as Line Coding
+Line Coding using Modulation capable of sending 10 billion bits(1 or 0) a second
+Most common cable known as twisted pair(twisted pair of copper wire)
+Standard Cat6 cable has 8 wires consisting of 4 twisted pairs in a single jacket
+Duplex Communication=The concept that information can flow in both directions across the cable
+Simplex Communication=The process is unidirectional
+Full duplex=Both communications are communicating at once
+Half Duplex=Although full duplex is possible only one device can be communicating at a time
+RJ45(Register Jack45)=Most common ethernet cable plug
+Network Ports/plugs have 2 small LED's; upper left side is link light LED and right side is Activity LED
+  Link LED-switches on when cable properly connected to two devices that are both powered on
+  Activity LED-Flashes when data is actively transmitted across the cable(old ports used to blink activity light directly with 1's and 0's
+    being transmitted, Today it is much faster, too quick)
+Ports connected to walls generally end at a patch panel ( [ ] [ ] [ ] [ ] [ ] )
+Patch panel=Device containing many network ports, container for ends of cables that then go to switches hubs routers or other devices
   

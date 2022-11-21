@@ -86,3 +86,30 @@ Ethernet=Created in 1980, standardized 1983.
     Ethernet uses Mac Addresses to ensure that the data it sends has both an address for the machine that sent the transmission, 
       as well as the one the transmisssion was intended for
 
+Unicast=A transmission is always meant for just one receiving address
+  If the least significant bit in the first octet of a destination address is set to zero, it means the ethernet frame is intended for one address
+  only-sent to all devices but only received and processed by intended destination
+Multicast=Many receiving transmission
+  If the least significant bit in the first octet of a destination address is set to ONE, it means your dealing with a multicast frame
+  Sent to all devices, accepted or discarded by each device depending on criteria aside from MAC address (Accept lists)
+Broadcast=All Devices
+  Sent to every single device on a LAN, so they can 'learn' more about eachother
+  Broadcast Address=FF:FF:FF:FF:FF:FF
+
+Ethernet Frame:
+Data Packet=An All-encompassing term that represents any single set of binary data being sent accross a network link
+Ethernet Frame=A highly structured collection of information presented in a specific order(Ethernet Data Packet)
+Each Ethernet Frame contains a fixed size data packet in a mandatory specific order, Contains:
+  Preamble(8 bytes)=64 bits long, and can be split into 2 sections, first 7 bytes act as buffers as alternating 1's and 0's-Also syncs timer
+  SFD(Start Frame Delimiter)(1 Byte)=Signals to a receiving device that the preamble is over and that the actual frame contents will follow
+  Destination MAC Address(6 Bytes)=The Hardware address of the intended recipient
+  Source Address(6 Bytes)=Where frame originated from
+  VLan header(4 Bytes)=Indicates that the frame itself is a VLAN frame
+    VLAN(Virtual LAN)= A technique that lets you have multiple logical LANs operating on the same physical equipment
+  Ether-type(2 Bytes)=16 bits long, used to describe the protocol of the contents of the frame
+  Payload(46-1,500 Bytes)=Actual data being transported
+  FCS(Frame Check Sequence)(4 Bytes)=32 bit number that represents a checksum value for the entire frame
+    This checksum value is calculated by performing a Cyclical Redundancy Check
+    CRC(Cyclical Redundancy Check)=An important concept for data integrity, and is used all over computing, not just networks
+      A mathematical Transformation that Uses polynomial division to create a number that represents a larger set of data
+      Your CRC should match your checksum number to confirm you received uncorrupted data

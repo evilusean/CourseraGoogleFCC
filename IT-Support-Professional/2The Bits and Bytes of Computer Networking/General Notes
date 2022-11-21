@@ -67,3 +67,22 @@ Network Ports/plugs have 2 small LED's; upper left side is link light LED and ri
 Ports connected to walls generally end at a patch panel ( [ ] [ ] [ ] [ ] [ ] )
 Patch panel=Device containing many network ports, container for ends of cables that then go to switches hubs routers or other devices
   
+The Data Link Layer:
+Ethernet and MAC Address:
+Ethernet=Created in 1980, standardized 1983. 
+  Ethernet solved the collision domain problem by using a technique known as carrier sense multiple access with collision detection
+  CSMA/CD(Carrier Sense Multiple Access/Colision Detection)=used to determine when the communication channels are clear and when a device is free
+    to submit data. If there is currently no data being transmitted on the network, a node will feel free to send data, when 2 or more computers
+    are trying to send data at the same time-The computers detect this collision and stop sending data, rate a random interval and try to send agai
+    Collision Domain=All devices on that segment receive all communication accross that entire segment, using a MAC address ensures it gets to 
+      right node/computer
+    MAC(Media Access Control) Address=A globally unique identifier attached to an individual network interface
+      MAC Address=48Bit number normally represented by six groupings of two hexadecimel numbers
+      Potential MAC addresses=2 to the 48th power=Trillion 281,474,976,710,656 Unique ID's
+      OUI(Organizationally Unique Identifier) The first three octets of a MAC address-assigned to hardware manufacturers By
+        IEEE(Institute of Electrical and Electronics Engineers)-You can ID any product manufacturer by first 3 octets in address
+    Hexadecimal=A way to represent numbers using 16 digits (A=10, B=11, C=12, D=13, E=14, F=15)
+    Octet=any number that can be represented by 8 bits
+    Ethernet uses Mac Addresses to ensure that the data it sends has both an address for the machine that sent the transmission, 
+      as well as the one the transmisssion was intended for
+

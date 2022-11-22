@@ -113,3 +113,15 @@ Each Ethernet Frame contains a fixed size data packet in a mandatory specific or
     CRC(Cyclical Redundancy Check)=An important concept for data integrity, and is used all over computing, not just networks
       A mathematical Transformation that Uses polynomial division to create a number that represents a larger set of data
       Your CRC should match your checksum number to confirm you received uncorrupted data
+
+=====================================================================Week 2:
+The Network Layer:
+IP (Internet Protocol):32 bit long numbers made up of 4 octets
+  Dotted Decimal Notation
+  IP Addresses are distributed to various organizations and companies
+  IBM owns every single IP that has '9' as the first octet
+  IP Addresses belong to the networks, not the devices attached to those networks
+  Most common version of IP is IPv4(Internet Protocol version 4)
+DHCP(Dynamic Host Configuration Protocol):How new devices connect to and receive their Dynamic IP address Vs Static IP(manually configured)
+Packet(IP Datagram)=A highly structured series of fields that are strictly defined, 2 Parts=IP Datagram Header/Payload
+ARP(Address Resolution Protocol)=

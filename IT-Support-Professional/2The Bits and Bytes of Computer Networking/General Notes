@@ -16,6 +16,7 @@ Bottom:
     TCP(Transmission Control Protocol)=Provides mechanisms to ensure data is reliably delivered to right machine/program
     UDP(User Datagram Protocol)
   5)Application Layer=Protocols that allow you to browse the web or send and receive emails
+The reason they are layered is because you need the one before it to move on to they next layer
 
 In addition to the five layer model we are working with, it’s important to note that other models exist. 
 The traditional TCP/IP Model only has four layers, as it doesn’t differentiate between the physical layer and the data link layer,
@@ -124,7 +125,9 @@ IP (Internet Protocol):32 bit long numbers made up of 4 octets
   Most common version of IP is IPv4(Internet Protocol version 4)
 DHCP(Dynamic Host Configuration Protocol):How new devices connect to and receive their Dynamic IP address Vs Static IP(manually configured)
 Packet(IP Datagram)=A highly structured series of fields that are strictly defined, 2 Parts=IP Datagram Header/Payload
-ARP(Address Resolution Protocol)=
+ARP(Address Resolution Protocol)=A protocol used to discover the hardware address of a node with a certain IP address
+ARP Table=A list of IP addresses and the MAC addresses associated with them
+  ARP Table entries generally expire after a short amount of time to ensure changes in the network are accounted for
 
 IP Datagram Header Contents:
   Version=4 bits=Indicates what version of Internet Protocol is being used
@@ -146,4 +149,23 @@ IP Datagram Header Contents:
   Destination IP Address=32 bits=
   Options=An optional field used to set special characteristics for datagrams primarily used for testing purposes
   Padding=series of zeros to ensure that header is the correct total size
-  
+Data Payload=TCP or UDP packet
+Encapsulation=The Entire Process of creating header and payload
+
+IP Address Class:
+IP Addresses can be split into two sections: Network ID and Host ID
+IP Address: 9.100.100.100
+Network ID would be '9' in the above IP Address or first octet
+Host ID would be 100.100.100 or second, third and first octet
+Address Class System=A way of defining how the global UP address space is split up
+Class A=First octet(Network), Last 3 Octets(Host ID)=2 to the 24th power potential ID's(16,770,216,000)
+  Left most bit starts with a 0, Starting IP address can be 0.0.0.0 to 127.255.255.255
+Class B=First Two Octets(Network), Last 2 Octets(Host ID)=2 to the 16th power
+  Left most bit starts with 10, Starting IP address can be 128.0.0.0 to 191.255.255.255
+Class C=First Three Octets(Network), Last Octet(Host)=2 to the 8th power=256 Potential ID's
+  Left most bit starts with 110, Starting IP address can be 192.0.0.0 to 233.255.255.255
+Class D=Left most bit starts with 1110, Starting IP address can be 244.0.0.0 to 239.255.255.255
+Class E=Left most bit starts with 1111, Starting IP address can be 240.0.0.0 to 255.255.255.255
+Class D and E are less important and used for multicasting(Sending Datagrams to networks all at once)
+You can tell the class of an IP address by looking at the bits
+CIDR(Classless Interdomain Routing)

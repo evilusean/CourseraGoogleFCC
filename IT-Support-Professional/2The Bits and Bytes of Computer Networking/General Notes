@@ -125,3 +125,25 @@ IP (Internet Protocol):32 bit long numbers made up of 4 octets
 DHCP(Dynamic Host Configuration Protocol):How new devices connect to and receive their Dynamic IP address Vs Static IP(manually configured)
 Packet(IP Datagram)=A highly structured series of fields that are strictly defined, 2 Parts=IP Datagram Header/Payload
 ARP(Address Resolution Protocol)=
+
+IP Datagram Header Contents:
+  Version=4 bits=Indicates what version of Internet Protocol is being used
+  Header Length=4 bits=Declares how long entire header is (IPv4=20 bytes almost always, 20 bytes minimum)
+  Service Type=8  bits=Can be used to specify details about the QoS(Quality of Service) technologies
+  Total length=16 bits=Indicates the total length of the IP datagram it is attached to
+  Identification=16 bits=Used to group messages together
+    (Maximum size of a single datagram is the largest number you can represent with 16 bits; 65,535)
+    If the total amount of data that needs to be sent is larger then what can fit in a single datagram, the IP layer needs to split the data up
+    into many individual packets
+  Flags=5 bits=Used to indicate if a datagram is allowed to be fragmented, or to indicate if the datagram has already been fragmented
+    Fragmentation=The Process of taking a single IP datagram and splitting it up into several smaller datagrams
+  Fragment Offset=16 bits=
+  TTL(Time to Live)=8 bits=Indicates how many router hops a datagram can traverse before it is thrown away
+    Makes sure if there is an error and it creates an endless loop, it get's thrown away trying to reach destination
+  Protocol=8 bits=Contains data about what transport layer protocol is being used (TCP vs UDP)
+  Header Checksum=15 bits=A checksum of the contents of the entire IP Datagram header
+  Source IP Address=32 bits=
+  Destination IP Address=32 bits=
+  Options=An optional field used to set special characteristics for datagrams primarily used for testing purposes
+  Padding=series of zeros to ensure that header is the correct total size
+  

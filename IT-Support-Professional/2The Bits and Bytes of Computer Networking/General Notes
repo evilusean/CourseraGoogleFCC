@@ -155,6 +155,7 @@ Encapsulation=The Entire Process of creating header and payload
 IP Address Class:
 IP Addresses can be split into two sections: Network ID and Host ID
 IP Address: 9.100.100.100
+IP Address(in binary): 0000 1001.0110 0100.0110 0100.0110 0100
 Network ID would be '9' in the above IP Address or first octet
 Host ID would be 100.100.100 or second, third and first octet
 Address Class System=A way of defining how the global UP address space is split up
@@ -169,3 +170,14 @@ Class E=Left most bit starts with 1111, Starting IP address can be 240.0.0.0 to 
 Class D and E are less important and used for multicasting(Sending Datagrams to networks all at once)
 You can tell the class of an IP address by looking at the bits
 CIDR(Classless Interdomain Routing)
+
+Subnetting:
+Subnetting=The process of taking a large network and splitting it up into many individual and smaller subnetworks, or subnets
+Incorrect subnetting setups are a common problem you might run into as an IT support specialist, so it's important to hjave a strong understanding
+Subnet Masks=32 Bit numbers that are normally written out as four octets in decimal
+Subnet Mask=255.255.255.0
+Subnet Mask(In Binary)=1111 1111.1111 1111.1111 1111.0000 0000
+Subnet ID=Tells what to ignore when computing host ID (1's = ignore, 0's = what to keep)
+Shorthand way of writing subnet masks=9.100.100.100/24 (means 24 1's followed by 8 0's in a 32 bit ID, 2^8=512 potential ID's)
+
+Basic Binary Math:

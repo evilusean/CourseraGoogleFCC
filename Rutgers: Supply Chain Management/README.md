@@ -20,5 +20,12 @@ https://www.coursera.org/learn/operations?specialization=supply-chain-management
 
 Start:07Nov2022
 
-End:
+End:22Nov2022
 
+# 3Supply Chain Planning
+
+https://www.coursera.org/learn/planning?specialization=supply-chain-management
+
+Start:23Nov2022
+
+End:

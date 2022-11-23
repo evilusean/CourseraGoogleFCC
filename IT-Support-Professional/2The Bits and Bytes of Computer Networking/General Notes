@@ -178,6 +178,27 @@ Subnet Masks=32 Bit numbers that are normally written out as four octets in deci
 Subnet Mask=255.255.255.0
 Subnet Mask(In Binary)=1111 1111.1111 1111.1111 1111.0000 0000
 Subnet ID=Tells what to ignore when computing host ID (1's = ignore, 0's = what to keep)
-Shorthand way of writing subnet masks=9.100.100.100/24 (means 24 1's followed by 8 0's in a 32 bit ID, 2^8=512 potential ID's)
+Shorthand way of writing subnet masks=9.100.100.100/24 (means 24 1's followed by 8 0's in a 32 bit ID, 2^8=256 potential ID's)
+Subnet mask=A way for a computer to use AND operators to determine if an IP address exists on the same network
 
 Basic Binary Math:
+Adding, Counting etc same as base 10(Decimal) as in base 2(Binary)
+Binary                            Decimal
+32   16   08    04    02    01  |  10    01
+                             1  |         1
+                       1     0  |         2
+                       1     1  |         3
+                 1     0     0  |         4
+                 1     0     1  |         5
+                 1     1     0  |         6
+                 1     1     1  |         7
+           1     0     0     0  |         8
+           1     0     0     1  |         9
+           1     0     1     0  |    1    0
+           1     0     1     1  |    1    1 
+Notice how the number before is double the latter number 1,2,4,8,16,32 right to left
+If you have an 8 bit number=2^8(2 to the 8th power) potential numbers= 256 = 0-255
+If you have an 4 bit number=2^4(2 to the 4th power) potential numbers= 16 = 0-15
+you have an 16 bit number=2^16(2 to the 16th power) potential numbers= 65536 = 0-65535
+Operators= + , - , / , * , OR, AND
+1 Represents True, 0 represents False

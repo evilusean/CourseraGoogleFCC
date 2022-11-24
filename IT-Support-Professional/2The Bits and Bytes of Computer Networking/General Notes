@@ -230,4 +230,13 @@ Routing Protocols=special protocols routers use to 'speak' to eachother, 2 main 
 IANA(Internet Assigned Numbers Authority)=Non profit organization that helps manage things like IP address allocation
   ASN(Autonomous System Number)=IANA is also responsible for allocation, numbers assigned to individual autonomous systems=32 bits
 
+Non-Routable Address Space:
+1996 IP Problem=IP address(32 bits)=Billion 4,294,967,295 Vs 7.5 Billion people=Not enough IP addresses for people on planet
+1996 RFC(Request for Comments) 1918=Outlined for a number of networks(IP Addresses) to be non-network routable address space,
+  allows for nodes to communicate with each other, but no gateway router will attempt to forward traffic to these networks
+NAT(Network Address Translation)
+3 ranges of IP addresses that will never be routed by core routers(belong to noone, anyone can use them):
+  10.0.0.0/8
+  172.16.0.0/12
+  192.168.0.0/16
 

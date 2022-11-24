@@ -1,0 +1,21 @@
+====================================================================Week 1:
+Sourcing, Operations, Logistics all depend on accurate prediction of demand(planning)
+Matching Supply with Demand
+
+Forecasting Demand:
+Forecasting=The prediction(guess what demand will be), Estimation(guess what level it will be at),Projection(Carrying it into the future) of demand
+Time Series=Relies on historical data, demand over time, demand recorded over equal size intervals of time(day/week/month/year)
+  The goal is to build a forecasting model based on past demand into the future
+  [    D(Demand)    ]  [       F      ]             F=Future Demand
+  |--|--|--|--|--|--|--|--|--|--|--|--|-->
+                    T(time)
+Refine forecast based on new data, try to minimize error(loss),  
+Time series are made of several different patterns:
+  Baselevel demand=Starting Value
+  Trends=Demand goes up over time or down over time
+  Seasonality=A pattern that repeats every month/quarter/year
+  Cycle=Longer than a year, works like seasonality
+  Random(Noise)=Impossible to predict
+A good forecast will try to resolve all the patterns without trying to forecast noise
+The best forecast is not always the most complicated one, if you can have an equally good forecast that is simpler, it is better to use
+Forecasting is Art+Science, takes alot of work to monitor many different models and picking the right one at the right time

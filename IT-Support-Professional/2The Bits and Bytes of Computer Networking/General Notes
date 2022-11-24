@@ -240,3 +240,19 @@ NAT(Network Address Translation)
   172.16.0.0/12
   192.168.0.0/16
 
+=====================================================================Week 3:
+The Transport Layer:
+Transport Layer=Allows traffic to be directed to specific network applications
+Application Layer=Allows these applications to communicate in a way they understand
+Multiplexing=Nodes on a network have the ability direct traffic to many different receiving services
+DeMultiplexing=From the receiving end; taking traffic all aimed at same node and delivering it to the proper receiving service
+Ports=A 16 bit number that's used to direct traffic to specific services running on a networked computer
+Certain network services listen to specific ports for incoming requests
+HTTP: Port:80
+ports are denoted with a ':' after the IP address
+Socket Address/Socket Number/Socket Port= 10.1.1.100:80
+FTP(File Transfer Protocol)=Older method used for transferring files; Listens to Port:21 = 10.1.1.100:21
+Ethernet Frame(payload) encapsulates a Datagram(payload) a datagram encapsulates a TCP segment
+Ethernet Frame > Datagram > TCP Segment
+TCP Segment=Made up of a TCP header and data section(Payload)
+

@@ -202,3 +202,32 @@ If you have an 4 bit number=2^4(2 to the 4th power) potential numbers= 16 = 0-15
 you have an 16 bit number=2^16(2 to the 16th power) potential numbers= 65536 = 0-65535
 Operators= + , - , / , * , OR, AND
 1 Represents True, 0 represents False
+
+CIDR:
+CIDR(Classless InterDomain Routing)=More Flexible approach to describing blocks of IP addresses, uses subnet masks to demarcate networks
+Demarcation Point=To describe where one network or system ends and another one begins
+CIDR Notation=9.100.100.100/24
+
+Routing:
+Router=A network device that forwards traffic depending on the destination address of that traffic
+Today most intensive routing issues are almost exclusively handled by the BIG ISP monopolies
+Router sending data x4 steps:
+Router Receives a Packet -> Router Examines destination IP -> Looks up IP destination network in routing table -> forwards traffic to destination
+Routing Table=Has 4 columns
+  Destination Network=Contains a row for each network that the router knows about, generally has a catchall entry that doesn't have explicit match
+  Next Hop=IP address of the next network that should receive data, or states if network is directly connected
+  Total Hops=Routers try to pick shortest possible path to destination-changes over time
+  Interface=Has to know which interface it has to forward the traffic matching destination
+Core Routers have millions of rows on their routing tables
+Routing Protocols=special protocols routers use to 'speak' to eachother, 2 main categories:
+  Interior Gateway Protocols=used by routers to share information with a single autonomous system. Are further split into two categories:
+    Autonomous System=A collection of networks that all fall under the control of a single network operator
+    Link state routing protocols=Determine the best path, each router advertises the state of the link of each of it's interfaces
+    Distance-vector protocols=An older standard, a list of every network known to it and how far away in terms of hops, shares with neighboring 
+    routers (Vector=List)
+  Exterior Gateway Protocols=Used for the exchange of information between independant autonomous systems
+    Used when different organizations need to share data. Interior used within same organization
+IANA(Internet Assigned Numbers Authority)=Non profit organization that helps manage things like IP address allocation
+  ASN(Autonomous System Number)=IANA is also responsible for allocation, numbers assigned to individual autonomous systems=32 bits
+
+

@@ -19,3 +19,14 @@ Time series are made of several different patterns:
 A good forecast will try to resolve all the patterns without trying to forecast noise
 The best forecast is not always the most complicated one, if you can have an equally good forecast that is simpler, it is better to use
 Forecasting is Art+Science, takes alot of work to monitor many different models and picking the right one at the right time
+
+Naive Forecasts:
+What we sold yesterday, that's what we're going to sell today, what we sell today is what we are going to sell tommorrow.
+Ft = Dt -1(time period)
+It's better to take into consideration seasonality and calculate the demand of last year instead of last month
+Ft = Dt -12(months)
+If you have a trend(up or down of X every month) add it into the equation
+Ft = Dt -1 + T(trend)
+Naive forecasts are very noisy, and volatile
+The Naive Method can be used as a benchmark for more complex methods, and can tell you if another method is superior
+

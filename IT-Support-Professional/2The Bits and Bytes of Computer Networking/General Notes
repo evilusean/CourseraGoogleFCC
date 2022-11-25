@@ -292,3 +292,9 @@ There are other TCP socket states that exist, names can vary depending on OS, TC
 Connection-oriented protocol=Establishes a connection, and uses this to ensure that all data has been properly transmitted
 UDP(User Datagram Protocol)=like TCP but, Doesn't rely on connections, just set a destination port and send data
 
+The Application Layer:
+Payload=Generic Data section=The entire contents of whatever applications want to send to eachother
+Many different protocols on the application layer, still standardized to application types
+OSI(Open Systems Interconnection)Model=rigorously defined, introduces 2 additional layers inbetween transport and application layers
+  Session Layer(facilitates communication between applications and transport layer)
+  +Presentation layer(responsible for unencapsulated application layer can actually understand data; encryption/compression)

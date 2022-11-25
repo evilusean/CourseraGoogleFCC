@@ -25,3 +25,8 @@ https://tools.ietf.org/html/rfc2328
 BGP(Border Gareway Protocol):
 https://en.wikipedia.org/wiki/Border_Gateway_Protocol
 https://tools.ietf.org/html/rfc4271
+
+Port Registry:
+https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml
+Commonly Used Ports:
+https://packetlife.net/media/library/23/common_ports.pdf

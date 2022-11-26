@@ -30,3 +30,10 @@ Ft = Dt -1 + T(trend)
 Naive forecasts are very noisy, and volatile
 The Naive Method can be used as a benchmark for more complex methods, and can tell you if another method is superior
 
+Cumulative Mean:
+Ft = (Σt-1D)/t-1 
+Gives an average of all time periods and make it your forecast
+Formula: =average($B2:B3) 
+$ creates an absolute cell, always taken into account for cumulative mean
+each new time period provides very little weight on the overall average
+

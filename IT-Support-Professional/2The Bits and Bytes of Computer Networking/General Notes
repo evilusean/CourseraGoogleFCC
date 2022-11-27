@@ -298,3 +298,20 @@ Many different protocols on the application layer, still standardized to applica
 OSI(Open Systems Interconnection)Model=rigorously defined, introduces 2 additional layers inbetween transport and application layers
   Session Layer(facilitates communication between applications and transport layer)
   +Presentation layer(responsible for unencapsulated application layer can actually understand data; encryption/compression)
+
+=====================================================================Week 4:
+Name Resolution:
+DNS(Domain Name System)=A global and highly distributed network service that resolves strings of letters into IP addresses for you
+The Longer the Distance inbetween Server and client, the longer it takes to send data, DNS can automatically detect and send to closest webserver
+Name Resolution=Turning a domain name into an IP address
+x5 Primary types of DNS servers:
+  1. Caching Name Server(ISP):Caching+Recursive DNS=purpose is to store known domain name lookups for a certain amount of time(TTL)
+    TTL(Time to Live)=A value in seconds that can be configured by DN owner for how long a name server is allowed to cache an entry before discard
+  2. Recursive Name Server(ISP):Perform full DNS resolution requests
+  3. Root Name Server(13 total):Responsible for directing queries to the appropriate TLD name servers
+    Anycast=A technique that's used to route traffic to different destinations depending on fators like location, congestion, or link health
+  4. TLD(Top Level Domain) Name Server: Points to an authoritive server to contact
+    TLD(Top Level Domain)=The last part of any domain name '.com' would be TLD in facebook.com
+  5. Authoritative Name Server:Provides the actual IP for the server in question
+Desktops/Phones/Laptops will generally hold their own temporary DNS caches as well
+DNS uses UDP(User Datagram protocol=connectionless-doesn't need to connect/handshake like TCP)

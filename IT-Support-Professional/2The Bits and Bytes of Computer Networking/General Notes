@@ -315,3 +315,21 @@ x5 Primary types of DNS servers:
   5. Authoritative Name Server:Provides the actual IP for the server in question
 Desktops/Phones/Laptops will generally hold their own temporary DNS caches as well
 DNS uses UDP(User Datagram protocol=connectionless-doesn't need to connect/handshake like TCP)
+Domains=Used to demarcate where control moves from a TLD name server(.com/.org/.net) to an authoritative name server(google/bing/microsoft)
+Subdomain/Hostname='www.'
+FQDN(Fully Qualified Domain Name)=Has Subdomain+Domain+Top Level Domain=www.google.com
+DNS Zones=Allow for easier control over multiple levels of a domain
+Zone Files=Simple configuration files that declare records for a particular zone
+Reverse Lookup Zone Files=Let DNS resolvers ask for an IP and get the FQDN associated with it returned
+SOA(Start of Authority) Record=Declares the zone and the name of the server that is authoritative for it
+NS Records=Indicate other name servers that might also be responsible for this zone
+PTR(Pointer Resource Record)=Resolves an IP to a name
+Resource Record Types:
+A Record=used to point a certain domain name at a certain IPv4 IP address
+  DNS Round Robin=A Single Domain name can have multiple A records(IP addresses) and can split traffic between them
+AAAA Quad-A Record=Similar to an A record but returns an IPv6 Record instead of IPv4
+CNAME Record=Used to redirect traffic from one domain name to another; microsoft.com Vs www.microsoft.com
+MX record=Mail Exchange-Makes sure email gets delivered to the correct server
+SRV(service) Record=Used to find the location for various specific services
+TXT(text) Record=Conveys additional Data+Configuration Preferences
+

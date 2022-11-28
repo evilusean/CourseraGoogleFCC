@@ -365,4 +365,17 @@ RIR(Regional Internet Registry)x5=Works with IANA to assign IP addresses in geog
   LACNIC=Central and South America, Parts of Caribean
   RIPE=Europe, Russia, Middle East, Central Asia
 
-
+VPN(Virtual Private Networks):
+VPN=A technology that allows for the extension of a private or local network to hosts that might not be on that local network
+  Allow employees to access the businesses network when not in office
+  use encrypted tunnels to allow for a remote computer or network to act as if it's connected to a network it is not physically connected to
+Tunneling Protocol=Provision access to something not locally available(Chyna)
+VPN's work by using an External IP and the payload section of transport layer to carry an encrypted payload to client router -> computer
+Two Factor Authentication=A technique where more than just a username and password are required to communicate(token)
+Proxies:
+Proxy Service=A Server that acts on behalf of a client in order to access another service(Gateway routers)
+  Provide: Anonymity, Security, Content filtering, increased performance
+Web Proxies=A proxy built specifically for web traffic(would cache data retrieved from internet, increasing performance)
+  Web proxies can also prevent people from accessing sites on a network entirely(increasing productivity)
+Reverse Proxy=A service that might appear to be a single server to external clients, but actually represents many servers living behind it
+  Can act as a single frontend for many servers, distributing requests. Can also be used for decryption/encryption

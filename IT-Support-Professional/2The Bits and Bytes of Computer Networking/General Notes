@@ -333,3 +333,18 @@ MX record=Mail Exchange-Makes sure email gets delivered to the correct server
 SRV(service) Record=Used to find the location for various specific services
 TXT(text) Record=Conveys additional Data+Configuration Preferences
 
+DHCP(Dynamic Host Configuration Protocol):
+DHCP=An application layer protocol that automates the configuration process of hosts on a network
+Every Computer on a TCP/IP Network needs 4 things to work:IP Address/Subnet Mask/Gateway/Name Server
+Using DHCP you can configure a range of IP addresses set aside for client devices, don't need to maintain a list of every node on a network
+Dynamic Allocation=A range of IP addresses is set aside for client devices and one is issued to these devices when they request one
+Automatic Allocation=A range of IP addresses is set aside for assignment purposes
+Fixed Allocation=Requires a manually specified list of MAC address and their corresponding IP's
+NTP(Network Time Protocol) Servers=Used to keep all computers on a network synchronized in time
+DHCP Discovery=The process by which a client configured to use DHCP attempts to get network configuration information
+  Discovery: Source port :68 / Destination port :67
+  x4 Steps: Server Discovery Sent:DHCP Client sends a DHCP discover message(client has no IP yet)
+    DHCP Offer:Server examines it's configuration and decides on what to offer to client(IP address)
+    DHCP Request:Client responds that it will accept the IP to the server
+    DHCP ACK: Sends an acknoledgement message from server to client, the networking client can now use the IP address assigned to it
+DHCP Lease=The Above process is known as a DHCP Lease, it includes an expiration time, once expired, needs to discover a new IP address

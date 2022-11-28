@@ -348,3 +348,21 @@ DHCP Discovery=The process by which a client configured to use DHCP attempts to 
     DHCP Request:Client responds that it will accept the IP to the server
     DHCP ACK: Sends an acknoledgement message from server to client, the networking client can now use the IP address assigned to it
 DHCP Lease=The Above process is known as a DHCP Lease, it includes an expiration time, once expired, needs to discover a new IP address
+
+NAT(Network Address Translation):
+NAT(Network Address Translation)=A technique instead of defined standard, takes one IP address and translates it into another
+  A technology that allows a gateway, usually a router or firewall, to rewrite the source IP of an outgoing IP datagram while retaining the
+  original IP in order to rewrite it into the response
+IP Masquerading=Hiding an IP address for security purposes
+One-Many NAT-Translates outbound traffic to a single IP(normally a router)
+Port Preservation=A technique where the source port chosen by a client is the same port used by the router 49,152 - 65,535(ephemeral ports)
+Uses source port to direct traffic back to the correct computer
+Port Forwarding=A technique where specific destination ports can be configured to always be delivered to specific nodes
+RIR(Regional Internet Registry)x5=Works with IANA to assign IP addresses in geographic areas
+  AFRINIC=Serves The continent of Africa
+  ARIN=Serves US canada and Caribean
+  APNIC=Asia, Australia, New Zealand, Pacific Islands
+  LACNIC=Central and South America, Parts of Caribean
+  RIPE=Europe, Russia, Middle East, Central Asia
+
+

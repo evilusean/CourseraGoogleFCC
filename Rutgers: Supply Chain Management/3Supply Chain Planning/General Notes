@@ -37,3 +37,12 @@ Formula: =average($B2:B3)
 $ creates an absolute cell, always taken into account for cumulative mean
 each new time period provides very little weight on the overall average
 
+====================================================================Week 2:
+Forecast Accuracy:
+Bias=Do you have a tendancy to overforecast or underforecast?
+Mean Error= (D - F) / t                   D=Demand F=Forcecast t=time period
+Mean Absolute Percent Error= |(D-F)/D| / t        ||=absolute value
+MSE(Mean Squared Error)= (D-F)^2 / t 
+  Amplifies Small errors
+
+

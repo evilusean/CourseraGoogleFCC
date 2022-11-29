@@ -379,3 +379,42 @@ Web Proxies=A proxy built specifically for web traffic(would cache data retrieve
   Web proxies can also prevent people from accessing sites on a network entirely(increasing productivity)
 Reverse Proxy=A service that might appear to be a single server to external clients, but actually represents many servers living behind it
   Can act as a single frontend for many servers, distributing requests. Can also be used for decryption/encryption
+
+=====================================================================Week 5:
+Connections:
+POTS(plain old telephone service)/Dialup Modems:
+PSTN(Public Switched telephone network)=Used a phone line to transmit data
+USENET(300 Bits per second)=Duke University, 1970's
+Dialup Connection=uses POTS for data transfer, and gets its name because the connection is established by actually dilaling a phone number
+MODEM(Modulator/DeModulator)=Take data and transmit it through audible wave lengths
+Baud Rate=A measurement of how many bits can be passed across a phone line in a second (Phoneline=110 Bits Per Second/Dialup=14.4Kb/s)
+
+Broadband:
+Broadband=Refers to any connectivity technology that isn't dial-up internet
+T-Carrier Technologies=Originally invented by AT&T in order to transmit multiple phone calls over a single link
+  T1(Transmission System 1)=First T-Carrier Specification-Up to 24 simultaneous phone calls on one single pair copper wire(64Kb/s x24=1.544Mb/s)
+  T3=28 T1's all multiplexed=1.544Mb/s x 28 = 44.736 Mb/s
+DSL(Digital Subscriber Line)=Operates at a different frequency above audible sending more data, allowing voice phone calls and data transfer
+  at same time
+  ADSL(Asymmetric Digital Subscriber Line)=Feature different speeds for outbound and incoming, faster download, slower download (1.544 Mb/s)
+  SDSL(Symmetric Digital Subscriber Line)=Same as ADSL but same speeds for uploads and downloads
+  High Bit-rate DSL=Lines capable of going above 1.544Mb/s
+DSLAM(Digital Subscriber Line Access Multiplexer)=Establish data connections accross phone lines
+Cable:
+Cable Communications Policy Act=1984(ironic) deregulated cable television business
+  TV used to be wireless and went to cabled, internet used to be cabled and going to wireless
+  Early 1990's Cable TV infrastructure was about the size of public telephone system
+CoAxial Cables used for TV could be used for data transfer using different frequencies
+Cable Broadband=Shared Bandwidth Technology
+CO(Central Offices)=Phone Calls used to be directed to CO's where they had a physical switchboard to connect calls to callers and callees
+Cable Modem=A device that sits at the edge of a consumer's network and connects to cable modem termination system(CMTS)
+CMTS(cable modem termination system)=Connects lots of different cable connections to an ISPs core network
+Fiber:
+Fiber Optics=Use Light for transferring data, can go for thousands of feet before requiring a repeater before signal degrades
+FTTX(Fiber to the X):
+  FTTN(Fiber to the Neighborhood)=Fibre Tech used to deliver data to single physical cabinet, then use cable for the last portion to the home
+  FTTB(Fiber to the Building/Business/Basement)=Fibre Delivery to individual building, twisted copper to the rest of building
+  FTTH(Fiber to the Home)=Fibre run to each individual residence in a neighborhood or appartment
+  FTTP(Fiber to the Premises)=Fibre direct to the premise
+ONT(Optical Network Terminator)=Converts data from protocols the fiber network can understand, to those that more traditional, twisted pair 
+  copper networks can understand

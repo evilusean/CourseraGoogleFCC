@@ -45,4 +45,8 @@ Mean Absolute Percent Error= |(D-F)/D| / t        ||=absolute value
 MSE(Mean Squared Error)= (D-F)^2 / t 
   Amplifies Small errors
 
+Moving Average:
+Takes a subset of data(time), and averages it into the future(stonks 50 day moving average vs 200 day moving average)
+Ft = (Σi=t - N+2) / N         N=Number of periods you are going to average together
+Small N Makes the forecast very reactive, a large N makes it very stable
 

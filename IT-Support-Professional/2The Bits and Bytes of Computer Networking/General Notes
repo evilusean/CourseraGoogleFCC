@@ -418,3 +418,22 @@ FTTX(Fiber to the X):
   FTTP(Fiber to the Premises)=Fibre direct to the premise
 ONT(Optical Network Terminator)=Converts data from protocols the fiber network can understand, to those that more traditional, twisted pair 
   copper networks can understand
+WAN:
+WAN(Wide Area Network Technologies)=Acts like a single network, but spans across multiple physical locations
+Point to Point VPN/Site to Site VPN: Establishes a VPN tunnel between 2 sites
+Wireless Networking=A network without wires(redundant)
+IEEE 802.11 Standards=WIFI=How Wireless devices should communicate=802 Family(802.11b, 802.11a, 802.11g, 802.11n, 802.11ac ordered by adoption)
+Frequency Band=A certain section of the radio spectrum that's neem agreed upon to be used for certain communications
+  FM Broadcast band=NA FM Radio Transmissions=between 88 and 108 MHz(MegaHertz)
+  WiFi networks=Operate on many different frequency bands. Most commonly=2.4GHz and 5GHz(GigaHertz)
+Wireless DataFrame(802.11):
+  Frame Control(2 Octets)=16 bits long, and contains a number of subfields that are used to describe how the frame itself should be processed
+  Duration/ID(2 Octets)=Specifies how long the total frame is, so the receiver knows how long it should expect to have to listen to transmission
+  Address 1(6 Octets)=Source Address Field
+    Why 4 addresses? For Access Points=A device that bridges the wireless and wired portions of a network
+  Address 2(6 Octets)=Intended Destination
+  Address 3(6 Octets)=Receiving Address(MAC Address of Device that should receive frame)
+  Sequence Control(2 Octets)=16 bits long and mainly contains a sequence number used to keep track of the ordering of frames
+  Address 4(6 Octets)=Transmitter Address(MAC Address of whatever has just transmitted frame)
+  Data Payload(0-7951 Octets)=Contains all of the data of the protocols further up the stack
+  FCS(Frame Check Sequence)(4 Octets)=Checksum for cyclical redundancy check

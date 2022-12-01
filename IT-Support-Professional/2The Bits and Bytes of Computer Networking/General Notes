@@ -437,3 +437,21 @@ Wireless DataFrame(802.11):
   Address 4(6 Octets)=Transmitter Address(MAC Address of whatever has just transmitted frame)
   Data Payload(0-7951 Octets)=Contains all of the data of the protocols further up the stack
   FCS(Frame Check Sequence)(4 Octets)=Checksum for cyclical redundancy check
+WAN Configuration:
+  Ad-Hoc Networks=Where nodes all speak directly to eachother
+  Wireless LANs(WLANS)=Where one or more access points act as a bridge between a wireless and a wired network
+  MESH Networks=A hybrid of the 2, most devices communicate with eachother and increase performance/range of network
+Channels=Individual, smaller sections of the overall frequency vannd used by a wireless network, channels help reduce collisions
+  Some Channels Overlap, differ by country standards
+Collision Domain=Any one network segment where one computer can interrupt another, switches reduce collisions on wireless networks
+WEP(Wired Equivalent Privacy)=An encryption technology that provides a very low level of privacy, other devices may 'listen' in to wireless coms
+  WEP encryption can be broken easily(40 bits, can be cracked in a few minutes)
+The number of bits in an encryption key corresponds to how secure it is, the more bits, the longer it takes
+WPA(Wifi Protected Access)=128 bit keys
+WPA2=256 bit key
+MAC filtering=You configure your access points to only allow for connections from a specific set o MAC addresses to devices you trust
+
+Cellular/Mobile Networking:
+Cellular networks have alot in common with 802.11 networks
+Use specific frequency bands for cellular transmissions
+

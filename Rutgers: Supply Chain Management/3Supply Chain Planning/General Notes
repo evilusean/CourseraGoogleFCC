@@ -50,3 +50,9 @@ Takes a subset of data(time), and averages it into the future(stonks 50 day movi
 Ft = (Σi=t - N+2) / N         N=Number of periods you are going to average together
 Small N Makes the forecast very reactive, a large N makes it very stable
 
+====================================================================Week 3:
+Exponential Smoothing:
+Ft=ADt-1+(1-A)Ft-1    F=Forecast D=demand t=time A=Alpha
+Balance how much weight to give to previous demand for future demand
+Averages view of all past demand, puts more weight on more recent data, less weight on older data
+Keep checking accuracy of forecasts, if improving you are going in the right direction. If worse, you suck

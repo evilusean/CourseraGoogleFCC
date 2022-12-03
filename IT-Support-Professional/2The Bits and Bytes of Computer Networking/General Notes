@@ -478,5 +478,25 @@ Testing Tools= netcat: Linux/MacOs, Test-NetConnection: Windows
   nc -z -v google.com 80
   windows: Test-Netconnection google.com
   Test-Netconnection google.com -port 80
-
-  
+DNS tools:
+nslookup=get's IP address for domains
+  command: nslookup hostname(domain)
+  server 8.8.8.8 #all requests will be attempted to be made using that server instead of default
+  set type=MX #gets a specific record type from server, this one for mail
+  set debug #lets you know exactly what is going on
+Public DNS Servers=Name servers specifically set up so that anyone can use them, for free
+  Level 3 Communications(Private ISP)=Sell connectivity to other ISP's(4.2.2.1 -> 4.2.2.6)
+  Google Public IPs= 8.8.8.8 and 8.8.4.4
+  Most public DNS servers are available globally through anycast
+Registrar=An organization responsible for assigning individual domain names to other organizations or individuals(ICANN)
+  100's of companies sell domain names
+  after buying a domain name you can have the registrars name servers act as the authoritive name server or configure your own servers to be author
+  Transferring domains=recipient registrar create a unique string of characters to prove you own domain
+  registrations only exist for a fixed amount of time
+Host Files=A flat file that contains, on each line, a network address followed by the host name it can be referred to as
+  the original way that numbered networks addresses were correlated with words was through host files
+Loopback address=Always points to itself, a way of sending network traffic to yourself, bypasses all network infrastructure, never leaves node
+  IPv4 Loopback address= 127.0.0.1 
+    Almost every hostfilein existance will contain the line '127.0.0.1 localhost' followed by '::1 localhost' where ::1 is the loopback for IPv6
+  some software requires altering the hostfile manually to operate
+  Hostfiles are a popular way for computer viruses to disrupt and redirect users' traffic

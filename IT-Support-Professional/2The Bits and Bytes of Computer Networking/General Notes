@@ -455,3 +455,28 @@ Cellular/Mobile Networking:
 Cellular networks have alot in common with 802.11 networks
 Use specific frequency bands for cellular transmissions
 
+=====================================================================Week 6:
+Troubleshooting:
+Error-detection=The ability for a protocol or program to determine that something went wrong
+Error-recovery=The ability for a protocol or program to attempt to fix it
+Verifying Connectivity:
+ICMP(Internet Control Message Protocol)=Used to communicate issues when transmissions fail to host server/router
+  Type=8 bits=Specifies what type of message is being delivered(destination unreachable, time exceeded)
+  Code=8 bits=Indicates a more specific reason for the message than just the type
+  Checksum=16 bits=
+  Rest of Header=32 bits=optional:
+  Data payload=exists entirely so that the recipient of the message knows which of their transmission caused the error being reported
+Ping=Tool for sending Echo Requests
+  command line: ping www.domain.com
+TraceRoute=A utility that lets you discover the path between two nodes, and gives you information about each hop along the way
+   Starts TTL at 1, then 2, then 3, +1 till destination
+   command line: tracert www.domain.com
+   Other trace tools= mtr: Linux/MacOS, pathping: Windows
+Port Connectivity: 
+Testing Tools= netcat: Linux/MacOs, Test-NetConnection: Windows
+  command line: nc www.google.com 80 #netcat domain port arguments -z flag zero input output mode -v verbose flag
+  nc -z -v google.com 80
+  windows: Test-Netconnection google.com
+  Test-Netconnection google.com -port 80
+
+  

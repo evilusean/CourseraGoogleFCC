@@ -514,3 +514,35 @@ X as a service:
   SaaS(Software as a Service)=A way of licensing the use of software to others while keeping that software centrally hosted and managed
 Cloud Storage=A customer contracts a provider to keep their data secure, accesible, available, backed up
 Cloud storage may actually be less secure than privately held, a la the fappening
+IPv6:
+IPv5=was an experimental protocol that introduced the concept of connections
+IPv4=32bits=4.2 billion address, IPv6=128 bits, Undecillion potential addresses, enough for every atom on earth it's own IP address..
+2 to the power of 128 = 340,282,366,920,938,463,463,374,607,431,768,211,456 potential addresses
+usually written out as 8 groups of 16bits each, 4 hexadecimel numbers each
+2001:0db8 = every IPv6 address that begins with that, has been reserved for documentation and education books and courses
+shortening an IPv6 address: you can remove any leading 0's from a group, 
+any number of consecutive group composed of just 0's can be replaced with ::
+Loopback address= ::1 = 0000:0000:0000:0000:0000:0000:0000:0001
+FF00:: = any IPv6 that begins with that is used for multicasting(addressing all hosts at once)
+FE80:: = any IPv6 that begins with that is used for link-local unicast
+link-local unicast addresses=Allow or local network segment communications and are configured based upon a host's MAC address
+first 64 bits of a IPv6 address is Network ID, second 64 bits is host ID
+IPv6 Headers:
+  Version Field=4 bits=describes what version is in use
+  Traffic Class=8 bits=defines the type of traffic contained within the IP datagram, and allows for different classes of traffic to receive 
+    different priorities
+  Flow Label=20 bits=used in conjunction with the traffic class field for routers to make decisions about the quality of service level for a
+    specific datagram
+  Payload Length=16 bits=defines how long the data payload section of the datagram is
+  Next Header=takes all optional fields and defines what kind of header is after this one(next part of header is optional)
+  Hop Limit=8 bit=Identitical in purpose to the TTL field(time to live)
+  Source Address=128 bits=
+  Destination Address=128 bits=
+  Data Payload=
+IPv4 Mapped Address space=set aside addresses that can be directly correlated to an IPv4 address
+  Any IPV6 that begins with 80 '0's and then begins with 16 '1's remaining 32 bits are the same as the IPv4 address it represents
+  Allows IPv4 addresses to move along IPv6 networks
+IPv6 Tunnels=Tunnel servers on either end of a connection, take IPv6 traffic and encapsulate it in traditional IPv4 datagrams
+IPv6 Tunnel Broker=Companies that provide IPv6 tunneling endpoints for you, so you don't have to introduce any additional equipment to your
+  network
+

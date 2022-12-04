@@ -500,3 +500,17 @@ Loopback address=Always points to itself, a way of sending network traffic to yo
     Almost every hostfilein existance will contain the line '127.0.0.1 localhost' followed by '::1 localhost' where ::1 is the loopback for IPv6
   some software requires altering the hostfile manually to operate
   Hostfiles are a popular way for computer viruses to disrupt and redirect users' traffic
+The Cloud:
+Cloud Computing=A technological approach where computing resources are provisioned in a shareable way, so that many users get what they need
+Hardware virtualization: A single physical machine, called a host could run many individual instances, called guests
+Hypervisor=A piece of software that runs and manages virtual machines, while also offering these guests a virtual operating platform that's
+  indistinguishable from actual hardware
+Public Cloud=A large cluster of machines run by another company
+Private Cloud=Used by a single large corporation and generally physically hosted on its own premises
+Hybrid Cloud=Companies might run things like their most sensitive proprietary tech on a private cloud, while outsourcing less sensitive to public
+X as a service:
+  Infrastructure as a Service(IaaS):Third party company will host network and servers
+  PaaS(Platform as a Service)=A subset of cloud computing where a platform is provided for customers to run their services
+  SaaS(Software as a Service)=A way of licensing the use of software to others while keeping that software centrally hosted and managed
+Cloud Storage=A customer contracts a provider to keep their data secure, accesible, available, backed up
+Cloud storage may actually be less secure than privately held, a la the fappening

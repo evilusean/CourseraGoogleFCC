@@ -56,3 +56,12 @@ Ft=ADt-1+(1-A)Ft-1    F=Forecast D=demand t=time A=Alpha
 Balance how much weight to give to previous demand for future demand
 Averages view of all past demand, puts more weight on more recent data, less weight on older data
 Keep checking accuracy of forecasts, if improving you are going in the right direction. If worse, you suck
+Exponential Smoothing Excel:
+https://www.youtube.com/watch?v=6P-qGU8EYmI
+
+Selecting The Best Forecast:
+First step: look at the graph, see it visually compare forecast to actual demand
+Second Step: Look at data; mean, min, max, standard deviation, etc
+Avoid huge errors, large variance, unbiased
+!Book: Standards and practices or Forecasting - J. Scott Armstrong
+https://repository.upenn.edu/marketing_papers/135/

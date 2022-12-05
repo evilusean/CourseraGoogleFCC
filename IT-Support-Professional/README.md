@@ -19,7 +19,13 @@ https://www.coursera.org/learn/computer-networking?specialization=google-it-supp
 
 Start:18Nov2022
 
+End:05Dec2022
+
+## 3Operating Systems and You: Becoming a Power User
+
+https://www.coursera.org/learn/os-power-user?specialization=google-it-support
+
+Start:06Dec2022
+
 End:
-
-
 

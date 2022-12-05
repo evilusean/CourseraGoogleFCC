@@ -1,0 +1,210 @@
+Operating Systems and You: Becoming a Power User
+by Google
+
+About this Course
+In this course -- through a combination of video lectures, demonstrations, and hands-on practice -- you’ll learn about the main components of an operating system and how to perform critical tasks like managing software and users, and configuring hardware. 
+
+By the end of this course you’ll be able to:
+● navigate the Windows and Linux filesystems using a graphical user interface and command line interpreter
+● set up users, groups, and permissions for account access
+● install, configure, and remove software on the Windows and Linux operating systems
+● configure disk partitions and filesystems
+● understand how system processes work and how to manage them
+● work with system logs and remote connection tools
+● utilize operating system knowledge to troubleshoot common issues in an IT Support Specialist role
+
+
+ More
+Basic Info	
+Course 3 of 5 in the Google IT Support Specialization
+Level	Beginner
+Commitment	8 - 10 hours per week
+Language	
+English, Subtitles: Arabic, French, Portuguese (European), Italian, Portuguese (Brazilian), Vietnamese, German, Russian, Spanish
+Volunteer to translate subtitles for this course
+Hardware Req	You’ll need to complete some of the assessments (e.g., Qwiklabs and plugins) on a desktop or laptop web browser.
+How To Pass	Pass all graded assignments to complete the course.
+User Ratings	
+Average User Rating 4.7
+Syllabus
+WEEK 1
+Navigating the System
+Welcome to the Operating Systems course of the IT Support Professional Certificate! In the first week of this course, we will cover the basics of Windows and Linux operating systems (OS). We will learn about how directories and files work in Windows and Linux OS. You will also learn practical ways to manipulate files and directories in the Windows graphical user interface (GUI), Windows command line interface (CLI), and Linux shell. By the end of this module, you will interact with files and directories and perform basic text manipulation in Windows and Linux OS.
+
+Show less
+32 videos, 10 readings, 2 practice quizzes
+Video: Course Introduction
+Reading: Navigating Coursera
+Reading: Program Surveys
+Reading: How to Use Discussion Forums
+Reading: Get to Know Your Classmates
+Discussion Prompt: Meet and Greet
+Video: Lesson Overview & Practice Tips
+Reading: Supplemental Reading for Windows CLI & Unix Bash
+Video: List Directories in a GUI
+Reading: Supplemental Reading for 'Size' vs 'Size of Disk' in Windows
+Video: Windows: List Directories in CLI
+Video: Linux: List Directories
+Video: Windows: Changing Directories in the GUI
+Video: Windows: Changing Directories in the CLI
+Video: Linux: Changing Directories in Bash
+Video: Windows: Make Directories in the GUI & CLI
+Video: Linux: Make Directories in Bash
+Video: Windows: Command History
+Video: Linux: Command History
+Video: Windows: Copying Files & Directories
+Video: Linux: Copying Files and Directories
+Video: Windows: Moving and Renaming Files, Directories
+Video: Linux: Moving and Renaming Files, Directories
+Video: Windows: Removing Files & Directories
+Video: Linux: Removing Files & Directories
+Discussion Prompt: Your Favorite OS
+Video: Cindy Why OS is Important
+Video: Learner Story: Chelsea
+Practice Quiz: Basic Commands
+Video: Windows: Display File Contents
+Video: Linux: Display File Contents
+Video: Windows: Modifying Text Files
+Reading: Supplemental Reading for Notepad++
+Video: Linux: Modifying Text Files
+Reading: Supplemental Reading for GNU Documentation
+Video: Windows Powershell
+Video: Windows: Searching within Files
+Video: Windows: Searching within Directories
+Video: Linux: Searching within Files
+Video: Windows: Input, Output, and the Pipeline
+Video: Linux: Input, Output and Pipeline
+Video: Windows and Linux Advanced Navigation
+Reading: Supplemental Reading for Windows PowerShell
+Video: Ben First Tech Job
+Discussion Prompt: What did you learn about OS?
+Practice Quiz: File and Text Manipulation
+Reading: Qwiklabs Introduction
+
+Show lessweek 1 material
+Graded: Creating, Modifying, and Removing Files and Folders in Windows
+Graded: Creating, Modifying and Removing Files and Folders in Linux
+WEEK 2
+Users and Permissions
+In the second week of this course, we'll learn about configuring users and permissions in Windows and Linux OS. As an IT Support Specialist, it's important to know how to grant the appropriate permissions to users and groups for both Windows and Linux OS. By the end of this module, you will know how to add, modify, and remove users for a computer and for specific files and folders by using the Windows GUI, Windows CLI, and Linux shell.
+
+16 videos, 4 readings, 1 practice quiz
+Video: Users, Administrators, and Groups, Oh My!
+Video: Windows: View User and Group Information
+Video: Windows: View User and Group Information using CLI
+Video: Linux: Users, Superuser and Beyond
+Video: Windows: Passwords
+Reading: Supplemental Reading for Windows Passwords
+Video: Linux: Passwords
+Video: Windows: Adding and Removing Users
+Video: Linux: Adding and Removing Users
+Video: Mobile Users and Accounts
+Reading: Supplemental Readings for Mobile Users and Accounts
+Video: Ben Life as a CIO
+Video: Windows: File Permissions
+Reading: Supplemental Reading for Windows ACL
+Video: Linux: File Permissions
+Video: Windows: Modifying Permissions
+Video: Linux: Modifying Permissions
+Video: Windows: Special Permissions
+Reading: Supplemental Reading for Special Permissions in Windows
+Video: Linux: SetUID, SetGID, Sticky Bit
+Discussion Prompt: Your File & Folder Permissions
+Practice Quiz: Permissions
+
+Show lessweek 2 material
+Graded: Creating, Modifying, and Removing File and Folder Permissions in Windows
+Graded: Creating, modifying, and removing file and folder permissions in Linux
+Graded: Users, Administrators,Groups and Permissions
+WEEK 3
+Package and Software Management
+In the third week of this course, we'll learn about package and software management in Windows and Linux OS. It's important to know how package installs work and how devices and drivers are managed within these operating systems. We will also learn about different packaging and file compression methods. By the end of this module, you will know how to create, update, and remove software by using the Windows GUI, Windows CLI and Linux shell.
+
+16 videos, 17 readings, 3 practice quizzes
+Video: Module Introduction
+Video: Windows: Software Packages
+Reading: Supplemental Reading for Windows Software Packages
+Video: Linux: Software Packages
+Video: Mobile App Packages
+Reading: Supplemental Reading for Mobile App Packages
+Reading: Supplemental Reading for Updating Mobile Apps
+Reading: Supplemental Reading for Mobile Device Storage
+Video: Windows: Archives
+Reading: Supplemental Reading for 7-Zip and PowerShell Zips
+Video: Linux: Archives
+Reading: Supplemental Reading for the Linux Tar Command
+Video: Windows: Package Dependencies
+Reading: Supplemental reading for Windows Package Dependencies
+Video: Linux: Package Dependencies
+Reading: Supplemental Reading for Linux Package Dependencies
+Practice Quiz: Software Distribution
+Video: Windows: Package Manager
+Reading: Supplemental Reading for Windows Package Managers
+Video: Linux: Package Manager Apt
+Reading: Supplemental Reading for Linux PPAs
+Reading: Supplemental Reading on GIMP
+Practice Quiz: Package Managers
+Video: Windows: Underneath the Hood
+Reading: Windows Setting Panel
+Reading: Supplemental Reading for Windows Installers and Process Monitors
+Video: Linux: Underneath the Hood
+Video: Windows: Devices and Drivers
+Reading: Supplemental Reading Windows Devices and Drivers
+Video: Linux: Devices and Drivers
+Reading: Supplemental reading for Linux Devices and Drivers
+Video: Windows: Operating System Updates
+Reading: Supplemental Reading for Windows Update
+Video: Linux: Operating System Updates
+Reading: Supplemental Reading for Linux Update
+Discussion Prompt: What would you do?
+Practice Quiz: Device Software Management
+
+Show lessweek 3 material
+Graded: Software Packaging and File Archiving on Windows
+Graded: Software Packaging and File Archiving on Linux
+Graded: Package and Software Management
+WEEK 4
+Filesystems
+In the fourth week of this course, we'll learn about how filesystems work for Windows and Linux OS. We'll learn about filesystem types and why they're different for certain OS. We'll learn about disk partitioning and virtual memory and why these are so important for an IT Support Specialist's role. We'll also cover ways mount and unmount filesystems, read disk usage, and repair filesystems. By the end of this module, you will partition and format a disk drive yourself in both Windows and Linux.
+
+Show less
+16 videos, 9 readings, 1 practice quiz
+Video: Module Introduction
+Video: Review of Filesystems
+Reading: Supplemental Reading for FAT32 File System
+Video: Disk Anatomy
+Video: Windows: Disk Partitioning and Formatting a Filesystem
+Reading: Supplemental Reading for Disk Partitioning and Formatting in Windows
+Video: Windows: Mounting and Unmounting a Filesystem
+Video: Linux: Disk Partitioning and Formatting a Filesystem
+Video: Linux: Mounting and Unmounting a Filesystem
+Reading: Supplemental reading Mounting and Unmounting a Filesystem in Linux
+Video: Windows: Swap
+Reading: Supplemental Reading for Windows Paging
+Video: Linux: Swap
+Reading: Supplemental Reading for Linux Swap
+Video: Windows: Files
+Reading: Supplemental Reading on NTFS File System
+Video: Linux: Files
+Video: Windows: Disk Usage
+Reading: Supplemental Reading for Windows Disk Usage
+Video: Linux: Disk Usage
+Reading: Supplemental reading for Linux Disk Usage
+Video: Windows: Filesystem Repair
+Video: Linux: Filesystem Repair
+Reading: Supplemental Reading for Linux Filesystem Repair
+Video: Ben Passion
+Discussion Prompt: Disk Partitioning
+Practice Quiz: Filesystem Types
+
+Show lessweek 4 material
+Graded: Partitioning and Formatting a Disk Drive in Windows
+Graded: Partitioning and Formatting a Disk Drive in Linux
+Graded: Filesystems
+WEEK 5
+Process Management
+In the fifth week of this course, we'll explore process management. As an IT Support Specialist, it is important to use system tools to read and understand process statuses of machines. We will cover ways to start and terminate a process in Windows and Linux. We will also apply troubleshooting tools to solve problems with processes and resources. By the end of this module, you will use Windows and Linux commands to do practical process maintenance.
+
+14 videos, 8 readings, 3 practice quizzes
+Video: Module Introduction
+Video: Programs vs Proce

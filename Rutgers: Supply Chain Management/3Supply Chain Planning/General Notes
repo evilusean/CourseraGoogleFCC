@@ -80,4 +80,5 @@ Level Demand Strategy=Set up for an average inventory over time, build up invent
 Chase Strategy=Ramp up production/produce more as you see an increase in demand
 Peak Demand Strategy=Have capacity for highest demand possible, but most of the time be under
 If you get the forecast right, everything goes much better, less waste, more efficiency
-
+Forbes Article: Why is Sales/Operations planning so hard
+https://www.forbes.com/sites/loracecere/2015/01/21/why-is-sales-and-operations-plannning-so-hard/?sh=5a14bd2a265d

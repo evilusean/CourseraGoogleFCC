@@ -65,3 +65,19 @@ Second Step: Look at data; mean, min, max, standard deviation, etc
 Avoid huge errors, large variance, unbiased
 !Book: Standards and practices or Forecasting - J. Scott Armstrong
 https://repository.upenn.edu/marketing_papers/135/
+
+====================================================================Week 4:
+Supply, Manufacturing, and distribution planning:
+X3 Objectives:
+How much raw materials to buy, how much are you going to make, how are we going to move our product to our customers
+Materials Requirements Planning:
+  Have raw materials to meet production goals set;What to buy, when to buy, how much to buy
+  Break down final product into it's subcomponents, manage each raw material(input), ensuring adequate material is available when going to producti
+Distribution Requirements Plannning:
+  Get them to the customers, setting up warehouses with adequate inventory, Planning transportation
+  set inventory levels at warehouses
+Level Demand Strategy=Set up for an average inventory over time, build up inventory when you don't have much demand, production remains constant
+Chase Strategy=Ramp up production/produce more as you see an increase in demand
+Peak Demand Strategy=Have capacity for highest demand possible, but most of the time be under
+If you get the forecast right, everything goes much better, less waste, more efficiency
+

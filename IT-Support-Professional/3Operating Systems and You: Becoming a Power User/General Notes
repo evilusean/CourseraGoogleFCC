@@ -1,0 +1,42 @@
+====================================================================================Week 1:
+Basic Commands:
+GUI(Graphical User Interface)
+CLI(Command Line Interpreter)= Command(cmd.exe)/PowerShell(powershell.exe) in Windows, 
+  Shell/Bash= Linux Command Line is called a Shell and the language used to interact with it is Bash
+
+List Directories(Paths):
+Files and folders are organized in a hierachial directory tree, main directory that branches off paths
+C:/ = Drive Letter, In Windows, File systems are assigned to drive letters(C:, X:, Y:). Each Drive Letter is a file System
+  Each File System has a root directory which is the parent for every directory on that system
+  C: Drive is default where Windows OS is installed
+\ = Windows Subdirectories are seperated by '\' backslashes
+/ = Linux Subdirectories are seperated by '/' Forwardslashes
+Files can be hidden, such as config files, can be sean using the 'View' dropdown and checking 'Hidden items' box
+  Can Change visibility in the right click 'Properties'
+Properties=Name/FileType/Location/Size/Created, Modified, Accessed Dates/Attributes(Hidden/Read Only)/Security/Details/Previous Versions
+
+Listing Files Using CLI(Windows):
+ls <path>
+ls C:\ #Lists all files on C: drive root folder
+ls C:\Users\Sean\Desktop #lists all files on desktop
+ls -Force C:\ #shows all hidden files on C drive, aren't normally listed
+
+Get-Help(Powershell windows):
+Get-Help ls #shows a brief summary and all potential parameters of ls command
+Get-Help ls -Full #shows more information and full description of parameters
+
+Linux:
+ls --help #Add --help flag to get more information on list command such as summary and potential flag parameters
+man ls #Manual Command; used to show manual pages to get more information on list command such as summary and potential flag parameters
+
+Listing Files(Bash/Linux):
+ls / #lists all directorys under root directory
+ls -l / #-l long flag, shows detailed information(dates/size/file permissions/owner/size) of files in the format of a long list
+ls -a / #-a All flag, shows all files in a directory including hidden files
+Important Directories in Linux:
+  /bin #stores essential binaries/programs
+  /etc #stores important system configuration files
+  /home #personal directory for Users
+  /proc #contains information about currently running processes
+  /usr #For user installed software
+  /var #stores system logs

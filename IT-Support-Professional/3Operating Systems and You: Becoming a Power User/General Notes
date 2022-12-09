@@ -102,3 +102,26 @@ history #shows a list of commands you have typed out recently
   You can scroll through recent commands by pressing 'Up' or 'Down' arrows on keyboard
 Ctrl + R #history shortcut: shows recent commands used, start typing a part of recently used command for autofill
 clear #clears output on screen
+
+Moving/Renaming Files(Windows):
+mv #move item command, allows you to rename a file
+mv old_name.txt new_name.txt #renames old_name.txt to new_name.txt
+mv name.txt C:\USers\Sean\Documents #moves name.txt to \Documents\
+mv *.txt C:\Users\Sean\Documents #moves all .txt files to \Documents\
+
+Moving/Renaming Files(Linux):
+mv #move item command, allows you to rename a file
+mv blue_document.txt ~/Documents #moves blue_document into documents folder
+mv *_document.txt ~/Desktop #moves ALL _document.txt files to desktop
+
+Removing Files and Directories(Windows):
+rm #remove command, does not use recycle bin- gone forever, you can add permissions to files to prevent removing important files
+rm ~\text1.txt #removes text1.txt forever
+rm ~\important_system_file -Force #-Force parameter: use the force to remove files that require special permissions
+rm ~\Misc_folder -Recurse #-Recurse parameter: to remove a file, you must do it recursively
+
+Removing Files and Directories(Linux):
+rm #remove command
+rm text1.txt #removes text1.txt
+rm -r misc_folder #-r Recursive flag: to remove a folder you must do it recursively
+

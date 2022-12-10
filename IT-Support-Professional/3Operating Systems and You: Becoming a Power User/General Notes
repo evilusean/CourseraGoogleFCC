@@ -3,6 +3,11 @@ Basic Commands:
 GUI(Graphical User Interface)
 CLI(Command Line Interpreter)= Command(cmd.exe)/PowerShell(powershell.exe) in Windows, 
   Shell/Bash= Linux Command Line is called a Shell and the language used to interact with it is Bash
+  
+Windows Commands Link:
+https://github.com/evilusean/Pysean/blob/main/CheatSheets/Command/CommandsPowerShell%20Windows
+Linux Commands Link:
+https://github.com/evilusean/Pysean/blob/main/CheatSheets/Command/CommandsShellBash%20Linux
 
 List Directories(Paths):
 Files and folders are organized in a hierachial directory tree, main directory that branches off paths

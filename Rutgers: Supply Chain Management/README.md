@@ -28,4 +28,14 @@ https://www.coursera.org/learn/planning?specialization=supply-chain-management
 
 Start:23Nov2022
 
+End:10Dec2022
+
+# 4Supply Chain Sourcing
+
+https://www.coursera.org/learn/sourcing
+
+Start:11Dec2022
+
 End:
+
+

@@ -1,0 +1,27 @@
+Creating, Modifying, and Removing Files and Folders in Windows
+Introduction
+In Windows, files and folders are managed using an interface program called File Explorer. File Explorer presents files and folders in a hierarchical tree-like structure, and makes it easy to perform tasks like creating, copying, moving and deleting files.
+
+What you'll do
+In this lab, you'll create and modify folders using the File Explorer tool. By the end of this lab, you'll complete the following:
+
+Create a folder and file using the File Explorer tool.
+
+Modify and rename files and folders using the File Explorer tool.
+
+Copy and move files using the File Explorer tool.
+
+Remove and delete files and folders using the File Explorer tool.
+
+Search for specific files and folders using the "Search" menu in the File Explorer tool.
+
+You'll have 60 minutes to complete this lab.
+
+Creating, Modifying and Removing Files and Folders in Linux
+Introduction
+Today, Linux is everywhere. Lots of the server systems behind your favorite websites are Linux-based. As an IT Support Specialist, you'll most likely be interacting with Linux on a regular basis, mainly through the command line. Actions like modifying configuration files and moving or copying them may become part of your everyday tasks. File management in Linux is a super important core skill to have as an IT Support Specialist. So, let's dive in!
+
+Head's up: You'll experience a delay as the labs initially load (particularly for Windows labs). So, please wait a couple of minutes for the labs to load. The grade is calculated when the lab is complete, so be sure to hit "End Lab" when you're done!
+
+You'll have 60 minutes to complete this lab.
+

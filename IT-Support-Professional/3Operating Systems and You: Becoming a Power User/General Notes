@@ -22,111 +22,43 @@ Properties=Name/FileType/Location/Size/Created, Modified, Accessed Dates/Attribu
 Absolute Path=A path that starts from the main directory
 Relative Path=A path that is from your current directory
 
-Listing Files Using CLI(Windows):
-ls <path>
-ls C:\ #Lists all files on C: drive root folder
-ls C:\Users\Sean\Desktop #lists all files on desktop
-ls -Force C:\ #shows all hidden files on C drive, aren't normally listed
+=========================================================================Week 2:
+Users and Groups:
+2 Types of Users:
+  Standard: One who is given access to a machine but has restricted access to do thimgs like install software or change certain settings
+  Administrator: A user that has complete control over a machine
+  Users are put together in groups according to levels of access and permissions to carry out certain tasks
+Computer Management Tool(App search windows): Allows you to view users and groups
+  -Task Scheduler:Allows you to schedule tasks and programs to run at certain times, like auto shutoff
+  -Event Viewer:Where system stores system logs
+  -Shared Folders:Shows folders that are shared between users
+  -Local Users and Groups:Where you can perform group management
+  -Performance:Shows monitoring for resources on machine like CPU and RAM
+  -Device Manager:Where you manage devices like network cards, sound cards, monitors
+  -Storage:Disk Management
+  -Services and Applications:Shows programs and services you have available on computer
+Windows Domain: a network of computers, users, files, etc that are added to a central database
+  You can view users and computers from any machine in domain if administrator
+User Properties:
+  -User Must change password on next logon
+  -User Can not change password
+  -Password never expires
+  -Account is disabled
+  -Account is locked out
+  -Member of: Can see what groups you are part of
+UAC(User Access Control):A feature in windows that prevents unauthorized changes to a system
 
-Get-Help(Powershell windows):
-Get-Help ls #shows a brief summary and all potential parameters of ls command
-Get-Help ls -Full #shows more information and full description of parameters
 
-Linux:
-ls --help #Add --help flag to get more information on list command such as summary and potential flag parameters
-man ls #Manual Command; used to show manual pages to get more information on list command such as summary and potential flag parameters
 
-Listing Files(Bash/Linux):
-ls / #lists all directorys under root directory
-ls -l / #-l long flag, shows detailed information(dates/size/file permissions/owner/size) of files in the format of a long list
-ls -a / #-a All flag, shows all files in a directory including hidden files
-Important Directories in Linux:
-  /bin #stores essential binaries/programs
-  /etc #stores important system configuration files
-  /home #personal directory for Users
-  /proc #contains information about currently running processes
-  /usr #For user installed software
-  /var #stores system logs
 
-Changing Directories(Windows Command '\'):
-pwd #print working directory
-cd #change directory
-cd C:\Users\Sean\Documents #changes directory to absolute path of documents
-cd.. #goes back/up a level in the directory tree
-cd..\Desktop #will take you back to the folder \Sean\ from C:\Users\Sean\Documents to C:\Users\Sean\Desktop
-cd ~ #takes you to the path of your home directory
-cd ~ \Desktop #takes you to home directory and then to /Desktop directory in it
-Tab Completion=Auto Completes the rest of a directory type 'D' press tab and it will go through all that start with 'D'
 
-Creating Directories(Windows):
-mkdir #make directory
-mkdir New_Folder #makes a folder named 'New_Folder' in current working directory
-mkdir New` Folder #windows command can not interpret spaces, use '`' backtick is an escape character in windows, or quotes 'New Folder'
 
-Copying Files and Directories(Windows):
-Ctrl + C #copy hotkey Ctrl + V #Paste hotkey
-cp #copy command
-cp mycoolfile.txt C:\Users\Sean\Desktop #copies mycoolfile.txt to the desktop, requires location as an argument to where it should copy to
-cp *.jpg C:\Users\Sean\Desktop\ #copies all files that end with .jpg to desktop
-  Wildcard=A character that's used to help select files based on a certain pattern '*' asterisk=anything in windows
-cp 'Directory Name' C:\Users\Sean\Desktop\ -Recurse #-Recurse parameter allows you to copy all the contents in a directory
-cp 'Directory Name' C:\Users\Sean\Desktop\ -Recurse -Verbose #-Verbose parameter prints a line for each item being copied
 
-Command History(Windows):
-history #shows a list of commands you have typed out recently
-  You can scroll through recent commands by pressing 'Up' or 'Down' arrows on keyboard
-Ctrl + R #history shortcut: shows recent commands used, start typing a part of recently used command for autofill
-#tab completion #type '#' and part of the recently used command and then press 'Tab' to start cycling through matches
-clear #clears output on screen
 
-Changing Directories(Linux Bash same as Windows '/'):
-pwd #print working directory
-cd #change directory
-cd C:/Home/Sean/Documents #changes directory to absolute path of documents
-cd ../Documents #uses relative path to change to documents folder
-cd ~ /Desktop #takes you to home directory and then to /Desktop directory in it
-cd ../D <tab> #tab completion type 'D' press tab and it will print all that start with 'D'
-Creating Directories(Linux):
-mkdir #make directory
-mkdir New_Folder #makes a folder named 'New_Folder' in current working directory
-mkdir New/ Folder #linux command can not interpret spaces, use '/' forwardslash is an escape character in linux, or quotes 'New Folder'
-Copying Files and Directories(Linux):
-Ctrl + C #copy hotkey Ctrl + V #Paste hotkey
 
-Copying Files and Directories(Linux):
-Ctrl + C #copy hotkey Ctrl + V #Paste hotkey
-cp #copy command
-cp mycoolfile.txt ~/Desktop #copies mycoolfile.txt to the desktop, requires location as an argument to where it should copy to
-cp *.jpg ~/Desktop #copies all files that end with .jpg to desktop
-  Wildcard=A character that's used to help select files based on a certain pattern '*' asterisk=anything in windows
-cp -r 'Directory Name' ~/Desktop #-r Recurse parameter allows you to copy all the contents in a directory
-cp -r -v 'Directory Name' ~/Desktop #-v Verbose parameter prints a line for each item being copied
 
-Command History(Linux):
-history #shows a list of commands you have typed out recently
-  You can scroll through recent commands by pressing 'Up' or 'Down' arrows on keyboard
-Ctrl + R #history shortcut: shows recent commands used, start typing a part of recently used command for autofill
-clear #clears output on screen
 
-Moving/Renaming Files(Windows):
-mv #move item command, allows you to rename a file
-mv old_name.txt new_name.txt #renames old_name.txt to new_name.txt
-mv name.txt C:\USers\Sean\Documents #moves name.txt to \Documents\
-mv *.txt C:\Users\Sean\Documents #moves all .txt files to \Documents\
 
-Moving/Renaming Files(Linux):
-mv #move item command, allows you to rename a file
-mv blue_document.txt ~/Documents #moves blue_document into documents folder
-mv *_document.txt ~/Desktop #moves ALL _document.txt files to desktop
 
-Removing Files and Directories(Windows):
-rm #remove command, does not use recycle bin- gone forever, you can add permissions to files to prevent removing important files
-rm ~\text1.txt #removes text1.txt forever
-rm ~\important_system_file -Force #-Force parameter: use the force to remove files that require special permissions
-rm ~\Misc_folder -Recurse #-Recurse parameter: to remove a file, you must do it recursively
 
-Removing Files and Directories(Linux):
-rm #remove command
-rm text1.txt #removes text1.txt
-rm -r misc_folder #-r Recursive flag: to remove a folder you must do it recursively
 

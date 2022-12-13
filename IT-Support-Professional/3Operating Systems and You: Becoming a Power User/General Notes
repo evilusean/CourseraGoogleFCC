@@ -48,9 +48,11 @@ User Properties:
   -Member of: Can see what groups you are part of
 UAC(User Access Control):A feature in windows that prevents unauthorized changes to a system
 
-Passwords:
+Passwords(Windows):
 Computer Management -> Users/Groups -> UserName -> Right Click -> Properties or Set Password
-
+Adding/Removing Users(Windows):
+Computer Management -> Users/Groups -> Right Click -> New User 
+Computer Management -> Users/Groups -> Right Click  User -> Delete
 
 
 

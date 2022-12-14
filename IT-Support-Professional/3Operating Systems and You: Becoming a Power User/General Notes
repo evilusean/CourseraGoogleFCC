@@ -53,9 +53,23 @@ Computer Management -> Users/Groups -> UserName -> Right Click -> Properties or 
 Adding/Removing Users(Windows):
 Computer Management -> Users/Groups -> Right Click -> New User 
 Computer Management -> Users/Groups -> Right Click  User -> Delete
+Mobile Users/Accounts:
+Initial account you use during setup is called primary account, used to create a user profile
+MDM(Mobile Device Management): Policies for security, how it is configured
 
-
-
+File Permissions(Windows):
+Right Click File/Directory -> Properties -> Security Tab -> Users/Groups + Permissions
+Only give access to certain files and directories to those who need it
+ACL(Access Control Lists)=File and directory permissions are assigned using ACL's 
+DACL(Discretionary Access Control Lists)=Who can use a file and what they are allowed to do with it
+SACL(System Access Control List)=Used to tell Windows that it should use an event log to make a note of every time someone accesses a file/folder
+Permissions:
+  -Read: lets you see that a file exists, and allows you to read its contents. It also lets you read the files and directories within it
+  -Read and Execute: Let you read files and if the file is an executable, you can run it
+  -List Folder Contents: Similar to read and execute(alias)
+  -Write: Allows you to make changes to a file, you can have write permission without read permissions, allows you to create subdirectories
+  -Modify: Umbrella permission that includes read, execute, and write
+  -Full Control: Can do anything they want to the file, Allows you to take ownership of a file and change ACL's
 
 
 

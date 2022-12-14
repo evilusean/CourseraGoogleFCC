@@ -74,6 +74,7 @@ Simple Permissions:
   -Modify(M): Umbrella permission that includes read, execute, and write
   -Full Control(F): Can do anything they want to the file, Allows you to take ownership of a file and change ACL's
 Special Permissions:
+https://technet.microsoft.com/en-us/library/cc732880(v=ws.11).aspx
   -WD: Create Files/Write Data
   -AD: Create Folders/Append Data
   -S:Synchronize

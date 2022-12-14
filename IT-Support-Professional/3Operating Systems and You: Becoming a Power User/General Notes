@@ -47,6 +47,8 @@ User Properties:
   -Account is locked out
   -Member of: Can see what groups you are part of
 UAC(User Access Control):A feature in windows that prevents unauthorized changes to a system
+Guest Users: A Special type of user allowed to use the computer without a password, guest users are disabled by default
+Authenticated Users: A group that does not include guest users
 
 Passwords(Windows):
 Computer Management -> Users/Groups -> UserName -> Right Click -> Properties or Set Password
@@ -59,21 +61,38 @@ MDM(Mobile Device Management): Policies for security, how it is configured
 
 File Permissions(Windows):
 Right Click File/Directory -> Properties -> Security Tab -> Users/Groups + Permissions
+Right Click File/Directory -> Properties -> Security Tab -> Edit File Permissions -> Add ->Type Name -> Verify
 Only give access to certain files and directories to those who need it
 ACL(Access Control Lists)=File and directory permissions are assigned using ACL's 
 DACL(Discretionary Access Control Lists)=Who can use a file and what they are allowed to do with it
 SACL(System Access Control List)=Used to tell Windows that it should use an event log to make a note of every time someone accesses a file/folder
-Permissions:
+Simple Permissions:
   -Read: lets you see that a file exists, and allows you to read its contents. It also lets you read the files and directories within it
   -Read and Execute: Let you read files and if the file is an executable, you can run it
   -List Folder Contents: Similar to read and execute(alias)
-  -Write: Allows you to make changes to a file, you can have write permission without read permissions, allows you to create subdirectories
-  -Modify: Umbrella permission that includes read, execute, and write
-  -Full Control: Can do anything they want to the file, Allows you to take ownership of a file and change ACL's
+  -Write(W): Allows you to make changes to a file, you can have write permission without read permissions, allows you to create subdirectories
+  -Modify(M): Umbrella permission that includes read, execute, and write
+  -Full Control(F): Can do anything they want to the file, Allows you to take ownership of a file and change ACL's
+Special Permissions:
+  -WD: Create Files/Write Data
+  -AD: Create Folders/Append Data
+  -S:Synchronize
+  -(OI) — object inherit;
+  -(CI) — container inherit;
 
 
-
-
+File Permissions(Linux):
+You can have 3 different permissions in Linux, rwx, you can also change numerically 421, add onto eachother 4+2+1=7(full access)
+  use a 3 digit number to assign permissions 754=Owner(rwx, 7),Group(rx, 5),Other Users(4, r)
+  -Read(4, r): Allows someone to read the contents of a file or folder
+  -Write(2, w): Allows someone to write information to a file or folder
+  -Execute(1, x): Allows someone to execute a program
+Linux permissions are seperated into sets of 3; first trio refers to permission of owner of file/second trio=group permissions/third=all other user
+  -Owner: u
+  -Group: g
+  -All other Users: o
+ls -l ~/my_file #shows permissions on a file 
+  -rwxrw-r-- #'-' bits are disabled: rwx(read write execute)=Owner permissions, rw-(read write)=Group permissions, r--(read)=All other users
 
 
 

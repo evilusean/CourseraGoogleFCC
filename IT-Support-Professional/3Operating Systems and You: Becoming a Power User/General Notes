@@ -94,9 +94,9 @@ Linux permissions are seperated into sets of 3; first trio refers to permission 
   -All other Users: o
 ls -l ~/my_file #shows permissions on a file 
   -rwxrw-r-- #'-' bits are disabled: rwx(read write execute)=Owner permissions, rw-(read write)=Group permissions, r--(read)=All other users
-
-
-
+'s' SetUID(SetUserID) = special permission bit that is used to allow a file to be run as the owner of the file
+ sudo chmod g+s <file> #SetGID(SetGroupID) special permission to allow it to to run as a group ID
+'t' stickybit = special permission Allows you to write to a file but not delete
 
 
 

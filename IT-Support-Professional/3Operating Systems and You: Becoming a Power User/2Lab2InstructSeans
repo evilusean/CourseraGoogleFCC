@@ -1,0 +1,19 @@
+Creating, Modifying, and Removing File and Folder Permissions in Windows
+Introduction
+In this lab, you'll learn the foundations of how managing user permissions works on a Windows machine. Using the new Powershell commands you learned, you'll fix up the permissions of some files and folders.
+
+Head's up: You'll experience a delay as the labs initially load (particularly for Windows labs). So, please wait a couple of minutes for the labs to load. The grade is calculated when the lab is complete, so be sure to hit "End Lab" when you're done!
+
+What you'll do
+
+In this lab, you'll create and change folder permissions using the Windows Command Line Interface (CLI), known as Powershell. In this exercise, you'll:
+
+access administrative privileges to use Powershell in Windows.
+
+view file and folder permissions using the GUI and Powershell commands.
+
+modify the permissions for both files and directories by granting and removing specific permissions using ICACLS in Powershell.
+
+modify the permissions for groups using the GUI and Powershell.
+
+You'll have 60 minutes to complete this lab.

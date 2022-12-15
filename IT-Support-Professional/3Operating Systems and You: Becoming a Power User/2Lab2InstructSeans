@@ -17,3 +17,18 @@ modify the permissions for both files and directories by granting and removing s
 modify the permissions for groups using the GUI and Powershell.
 
 You'll have 60 minutes to complete this lab.
+
+======================================================================================
+Creating, modifying, and removing file and folder permissions in Linux
+Introduction
+In this lab, you'll learn the foundations of how managing user permissions work on a Linux machine. Using the new commands you learned in Bash, you'll fix up the permissions of some files and folders.
+
+Head's up: You'll experience a delay as the labs initially load (particularly for Windows labs). So, please wait a couple of minutes for the labs to load. The grade is calculated when the lab is complete, so be sure to hit "End Lab" when you're done!
+
+What you'll do
+Familiarize yourself with the process of changing permissions within a file and folder in Linux
+
+Change the ownership of a specific file and folder
+
+You'll have 60 minutes to complete this lab.
+

@@ -98,5 +98,9 @@ ls -l ~/my_file #shows permissions on a file
  sudo chmod g+s <file> #SetGID(SetGroupID) special permission to allow it to to run as a group ID
 't' stickybit = special permission Allows you to write to a file but not delete
 
+=========================================================================Week 3:
+Software Packages:
+.exe(Windows Executable)=Contains instructions for a computer to execute when they're run
+.msi(Microsoft install package)=Used to guide windows installer in the installation, maintenance and removal of programs from windows
 
 

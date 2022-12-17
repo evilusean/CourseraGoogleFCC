@@ -41,3 +41,9 @@ https://msdn.microsoft.com/en-us/library/windows/desktop/aa374872(v=vs.85).aspx
 
 Windows Special Permissions:
 https://technet.microsoft.com/en-us/library/cc732880(v=ws.11).aspx
+
+Windows Installing Packages:
+Installation Package: https://docs.microsoft.com/en-us/windows/win32/msi/installation-package
+App packager (MakeAppx.exe): https://docs.microsoft.com/en-us/windows/win32/appxpkg/make-appx-package--makeappx-exe-
+Portable Executables: https://docs.microsoft.com/en-us/windows/win32/debug/pe-format
+Self-extractor: https://docs.microsoft.com/en-us/troubleshoot/windows-client/deployment/command-switches-supported-by-self-extractor-package

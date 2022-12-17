@@ -1,0 +1,27 @@
+Lab 2 Commands(Permissions):
+cd ../qwiklab/documents #change directory to /home/qwiklab/documents
+ls -l important_document #lists permissions to important_document
+sudo chmod 700 important_document #chmod command, with the argument 700. The two zeros keep everyone, from having any permissions at all,
+  #and the seven grants all available permissions to the owner
+ls -l important_document #checks to make sure permissions are in place
+cd .. #goes back/up a directory
+ls -ld secret_folder/ #n this directory there's a folder called "secret_folder". View its current permissions using ls,
+  #this time with the -ld flag rather than -l because you're viewing a directory instead of a normal file:
+sudo chmod u+x secret_folder/ #gives owner execute permissions
+sudo chmod g+w secret_folder/ #gives group write permissions
+sudo chmod g-r secret_folder/ #removes read permissions from group
+sudo chmod o-r secret_folder/ #removes read permissions from all other users
+sudo chmod 720 secret_folder/ #all previous commands could of been completed with this one line
+ls -ld taco/ #checks taco
+sudo chown cook /home/qwiklab/taco #changes owner of taco folder to cook
+cd documents/ #change directory to documents
+ls -l not_so_important_document #list long not_so_important document
+sudo chmod u+x not_so_important_document #gives document owner executable permissions
+ls -l not_so_important_document #checks again
+sudo chmod g+w not_so_important_document #gives group write 
+sudo chmod a+r not_so_important_document #use "a+r". This adds read permission to everyone (owner, group, and other).
+sudo chmod 764 not_so_important_document #numerical format to give all neccesary permissions quicker
+ls -l public_document #checks public_document
+sudo chmod a+rwx public_document #gives all read write execute permissions
+ls -l public_document #checks
+sudo chmod 777 public_document #numerical way to give all permissions to everyone

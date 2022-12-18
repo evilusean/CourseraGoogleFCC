@@ -99,8 +99,20 @@ ls -l ~/my_file #shows permissions on a file
 't' stickybit = special permission Allows you to write to a file but not delete
 
 =========================================================================Week 3:
-Software Packages:
+Software Packages(Windows):
 .exe(Windows Executable)=Contains instructions for a computer to execute when they're run
 .msi(Microsoft install package)=Used to guide windows installer in the installation, maintenance and removal of programs from windows
-
+Software Packages(Linux):
+Linux Packages differ by distro
+.rpm(Redhat package manager)
+.deb(Debian/Ubuntu)
+Mobile App Packages:
+on most mobile OS, you can't just download executables, you need to go to a trusted centralized source(google play, app store) and download
+only code 'signed' by the app developer of the app can be uploaded to the app store and after a security review
+Enterprise app management=Allows an organization to distribute a custom mobile app, not available to general public, use enterprise certificate
+MDM(Mobile Device Management): Allows enterprise app management
+Side-Loading=Where you install mobile apps directly, without using an app store
+Mobile apps are standalone sotware packages, so they contain all their dependancies
+Mobile apps are cached, assigned a specific storage location for their data, resetting a mobile app to how it was when it was installed=
+  clearing the cache will remove all changes to the settings, and sign out of any accounts that the app was signed into
 

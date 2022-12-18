@@ -47,3 +47,14 @@ Installation Package: https://docs.microsoft.com/en-us/windows/win32/msi/install
 App packager (MakeAppx.exe): https://docs.microsoft.com/en-us/windows/win32/appxpkg/make-appx-package--makeappx-exe-
 Portable Executables: https://docs.microsoft.com/en-us/windows/win32/debug/pe-format
 Self-extractor: https://docs.microsoft.com/en-us/troubleshoot/windows-client/deployment/command-switches-supported-by-self-extractor-package
+
+Fossbytes “10 Best Google Play Store Alternatives: Websites And Apps” for more information about each Android app store:
+https://fossbytes.com/10-google-play-store-alternatives/
+App Store Review Guidelines - Apple’s comprehensive list of guidelines developers must follow for designing and submitting to Apple App Store. 
+https://developer.apple.com/app-store/review/guidelines/
+Distributing custom apps for business - Apple’s guide to publishing custom apps.
+https://developer.apple.com/business/custom-apps/
+About Android App Bundles - Android developer’s guide to using Android App Bundles to develop and publish apps on Google Play. 
+https://developer.android.com/guide/app-bundle
+Get started with custom app publishing - Google’s guide to publishing custom apps.
+https://developers.google.com/android/work/play/custom-app-api/get-started

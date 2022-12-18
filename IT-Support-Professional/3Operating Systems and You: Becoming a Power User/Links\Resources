@@ -48,6 +48,7 @@ App packager (MakeAppx.exe): https://docs.microsoft.com/en-us/windows/win32/appx
 Portable Executables: https://docs.microsoft.com/en-us/windows/win32/debug/pe-format
 Self-extractor: https://docs.microsoft.com/en-us/troubleshoot/windows-client/deployment/command-switches-supported-by-self-extractor-package
 
+Mobile App Packages Installing:
 Fossbytes “10 Best Google Play Store Alternatives: Websites And Apps” for more information about each Android app store:
 https://fossbytes.com/10-google-play-store-alternatives/
 App Store Review Guidelines - Apple’s comprehensive list of guidelines developers must follow for designing and submitting to Apple App Store. 
@@ -58,3 +59,10 @@ About Android App Bundles - Android developer’s guide to using Android App Bun
 https://developer.android.com/guide/app-bundle
 Get started with custom app publishing - Google’s guide to publishing custom apps.
 https://developers.google.com/android/work/play/custom-app-api/get-started
+Mobile App Packages Updating:
+How to manually update apps on your Apple device:
+https://support.apple.com/en-us/HT202180
+Manage software updates for Apple devices:
+https://support.apple.com/guide/deployment/manage-software-updates-depc4c80847a/web
+How to update the Play Store & apps on Android - Provides step-by-step instructions on multiple options for updating Android apps:
+https://support.google.com/googleplay/answer/113412?hl=en

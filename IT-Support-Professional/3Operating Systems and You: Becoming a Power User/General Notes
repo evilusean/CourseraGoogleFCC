@@ -131,3 +131,14 @@ Archive=Comprised of one or more files that is compressed into a single file
 
 Linux Archive:
 To extract a file using 7zip, use the command 7z and the flag 'e' for extract, and then the file you want to extract 
+
+Windows Package Manager:
+Package Manager=Makes sure that the process of software installation, removal, update and dependancies is easy and automatic as possible
+Chocolatey=A third party package manager for windows, installs windows applications from the command line-Works with SCCM/Puppet
+
+Linux Package Manager:
+APT(Advanced Package Tool)=used to extend functionality of dpkg, finds packages to install, with dependancies, and cleans up packages you dont need
+/etc/apt/sources.list =You can add package repositories to ubuntu here
+PPA(Personal Package Archive)=software repository or uploading source packages to be built and published as an APT repository by launchpad
+
+

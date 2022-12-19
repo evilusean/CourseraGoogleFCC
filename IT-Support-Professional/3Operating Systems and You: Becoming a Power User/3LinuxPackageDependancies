@@ -1,0 +1,64 @@
+Supplemental Reading for Linux Package Dependencies
+
+Linux Package Dependencies:
+In this reading, you will review how to install and manage Debian packages in Linux using the dpkg command. 
+This skill may be helpful to IT Support professionals that work with Linux systems like Debian or Ubuntu. 
+
+The following is a list of terms used in this reading:
+Debian: One of many free Linux operating systems (OSes), used as the foundation for other OSes, like Ubuntu. 
+Linux packages: A compressed software archive file that contains the files needed for a software application. 
+  These files can include binary executables, a software libraries, configuration files, package dependencies, command line utilities, 
+  and/or application(s) with a graphical user interface (GUI). A Linux package can also be an OS update. Linux OS installations normally
+  come with thousands of packages. Common Linux package types include: 
+.deb - Debian packages
+.rpm - Redhat packages
+.tgz - TAR archive file 
+Linux repository: Storage space on a remote server that hosts thousands of Linux packages. Repositories must be added to a Linux system in order
+  for the system to search and download packages from the repository. 
+Stand alone package: A package that does not require any dependencies. All files required to install and run the package on a Linux system are
+  contained inside a single package.
+Package dependency: A package that other Linux packages depend upon to function properly. Often, packages do not include the dependencies
+  required to install the software they contain. Instead, package manifests list the external dependencies needed by the package. 
+Package manager: A tool on Linux systems used for installing, managing, and removing Linux packages. Package managers can also read 
+  package manifests to determine if any dependencies are needed. The package manager then finds and downloads the dependency packages before 
+  installing the packaged software. Several common Linux Package Managers include:
+
+For Debian and Debian-based systems, like Ubuntu:
+dpkg - Debian Package Manager
+APT - Advanced Package Tool, uses dpkg commands
+aptitude - user-friendly package manager 
+
+RedHat and RedHat-based systems, like CentOS: 
+rpm - RedHat Package Manager
+yum - Yellowdog Updater Modified, comes with RedHat
+dnf - Dandified Yum
+
+The dpkg command:
+The Linux dpkg command is used to build, install, manage, and remove packages in Debian or Debian-based systems. 
+
+Syntax:
+The following are a few common dpkg command action parameters, with syntax and uses: 
+To install a package: 
+To update a package saved locally: 
+To remove a package: 
+To purge a package, which removes the package and all files belonging to the package: 
+To get a list of packages installed: 
+To get a list of all files belonging to or associated with a package: 
+To list the contents of a new package: 
+
+When an action parameter is added to the dpkg command, one of the following two commands are run in the background:
+dpkg-deb: A back-end tool for manipulating .deb files. The dpkg-deb tool provides information about .deb files, and can pack and unpack 
+  their contents.
+dpkg-query: A back-end tool for querying .deb files for information.
+
+Additional Debian package managers:
+There are several alternate methods for managing Debian packages. Some have command-line interfaces (CLI) while others have GUIs.
+The alternative options to dpkg include:
+APT (Advanced Package Tool) - A powerful package manager designed to be a front-end for the dpkg command. APT installs and updates dependencies
+  required for proper .deb package installation. 
+Synaptic Package Manager – A popular GTK (GNU Image Manipulation Program ToolKit) widget with a GUI. Provides an array of package management
+  features.
+Ubuntu Software Center – A GTK GUI developed by Ubuntu and integrated into the Ubuntu OS.
+aptitude – A user-friendly front-end for APT, with a menu-driven console and a CLI.
+KPackage – A part of KDE (Kool Desktop Environment) used to install and load packages that do not contain binary content. Non-binary content 
+  includes graphics and scripted extensions. 

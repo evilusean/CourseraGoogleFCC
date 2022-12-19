@@ -116,3 +116,6 @@ Mobile apps are standalone sotware packages, so they contain all their dependanc
 Mobile apps are cached, assigned a specific storage location for their data, resetting a mobile app to how it was when it was installed=
   clearing the cache will remove all changes to the settings, and sign out of any accounts that the app was signed into
 
+Windows Archive:
+Archive=Comprised of one or more files that is compressed into a single file
+.tar .zip .rar vs 7zip

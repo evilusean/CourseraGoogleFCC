@@ -121,6 +121,10 @@ Dependancies=Counting on other pieces of software to make an application work, s
 Dynamic Link Library(DLL)=A way to package a bunch of useful code that someone else wrote, can be shared with other programs vs DLL Hell
 SxS(Side By Side Assemblies)=Shared Libraries are stored in 'C:\Windows\WinSxS' stores library manifests(old versions of libraries)
 
+Package Dependancies(Linux):
+Shared Libraries=Similar to windows DLL's, libararies of code that other programs can use
+Package Managers=Come with the works to make package installation and removal easier, including installing package dependancies
+
 Windows Archive:
 Archive=Comprised of one or more files that is compressed into a single file
 .tar .zip .rar vs 7zip

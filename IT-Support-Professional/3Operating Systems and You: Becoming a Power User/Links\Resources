@@ -104,3 +104,9 @@ Hardware ID Search:
 https://docs.microsoft.com/en-us/windows-hardware/drivers/install/hardware-ids
 Driver Locate:
 https://docs.microsoft.com/en-us/windows-hardware/drivers/install/step-2--a-driver-for-the-device-is-selected
+
+Linux Kernel Updates:
+For more information on updating various distributions of Linux, visit this Linux Foundation article. 
+https://www.linuxfoundation.org/blog/classic-sysadmin-linux-101-updating-your-system/
+For more complete command information for using apt in Ubuntu, visit Ubuntu’s guide here.
+https://manpages.ubuntu.com/manpages/bionic/en/man8/apt.8.html

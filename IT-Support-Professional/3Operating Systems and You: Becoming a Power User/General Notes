@@ -154,3 +154,11 @@ Linux Drivers/Device Mgmt:
 'b' Block devices=Like USB drives, hard drives, and CDROMS transfer blocks of data; a data block is just a unit of data storage
 'null' devices=not all devices need to be physical
 Kernel Module Vs sometimes kernel already has built in support for devices
+
+Windows Updates:
+search updates -> Windows Update Settings -> Advanced Options
+To maintain security, you want to update frequently
+Security Patch=Software meant to fix up a security hole
+common practice to routinely update, process generally requires a restart
+Windows Update Client Service runs in background to download and update 
+You can disable windows updates

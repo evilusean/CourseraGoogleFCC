@@ -141,4 +141,9 @@ APT(Advanced Package Tool)=used to extend functionality of dpkg, finds packages 
 /etc/apt/sources.list =You can add package repositories to ubuntu here
 PPA(Personal Package Archive)=software repository or uploading source packages to be built and published as an APT repository by launchpad
 
+Windows Drivers/Devices:
+Device Manager= Run: devmgmt.msc
+  This PC -> Right Click -> Manage -> Device Manager , right click device -> Uninstal/Update/Properties/Scan For Devices
+Drivers=Used to help hardware devices interact with the Operating System
+Plug and Play=Automatically happens when you plug in a new device-recgonizes and installs appropriate drivers
 

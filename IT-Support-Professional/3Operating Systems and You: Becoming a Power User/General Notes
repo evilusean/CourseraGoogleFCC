@@ -147,3 +147,10 @@ Device Manager= Run: devmgmt.msc
 Drivers=Used to help hardware devices interact with the Operating System
 Plug and Play=Automatically happens when you plug in a new device-recgonizes and installs appropriate drivers
 
+Linux Drivers/Device Mgmt:
+/dev = when a device is plugged into computer a file is created in the /dev directory
+  /dev/sda /dev/sdb= mass storage device, sda detected first, sdb detected second, etc
+'c' Character devices=Like a keyboard or mouse transmit data character by character
+'b' Block devices=Like USB drives, hard drives, and CDROMS transfer blocks of data; a data block is just a unit of data storage
+'null' devices=not all devices need to be physical
+Kernel Module Vs sometimes kernel already has built in support for devices

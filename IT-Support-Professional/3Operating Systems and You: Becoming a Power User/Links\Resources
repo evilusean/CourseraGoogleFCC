@@ -96,3 +96,11 @@ https://msdn.microsoft.com/en-us/library/windows/desktop/aa372837(v=vs.85).aspx
 Orca.exe:
 https://msdn.microsoft.com/en-us/library/windows/desktop/aa370557(v=vs.85).aspx
 
+Windows Plug and Play:
+https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/introduction-to-plug-and-play
+Windows Hardware ID:
+https://docs.microsoft.com/en-us/windows-hardware/drivers/install/step-1--the-new-device-is-identified
+Hardware ID Search:
+https://docs.microsoft.com/en-us/windows-hardware/drivers/install/hardware-ids
+Driver Locate:
+https://docs.microsoft.com/en-us/windows-hardware/drivers/install/step-2--a-driver-for-the-device-is-selected

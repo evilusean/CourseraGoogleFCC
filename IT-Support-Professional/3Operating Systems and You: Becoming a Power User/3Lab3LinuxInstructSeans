@@ -1,0 +1,189 @@
+Software Packaging and File Archiving on Linux
+Introduction
+This lab focuses on installing and removing software in Linux, and working with zipped files. You'll be installing a text editor called Sublime Text, and extracting/un-extracting .tar files. You'll also use apt to install/uninstall programs.
+
+Head's up: You'll experience a delay as the labs initially load (particularly for Windows labs). So, please wait a couple of minutes for the labs to load. The grade is calculated when the lab is complete, so be sure to hit "End Lab" when you're done!
+
+You'll have 60 minutes to complete this lab.
+
+Start the lab
+
+Installing Sublime Text
+First, use dpkg to install a text editor, called Sublime Text. A .deb file is located at "/home/qwiklab/downloads/sublime-text_build-3211_amd64.deb", which you can install using this command:
+
+sudo dpkg -i /home/qwiklab/downloads/sublime-text_build-3211_amd64.deb
+Copied!
+You'll see some errors after this command, but that's okay! The Sublime Text package has some dependencies that aren't installed on your machine yet, and dpkg is just warning you that they need to be installed:
+
+Selecting previously unselected package sublime-text.
+(Reading database ... 36788 files and directories currently installed.)
+Preparing to unpack .../sublime-text_build-3211_amd64.deb ...
+Unpacking sublime-text (3211) ...
+dpkg: dependency problems prevent configuration of sublime-text:
+ sublime-text depends on libgtk-3-0; however:
+  Package libgtk-3-0 is not installed.
+dpkg: error processing package sublime-text (--install):
+ dependency problems - leaving unconfigured
+Processing triggers for mime-support (3.62) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Errors were encountered while processing:
+ sublime-text
+You can remedy this by using apt to fix the missing dependencies, using this command:
+
+sudo apt install -f
+Copied!
+You'll be prompted to confirm your decision to continue with the operation by typing "Y" (for "Yes"), midway through the process.
+
+Now Sublime Text is successfully installed, which you can verify using dpkg:
+
+dpkg -s sublime-text
+Copied!
+Package: sublime-text
+Status: install ok installed
+Priority: optional
+Section: editors
+Installed-Size: 34033
+Maintainer: Sublime HQ Pty Ltd 
+Architecture: amd64
+Version: 3211
+Click Check my progress to verify the objective.
+
+Install Sublime Text
+Extracting an archive
+Next, you will extract a .tar archive. The archive "extract_me.tar" is located in "/home/qwiklab/downloads/". Move to that directory, using this command:
+
+cd /home/qwiklab/downloads
+Copied!
+You can use the Linux tar command to extract it using this command:
+
+sudo tar -xvf extract_me.tar
+Copied!
+The contents of the archive (the file named "great_job") are then extracted:
+
+home/qwiklab/extract_me/
+home/qwiklab/extract_me/great_job
+Click Check my progress to verify the objective.
+
+Extract Archive
+Archiving files
+First, move back to the original directory:
+
+cd ~
+Copied!
+You can also use the tar command to do the reverse operation, creating an archive. There are three files in your /home/qwiklab/documents folder named "Earth", "Mercury", and "Venus". Use tar to archive them into the file "Planets.tar" using this command (one line):
+
+tar -cvf Planets.tar --absolute-names /home/qwiklab/documents/Earth /home/qwiklab/documents/Mercury /home/qwiklab/documents/Venus
+Copied!
+"Planets.tar" will then be added to your current directory, and will contain the three planet files:
+
+/home/qwiklab/documents/Earth
+/home/qwiklab/documents/Mercury
+/home/qwiklab/documents/Venus
+Click Check my progress to verify the objective.
+
+Archive Files
+Installing 7-Zip
+You can also install programs on Linux, using apt too, which handles dependencies for you to simplify the installation process. You can install the program 7-Zip, using apt, with a simple one-line command:
+
+sudo apt install p7zip-full
+Copied!
+When it's finished, 7-Zip will be installed:
+
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  p7zip
+Suggested packages:
+  p7zip-rar
+The following NEW packages will be installed:
+  p7zip p7zip-full
+0 upgraded, 2 newly installed, 0 to remove and 21 not upgraded.
+Need to get 1540 kB of archives.
+After this operation, 5780 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://deb.debian.org/debian buster/main amd64 p7zip amd64 16.02+dfsg-6 [376 kB]
+Get:2 http://deb.debian.org/debian buster/main amd64 p7zip-full amd64 16.02+dfsg-6 [1164 kB]
+Fetched 1540 kB in 0s (8625 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package p7zip.
+(Reading database ... 48397 files and directories currently installed.)
+Preparing to unpack .../p7zip_16.02+dfsg-6_amd64.deb ...
+Unpacking p7zip (16.02+dfsg-6) ...
+Selecting previously unselected package p7zip-full.
+Preparing to unpack .../p7zip-full_16.02+dfsg-6_amd64.deb ...
+Unpacking p7zip-full (16.02+dfsg-6) ...
+Setting up p7zip (16.02+dfsg-6) ...
+Setting up p7zip-full (16.02+dfsg-6) ...
+You'll be prompted to confirm your decision midway through the installation process. Confirm this by typing "Y" (for "Yes"). Then, 7-Zip will be installed:
+
+You can verify the installation using dpkg, with this command:
+
+dpkg -s p7zip-full
+Copied!
+Package: p7zip-full
+Status: install ok installed
+Priority: optional
+Section: utils
+Installed-Size: 4659
+Maintainer: Robert Luberda<robert@debian.org>
+Architecture: amd64
+Source: p7zip
+Version: 16.02+dfsg-6
+Click Check my progress to verify the objective.
+
+Install 7-Zip
+Uninstalling GIMP
+Uninstallation can also be handled by apt by using "remove" instead of "install" as the argument. GIMP, an image-editing program, is already installed on your machine. Uninstall it now, using apt with this command:
+
+sudo apt remove gimp
+Copied!
+You'll be prompted to confirm your decision midway through the uninstallation process. Confirm this by typing "Y" (for "Yes"). Then, GIMP will be uninstalled:
+
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  fonts-droid-fallback fonts-noto-mono ghostscript gimp-data gsfonts
+  i965-va-driver intel-media-va-driver libaa1 libamd2 libaom0 libasound2
+  libasound2-data libasyncns0 libavcodec58 libavformat58 libavutil56
+  libbabl-0.1-0 libblas3 libcaca0 libcamd2 libccolamd2 libcholmod3
+  libchromaprint1 libcodec2-0.8.1 libcolamd2 libcrystalhd3
+  libcupsfilters1 libcupsimage2 libde265-0 libexiv2-14 libflac8
+  libgegl-0.4-0 libgegl-common libgexiv2-2 libgfortran5 libgimp2.0
+  libgme0 libgs9 libgs9-common libgsm1 libheif1 libigdgmm5 libijs-0.35
+  libilmbase23 libjbig2dec0 liblapack3 libmetis5 libmng1 libmp3lame0
+  libmpg123-0 libmypaint-1.3-0 libmypaint-common libnuma1 libogg0
+  libopenexr23 libopenjp2-7 libopenmpt0 libopus0 libpaper-utils libpaper1
+  libpoppler-glib8 libpoppler82 libpulse0 libraw19 libsdl1.2debian
+  libshine3 libslang2 libsnappy1v5 libsndfile1 libsoxr0 libspeex1
+  libssh-gcrypt-4 libsuitesparseconfig5 libswresample3 libswscale5
+  libtheora0 libtwolame0 libumfpack5 libva-drm2 libva-x11-2 libva2
+  libvdpau-va-gl1 libvdpau1 libvorbis0a libvorbisenc2 libvorbisfile3
+  libvpx5 libwavpack1 libwebpdemux2 libwebpmux3 libwmf0.2-7 libx264-155
+  libx265-165 libxcb-xfixes0 libxvidcore4 libzvbi-common libzvbi0
+  mesa-va-drivers mesa-vdpau-drivers poppler-data va-driver-all
+  vdpau-driver-all
+Use 'sudo apt autoremove' to remove them.
+The following packages will be REMOVED:
+  gimp
+0 upgraded, 0 newly installed, 1 to remove and 21 not upgraded.
+After this operation, 19.5 MB disk space will be freed.
+Do you want to continue? [Y/n] y
+(Reading database ... 48496 files and directories currently installed.)
+Removing gimp (2.10.8-2) ...
+Processing triggers for mime-support (3.62) ...
+Processing triggers for desktop-file-utils (0.23-4) ...
+You can verify this using dpkg (like before) with this command:
+
+dpkg -s gimp
+Copied!
+dpkg-query: package 'gimp' is not installed and no information is available
+Use dpkg --info (= dpkg-deb --info) to examine archive files.
+Click Check my progress to verify the objective.
+
+Uninstall GIMP
+Conclusion
+Congrats! You've successfully installed and uninstalled programs on Linux, and archived and unarchived .tar files.
+
+End your lab

@@ -162,3 +162,16 @@ Security Patch=Software meant to fix up a security hole
 common practice to routinely update, process generally requires a restart
 Windows Update Client Service runs in background to download and update 
 You can disable windows updates
+
+====================================================================================Week 4:
+File Systems/Partitioning/Formatting:
+File System=Used to keep track of files and file storage on a disk
+  NTFS(Windows)/ext4(Linux)/FAT32(Mac Windows Linux)=4GB max filesize/32GB Max FileSystem
+Partition=A storage disk can be broken down, a partition is a piece of the disk that you can manage
+  You can have different File Systems(Linux+Windows) on different partitions on same physical disk
+Partition Table=Tells the OS how the disk is partitioned
+  MBR(Master Boot Record)Windows=Older Standard, 2TB Max Volume Size, 4 primary partitions max, with extended partitions
+  GPT(GUID Partition Table)=2TB or greater volume size, one type partition, unlimited partitions
+Windows Disk Management Utility=Used for partitioning disks/Formatting USBs
+  This PC -> Right Click -> Manage -> Storage -> Disk Management Console
+Diskpart(Windows)=Terminal based tool, used for managing disks/usbs from the command line

@@ -110,3 +110,7 @@ For more information on updating various distributions of Linux, visit this Linu
 https://www.linuxfoundation.org/blog/classic-sysadmin-linux-101-updating-your-system/
 For more complete command information for using apt in Ubuntu, visit Ubuntu’s guide here.
 https://manpages.ubuntu.com/manpages/bionic/en/man8/apt.8.html
+
+FAT32 Filesystem(Mac Linux Windows):
+https://support.microsoft.com/en-us/help/154997/description-of-the-fat32-file-system
+

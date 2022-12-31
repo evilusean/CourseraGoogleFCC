@@ -116,3 +116,6 @@ https://support.microsoft.com/en-us/help/154997/description-of-the-fat32-file-sy
 
 DiskPart(Windows)Command Line Formatting/Partitioning CheatSheet:
 https://drive.google.com/file/d/1qDFyYB5uYLranPk9pZBz0heq0B5hmroH/view
+
+Swap Space(Linux):
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/ch-swapspace

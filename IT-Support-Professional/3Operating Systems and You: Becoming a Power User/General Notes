@@ -184,3 +184,12 @@ Parted Tool(Linux)=Supports both MBR and GPT, x2 modes
 Use sudo mount to mount drive to a directory, sudo umount to unmount a drive
 /etc/fstab #file that allows you to automatically mount files on system boot; contains unique device ID's, mount points, filesystems, +more
   UUID=Universal Unique ID
+
+Swap Space(Windows):
+Virtual Memory=How our OS provides the physical memory available in our computer (like RAM) to the applications that run on the computer
+  Dedicates a portion of the harddrive for 'pages' of data, most frequently used data get's 'evicted' to ram for speed/ease of access
+  Windows uses 'Memory Manager' for virtual memory management. Saved to 'pagefile.sys'on root. 
+  Can change size, location, nuber of page files through 'System Properties'
+  Control Panel -> System and Security -> System -> Advanced System Settings -> Advanced Tab -> Performance Settings -> Advanced Tab -> Virtual Mem
+
+  

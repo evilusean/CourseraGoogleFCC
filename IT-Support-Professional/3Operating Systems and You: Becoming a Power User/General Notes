@@ -164,7 +164,7 @@ Windows Update Client Service runs in background to download and update
 You can disable windows updates
 
 ====================================================================================Week 4:
-File Systems/Partitioning/Formatting:
+File Systems/Partitioning/Formatting(Windows):
 File System=Used to keep track of files and file storage on a disk
   NTFS(Windows)/ext4(Linux)/FAT32(Mac Windows Linux)=4GB max filesize/32GB Max FileSystem
 Partition=A storage disk can be broken down, a partition is a piece of the disk that you can manage
@@ -175,3 +175,12 @@ Partition Table=Tells the OS how the disk is partitioned
 Windows Disk Management Utility=Used for partitioning disks/Formatting USBs
   This PC -> Right Click -> Manage -> Storage -> Disk Management Console
 Diskpart(Windows)=Terminal based tool, used for managing disks/usbs from the command line
+Mounting=Making something accessible to the computer, like a filesystem or harddisk
+
+Formatted/Partitioning Disks(Linux):
+Parted Tool(Linux)=Supports both MBR and GPT, x2 modes
+  Interactive Mode(Parted):Launched into a new shell
+  Command Line Mode(Parted):Run through commands in same shell
+Use sudo mount to mount drive to a directory, sudo umount to unmount a drive
+/etc/fstab #file that allows you to automatically mount files on system boot; contains unique device ID's, mount points, filesystems, +more
+  UUID=Universal Unique ID

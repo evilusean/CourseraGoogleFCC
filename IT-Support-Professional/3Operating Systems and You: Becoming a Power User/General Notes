@@ -177,7 +177,7 @@ Windows Disk Management Utility=Used for partitioning disks/Formatting USBs
 Diskpart(Windows)=Terminal based tool, used for managing disks/usbs from the command line
 Mounting=Making something accessible to the computer, like a filesystem or harddisk
 
-Formatted/Partitioning Disks(Linux):
+Formatting/Partitioning Disks(Linux):
 Parted Tool(Linux)=Supports both MBR and GPT, x2 modes
   Interactive Mode(Parted):Launched into a new shell
   Command Line Mode(Parted):Run through commands in same shell
@@ -191,5 +191,29 @@ Virtual Memory=How our OS provides the physical memory available in our computer
   Windows uses 'Memory Manager' for virtual memory management. Saved to 'pagefile.sys'on root. 
   Can change size, location, nuber of page files through 'System Properties'
   Control Panel -> System and Security -> System -> Advanced System Settings -> Advanced Tab -> Performance Settings -> Advanced Tab -> Virtual Mem
+
+Windows Files:
+File Data=Actual Contents of File
+File Metadata=Everything else; size, location, owner, permissions, etc
+MFT(Master File Table)=For Windows NTFS file systems, every file has at least one entry on MFT
+  File Record Number=Index of files entry into MFT
+  Shortcut's are just another file, entered into MFT
+  Symbolic Links=Like shortcuts but at the filesystem level, an entry is created in MFT that points to another file
+  Hard Link=An entry is added to the MFT that points to the linked file record number, you can change name of file and it still points to it
+
+Linux Files:
+inode=In linux metadata and data organized in an inode, stored in an inode table
+Softlink=Like Symbolic link in Windows, point to another file, works like a shortcut
+Hardlink=Like HardLinks in Windows, Links to an inode on an inode table, points to a physical location on disk
+
+Disk Usage(Windows):
+Computer Management Utility -> Disk Management -> Right click on partition -> properties -> General tab
+  Can view used and available space on disk, 
+  disk cleanup(cleanmgr.exe) can try to clean disk to free up space-deletes temp files, compresses rarely used files, empties recycle bin
+  Disk Defragmentation=Take all files stored on a disk and reorganize them into neighboring locations, automatically done on a schedule
+  start menu search -> disk defragmenter 
+  Trim=For solid state disks to reclaim unused portions of the disk
+
+
 
   

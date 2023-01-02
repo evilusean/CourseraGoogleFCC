@@ -214,6 +214,11 @@ Computer Management Utility -> Disk Management -> Right click on partition -> pr
   start menu search -> disk defragmenter 
   Trim=For solid state disks to reclaim unused portions of the disk
 
+FileSystem Repair(Windows):
+Data Buffer=A region of RAM that's used to temporarily store data while it's being moved around
+NTFS Log=Logs changes to metadata of files, creates a history of actions taken, can look at log to ensure data is consistent
+Self-Healing=Automatically makes changes for data corruption problems
+
 
 
   

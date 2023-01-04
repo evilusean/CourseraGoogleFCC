@@ -1,0 +1,131 @@
+Partitioning and Formatting a Disk Drive in Windows
+
+Introduction
+In this lab, you'll learn how to partition and format a disk drive in Windows. Knowing how to do this is a critical skill to have as an IT Support Specialist. Partitions are important because a file system can't function without one. When you acquire a new disk drive, at least one partition is required in order to be able to write files to the file system. Different partitions can then have different file formats, depending on their purpose. For example, a disk partition that acts as a swap for your main memory may have a different file format than the default user-facing file systems. Partitions, like those used for system recovery, may also have different file formats. This shows you just how important this skill is to every IT Support Specialist out there.
+
+Head's up: You'll experience a delay as the labs initially load (particularly for Windows labs). So, please wait a couple of minutes for the labs to load. The grade is calculated when the lab is complete, so be sure to hit "End Lab" when you're done!
+
+You'll have 60 minutes to complete this lab.
+
+What you'll do
+You'll learn how to partition a disk drive into one or more partitions. You'll also learn how to format each of those partitions to a different file format. Your main learning objective for this lab is to practice the partitioning and formatting commands you'll find in this lab in the Windows VM.
+
+Start the lab
+You'll need to start the lab before you can access the materials. To do this, click the green "Start Lab" button at the top of the screen. If you use a screen reader, please see the instructions below, in the section "Virtual Machine instructions for screen reader users". Otherwise, proceed to the next steps to open the Windows VM.
+
+An overview of disk partitions on Windows
+On Windows systems, a common practice is to use one primary partition that contains the operating system, applications, and user data. The drive letter C: is mostly used to identify this partition. Other partitions are created on the hard disk for specialized functions, like storing data of a specific type. It's also common practice to assign partition letter names in order, creating disk partition D:, E:, F:, and so on.
+
+In this lab, you'll see how this is done by partitioning an extra disk attached to the system into two partitions of 1GB and 9GB each.
+
+Partitioning a disk using control panel
+Windows provides tools for disk management through the GUI. Among many other administrative tasks, the Control Panel in Windows also enables users to manage storage devices attached to the system.
+
+Go ahead and open Control Panel by clicking on the Start button and selecting Control Panel.
+
+Screenshot of the Windows Start Menu.
+
+While in Control Panel, navigate to System and Security, then Administrative Tools.
+
+Screenshot of Windows Control Panel, with the cursor highlighting System and Security settings option.
+
+Screenshot of the System and Security menu of Windows Control panel. Administrative Tools menu is being highlighted by the cursor.
+
+In the Administrative Tools window, double click on Computer Management.
+
+Screenshot of the Administrative Tools folder within the Windows Control Panel. The cursor is highlighting the "Computer Management" tool.
+
+Screenshot of the Computer Management tools folder. Within the Computer Management folder, there are also "system tools" , "storage", and "services and applications".
+
+From here, you can manage different services in your Windows system, including storage, task manager, etc. Since we're interested in managing disks, on the left panel, under Storage, select Disk Management.
+
+Screenshot of Computer Management tools with "Disk Management" tool selected in the left panel. In the center panel, there is a list showing disk drives and their status.
+
+You'll notice that your system has access to two disks, one of which contains unallocated space, and is labeled "Offline". You'll create partitions on this disk.
+
+Note: Throughout this lab, please ignore the 100 MB partitions named "EFI System Partition". Those are used to load the operating system during system boot up.
+
+To enable partitioning, the disk will first need to be mounted on the system. Right click on the left part of the disk and select Online.
+
+Screenshot of Computer Management tools with "Disk Management" tool selected in the left panel. In the center panel, there is a list showing disk drives and their status (Disk Drives listed include (C:), Disk 0 Partition 2, and Disk 1 partition 2). The cursor has highlighted Disk 1 and opened the right-click / context menu and is highlighting the "Online" option from the menu.
+
+The disk will be mounted and automatically assigned the letter D:\. You'll further divide this disk into two partitions.
+
+Screenshot of Computer Management tools with "Disk Management" tool selected in the left panel. In the center panel, there is a list showing disk drives and their status. The list now also includes (D:).
+
+Since the space is already allocated to the disk D:\, you'll need to first shrink it before a new partition can be created. Right click on the disk and select Shrink Volume.
+
+Screenshot of Computer Management tools with "Disk Management" tool selected in the left panel. In the center panel, there is a list showing disk drives and their status. In the bottom center panel, Disk 1 - (D:) has been selected by the cursor. The right-click / context menu is open, with the "Shrink Volume" option highlighted by the cursor.
+
+Control Panel will present you with a dialogue where you'll enter the size to shrink the disk. Enter 20,480MB to partition the disk into two partitions of 30GB and 20GB each. Click Shrink.
+
+Screenshot of the dialog box that opens after selecting "Shrink Volume" in Disk Management settings. Dialog box includes options to add the total size before the shrink, size of available shrink space, the amount of space to shrink, and the total size after shrink (all in MB). There are also button options, "Shrink" or "Cancel".
+
+The disk will be shrunk, and the additional 20GB space will be shown as unallocated.
+
+Screenshot of Disk Management tool showing disks and associated status. Disk 1 has now been split between (D:) with 20 GB and 30 GB of unallocated space.
+
+On this unallocated space, you'll create a new partition of 20GB in size. Right click on it and select New Simple Volume.
+
+Screenshot of Disk Management tool showing disks and associated status. Disk 1 has now been split between (D:) with 20 GB and 30 GB of unallocated space. The right-click / context menu has been opened for the unallocated space, with the option "New Simple Volume..." highlighted by the cursor.
+
+Control Panel will present you with a partition creation dialogue. Click Next.
+
+Screenshot of the New Simple Volume Wizard dialog box.
+
+A size specification dialogue will be presented, where you'll enter the size of the partition you want to create. Create a partition that takes up all the remaining space by accepting the default value in this dialogue. Then, click Next.
+
+Screenshot of the New Simple Volume Wizard dialog box, prompting user to specify volume size that is between the maximum and minimum amount.
+
+In the next section of the wizard, ensure the drive letter is set to E. Click Next.
+
+Screenshot of the New Simple Volume Wizard dialog box, prompting the user to assign drive letter or path.
+
+In the next section of the wizard, you'll select the file format that the partition should be made up of. You'll also need to provide the label of the partition. You can provide any name you'd like, or use the default name. Leave the default partition selected, and click Next.
+
+Screenshot of the New Simple Volume Wizard dialog box, prompting the user to format the partition (choosing whether to format, and if so, what settings the user wants to use).
+
+The last section of the wizard will be presented. Ensure the Drive letter or path is set to "E:", then click Finish.
+
+Screenshot of the New Simple Volume Wizard in the final stage -- the wizard dialog box is confirming all of the new settings. User then has the option to go back to a previous page, Finish, or Cancel.
+
+The disk partitioning will be carried out, and the resulting disk configuration will be updated. The second disk now consists of two partitions: D: and E: of 30GB and 20GB, respectively.
+
+Screenshot of Disk Management tool showing disks and associated status. Disk 1 has now been split between (D:) with 20 GB and (E:) with 30 GB.
+
+Click Check my progress to verify the objective.
+
+Split drive
+Formatting a partition
+Next, you'll format a partition to a different file format.
+
+Caution!
+Formatting a partition is destructive, and will erase all data on the partition. Not good! Remember to always backup your data before modifying partitions on a live system.
+
+To format the partition E: to a different file format, right click on it, and select Format.
+
+Screenshot of Disk Management tool showing disks and associated status. Disk 1 has now been split between (D:) with 20 GB and (E:) with 30 GB. The right-click / context menu is open on the (E:) drive with the "Format" option highlighted by the cursor.
+
+Control Panel will present you with a file system formatting dialogue. In the file format drop down list, select FAT32, then click OK.
+
+Screenshot of the Format E: dialog box. Options/settings include Volume Label, File system, and allocation unit size.
+
+Screenshot of the Format E: dialog box. Options/settings include Volume Label, File system, and allocation unit size. Volume label is set to E:; File system is set to FAT32; allocation unit size is set to Default. The "Perform a quick format" checkbox is selected.
+
+A confirmation alert with a warning will be presented. To proceed with the formatting, click OK.
+
+Screenshot of confirmation alert that reads: "Formatting this volume will erase all data on it. Back up any data you want to keep before formatting. Do you want to continue?".
+
+The partition will be formatted to the selected file system type, and the final disk configuration will be shown.
+
+Screenshot of Disk Management tool showing all existing drives and partitions.
+
+That's it! You've successfully partitioned and formatted a disk in a Windows system.
+
+Click Check my progress to verify the objective.
+
+Reformat partition
+Conclusion
+In this lab, you've gone through the process of creating partitions and formatting them to specific file systems on a Windows system. Great work! The skills you've gained here are a crucial part of your IT Support Specialist toolbox.
+
+End your lab

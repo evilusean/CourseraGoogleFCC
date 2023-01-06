@@ -219,6 +219,9 @@ Data Buffer=A region of RAM that's used to temporarily store data while it's bei
 NTFS Log=Logs changes to metadata of files, creates a history of actions taken, can look at log to ensure data is consistent
 Self-Healing=Automatically makes changes for data corruption problems
 
+====================================================================================Week 5:
+Processes:
+Process=A program that is running
+Process ID=A unique ID to identify each process being run
+Daemon Process=Background Process=Run in the background
 
-
-  

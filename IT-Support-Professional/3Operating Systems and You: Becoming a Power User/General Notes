@@ -225,3 +225,16 @@ Process=A program that is running
 Process ID=A unique ID to identify each process being run
 Daemon Process=Background Process=Run in the background
 
+Processes (Windows):
+smss.exe(Session Manager SubSystem)= After windows boots, first program to run after kernel, initializes other programs
+  winlogon.exe=Starts Login Process
+  csrss.exe(Client System Runtime Subsystem)=Handles running windows GUI and command line
+taskkill utility=using PID(process ID) can find and halt a running process
+  taskkill /pid 5856 #kills process 5856(notepad)
+  TaskKill Documentation:
+  https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/taskkill
+
+Processes(Linux):
+In Linux Every process you launch has a parent-child relationship, every process you launch comes from another process
+When you start up your computer, the kernel creates a process called init which has a PID(Process ID) of 1
+Once a process terminates, all resources are returned to kernel for further use

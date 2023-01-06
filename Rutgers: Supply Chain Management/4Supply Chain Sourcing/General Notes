@@ -101,4 +101,7 @@ Multiple Suppliers=Complexity; harder to manage multiple suppliers
 Sourcing Best Practices:
 Supplier Evaluation: How to pick the best suppliers?
 ScoreCarding=A continuously updated file(electronic) where you track the supplier against specific metrics(need times, quality, prices, etc)
-
+Procure To Pay:
+IT solutions to improve efficiency
+Automating steps that had previously been done by hand, finding a supplier -> right item -> Catalogue -> purchase order -> receipt -> invoice
+Reverse Auction=Allow suppliers to bid for lower prices, multiple rounds for lowest price

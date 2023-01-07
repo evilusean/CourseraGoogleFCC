@@ -141,3 +141,29 @@ https://www.ibm.com/docs/en/aix/7.2?topic=f-fsck-command
 
 TaskKill Documentation(Windows):
 https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/taskkill
+
+Get-Process Documentation(Windows):
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-process?view=powershell-5.1
+
+Processes Documentation(Linux):
+http://man7.org/linux/man-pages/man1/ps.1.html
+
+Signals(Windows) Documentation:
+https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/signal
+
+Process Explorer(Windows) Documentation:
+https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer
+
+Mobile App Management:
+Switching apps in iOS:
+https://support.apple.com/HT202070
+How to force an app to close in iOS:
+https://support.apple.com/HT201330
+Find, open & close apps in Android:
+https://support.google.com/pixelphone/answer/2781964
+Android processes and application Lifecycle:
+https://developer.android.com/guide/components/activities/process-lifecycle
+iOS - Battery and performance for iOS:
+https://support.apple.com/HT208387
+Fix battery drain problems for Android:
+https://support.google.com/pixelphone/answer/6090599

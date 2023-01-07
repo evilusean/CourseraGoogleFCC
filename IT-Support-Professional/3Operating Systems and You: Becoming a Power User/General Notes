@@ -238,3 +238,34 @@ Processes(Linux):
 In Linux Every process you launch has a parent-child relationship, every process you launch comes from another process
 When you start up your computer, the kernel creates a process called init which has a PID(Process ID) of 1
 Once a process terminates, all resources are returned to kernel for further use
+
+Reading A Process(Windows):
+taskmgr.exe=Ctrl+Alt+Del=Ctrl+Shift+Esc=Task Manager=Tells you what processes are running/using what resources
+  To get PID#(Process ID) go to details tab in task manger or cmdlet 'tasklist' in cmd, or 'Get-Process' in powershell
+Signal=A way to tell a process that something's just happened
+  SIGINT(Signal Interrupt)=CTRL+C=Interrupts a Process that is currently running
+Procexp.exe=Process Explorer=A utility Microsoft created to let IT support specialists, and system admins to look at running processes
+  Process Explorer does not come built in to windows, can be downloaded from microsoft
+  CTRL+F=Search in Process explorer
+  Kill Process, Kill Process Tree, Restart, Suspend-Resume
+
+Reading a Process(Linux):
+ps #command that shows all currently running processes with PID(Process ID's)
+  PID=Process ID, TTY=Terminal associated with process, STAT=Process Status(R=Running, T=Stopped), Time=Total CPU Time, Command=Command Name
+ps -ef #-e flag, get's all process even those being run by other users, -f flag=Full, get's full details
+  UID=User ID, PID, PPID=Parent ID, C=Number of Children Process, STIME=StartTime, TTY, TIME, CMD
+Everything in Linux is a file, including processes, to view the file that corrspond with processes, check the '/proc' directory
+Signals=Names Starting with SIG=
+  SIGTERM=Kill Command, terminates a process
+  SIGKILL=Kills a command, without time to cleanup
+  SIGTSTOP=terminal stop Signal that pauses a process, puts it in a suspended state
+  SIGCONT=Signal Continue, continues a process that has been suspended
+
+Processes(Mobile):
+On mobile, you can't see which processes are running, being ran by OS.
+IOS Appswitcher=Allows you to see which processes are currently running on IOS or Android on background(swipe up closes)
+Processes running in background are suspended(Paused) until brought to foreground, 
+Processes That run in background can use battery/consume resources 
+Did you try turning it off and on again? 
+IOS=Settings -> Battery -> Battery Health = Allows you to see which apps are using the most battery
+Android=Settings -> Battery -> More -> Battery Usage = ^

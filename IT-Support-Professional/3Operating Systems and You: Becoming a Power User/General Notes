@@ -269,3 +269,16 @@ Processes That run in background can use battery/consume resources
 Did you try turning it off and on again? 
 IOS=Settings -> Battery -> Battery Health = Allows you to see which apps are using the most battery
 Android=Settings -> Battery -> More -> Battery Usage = ^
+
+Resource Monitoring(Windows):
+Resource Monitoring Tool
+  Start Menu -> Search Resource Monitoring Tool
+    Right Click Process -> Right CLick -> Properties -> Performance Graph
+Get-Process(Command Line/Powershell)
+  NPM(K)=Non Process Memory Kilobytes, PM(K), WS(K), CPU(s), Id, ProcessName
+
+Resource Monitoring(Linux):
+top #top command shows processes using most resources
+  PID, User, PR, NI, Virt, RES, %CPU, %MEM, TIME+, COMMAND
+uptime #shows information about current time, how long system running, how many users logged on, and load average of machine
+lsof #lists open files, and what processes are using them

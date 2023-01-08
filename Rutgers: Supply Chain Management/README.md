@@ -36,12 +36,12 @@ https://www.coursera.org/learn/sourcing
 
 Start:11Dec2022
 
-End:08Nov2022
+End:08Jan2022
 
 # 5Supply Chain Management Strategy
 
 https://www.coursera.org/learn/supply-chain-management-strategy
 
-Start:09Nov2022
+Start:09Jan2022
 
 End:

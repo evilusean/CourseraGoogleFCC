@@ -282,3 +282,24 @@ top #top command shows processes using most resources
   PID, User, PR, NI, Virt, RES, %CPU, %MEM, TIME+, COMMAND
 uptime #shows information about current time, how long system running, how many users logged on, and load average of machine
 lsof #lists open files, and what processes are using them
+
+====================================================================================Week 6:
+Remote Access:
+Remote Connection=Allows us to manage multiple machines from anywhere in the world
+SSH(Secure SHell)=A protocol implemented by other programs to securely access one computer from another
+  SSH Server=Software on remote machine running as a background program
+  SSH Client=Connects to server, requires account on PC, host name/IP Address
+2 Keys: Public(Locks) + Private(Unlocks)
+VPN(Virtual Private Network):Also allows you to connect to a remote private network
+PuTTY(Windows)=A free, open source software that you can use to make remote connections through several network protocols, including SSH
+  To connect; you need Host Name/IP Address of computer you want to connect to, Port(22 Default), Connection Type(SSH) 
+  PLINK=PuTTY Link:can be used to make remote SSH connections, 
+  pscp.exe(PuTTY Secure Copy Client)=Allows you to copy files on windows to another computer on the same network
+RDP(Remote Desktop Protocol, Windows to Windows Connections):Provides a GUI to a remote computer, needs to be enabled on server PC
+  Start Menu -> This PC -> Properties -> Remote Settings ->Remote Desktop -> Allow Connections
+MSTSC.exe(Microsoft Terminal Services Client)=Used for remote connections
+SCP(Secure Copy)=A command you can use in Linux to copy files between computers on a network, uses SSH
+Shared Folders(Windows)=Allows you to share a folder with multiple people
+  Right click on folder you want to share -> Share With -> Select Users,
+  This PC -> Computer Tab -> Map Network Drive
+  

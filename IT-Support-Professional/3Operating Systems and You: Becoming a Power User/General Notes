@@ -306,3 +306,23 @@ Shared Folders(Windows)=Allows you to share a folder with multiple people
 Virtual Machines:
 Virtual Instance=A single Virtual Machine
 Virtual Box=A program for setting up Virtual Machines
+
+Logging(Windows):
+Log=Systems Diary, Records events that happen on your computer-everything, system shutdown/startup/driver load/log ons/etc
+Logging can be customized, to monitor any specific field you want
+eventvwr.msc=Event Viewer(Windows)=Events logged stored here in Windows
+  Custom Views tab=allows you to create specific filters to seperate the signal from the noise
+  Each line in event viewer represents an event, double click for more information
+
+Logging(Linux):
+/var/logs=Where logs in Linux are stored
+  auth.log=shows authorization and security related events logged here
+  kern.log=kernel related events are logged here
+  dmesg=System startup messages are logged here
+  /var/log/syslog=records pretty much all logs into one combined
+logrotate=New log files replace old log files to save disk usage, can change settings
+Centralized Logging=Allows you to store many machines log on one machine, allowing you to parse from one location
+Logs use Unix Time/Epoch Time(Time Since Jan 1st 1970 Midnight) in seconds
+
+
+

@@ -303,3 +303,6 @@ Shared Folders(Windows)=Allows you to share a folder with multiple people
   Right click on folder you want to share -> Share With -> Select Users,
   This PC -> Computer Tab -> Map Network Drive
   
+Virtual Machines:
+Virtual Instance=A single Virtual Machine
+Virtual Box=A program for setting up Virtual Machines

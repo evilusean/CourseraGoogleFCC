@@ -324,5 +324,15 @@ logrotate=New log files replace old log files to save disk usage, can change set
 Centralized Logging=Allows you to store many machines log on one machine, allowing you to parse from one location
 Logs use Unix Time/Epoch Time(Time Since Jan 1st 1970 Midnight) in seconds
 
+Operating System Deployment:
+Imaging=Formatting a machine with an image of another machine
+Disk Cloning Tool=Makes a copy of an entire disk and allows you to backup a machine or set up a new one, settings and folders transfer over
+  Clonezilla=Opensource Disk Cloning
+Disk to Disk Cloning=Connect an external harddrive (External Hard Drive Dock) and use a disk cloning tool to clone device
+Network Initiated Deployment=Download directly through network to machine
 
-
+Mobile Device Resetting/Imaging:
+Factory Reset=Returns it to the state it was in when it shipped from factory
+  All data removed, ensure anything they wish to keep is removed from device, including expansion storage(SD Cards/USB)
+  Factory Resets require primary account credentials
+Re-Flash=Overwrite OS from a computer

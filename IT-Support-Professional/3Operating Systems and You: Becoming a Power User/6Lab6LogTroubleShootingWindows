@@ -1,0 +1,84 @@
+Using Logs to Help You Track Down an Issue in Windows
+
+Introduction
+In this lab, you'll use logs to help you troubleshoot and track down an issue. As an IT Support Specialist, it's crucial that you know how to troubleshoot and "follow the cookie crumbs." There are five different issues that you'll need to resolve, using the skills you've learned so far in this course.
+
+Head's up: You'll experience a delay as the labs initially load (particularly for Windows labs). So, please wait a couple of minutes for the labs to load. The grade is calculated when the lab is complete, so be sure to hit "End Lab" when you're done!
+
+You'll have 60 minutes to complete this lab.
+
+What you'll do
+
+Here are the concepts you need to be familiar with before taking this lab:
+
+Updating software that's out-of-date
+Finding and deleting files
+Modifying file permissions
+Finding and terminating specific processes
+The scenario
+
+Your computer is having some issues and you can't seem to figure out what's wrong. Argh! Dig through the logs to figure out how to fix these issues.
+
+You'll use logs to identify issues on a Windows VM, which you'll then fix using the knowledge you've gained from the other labs that you've completed.
+
+Start the lab
+
+Viewing logs on Windows
+To view logs on Windows, you should use the Event Viewer application. To open Event Viewer, open the Start menu and search for "event viewer". The application icon should look like the image below. Click it to open the application.
+
+Screenshot of Windows Search, searching for Event Viewer.
+
+Once open, it should look like this:
+
+Screenshot of Windows Event Viewer tool. The left panel shows the folders within event viewer; the central panel shows an overview and summary; the right panel shows Actions.
+
+Feel free to resize the window at any time, to make the text easier to read. Next, click on the "Windows Logs" folder in the far-left column. Then, select "Application" to view the application logs, where the logs for this lab are located:
+
+Screenshot of Application logs with the Windows Logs in Windows Event Viewer.
+
+Scroll through the logs to find the five logs that you need to fix for this lab. They should have a time that's close to when you started the lab, and the "Source" field should be "Qwiklab". To view details of a log entry, click on it in Event Viewer, and a message window will open at the bottom of the Event Viewer window.
+
+We'll walk through one of the logs, then the other four will be up to you. You're on your own...but you've got this!
+
+Low disk space!
+
+Find and click on the log with "Qwiklab" as the source and Event ID 5:
+
+Screenshot of details for 'Event 5, Qwiklab'. General details say "error: Disk space is super low, fix it!".
+
+This log is warning you about a large file that's taking up disk space, but it doesn't specify the file name. On Windows, you can find large files using the File Explorer. Open it and navigate to your C:\ directory, then click the search bar at the top right. A "Search Options" tab should appear. Click on it to view the different ways you can configure your search:
+
+Screenshot of File Explorer open to the C Drive. The "Search" menu in File Explorer is open.
+
+You're only interested in file size at the moment, so click the "Size" dropdown and choose "Gigantic" to start a search for files over 4 GB.
+
+Screenshot of the dropdown options from the 'Size" menu in the Search menu within File Explorer.
+
+The search can take some time, and multiple files may appear in your search, but we're only interested in the largest (which is almost 10 gigabytes):
+
+Screenshot of search results in File Explorer for any files that are "gigantic". File titled "ultra_mega_large" is highlighted in the screenshot, it's almost 10 GB.
+
+Now that you know which file is causing the low-memory error, you can delete it by right-clicking the file in the search results, and selecting "delete". You'll need to provide admin privileges to delete it. When this popup appears, click "continue":
+
+Screenshot of pop up dialog box stating "You'll need to provide administrator permission to delete this file"
+
+Files over a certain size don't fit in the Windows "Recycle Bin", and can only be permanently deleted. After clicking "Continue", you'll see this message, indicating that the file is too large to recycle. Press "Yes" to delete permanently.
+
+Screenshot of popup dialog box stating "This file is too big to recycle. Do you want to permanently delete it?"
+
+The file will delete, fixing the log issue! Note that the log will still remain in Event Viewer, because logs aren't deleted when the issues that caused them are removed.
+
+The remaining log entries
+
+The rest of the logs involve issues that you have already successfully fixed in earlier labs in this course. Refer back to those lessons and labs to refresh yourself on the required steps, if you’re stuck:
+
+Updating software that's out-of-date (Week 3 Labs)
+Finding and deleting files (Week 1 Labs)
+Modifying file permissions (Week 2 Labs)
+Finding and terminating specific processes (Week 5 Labs)
+If you’d like to check your steps along the way, refer to your score in the top right of the lab. Click the score and run each step to check individually as you go. Good luck!
+
+Conclusion
+Congrats! You've successfully used logs to track down and fix issues on a Windows machine. This is a crucial skill that you'll need to develop as an IT Support Specialist.
+
+End your lab

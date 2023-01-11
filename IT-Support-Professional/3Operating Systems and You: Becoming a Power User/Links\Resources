@@ -218,3 +218,20 @@ Full OTA Images for Nexus and Pixel Devices:
 https://developers.google.com/android/ota
 If your iPhone, iPad, or iPod touch won't turn on or is frozen:
 https://support.apple.com/HT201412
+
+Windows TroubleShooting Tools:
+Windows Server performance troubleshooting documentation - Microsoft list of articles on common Windows Server errors, troubleshooting, and 
+  solutions.
+https://docs.microsoft.com/en-us/troubleshoot/windows-server/performance/performance-overview
+How to scan and repair disks with Windows 10 Check Disk - Instructions for using the CHKDSK command.
+https://www.techtarget.com/searchenterprisedesktop/tip/How-to-scan-and-repair-disks-with-Windows-10-Check-Disk
+Overview of Disk Management - Lists uses for the Windows Disk Management system utility, along with links to step-by-step instructions for 
+  using the utility.
+https://docs.microsoft.com/en-us/windows-server/storage/disk-management/overview-of-disk-management
+How to use Event Viewer on Windows 10 - A walkthrough tour of Windows Event Viewer with screenshots and detailed explanations of each part of 
+  the tool.
+https://www.windowscentral.com/how-use-event-viewer-windows-10
+Registry - Microsoft article about the Windows Registry.
+https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry
+How to use System Configuration tool on Windows 10 - Tutorial for using the Windows System Configuration tool.
+https://windowsreport.com/system-configuration-windows-10/

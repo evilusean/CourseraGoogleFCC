@@ -235,3 +235,16 @@ Registry - Microsoft article about the Windows Registry.
 https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry
 How to use System Configuration tool on Windows 10 - Tutorial for using the Windows System Configuration tool.
 https://windowsreport.com/system-configuration-windows-10/
+
+Free up drive space in Windows - Microsoft article for Windows 10 and 11 that provides step-by-step instructions for freeing storage space on a hard drive. 
+https://support.microsoft.com/en-us/windows/free-up-drive-space-in-windows-85529ccb-c365-490d-b548-831022bc9b32#WindowsVersion=Windows_10
+Low Disk Space error due to a full Temp folder - Steps to clear the cache for Microsoft Store and reset Windows Update for Windows 10 and 11.
+https://support.microsoft.com/en-us/windows/low-disk-space-error-due-to-a-full-temp-folder-8eb375af-c5d4-22ac-3f3a-ac0a98382749#ID0EDD=Windows_10
+Manage drive space with Storage Sense - Instructions for configuring this Windows tool to automatically remove temporary files, downloads, 
+  offline cloud files, and empty the Recycle Bin.
+https://support.microsoft.com/en-us/windows/manage-drive-space-with-storage-sense-654f6ada-7bfc-45e5-966b-e24aded96ad5
+How to use Event Viewer on Windows 10 - A walkthrough tour of Windows Event Viewer with screenshots and detailed explanations of each part of the
+  tool.
+https://www.windowscentral.com/how-use-event-viewer-windows-10
+How do I reset Windows Update components? - Steps for troubleshooting problems with Windows Update.
+https://docs.microsoft.com/en-us/windows/deployment/update/windows-update-resources

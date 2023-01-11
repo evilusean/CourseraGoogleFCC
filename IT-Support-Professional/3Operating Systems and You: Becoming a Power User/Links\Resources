@@ -199,7 +199,7 @@ https://www.redhat.com/en/resources/red-hat-virtualization-datasheet
 LogRotate(Linux):
 http://manpages.ubuntu.com/manpages/zesty/man8/logrotate.8.html
 
-For more information on disk cloning and OS deployment techniques, please visit:
+disk cloning and OS deployment techniques:
 How to clone a hard drive on Windows - Step-by-step guide with screenshots on how to clone a hard drive using the software Macrium Reflect Free.
 https://www.tomsguide.com/how-to/how-to-clone-a-hard-drive-on-windows
 Best Hard Drive Duplicator/Cloner Docking Station for 2022 - Comparison guide to popular hard drive duplicator machines.
@@ -208,3 +208,13 @@ OS deployment methods with Configuration Manager - Microsoft’s guide to option
 https://docs.microsoft.com/en-us/mem/configmgr/osd/deploy-use/methods-to-deploy-enterprise-operating-systems
 dd(1) - Linux manual page - The manual for the Linux dd command, which describes how to use the command and lists the available optional flags. 
 https://man7.org/linux/man-pages/man1/dd.1.html
+
+Mobile Device Resetting and Imaging:
+Android -  Reset your device to factory settings:
+https://support.google.com/pixelphone/answer/4596836
+iOS - Restore your device to factory settings:
+https://support.apple.com/HT201252
+Full OTA Images for Nexus and Pixel Devices:
+https://developers.google.com/android/ota
+If your iPhone, iPad, or iPod touch won't turn on or is frozen:
+https://support.apple.com/HT201412

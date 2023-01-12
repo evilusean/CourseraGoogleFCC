@@ -1,0 +1,9 @@
+=======================================================================================================Week 1:
+System Administration(SysAdmins)=The field in IT that's responsible for maintaining reliable computer systesms in a multi user environment
+  Network Administrators/Database Administrators=As an organization gets bigger, you need teams of sysadmins with different responsibilities
+IT Infrastructure=Encompasses the software, hardware, network and services required for an organization to operate in an enterprise IT environment
+Servers=Software or a machine that provides services to other software or machines
+Servers Can be: PC's, Tower Servers, rack servers, Blade Servers
+  Webservers/Email Servers/SSH Servers/etc
+Clients=request services from a server
+KVM(Keyboard Video Mouse) Switch=Keep on hand in case you can't remotely SSH into a server, allows you to connect multiple servers to one KVM

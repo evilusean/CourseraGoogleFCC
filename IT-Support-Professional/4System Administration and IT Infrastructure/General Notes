@@ -7,3 +7,40 @@ Servers Can be: PC's, Tower Servers, rack servers, Blade Servers
   Webservers/Email Servers/SSH Servers/etc
 Clients=request services from a server
 KVM(Keyboard Video Mouse) Switch=Keep on hand in case you can't remotely SSH into a server, allows you to connect multiple servers to one KVM
+Data Center=A facility that stores hundreds/thousands of servers
+The Cloud Drawbacks=Cost=Instead of having one big upfront cost of buying a server, you pay a subscription for use
+  Dependance=You are dependant on third party for maintaining and securing your data
+
+System Administration Tasks:
+Policies: Smaller companies, security policies fall under sysadmins, larger companies under CSO(Cheif Security Officer)
+  Should users be allowed to install software? Probably not, run risk of normie downloading malicious software
+  Should users have complex passwords with certain requirements? good rule of thumb, min 8 characters
+  Should users be allowed to use non work related content such as facebook? Depends on organization
+  If you hand out a company phone to an employee, should you set a device password? Absolutely
+  Documentation of policies? Yes.
+Maintain all IT infrastructure for company
+Sysadmins must manage users and hardware, create new users and give them access to appropriate resources, remove them if they leave company
+Hardware Lifecycle=Procurement > Deployment > Maintenance > Retirement
+  New Employee Hired -> Set up User Account -> Find them a computer -> Tag Machine -> Image computer with a base image -> Name Computer(standardiz
+  -> Install Software -> Instruct user how to use machine -> If user leaves company, remove user from access
+Imaging=Try to automate provisioning a new machine, should take minutes, not hours
+Batch Update=Once every month(ish), update all servers with latest security patches, ensure new update works with service
+Also need to maintain Printers, Phones, Fax Machines, Video/Conferencing Machines=Can work with vendors to maintain these devices
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

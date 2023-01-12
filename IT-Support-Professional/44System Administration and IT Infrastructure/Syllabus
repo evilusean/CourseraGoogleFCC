@@ -1,0 +1,225 @@
+Syllabus
+Week 1
+What is System Administration?
+Welcome to the System Administration course of the IT Support Professional Certificate! In the first week of this course, we will cover the basics of system administration. We'll cover organizational policies, IT infrastructure services, user and hardware provisioning, routine maintenance, troubleshooting, and managing potential issues. By the end of this module, you will understand the roles and responsibilities of a System Administrator. So let's get started!
+
+16 videos, 10 readings, 1 practice quiz
+Video: Course Introduction
+Reading: Navigating Coursera
+Reading: Program Surveys
+Reading: How to Use Discussion Forums
+Reading: Get to Know Your Classmates
+Discussion Prompt: Meet and Greet
+Video: What is Systems Administration?
+Video: Servers Revisited
+Reading: Supplemental Reading on KVM switch
+Video: The Cloud
+Video: Organizational Policies
+Video: IT Infrastructure Services
+Video: User and Hardware Provisioning
+Video: Routine Maintenance
+Video: Vendors
+Reading: Vendor Life-Cycle for Custom Services and Products
+Reading: Vendor Life-Cycle for Support of Commercial Products
+Video: Troubleshooting and Managing Issues
+Video: In Case of Fire, Break Glass
+Practice Quiz: Systems Administration Tasks
+Video: Dion: My Michelle Obama story
+Video: With Great Power Comes Great Responsibility
+Reading: Change Management
+Reading: Recording Your Actions
+Video: Never Test in Production
+Video: Assessing Risk
+Video: Fixing Things the Right Way
+Reading: Module 1 Glossary
+
+Show lessweek 1 material
+Graded: What is System Administration?
+Week 2
+Network and Infrastructure Services
+In the second week of this course, we'll learn about network and infrastructure services. We will cover what IT infrastructure services are and what their role is in system administration. We'll also learn about server operating systems, virtualization, network services, DNS for web services, and how to troubleshoot network services. By the end of this module, you will know the most common IT infrastructure services you'll encounter when handling system administration tasks.
+
+Show less
+23 videos, 10 readings, 3 practice quizzes
+Video: What are IT Infrastructure Services?
+Video: The Role of IT Infrastructure Services in SysAdmin
+Video: Types of IT Infrastructure Services
+Reading: Supplemental Reading for IT Infrastructure Services
+Practice Quiz: Intro to IT Infrastructure Services
+Video: How do Qwiklabs Work?
+Video: Heather: My first job in tech
+Video: Server Operating Systems
+Reading: Supplemental Reading for Server Operating Systems
+Video: Virtualization
+Video: Remote Access Revisited
+Reading: Remote Connections
+Reading: Supplemental Reading for Remote Access and SSH
+Practice Quiz: Physical Infrastructure Services
+Video: FTP, SFTP, and TFTP
+Reading: Supplemental Reading for FTP Clients
+Video: NTP
+Video: Network Support Services Revisited
+Video: DNS
+Video: DNS for Web Servers
+Video: DNS for Internal Networks
+Reading: Supplemental Reading for BIND/PowerDNS
+Video: DHCP
+Reading: Supplemental Reading for DNS and DHCP
+Practice Quiz: Network Services
+Video: Unable to Resolve a Hostname or Domain Name
+Video: What do Services Look Like in Action
+Video: Managing Services in Linux
+Video: Managing Services in Windows
+Video: Configuring Services in Linux
+Video: Configuring Services in Windows
+Reading: Qwiklabs Introduction
+LTI Item: [Optional] Qwiklabs Assessment: Managing Services in Linux
+LTI Item: [Optional] Qwiklabs Assessment: Managing Services in Windows
+Video: Configuring DNS with Dnsmasq
+Video: Configuring DHCP with Dnsmasq
+Reading: dnsmasq
+Reading: Module 2 Glossary
+LTI Item: [Optional] Qwiklabs assessment: Get Familiar with DNS and DHCP
+
+Show lessweek 2 material
+Graded: Network Services
+Graded: Qwiklabs: Service Management in Linux
+Graded: Qwiklabs: Service Management in Windows
+Graded: Qwiklabs: Getting familiar with DNS and DHCP
+Week 3
+Software and Platform Services
+In the third week of this course, we'll explore software and platform services. We'll cover what types of software and platform services you may encounter in a tech role and how to manage them. We'll learn how to configure email services, security services, file services, print services, and platform services. We'll explore ways to troubleshoot platform services and common issues to look out for. By the end of this module, you'll understand how to setup and manage the IT infrastructure services to help a business stay productive, keep information secure, and deliver applications to its users.
+
+Show less
+16 videos, 16 readings, 3 practice quizzes
+Video: Module Introduction
+Video: Communication Services
+Reading: Supplemental Reading for Chat Communication Services
+Video: Email Protocols
+Reading: Supplemental Reading for Email Protocols
+Reading: Spam Management/Mitigation
+Video: User Productivity Services: Agreements and Licenses
+Video: Web Server Security Protocols
+Video: Heather: Managing self-doubt
+Practice Quiz: Software Services
+Video: What are file services?
+Reading: Supplemental Reading for File Services
+Video: Network File Storage
+Reading: Supplemental Reading for Network File Storage
+Video: Mobile Synchronization
+Reading: Mobile Synchronization
+Reading: Supplemental Readings for Mobile Synchronization
+Video: Configuring Print Services
+Reading: Print Services
+Reading: Supplemental Reading for Print Services
+Ungraded Plugin: Troubleshooting Printer Issues
+Ungraded Plugin: Common Printer Types
+Video: Web Servers Revisited
+Reading: Supplemental Reading for Web Servers (Revisited)
+Reading: Load Balancers
+Video: What is a database server?
+Reading: Supplemental Reading for Database Admin Jobs
+Practice Quiz: File, Print, and Platform Services
+LTI Item: [Optional] Qwiklabs Assessment: Manage Websites With Apache2
+Video: Is the website down?
+Reading: Supplemental Reading for Troubleshooting with Developer Tools
+Practice Quiz: Troubleshooting Platform Services
+Video: Cloud Concepts
+Video: Typical Cloud Infrastructure Setups
+Reading: Common Cloud Models
+Video: When and How to Choose Cloud
+Reading: Managing Cloud Resources
+Reading: Module 3 Glossary
+
+Show lessweek 3 material
+Graded: Qwiklabs: Managing websites with Apache2
+Graded: Software and Platform Services
+Week 4
+Directory Services
+In the fourth week of this course, we'll learn about directory services. Specifically, we'll cover how two of the most popular directory services, Active Directory and OpenLDAP, work in action. We'll explore the concept of centralized management and how this can help SysAdmins maintain and support all the different parts of an IT infrastructure. By the end of this module, you will know how to add users, passwords, and use group policies in Active Directory and OpenLDAP.
+
+19 videos, 13 readings, 3 practice quizzes
+Video: Module Introduction
+Video: What is a directory server?
+Video: Implementing Directory Services
+Practice Quiz: Introduction to Directory Services
+LTI Item: [Optional] Qwiklabs Assessment: Utilizing Active Directory
+Video: What is centralized management?
+Reading: Supplemental Reading for Centralized Management
+Video: What is LDAP?
+Reading: Supplemental Reading for LDAP
+Video: What is LDAP Authentication?
+Reading: Supplemental Reading for Kerberos
+Practice Quiz: Centralized Management and LDAP
+Video: Heather: Overcoming obstacles
+Video: What is Active Directory?
+Reading: Supplemental Reading for Active Directory
+Video: Managing Active Directory
+Video: Managing Active Directory Users and Groups
+Reading: Supplemental Reading for Group Security Principles
+Video: Managing Active Directory User Passwords
+Reading: Supplemental Reading for EFS Features
+Video: Joining an Active Directory Domain
+Reading: Supplemental Reading for DFL & FFL
+Video: Group Policy: Group Policy Object (GPO)
+Video: Group Policy Creation and Editing
+Video: Group Policy Inheritance and Precedence
+Video: Group Policy Troubleshooting
+Reading: Supplemental Reading for Group Policy Troubleshooting
+Reading: Supplement Reading for Group Policy Troubleshooting Examples
+Video: Mobile Device Management (MDM)
+Reading: Supplemental Readings for Mobile Device Management (MDM)
+Practice Quiz: Active Directory
+Video: What is OpenLDAP?
+Reading: Supplemental Reading for OpenLDAP
+Video: Managing OpenLDAP
+Reading: Supplemental Reading for Managing OpenLDAP
+Reading: Module 4 Glossary
+
+Show lessweek 4 material
+Graded: Qwiklabs: Using Active Directory
+Graded: Directory Services
+Week 5
+Data Recovery & Backups
+In the fifth week of this course, we'll learn about data recovery and backups. In any tech role, it's important to know how to backup and recover data -- it's even more important for system administration. We will also learn about common corporate practices like designing a disaster recovery plan and writing post-mortem documentation. By the end of this module, you'll know the tradeoffs between on-site and off-site backups, understand the value and importance of backup and recovery testing, know different options for data backup (as well as the risks) and understand the purpose and contents of a disaster recovery plan.
+
+Show less
+13 videos, 4 readings, 3 practice quizzes
+Video: Module Introduction
+Video: What is Data Recovery?
+Reading: Supplemental Reading for GitLabs Data Recovery
+Video: Backing Up Your Data
+Video: Backup Solutions
+Reading: Supplemental Reading for Backup Solutions
+Video: Job transition
+Video: Testing Backups
+Video: Types of Backup
+Reading: Supplemental Reading for RAID Levels
+Video: User Backups
+Discussion Prompt: Backing Up Your Data
+Practice Quiz: Planning for Data Recovery
+Video: What's a Disaster Recovery Plan?
+Video: Designing a Disaster Recovery Plan
+Practice Quiz: Disaster Recovery Plans
+Video: What's a post-mortem?
+Video: Writing a Post-Mortem
+Practice Quiz: Post-Mortems
+Video: Interview Role Play: Sys Admin
+Reading: Module 5 Glossary
+
+Show lessweek 5 material
+Graded: Data Recovery & Backups
+Week 6
+Final Project
+Congratulations, you've made it to the final week in the course! The last week of this course is dedicated to the final project. For the final project, you will apply all the skills you've learned in this course by providing systems administration consultation. You will assess the IT infrastructure of three fictitious (but very real-life based!) companies and provide recommendations and advice about how to support their IT infrastructure. By the end of this project, you will demonstrate the skills and problem-solving techniques of a SysAdmin. Good luck!
+
+Show less
+3 videos, 1 reading
+Video: Final Project Introduction
+Video: Alex: How passion turned into success
+Reading: Course 4 Glossary
+Discussion Prompt: Your Learning Journey
+Video: Congratulations!
+
+Show lessweek 6 material
+Graded: System Administration Consultation

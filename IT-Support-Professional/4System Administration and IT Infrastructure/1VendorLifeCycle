@@ -78,3 +78,37 @@ Finally, the organization’s project manager and/or a procurement officeruses t
   post-contract closing. The checklist might include requesting the vendor return IT equipment and removing the vendor identity profiles on the
   organization’s network. IT Support professionals might also be enlisted to  ensure any intellectual property belonging to the organization is
   stored properly with necessary security precautions. 
+
+Vendor life-cycles for support of commercial products:
+Commercial vendors of computer operating systems, software, products, peripherals, and other IT equipment plan life-cycle schedules, or product 
+  roadmaps, for supporting their products. It is important for IT Support professionals to keep track of these life-cycle schedules, especially
+  the date when the product will reach its end of life (EOL). The EOL date is the point at which the vendor plans to end all support for the 
+  product and it is reclassified as a legacy product.
+
+IT Support professionals should plan to update, upgrade, or replace a product before it reaches its EOL date. Once the EOL date has passed,
+  the vendor will no longer provide technical support, security patches, or driver or firmware updates for the product. This lack of support can 
+  create a security risk for computer systems and networks. Cybercriminals take advantage of legacy products that are no longer being patched or
+  updated. Warranties can expire on or before a product’s EOL date as well. This can disrupt normal IT operations if the product fails, as IT 
+  Support professionals must expedite purchasing, implementing, and providing  training for the legacy product’s replacement. 
+
+The details of product life-cycle support policies vary from vendor to vendor. However, some life-cycle phases are common to most vendors: 
+Beta testing phase: Often, the first introduction of a vendor’s product to the public occurs through a beta testing phase. Beta testing is used 
+  to collect product feedback from early adoption tech users. This feedback is used to improve the product before it is available to the general
+  public. For example, you might be familiar with Microsoft’s Windows Insider Program. Early adopters of Microsoft products can sign up to beta 
+  test the latest updates to the Windows operating systems.
+
+Product release and primary support phase: When the beta testing phase ends and the vendor has updated and repaired reported defects, the product
+  will then become available and marketed to the general public. It is normal for products to experience problems as a larger group of end users
+  implements the product into their unique computing environments. Vendors respond by developing and releasing regular updates and security
+  patches for the product during this supported product life-cycle phase. It is critical that IT Support professionals update the product
+  regularly to prevent security breaches and other disruptions to the product’s usability. 
+
+Extended support phase: Product roadmaps also include a phase-out period when vendors introduce their next generation products. The vendor
+  normally continues support for the older product during this phase by releasing critical patches. The product is often phased out of the 
+  primary commercial market, but resellers may continue to sell it as a used or unused surplus product. Buyers should carefully investigate 
+  the warranty and support for the product if purchased from a reseller. 
+
+End of life (EOL) phase: When a product has reached its scheduled EOL date, the vendor will end support for the product. Tech support and 
+  warranties will expire. The vendor will no longer release product updates, security patches, drivers, firmware, etc., leaving the legacy
+  product vulnerable to security attacks. Vendors encourage customers to buy the new, next generation product as a replacement for the legacy 
+  product. 

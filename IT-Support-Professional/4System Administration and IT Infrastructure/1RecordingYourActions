@@ -1,0 +1,49 @@
+Recording your actions:
+When you are going to make changes in a machine, it’s very important to have a clear plan of what you are going to do and to store the actions that
+  you actually took.
+
+A common practice for system administrators that work with bug queues or ticketing systems is to include the commands executed and the output 
+obtained in the corresponding bug or ticket. This is recommended if the commands that need to be executed are few and straightforward.
+
+However, there are situations where you don’t yet know which commands exactly you’ll need to execute because there’s some investigation that needs
+to happen. In cases like that, it can be helpful to use a command like script for Linux or Start-Transcript for Windows.
+script(Linux):
+http://manpages.ubuntu.com/manpages/bionic/man1/script.1.html
+Start-Transcript(Windows):
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.host/start-transcript?view=powershell-6
+script
+
+In the case of script, you can call it like this:
+
+          script session.log
+
+This will write the contents of your session to the session.log file. When you want to stop recording, you can write exit or press Ctrl-D.
+The generated file will be in ANSI format which includes the colors that were displayed on screen.  In order to read them, you can use commands 
+like ansi2txt or ansi2html to convert it to plain text or HTML respectively.
+ansi2txt:
+http://manpages.ubuntu.com/manpages/bionic/man1/ansi2txt.1.html
+ansi2html:
+http://manpages.ubuntu.com/manpages/bionic/man1/ansi2html.1.html
+
+Start-Transcript
+
+In the case of Start-Transcript, you can call it like this:
+
+            Start-Transcript -Path C:\Transcript.txt
+
+This will write the contents of the session to C:\Transcript.txt. When you want to stop recording you need to call Stop-Transcript. 
+The file created is a plain text file where the commands executed and their outputs are stored.
+
+Recording Graphical Sessions:
+
+Performing system administration actions through a Graphical user interface is less common (as it’s harder to automate and to perform remotely),
+but it’s still something that may happen sometimes.
+
+If you are going to be performing an action that needs to be done graphically and you can document what you are doing, you can use a
+specialized tool like recordMyDesktop for Linux, or general video tools like OBS or VLC.
+recordMyDesktop(Linux):
+http://recordmydesktop.sourceforge.net/about.php
+OBS:
+https://obsproject.com/
+VLC:
+https://www.videolan.org/vlc/index.html

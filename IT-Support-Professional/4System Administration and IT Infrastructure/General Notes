@@ -26,8 +26,13 @@ Hardware Lifecycle=Procurement > Deployment > Maintenance > Retirement
 Imaging=Try to automate provisioning a new machine, should take minutes, not hours
 Batch Update=Once every month(ish), update all servers with latest security patches, ensure new update works with service
 Also need to maintain Printers, Phones, Fax Machines, Video/Conferencing Machines=Can work with vendors to maintain these devices
-
-
+TroubleShooting:asking questions, isolating the problem, reading logs
+  ticketing systems help organize and prioritize issues
+Customer Service=Showing empathy, right tone of voice, dealing well with difficult situations
+Avoid Using Administrator rights for tasks that don't require them; respect the privacy of others, don't read others emails,
+Document what you do, using 'script' cmdlet in linux or 'Start-Transcript' in windows
+Make a copy of the state before changing it, or using a version control system to avoid making terrible decisions
+Rollback=Reverting to a previous state
 
 
 

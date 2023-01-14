@@ -1,3 +1,15 @@
 ==========================================================================================Week 1:
 Supply Chain Management Strategy=Integration of end to end supply chain functions with purpose in a complex network of companies all over the globe
 LOPs=Logistics, Operations, Precision Planning, Holistic Sourcing
+
+==========================================================================================Week 2:
+Are Products moving in the most efficient way possible?
+Inventory: are we holding the right amount of inventory? Is it in the right location? do we acheive service levels?
+  Cycle Stock(Day to day sales) Vs Safety Stock(Just in case, insurance), Demand(increased sales) Vs Logistics(delayed shipments)
+  When to order inventory? s.Q(s=reorder point, Q=quantity), s.S(order up to level, difference betweem current inventory and where it should be)
+Logistics Network: Build warehouses close to customers, Connect customers to plants/warehouses
+Facilities: How many and where? Fewer warehouses=locate inventory in fewer locations/pooled risk/less access to customers/less safety stock
+  Transportation device as a storage device
+Factors influencing Logistics Networks: Cost Vs Service
+Logistics Customer Servce:Keep customers happy, by keeping your promises - no stock outs, meet lead times
+fill rate=percentage of orders shipped from inventory

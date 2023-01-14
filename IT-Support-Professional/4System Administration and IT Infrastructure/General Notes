@@ -33,6 +33,15 @@ Avoid Using Administrator rights for tasks that don't require them; respect the 
 Document what you do, using 'script' cmdlet in linux or 'Start-Transcript' in windows
 Make a copy of the state before changing it, or using a version control system to avoid making terrible decisions
 Rollback=Reverting to a previous state
+Production=The parts of the infrastructure where a certain service is executed and served to its users
+Test Environment=A virtual machine running the same configuration as the production environment, but isn't actually serving any of the users
+Secondary/Standby Machine=Will be exactly the same as the production machine, but won't receive any traffic from actual users until you enable it
+Always test before deploying, the more users your service reaches, the more you'll want to ensure the changes aren't disruptive
+Reproduction Case=Before you start fixing it, make sure you can recreate the error to ensure you have it fixed. x3 questions=
+  What steps did you take to get to this point?
+  What's the unexpected or bad result?
+  What's the expected result?
+
 
 
 

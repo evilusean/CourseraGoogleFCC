@@ -1,2 +1,21 @@
 KVM(Keyboard Mouse Video) Switches:
 http://en.wikipedia.org/wiki/KVM_switch
+
+Recording Actions/DocumentASean:
+script(Linux):
+http://manpages.ubuntu.com/manpages/bionic/man1/script.1.html
+Reading Scripts:
+ansi2txt:
+http://manpages.ubuntu.com/manpages/bionic/man1/ansi2txt.1.html
+ansi2html:
+http://manpages.ubuntu.com/manpages/bionic/man1/ansi2html.1.html
+Start-Transcript(Windows):
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.host/start-transcript?view=powershell-6
+
+Recording Software:
+recordMyDesktop(Linux):
+http://recordmydesktop.sourceforge.net/about.php
+OBS:
+https://obsproject.com/
+VLC:
+https://www.videolan.org/vlc/index.html

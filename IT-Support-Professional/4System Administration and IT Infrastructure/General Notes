@@ -42,7 +42,23 @@ Reproduction Case=Before you start fixing it, make sure you can recreate the err
   What's the unexpected or bad result?
   What's the expected result?
 
+=======================================================================================================Week 2:
+IT Infrastructure Services:
+IaaS(Infrastructure as a Service):give you preconfigured Virtual Machines
+NaaS(Networking as a Service:third party networks/security
+SaaS(Software as a Service):software licenses you can purchase
+PaaS(Platform as a Service):Entire platform
+DaaS(Directory as a Service):provides directories(login/management) as a service
 
+Physical:
+Server Operating Systems=Regular Operating Systems that are optimized for server functinality
+Virtualization=Lots of virtual instances on one server
+  Dedicated Vs Virtual
+  Performance: Better Performance Vs Many services one machine
+  Cost: More Expensive Vs Cheaper to use one server
+  Maintenenace: Multiple Machines, more work Vs easier to maintain VM's
+  Points of Failure: Multiple points of failure Vs Single point of failure(unless you have redundant machines)
+Remote Access=OpenSSH=Most popular linux SSH service
 
 
 

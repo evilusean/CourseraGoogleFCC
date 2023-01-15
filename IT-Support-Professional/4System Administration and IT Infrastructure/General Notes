@@ -60,7 +60,20 @@ Virtualization=Lots of virtual instances on one server
   Points of Failure: Multiple points of failure Vs Single point of failure(unless you have redundant machines)
 Remote Access=OpenSSH=Most popular linux SSH service
 
-
+Network:
+FTP(File Transfer Protocol)=Legacy way to transfer files over the internet, requires a FTP client and server,unencrypted
+SFTP(Secure File Transfer Protocol)=Like FTP,but allows encryption.
+TFTP(Trivial File Transfer Protocol)=simpler than FTP, doesn't require user authentication, files here should be generic and not require security
+PXE Boot(Preboot Execution)=Allows you to boot into a software that's available over a network
+NTP(Network Time Protocol)=Used to keep machines clocks synchronized when connected to a network
+Local NTP Server=Inhouse Vs Public NTP server=Other organizations that manage NTP servers that you can sync client machines to get synchronized
+Intranet=An internal network inside a company; accessible if you're on a companies network
+Proxy Server=Acts as anintermediary between a companie's network and the internet, provides privacy and security, and regulates access
+DNS(Domain Name System)=Maps human understandable names to an IP address
+Hostfiles=Allow you to map static IP addresses to HostName Mappings, compputers will first check hostfile then DNS servers
+  /etc/hosts #linux hostfile
+  127.0.0.1 #references back to the computer(self)
+DHCP(Dynamic Host Configuartion Procol)=Static IP address Vs DHCP assigned address from server
 
 
 

@@ -74,6 +74,16 @@ Hostfiles=Allow you to map static IP addresses to HostName Mappings, compputers 
   /etc/hosts #linux hostfile
   127.0.0.1 #references back to the computer(self)
 DHCP(Dynamic Host Configuartion Procol)=Static IP address Vs DHCP assigned address from server
+Unable to resolve a hostname or domain name:
+  First check your connection is actually working/ping www.google.com
+  nslookup #name server for a host or domain name, copy IP address and paste in web browser
+  /etc/hosts #where DNS is stored in linux check here before an authoritative server, change entry to www.google.com 
+
+Managing System Services:
+Daemons=Background Processes=Services=the program doesn't need to interact with a user through the graphical interface or the command line 
+  interface to provide the neccesary service
+Configuration Files=Each service has one or more configuration files, that determine how you want the service to behave
+Services are usually configured to start when the machine boots, or crashes, this can be changed
 
 
 

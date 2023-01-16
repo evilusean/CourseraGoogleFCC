@@ -84,7 +84,8 @@ Daemons=Background Processes=Services=the program doesn't need to interact with 
   interface to provide the neccesary service
 Configuration Files=Each service has one or more configuration files, that determine how you want the service to behave
 Services are usually configured to start when the machine boots, or crashes, this can be changed
-
+Configuring Services in Windows:
+Start -> Control Panel -> Turn Windows Features on and off -> Server Manager -> Enable Internet Information Services -> Add Features
 
 
 

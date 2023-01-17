@@ -1,0 +1,299 @@
+Qwiklabs Assessment: Managing Services in Windows
+Learning Objectives
+
+Getting familiar with common system services on Windows
+
+Starting, stopping, reloading services on Windows
+
+Managing features through the command line
+
+Introduction
+
+As a system administrator, you’ll need to know how to look at the status of a running service, and how to stop, start, and restart running services. You’ll also need to know how to configure services and fix problems you may encounter while running them. In this lab, we’ll focus on how to do this actions on Windows.
+
+What you’ll do
+
+You’ll get to have a look at the list of services that are running on the machine, practice stopping and starting 
+
+You will have 60 minutes to complete this lab.
+
+Introduction
+As a system administrator, you'll need to know how to look at the status of a running service, and how to stop, start, and restart running services. You'll also need to know how to configure services and fix problems you may encounter while running them.
+
+In this lab, you'll get a look at the list of services that are running on a Windows machine. You can practice stopping and starting some of these services, as well as query their status. You'll also enable serving web pages and customizing the configuration of the web server.
+
+Heads up: Make sure to click the "Start Lab" button at the top of the screen. There can be a significant delay for the lab to load. Please wait until the lab is running. To mark this lab as completed, make sure to click "End Lab" when you're done!
+
+You'll have 60 minutes to complete this lab.
+
+Start the lab
+You'll need to start the lab before you can access the materials. To do this, click the green "Start Lab" button at the top of the screen. If you use a screen reader, please see the instructions below, in the section "Virtual Machine instructions for screen reader users". Otherwise, proceed to the next steps to open the Windows VM.
+
+Green "Start Lab" button
+
+After you click the "Start Lab" button, you will see a panel appear below where the start lab button was that has an Open Windows VM button.
+
+Screenshot of "Open Windows VM" button, which appears underneath the "Start Lab" button in the lab UI.
+
+Click the Open Windows VM button and a new tab will open with a visual interface for Windows OS, where you will be performing further steps in the lab. You should have a visual interface for Windows that looks like this:
+
+Screenshot of Windows VM desktop.
+
+
+Virtual Machine instructions for screen reader users
+keyboard_arrow_down
+Learning tip:
+
+During this lab, we will show how to do certain tasks using graphical tools as well as using the command line with PowerShell. While you can copy and paste the commands that are presented throughout the lab, we recommend typing them out manually, to help with understanding and remembering these commands.
+
+Listing system services
+
+First, we will connect to the Services application that is provided by Windows as an administrative tool. In order to open this application, you can either open the Control Panel, click on System and Security, then on Administrative Tools and finally on Services; or you can type "Services" into the Windows menu.
+
+Once you open the application, make sure you make the columns wider so that you can see the actual descriptions of the services that are available in the system. You can click on one of the columns to change the order and, for example, see all services that have "Running" as their Status together.
+
+Screenshot of Windows Services tool.
+
+From this application, you can start and stop services that are running in the system. Caution: Keep in mind that some of the services that are running may be critical to ensure that you stay connected to the machine. Pay attention to what the services do before you try stopping them.
+
+When you right-click on the line that shows a service, you get a menu of action options. The menu shows all actions, but the ones that are not currently available are grayed out. So, if the service is running, "Start" will be grayed out. If the service is not running, "Stop" will be grayed out.
+
+Screenshot of of the right-click / context menu of a given service. Options include Start, Stop, Pause, Resume, Restart, All Tasks, Refresh, Properties, and Help.
+
+You can also access the Properties menu, where you will see other data and configuration about the service. For example, in the Recovery tab, it will indicate what's the configured behavior in case of a service failing.
+
+Screenshot of the Properties menu, open to the Recovery tab.
+
+Stopping and starting services
+Let's look at the Themes service. This service is in charge of managing the graphical themes applied to the machine. It's also in charge of managing certain features related to the video card. While you wouldn't want to stop it on your local physical machine as it might cause problems with your graphical interface, it's fine to stop it for the purposes of this lab as it's a virtual machine with a virtualized video card.
+
+So, go ahead and right-click on the Themes line and then click Stop in the pop-up menu. A window will appear showing the progress of stopping the service and once it's gone, the service will be stopped.
+
+Screenshot of the Windows Services tool. The right-click / context menu is open for the Themes service. Stop is highlighted by the cursor in the menu.
+
+Click Check my progress to verify the objective.
+
+Stop the "Themes" Service
+Let's now look at the Performance Logs & Alerts service. This service is not running by default. It can be used to collect logs related to the performance of the machine and to setup alerts that will trigger when certain thresholds are passed. The data collected by this service can be configured and visualized in the Server Manager application.
+
+Let's now start this service: right-click on the Performance Logs & Alerts line and then click Start in the pop-up menu. A similar window as before will appear, showing the progress and once it's gone, the service will be started.
+
+Screenshot of the Windows Services tool. The right-click / context menu is open for the Performance Logs & Alerts service. Start is highlighted by the cursor in the menu.
+
+Click Check my progress to verify the objective.
+
+Start the "Performance Logs & Alerts" Service
+Many of these services can also be started or stopped through other tools in the system. For example, the service called Auto Time Zone Updater is used to set the timezone of the running system from the data obtained through the network. This service can be enabled from the Service console, but it can also be enabled from the Date and Time settings.
+
+If you look at the Auto Time Zone Updater service now, it's disabled. Let's enable it through the Date and Time settings window.
+
+If you left click on the clock shown in the lower right corner, you'll get a pop-up with the time, date, calendar and a link to Date and Time settings.
+
+Screenshot of the time, date, and calendar on Windows.
+
+If you click on that link, the settings window for all configuration related to the Date and Time will appear, including the "Set time zone automatically" setting. This setting is directly related to the Auto Time Zone Updater service. Click on the slider to enable the setting, go back to the Services application, click Refresh in the right-click menu, and you'll see that the service is now enabled.
+
+Screenshot of date and time settings. The right-click / context menu has been opened for Auto Time Zone Updater Service.
+
+Interacting with services through PowerShell
+While as a user it's common to use Graphical User Interfaces (or GUIs) to interact with the system, as a system administrator you will usually want to automate the tasks that you do, and for that you will be using the command line.
+
+Let's see how to perform these same tasks through the command line. Go ahead and open the Windows PowerShell application, by clicking on the Start menu and then selecting it from the list of applications.
+
+Screenshot of Windows Start menu with the cursor selecting Windows PowerShell.
+
+In this shell, we can use the Get-Service command to list all the available services.
+
+Get-Service
+Copied!
+Stopped  VSS                Volume Shadow Copy
+Running  w32time            Windows Time
+Stopped  WaaSMedicSvc       Windows Update Medic Service
+Stopped  WalletService      WalletService
+Stopped  WarpJITSvc         WarpJITSvc
+Stopped  WbioSrvc           Windows Biometric Service
+Running  Wcmsvc             Windows Connection Manager
+Stopped  WdiServiceHost     Diagnostic Service Host
+Stopped  WdiSystemHost      Diagnostic System Host
+Running  WdNisSvc           Windows Defender Antivirus Network ...
+Stopped  Wecsvc             Windows Event Collector
+Stopped  WEPHOSTSVC         Windows Encryption Provider Host Se...
+Stopped  wercplsupport      Problem Reports and Solutions Contr...
+Stopped  WerSvc             Windows Error Reporting Service
+Stopped  WiaRpc             Still Image Acquisition Events
+Running  WinDefend          Windows Defender Antivirus Service
+Running  WinHttpAutoProx... WinHTTP Web Proxy Auto-Discovery Se...
+Running  Winmgmt            Windows Management Instrumentation
+Running  WinRM              Windows Remote Management (WS-Manag...
+Stopped  wisvc              Windows Insider Service
+Stopped  wlidsvc            Microsoft Account Sign-in Assistant
+Stopped  wmiApSrv           WMI Performance Adapter
+Stopped  WMPNetworkSvc      Windows Media Player Network Sharin...
+Stopped  WPDBusEnum         Portable Device Enumerator Service
+Running  WpnService         Windows Push Notifications System S...
+Running  WpnUserService_... Windows Push Notifications User Ser...
+Stopped  WSearch            Windows Search
+Stopped  wuauserv           Windows Update
+This is a long list. You can scroll up using PgUp/PgDown, or with the mouse wheel. This list includes the status of the service, the Name and the DisplayName. The Name is short and is the one used to get information of a specific service, the DisplayName is a more descriptive and longer name.
+
+For example, we can get information of the wisvc service:
+
+Get-Service wisvc
+Copied!
+Status   Name               DisplayName
+------   ----               -----------
+Stopped  wisvc              Windows Insider Service
+This tells us that wisvc is the short name of the Windows Insider Service. This is the service allows you to test out the latest OS builds and Apps from Microsoft. We can get more information for the service, using the Format-List command.
+
+Get-Service wisvc | Format-List *
+Copied!
+Name                : wisvc
+RequiredServices    : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+DisplayName         : Windows Insider Service
+DependentServices   : {}
+MachineName         : .
+ServiceName         : wisvc
+ServicesDependedOn  : {rpcss}
+ServiceHandle       : SafeServiceHandle
+Status              : Stopped
+ServiceType         : Win32ShareProcess
+StartType           : Manual
+Site                :
+Container           :
+Stopping and starting services
+
+Now, we can start the Windows Insider Service, using the Start-Service command:
+
+Start-Service wisvc
+Copied!
+This command doesn't give any output. To verify that it worked, let's get the status again, using Get-Service:
+
+Get-Service wisvc
+Copied!
+Status   Name               DisplayName
+------   ----               -----------
+Running  wisvc              Windows Insider Service
+The service is now started. But this is an important service, we don't want it to stay started, let's stop it using the Stop-Service command.
+
+Stop-Service wisvc
+Copied!
+Again, this doesn't give any output if it succeeds, let's use Get-Service to see if it worked.
+
+Get-Service wisvc
+Copied!
+Yes, it's stopped again.
+
+Enabling services
+
+We can stop and start any services that are already enabled in the system, but not services that are disabled. Let's look at one example of a service that is currently disabled. We will use the ScardSvr or Smart Card service. This service is used to read smart cards and it's currently disabled because it's not needed. We can see that it's disabled, by using the Get-Service plus Format-List commands:
+
+Get-Service ScardSvr | Format-List *
+Copied!
+Name                : ScardSvr
+RequiredServices    : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+DisplayName         : Smart Card
+DependentServices   : {}
+MachineName         : .
+ServiceName         : ScardSvr
+ServicesDependedOn  : {}
+ServiceHandle       :
+Status              : Stopped
+ServiceType         : Win32ShareProcess
+StartType           : Disabled
+Site                :
+Container           :
+The StartType field says that this service is Disabled. This means that it can't be started until it's enabled. Let's see what happens if we try to start it anyway:
+
+Start-Service ScardSvr
+Copied!
+Start-Service : Service 'Smart Card (ScardSvr)' cannot be started due to the following error: Cannot start service
+ScardSvr on computer '.'.
+At line:1 char:1
++ Start-Service ScardSvr
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (System.ServiceProcess.ServiceController:ServiceController) [Start-Service],
+   ServiceCommandException
+    + FullyQualifiedErrorId : CouldNotStartService,Microsoft.PowerShell.Commands.StartServiceCommand
+Instead of the usual empty output, we get an error message. The error says that the service couldn't be started. To change that, we will use the Set-Service command, which allows us to modify some of the properties of the service
+
+Set-Service ScardSvr -StartupType Manual
+Copied!
+This won't generate any output, but if we now try to start the service, it will succeed.
+
+Start-Service ScardSvr
+Copied!
+This time we got no output, which means that there were no errors. Let's check the status one last time:
+
+Get-Service ScardSvr
+Copied!
+Status   Name               DisplayName
+------   ----               -----------
+Running  ScardSvr           Smart Card
+Well done! We have enabled and started the service.
+
+Enabling additional features
+
+There are a number of features that are available in a Windows system that are not enabled by default. This is so that the system administrator only has to manage the features that are actually in use, instead of all the possible features out there.
+
+We can use the Install-WindowsFeature command to enable these features. For example, let's run this command to enable the few more web serving features in the system:
+
+Install-WindowsFeature Web-WebServer,Web-Mgmt-Tools -IncludeAllSubFeature
+Copied!
+Collecting data...
+    10%
+    [0000000000000                                                   ]
+Be patient, this will take a few minutes to run, as it's downloading additional components and then installing them on the system. You will see a progress bar on the console, although not necessarily at the cursor.
+
+Note: If Windows is stuck and automatically disconnected, please go back to the lab page and again click on "Open Windows VM"
+When the progress bar disappears, it should tell you that it succeeded in installing the service which is now running.
+
+Success Restart Needed Exit Code      Feature Result
+------- -------------- ---------      --------------
+True    No             Success        {.NET Framework 3.5 (includes .NET 2.0 and...
+There are a number of new services that were added when enabling this feature. For example, IISADMIN is the service used to publish websites on the machine.
+
+Get-Service IISADMIN
+Copied!
+Status   Name               DisplayName
+------   ----               -----------
+Running  IISADMIN           IIS Admin Service
+With this service running, you'll be able to use the web serving functionality on the machine.
+
+Click Check my progress to verify the objective.
+
+Start IIS
+Serving web pages
+
+Let's configure our newly installed web server to serve our own website. In order to do this, you'll need to open the Internet Information Services (IIS) Manager program. To do that, type "IIS" into the Windows menu.
+
+Screenshot of Windows Search with the search term "IIS" in the search bar. Results show Internet Information Services (IIS) Manager.
+
+Once the application opens, expand the QWIKLABS-BB-XXX option, and click on the Sites option. This shows a list of available sites, currently only showing the Default Website.
+
+Screenshot of available sites showing Default web Site as the only option. The right-click / context menu is open, with the cursor highlighting the option to Add Website...
+
+Let's add a new site, by right-clicking on the list and selecting Add Website. This will pop up a window with some fields that need to be filled in. Naming the site enables you to identify it from others. You can call it whatever you want. The physical path of the website is the location where the files are located in the computer. In this case, the files are located in C:\Users\qwiklabs\amazingsite, so select that folder as the path.
+
+Screenshot of Add Website dialog box.
+
+Click OK after filling all the provided details, then you will see that your website was created and running on port 80. Now you can verify the new website by pointing your browser to the External IP address shown in the Connection Details Panel.
+
+Screenshot of new website.
+
+WooHoo!
+
+Click Check my progress to verify the objective.
+
+Serve the New Website in IIS
+Conclusion
+Congrats! You've successfully listed all the services that are available on the machine, practiced stopping and starting some of these services, and checked their status. You also configured the machine to serve web pages by enabling an additional system feature, and then customized this to serve a different website.
+
+These are important skills that are essential to your future work as a system administrator. Keep it up!
+
+End your lab

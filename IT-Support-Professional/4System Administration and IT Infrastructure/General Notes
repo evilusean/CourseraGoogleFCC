@@ -74,6 +74,8 @@ Hostfiles=Allow you to map static IP addresses to HostName Mappings, compputers 
   /etc/hosts #linux hostfile
   127.0.0.1 #references back to the computer(self)
 DHCP(Dynamic Host Configuartion Procol)=Static IP address Vs DHCP assigned address from server
+  DHCP Server=Is set up to a machine with a static IP address configured to the network interface to serve the DHCP queries, linked to the physical
+  network with any number of machines on it
 Unable to resolve a hostname or domain name:
   First check your connection is actually working/ping www.google.com
   nslookup #name server for a host or domain name, copy IP address and paste in web browser
@@ -87,7 +89,14 @@ Services are usually configured to start when the machine boots, or crashes, thi
 Configuring Services in Windows:
 Start -> Control Panel -> Turn Windows Features on and off -> Server Manager -> Enable Internet Information Services -> Add Features
 
-
+Configuring Network Services:
+DNSMasq=A program that provides DNS, DHCP, TFTP and PXE services in a simple package
+  dig www.example.com @localhost #DNS lookup, checking the localhost, if none found checks DNS servers
+DHCP with DNSMasq:
+  ip address show eth_srv #shows IP address for eth_srv
+  ip address show eth_cli #shows IP address for eth_cli
+  cat dhcp.conf #shows a file with 'interface=eth_srv' which configures for listening for DHCP queries from eth_srv
+  sudo dnsmasq -d -q -C dhcp.conf #tells dnsmasq to start listening for queries using this config
 
 
 

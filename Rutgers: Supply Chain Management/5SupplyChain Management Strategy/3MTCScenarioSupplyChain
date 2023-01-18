@@ -1,0 +1,31 @@
+The Medical Devices Supply Chain
+The Medical Devices supply chain for MTC consists of several major players: Manufacturers, Medical Surgical Distributors and/or Third Party 
+Logistics (3PL) Firms, and Hospitals. The flow of products from the manufacturing plant to the hospital operating room usually takes devices 
+through a lengthy path. The manufacturers assemble the products usually in lots of 7,200 per week. Each surgical kit contains hundreds of 
+individual parts that may be used by the surgeon. Often, it is not possible to predict which items will be needed in an individual surgical case. 
+In addition, the number of surgical kits used varies dramatically (see Exhibit C). One issue is Inventory Management and specifically if the six 
+months of supply is too large. This is something that should be analyzed. Part of the sales representative’s function is to show the surgeon which 
+devices to use. In addition, if the surgeon is using a new kit, the sales representative will show him or her how to use it with a patient.
+
+After assembly, the surgical kits are sterilized. While other manufacturers do this in-house or let the distributor handle sterilization altogether, 
+MTC uses an off-site sterilization service provider. Some manufacturers even enable the product to be sterilized by their distributor, but then have
+to ensure this step is completed in order to satisfy their own Quality Assurance department. When sterilized off-site, the surgery kits are then 
+sent back to the manufacturer, before they are shipped out to the next tier in the supply chain. The one-way transit time from the manufacturer to 
+the sterilization provider is on average 48 hours and the sterilization takes usually 24 hours. There are two choices on how a manufacturer can 
+route its products, either to a medical surgical distributor or by using their own 3PL. Using a 3PL allows the manufacturer to control their product
+all the way to the final customer, but there are several efficiencies that can be gained by using a distributor. Amongst the advantages, 
+manufacturers have is that they are not responsible for the inventory and they can reduce their inventory outstanding and they can recognize revenue 
+much quicker.
+
+The distributors or 3PLs usually perform two functions: at the first level, they provide a central distribution function, and at the second level,
+to pre-position inventory near the hospital at a branch or loaner office location. In some cases the second level distribution is performed by the 
+salesperson themselves. They often carry trunk stock in their company-provided vehicles. This increases the amount of inventory in the supply chain
+significantly. The transfer of inventory typically occurs on a weekly basis, but emergency replenishments are possible as needed to fill demand.
+Another issue is the use of RFID tags, which are used to streamline the supply chain. The tags may be attached to the products at either the first
+or the second-tier distribution points.
+
+Some manufacturers route devices through multiple DCs. For example, devices flow to a Central Distribution Center, then to a Regional Distribution
+Center before being delivered to a health system’s central supply distribution center or individual hospitals. Others, like MTC, utilize loaner 
+offices and branch offices rather than regional distribution centers. Their devices often are delivered directly to the Operating Room by sales 
+representatives, bypassing Central Receiving and hospital storage facilities (Central Supply / Materials Management). Unused instruments and 
+devices are shipped back into the distribution network, where the kits are replenished, re-sterilized and shipped back to another hospital.

@@ -98,8 +98,20 @@ DHCP with DNSMasq:
   cat dhcp.conf #shows a file with 'interface=eth_srv' which configures for listening for DHCP queries from eth_srv
   sudo dnsmasq -d -q -C dhcp.conf #tells dnsmasq to start listening for queries using this config
 
-
-
+=======================================================================================================Week 3:
+Software Services:
+Services that employees use that allow them to do their daily job functions; word processers, email, web browsers, etc
+Platform Services=Provide a platform for developers to code, build and manage software applications
+Communication Services=Enable employees to talk to one another; phones, emails, 
+  IRC(Internet Relay Chat)=Protocol used for chat messages, free alternative to other paid options
+  XMPP(EXtensible Messaging and Presence Protocol)=Open source protocol used in instant messaging applications/social networking services
+Security Services=Add a layer of security protection to IT infrastructure
+Email Protocols=Requires a domain name setup for your company that you can use for your email domain shawn@sean.com
+  Run own managed server, Create a DNS record(MX record), 
+  Use an Email Service Provider(Google Suite), allows you to create email inboxes and more by paying a monthly fee for every user in organization
+  Pop3(Post Office Protocol)=Email Protocol that downloads email to device, then deletes email from server, only viewable on one device
+  IMAP(Internet Message Accesss Protocol)=Email Protocol, email stored on email server, can be read on multiple devices
+  SMTP(Simple Mail Transfer Protocol)=Email Protocol for sending Email
 
 
 

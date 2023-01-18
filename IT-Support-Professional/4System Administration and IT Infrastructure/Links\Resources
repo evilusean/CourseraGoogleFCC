@@ -78,3 +78,18 @@ Setup an Email Server:
 https://www.digitalocean.com/community/tutorials/why-you-may-not-want-to-run-your-own-mail-server
 Email Protocols:
 https://blog.servermania.com/what-protocols-send-receive-email-with-the-mail-server/
+
+Spam:
+please see the article: Help prevent spoofing and spam with DKIM: DomainKeys Identified Mail (DKIM): 
+https://support.google.com/a/answer/174124
+please see the article: Help prevent spoofing and spam with SPF Sender Policy Framework (SPF): 
+https://support.google.com/a/answer/33786
+please see the article: Help prevent spoofing and spam with DMARCDomain-based Message Authentication, Reporting, and Conformance (DMARC): 
+https://support.google.com/a/answer/2466580
+Stop Unwanted Robocalls and Texts - The United States Federal Communications Commission offers tips for stopping robocalls and phone scams.:
+https://www.fcc.gov/consumers/guides/stop-unwanted-robocalls-and-texts
+10 tips on how to help reduce spam - Microsoft’s tips on how to handle email spam. Some items suggested are specific to Microsoft Outlook.:
+https://www.fcc.gov/consumers/guides/stop-unwanted-robocalls-and-texts
+How to stop spam texts: 8 do’s and don’ts - Norton’s advice on preventing attacks from spam texts. Some of the methods listed for combating 
+  text spam are specific to the United States.:
+https://us.norton.com/internetsecurity-how-to-deal-with-spam-text-messages.html

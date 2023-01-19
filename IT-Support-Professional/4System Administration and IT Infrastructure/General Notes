@@ -106,12 +106,17 @@ Communication Services=Enable employees to talk to one another; phones, emails,
   IRC(Internet Relay Chat)=Protocol used for chat messages, free alternative to other paid options
   XMPP(EXtensible Messaging and Presence Protocol)=Open source protocol used in instant messaging applications/social networking services
 Security Services=Add a layer of security protection to IT infrastructure
+  HTTPS(Hyper Text Transfer Protocol Secure)=The secure version of HTTP, secured through encryption to your browser
+  TLS(Transport Layer Security) Protocol
+  SSL(Secure Socket Layer) Protocol
+  Certificate Authority=Grants a certificate to your website that you control the website to enable TLS
 Email Protocols=Requires a domain name setup for your company that you can use for your email domain shawn@sean.com
   Run own managed server, Create a DNS record(MX record), 
   Use an Email Service Provider(Google Suite), allows you to create email inboxes and more by paying a monthly fee for every user in organization
   Pop3(Post Office Protocol)=Email Protocol that downloads email to device, then deletes email from server, only viewable on one device
   IMAP(Internet Message Accesss Protocol)=Email Protocol, email stored on email server, can be read on multiple devices
   SMTP(Simple Mail Transfer Protocol)=Email Protocol for sending Email
+Licensing=When someone leaves the company, you can reuse their license, make sure to check terms and agreements
 
 
 

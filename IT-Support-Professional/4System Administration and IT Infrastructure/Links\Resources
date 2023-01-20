@@ -191,6 +191,8 @@ https://help.ubuntu.com/lts/serverguide/cups.html
 Webservers:
 Apache HTTP Vs nginx Vs Microsoft IIS:
 https://stackshare.io/stackups/apache-httpd-vs-microsoft-iis-vs-nginx
+Apache Official Docs:
+https://httpd.apache.org/docs/current/
 Azure Virtual Machine Scale Sets(Load Balancing):
 https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview
 

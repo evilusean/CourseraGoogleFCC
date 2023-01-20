@@ -128,8 +128,10 @@ When managing Printer IT infrastructure, you need to have a place to centrally m
   To set up a print server, all you have to do is install a print service on a server
 CUPS(Common Unix Printer System)=Linux preinstalled print service commonly preinstalled on linux systems
 When print service is set up, you need to add printer to client machine
-
-
+Platform Services:
+Webservers=Stores and serves content through the internet
+  Apache=most popular webserver, free and opensource
+Database Server=Allow us to store, query, filter and manage large amounts of data
 
 
 

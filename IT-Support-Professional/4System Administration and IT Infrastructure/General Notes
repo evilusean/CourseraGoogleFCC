@@ -122,6 +122,12 @@ NFS(Network File System)=A protocol that enables files to be shared over a netwo
   Requires you to set up a NFS server(linux environment pref), modify config files for directories you want shared access to, mount filesystem(host
 NAS(Network Attached Storage)=Computers that are optimized for file storage
 Mobile Synchronization=Make sure data is the same in 2 or more places, if you lose device - you'll still have data
+Printing Services:
+When managing Printer IT infrastructure, you need to have a place to centrally manage all your printers(Print Server)
+  +diagnostic information(low toner levels)+Printer Drivers Deployment
+  To set up a print server, all you have to do is install a print service on a server
+CUPS(Common Unix Printer System)=Linux preinstalled print service commonly preinstalled on linux systems
+When print service is set up, you need to add printer to client machine
 
 
 

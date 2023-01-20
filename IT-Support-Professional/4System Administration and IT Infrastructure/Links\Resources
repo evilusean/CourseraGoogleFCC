@@ -187,3 +187,14 @@ Print and Document Services Overview:
 https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831468(v=ws.11)
 Ubuntu - CUPS Print Server:
 https://help.ubuntu.com/lts/serverguide/cups.html
+
+Webservers:
+Apache HTTP Vs nginx Vs Microsoft IIS:
+https://stackshare.io/stackups/apache-httpd-vs-microsoft-iis-vs-nginx
+Azure Virtual Machine Scale Sets(Load Balancing):
+https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview
+
+Database Admin Jobs:
+https://www.bls.gov/ooh/computer-and-information-technology/database-administrators.htm
+Database Types:
+https://www.digitalocean.com/community/tutorials/sqlite-vs-mysql-vs-postgresql-a-comparison-of-relational-database-management-systems

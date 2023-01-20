@@ -1,0 +1,114 @@
+Print Services
+IT professionals are often responsible for adding and updating printer drivers and settings. This may occur when a printer is added to a network,
+moved to a new location, or there is a software update. Along with updating drivers and settings on printers, IT may also be responsible for
+adding network printers to employee computers. Correct printer configuration saves time, supplies, and effort. This reading covers printing 
+languages, basic printer configuration settings, printer sharing, printer security, and network scan services.
+
+Printing languages
+When choosing a print driver or troubleshooting issues with one, it is important to know which printing language the printer and computer
+operating system are using. Printing languages describe images on a screen to a printing device, so the printed output matches what is on screen. 
+Printing languages are also called page description languages. Two of the most common printing languages are Printer Control Language and 
+PostScript. 
+
+Printing languages can be either device-dependent or device-independent. Device-dependent means both the printer and computer are responsible
+for creating parts of the printed data. Device-independent means that the computer is solely responsible for creating the printed data.  It is
+helpful for IT to know if the printing languages used are device-dependent or independent as it can help them troubleshoot whether printing errors
+are occurring because of the driver on the computer or the printer’s hardware. 
+
+Printer Control Language (PCL)
+Printer Control Language (PCL) is a printing language created by Hewlett-Packard that is used by many printer brands and computer operating
+systems. PCL is printing device-dependent because both the printer and computer are responsible for creating parts of the printed data. Because 
+PCL is device-dependent, the output may not be the same on every printing device. 
+
+PostScript (PS)
+PostScript was created by Adobe and is a printing language used by many printer brands but most commonly used in Macintosh systems. Unlike PCL,
+PostScript does not use the printer to create data. PostScript is device-independent, and the output is the same on any printer. If an error 
+arises when PostScript is used, then it is usually an error with the driver on the computer. 
+
+Basic printer configuration settings
+Configuration settings tell a printer how to complete a print job including the size, type of paper, number of sides, and use of color. IT 
+professionals help employees change and select the correct settings for their document. The following are basic configuration settings that can 
+be adjusted using printer settings. 
+
+Orientation is the direction in which a document is printed. The main options for most printers are portrait (vertical) and landscape
+(horizontal).
+
+Print Quality refers to the level of detail that both the paper and the print settings are set to. The higher the DPI (Dots Per Inch), the higher
+the resolution or quality of the print.
+
+Tray settings tell the printer which tray of paper to use for the print job. Different trays can hold different paper sizes and types. Telling the 
+printer to select paper from the correct tray ensures that the document is printed as it was designed.
+
+Duplex allows for printing on both sides of the paper. Printers can print information on one side (simplex) or both sides of the paper. Many 
+brochures, booklets, and packets are printed on both sides to save paper. 
+
+For more information on how to update printer settings for high-quality printing see the article in the reference section below.  
+
+Sharing a printer on a network
+Printers can be shared on a network allowing multiple computers to access one printer across the network instead of having to be wired to the 
+computer directly. IT professionals maintain and set up networks that include shared printers. For more information on sharing printers on your
+network read the article in the reference section below.  
+
+Network scan services
+Network scan services allow a printer with scanning capabilities to create a file of a scanned image and upload or send it to a location on the 
+network or in the cloud, or attach the file to an email and send it. Employees often need IT support for ways to use this type of technology. 
+The following network scan services can be used for fast file uploads or attachments. 
+
+Email scan service allows a document to be scanned directly from the printer to email. 
+
+Server Message Block (SMB) protocol allows a document to be a shared resource once scanned by the printer. 
+
+Cloud services enable a document to be scanned from the printer and uploaded directly to the cloud. 
+
+Printer security
+Printer security protects access and tracks the activity of a print device. Printer security aims to ensure that only authorized users can
+use a printer. Setting up and monitoring proper security permissions falls under the job of an IT professional.  
+
+Some basic measures for limiting access to printers and tracking print activity are:
+
+User authentication commonly requires a user to enter a username and password before completing the print job. 
+
+Badges are usually a physical card a user must scan at the printer to complete the print job. 
+
+Secured prints require a user to enter a user-created code at the printer to complete the print job. 
+
+Audit logs track users that have accessed the printer, including the date and time of use. 
+
+Key takeaways
+IT support professionals are often responsible for printer management. It is helpful to know about printing languages, printer configuration,
+networking, and security. 
+
+Printer Control Language is device-dependent, while Postscript is device-independent.
+
+Some basic printer configuration settings are orientation, print quality, tray settings, and duplex.
+
+Having a printer on a network enables multiple users to share printers. 
+
+Network scan services allow a printer with scanning capabilities to create a file of a scanned image and upload or send it to a location on the
+network, on the cloud, or email.
+
+Printers have security and tracking features such as user authentication, badges, secured print, and audit logs.
+
+Resources for more information 
+For more information about software and driver downloads for specific brand devices,  review the links below. 
+
+HP Customer Support - Software and Driver Downloads
+https://support.hp.com/us-en/drivers/printers
+Cannon Customer Support - Software and Driver Downloads
+https://www.usa.canon.com/internet/portal/us/home/support/drivers-downloads
+Xerox Customer Support - Software and Driver Downloads
+https://www.support.xerox.com/
+Ricoh Customer Support - Software and Driver Downloads
+https://www.ricoh-usa.com/en/support-and-download
+HP - How to Update Printer Settings for the Highest Quality Printing
+https://www.hp.com/us-en/shop/tech-takes/update-settings-for-quality-printing
+Microsoft Support - Share your network printer
+https://support.microsoft.com/en-us/windows/share-your-network-printer-c9a152b5-59f3-b6f3-c99f-f39e5bf664c3
+Xerox - Scan a Document to an Email Address
+https://www.support.xerox.com/en-us/article/en/2108787
+HP Customer Support - Set up Scan to Network Folder
+https://support.hp.com/us-en/document/ish_3186181-3148520-16
+Dell - How to Configure Your PC or Server for SMB (Server Message Block) Scanning on Dell Laser Printers
+https://www.dell.com/support/kbdoc/en-us/000175311/how-to-configure-your-pc-or-server-for-smb-server-message-block-scanning-on-dell-laser-printers
+Xerox - Scan to Cloud or Enable Remote Destination
+https://www.support.xerox.com/en-us/article/en/Uv2Na7HiId04WLNUcziK48

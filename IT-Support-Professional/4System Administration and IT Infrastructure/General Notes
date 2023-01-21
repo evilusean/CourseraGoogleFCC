@@ -139,5 +139,16 @@ HTTP Status Codes=codes or numbers that indicate sine sirt if error or info mess
   5xx Server Side Issue=HTTP status codes that start with 5xx indicate an issue on the server side
   2xx Succces=Request is successful, codes that begin with 2xx denote Success!
 Google Chrome F12(Ctrl+Shift+I):Opens developer tools
-
+Cloud Concepts:
+SaaS(Software as a Service)=The Software is already preconfigured and the user isn't deeply involved in the cloud configuration
+IaaS(Infrastructure as a Service)=You're hosting your own services in the cloud. You need to decide how you want the infrastructure to look,
+  depending on how you want to run it
+Regions=A geographical location containing a number of data centers, when setting up a cloud service you need to consider regions(Zone)
+  If a zone fails for some reason, tbe others are still available and services can be migrated without visibily affecting users
+Public Cloud=Cloud services provided to you by a third party
+Private Cloud=When your company owns the services and the rest of your infrastructure - whether onsite or remote data center
+Hybrid Cloud=A mixture of both public and private cloud
+Load balancer=Ensures that each VM(virtual machine) receives a balanced number of queries
+Autoscaling=It allowsthe service to increase or reduce capacity as needed, while the service owner only pays for the cost of the machines that are
+  in use at any given time, you can set up monitoring and alerting to detect and correct any problems that need correcting
 

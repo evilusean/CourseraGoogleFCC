@@ -1,0 +1,93 @@
+Module 3 Glossary
+New terms and their definitions: Course 4 Week 3
+Autoscaling: A system that allows the service to increase or reduce capacity as needed, while the service owner only pays for the cost of the machines that are in use at any given time
+
+Databases: Databases allow us to store query, filter, and manage large amounts of data
+
+File storage service: Allows to centrally store files and manage access between files and groups
+
+HTTPS: Hypertext Transfer Protocol Secure is a secure version of HTTP that ensures the communication your web browser has with the website is secured through encryption.
+
+HTTP status code: The codes or numbers that indicate some sort of error or info messages that occurred when trying to access a web resource
+
+Hybrid cloud: Used to describe situations where companies might run things like their most sensitive proprietary technologies on a private cloud or on premise while entrusting their less sensitive servers to a public cloud
+
+Load balancer: Ensures that each VM receives a balanced number of queries
+
+Network file system: A protocol that enables files to be shared over a network
+
+Platform services: A platform for developers to completely build and deploy software applications, without having to deal with OS maintenance, server hardware, networking or other services that are needed to use the platform tools
+
+Private cloud: When a company owns the services and the rest of the cloud infrastructure, whether on-site or in a remote data center
+
+Public cloud: The cloud services provided by a third party
+
+Regions: A geographical location containing a number of data centers
+
+Software services: The services that employees use that allow them to do their daily job functions, such as word processors, Internet browsers, email clients, chat clients, and more
+
+Web server: A web server stores and serves content to clients through the Internet.
+
+
+
+Terms and their definitions from previous weeks
+C
+
+Cloud computing: The concept and technological approach of accessing data, using applications, storing files, etc. from anywhere in the world as long as you have an internet connection
+
+D
+
+Data center: A facility that stores hundreds, if not thousands of servers
+
+Deployment: Hardware is set up so that the employee can do their job
+
+Domain Name System (DNS): A global and highly distributed network service that resolves strings of letters, such as a website name, into an IP address
+
+I
+
+IT Infrastructure: The software, the hardware, network, and services required for an organization to operate in an enterprise IT environment
+
+Intranet: An internal network inside a company, accessible if you are on a company’s network
+
+K
+
+KVM Switch: Keyboard, video, & mouse switch that looks like a hub that you can connect multiple computers to and control using one keyboard, mouse, and monitor
+
+M
+
+Maintenance: Where software is updated and hardware issues are fixed if, and when, they occur
+
+N
+
+NTP: Network Time Protocol, keeping clocks synchronized on machines connected to a network
+
+P
+
+Procurement: Hardware is purchased or reused for an employee
+
+Production: The parts of the infrastructure where certain services are executed and serve to its users production
+
+Proxy server: An intermediary between a company's network and the Internet, receiving network traffic and relaying that information to the company network
+
+R
+
+Reproduction case: Recreating an error to test a solution to make sure the problem is gone after a fix has been applied
+
+Retirement: Hardware becomes unusable or no longer needed, and it needs to be properly removed from the fleet
+
+Rollback: Reverting to the previous state before you made changes
+
+S
+
+Secondary or stand-by machine: A machine that is the same as a production machine, but won't receive any traffic from actual users until enabled
+
+Server: Software or a machine that provides services to other software or machines
+
+Server operating systems: Regularly operating systems that are optimized for server functionality
+
+System Administration: The field in IT that is responsible for maintaining reliable computer systems, in a Multi-user environment
+
+T
+
+Test environment: A virtual machine running the same configuration as a production environment, but isn't actually serving any users of the service
+

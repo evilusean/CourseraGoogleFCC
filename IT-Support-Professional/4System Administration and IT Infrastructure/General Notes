@@ -132,7 +132,12 @@ Platform Services:
 Webservers=Stores and serves content through the internet
   Apache=most popular webserver, free and opensource
 Database Server=Allow us to store, query, filter and manage large amounts of data
-
-
+TroubleShooting Platform Services:
+HTTP Status Codes=codes or numbers that indicate sine sirt if error or info messages that occured when trying to access a web resource
+  404 Not Found=Indicates that the URL you entered doesn't point to anything
+  4xx Client Side Issue=HTTP status codes that start with 4xx indicate an issue on the client side
+  5xx Server Side Issue=HTTP status codes that start with 5xx indicate an issue on the server side
+  2xx Succces=Request is successful, codes that begin with 2xx denote Success!
+Google Chrome F12(Ctrl+Shift+I):Opens developer tools
 
 

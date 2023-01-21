@@ -1,0 +1,79 @@
+Common Cloud Models
+The cloud is a part of everyday life in the modern internet world. It gives users a place to work, access, and store data from any system plugged
+into the cloud. Being able to work with the cloud is a vital skill in IT. This reading will cover common cloud services and four types of cloud 
+computing.
+
+Types of cloud services
+Companies use cloud services to provide access to internal tools, develop software, store data, and more. The three primary cloud services are
+Software as a service, Platform as a service, and Infrastructure as a service. The Google Cloud Platform is a prime example of a system that 
+employs all three types of cloud services.
+
+
+Image 1. Software as a Service SaaS at the top of pyramid. Deliver applications over the internet managed by a third party.
+Image 2. Platform as a Service PaaS middle of pyramid. Used to develop custom applications and products.
+Image 3. Infrastructure as a Service IaaS bottom of pyramid. Includes cloud storage, networking, and virtual machines.
+
+
+Software as a Service (SaaS) 
+SaaS providers allow users to use their software with an internet browser or application instead of having to download software to a specific 
+device. Users access information from any device through a login. The SaaS vendor stores all user data and files online instead of on the user’s
+physical equipment. SaaS typically uses a subscription model for its services. Hacking is a concern when using this service since the full-service
+run in the cloud. 
+
+Platform as a Service (PaaS) 
+PaaS offers computer hardware and software in the cloud that allows users to develop and deploy applications or cloud based services. PaaS makes
+buying, developing, configuring, managing, and installing software and hardware unnecessary. 
+
+Infrastructure as a Service (IaaS)
+IaaS provides an IT infrastructure to a company over the internet and on-demand. IaaS provide access to things like virtual machines, containers,
+networks, and storage. This service reduces the need to purchase expensive hardware. IaaS allows companies to centralize infrastructure for faster
+disaster recovery. 
+
+Additional cloud services 
+The following cloud services are more narrow in focus and are designed to solve unique problems. 
+
+VPN as a Service (VPNaaS)
+VPNaaS secure networks through a cloud-based connection between the employee and the organization’s network. Using this approach eliminates the 
+need for a physical VPN endpoint. 
+
+Function as a Service (FaaS)
+FaaS is an event-based service that lets developers do the building, running, and managing functions directly in the cloud without needing to
+maintain a server. Event-based systems use an event, such as a website click, to trigger communication within a system.
+
+Data as a Service (DaaS)
+DaaS provides data access as a service to a business. It manages the data companies generate and uses APIs to deliver data from various sources 
+on demand. DaaS allows companies to organize and access the data they need. DaaS monetize by providing access to data. By increasing accessibility 
+to data, DaaS can lower the cost of data-driven decision making, remove personal bias in data collection, and innovation. 
+
+Blockchain as a Service (BaaS)
+BaaS is a newer and increasingly mainstream cloud model that uses a non-centralized system. This model uses encrypted, connected blocks of 
+information for higher security than standard cloud services. BaaS is used to store smart contracts and high-security documents. This model 
+authenticates users without needing additional applications. SaaS services may adapt BaaS as a standard feature to address the risk of hacking. 
+
+Four types of cloud computing
+Cloud computing is the delivery of computing services like the cloud services mentioned above. There are four main types of cloud computing:
+
+Public clouds: cloud environments created from IT infrastructure owned by a provider such as Google Cloud or Amazon Web Services. Public clouds
+host the data of multiple companies. Be aware that public clouds do not provide absolute security for the information it stores. 
+
+Private clouds: serve a single business or organization. The cloud runs behind an internal firewall. Private clouds can be deployed and managed by
+a third-party vendor. 
+
+Multiclouds: involve using more than one cloud service from more than one vendor. These can be private or public. 
+
+Hybrid clouds: blend at least two public or private cloud services and connects them with internal networks, such as local area networks or VPNs.  
+
+Cloud services and cloud computing work together to meet the needs of companies and organizations. 
+
+Key Takeaways
+Companies use the cloud for many tasks and services. 
+
+The three primary cloud services are SaaS, PaaS, and IaaS. 
+
+Additional cloud services include VPNaaS, FaaS, DaaS, and BaaS.
+
+Four main types of cloud computing are public clouds, private clouds, multiclouds, and hybrid clouds that deliver cloud services.
+
+Resource for more information
+For more information on the Google Cloud Platform and the services it offers, visit this website
+https://cloud.google.com/gcp?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-e-dr-1011347&utm_content=text-ad-none-any-DEV_c-CRE_491349594127-ADGP_Desk+%7C+BKWS+-+EXA+%7C+Txt+~+Google+Cloud+Platform+Core-KWID_43700060017921803-kwd-6458750523&utm_term=KW_google%20cloud-ST_google+cloud&gclid=CjwKCAjwwo-WBhAMEiwAV4dybYTq7YVFRkH9YHe5b7c2rEtPikbIDbl4vDxaJVvDzpdmg4lFEa0mWxoCM-YQAvD_BwE&gclsrc=aw.ds.

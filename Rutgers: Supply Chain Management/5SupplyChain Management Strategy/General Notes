@@ -14,7 +14,7 @@ Factors influencing Logistics Networks: Cost Vs Service
 Logistics Customer Servce:Keep customers happy, by keeping your promises - no stock outs, meet lead times
 fill rate=percentage of orders shipped from inventory
 
-==========================================================================================Week 2:
+==========================================================================================Week 3:
 Operations:
 Lean Operations=Management Philosophy that began with Toyota, produce as much product given a set of resources
   Kaizen=Continuous Improvement
@@ -36,3 +36,18 @@ Warehouses:
   Quality/Redundancy Checks-ensure it is correct product being shipped
   Productivity-Throughput=How fast you can ship goods
 
+==========================================================================================Week 4:
+Naive Forecast=What we sold yesterday, that's what we're going to sell today, what we sell today, that's what we're going to sell tommorrow
+  Ft = D(t-1) F=Forcast D=Demand T=Time period
+  Use the previous time period to estimate the next time period
+  Doesn't Filer out any noise, but is a good benchmark to use against other forecast methods
+Cumulative Mean Forecast:
+  Take all the data that you have, average it and that is your forecast
+  Ft = Sum D / t -1  D=Demand
+Forecast Accuracy:
+  Bias=Do you have a tendancy to overforecast or underforecast
+Mean Error=Sum(D-F) / t(ME) D=demand F=Forecast / Time Period * Mean Error
+MAPE(Mean Absolute Percent Error)= SUM(D-F / D) / t
+MSE(Mean Squared Error):
+  Give more weight to errors
+  (D-f)squared / t

@@ -51,3 +51,12 @@ MAPE(Mean Absolute Percent Error)= SUM(D-F / D) / t
 MSE(Mean Squared Error):
   Give more weight to errors
   (D-f)squared / t
+Moving Average:
+  Takes a subset of data and averages it, changes over time 50/200 day moving average
+  A small N(forecast time period) makes it very reactive
+  A large N makes it very stable
+Exponential Smoothing:
+  Uses an Alpha(0-1) to make it more reactive or more stable
+  Ft=AlphaDt-1+(1-Alpha)Ft-1
+  You need to check with a benchmark to find the best alpha
+  

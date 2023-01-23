@@ -152,3 +152,18 @@ Load balancer=Ensures that each VM(virtual machine) receives a balanced number o
 Autoscaling=It allowsthe service to increase or reduce capacity as needed, while the service owner only pays for the cost of the machines that are
   in use at any given time, you can set up monitoring and alerting to detect and correct any problems that need correcting
 
+=======================================================================================================Week 4:
+Directory Services:
+Useful for organizaing data and making it searchable for an organization
+Directory Server=Contains a lookup service that provides mapping between network resources and their network addresses
+  Instead of storing User accounts locally on every machine, all that information can be stored on a directory server
+Replication=The stored directory data can be copied and distributed across a number of physically distributed servers, but still appear as one
+  unified datastore for querying and administrating
+OU's(Organizational Units)=Containers=Can contain objects or more OU's, OU's are like folders and can contain files, folders and objects
+DAP(Directory Access Protocol)=XStart 500 directory standard, 1988 released multiple protocols
+DISP(Directory Information Shadowing Protocol)
+DSP(Directory System Protocol)
+DOP(Directory Operational Bindings Management Protocol)
+LDAP(Lightweight Directory Access Protocol)=Most Popular Access Protocol
+Open LDAP=Supports Most OS's, Linux/Unix/Windows, 
+AD(Active Directory)=Microsofts implementation

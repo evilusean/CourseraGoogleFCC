@@ -181,6 +181,18 @@ LDAP Authentication=like a private phone book
 Bind Operation=Authenticates clients to the directory server
   Anonymous Vs Simple Vs SASL(Simple Authentication and Security Layer)
 Kerberos=A network authentication protocol that's used to authenticate user identity, secure the transfer of user credentials and more
-
-
-
+AD(Active Directory): The Native Directory Service for Microsoft Windows
+Introduced with Windows Server in 2000
+Works Similar to Open LDAP, Can speak LDAP protocol and interact with Windows, Linux, and OSX
+Can manage a fleet of machines, provides directory services/centralized authentication, central repository for GPOs,
+GPO(Group Policy Object)=Ways to manage authentication/configuration of Windows Machines
+ADAC(Active Directory Administrative Center)=Tool for directory services
+Contains Objects, some are containers which contain other objects, OU(Organizational Units) like a folder/directory, 
+Hierarchical Format, like a tree. Domains will have a DNS name that lives in DNS zone
+Forest=Contains one or more domains, accounts can share resources between domains in the same forest
+  Computer Containers=Computer Accounts are created when a computer joins the AD domain
+  DC(Domainn Controllers)=A container that has controllers created by default, serve as DNS servers and provide name resolution/service discovery
+    Provide Central Authentication using Kerberos, decide when users can log on to the domain and access to shared resources
+  Users Container=Where new AD users and groups are created by default
+Read-write replicas=each has a complete copy of the AD domain database and can make changes to it
+FSMO(Flexible Single Master Operations)=Only one DC can safely make changes at a time

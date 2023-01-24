@@ -167,3 +167,12 @@ DOP(Directory Operational Bindings Management Protocol)
 LDAP(Lightweight Directory Access Protocol)=Most Popular Access Protocol
 Open LDAP=Supports Most OS's, Linux/Unix/Windows, 
 AD(Active Directory)=Microsofts implementation
+Centralized Management:
+A central service that provides instructtions to all of the different parts of my IT infrastructure
+AAA(Authentication, Authorization, Accounting)=Directory Services provide centralized AAA
+RBAC(Role Based Access Control)=Use users groups to grant access to resources instead of individually granting access
+Configuration Management=By centralizing the configuration management of your computers/software you can save time using logon scripts, etc
+  Chef Vs Puppet Vs SCCM=Configuration Management Tools
+
+
+

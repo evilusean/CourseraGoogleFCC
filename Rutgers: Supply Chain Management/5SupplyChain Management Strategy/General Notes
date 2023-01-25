@@ -59,4 +59,36 @@ Exponential Smoothing:
   Uses an Alpha(0-1) to make it more reactive or more stable
   Ft=AlphaDt-1+(1-Alpha)Ft-1
   You need to check with a benchmark to find the best alpha
-  
+
+==========================================================================================Week 5:
+Sourcing:
+Purchasing:
+Buying Goods and services
+Inputs(Materials) + Indirect Materials(Overhead, Wages, People, etc) + Capitol Goods(Land, Factories, Warehouses, Machinery)
+Purchasing Components x5 steps:
+  Processing Purchase Orders=Let's the supplier know that we want the items from them, they will initiate sales
+  Advanced Shipping Notice(receiving/monitoring)=Let's you know when the goods are supposed to arrive
+  Confirming Receipt of goods
+  Processing Invoices
+  Payment for goods and services
+Procurement:
+Procurement Department=Value added by Centralizes all activities that revolve around suppliers, managing costs/negotiation
+Volume commitments, seller sells more and buyer buys more for less
+Risk Management=Service Levels(same quality), Catastrophic Events(Natural Disasters), Supplier going out of business, 
+Supply Management:
+Kraljic Matrix=
+Profit Impact(Vertical) Supply Risk(Horizontal)
+Strategic Suppliers=High Profit Impact/High Supply Risk(Top Right)=Partnerships, win/win situations, tighter integration
+Bottleneck Suppliers=Low Profit Impact/High Supply Risk(Bottom Right)=Manage Risk, Multiple Sources
+Leverage Suppliers=High Profit Impact/Low Supply Risk(Top Left)=Reduce Cost, Best price, quality, service, Negotiations
+NonCritical Suppliers=Low Profit Impact/Low Supply Risk(Bottom Left)=Simplify the Process, Automate, Streamline
+  Classify-All purchased goods and services
+  Analyze-The supply market
+  Determine-Strategic Supply position
+  Develop-Materials, strategies and action plans
+Strategic Sourcing:
+Establish Long term relationships with strategic suppliers, win/win, innovate/create value together
+Make Versus Buy:
+What are the operations/boundaries of the company? What are we good at? What do the customers want? Do we have a competitive advantage?
+Could the resources be better spent elsewhere?
+

@@ -196,3 +196,31 @@ Forest=Contains one or more domains, accounts can share resources between domain
   Users Container=Where new AD users and groups are created by default
 Read-write replicas=each has a complete copy of the AD domain database and can make changes to it
 FSMO(Flexible Single Master Operations)=Only one DC can safely make changes at a time
+Managing Active Directory:
+  Domain Admins=Administrators of Active Directory Domain, can make any changes
+  Enterprise Admins=Administrators of Active Directory Domains
+  Domain Users=Contains every user account in a domain
+  Domain Computers=Contains all computers joined to domain, except domain controllers
+  Domain Controllers=Contains all domain controllers
+Active Directory Users and Groups:
+SAM(Security Account Manager)=database that stores usernames and passwords
+UserSamAccountName=Log on name used for user, Each user account must have a unique name within domain
+To create many accounts at once, create a script, every command in ADAC is run in powershell,
+  You can view cmdlets used in powershell bottom left "Windows Powershell History"
+Security Group=A group type; can contain user/computer accounts, used to grant or deny IT resources
+Distribution Group=Only used to group accounts and contacts for email communication(Email list, can include people from outside domain)
+Group Scope:
+  Domain Local=Used to assign permissions to a resource
+  Global=Used to group accounts into a role
+  Universal=Used to group global roles in a forest
+Managing Active Directory User Passwords:
+Once a user changes their password in Active Directory, that change is effective to every machine they are permitted to log on to
+One-Way Cryptographic Hashes=AD doesn't store a users password, it stores a one-way cryptographic hash, PW can turn into a hash
+  hashes can't turn into a PW, you can't look up a PW even if you wanted too
+If there's more than one person who can authenticate using the same username and password, then auditing becomes difficult or impossible
+EFS(Encrypting File System)=Can lose access to their files if they reset password
+Workgroup Computer=A computer that isn't joined to a domain, a standalone computer, not centrally administrated
+  Join a Domain: Computer -> System Properties -> Computer Name, domain, and workgroup settings -> Change Settings -> Change -> Member of <Domain>
+  Powershell: Add-Computer -DomainName 'example.com' -Server 'dc1'
+Functional Level(Version)=The Levels of functionality that version of Active Domain is capable of; documentation:
+  https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-functional-levels

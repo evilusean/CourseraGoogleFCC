@@ -224,3 +224,25 @@ Workgroup Computer=A computer that isn't joined to a domain, a standalone comput
   Powershell: Add-Computer -DomainName 'example.com' -Server 'dc1'
 Functional Level(Version)=The Levels of functionality that version of Active Domain is capable of; documentation:
   https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-functional-levels
+GPO(Group Policy Object)=A set of policies and preferences that can be applied to a group of objects in the directory
+  Can standardize user preferences, create login/logoff scripts, configure event log what events and where sent, install/block software
+  Can contain computer configuration, user configuration, or both
+When you link a GPO, all of the compuster or users under that domain, site, or OU will have that policy applied
+Policies=Settings that are reapplied every few minutes, and aren't meant to be changed by the local administrators
+Group Policy Preferences=Settings, that in many cases, are meant to be a template for settings
+Windows Registry=Hierarchical database of settings that Windows, and many Windows applications use for storing configuration data
+gpmc.msc=GPMC(Group Policy Management Console)=Tool for creating and managing Group Policies
+   Server Manager -> Tools Menu -> GPMC
+  Group Policy Objects Container=Holds all GPO's found in domain
+  Group Policy Results=Troubleshooting Tool, used to check on group policies already applied
+  WMI(Windows Management Instrumentation) Filters=Used to define powerful targetting rules for your GPO's
+AGPM(Advanced Group Policy Management)=A set of addon tools, that give you some added revision tools for GPM
+Group Policy Precedence=GPO's are applied based upon containers, least specific(largest) are applied first, most specific(smallest) applied last
+  Lowest numbered policy applied first, lowest numbered policies applied last
+RSOP(Resultant Set of Policy)=When you add all the group polcies together and apply precedence rules
+  RSOP Report: Group Policy Results -> Right Click -> Group Policy Result Wizard
+Group Policy TroubleShooting:
+One of the most common issues us when a user isn't able to login to their computer, or isn't able to authenticate Active Directory domain
+  Network issues, caps lock, failed log in attempts can all be issues with login
+_ldap._tcp.dc._msdcs.DOMAIN.NAME=DNS lookup for SRV records, records that are used for DNS domains, if you can't find-might be misconfigured
+A common issue that you might have to troubleshoot is when a GPO-defined policy or preference fails to apply to a computer

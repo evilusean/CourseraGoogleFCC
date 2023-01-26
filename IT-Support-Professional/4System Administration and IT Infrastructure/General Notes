@@ -269,4 +269,11 @@ When an unexpected event occurs, your main objective is to resume normal operati
 The best way to be prepared for a data-loss event is to have a well-thought-out disaster plan and procedure in place
   Disaster plans should involve making regular backups of any and all critical data that's neccesary for your ongoing business processes
 Post-Mortem=A way for you to document any problems you discovered along the way, and ways you fixed them so they don't happen again
+What data do you need to backup? Databases(Email, Sales), Financial Spreadsheets, Server Configurations
+Data can be backed up locally onsite, or backed up offsite to remote systems or both
+Data should be transmitted and stored securely(encrypted)
+Data Tapes=Use spools of magnetic tape that allow data to be written and read from them
+rsync=A file transfer utility that's designed to efficiently transfer and synchronize files between locations and computers(has compression/SSH)
+Time Machine=MacOSx can restore an entire machine from backup,incremental backup model
+Backup and Restore=Windows file based zip archive, or system image is saved 
 

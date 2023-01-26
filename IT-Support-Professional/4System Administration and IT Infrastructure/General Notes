@@ -246,3 +246,19 @@ One of the most common issues us when a user isn't able to login to their comput
   Network issues, caps lock, failed log in attempts can all be issues with login
 _ldap._tcp.dc._msdcs.DOMAIN.NAME=DNS lookup for SRV records, records that are used for DNS domains, if you can't find-might be misconfigured
 A common issue that you might have to troubleshoot is when a GPO-defined policy or preference fails to apply to a computer
+
+MDM(Mobile Device Management):
+Profiles contain settings for a device, automatically installing apps and configuring network settings, security settings(encryptions/lockscreen)
+Remote Wipe=A factory reset that you can trigger from your central MDM, rather than having to do it in person on the device
+EMM(Enterprise Mobility Management)=Pushes MDM policies to device
+
+OpenLDAP(Lightweight Directory Access Protocol):
+Any Operating system, Free and opensource-Similar to Active Directory
+can be managed through command line or easier through PHP LDAP Admin
+LDIF File:A text file with key:value pairs
+ldapadd=Takes the input of an LDIF file and adds the context of the files
+ldapmodify=Modifies an existing object
+ldapdelete=Removes an object that ldif file refers to
+ldapsearch=Will search for files in your directory database
+
+

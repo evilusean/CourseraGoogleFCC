@@ -276,4 +276,12 @@ Data Tapes=Use spools of magnetic tape that allow data to be written and read fr
 rsync=A file transfer utility that's designed to efficiently transfer and synchronize files between locations and computers(has compression/SSH)
 Time Machine=MacOSx can restore an entire machine from backup,incremental backup model
 Backup and Restore=Windows file based zip archive, or system image is saved 
-
+Testing Backups:
+Restoration Procedures=Should be documented and accessible so that anyone with the right access can restore operations when needed
+Disaster Recovery Testing=Should happen every once a year, scenario driven to learn and fix gaps
+Ways to perform backups:
+  Full Backup=Making a copy of the data
+  Differential Backup=Only backup files that are changed, good practice to do infrequent full backups, with frequent differential backups
+  Regular Incremental Backups=When only the data that's changed in files since the last incremental backup is backed up
+  File Compression=Way to save space while backing up files, archiving also saves space
+RAID(Redundant Array of Independant Disks):Takes multiple physical disks and combines them into one large virtual disk

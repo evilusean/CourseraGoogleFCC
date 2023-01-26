@@ -261,4 +261,12 @@ ldapmodify=Modifies an existing object
 ldapdelete=Removes an object that ldif file refers to
 ldapsearch=Will search for files in your directory database
 
+=======================================================================================================Week 5:
+Data Recovery:
+The Process of trying to restore data after an unexpected event that results in data loss or corruption
+Backups: An ounce of prevention is worth a pound of cure, create backups regularly
+When an unexpected event occurs, your main objective is to resume normal operations as soon as possible, while minimizing business disruptions
+The best way to be prepared for a data-loss event is to have a well-thought-out disaster plan and procedure in place
+  Disaster plans should involve making regular backups of any and all critical data that's neccesary for your ongoing business processes
+Post-Mortem=A way for you to document any problems you discovered along the way, and ways you fixed them so they don't happen again
 

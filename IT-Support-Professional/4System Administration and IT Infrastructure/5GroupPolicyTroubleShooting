@@ -1,0 +1,166 @@
+Group Policy Troubleshooting
+This reading expands upon a previous topic on various approaches to troubleshooting common Group Policy problems. 
+
+Terminology
+Important terminology used with Microsoft Windows Server Group Policies:
+
+Group Policy Object (GPO): A set of Active Directory (AD) Group Policy configurations that controls the appearance and behaviors for groups of 
+  computer systems and/or groups of end users. 
+Group Policy Management Console (GPMC): A console that is used to create, manage, edit, and link GPOs. The GPMC provides thousands of options for
+  computer and user settings such as Control Panel items, Registry settings, and environmental variables. Policy settings are refreshed every 90 
+  minutes, so changes are not applied immediately. The GPMC can be used to create GPOs that control registry-based policies and software
+  installations, as well as options for:
+  security
+  maintenance
+  scripts
+  folder redirection
+  
+Active Directory (AD) containers: AD containers can be linked to GPOs. AD containers include:
+Sites: Physical sites or aspects of a network, which are linked to AD Domains. Can be used to group and connect geographically dispersed locations
+  into the same domain. 
+Domain: A collection of objects in an AD network, such as computers, users, and groups. Can contain multiple AD Sites and be linked to multiple
+  GPOs. 
+Organizational Unit (OU): Collectively groups end users, computers, groups, and/or other OUs. OUs can reflect an organization’s hierarchy
+  and business divisions. For example, an organization might have separate OUs for executives, administration, accounting, IT, sales, marketing, 
+  vendors, etc. 
+
+GPOs process order: Windows will apply GPOs in the following order:
+	1) The Local GPO
+	2) GPOs linked to Sites
+	3) GPOs linked to Domains
+	4) GPOs linked to OUs
+
+Resultant Set of Policies (RSoPs): A report of AD Group Policy settings that indicates how all GPO settings are hierarchically inherited by end 
+  users and computers. RSoP reports can be collected for evaluation using RSoPs logging. 
+Windows Management Infrastructure (MI) and Windows Management Instrumentation (WMI): MI is the next generation of WMI. However, both MI and WMI 
+  are fully supported by Microsoft and MI is backwards-compatible with WMI. MI/WMI provide the operations infrastructure and management data 
+  in Windows. They also are used for scripting administrative tasks to run on remote systems. 
+
+
+Group Policy troubleshooting tools :
+The following command line tools can be used for troubleshooting Group Policy issues:
+
+gpresult: Displays the RSoP report or values for a computer and user account. This information can help to ascertain which configuration settings
+  have been applied and which settings were overridden. A few of the switches available to the gpresult command include:
+/s host - Displays the RSoP values of a remote computer.
+/u user-account - Displays the RSoP values of an end-user.
+/p password - Displays the RSoP values of an end-user password policy.
+/r - Displays the RSoP summary of applied GPOs.
+/z - Turns on verbose mode to display details of the RSoP applied settings.
+
+gpedit: The Group Policy Editor, which is a robust tool for changing Registry settings related to the Control Panel, Settings, user profiles,
+  system configurations, third-party software, and more. 
+gpupdate: Command that can be used to force a new or edited GPO to be applied immediately using the /force switch. If the policy setting requires 
+  the users to logoff or reboot, the switches /logoff or /boot can be added to the command.
+
+Additionally, system event logs are important tools for most Windows troubleshooting issues:
+Event Viewer and Windows Logs: The Windows Event Viewer is an invaluable tool for viewing Windows Logs. These tools help IT Support specialists 
+  track system problems and events related to items like applications, user logins, security, and systems. To open the Windows Event Viewer, 
+  click on the Start menu and type “Event Viewer”. Any error messages or codes found in the logs can be investigated using the Microsoft Knowledge 
+  Base (support.microsoft.com), as well as through an internet search. The main Windows Logs include:
+System log: Records Windows OS events like hardware conflicts, driver load failures, service load failures, network issues, and more.
+Application log: Records application processes and utilities events/errors.
+Security log: Records system security audit information.
+Setup log: Records installation events and errors.
+
+==============================================================================================================================================
+Group Policy Troubleshooting Example
+As an IT Support professional, you may need to troubleshoot Group Policy issues in Windows. The following are a few examples of the most common
+problems encountered when working with Group Policies. Included are suggested tips on how to troubleshoot these issues using tools you’ve learned
+about previously. 
+
+Scenario 1: Group Policy settings are not being applied 
+Imagine that you are an IT Support Analyst for an organization. You recently made changes to several settings on a Group Policy Object (GPO).
+  However, the group policy changes do not appear to be active for the target end users or computers. You must troubleshoot to uncover the root of
+  the problem and to fix it. 
+Check the GPO Scope. In the Group Policy Management utility, select the GPO that you recently changed and go to the Scope tab. Check the Links 
+  section to see if the GPO that you changed is linked to the correct Organizational Units (OUs). The linked OUs should contain the target
+  computers (for computer-side settings) or target users (for user-side settings) for the changed GPOs.  
+Check Security Filtering. Below the Links section on the Scope tab, check the Security Filtering section. Make sure the correct computers and/or 
+  users intended for the changed GPO settings are specified in the security filters. 
+Check Read and Apply permissions. If any items have been added to Security Filtering, check the Delegation > Advanced tab to ensure the Allow
+  option is checked for the Read and Apply permissions. 
+Check the Group Policy Delegation. On the Delegation tab, check the Groups and users section for Allowed Permissions for the GPO. This list 
+  contains the groups and users that have the authority to edit, delete, and modify security for the GPO. Ensure that these settings are desired 
+  for your environment and no unauthorized users or groups can edit GPO settings. 
+Enable/disable User or Computer configurations. On the Details tab of the GPO, check the GPO Status to ensure the selection matches your intended 
+  setting. The options are: 
+All settings disabled: GPO will be inactive.
+Computer configuration settings disabled: Any Computer configurations in the GPO will be inactive.
+User configuration settings disabled: Any User configurations in the GPO will be inactive.
+Enabled: All GPO configurations will be applied (default).
+Check the GPO Policy Process Order (LSDOU). The GPO process order from first applied to last is Local GPOs, Site GPOs, Domain GPOs, then OU GPOs.
+  Each GPO policy overrides the previous GPO setting in this LSDOU process order. To change the default order, select the affected OU in the Group
+  Policy Manager and go to the Linked Group Policy Objects tab. The Link Order enumeration for the GPOs is listed in reverse order, meaning the
+  GPO with the highest Link Order number is applied first and the GPO with the lowest number (1) is applied last. The number 1 indicates the GPO
+  has the top-ranking priority, as it will override the previous GPO settings where the settings overlap. You can change the order that the GPOs
+  are applied using the up and down arrows to the left of the list.  
+Ensure target GPO to OU links are enabled. GPO to OU links are technically shortcuts, which can easily be enabled or disabled. Check to ensure 
+  that the Link Enabled setting has not inadvertently been turned off. 
+Check if an upstream GPO is set to Enforced. An upstream GPO is a GPO linked to an OU that has a higher LSDOU priority than a downstream GPO.
+  If an upstream order of applying settings is enforced, a lock will appear on the link icon. Evaluate if enforcement is overriding the desired
+  GPO settings. 
+Check if the affected OU is set to Block Inheritance. The default Group Policy inheritance for OUs, which is applied hierarchically to nested 
+  objects, can be blocked. Block Inheritance is indicated in the Group Policy Manager as a blue exclamation point icon on the affected OU. If you
+  believe this setting might be the cause of the GPO changes not propagating, right-click on the OU and select Block Inheritance from the menu to
+  toggle it off/on. Note that Block Inheritance will not affect Enforced GPOs. 
+Check if loopback is enabled. If loopback is enabled, the user-side settings that belong to the computer’s OU will override any computer-side 
+  settings in the same OU. If the OU’s computer-side settings need to have priority over the user-side, set the user Group Policy loopback 
+  processing mode to Disabled. 
+Check MI or WMI filters. Check to see if Windows Management Infrastructure (MI) or Windows Management Instrumentation (WMI) filters are set on the
+  changed GPO. MI or WMI filters might be used to apply a policy to a subset of objects. The MI or WMI query may need to be edited to ensure the
+  target objects for the changed GPO are not excluded by the filter. 
+Ensure your expectations for the GPO setting match its actual purpose. If the troubleshooting steps listed above do not solve the Group Policy
+  problem, research the GPO settings you are using. It is possible that your expectation for a setting may not match what the setting actually 
+  does.  
+
+Scenario 2: GPO settings are not correct.
+Edit incorrect GPO settings. If there are any problems found with GPO settings, open the Group Policy Management interface and edit the GPO:
+Step 1: Select the GPO with the incorrect settings.
+Step 2: Right-click the GPO, and then click Edit.
+Step 3: Edit the settings using the appropriate instructions listed in Scenario 1 of this article.
+
+Scenario 3: The user can’t authenticate into the Active Directory domain 
+Check Active Directory (AD) infrastructure. Investigate if the user or computer cannot locate the domain controller. Domain controller and 
+  replication problems in AD can prevent GPOs from functioning correctly.
+
+Key takeaways
+Outline of troubleshooting steps for GPO settings that are not being applied:
+
+Check the GPO Scope.
+Check Security Filtering.
+Check Read and Apply permissions.
+Check the Group Policy Delegation.
+Enable/disable User or Computer configurations.
+Check the GPO Policy Process Order (LSDOU).
+Ensure target GPO to OU links are enabled.
+Check if an upstream GPO is set to Enforced.
+Check if the affected OU is set to Block Inheritance.
+Check if loopback is enabled
+Check MI or WMI filters.
+Ensure your expectations for the GPO setting match its actual purpose.
+
+Resources for more information
+For more information on Group Policy troubleshooting, please visit:
+Working with Group Policy Objects using GPMC - Microsoft’s guide to the Group Policy Management Console and managing GPOs.
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn789193(v=ws.11)
+Troubleshooting: Group Policy (GPO) Not Being Applied to Clients - Troubleshooting guide for GPOs. Includes screenshots of various settings in the Group Policy Management Console with descriptions of how each setting works.
+http://woshub.com/group-policy-not-applied-troubleshooting/
+
+Resources for more information
+Group Policy troubleshooting documentation for Windows Server -  Extensive troubleshooting guide for Group Policies. 
+https://docs.microsoft.com/en-us/troubleshoot/windows-server/group-policy/group-policy-overview
+Group Policy processing and precedence - Additional information about GPO processing order and exceptions.
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc785665(v=ws.10)?redirectedfrom=MSDN
+Active Directory documentation - Extensive troubleshooting guide for AD. Topics can be accessed from the left side menu.
+https://docs.microsoft.com/en-us/troubleshoot/windows-server/group-policy/use-resultant-set-of-policy-logging
+Use Resultant Set of Policy logging toMicrosoft article that provides information on how to use the RSoPs utility (Rsop.msc) to gather 
+https://docs.microsoft.com/en-us/troubleshoot/windows-server/group-policy/use-resultant-set-of-policy-logging
+Suggested hotfixes for WMI related issue on Windows platforms - Provides information on symptoms and resolutions for WMI issues.
+https://docs.microsoft.com/en-us/troubleshoot/windows-server/admin-development/hotfixes-for-wmi-issues
+How the Windows Time Service Works -includes information on how to manually force a domain computer to resync. 
+https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/How-the-Windows-Time-Service-Works
+W32tm - Syntax for using the w32tm /resync command, which can be used to diagnose problems related to Windows Time.
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ff799054(v=ws.11)
+6.3.2.3 SRV Records - (from the video on troubleshooting Group Policies) Information from Microsoft on the SRV DNS Resource Record. 
+https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-adts/c1987d42-1847-4cc9-acf7-aab2136d6952

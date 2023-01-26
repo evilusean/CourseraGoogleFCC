@@ -281,3 +281,7 @@ Data Interchange Format:
 https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format
 LDIF Files:
 https://www.digitalocean.com/community/tutorials/how-to-use-ldif-files-to-make-changes-to-an-openldap-system
+
+Data Recovery: 
+Gitlabs how to recover from a data loss incident:
+https://about.gitlab.com/2017/02/01/gitlab-dot-com-database-incident/

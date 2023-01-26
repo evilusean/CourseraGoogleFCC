@@ -262,3 +262,22 @@ W32tm - Syntax for using the w32tm /resync command, which can be used to diagnos
 https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ff799054(v=ws.11)
 6.3.2.3 SRV Records - (from the video on troubleshooting Group Policies) Information from Microsoft on the SRV DNS Resource Record. 
 https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-adts/c1987d42-1847-4cc9-acf7-aab2136d6952
+
+MDM(Mobile Device Management):
+iOS - Apple Platform Deployment
+https://support.apple.com/guide/deployment/welcome/web
+Android - Apply settings for Android mobile devices
+https://support.google.com/a/answer/6328708#apply
+iOS - Intro to Profile Manager, MDM Settings Payload list
+https://support.apple.com/guide/mdm/payload-list-mdm5370d089/web
+Android - Get started with Google Mobile Management, Apply settings for Android mobile devices
+https://support.google.com/a/answer/6328708#apply
+
+OpenLDAP(Lightweight Directory Access Protocol):
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-openldap-and-phpldapadmin-on-ubuntu-16-04
+Article:
+https://www.openldap.org/doc/admin24/slapdconf2.html
+Data Interchange Format:
+https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format
+LDIF Files:
+https://www.digitalocean.com/community/tutorials/how-to-use-ldif-files-to-make-changes-to-an-openldap-system

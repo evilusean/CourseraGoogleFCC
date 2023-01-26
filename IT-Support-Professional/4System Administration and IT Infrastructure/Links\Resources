@@ -239,3 +239,26 @@ EFS(Encrypting File System):
 https://technet.microsoft.com/en-us/library/cc962100.aspx
 Forest/Domain Functional Levels:
 https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-functional-levels
+
+Group Policy troubleshooting:
+Working with Group Policy Objects using GPMC - Microsoft’s guide to the Group Policy Management Console and managing GPOs.
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn789193(v=ws.11)
+Troubleshooting: Group Policy (GPO) Not Being Applied to Clients - Troubleshooting guide for GPOs. 
+  Includes screenshots of various settings in the Group Policy Management Console with descriptions of how each setting works.
+http://woshub.com/group-policy-not-applied-troubleshooting/
+Group Policy troubleshooting documentation for Windows Server -  Extensive troubleshooting guide for Group Policies. 
+https://docs.microsoft.com/en-us/troubleshoot/windows-server/group-policy/group-policy-overview
+Group Policy processing and precedence - Additional information about GPO processing order and exceptions.
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc785665(v=ws.10)?redirectedfrom=MSDN
+Active Directory documentation - Extensive troubleshooting guide for AD. Topics can be accessed from the left side menu.
+https://docs.microsoft.com/en-us/troubleshoot/windows-server/group-policy/use-resultant-set-of-policy-logging
+Use Resultant Set of Policy logging toMicrosoft article that provides information on how to use the RSoPs utility (Rsop.msc) to gather 
+https://docs.microsoft.com/en-us/troubleshoot/windows-server/group-policy/use-resultant-set-of-policy-logging
+Suggested hotfixes for WMI related issue on Windows platforms - Provides information on symptoms and resolutions for WMI issues.
+https://docs.microsoft.com/en-us/troubleshoot/windows-server/admin-development/hotfixes-for-wmi-issues
+How the Windows Time Service Works -includes information on how to manually force a domain computer to resync. 
+https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/How-the-Windows-Time-Service-Works
+W32tm - Syntax for using the w32tm /resync command, which can be used to diagnose problems related to Windows Time.
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ff799054(v=ws.11)
+6.3.2.3 SRV Records - (from the video on troubleshooting Group Policies) Information from Microsoft on the SRV DNS Resource Record. 
+https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-adts/c1987d42-1847-4cc9-acf7-aab2136d6952

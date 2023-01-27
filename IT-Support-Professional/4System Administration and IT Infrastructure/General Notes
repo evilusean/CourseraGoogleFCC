@@ -285,3 +285,11 @@ Ways to perform backups:
   Regular Incremental Backups=When only the data that's changed in files since the last incremental backup is backed up
   File Compression=Way to save space while backing up files, archiving also saves space
 RAID(Redundant Array of Independant Disks):Takes multiple physical disks and combines them into one large virtual disk
+User Backups: use a cloud service to automatically back up files
+  Dropbox Vs Apple iCloud Vs Google Drive Vs External Harddrive
+Disaster Recovery Plan:
+A collection of documented procedues and plans on how to react and handle an emergency or disaster scenario, from the operational perspective
+Preventitive Measures=Any procedures or systems in place that will proactively minimize the impact of a disaster
+Detection Measures=Meant to alert you and your team that a disaster has occured that can impact operations
+  Smoke Detectors/Fire alarms Vs Sensors: Flood, environmental, Temp and humidity Vs redundant power systems 
+Corrective or recovery measures=Those enacted after a disaster has occured

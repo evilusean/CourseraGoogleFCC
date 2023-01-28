@@ -18,6 +18,14 @@ Start:28October2022
 
 End:
 
+# Johns Hopkins: HTML, CSS, and Javascript for Web Developers
+
+https://www.coursera.org/learn/html-css-javascript-for-web-developers
+
+Start:29Jan2022
+
+End:
+
 # Google Project Management: Professional Certificate:
 
 https://www.coursera.org/professional-certificates/google-project-management

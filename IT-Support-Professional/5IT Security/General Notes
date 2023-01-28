@@ -1,0 +1,9 @@
+========================================================================================================Week 1:
+CIA Triad=Confidentiality Integrity Availability=C=Keep things hidden I=Keep data accurate, untampered with A=Limit Access to those that should have
+Risk=The possibility of suffering a loss in the event of an attack on the system
+Vulnerability=A flar in a system that could be exploited to compromise the system
+0 Day Vulnerability=A vulnerability that is not known to the software developer or vendor, but is known to the attacker
+Exploit=Software that is used to take advantage of a security bug or vulnerability
+Hacker=Someone who attempts to break into or exploit a system Blackhat(Malicious) Vs Whitehat(break systems and notify vendors)
+Attack=An actual attempt at causing harm to a system
+

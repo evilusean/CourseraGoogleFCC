@@ -1,0 +1,226 @@
+HTML, CSS, and Javascript for Web Developers
+by Johns Hopkins University
+
+About this Course
+Do you realize that the only functionality of a web application that the user directly interacts with is through the web page? Implement it poorly
+and, to the user, the server-side becomes irrelevant! Today’s user expects a lot out of the web page: it has to load fast, expose the desired
+service, and be comfortable to view on all devices: from a desktop computers to tablets and mobile 
+
+Syllabus
+Week 1
+Introduction to HTML5
+In this module we will learn the basics of HTML5. We'll start with instructional videos on how to set up your development environment, go over HTML5 basics like valid document structure, which elements can be included inside other elements and which can not, discuss the meaning and usefulness of HTML5 semantic tags, and go over essential HTML5 tags.
+
+18 videos, 7 readings, 11 practice quizzes
+Video: Course Introduction
+Reading: How Grading and Being Late on Assignments Works
+Reading: Recommended Books
+Reading: CHECK OUT MY SITE!
+Reading: ALL of the EXAMPLE SOURCE CODE for this Course
+Reading: Frequently Asked Questions (FAQ)
+Practice Quiz: Optional Practice Quiz
+Video: Welcome to Module 1: Introduction to HTML5
+Video: Development Environment Setup, Part 1
+Video: Development Environment Setup, Part 2: MacOS
+Video: Development Environment Setup, Part 2: Windows
+Practice Quiz: Optional Practice Quiz
+Video: Development Environment Setup, Part 3: Github and Browser Sync
+Video: Resources for Asking Questions
+Video: Lecture 1: What is HTML?
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 2: Relevant History of HTML
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 3: Anatomy of an HTML Tag
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 4: Basic HTML Document Structure
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 5: HTML Content Models
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 6: Heading Elements (and some new HTML5 semantic comments)
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 7: Lists
+Video: Lecture 8: HTML Character Entity References
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 9: Creating Links
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 10: Displaying Images
+Reading: Frequently Asked Questions
+Practice Quiz: Optional Practice Quiz
+Reading: CONNECT WITH ME!
+Video: Module 1 Wrap-Up
+
+Show lessweek 1 material
+Graded: Module 1 Quiz
+Week 2
+Introduction to CSS3
+A lot of people "tinker" with CSS. In this module, we'll take you from the very basics of CSS3 to some fairly advanced concepts like floating and CSS rule conflict resolution. We'll go over the 'box model', background property, etc. We'll finish off the module with learning about Responsive Design using our own CSS code as well as start introducing Twitter Bootstrap with its essential Grid System.
+
+27 videos, 4 readings, 14 practice quizzes
+Video: Welcome to Module 2: Introduction to CSS3
+Reading: Recommended Books
+Reading: New Tutorials - here is how...
+Video: Lecture 11: Power of CSS
+Video: Lecture 12: Anatomy of a CSS Rule
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 13: Element, Class, and ID Selectors
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 14: Combining Selectors
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 15: Pseudo-Class Selectors
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 16: Style Placement
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 17, Part 1: Conflict Resolution
+Video: Lecture 17, Part 2: Conflict Resolution
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 18, Part 1: Styling Text
+Video: Lecture 18, Part 2: Styling Text
+Reading: CONNECT WITH ME!
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 19, Part 1: The Box Model
+Video: Lecture 19, Part 2: The Box Model
+Video: Lecture 19, Part 3: The Box Model
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 20: The background Property
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 21: Positioning Elements by Floating
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 22, Part 1: Relative and Absolute Element Positioning
+Video: Lecture 22, Part 2: Relative and Absolute Element Positioning
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 23, Part 1: Media Queries
+Video: Lecture 23, Part 2: Media Queries
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 24, Part 1: Responsive Design
+Video: Lecture 24, Part 2: Responsive Design
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 25, Part 1: Introduction to Twitter Bootstrap
+Video: Lecture 25, Part 2: Introduction to Twitter Bootstrap
+Video: Lecture 26, Part 1: The Bootstrap Grid System
+Video: Lecture 26, Part 2: The Bootstrap Grid System
+Practice Quiz: Optional Practice Quiz
+Reading: Frequently Asked Questions
+Video: Module 2 Wrap-Up
+
+Show lessweek 2 material
+Graded: Module 2 Coding Assignment
+Week 3
+Coding the Static Restaurant Site
+Ready for some REAL fun? This module is it! We'll go over some basics of interacting with a client when managing a web site project and then go visit a real client at their place of business (a Chinese restaurant), help the owner figure out what she wants in a site, and get acquainted with the restaurant in general. We'll spend the rest of the module building a real web site for this business from scratch and you'll get to sit next to me and watch as the site comes together.
+
+24 videos, 3 readings, 5 practice quizzes
+Video: Welcome to Module 3: Coding the Static Restaurant Site
+Reading: Recommended Books
+Video: Lecture 27, Part 1: Visit with the Client
+Video: Lecture 27, Part 2: Visit with the Client (Field Trip)
+Reading: New Tutorials - here is how...
+Video: Lecture 28: Design Overview
+Video: Lecture 29: Some Ground Rules and Overview of Setup
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 30, Part 1: Coding Basics of Navbar Header
+Video: Lecture 30, Part 2: Coding Basics of Navbar Header
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 31: Coding Button for Future Collapsible Menu
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 32, Part 1: Coding Nav Menu Buttons
+Video: Lecture 32, Part 2: Coding Nav Menu Buttons
+Video: Lecture 33, Part 1: Fixing Navbar Layout, Text, and Dropdown Menus
+Video: Lecture 33, Part 2: Fixing Navbar Layout, Text, and Dropdown Menus
+Video: Lecture 34: Coding the Jumbotron
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 35, Part 1: Coding Navigation Tiles
+Video: Lecture 35, Part 2: Coding Navigation Tiles
+Video: Lecture 36, Part 1: Coding the Footer
+Video: Lecture 36, Part 2: Coding the Footer
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 37, Part 1: Coding the Menu Categories
+Video: Lecture 37, Part 2: Coding the Menu Categories
+Video: Lecture 38, Part 1: Coding the Single Menu Category Page
+Video: Lecture 38, Part 2: Coding the Single Menu Category Page
+Video: Lecture 38, Part 3: Coding the Single Menu Category Page
+Video: Lecture 39: Testing the Mobile Version on a Real Phone
+Reading: Frequently Asked Questions
+Video: Module 3 Wrap-Up
+
+Show lessweek 3 material
+Graded: Module 3 Coding Assignment
+Week 4
+Introduction to Javascript
+What fun would a web site be if there was no functionality to it? In this module, we are going to concentrate on learning the fundamentals of the Javascript language. A lot of even seasoned developers “tinker” with Javascript without really understanding how the language works. That leads to viewing the language as more of a nuisance instead of a powerful tool. That is why we are going to concentrate not only on the “how” but also on the “why”, so you are empowered by the Javascript language features, not confused by them. We’ll cover just about everything - from common language constructs and Javascript types to objects, functions, arrays, closures, and scope isolation.
+
+Show less
+24 videos, 3 readings, 9 practice quizzes
+Video: Welcome to Module 4: Introduction to Javascript
+Reading: Recommended Books
+Video: Lecture 40, Part 1: Adjusting Development Environment for Javascript Development
+Video: Lecture 40, Part 2: Where to Place Javascript Code
+Video: Lecture 41, Part 1: Defining Variables, Function, and Scope
+Video: Lecture 41, Part 2: Defining Variables, Function, and Scope
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 42, Part 1: Javascript Types
+Video: Lecture 42, Part 2: Javascript Types
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 43, Part 1: Common Language Constructs
+Video: Lecture 43, Part 2: Common Language Constructs
+Video: Lecture 43, Part 3: Common Language Constructs
+Video: Lecture 44: Handling Default Values
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 45, Part 1: Creating Objects Using 'new Object()' Syntax
+Video: Lecture 45, Part 2: Creating Objects Using Object Literal Syntax
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 46: Functions Explained
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 47, Part 1: Passing Variables by Value vs. by Reference
+Video: Lecture 47, Part 2: Passing Variables by Value vs. by Reference
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 48: Function Constructors, prototype, and the 'this' Keyword
+Video: Lecture 49: Object Literals and the 'this' Keyword
+Reading: New Tutorials - here is how...
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 50, Part 1: Arrays
+Video: Lecture 50, Part 2: Arrays
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 51: Closures
+Video: Lecture 52, Part 1: Fake Namespaces
+Video: Lecture 52, Part 2: Immediately Invoked Function Expressions (IIFEs)
+Practice Quiz: Optional Practice Quiz
+Reading: Frequently Asked Questions
+Video: Module 4 Wrap-Up
+
+Show lessweek 4 material
+Graded: Module 4 Coding Assignment
+Week 5
+Using Javascript to Build Web Applications
+In this module, we are going to take all those newly learned Javascript language skills and learn how to utilize them within the context of a web page. We’ll start by learning how to properly manipulate the web page components using the Javascript Document Object Model API. We will then move on to learning one of the most popular ways of serving up data to a web site - Ajax. We'll learn about the protocol that the language of the web speaks in (HTTP), how to set up and handle Ajax requests and responses, as well as how to process JSON data. We'll finish the module by connecting our restaurant web site from Module 3 to a real backend service that will allow us to pull the data for the restaurant menu dynamically from the server without having to reload the entire page.
+
+Show less
+17 videos, 6 readings, 3 practice quizzes
+Video: Welcome to Module 5: Using Javascript to Build Web Applications
+Reading: Recommended Books
+Video: Lecture 53, Part 1: DOM Manipulation
+Video: Lecture 53, Part 2: DOM Manipulation
+Video: Lecture 54: Handling Events
+Video: Lecture 55: The 'event' Argument
+Reading: CONNECT WITH ME!
+Practice Quiz: Optional Practice Quiz
+Video: Lesson 56: HTTP Basics
+Video: Lesson 57, Part 1: Ajax Basics
+Video: Lesson 57, Part 2: Ajax Basics
+Video: Lesson 57, Part 3: Ajax Basics
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 58: Processing JSON
+Practice Quiz: Optional Practice Quiz
+Video: Lecture 59: Fixing Mobile Nav Menu Automatic Collapse
+Video: Lecture 60: Dynamically Loading Home View Content
+Video: Lecture 61, Part 1: Dynamically Loading Menu Categories View
+Video: Lecture 61, Part 2: Dynamically Loading Menu Categories View
+Video: Lecture 62: Dynamically Loading Single Category View
+Video: Lecture 63: Changing 'active' Button Style Through Javascript
+Reading: Check out the final deployed site
+Reading: Frequently Asked Questions
+Reading: New Tutorials - here is how...
+Video: Course Wrap-Up
+Reading: CONNECT WITH ME!
+
+Show lessweek 5 material
+Graded: Module 5 Coding Assignment

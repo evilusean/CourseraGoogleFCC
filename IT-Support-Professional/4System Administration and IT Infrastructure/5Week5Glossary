@@ -1,0 +1,296 @@
+Module 5 Glossary
+New terms and their definitions: Course 4 Week 5
+Backup and restore: A Microsoft offer and first party solution that has modes of operation, as a file based version where files are backed up to a zip archive
+
+Data recovery: Is the process of trying to restore data after an unexpected event that results in data loss or corruption
+
+Data tapes: The standard medium for archival backup data storage
+
+Detection measure: The measures to alert you and your team that a disaster has occurred that can impact operations
+
+Differential backup: A backup of files that are changed, or has been created since the last full backup
+
+Disaster recovery plan: A collection of documented procedures and plans on how to react and handle an emergency or disaster scenario, from the operational perspective 
+
+Disaster recovery testing: A regular exercise that happens once a year or so, that has different teams, including IT support specialists, going through simulations of disaster events
+
+File compression: The files and folder structures are copied and put into an archive
+
+Full backup: The full unmodified contents of all files to be backed up is are included in this backup mechanism whether the data was modified or not
+
+NAS device: A network attached storage device that has hard drives to automatically create backups and store data
+
+Preventative measures: Any procedures or systems in place that will proactively minimize the impact of a disaster
+
+Post mortem: A way for you to document any problems you discovered along the when recovering data, and the ways you fixed them so you can make sure they don't happen again
+
+RAID (redundant array of independent disks): A method of taking multiple physical disks and combining them into one large virtual disk
+
+Restoration procedures: A recovery process and process needs to be tested regularly that is documented and accessible so that anyone with the right access can restore operation when needed
+
+Risk assessment: Allows you to prioritize certain aspects of the organization that are more at risk if there’s an unforeseen event
+
+Single point of failure: When one system in a redundant pair suffers a failure
+
+
+
+Terms and their definitions from previous weeks
+A
+
+AAA (authentication, authorization, accounting): The services that the directory services provide to all the computers within a company or organization
+
+Active directory (AD): The Microsoft alternative to directory services that offers customization and added features for the Windows platform 
+
+Active directory users and computers (ADUC): The client tools that are used for accessing and administering a directory server
+
+Advanced group policy management (AGPM): A set of add-on tools from Microsoft that gives some added provision control abilities in GPMC
+
+Autoscaling: A system that allows the service to increase or reduce capacity as needed, while the service owner only pays for the cost of the machines that are in use at any given time
+
+B
+
+Bind operation: The operation which authenticates clients to the directory server
+
+C
+
+Central management: A central service that provides instructions to all of the different parts of my IT infrastructure
+
+Change management process: The process to notify others in the organization about the changes that you are about to make
+
+Cloud computing: The concept and technological approach of accessing data, using applications, storing files, etc. from anywhere in the world as long as you have an internet connection
+
+Computer configuration: Contained within a Group Policy Object (GPO)
+
+Configuration management: The creation of rules about how things should work in your organization, such as printers, configure software, or mounting network file systems
+
+D
+
+Databases: Databases allow us to store query, filter, and manage large amounts of data
+
+Data center: A facility that stores hundreds, if not thousands of servers
+
+Default domain control policy: One of the two GPOs that are created when a new Active Directory domain has been made
+
+Delegation: The administrative tasks that you need to perform a lot as a part of your day to day job but you don't need to have broad access to make changes in AD
+
+Deployment: Hardware is set up so that the employee can do their job
+
+Directory Access Protocol (DAP): A protocol that is included in the X.500 directory standard from 1988 
+
+Directory Information Shadow Protocol (DISP): A protocol that is included in the X.500 directory standard from 1988
+
+Directory Operational Bindings Protocol (DOBMP): A protocol that is included in the X.500 directory standard from 1988
+
+Directory server: The server that contains a lookup service that provides mapping between network resources and their network addresses
+
+Directory services: A lookup service contained in a network server that provides mapping between network resources and their network addresses
+
+Directory System Protocol (DSP): A protocol that is included in the X.500 directory standard from 1988
+
+Distribution group: A group that is only designed to group accounts and contacts for email communication
+
+DNS records: A DNS request for the SRV records matching the domain that it's been bound to
+
+Domain admin: The administrators of the Active Directory domain
+
+Domain computers: All the computers joined to the domain except domain controllers
+
+Domain controllers (DC): The service that hosts copies of the Active Directory database
+
+Domain local: The tool used used to assign permission to a resource
+
+Domain Name System (DNS): A global and highly distributed network service that resolves strings of letters, such as a website name, into an IP address
+
+Domain users: A group that contains every user account in the domain
+
+E
+
+Enterprise admin: The administrators of the Active Directory domain that has permission to make changes to the domain that affect other domains in a multi-domain forest
+
+Enterprise mobility management (EMM): A system that can create and distribute policies and MDMs
+
+F
+
+Fast logon optimization: The group policy engine that applies policy settings to a local machine may sacrifice the immediate application of some types of policies in order to make logon faster
+
+File storage service: Allows to centrally store files and manage access between files and groups
+
+Flexible single-master operations (FSMO): The single domain controller that has been tasked with making changes to the AD database that can only be made by one DC at a time
+
+Forest: The hierarchy above a domain that contains multiple domains, allowing accounts to share resources between domains that are in the same forest
+
+Functional levels: The different versions of Active Directory, a functional level that describes the features that it supports
+
+G
+
+Global: The tool that is used to group accounts into a role
+
+Group policy management console (GPMC): The tools used for creating and viewing a group policy object
+
+Group policy objects (GPO): The ways to manage the configuration of Windows machines, referring to the objects that represent things in your network that you want to be able to reference or manage
+
+Group policy settings reference: A spreadsheet that details the GPO policies and preferences that are available and where to find them
+
+Group scope: The way that group definitions are replicated across domains
+
+H
+
+HTTPS: Hypertext Transfer Protocol Secure is a secure version of HTTP that ensures the communication your web browser has with the website is secured through encryption.
+
+HTTP status code: The codes or numbers that indicate some sort of error or info messages that occurred when trying to access a web resource
+
+Hybrid cloud: Used to describe situations where companies might run things like their most sensitive proprietary technologies on a private cloud or on premise while entrusting their less sensitive servers to a public cloud
+
+I
+
+IT Infrastructure: The software, the hardware, network, and services required for an organization to operate in an enterprise IT environment
+
+Import: Moving a backup of the test example policy to the production example policy
+
+Intranet: An internal network inside a company, accessible if you are on a company’s network
+
+K
+
+Kerberos: A network authentication protocol that uses tickets to allow entities to prove their identity over potentially insecure channels to provide mutual authentication
+
+KVM Switch: Keyboard, video, & mouse switch that looks like a hub that you can connect multiple computers to and control using one keyboard, mouse, and monitor
+
+L
+
+LDAP data interchange format: The tool that allows you to authenticate, add, remove users, groups, computers and so on in a directory service
+
+LDAP Entry: A collection of information that's used to describe something
+
+LDIF files: A text file that lists attributes and values that describe something
+
+Lightweight Directory Access Protocol (LDAP): An open industry-standard protocol for accessing and maintaining directory services; the most popular open-source alternative to the DAP
+
+Linked: A GPO that all of the computers or users under a domain, site, or OU will have a policy applied
+
+Load balancer: Ensures that each VM receives a balanced number of queries
+
+M
+
+Maintenance: Where software is updated and hardware issues are fixed if, and when, they occur
+
+MDM policy: The profiles that contains settings for the device
+
+MDM profile: The policies that contains settings for the device
+
+N
+
+NTP: Network Time Protocol, keeping clocks synchronized on machines connected to a network
+
+Network file system: A protocol that enables files to be shared over a network
+
+O
+
+One-way cryptographic hash: The method used by AD to store passwords 
+
+OpenLDAP (lightweight directory access protocol): An open source and free directory service
+
+Organizational units (OU): A hierarchical model of objects and containers that can contain objects or more organizational units
+
+P
+
+Parent group: Groups that are principal groups and contain other groups
+
+PHPLDAPadmin: A tool to manage OpenLDAP
+
+Platform services: A platform for developers to completely build and deploy software applications, without having to deal with OS maintenance, server hardware, networking or other services that are needed to use the platform tools
+
+Policies: Settings that are reapplied every few minutes, and aren’t meant to be changed even by the local administrators
+
+Precedence: When computers are processing the Group Policy Objects that apply to them, all of these policies will be applied in a specific order based on a set of precedents rules
+
+Private cloud: When a company owns the services and the rest of the cloud infrastructure, whether on-site or in a remote data center
+
+Procurement: Hardware is purchased or reused for an employee
+
+Production: The parts of the infrastructure where certain services are executed and serve to its users production
+
+Proxy server: An intermediary between a company's network and the Internet, receiving network traffic and relaying that information to the company network
+
+Public cloud: The cloud services provided by a third party
+
+R
+
+Read-write replicas: Domain controllers in the Active Directory network that each have a complete copy of the AD database and are able to make changes to it
+
+Regions: A geographical location containing a number of data centers
+
+Remote wipe: A factory reset that you can trigger from your central MDM rather than having to do it in person on the device
+
+Replication: the store directory data is copied and distributed across a number of physically distributed servers but still appears as one unified data store for querying and administering
+
+Replication failure: A reason that a GPO might fail to apply as expected
+
+Reproduction case: Recreating an error to test a solution to make sure the problem is gone after a fix has been applied
+
+Restart: A command that will let the machine reboot to complete a domain join
+
+Resultant set of policy (RSOP): The policy that forms when all of the group policies have been grouped together for a specific machine and apply precedence rules to them
+
+Retirement: Hardware becomes unusable or no longer needed, and it needs to be properly removed from the fleet
+
+Role-based access control (RBAC): The process of changing a persons group that they are a part of when they have changed roles within a company to limit or change their access to resources
+
+Rollback: Reverting to the previous state before you made changes
+
+RSOP report: The process of troubleshooting group policy and comparing what you expect to be applied to a computer and the resultant set of policy report
+
+S
+
+Secondary or stand-by machine: A machine that is the same as a production machine, but won't receive any traffic from actual users until enabled
+
+Security account manager (SAM): A database in windows that stores user names and password
+
+Security filtering: A tool to make group policies apply more selectively
+
+Security group: One of the two categories that groups in Active Directories can be part of, they can contain user accounts, computer accounts or other security groups
+
+Security principal: Any entity that can be authenticated by the system, such as a user account, a computer account, or a thread or process that runs in the security context of a user or computer account
+
+Server: Software or a machine that provides services to other software or machines
+
+Server operating systems: Regularly operating systems that are optimized for server functionality
+
+Service discovery: One of the services that the domain controller provides to the clients
+
+Simple authentication and security layer (SASL): The authentication method that can employ the help of security protocols like TLS, it requires the client and the directory server to authenticate using some method
+
+Software services: The services that employees use that allow them to do their daily job functions, such as word processors, Internet browsers, email clients, chat clients, and more
+
+SRV records: A service record used to define the location of various specific services
+
+System Administration: The field in IT that is responsible for maintaining reliable computer systems, in a Multi-user environment
+
+Systems administrator (sysadmin): A person who works only in system administration, configuring servers, monitoring the network, provisioning, or setting up new users in computers and taking responsibility of systems
+
+T
+
+Test environment: A virtual machine running the same configuration as a production environment, but isn't actually serving any users of the service
+
+U
+
+Universal: The tool that is used to group global roles in a forest
+
+User configuration: Contained within a Group Policy Object (GPO)
+
+User Groups: The management of resources on a computer and on a network through organizing user accounts into various groups
+
+W
+
+Web server: A web server stores and serves content to clients through the Internet
+
+Windows management instrumentation (WMI): The container that is used to define powerful targeting rules for your GPO
+
+Windows registry: A hierarchical database of settings that Windows, and Windows applications, use for storing configuration data
+
+WMI filter: A tool to make group policies apply more selectively on the configuration of the computer
+
+Work group computer: A Windows computer that isn't joined to a domain
+
+X
+
+X.500 directory: The agreed upon directory standard that wa approved in 1988 that includes, DAP, DSP, DISP, DOP, DAP, and LDAP

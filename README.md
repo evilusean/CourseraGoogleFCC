@@ -22,7 +22,7 @@ End:
 
 https://www.coursera.org/learn/html-css-javascript-for-web-developers
 
-Start:29Jan2022
+Start:29Jan2023
 
 End:
 
@@ -48,6 +48,6 @@ https://www.coursera.org/account/accomplishments/specialization/NXQ3B6S2KK2R
 
 Start:18October2022
 
-End:28Jan2022
+End:28Jan2023
 
 

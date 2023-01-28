@@ -298,5 +298,14 @@ Designing a Disaster Recovery Plan:
   Determine Backup and Recovery systems=Regular but automated backups both onsite/offsite, data recovery procedures are documented, redundancies
   Determine Detection and Alert Measures=Comprehensive system in place that can detect and alert you of any service outages, or abnormal conditions
   Determine recovery measures=Up to date procedures
+Post Mortems:
+We createa postmortem after an incident, an outage, or some event when something goes wrong, or at the end of a project to analyze how it went
+Once it is written, it needs to be communicated with others, learn from mistakes
+Writing A Post-Mortem:
+  Begins with a brief summary(Paragraph) that summarizes incident, what incident was, how long it lasted, what impact was, how it was fixed
+  state timezone, detailed timeline of key events, when it started, when people were notified, any actions taken
+  Detailed and honest account of root cause- what led to the issue
+  Resolution and recovery efforts-More detailed explanation of what steps were taken to recover, and reasoning behind, with outcomes
+  Actions to avoid same scenario-actions to take to avoid the same scenario happening again
 
   

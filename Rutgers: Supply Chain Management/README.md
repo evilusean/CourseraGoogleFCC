@@ -2,9 +2,13 @@
 
 https://www.coursera.org/specializations/supply-chain-management
 
+Certificate:
+
+https://www.coursera.org/account/accomplishments/specialization/NXQ3B6S2KK2R
+
 Start:18October2022
 
-End:
+End:28Jan2022
 
 # 1Supply Chain Logistics:
 
@@ -44,4 +48,4 @@ https://www.coursera.org/learn/supply-chain-management-strategy
 
 Start:09Jan2022
 
-End:
+End:28Jan2022

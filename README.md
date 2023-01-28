@@ -34,8 +34,12 @@ End:17October2022
 
 https://www.coursera.org/specializations/supply-chain-management
 
+Certificate:
+
+https://www.coursera.org/account/accomplishments/specialization/NXQ3B6S2KK2R
+
 Start:18October2022
 
-End:
+End:28Jan2022
 
 

@@ -6,4 +6,14 @@ Vulnerability=A flar in a system that could be exploited to compromise the syste
 Exploit=Software that is used to take advantage of a security bug or vulnerability
 Hacker=Someone who attempts to break into or exploit a system Blackhat(Malicious) Vs Whitehat(break systems and notify vendors)
 Attack=An actual attempt at causing harm to a system
+Malicious Software(Malware)=A type of Malicious software that can be used to obtain your sensitive information, or delete or modify files
+  Virus Vs Worm Vs Adware Vs Spyware Vs Ransomware Vs Trojan Vs Rootkit Vs Backdoor Vs Botnet Vs DDOS Vs Exploit Vs Keylogger
+Adware=Software that displays advertisements and collects data
+Trojan=Malware that disguises itself as one thing but does something else
+Virus=From an executable, replicates itself to every file it touches
+Worm=Live on their own and spread on their own through channels like network/email
+Spyware=A type of malware that's meant to spy on you, monitoring computer screens, webcams, keypresses-reporting or streaming to another person
+Keylogger=A common type of spyware that's used to record every keystroke you make
+Ransomware=A type of attack that holds your data or system hostage until you pay some sort of ransom
+
 

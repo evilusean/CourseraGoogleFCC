@@ -15,5 +15,23 @@ Worm=Live on their own and spread on their own through channels like network/ema
 Spyware=A type of malware that's meant to spy on you, monitoring computer screens, webcams, keypresses-reporting or streaming to another person
 Keylogger=A common type of spyware that's used to record every keystroke you make
 Ransomware=A type of attack that holds your data or system hostage until you pay some sort of ransom
+Bot=Can utilize your machines resources to perform tasks, bitcoin mining, ddos attacks
+Botnet=Designed to utilize the power of the internet-connected machines to perform some distributed function
+Backdoor=A way to get into a system if the other methods to get into a system aren't allowed
+Rootkit=A kit for root, a collection of software or tools that an Admin would use, allows admin level modification to an OS, hard to detect
+  can hide from system using system it self, running malicious processes but hide it's own presence
+Logic Bomb=A type of malware that's intentionally installed to trigger at a certain time or event
 
+Network Attacks:
+DNS Cache poisoning attack=Works by tricking a DNS server into accepting a fake DNS record, then feeds you fake DNS addresses when accessing website
+  Can spread to other DNS servers
+Man-in-the-middle attack=Places the attacker in the middle of 2 hosts that think that they're communicating with eachother
+  Session Hijacking/Cookie Hijacking=Steal Tokens
+  Rogue Acces Point=An access point that is installed on the network without the network administrators knowledge(Can be done with a router)
+  Evil Twin=Connect to a network that is identical to yours, controlled by attacker, can monitor traffic
+DoS(Denial Of Service)=An attack that tries to prevent access to a service for legitimate users by overwhelming the network or server
+  POD(Ping of Death)=sends a malformed ping to a computer, larger in size than internet protocol, results in buffer overflow causing crashes
+  Ping Flood=Sends many ping packets to a system, ICMP Echo requests-expects a response-server gets taken down
+  SYN Flood(Half Open Attack)=Sends many syn packets, server is sending SYN-ack messages without response, other users will be unable to use
+DDoS(Distributed Denial of service) Attack=A DoS attack using multiple systems
 

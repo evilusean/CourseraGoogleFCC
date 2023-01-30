@@ -6,6 +6,7 @@ Vulnerability=A flar in a system that could be exploited to compromise the syste
 Exploit=Software that is used to take advantage of a security bug or vulnerability
 Hacker=Someone who attempts to break into or exploit a system Blackhat(Malicious) Vs Whitehat(break systems and notify vendors)
 Attack=An actual attempt at causing harm to a system
+
 Malicious Software(Malware)=A type of Malicious software that can be used to obtain your sensitive information, or delete or modify files
   Virus Vs Worm Vs Adware Vs Spyware Vs Ransomware Vs Trojan Vs Rootkit Vs Backdoor Vs Botnet Vs DDOS Vs Exploit Vs Keylogger
 Adware=Software that displays advertisements and collects data
@@ -34,4 +35,21 @@ DoS(Denial Of Service)=An attack that tries to prevent access to a service for l
   Ping Flood=Sends many ping packets to a system, ICMP Echo requests-expects a response-server gets taken down
   SYN Flood(Half Open Attack)=Sends many syn packets, server is sending SYN-ack messages without response, other users will be unable to use
 DDoS(Distributed Denial of service) Attack=A DoS attack using multiple systems
+
+Client-Side Attacks:
+Injection Attacks=Inject malicious code
+  XSS(Cross Site Scripting)=A type of injection attack where the attacker can insert malicious code and target the user of the service
+  SQL Injection=Targets entire website if it is using a SQL database, attacker can run SQL commands copy it, delete, other commands
+Password Attacks=Utilize software like password-crackers that try and guess your password
+  Brute Force Attack=Continuously attempts different combinations of characters and letters
+  Dictionary Attack=Tries out words that are commonly used in passwords
+Social Engineering=An attack method that relies heavily on interactions with humans instead of computers
+  Phishing Attack=Usually occurs when a malicious email is sent to a victim, that seems legitimate
+  Spear Phishing=Specifically targets an individual or group, may contain your name or friends names
+  Spoofing=A source is masquerading as something else
+  Email Spoofing=Spoof an email to look legitimate
+  Baiting=Entice a victim to do something, random USB with malware on ground
+  Tailgating=Gaining access into a restricted area or building by following a real employee in
+  Grey Man Theory=Attempt to blend in, appear as though you belong=Maintenance crew, etc
+
 

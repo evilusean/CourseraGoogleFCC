@@ -1,0 +1,49 @@
+Physical Security
+Physical security measures protect technical assets and data from unauthorized physical access. This reading covers common physical security methods. 
+
+
+Diagram of physical security measures in an office environment
+
+
+Physical security measures 
+Physical security measures make it harder for intruders to gain access, steal, or damage IT equipment and data. Here are some common methods:  
+
+A. Guards monitor controlled access points throughout a facility to prevent unauthorized access.
+
+B. Door locks allow an area to be restricted. Only people with an authorized unlocking mechanism, like a key or security badge, can gain access to
+  the restricted area.
+
+C. Equipment locks can restrict the movement of sensitive equipment, like servers, storage media, or terminals, by anchoring them to a less mobile
+  structure. Only people with an authorized unlocking mechanism, like a key or security badge, can release the controlled equipment from its 
+  anchored location.
+
+D. Video surveillance: Video cameras allow continuous observation and recorded activity playback within controlled areas. Video surveillance can
+  document who accesses a controlled area, how they access it, and what they do there.
+
+E. Alarm systems notify security by sounding an alarm or sending a message when a controlled area is accessed.
+
+F. Motion sensors are devices that detect movement within a controlled area. Motion sensors can trigger alarm systems or video surveillance.
+
+Protecting the entry points of a building 
+
+G. Access control vestibules create a space between two sets of interlocking doors or gateways to prevent unauthorized individuals from following 
+  authorized individuals into controlled facilities. 
+
+H. Badge readers are devices that read information encoded into a plastic card. They identify each user by the badge they present to the device.
+  Badge readers can be used to control electrically operated door locks and can be built into computer terminals to control access to information.
+
+Protecting the outside of a building
+
+I. Bollards are sturdy, short, vertical posts placed to restrict access of vehicles to a controlled area.
+
+J. Fences are physical barriers, with many different designs, that enclose controlled areas to establish a perimeter and keep out external threats.
+
+New technologies for physical security continue to evolve. Your IT security planning should include reviewing the newest methods for securing your
+  organization’s assets and information.
+
+Key takeaways
+It’s essential to ensure that an organization’s technical assets and data are protected physically and virtually.
+
+Physical security includes measures that help protect technical assets and data from unauthorized physical access.
+
+You should stay current with the newest methods for physically securing your organization’s assets and information.

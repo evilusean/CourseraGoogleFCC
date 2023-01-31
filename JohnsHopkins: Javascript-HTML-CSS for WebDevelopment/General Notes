@@ -2,3 +2,13 @@
 HTML5:
 Development Environment:
 CDT(Chrome Developer Tools)=Come built in with google chrome browser
+Install Node.js -> use npm(Node package manager) to install browser sync -> use browsersync/git to push to github
+You can use github to host a webpage that you create, and push updates using git
+Can be changed in github settings -> Pages 
+You can Clone(Copy) an entire github repository in command line using git with url
+command line: git status, git add, git commit, git push #all you need to publish code to github for html purposes
+browser-sync start --server --directory --files "*" #browser sync used to locally host server mode of the folder you are currently in "*"=everything
+browser sync can be used for a realtime update on any html website you are working on, locally hosted on your machine without webserver
+  all you need to do is save and it get's updated, don't need to refresh-saves time, good for development
+Asking for help: Stack Overflow, jsfiddle.net, codepen.io
+

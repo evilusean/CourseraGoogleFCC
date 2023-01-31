@@ -58,3 +58,28 @@ Social Engineering=An attack method that relies heavily on interactions with hum
     an organization’s computer network. attacker might call the IT Support team to request help with a password reset.
   Dumpster Diving: This in-person attack attacker literally digging through the trash of an individual or organization to hunt for confidential
 
+========================================================================================================Week 2:
+Symmetric Encryption:
+Encryption=The act of taking a message, called plaintext, and applying an operation to it, called a cipher, so that you receive a garbled,
+  unreadable message as the output, ciphertext
+Decryption=Taking ciphertext and converting it into plaintext
+Encryption Algorithm=The underlying logic of process that's used to convert the plaintext into ciphertext
+Key=Introduces something unique into the cipher
+Kerchoffs Principle=Security through obscurity, 
+  Cryptosystem=A collection of algorithms for key generation/encryption/decryption operations that comprise a cryptographic service should remain
+  secure - even if everything about the system is known, except the key
+Shannon's Maxim=The enemy knows the system
+  The system should remain secure even if your adversary knows exactly what kind of encryption systems you're employing as as your keys remain
+  secure
+Cryptography=Discipline of coding and hiding messages
+Cryptology=Study of Cryptography
+Crypt-Analysis=Looking for messages/decryption
+Frequency Analysis=The practice of studying the frequency with which letters appear in a ciphertext (letters:e t a o, pairs: th er on an)
+Steganography=The practice of hiding information from observers, but not encoding it(embedding messages in files=images/videos)
+
+
+
+
+
+
+

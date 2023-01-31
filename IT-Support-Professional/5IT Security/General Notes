@@ -1,5 +1,5 @@
 ========================================================================================================Week 1:
-CIA Triad=Confidentiality Integrity Availability=C=Keep things hidden I=Keep data accurate, untampered with A=Limit Access to those that should have
+CIA Triad=Confidentiality Integrity Availability=C=Keep things hidden I=Keep data accurate, untampered with A=Limit Access to those that should hav
 Risk=The possibility of suffering a loss in the event of an attack on the system
 Vulnerability=A flar in a system that could be exploited to compromise the system
 0 Day Vulnerability=A vulnerability that is not known to the software developer or vendor, but is known to the attacker
@@ -24,7 +24,7 @@ Rootkit=A kit for root, a collection of software or tools that an Admin would us
 Logic Bomb=A type of malware that's intentionally installed to trigger at a certain time or event
 
 Network Attacks:
-DNS Cache poisoning attack=Works by tricking a DNS server into accepting a fake DNS record, then feeds you fake DNS addresses when accessing website
+DNS Cache poisoning attack=Works by tricking a DNS server into accepting a fake DNS record, then feeds you fake DNS addresses when accessing websit
   Can spread to other DNS servers
 Man-in-the-middle attack=Places the attacker in the middle of 2 hosts that think that they're communicating with eachother
   Session Hijacking/Cookie Hijacking=Steal Tokens
@@ -76,9 +76,21 @@ Cryptology=Study of Cryptography
 Crypt-Analysis=Looking for messages/decryption
 Frequency Analysis=The practice of studying the frequency with which letters appear in a ciphertext (letters:e t a o, pairs: th er on an)
 Steganography=The practice of hiding information from observers, but not encoding it(embedding messages in files=images/videos)
-
-
-
+Symmetric-Key Algorithm=Use same key to encrypt and decrypt messages
+Substitution Cipher=An encryption mechanism that replaces parts of your plaintext with ciphertext(caeser cipher: rotate alphabet, rot13)
+Stream Cipher=Takes a stream of input and encrupts the stream one character or one digit at a time, outputting one encrypted digit/char at a time
+Block Cipher=The cipher takes data in, places it into a bucket or block of data that's a fixed size. then encodes that entire block as one unit
+IV(Initialization Vector)=Key Encryption, Random data integrated into encryption key, combined key used to encrypt data
+DES(Data Encryption Standard)=Designed in 1970's with IBM/NSA
+FIPS(Federal Information Processing Standard)=Govt standards for encrypting and securing govt data(not a private mail server with bleachbit)
+NIST(National Institute or Standards And Technology)=64 bit -> 128,192, 256 bit encryption key in 2001 
+AES(Advanced Encryption Standard)=128 bit encryption key, modern intel/amd cpus have AES instructions built in
+Key Length=Total number of bits(Upper limit) potential strength of encryption, longer key lengths protect against brute force attacks
+  Because of the large key size, brute-force attacks on AES are only theoretical right now, because of the computing power required
+  (or time required using modern technology) exceeds anything feasible today
+An important thing to keep in mind when considering various encryption alogorithms is speed, and ease of implementation
+RC4(Rivest Cipher 4)=A symmetric stream cipher that gained widespread adoption because of its simplicity and speed(too easy to break today)
+TLS 1.2 with AES GCM=Preferred security configuration in use today
 
 
 

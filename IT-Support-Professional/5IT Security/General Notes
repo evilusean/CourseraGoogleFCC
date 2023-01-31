@@ -46,10 +46,15 @@ Password Attacks=Utilize software like password-crackers that try and guess your
 Social Engineering=An attack method that relies heavily on interactions with humans instead of computers
   Phishing Attack=Usually occurs when a malicious email is sent to a victim, that seems legitimate
   Spear Phishing=Specifically targets an individual or group, may contain your name or friends names
+  Whaling=Not modern dating, targeting someone high up in corpo or govt world who is able to pay a large ransom or susceptible to blackmail
+  Vishing: Cybercriminals use Voice over IP (VoIP) to make phone calls or leave voice messages pretending to be from reputable companies
   Spoofing=A source is masquerading as something else
   Email Spoofing=Spoof an email to look legitimate
   Baiting=Entice a victim to do something, random USB with malware on ground
   Tailgating=Gaining access into a restricted area or building by following a real employee in
   Grey Man Theory=Attempt to blend in, appear as though you belong=Maintenance crew, etc
-
+  Shoulder surfing= Shoulder surfing happens when a person looks over a victim’s shoulder to watch them enter login credentials
+  Impersonation: This attack might happen over email, text messaging, or a phone call. The attacker impersonates someone who should have access to 
+    an organization’s computer network. attacker might call the IT Support team to request help with a password reset.
+  Dumpster Diving: This in-person attack attacker literally digging through the trash of an individual or organization to hunt for confidential
 

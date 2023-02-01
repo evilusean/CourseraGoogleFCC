@@ -12,3 +12,40 @@ browser sync can be used for a realtime update on any html website you are worki
   all you need to do is save and it get's updated, don't need to refresh-saves time, good for development
 Asking for help: Stack Overflow, jsfiddle.net, codepen.io
 
+HTML=Hyper Text Markup Language
+  Hypertext=Text which contains links to other texts
+  Markup=To mark something up, to annotate
+  Language=Syntax and semantics
+    HTML= Strucute, provides the structure for the page
+    CSS(Cascading Style Sheets)=Style and colour, layout, and font size
+    Javascript=Behaviour, provides functionality to a page
+Standards: 1997=HTML4.0 2000=XHTML 1.0 2004=WHATWGHTML 2007=WHATWG+W3C 2011=HTML5
+W3C(World Wide Web Consortium)=Created initial standards for HTML 4.0 in 1997
+
+Anatomy of HTML Tag:
+Opening Tag=<p>Content="..."</p>=Closing Tag
+<>=Tag p=Element
+<br>=Line Break Tag <hr>=Horizontal Rule Tag, both of these tags do not have a closing tag
+<p id="myId"></p> #tags/elements can have attributes, containing a name:value pair, must be unique
+<p/> #self closing tag, for tags that do not contain any content
+
+Basic HTML Document Structure:
+<!doctype html> #every html should start with a <!doctype> declaration, tells browser it is rendering an html, or quirks mode
+<html> #html tag contains entire html document
+<head> #head tag contains items that describe the main content of the page, metadata
+  <meta charset="utf-8"> #metatag, encoding, tells the browser how to interpret the characterset, no closing metatag
+  <title>Coursera is Cool!</title> #title tag is required, 
+</head>
+<body> #body tag, root of all content in an HTML page
+Coursera is SO cool! I am learning so much!
+</body>
+</html>
+
+HTML Content Models:
+Content Model=Behaviour that the browser applies to the elements, and to their nesting rules, which elements are allowed to be nested
+Block-Level Elements=Render to begin on a new line
+  May contain inline or block-level elements
+  Roughly translate into Flow Content in HTML5
+Inline Elements=Render on the same line
+  May only contain other inline elements
+  Roughly translate into Phrasing Content in HTML5

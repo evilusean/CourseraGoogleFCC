@@ -109,6 +109,29 @@ DH(Diffie-Hellman)=Key exchange algorithm, for exchanging keys over an unsecured
 ECC(Eliptic Curve Cryptography)=A public-key encryption system that uses algebraic structure of elliptic curves over finite fields to generate keys
 ECDH=Elipitic Curve Diffie Hellmen Vs ECDSA=Elliptic Curve Digital Signature Algorithm =EC Variants
 
+Hashing:
+Hash function=A type of function or operation that takes in an arbitrary data input and maps it to an output of fixed size, called a hash/digest
+  You feed in any amount of data into a hash function and the resulting output will always be the same size, but the output should be 
+  unique to the input such that two inputs will never yield the same output
+  Typically used to uniquely identify data; image hashes, 
+  Hashing can also be used to identify duplicate data sets in  databases or archives to speed up searching of tables
+  or remove duplicate data to save space
+Cryptographic Hashing=Distinctly different from encryption because cryptographic hash functions should be one directional
+  can be used for; authentication, message integrity, fingerprinting, data corruption detection, digital signatures
+The ideal cryptographic hash function should be deterministic, meaning that the same input value should always return the same hash value
+Hash Collisions=Two different inputs mapping to the same output
+Hashing Algorithms:
+MD5=Designed in 1990's as a cryptographic hashing function, operates on 512 bit blocks- creates 128 bit hash digests
+SHA1(Secure Hash Algorithm)=Part of the SHA suite of functions, designed by the NSA, published in 1995-operates 512 bit blocks, 128 bit digest
+  used by TSL/SSL, PGP SSH, IPSec, used by Git
+MIC(Message Integrity Check)=hash digest of the message in question, like a checksum
+You should never store passwords as plaintext, instead create hashes of passwords for authentication, worst case brute force hash digest
+It's impossible to defend against a brute force attack entirely, A succesful brute force attack against even the most secure system imaginable,
+  is a function of attacker time and resources
+Another way to protect passwords is to run the password through the hashing function multiple times
+Rainbow Table=A precomputed table of all possible values and corresponding hashes, look up hash in a rainbow table to get password
+Password Salt=Additional randomized data that's added into the hashing function to generate a hash that's unique to the password and salt combo
+
 
 
 

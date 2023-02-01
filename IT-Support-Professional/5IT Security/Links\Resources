@@ -23,3 +23,9 @@ http://www.rc4nomore.com/
 Sony Asymmetric encryption attack 2010 failOverflow:
 https://nakedsecurity.sophos.com/2012/10/25/sony-ps3-hacked-for-good-master-keys-revealed/
 https://www.theguardian.com/technology/gamesblog/2011/jan/07/playstation-3-hack-ps3
+SHA1 Hash Attack Theoretical 2000:
+https://eprint.iacr.org/2005/010
+https://www.schneier.com/blog/archives/2005/02/sha1_broken.html
+https://eprint.iacr.org/2007/474
+SHA1 Hash Collision 2007:
+https://shattered.io/

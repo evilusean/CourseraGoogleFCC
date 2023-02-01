@@ -92,6 +92,23 @@ An important thing to keep in mind when considering various encryption alogorith
 RC4(Rivest Cipher 4)=A symmetric stream cipher that gained widespread adoption because of its simplicity and speed(too easy to break today)
 TLS 1.2 with AES GCM=Preferred security configuration in use today
 
+Asymmetric Cryptography(Public key ciphers):
+Confidentiality(encrypted), Authenticity(digital signature), Non-repudiation(Author can not dispute origin of message)
+Asymmetric=Different Keys used to encrypt and decrypt
+Generate a private key to generate a public key, exchange public keys/use to encrypt- only private keys can decrypt 
+Public Key Signatures=Compose a message and combine it with private key to generate a digital signature
+You can send a symmetric encryption key through Asymmetric encryption securely, then send the rest of the data quicker through symmetric encryption
+MACs(Message Authentication Controls)=A bit of information that allows authentication of a received message, ensuring that the message came
+  from the alleged sender and not a third party
+HMAC=Keyed Hash message authentication code, uses a cryptographic hash function with a secret key to generate a mac
+CMAC=Cipher based message authentication code, similar to HMAC, uses a symmetric cipher with a shared key
+CBC-MAC=Cipher block chaining message authentication code, takes a message encrypting it using a block cipher, builds a chain of encrypted blocks
+RSA=algorithm created in 1983 by Ron Rivetts, Shamir, Adleman-Mechanism using large prime numbers for encryption keys 
+DSA(Digital Signature Algorithm)=created in 1991, used for signing and verifying data, uses key-pairs for signing and verifying data
+DH(Diffie-Hellman)=Key exchange algorithm, for exchanging keys over an unsecured network, combines shared number with secret number
+ECC(Eliptic Curve Cryptography)=A public-key encryption system that uses algebraic structure of elliptic curves over finite fields to generate keys
+ECDH=Elipitic Curve Diffie Hellmen Vs ECDSA=Elliptic Curve Digital Signature Algorithm =EC Variants
+
 
 
 

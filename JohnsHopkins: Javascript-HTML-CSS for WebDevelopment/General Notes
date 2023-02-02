@@ -49,3 +49,32 @@ Block-Level Elements=Render to begin on a new line
 Inline Elements=Render on the same line
   May only contain other inline elements
   Roughly translate into Phrasing Content in HTML5
+  
+HTML Tags:
+Semantic=Relating to meaning in language or logic
+Semantic HTML element=Element that implies some meaning to the content
+<h1> to <h6>	Defines HTML headings <h1> most important, largest <h6> least important, smallest
+<h1> should convey the central topic, important generalized description, may help search ratings, should not be used for styling, just structure
+<header> tag conveys some header information about the page,sometimes navigation
+<nav> tag conveys navigation/other links
+<section> within each <section> tag contains <article>(s)
+<article> can also have <sections> within that
+<aside> an element that contains something that is in this element that is related to the page, but not the main content
+<footer> footer information of the page
+
+Lists:
+Allows you to group related content, organizational tool
+<ul> unordered list tag, every item in the list is an <li> tag </li> , you can nest lists, lists within lists, appears as bullet points
+<ol> ordered list tag, numbered, every item in the list is an <li> tag </li> , you can nest lists, lists within lists, appears as 1. 2. 3.
+
+HTML Character Entity References:
+'<' , '>' , '&' are the three characters you should ALWAYS escape, so they don't cause rendering issues
+'<' Instead of, use '&lt;'
+'>' Instead of, use '&gt;'
+'&' Instead of, use '&amp;'
+&copy; = Ⓒ copyright symbol
+&nbsp; = nonbreaking space, text beside will never wrap
+&quot; = quote " in case not using UTF-8 encoding, will still appear as "
+
+
+

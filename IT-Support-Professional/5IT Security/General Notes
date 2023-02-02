@@ -132,6 +132,32 @@ Another way to protect passwords is to run the password through the hashing func
 Rainbow Table=A precomputed table of all possible values and corresponding hashes, look up hash in a rainbow table to get password
 Password Salt=Additional randomized data that's added into the hashing function to generate a hash that's unique to the password and salt combo
 
-
-
+Cryptography Applications:
+PKI(Public Key Infrastructure)=Used to securely transmit data and verify identity of a sender of a digital certificate
+Digital Certificate=file that proves that an entity owns a public key, public key info -> registered owner + digital signature
+CA(Certificate Authority)=Entity responsible for restoring and issuing certificates
+RA(Registration Authority)=responsible for verifying identitys requesting a certificate
+A central repository is needed to securely store and index keys, and a certificate management system of some sort makes managing access to stored
+  certificates and issuance of certificates easier
+SSL/TLS server certificate is one of these systems, 
+SSL/TLS client certificate=as the name implies, these are certificates bound to clients and are used to authenticate the client to the server,
+  allowing access control to an SSL/TLS service
+possible for a certificate to be valid for many hostnames, sometimes a wildcard certificate is issued giving validity for all hostnames in domain
+Self-signed certificate=signed by same entity that issued certificate
+Code signing certificates=Allows users of these signed applications to verify the signatures and ensure that the application was not tampered with
+Chain of trust=Starts with root certificate authority root CA=True -> intermediate CA's
+End Entity/Leaf certificate=A certificate that has no authority as a CA 
+X509 Standard=created in 1988, What defines the format of digital certificates
+  Version=Current version 3, What version of the X509 standard the certificate adheres to
+  Serial Number=A unique identifir for the certificate assigned by the CA which allows the CA to manage and identify individual certificates
+  Certificate Signature Algorithm=This field indicates what public key algorithm is used for the public key and what hashing algorithm is used
+    to sign the certificate
+  Issuer Name=This field contains information about the authority that signed the certificate
+  Validity=This field contains two subfields - "Not Before" and "Not After" which defines the dates when the certificate is valid for
+  Subject=This field contains identifying information about the entity the certificate was issued to
+  Subject Public Key Info=These two subfields define the algorithm of the public key, along with the public key itself
+  Certificate Signature Algorithm=Same as the subject public key info field;These two fields must match
+  Certificate Signature Value=The digital signature data itself
+Web of trust=Where individuals instead of CA's sign each others public keys, key signing parties
+CRL(Certificate Revocation List)=A means to distribute a list of certificates that are no longer valid
 

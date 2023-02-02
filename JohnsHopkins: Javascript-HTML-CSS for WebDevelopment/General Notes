@@ -76,5 +76,38 @@ HTML Character Entity References:
 &nbsp; = nonbreaking space, text beside will never wrap
 &quot; = quote " in case not using UTF-8 encoding, will still appear as "
 
+Creating Links:
+<a href="same-directory.html" title="same dir link"> #href=hypertext reference, value can either be relative(internal) or absolute URL(external)
+Content between closing tags is what you see when it is served, hover mouse over </a>
+Best practice to add a title to each link
+target="_blank" #forces the browser to open the link in a new tab
+Fragment Identifier=Points to a section of the page
+  <li><a href="#section1">#section1</a>
+  <li><a href="#section2">#section2</a>
+    <section id="section1"> #creates an id tag for section 1 which fragment id can reference and go to if clicked on
+    <h2><a name="section2"> #creates an anchor tag named section 2 which can be referred to and will go to if clicked on 
+SPA(Single Page Applications)
+
+Displaying Images:
+<!-- this is used to comment something out --> used to close the comment, hide/ignore the commented section and won't render
+<img src="picture.jpg" width=400 height="235" alt="random text about image">
+  #relative image reference of picture.jpg with a specified width of 400 by 235
+<img> tag is an inline element
+if you don't specify image size, when rendering(slow load) the page will jump around, if the URL is broken, the page will stay the same distance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

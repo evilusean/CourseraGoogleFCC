@@ -7,7 +7,7 @@ You can use github to host a webpage that you create, and push updates using git
 Can be changed in github settings -> Pages 
 You can Clone(Copy) an entire github repository in command line using git with url
 command line: git status, git add, git commit, git push #all you need to publish code to github for html purposes
-browser-sync start --server --directory --files "*" #browser sync used to locally host server mode of the folder you are currently in "*"=everything
+browser-sync start --server --directory --files "*" #browser sync used to locally host server mode of the folder you are currently in "*"=everythin
 browser sync can be used for a realtime update on any html website you are working on, locally hosted on your machine without webserver
   all you need to do is save and it get's updated, don't need to refresh-saves time, good for development
 Asking for help: Stack Overflow, jsfiddle.net, codepen.io
@@ -95,13 +95,35 @@ Displaying Images:
 <img> tag is an inline element
 if you don't specify image size, when rendering(slow load) the page will jump around, if the URL is broken, the page will stay the same distance
 
-
-
-
-
-
-
-
+========================================================================================================================Week 2:
+CSS3(Cascading Style Sheets):
+CSS is style, color, positioning, size, etc. HTML is the structure
+Anatomy of a CSS Rule:
+CSS works by associating rules with an HTML element, these rules govern how the content of specified elements should be displayed
+Selector=p { #selector should apply to every single paragraph tag, followed by open and closed curly braces
+            color: blue; #inside curly braces is a declaration with a property:value pair
+            font-size: 20px;
+            width: 200px;
+           }
+A collection of CSS rules is called a stylesheet
+Every browser comes with some default styles it applies to HTML elements, it is often your job to style these correctly
+Class Selector= .blue{} #specified with a '.' and the name of the class, each element you want the class to apply to will need class="blue" in tag
+id Selector= #name{} #specifying the value of the name with a '#' in front, the element with id=name will be selected and have rules applied
+Grouping Selectors= div, .blue {} #groups all div and class=blue tags to follow the samme rules
+Element with Class Selector= p.big {} #selects every paragraph element that has class=big
+Child Selector= article > p {} #from right to left, targets every p element that is a direct child of an article element
+Descendant Selector= article p {} #from right to left, target every p level that is inside every article
+Pseudo Class Selectors=Target the ability to style to change if user hovers over an element/other interaction
+  selector:pseudo-class {} #defined with a selector and ':' pseudo-classes :link vs :visited vs :hover vs :active vs :nth-child
+header li { list-style: none; } #removes the bullet points from a list item
+a:link, a:visited {text-decoration: none; background-color: green; border: 1px solid blue; color: black; display: block; width: 200px; 
+  text-align: center; margin-bottom: 1px;} 
+  #changes clicked/unclicked article links, removes underline, changes background color to green, creates a 1 pixel blue border, and changes text
+  color to black, changes inline elements to block level elements with a width of 200 pixels, and aligns text to center, seperates by 1 pixel
+a:hover, a:active {} #when a user hovers over an item, when a user clicks a button
+a:hover, a:active {background-color: red; color: purple; } #when you hover over/click link changes background to red and text colours to purple
+header li:nth-child(3) {} #targets the third child list item in the header element
+section div:nth-child(odd) {background-color: gray;} #changes the background color to grey on all odd div elements 
 
 
 

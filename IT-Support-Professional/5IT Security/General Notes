@@ -188,6 +188,16 @@ IPSec(Internet Protocol Security)=Designed with IPv6, works by encrypting an IP 
 Encapsulating Security Payload=Part of IPSec suite of protocols
 OpenVPN can operate over either TCP or UDP, typically over port 1194
 
+Cryptographic Hardware:
+TPM(Trusted Platform Module)=Hardware device thats integrated, a dedicated crypto processor, unique secret RSA key put in at manufacture
+Remote Attestation=System authenticating its hardware/software to a remote system-secure hash of system configuration
+Data binding and sealing=using secret key to derive a unique key that is then used to encrypt data, only hardware with TPM can unencrypt
+Hypervisor=Virtualized TPM chip
+TEE(Trusted Execution Environment)=Provides a full blown isolated execution environment that runs alongside OS, isolated applications
+FDE(Full Disk Encryption)=Using a TPM you can fully encrypt a drive disk, ensure platform integrity,prevent unauthorized changes to system
+  PGP, Bitlocker(Microsoft), Filevault2(Apple), dm-crypt(linux open source) all FDE software protects against disk cloning
+Entropy Pool=PseudoRandom Vs TrueRandom Data
+
 
 
 

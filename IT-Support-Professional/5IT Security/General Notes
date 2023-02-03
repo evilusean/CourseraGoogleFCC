@@ -175,7 +175,18 @@ SSH(Secure Shell)=A secure network protocol that uses encryption to allow access
 PGP(Pretty Good Privacy)=An encryption application that allows authentication of data, along with privacy from third parties, relying on 
   asymmetric encryption, developed in 1991 by Phil Zimmerman opensource released as a hardcover book under 1st amendment Vs Fedbois
 
-
+Securing Network Traffic:
+VPN(Virtual Private Network)=A mechanism that allows you to remotely connect a host or network to an internal, private network, passing the data
+  over a public channel, like the internet
+IPSec(Internet Protocol Security)=Designed with IPv6, works by encrypting an IP packet and encapsulating inside an IPSec Packet, deencapsulated
+  and deencrypted after routing to VPN endpoint.
+  Transport Mode=only the IP packet is encrypted, leaving the IP headers untouched
+  Tunnel Mode=The entire IP packet, header payload and all, is encrypted and encapsulated inside a new IP packet with new headers
+  L2TP(Layer 2 Tunneling Protocol)=Typically used to support VPN's sometimes with IPSec
+  The tunnel is provided by L2TP which permits the passing of unmodified packets from one network to another. 
+  The Secure Network, on the other hand is provided by IPsec which provides confidentiality, integrity and authentication of data being passed
+Encapsulating Security Payload=Part of IPSec suite of protocols
+OpenVPN can operate over either TCP or UDP, typically over port 1194
 
 
 

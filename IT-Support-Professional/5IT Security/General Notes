@@ -161,3 +161,29 @@ X509 Standard=created in 1988, What defines the format of digital certificates
 Web of trust=Where individuals instead of CA's sign each others public keys, key signing parties
 CRL(Certificate Revocation List)=A means to distribute a list of certificates that are no longer valid
 
+HTTPS=The Secure version of HTTP, HyperText Transport Protocol- Also used for VOIP, skype, hangouts, email, instant messaging, wifi
+  Encapsulates HTTP traffic over a secure channel using SSL/TLS
+TLS grants:
+  1)A secure communication line, which means data being transmitted is protected from potential eavesdroppers
+  2)The ability to authenticate both parties communicating, though typically only the server is authenticated by the client
+  3)The integrity of communications, meaning there are checks to ensure that messages aren't lost or altered in transit
+TLS Handshake=Establishes the Secure TLS connection SYN-ACK
+Session Key=The shared symmetric encryption key used in TLS sessions to encrypt data being sent back and forth
+SSH(Secure Shell)=A secure network protocol that uses encryption to allow access to a network service over unsecured networks
+  Most commonly used to remote login to command line based systems,provisions for arbitary network ports/traffic
+  Supports different key authentication methods, including customs ones you can write
+PGP(Pretty Good Privacy)=An encryption application that allows authentication of data, along with privacy from third parties, relying on 
+  asymmetric encryption, developed in 1991 by Phil Zimmerman opensource released as a hardcover book under 1st amendment Vs Fedbois
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -198,11 +198,25 @@ FDE(Full Disk Encryption)=Using a TPM you can fully encrypt a drive disk, ensure
   PGP, Bitlocker(Microsoft), Filevault2(Apple), dm-crypt(linux open source) all FDE software protects against disk cloning
 Entropy Pool=PseudoRandom Vs TrueRandom Data
 
-
-
-
-
-
+========================================================================================================Week 3:
+Authentication:
+3A's of Security=Authentication, Authorization, Accounting
+"authn"(Authentication)
+Identification=The idea of describing an entity uniquely
+"authz" (Authorization)=Resources an identity has access to
+Incorporating good password policies into an organization is key to ensuring that employees are securing their accounts with strong passwords
+  Length Requirements Vs Character Complexity Vs Dictionary Words
+Usability Vs Security
+MultiFactor Authentication:
+A system where users are authenticated by presenting multiple pieces of information or objects
+  Something you know(PW/PIN) Vs Something you have(Bank Card/Physical Token) Vs Something you are(Biometric ID)
+Physical Tokens=USB Device with token, Standalone device that generates a token, Physical Key+lock
+OTP(One time password)=Generates a short lived token that is entered with username/password(RSA Secure ID token, small battery powered device)
+  TOTP(Timed one time password)=can be a SMS message, dependant on mobile security, can be intercepted-CellPhone App
+  Counter Based Tokens=Use Secret Seed Value+Secret Counter Value that is incremented every use
+Biometrics Authentication=The process of using unique physiological charasteristics of an individual to identify them(fingerprints Vs Glue/Face)
+  Iris/Gait Detection/Microsoft Hello: 2 Cameras, 1 color+1 infrared(depth)
+U2F(Universal Second Factor)=A standard for security keys(Tap da key)
 
 
 

@@ -217,8 +217,24 @@ OTP(One time password)=Generates a short lived token that is entered with userna
 Biometrics Authentication=The process of using unique physiological charasteristics of an individual to identify them(fingerprints Vs Glue/Face)
   Iris/Gait Detection/Microsoft Hello: 2 Cameras, 1 color+1 infrared(depth)
 U2F(Universal Second Factor)=A standard for security keys(Tap da key)
-
-
-
-
+Certificates:
+Are Public Keys that are signed by a CA(Certificate Authority) as a sign of trust
+Client Certificates=Presented by clients and authenticated by servers, clients can also authenticate server
+In order to issue client certificates an organization must setup and maintain CA infrastructure to issue and sign certificates
+CRL(Certificate Revocation List)=A signed list published by the CA which defines certificates that have been explicitly revoked
+RADIUS(Remote Authentication Dial In User Service)=A protocol that provides AAA services for users on a network
+  Client(Credentials) -> NAS(Network Access Server) -> RADIUS Server -> Verifies Credentials
+EAP(Extensible Authentication Protocol
+Kerberos=A Network authentication protocol that uses 'tickets' to allow entities to prove their identity over potentially insecure channels
+  Provides Mututal Authentication, uses Symmetric Encryption, Developed 1980's at MIT, 1993 Version 5, implements checksums
+  Tickets are tokens the prove your identity, authentication tickets allow users to authenticate without username or passwords
+  Tickets will expire, but have provisions for automatic renewal of the ticket
+  Secret Key for encryption is created from the users password
+  AS(authentication Server) contains user ID message, generates secret key using hashed password
+  TGS(Ticket Granting Service)=secret key used for encrypting messages
+  TGT(ticket Granting Ticket)=encrypted using TGS secret key
+  SS(Service Server)=With TGT, client is allowed access with authentication
+TACACS+(Terminal Access Contoller Access-Controlled System Plus)=AAA protocol, open standard developed by CISCO
+SSO(Single Sign On)=An authentication concept that allows users to authenticate once to be granted access to alot of different services and apps
+  Authenticates to a single Authentication Server, provides cookie/token to use all other services
 

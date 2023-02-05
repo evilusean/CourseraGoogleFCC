@@ -139,5 +139,14 @@ Inheritance=DOM(Document Object Model) Tree, if you specify something for an ele
 Specificity=Most Specific Selector Combination wins; Scores; Style=".." Vs ID Vs Class, pseudoclass, attribute Vs # of elements (high)Left to right
   '!important'=add to override specifity 'scores' it doesn't matter, make this override all specificity p {color: green !important;}
 
-
-
+Styling Text:
+body {font-family: 'Times New Roman', Times, serif; color: #0000ff; font-style: italic; font-size:24px}
+the reason you put more than one font is because, when you specify font family you are relying on the user to have it installed, provide options
+every computer will have some type of serif or sans-serif type of font installed
+Specify color using hexadecimel number color: #0000ff; <-RGB first 2 bits are red, second 2 are green, last 2 are blue, ff is highest blue value
+font-weight: bold #font size, can be anywhere from 100-900 or bold
+font-size: 16px; #almost every browser has a default font size of 16 pixels, relative to the viewing device, low DPI(dots per inch) 
+  font-size: 120%; #takes the default size and increase it to 120%, relative size
+  font-size: 2em; #equivalent to the width of 2 'M's, relative size, cumulative effect if added on to eachother
+text-transform: capitalize; #controls how your text looks, capitalize, inherit, lowercase, none, uppercase, full-width
+text-align: center; #controls where text aligns, center, right, left, justify, 

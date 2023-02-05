@@ -125,11 +125,19 @@ a:hover, a:active {background-color: red; color: purple; } #when you hover over/
 header li:nth-child(3) {} #targets the third child list item in the header element
 section div:nth-child(odd) {background-color: gray;} #changes the background color to grey on all odd div elements 
 
+Style Placement:
+Your choice for placing styles, affects which style declarations will override others
+In Line Styling=You can declare styles inside of the tag with <p style="text-align:center;"> for example
+External Stylesheets=You can style other pages/links with <link rel="stylesheet" href="style.css">, needs to 'live' in same directory
+  Best Practice, you almost always want your entire styles to be external to your html page
 
-
-
-
-
+Conflict Resolution:
+Cascading=Algorithm defining how to combine property values originating from different sources
+Origin Precedence=Last Declaration Wins, processed sequentially top to bottom, external links declared at spot where it is linked to
+Merge=if there is no conflict, Declarations Merge=Font size+color, etc
+Inheritance=DOM(Document Object Model) Tree, if you specify something for an element in a tree, all the children(+grandchillen) will inherit 
+Specificity=Most Specific Selector Combination wins; Scores; Style=".." Vs ID Vs Class, pseudoclass, attribute Vs # of elements (high)Left to right
+  '!important'=add to override specifity 'scores' it doesn't matter, make this override all specificity p {color: green !important;}
 
 
 

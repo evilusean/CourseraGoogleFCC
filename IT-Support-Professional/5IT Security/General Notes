@@ -237,4 +237,11 @@ Kerberos=A Network authentication protocol that uses 'tickets' to allow entities
 TACACS+(Terminal Access Contoller Access-Controlled System Plus)=AAA protocol, open standard developed by CISCO
 SSO(Single Sign On)=An authentication concept that allows users to authenticate once to be granted access to alot of different services and apps
   Authenticates to a single Authentication Server, provides cookie/token to use all other services
+OpenID=Authentication system used between websites
+
+Authorization=pertains to describing what the user account has access to, or doesn't have access to
+OAuth=Popular open standard for authorization and access delegation, used by google, apple, microsoft
+  An open standard that allows users to grant third-party websites and applications access to their information
+  without sharing any account credentials, grants third parties access
+OAuth Permissions can be used in phishing-style attacks to gain access to accounts, without requiring credentials to be compromised
 

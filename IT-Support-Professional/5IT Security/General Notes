@@ -235,6 +235,7 @@ Kerberos=A Network authentication protocol that uses 'tickets' to allow entities
   TGT(ticket Granting Ticket)=encrypted using TGS secret key
   SS(Service Server)=With TGT, client is allowed access with authentication
 TACACS+(Terminal Access Contoller Access-Controlled System Plus)=AAA protocol, open standard developed by CISCO
+  is a device access AAA system that manages who has access to your network devices and what they do on them
 SSO(Single Sign On)=An authentication concept that allows users to authenticate once to be granted access to alot of different services and apps
   Authenticates to a single Authentication Server, provides cookie/token to use all other services
 OpenID=Authentication system used between websites
@@ -244,4 +245,10 @@ OAuth=Popular open standard for authorization and access delegation, used by goo
   An open standard that allows users to grant third-party websites and applications access to their information
   without sharing any account credentials, grants third parties access
 OAuth Permissions can be used in phishing-style attacks to gain access to accounts, without requiring credentials to be compromised
+ACL(Access Control list)=Way of defining permissions or authorizations for objects
+  Access Control Entries=Entries for files/programs/etc that make up the ACL, defines user/group permissions
+Accounting=Keeping records of what resources and services your users accessed, or what they did when they were using your systems
+Auditing=Involves viewing records to ensure that nothing is out of the ordinary
+
+
 

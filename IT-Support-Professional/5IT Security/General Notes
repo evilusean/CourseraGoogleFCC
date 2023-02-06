@@ -250,5 +250,26 @@ ACL(Access Control list)=Way of defining permissions or authorizations for objec
 Accounting=Keeping records of what resources and services your users accessed, or what they did when they were using your systems
 Auditing=Involves viewing records to ensure that nothing is out of the ordinary
 
+========================================================================================================Week 3:
+Secure Network Architecture:
+Network Hardening=The process of securing a network by reducing it's potential vulnerabilities through configuration changes and specific steps
+  Best practice to disable unneccesary extra services or disabling access to them
+Implicit Deny=A network security concept where anything not explicitly permitted or allowed should be denied (ACL Config, firewall, whitelisting)
+Monitoring Network Traffic=Establishing a baseline for what your typical traffic looks like, investigate any anomolies
+Analyzing Logs=The practice of collecting logs from different network and sometimes client devices on your network, then performing automated anal
+  Logs analysis systems are configured using user defined rules to match interesting or atypical log entries
+  Normalizing log data=is an important step since logs from different devices and systems may not be formatted in a common way
+  Correlation Analysis=The process of taking log data from different systems and matching events across all systems
+  Post-Fail Analysis=Investigating how a compromise happened after the breach is detected
+Splunk=Program used for extensive log analysis, generate alerts, visualizations
+Flood Gaurds=Provide protection against DoS(Denial of Service) attacks
+Fail2Ban=Popular open source flood gaurd, watches for attacks and blocks further attempts from attack addresses
+Network Seperation=Security principle, designate networks based on location/use
+
+
+
+  
+
+
 
 

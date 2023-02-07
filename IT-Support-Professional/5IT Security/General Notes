@@ -280,6 +280,12 @@ IPSG(IP Source Gaurd)=works by using DHCP snoop table to create dynamicaly ACLs 
 EAPOL(Extensible Authentication Protocol over LAN(Local Access Network))=Above 802.1X standard
 EAP-TLS=Client Device=Supplicant, communicates with authenticator(Enterprise Switch/Access point) before getting network access(RADIUS)
   An authentication type supported by EAP that uses TLS to provide mutual authentication of both the client and authenticating server
+Network Software Hardening:
+Firewalls Vs Proxies Vs VPN's
+Firewalls can be dedicated network infrastructure devices(mutliusers) or Host based software on client system(Single user) or both
+VPN's are used to provide secure access to internal resources for mobile or roaming users
+  Commonly used to provide secure remote access, and link two networks securely(site-site VPN to link two offices in different locations)
+Proxies are useful for protecting client devices and their traffic, also provide secure remote access without a VPN
 
 
   

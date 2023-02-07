@@ -182,8 +182,13 @@ p2 {float: right;} #floats to object to the right side
 section {clear: left;} #tells the browser that nothing can be floating to the left of it, options: right, both
 
 Relative and Absolute Element Positioning:
-
-
+Static Positioning=Default for all elements, except HTML-Positioning Offsets are ignored, 
+p {position: relative; top: 50px; left: 50px ;} #offsets element up 50pixels and left 50 pixels, from the top and from left
+  p {position: relative; top: -50px; left: -50px ;} #you can also use negative values for offset
+Relative Positioning=Element is positioned relative to it's position in normal document flow-positioning offsets are; top,bottom,left,right
+  like setting an anchor, element is not taken out of normal document flow-even if moved, its original spot is preserved
+Absolute Positioning=All offsets(top, bottom, left, right) are relative to the position of the nearest ancestor which has position set on it,
+  other than static, element is taken out of its normal document flow
 
 
 

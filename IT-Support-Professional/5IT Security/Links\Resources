@@ -91,3 +91,17 @@ Configuring Mac OS X firewall
 https://support.apple.com/en-us/HT201642
 Microsoft firewall rules
 https://technet.microsoft.com/en-us/library/cc754274(v=ws.11).aspx
+
+Proxies:
+HAProxy main documentation
+http://www.haproxy.org/#docs
+HAProxy reverse proxy documentation
+http://cbonte.github.io/haproxy-dconv/1.8/intro.html#3.3.1
+nginx main documentation
+http://nginx.org/en/docs/
+nginx reverse proxy documentation
+http://nginx.org/en/docs/beginners_guide.html#proxy
+Apache HTTP server main documentation
+http://httpd.apache.org/docs/
+Apache HTTP server reverse proxy documentation
+https://httpd.apache.org/docs/2.4/howto/reverse_proxy.html

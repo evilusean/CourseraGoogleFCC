@@ -113,6 +113,7 @@ Grouping Selectors= div, .blue {} #groups all div and class=blue tags to follow 
 Element with Class Selector= p.big {} #selects every paragraph element that has class=big
 Child Selector= article > p {} #from right to left, targets every p element that is a direct child of an article element
 Descendant Selector= article p {} #from right to left, target every p level that is inside every article
+* { } #star selector, select every element there is and go and apply these properties to them
 Pseudo Class Selectors=Target the ability to style to change if user hovers over an element/other interaction
   selector:pseudo-class {} #defined with a selector and ':' pseudo-classes :link vs :visited vs :hover vs :active vs :nth-child
 header li { list-style: none; } #removes the bullet points from a list item
@@ -150,3 +151,16 @@ font-size: 16px; #almost every browser has a default font size of 16 pixels, rel
   font-size: 2em; #equivalent to the width of 2 'M's, relative size, cumulative effect if added on to eachother
 text-transform: capitalize; #controls how your text looks, capitalize, inherit, lowercase, none, uppercase, full-width
 text-align: center; #controls where text aligns, center, right, left, justify, 
+
+Box Model Layout:
+Refers to the components that make up an HTML box; Margin, Border, Padding-as well as the rules that govern the box layout
+#box {background-color: blue;} #creates a box with blue background
+padding: 10px 10px 10px 10px; #pads 10px top 10px right 10px bottom 10px left TOPRIGHTBOTTOMLEFT or padding: 10px;
+border: 5px solid black; #creates a solid black border 5pixels large
+margin: 40px; #creates a margin 40pixels large on TOP RIGHT BOTTOM and LEFT
+width: 300px; #lets box length be 300 pixels wide+padding+border+margin, width of content changes with the size of +padding+border+margin
+box-sizing: border-box; #option, allows you to width box to an actual 300px width, instead of adding in padding+border, uninheritable property
+overflow: auto; #overflow, auto adds scrolls bars, visible is default, hidden is clipped, scroll is visible scroll bars 
+* { } #star selector, select every element there is and go and apply these properties to them
+Cumulative Margins=Margins collapse and the box with the larger margin wins, they don't add together
+

@@ -265,7 +265,21 @@ Splunk=Program used for extensive log analysis, generate alerts, visualizations
 Flood Gaurds=Provide protection against DoS(Denial of Service) attacks
 Fail2Ban=Popular open source flood gaurd, watches for attacks and blocks further attempts from attack addresses
 Network Seperation=Security principle, designate networks based on location/use
-
+Network Hardware Security:
+Rogue DHCP Server attack=attack DHCP protocol, and hand out DHCP leases to whomever they want, setting DNS address to machine in their control
+DHCP Snooping=A switch with DHCP snooping will monitor DHCP traffic being sent accross it, can protect against Rogue DHCP/IP spoof/ARP Poisoning
+  Also allows you to designate a trusted DHCP server id, and tracks IP's going to which machines
+DAI(Dynamic ARP inspection)=Feature on enterprise switches, requires DHCP snooping, establish a trusted binding of trusted IP addresses, 
+  DAI will detect forged IP address and drop them, has a table of trusted IP addresses,
+  also enforces rate limit of packets per port to prevent ARP scanning
+Gratuitous ARP Response=(L2)Man in the middle attack is possible on ARP due to unauthenticated nature of ARP, allows an attacker to forge an ARP 
+  response advertising its mac address matching the physical address of a victims IP address, all clients on network would cache this ARP entry
+  could then send frames intended for victims IP address to attackers IP address, then IP forwarded to victims PC, monitoring traffic/modify data
+IPSG(IP Source Gaurd)=works by using DHCP snoop table to create dynamicaly ACLs for each switch port, drops packets that don't match IP address
+802.1X=IEEE Standard for encapsulating EAP(Extensible Authentication protocol) traffic over 802 networks,
+EAPOL(Extensible Authentication Protocol over LAN(Local Access Network))=Above 802.1X standard
+EAP-TLS=Client Device=Supplicant, communicates with authenticator(Enterprise Switch/Access point) before getting network access(RADIUS)
+  An authentication type supported by EAP that uses TLS to provide mutual authentication of both the client and authenticating server
 
 
   

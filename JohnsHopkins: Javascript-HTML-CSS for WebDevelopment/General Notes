@@ -98,6 +98,7 @@ if you don't specify image size, when rendering(slow load) the page will jump ar
 ========================================================================================================================Week 2:
 CSS3(Cascading Style Sheets):
 CSS is style, color, positioning, size, etc. HTML is the structure
+/ #use forward slash to comment out
 Anatomy of a CSS Rule:
 CSS works by associating rules with an HTML element, these rules govern how the content of specified elements should be displayed
 Selector=p { #selector should apply to every single paragraph tag, followed by open and closed curly braces
@@ -163,4 +164,27 @@ box-sizing: border-box; #option, allows you to width box to an actual 300px widt
 overflow: auto; #overflow, auto adds scrolls bars, visible is default, hidden is clipped, scroll is visible scroll bars 
 * { } #star selector, select every element there is and go and apply these properties to them
 Cumulative Margins=Margins collapse and the box with the larger margin wins, they don't add together
+
+Background Property:
+width: 500px;
+height: 500px; #creates a 500x500 square of blue for background
+background-color: blue; #sets background color to blue
+background-image: url("www.example.com"); #specifies an image, can be a relative or absolute URL
+background-repeat: no-repeat; #no repeat shows one image instead of pasting multiple background images, other options are: repeat x, repeat y
+background-position: top right; #defaults to center if only specified one property options:bottom, right, left, top
+background: url("www.example.com") no-repeat right-center blue; #does the last four above in one line
+
+Positioning Elements by Floating:
+Most UI's made today are made by floating the elements
+When you float elements, the document takes it out of the regular document flow
+Floated Margins do not collapse
+p2 {float: right;} #floats to object to the right side
+section {clear: left;} #tells the browser that nothing can be floating to the left of it, options: right, both
+
+Relative and Absolute Element Positioning:
+
+
+
+
+
 

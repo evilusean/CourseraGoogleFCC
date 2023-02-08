@@ -304,4 +304,28 @@ TKIP(Temporal Key Integrity Protocol)=More secure than WEP, sequence counter, ch
 GTK(Groupwise Transient Key)=Key shared between clients, encrypted with EAP, updated and retransmitted occasionaly
 WPS(Wifi Protected Setup)=created in 2006, long secure passphrases=63 characters, Pin Entry Authentication/NFC/USB/Push Button Authentication
   Pin entry confirms first 4 digits, then next 3 digits, then checksum, only takes 11,000 tries to 'guess' bruteforce, lockout after 3 failed guess
+802.1x > WPA2 >AES/CCMP in order of goodness
+If your company values security over convenience, ensure that WPS isn't enabled on your AP's
+
+Network Monitoring:
+Packet Sniffing/Packet Capture=The process of intercepting network packets in their entirety for analysis
+Promiscuous Mode=A type of computer networking operational mode in which all network data packets can be accessed and viewed by all network 
+  adapters operating in this mode, requires admin/root privileges to begin capturing packets
+Port Mirroring=Allows the switch to take all packets from a specified port, port range, or entire VLAN and mirror the packets to a specified switch
+  port, you can insert a hub with all devices you want to monitor connected to the hub
+Monitor Mode=Allows us to scan accesss channels to see all wireless traffic being sent by APs and clients
+TCPDump=A super popular, lightweight, command-line based utility that you can use to capture and analyze packets (LibPCap library)
+  Allows you to write packet captures to a file, for later analysis/sharing/replaying traffic/reading back
+  default operating mode=provides a brief packet analysis. converts from layers 3 and up to human readable info(source/destination info/ports)
+  sudo tcpdump -n -i enol ip and host example.com #-n flag overrides host addresses with commonly used port services
+  #-x flag allows you to view raw data that makes up packet as hexadecimal digits
+Wireshark=Another Packet capture tool, more powerful than TCPdump graphical utility, can decode encrypted payloads if encryption key is known
+  Id and extract data payloads from file transfers, has filter strings, filter by protocols, can view bluetooth traffic, USB Traffic
+  Can follow TCPStreams/Sessions=reassemble and view the full 2 sides of a TCP session
+  Can decode WPA/WEP encrypted packets
+  File Carving=Extracting data payloads(File transfers) from unecrypted HTTP traffic/FTP 
+  Extract audiostreams from unencrypted VOIP traffic
+Traffic Analysis=Done by monitoring packet traffic, capture and inspect what is going on in a network
+
+
 

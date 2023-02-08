@@ -286,10 +286,22 @@ Firewalls can be dedicated network infrastructure devices(mutliusers) or Host ba
 VPN's are used to provide secure access to internal resources for mobile or roaming users
   Commonly used to provide secure remote access, and link two networks securely(site-site VPN to link two offices in different locations)
 Proxies are useful for protecting client devices and their traffic, also provide secure remote access without a VPN
-
-
-  
-
-
-
+Wireless Security:
+WEP(Wired Equivalent Privacy)=Part of original 802.11 Standard 1997, packets can be intercepted by anyone with physical proximity, don't use
+  RC4 Encryption=24 bit + shared secret key(40 bit)=64bit encryption sent as plaintext, can be intercepted- IV key repeated,reconstruct key
+  Aircrack NG, Airsnort can recover a WEP key in minutes
+WPA(Wifi Protected Access)=Replacement for WEP, created in 2003, WPA2=2004, designed as a short-term replacement that would be compatible with
+  older WEP-enabled hardware with a simple firmware update
+  under WPA the pre-shared key is the wifi password you share with people when they want to use your wireless network
+PBKDF2(Password-Based Key Deriviation Function 2=Uses WIFI password to derive a shared key for encryption use, WIFI SSID used as salt, 
+  then run through HMAC SHA1 function 4096 times to generate a unique encryption key, 
+CCMP(Counter Mode CBC-MAC Protocol)=WPA2 uses this for block ciphers, incrementing counter to encrypt data
+Four way handshake=ensures they have the correct key without disclosing PMK(long lived Private Key for encryption/decryption)
+  AP Nonce -> Client Nonce -> AP GTK -> Client Acknoledge
+  If attacker can capture the 4 way handshake process, they can begin guessing the preshared key
+PTK(Pairwise Transient Key=Generated with   PMK -> AP Nonce -> CLient Nonce -> AP Mac Address -> Client MAC address = concatonated key
+TKIP(Temporal Key Integrity Protocol)=More secure than WEP, sequence counter, changed IV key generations-mixing, integrity check for packets
+GTK(Groupwise Transient Key)=Key shared between clients, encrypted with EAP, updated and retransmitted occasionaly
+WPS(Wifi Protected Setup)=created in 2006, long secure passphrases=63 characters, Pin Entry Authentication/NFC/USB/Push Button Authentication
+  Pin entry confirms first 4 digits, then next 3 digits, then checksum, only takes 11,000 tries to 'guess' bruteforce, lockout after 3 failed guess
 

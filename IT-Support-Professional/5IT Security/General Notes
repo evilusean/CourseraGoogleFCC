@@ -326,6 +326,17 @@ Wireshark=Another Packet capture tool, more powerful than TCPdump graphical util
   File Carving=Extracting data payloads(File transfers) from unecrypted HTTP traffic/FTP 
   Extract audiostreams from unencrypted VOIP traffic
 Traffic Analysis=Done by monitoring packet traffic, capture and inspect what is going on in a network
+IDS(Intrusion Detection Systems)/IPS(Intrusion Prevention Systems)=IDS/IPS operate by monitoring network traffic and analyzing it
+  IDS=Only monitors, logs, and alerts
+  IPS=Blocks malicious traffic, creates an active firewall for either host or network
+NIDS(Network Intrusion Detection System)=would be deployed somewhere on a network where it can monitor traffic for a network segment or subnet
+  NIDS systems monitor for malicious traffic coming from within the system
+  Host based would be a software, only monitoring traffic to that host system
+Popular NIDS Systems=Snort, Suricata, Bro NIDS
+NIPS(Network Intrusion Prevention System)=Nippon stronk, malicious traffic fears the firewall samurai, signature detection
+
+
+
 
 
 

@@ -105,3 +105,8 @@ Apache HTTP server main documentation
 http://httpd.apache.org/docs/
 Apache HTTP server reverse proxy documentation
 https://httpd.apache.org/docs/2.4/howto/reverse_proxy.html
+
+RC4 WEP Key stealing 2001:
+https://doi.org/10.1007/3-540-45537-X_1
+WPS(Wifi Protected Setup) Pin Brute Force Vulnerability:
+https://www.kb.cert.org/vuls/id/723755

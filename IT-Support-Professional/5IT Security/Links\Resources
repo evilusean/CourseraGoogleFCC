@@ -153,3 +153,24 @@ https://docs.microsoft.com/en-us/cloud-app-security/
 How User Account Control works - User Account Control (UAC) is a fundamental component of Microsoft's overall security vision. UAC helps mitigate
   the impact of malware.
   https://docs.microsoft.com/en-us/windows/security/identity-protection/user-account-control/how-user-account-control-works
+
+Unprotected System Comp Record Time:
+https://isc.sans.edu/survivaltime.html
+Antivirus software shortfalls:
+http://robert.ocallahan.org/2017/01/disable-your-antivirus-software-except.html
+Sophos Antivirus software comped;
+http://lock.cmpxchg8b.com/Sophail.pdf
+Software Signing Bypass:
+http://www.crn.com/news/security/240148192/bit9-admits-systems-breach-stolen-code-signing-certificates.htm
+
+FDE(Full Disk Encryption):
+Bitlocker(Microsoft):
+https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview
+FileVault2(Apple):
+https://support.apple.com/en-us/HT204837
+dm-crypt-package(Linux):
+https://wiki.archlinux.org/index.php/dm-crypt
+PGP:
+https://www.symantec.com/products/encryption
+Veracrypt:
+https://www.veracrypt.fr/en/Home.html

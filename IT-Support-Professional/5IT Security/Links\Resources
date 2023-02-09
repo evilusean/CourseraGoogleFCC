@@ -174,3 +174,39 @@ PGP:
 https://www.symantec.com/products/encryption
 Veracrypt:
 https://www.veracrypt.fr/en/Home.html
+
+Browser Hardening:
+Use pop-up blockers: Disable Web Browser Pop-up Blockers
+https://www.k-state.edu/ksis/help/gettingstarted/Disabling-Popup-Blockers.html
+Clear browsing data and cache: Clear your web browser's cache, cookies, and history
+https://kb.iu.edu/d/ahic
+Use private-browsing mode: How to Turn on Incognito Mode in Your Browser
+https://www.lifewire.com/browsing-incognito-445990
+Turn sync on and off in Chrome
+https://support.google.com/chrome/answer/185277?hl=en&co=GENIE.Platform%3DDesktop
+Disable Firefox Sync
+https://support.mozilla.org/en-US/kb/disable-firefox-sync
+Change and customize sync settings in Microsoft Edge
+https://support.microsoft.com/en-us/microsoft-edge/change-and-customize-sync-settings-in-microsoft-edge-be529080-f2e9-b642-538f-976956b8da6b#
+Use ad blockers: How to block ads
+https://adblockplus.org/tutorials
+Dubious downloads: How to check if a website and its files are malicious - Provides information on evaluating websites and downloads for
+  the presence of malware.
+https://blog.malwarebytes.com/how-tos-2/2020/01/dubious-downloads-how-to-check-if-a-website-and-its-files-are-malicious/
+The Best Password Managers to Secure Your Digital Life - Compares and contrasts the top password managers on the market.
+https://www.wired.com/story/best-password-managers/
+Avoiding Social Engineering and Phishing Attacks - Tips for avoiding an array of internet scams.
+https://www.cisa.gov/uscert/ncas/tips/ST04-014
+Blocking Unnecessary Advertising Web Content - From the United States National Security Agency Cybersecurity Information, notice about 
+  ad-blocking through network functions, at the host level, and other concerns.  
+https://media.defense.gov/2019/Jul/16/2002158057/-1/-1/0/CSI-BLOCKING-UNNECESSARY-ADVERTISING-WEB-CONTENT.PDF
+Securing Web Browsers and Defending Against Malvertising for Federal Agencies - From the United States Cybersecurity and 
+Infrastructure Security Agency, guide for protecting computing systems from malvertising.
+https://www.cisa.gov/sites/default/files/publications/
+  Capacity_Enhancement_Guide-Securing_Web_Browsers_and_Defending_Against_Malvertising_for_Federal_Agencies.pdf
+Browser sync—what are the risks of turning it on? - Explains the security threats associated with having browsers set to synchronize account
+  data across multiple devices.
+https://blog.malwarebytes.com/privacy-2/2021/02/browser-sync-what-are-the-risks-of-turning-it-on/
+List of Participants - Microsoft Trusted Root Program - Microsoft’s list of trusted Certificate Authorities and the common 
+  names of the issued certificates.
+https://docs.microsoft.com/en-us/security/trusted-root/participants-list

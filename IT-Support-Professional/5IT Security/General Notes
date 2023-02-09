@@ -350,6 +350,31 @@ Normalization=Taking log data and converting it into a standardized format
 Once Logs are centralized and standardized, you can write automated alerting based on rules
 Retention=How long you keep logs, the longer you keep the greater your storage requirements will be
 Logging Servers=rsyslog(open source), Splunk Enterprise Security, IBM Security Qradar, RSA Security Analytics
+Antimalware:
+Antivirus is signature based, it has a database of signatures, like a known unique file binary hash/file location or traffic charasteristics
+  Will monitor and analyze things, like new files created or modified on the system, in order to watch for any behavior that matches a signature
+Binary Whitelisting Software=List of known good and trusted software, only things on the list are allowed to run Vs Software Signing
+Disk Encryption:
+FDE(Full Disk Encryption)=Works by automatically converting data on a hard drive into a form that cannot be understood by anyone who doesn't have
+  the key to undo the conversion, to boot needs to be unencrypted, all FDE drives have an unencrypted partition that is able to be attacked
+  When you implement a full disk encryption solution at scale, it's important to think about how to handle cases where passwords(key) are forgotten
+Secure Boot Protocol=UEFI Spec, uses public key cryptography to boot securely, code signing(Platform Key-Firmware)
+Key Escrow=Allows the encryption key to be securely stored for later retrieval by an authorized party(SysAdmins)=another passkey
+Home Directory or File-based encryption only guarantees confidentiality and integrity of files protected by encryption
+Software Patch Management:
+Alot of attacks depend on exploiting bugs in software, can be fixed through patches/updates, install in a timely fashion
+Some software has bugs in the core functionality, and can not be mitigated against
+Critical Infrastructure devices should be approached carefully when you apply updates. There's always the risk that a software update will
+  introduce a new bug that might affect the functionality of the device.
+Application Policies:
+A common reccomendation/requirement is to only support/require only the latest version of a piece of software
+It's Generally a good idea to disallow risky classes of software by policy. Things like file sharing software and piracy related software
+  tend to be closely associated with malware infections
+Understanding what your users need to do their jobs will help shape your approach to software policies and guidelines
+Helping your users accomplish tasks by recommending or supporting specific software makes for a more secure environment
+Extensions that require full access to websites visited can be risky, since the extension developer has the power to modify pages visited
+
+
 
 
 

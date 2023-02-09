@@ -250,7 +250,7 @@ ACL(Access Control list)=Way of defining permissions or authorizations for objec
 Accounting=Keeping records of what resources and services your users accessed, or what they did when they were using your systems
 Auditing=Involves viewing records to ensure that nothing is out of the ordinary
 
-========================================================================================================Week 3:
+========================================================================================================Week 4:
 Secure Network Architecture:
 Network Hardening=The process of securing a network by reducing it's potential vulnerabilities through configuration changes and specific steps
   Best practice to disable unneccesary extra services or disabling access to them
@@ -334,6 +334,28 @@ NIDS(Network Intrusion Detection System)=would be deployed somewhere on a networ
   Host based would be a software, only monitoring traffic to that host system
 Popular NIDS Systems=Snort, Suricata, Bro NIDS
 NIPS(Network Intrusion Prevention System)=Nippon stronk, malicious traffic fears the firewall samurai, signature detection
+
+========================================================================================================Week 5:
+System Hardening:
+Defense in Depth=The concept of having multiiple, overlapping systems of defense to protect IT systems
+Attack Vector=The method or mechanism by which an attacker or malware gains access to a network or system
+Attack Surface=The sum of all the different attack vectors in a given system
+Disabling Unneccesary Components=The less complex something is, the less likely there will be undetected flaws-  Reduce software deployments
+Host-Based Firewalls=Protect individual hosts from being compromised when they're used in untrusted, potentially malicious environments
+  If the users of the system have administrator rights, then they have the ability to change firewall rules and configurations
+Incident Investigation(Logging/Auditing)=All systems running on hosts will create logs of some type, 
+  Access Logs Vs Errors(Application Faults) Vs Debug Vs Audit Vs Firewalls Vs Authentication 
+SIEMS(Security Information and Event Management Systems=Centrallized Log server for analysis
+Normalization=Taking log data and converting it into a standardized format
+Once Logs are centralized and standardized, you can write automated alerting based on rules
+Retention=How long you keep logs, the longer you keep the greater your storage requirements will be
+Logging Servers=rsyslog(open source), Splunk Enterprise Security, IBM Security Qradar, RSA Security Analytics
+
+
+
+
+
+
 
 
 

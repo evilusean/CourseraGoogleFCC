@@ -190,6 +190,23 @@ Relative Positioning=Element is positioned relative to it's position in normal d
 Absolute Positioning=All offsets(top, bottom, left, right) are relative to the position of the nearest ancestor which has position set on it,
   other than static, element is taken out of its normal document flow
 
+Media Queries:
+Allow you to group styles together and target them to a device based on some criteria(width/length/height/orientation-landscape)
+@media (max-width: 767px) { p { color:blue; } }
+^keyword ^media features 
+each media features resolve to either true or false, 
+  @media (min-width: 800px) {...}
+  @media (orientation: portrait) {...}
+  @media screen {...}
+  @media print {...}
+most common way of targetting different devices is by the width of the device
+they can be combined with logical operations 'and' is most common, ',' is equivalent to 'OR'
+@media (min-width:768 px) and (max-width:991px) {...} #targets a width range, any device within this range will be targeted, if not within-no apply
+@media (max-width:767px) , (min-width: 992px) {...} #target any device whose width isnt larger than 767 or at least 992px in length
+you must be careful not to overlap range boundaries/breakpoints
+Standard Width Ranges= >1200Pixels=Large, 992-1199=Medium Sized Device, 
+Bottom Left in Chrome Developer Tools is a 'Cell Phone Icon' -> Click =Shows what your website would look like on different devices
+
 
 
 

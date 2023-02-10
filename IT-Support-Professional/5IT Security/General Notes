@@ -374,10 +374,36 @@ Understanding what your users need to do their jobs will help shape your approac
 Helping your users accomplish tasks by recommending or supporting specific software makes for a more secure environment
 Extensions that require full access to websites visited can be risky, since the extension developer has the power to modify pages visited
 
-
-
-
-
+========================================================================================================Week 6:
+Risk in Workplace:
+PCI DSS(Payment Card Industry Data Security Standard)=If your company handles credit card payments, you must follow the PCI DSS
+  X6 Objectives:
+  1)Build and maintain a secure network and systems 
+  2)Protect Cardholder Data (stored data+encrypted transmission, retention policies)
+  3)Maintain a vulnerability Management Program (antivirus, secure systems/applications, up to date, regular scans, logs)
+  4)Implement Strong Access Control Measures(restrict access to cardholder data; need to know, 
+    Identify and authenticate access to system components, restrict physical access to cardholder data)
+  5)Regularly monitor and test networks (Track and monitor all access to network resources and cardholder data, regularly test security systems)
+  6)Maintian an information security policy (For all personal)
+Security is all about determining risks or exposure; understanding the likelihood of attacks; and desigining defences to minimize the impact of an
+  attack
+Security Risk Assessment starts with threat modeling
+High Value Data usually includes account information, like usernames and passwords. Typically, any kind of user data is considered high value
+  especially if payment processing is involved
+Vulnerability Scanner=A computer program designed to assess computers, computer systems, networks or applications for weaknesses
+  Tools: Nessus, OpenVAS, Qualys pingsweep or portscan
+  Works by scanning periodically to find hosts through either a pingsweep or portscan, more detailed scans are run against hosts
+  a port scan is done against common ports/all possible valid ports is done to discover what service is running/listening
+  , then probed to get more information about what service and version is running, then checked against a database of known vulnerabilities
+  once scan is finished a report is compiled of discovered vulnerabilities and hosts, prioritzed by severity-how likely to be exploited/
+  type of access/can be exploited remotely. Can also detect misconfigured services, backdoors, etc
+  can only detect known vulnerabilities, 
+Penetration Testing=The practice of attempting to break into a system or network to verify the systems in place
+Privacy Policies oversee the access and use of sensitive data
+Enforce Privacy Policies through Log Audits
+Any access that doesn't have a corresponding request should be flagged as a high-priority potential breach that needs to be investigated ASAP
+Data-Handling policies should cover the details of how different data is classified
+Once different data classes are defined, you should create guidelines around how to handle these different types of data
 
 
 

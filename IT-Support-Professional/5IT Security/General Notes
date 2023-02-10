@@ -404,7 +404,27 @@ Enforce Privacy Policies through Log Audits
 Any access that doesn't have a corresponding request should be flagged as a high-priority potential breach that needs to be investigated ASAP
 Data-Handling policies should cover the details of how different data is classified
 Once different data classes are defined, you should create guidelines around how to handle these different types of data
-
+Users:
+You can build the world's best security systems, but they won't protect you if the users are practicing unsafe security
+You should never upload confidential information onto a third party service that has not been evaluated by your company
+People are lazy, don't like remembering 20 character passwords that need to be changed every 3 months
+A much greater risk in the workplace that users should be educated on is credential theft from phishing emails
+Third Parties-If they have poor security, you are opening up another avenue for attack
+Incident Reporting and Analysis:
+The very first step to handling an incident is to detect it in the first place/Best away to avoid a trap is to know it's there
+The next step is to analyze it and determine the effects and scope of damage
+Once the scope of the incident is determined, the next step is containment
+If an account was compromised, change the password immediately. If the owner is unable to change the password right away, lock the account
+Severity includes factors like what and how many systems were compromised, and how the breach affects business functions
+The impact of an incident is also an important issue to consider
+Data exfiltration=The unauthorized transfer of data from a computer
+Recoverability=How complicated and time-consuming the recovery effort will be
+Update firewall rules and ACL's if an exposure was discovered in the course of an investigation
+Create new definitions and rules for intrusion detection systems that can watch for the signs of the same attack again
+Mobile Security Policy:
+Contains Emails, personal files, photos, health data, location data
+Enable Storage Encryption on devices
+Enable Screen Lock/Remote Wipe
 
 
 

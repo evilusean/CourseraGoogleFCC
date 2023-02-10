@@ -210,3 +210,11 @@ https://blog.malwarebytes.com/privacy-2/2021/02/browser-sync-what-are-the-risks-
 List of Participants - Microsoft Trusted Root Program - Microsoft’s list of trusted Certificate Authorities and the common 
   names of the issued certificates.
 https://docs.microsoft.com/en-us/security/trusted-root/participants-list
+
+Vulnerability Scanners:
+Nessus:
+https://www.tenable.com/products/nessus-vulnerability-scanner
+OpenVAS:
+http://www.openvas.org/
+Qualys:
+https://www.qualys.com/forms/freescan/

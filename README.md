@@ -14,9 +14,13 @@ End:27October2022
 
 https://www.coursera.org/professional-certificates/google-it-support
 
+Certificate:
+
+https://www.credly.com/earner/earned/badge/d21d495c-caed-4fe5-8440-48aca0de59c3
+
 Start:28October2022
 
-End:
+End:10Feb2022
 
 # Johns Hopkins: HTML, CSS, and Javascript for Web Developers
 

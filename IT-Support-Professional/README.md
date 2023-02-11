@@ -3,7 +3,7 @@ https://www.coursera.org/professional-certificates/google-it-support
 
 Certificate:
 
-https://www.credly.com/earner/earned/badge/d21d495c-caed-4fe5-8440-48aca0de59c3
+https://www.credly.com/badges/d21d495c-caed-4fe5-8440-48aca0de59c3
 
 Start:28October2022
 

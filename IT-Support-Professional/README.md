@@ -1,9 +1,13 @@
 # Google IT Support Professional Certificate
 https://www.coursera.org/professional-certificates/google-it-support
 
+Certificate:
+
+https://www.credly.com/earner/earned/badge/d21d495c-caed-4fe5-8440-48aca0de59c3
+
 Start:28October2022
 
-End:
+End:10Feb2022
 
 ## 1Technical Support Fundamentals
 
@@ -43,4 +47,4 @@ https://www.coursera.org/learn/it-security?specialization=google-it-support
 
 Start:28Jan2023
 
-End:
+End:10Feb2022

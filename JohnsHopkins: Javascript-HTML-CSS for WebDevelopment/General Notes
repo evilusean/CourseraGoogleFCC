@@ -207,6 +207,13 @@ you must be careful not to overlap range boundaries/breakpoints
 Standard Width Ranges= >1200Pixels=Large, 992-1199=Medium Sized Device, 
 Bottom Left in Chrome Developer Tools is a 'Cell Phone Icon' -> Click =Shows what your website would look like on different devices
 
-
+Responsive Design:
+Born out of the need of many mobile devices being able to browse the web, in 2014 mobile browsers(cellphone vs tablet) overtook desktop
+Responsive Designed Website=Site designed to adapt its layout to the viewing environment by using fluid, proportion-based grids(specified w/ %),
+  flexible images, and CSS3 media queries. Sites layout should adapt to the size of the device, content verbosity or its visual delivery may change
+  some parts of the site may be hidden on a mobile version or made more viewable
+12-Column Grid Responsive Layout=Framework that twitter bootstrap uses. factors of 12: 1, 2, 3(25%) ,4(33%), 6(50%), 12; 1 column = 100% /12 =8.33%
+  You can have nested grids; one section of 4 divided into another column of 12,
+<meta name="viewport" content="width=device-width, initial-scale=1"> #tells small devices not to automatically attempt to zoom out on opening site
 
 

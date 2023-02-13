@@ -216,4 +216,20 @@ Responsive Designed Website=Site designed to adapt its layout to the viewing env
   You can have nested grids; one section of 4 divided into another column of 12,
 <meta name="viewport" content="width=device-width, initial-scale=1"> #tells small devices not to automatically attempt to zoom out on opening site
 
+Twitter Bootstrap:
+The most popular HTML, CSS and JS framework for developing responsive, mobile first projects on the web
+Mobile First=Plan for Mobile development from the start, CSS framework is mobile ready
+Comes with multiple Files for HTML, CSS and JS formats, some bloat
+The Bootstrap Grid System:
+<div class="container"> #Grid must be inside container wrapper( or inside container-fluid)provides padding, fixed width with break points
+  <div class="row"> #creates horizontal groups of columns, columns collapse and interact with eachother as a group, negative margin for padding
+    <div class="col-md-4">Col 1</div> #
+col-SIZE-SPAN=Every bootstrap column class is defined using this template, SIZE=Screen width range identifier, below range will collapse columns
+  SPAN=How many columns element should span values 1:12
+
+
+
+
+
+
 

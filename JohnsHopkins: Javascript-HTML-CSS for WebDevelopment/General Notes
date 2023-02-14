@@ -223,10 +223,11 @@ Comes with multiple Files for HTML, CSS and JS formats, some bloat
 The Bootstrap Grid System:
 <div class="container"> #Grid must be inside container wrapper( or inside container-fluid)provides padding, fixed width with break points
   <div class="row"> #creates horizontal groups of columns, columns collapse and interact with eachother as a group, negative margin for padding
-    <div class="col-md-4">Col 1</div> #
+    <div class="col-md-4">Col 1</div> #12/4 = 3, will fit 3 columns in a row
 col-SIZE-SPAN=Every bootstrap column class is defined using this template, SIZE=Screen width range identifier, below range will collapse columns
   SPAN=How many columns element should span values 1:12
-
+<div class="col-md-4 col-sm-6">Col 1</div> #will collapse when reaching under 991 pixels or small in browser
+<div class="col-xs-6">Col 1 </div> #will maintain extra small format even if enlarged in browser
 
 
 

@@ -254,9 +254,12 @@ don't be afraid to view bootstrap CSS documentation to know what each element ta
 <header> <nav id="header-nav" class="navbar navbar-default"> #nav creates navbar header, bootstrap subclass navbar-default creates it
   <div class="container"> #creates header container
     <div class="navbar-header"> <a href="index.html" class=""> <div id="logo-img" alt="Logo Image"> #places clickable logo in top left
-
-
-
+<div class="navbar-brand"> #any company brand should use this tag
+<a class="pull-left"> #pull-left is bootstraps way of floating left, so elements dont stack
+visible-md visible lg #will only show if screen is medium or large, when small saves prime realestate
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapseable-nav" aria-expanded="false">
+  #creates a button that collapses as the navbar shrinks from size width of screen using bootstrap
+<span class="icon-bar"> #add to button for 
 
 
 

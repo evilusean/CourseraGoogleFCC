@@ -229,6 +229,18 @@ col-SIZE-SPAN=Every bootstrap column class is defined using this template, SIZE=
 <div class="col-md-4 col-sm-6">Col 1</div> #will collapse when reaching under 991 pixels or small in browser
 <div class="col-xs-6">Col 1 </div> #will maintain extra small format even if enlarged in browser
 
+========================================================================================================================Week 3:
+Coding A Static Restaurant Website:
+Visit With The Client:
+Most Clients have NO IDEA what they want. 
+It's your job to ask questions to figure it out, bring web site examples of similar businesses
+When everything is important, nothing is important. Less is more. Help client identify most important information.
+Find a way for client toinvest in the project, especially true if you're doing this for free just to build up your portfolio
+have them commit to the project(skin in the game), food for photography
+Have client designate ONE person responsible for decisions, 
+limit number of revisions upfront, if its paying limit number of free revisions
+Google 'Web Development Client Questionaire' -tonnes of resources to figure out how to ask questions
+Involve others if needed: contact a local college and see if a graphic design student wants to join with free design services for portfolio
 
 
 

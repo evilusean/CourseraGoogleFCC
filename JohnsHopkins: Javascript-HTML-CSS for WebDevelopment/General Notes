@@ -241,8 +241,9 @@ Have client designate ONE person responsible for decisions,
 limit number of revisions upfront, if its paying limit number of free revisions
 Google 'Web Development Client Questionaire' -tonnes of resources to figure out how to ask questions
 Involve others if needed: contact a local college and see if a graphic design student wants to join with free design services for portfolio
-
-
-
-
+Design Overview:
+Don't start designing a website by coding right away, have mockups and present them to client, get their input
+Website Design will have a layout, colour pallette, fonts, photography/pictures
+If trying to use free resources, stick to google fonts
+you can link/import from google fonts in the page using <link href= #google gives you a link after you select a font
 

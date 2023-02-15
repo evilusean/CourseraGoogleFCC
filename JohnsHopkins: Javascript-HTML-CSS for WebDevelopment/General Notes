@@ -247,3 +247,17 @@ Website Design will have a layout, colour pallette, fonts, photography/pictures
 If trying to use free resources, stick to google fonts
 you can link/import from google fonts in the page using <link href= #google gives you a link after you select a font
 
+Coding the Navigation Bar:
+Header:
+browser-sync start --server --directory --files "**/*" #"**/*" argument tells it to use any folder and anything within those folders
+don't be afraid to view bootstrap CSS documentation to know what each element tag does
+<header> <nav id="header-nav" class="navbar navbar-default"> #nav creates navbar header, bootstrap subclass navbar-default creates it
+  <div class="container"> #creates header container
+    <div class="navbar-header"> <a href="index.html" class=""> <div id="logo-img" alt="Logo Image"> #places clickable logo in top left
+
+
+
+
+
+
+

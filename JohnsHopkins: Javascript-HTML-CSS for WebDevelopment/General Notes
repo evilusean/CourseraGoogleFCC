@@ -259,8 +259,11 @@ don't be afraid to view bootstrap CSS documentation to know what each element ta
 visible-md visible lg #will only show if screen is medium or large, when small saves prime realestate
 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapseable-nav" aria-expanded="false">
   #creates a button that collapses as the navbar shrinks from size width of screen using bootstrap
-<span class="icon-bar"> #add to button for 
-
-
+<span class="icon-bar"> #add to button for collapsable menu
+class="nav navbar-nav navbar-right"> #anchors element to the right side of header
+class="glyphicon glyphicon-cutlery"> #creates a glyphicon from the bootstrap that is shaped like cutlery, size independant. 
+a href="tel:555-123-4567"> #if using a mobile phone when you click on it, will attempt to call, or display a phone number
+class="hidden xs"> #bootstrap hides when browser is extra small
+font-size: 5xw; #1vw(viewport width)=1% of viewport width, relative responsive font size
 
 

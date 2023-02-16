@@ -279,4 +279,9 @@ type 'div.container' press 'tab' using emmet VS code plugin creates code below
 Coding Navigation Tiles:
 <div class="col-md-4 col-sm-6 col-xs-12"> #bootstrap, (12/4=3)medium will take up 1/3 of screen, small wil take up half, and extra small full
 <a href="" target="_blank"> #target="_blank" opens a new tab/browser window when they click on it, so they don't lose your main page
-<div id="menu-tile"><span>Menu</span></div> #creates a menu tile with 'Menu' text at bottom of it, will need to style CSS sheets still
+<div id="menu-tile"><span>Menu</span></div> #creates a menu tile with 'Menu' text in it, will need to style CSS sheets still
+../images/menu-tile.jpg #'..' if the image is in another folder '..' tells it to go back one in directory and then to the /images folder
+opacity: .8; #opacity at 80%
+to get an embedded map from google: search location on google maps -> top left by search bar dropdown menu -> share or embed map -> copy link
+copy iframe and use it in your HTML document to use a google map on your website
+

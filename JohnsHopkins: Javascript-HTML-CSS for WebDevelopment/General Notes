@@ -266,4 +266,12 @@ a href="tel:555-123-4567"> #if using a mobile phone when you click on it, will a
 class="hidden xs"> #bootstrap hides when browser is extra small
 font-size: 5xw; #1vw(viewport width)=1% of viewport width, relative responsive font size
 
-
+Coding the Jumbotron:
+You first need to start a container seperate from the header container
+type 'div.container' press 'tab' using emmet VS code plugin creates code below
+<div id="main content" class="container"> #create container for bootstrap content
+  <div class="jumbotron"> #jumbotron for main content of website
+    <img src"images/jumbotron768.jpg" alt="Pictures of Restaurant" class="img-responsive visible-xs"> #class img-responsive says that if the page
+      #changes size, so will the image, visible-xs will only show when extra small
+@media (min-width: 1200px) { .jumbotron { background:url('../images/jumbotron_1200.jpg') no-repeat; height: 675px; 
+  box-shadow: 0 0 50px #3F0C1F; border: 2px solid #3F0C1F: } } #creates jumbotron with large image, and box shadow CSS Style sheet

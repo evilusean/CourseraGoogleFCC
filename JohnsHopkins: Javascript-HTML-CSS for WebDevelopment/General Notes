@@ -264,7 +264,7 @@ class="nav navbar-nav navbar-right"> #anchors element to the right side of heade
 class="glyphicon glyphicon-cutlery"> #creates a glyphicon from the bootstrap that is shaped like cutlery, size independant. 
 a href="tel:555-123-4567"> #if using a mobile phone when you click on it, will attempt to call, or display a phone number
 class="hidden xs"> #bootstrap hides when browser is extra small
-font-size: 5xw; #1vw(viewport width)=1% of viewport width, relative responsive font size
+font-size: 5vw; #1vw(viewport width)=1% of viewport width, relative responsive font size
 
 Coding the Jumbotron:
 You first need to start a container seperate from the header container
@@ -284,4 +284,11 @@ Coding Navigation Tiles:
 opacity: .8; #opacity at 80%
 to get an embedded map from google: search location on google maps -> top left by search bar dropdown menu -> share or embed map -> copy link
 copy iframe and use it in your HTML document to use a google map on your website
+</div><!--End of #home-tiles --> #it's a good practice to put at the end of your </divs> what it was about and content inside
+
+Coding The Footer:
+<footer class="panel-footer"> #footer class, default background with padding
+<div class="container"><div class="row"><section id="hours" class="col-sm-4"><span> Hours:</span><br> Sun-Thurs:11:15am-10pm<br>
+  #creates a section broken up into thirds with restaurant info
+<hr class="visible-xs"> #horizontal rule=only visible in extra small, causes all the rows to stack on XS devices
 

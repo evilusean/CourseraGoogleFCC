@@ -298,5 +298,8 @@ Duplicate a page to maintain same headers and footers if you only need to change
   position:absolute #position absolute on style sheet, <span> text on the image
 class="active"> #highlights an element, hover over effect
 <img class="img-responsive"> #bootstrap class that lets it stretch out,
+.menu-item-photo {max-width: 250px; } #stylesheet, specify a maximum width so the responsive image doesnt get pixelated
+.menu-item-photo div{position:absolute; bottom: 0; right: 0; width:80px; background-color:557c3e; text-align:center; } 
+  #anchors the div text on bottom right
 
 

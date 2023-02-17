@@ -301,5 +301,8 @@ class="active"> #highlights an element, hover over effect
 .menu-item-photo {max-width: 250px; } #stylesheet, specify a maximum width so the responsive image doesnt get pixelated
 .menu-item-photo div{position:absolute; bottom: 0; right: 0; width:80px; background-color:557c3e; text-align:center; } 
   #anchors the div text on bottom right
-
+It's always a good idea to test for outliers/bugs, what would happen if text is extremely long/short?
+either restrict how long text can be or cut off after a certain point
+clear property/bootstrap responsive column resets=add another div to grid with a class="clearfix"
+div class="clearfix" visible-md-block> #create a break for every, so floating elements on grid dont overwrap
 

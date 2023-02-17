@@ -292,3 +292,10 @@ Coding The Footer:
   #creates a section broken up into thirds with restaurant info
 <hr class="visible-xs"> #horizontal rule=only visible in extra small, causes all the rows to stack on XS devices
 
+Coding the Menu Categories:
+Duplicate a page to maintain same headers and footers if you only need to change main content of page
+<span> #use span to add text to images
+  position:absolute #position absolute on style sheet, <span> text on the image
+
+
+

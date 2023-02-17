@@ -296,6 +296,7 @@ Coding the Menu Categories:
 Duplicate a page to maintain same headers and footers if you only need to change main content of page
 <span> #use span to add text to images
   position:absolute #position absolute on style sheet, <span> text on the image
-
+class="active"> #highlights an element, hover over effect
+<img class="img-responsive"> #bootstrap class that lets it stretch out,
 
 

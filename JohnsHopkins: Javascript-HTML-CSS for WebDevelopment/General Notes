@@ -317,8 +317,22 @@ Javascript is executed sequentially, top to bottom
 Javascript code is a singlethreaded engine, will execute completely without being interrupted
 var = "Hello World!"; #var, declares a variable
 console.log(x); #print variable x to the console
-
-
+No types(int vs string vs float) in javascript, JS is a dynamically typed language, figures out type at runtime, same variable can hold different
+  types during execution of program
+function a () { ..... } #declares a function
+var a = function () { ... } #assigns a variable to a function, value of function assigned-Not the returned result
+  a (); #executes function a
+function compare (x, y) {return x > y;} #defined arguments without keyword 'var', returns a value, if no value-terminates and returns nothing
+  var a = compare(4, 5) #stores variable returned from compare function to 'a', compare(4, "a");=legal function
+Scope= Global scope vs Lexical(Function) scope=Depends on where it is physically defined, if defined within function available only in function
+  Global Scope=Available everywhere
+Scope Chain=Referenced (not defined) variable will be searched for in its current scope first. If not found, the outer reference will be 
+  searched. If not found, the outer reference's outer reference will be searched, etc. This will keep going until global scope. If not found in
+  global scope, the variable is undefined.
+Scope Chain=Everything is executed in an Execution Context. Function invocation creates a new Execution Context.
+  Each execution Context has; It's own variable environment(Where variables are stored), 
+    Special 'this' object
+    Reference to its Outer Environment
 
 
 

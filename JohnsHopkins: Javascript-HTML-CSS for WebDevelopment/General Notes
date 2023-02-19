@@ -334,6 +334,14 @@ Scope Chain=Everything is executed in an Execution Context. Function invocation 
     Special 'this' object
     Reference to its Outer Environment
 
+Javascript Types:
+Javascript has 7 built in types, 6 primitive(single immutable value) and 1 object(collection of name/value pairs):
+  Boolean= Can only have 2 values: true or false(reserved keywords)
+  Undefined=Signifies that no value has ever been set, variable declared but not set
+  Null=Signifies the lack of value(reserved keyword)
+  Number=Only numeric type in javascript, always represented by a 64bit floating point(JS does not have integers)
+  String=Sequence of characters used to represent text
+  Symbol=ES6(2015), not widely used
 
 
 

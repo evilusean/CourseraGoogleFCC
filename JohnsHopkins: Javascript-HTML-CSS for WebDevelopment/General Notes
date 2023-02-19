@@ -306,3 +306,22 @@ either restrict how long text can be or cut off after a certain point
 clear property/bootstrap responsive column resets=add another div to grid with a class="clearfix"
 div class="clearfix" visible-md-block> #create a break for every, so floating elements on grid dont overwrap
 
+========================================================================================================================Week 4:
+Javascript:
+One of the most used programming languages
+Use Chrome Developer tools 'Console' for Javascript
+Javascript code should code should included/wrote in:
+  at the start in the <head> section with <head><script type="text/javascript"> #the type="text/javascript" is redundant, can just use <script>
+  <head><script src="js/script.js"> #uses an external file with a source which specifies an external file, requires a </script> tag 
+Javascript is executed sequentially, top to bottom
+Javascript code is a singlethreaded engine, will execute completely without being interrupted
+var = "Hello World!"; #var, declares a variable
+console.log(x); #print variable x to the console
+
+
+
+
+
+
+
+

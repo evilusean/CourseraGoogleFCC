@@ -346,6 +346,21 @@ NaN=Not a Number
 console.log((5 + 4)/ 3); #math operation, operators: +, -, *, / 
 == #equal to, instead of x = y use x == y to compare,
 === #strict equality, a string '4' will not equal a number 4 
+Boolean All False=false, null, undefined, "", 0, NaN
+Boolean All True=true, "Hello", 1, -1, "false"
+&& #and operator, double ampersands, will only pass true if both things on left and right are true
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

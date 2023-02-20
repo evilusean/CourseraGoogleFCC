@@ -315,7 +315,7 @@ Javascript code should code should included/wrote in:
   <head><script src="js/script.js"> #uses an external file with a source which specifies an external file, requires a </script> tag 
 Javascript is executed sequentially, top to bottom
 Javascript code is a singlethreaded engine, will execute completely without being interrupted
-var = "Hello World!"; #var, declares a variable
+var a = "Hello World!"; #var, declares a variable
 console.log(x); #print variable x to the console
 No types(int vs string vs float) in javascript, JS is a dynamically typed language, figures out type at runtime, same variable can hold different
   types during execution of program
@@ -342,8 +342,10 @@ Javascript has 7 built in types, 6 primitive(single immutable value) and 1 objec
   Number=Only numeric type in javascript, always represented by a 64bit floating point(JS does not have integers)
   String=Sequence of characters used to represent text
   Symbol=ES6(2015), not widely used
-
-
+NaN=Not a Number
+console.log((5 + 4)/ 3); #math operation, operators: +, -, *, / 
+== #equal to, instead of x = y use x == y to compare,
+=== #strict equality, a string '4' will not equal a number 4 
 
 
 

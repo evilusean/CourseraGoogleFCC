@@ -349,8 +349,13 @@ console.log((5 + 4)/ 3); #math operation, operators: +, -, *, /
 Boolean All False=false, null, undefined, "", 0, NaN
 Boolean All True=true, "Hello", 1, -1, "false"
 && #and operator, double ampersands, will only pass true if both things on left and right are true
-
-
+|| #or operator, if a variable is undefined, it will default to this, whatever the operator sees the first true statement
+  sideDish = sideDish || "rice"; #will choose the selected sidedish or default to rice if no selection
+var company = new Object(); #declares variable company as a new object
+company.name = "Facebook"; #creates a key value pair for company object.name = facebook
+console.log(company); #prints out data on company object
+console.log(company["name"]); #prints out name of company object
+Object Literal Notation: better way to input data into objects key:value pairs
 
 
 

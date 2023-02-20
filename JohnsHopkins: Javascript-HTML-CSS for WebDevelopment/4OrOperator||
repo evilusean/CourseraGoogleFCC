@@ -1,0 +1,9 @@
+// Default values
+function orderChickenWith(sideDish) {
+  sideDish = sideDish || "whatever!";
+  console.log("Chicken with " + sideDish);
+}
+
+orderChickenWith("noodles");
+orderChickenWith();
+#|| = or operator, will pick whichever is true, if no value is given, it will default to this

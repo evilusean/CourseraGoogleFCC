@@ -365,8 +365,11 @@ function #creates a function that accepts arguments
   function multiply(x, y) {
     return x * y;
 In Javascript, primitives are passed by values, objects are 'passed by reference', "under the hood"- everything is passed by value
-
-
+Primitives are passed/copied by value
+Objects are passed/copied by reference(pointers) Changing New Variable, will affect the variable from which the object was copied
+console.log(this); #special keyword used to find out information about objects, parameters, properties
+var myCircle = new Circle(10); #new, keyword points to the constructed function that constructed it
+'this' keyword as part of a function/constructor refers to the object/function itself
 
 
 

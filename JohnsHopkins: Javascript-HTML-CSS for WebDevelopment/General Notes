@@ -357,10 +357,14 @@ console.log(company); #prints out data on company object
 console.log(company["name"]); #prints out name of company object
 Object Literal Notation: better way to input data into objects key:value pairs
 
-
-
-
-
+Functions:
+in Javascript functions are called first class data types, are considered objects; assigned to variables, be passed as an argument, return
+  it from another function.
+.toString() #every object has this inherent method applied to it
+function #creates a function that accepts arguments
+  function multiply(x, y) {
+    return x * y;
+In Javascript, primitives are passed by values, objects are 'passed by reference', "under the hood"- everything is passed by value
 
 
 

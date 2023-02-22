@@ -371,8 +371,12 @@ console.log(this); #special keyword used to find out information about objects, 
 var myCircle = new Circle(10); #new, keyword points to the constructed function that constructed it
 'this' keyword as part of a function/constructor refers to the object/function itself
 
-
-
+Arrays:
+=Collection of data
+JS arrays are zero based, [0] = first position
+You can place strings, numbers, functions, objects in the same array
+var array = new Array(); /n array[0] = "string /n array[1] = 9 #creates an array with a string and number 9
+var names = ["Shawn", "Sean", "Unsean"]; #creates an array with 3 names
 
 
 

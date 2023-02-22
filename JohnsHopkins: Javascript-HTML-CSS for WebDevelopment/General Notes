@@ -377,6 +377,10 @@ JS arrays are zero based, [0] = first position
 You can place strings, numbers, functions, objects in the same array
 var array = new Array(); /n array[0] = "string /n array[1] = 9 #creates an array with a string and number 9
 var names = ["Shawn", "Sean", "Unsean"]; #creates an array with 3 names
-
-
+Fake Namespaces:
+When loading multiple scripts, you might run into a variable collision if you used generic names, you can use namespaces/containers {}
+  to fix this issue
+var name = "" Vs var SeanGreeter = {} /n SeanGreeter.name = ""
+IIFE(Immediately Invoked Function Expression):
+Invoke immediately by just adding parenthesis (); right after function in script
 

@@ -384,3 +384,8 @@ var name = "" Vs var SeanGreeter = {} /n SeanGreeter.name = ""
 IIFE(Immediately Invoked Function Expression):
 Invoke immediately by just adding parenthesis (); right after function in script
 
+========================================================================================================================Week 5:
+Object Model Manipulation:
+DOM(Document Object Model) Manipulation:
+document element represents the entire HTML document
+document.getElementById("") #gets element information by the id name of whichever element you input ""

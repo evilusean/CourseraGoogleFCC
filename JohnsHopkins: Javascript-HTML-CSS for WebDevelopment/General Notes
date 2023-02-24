@@ -408,3 +408,16 @@ document.querySelector("button").onclick = sayHello; #same onclick function as a
 document.addEventListener("DOMContentLoaded", function (event) { ... } #when the entire content loads, THEN activate, for id's, etc
 document.querySelector("body").addEventListener("mousemove", if (event.shiftKey === true) console.log("x: " + event.clientX); 
   console.log("y: " + event.clientY); #if the shift key is pressed down on the body, it will log the mouse's X and Y coordinates
+
+Ajax:
+=A client server communication technique/HTTP Protocol
+Client opens a connection to sever -> client sends HTTP request -> server sends HTTP response -> Client closes connection to server
+URN(Uniform Resource Name)=Uniquely Identifies Resource or name of resource, does not tell you how to get resource
+URI(Uniform Resource Identifier)=Uniquely identifies resource or location of resource, 
+URL(Uniform Resource Locater)=form of URI that provides info on how to get resource
+Get Method/Command=Retrieves the resource, data is passed to server as part of the URI+query string(Key Value Pairs)
+Post Method/Command=Sends data to server in order to be processed, data is sent in the message body
+200 Ok, 404 Not Found, 403 Forbidden, 500 Internal Server Error, 
+
+
+

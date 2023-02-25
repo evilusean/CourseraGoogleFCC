@@ -422,4 +422,6 @@ AJAX(Asynchronous Javascript And Xml)=Instead of sending an entire webpage, it w
   very few apps use XML today, most use JSON(Javascript Object Notation)
 Synchronous=Execution of one instruction at a time
 Asynchronous=Execution of more than one instruction at a time
-
+if (window.XMLHttpRequest); return new XMLHttpRequest()); #sends an HTTP request using AJAX
+ajaxUtils.sendGetRequest = function(requestURL, responseHandler);  #sends get request using AJAX utils , link below for full request
+https://github.com/evilusean/CourseraGoogle/blob/main/JohnsHopkins:%20Javascript-HTML-CSS%20for%20WebDevelopment/5AJAXUtilsGetRequest

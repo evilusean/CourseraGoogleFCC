@@ -425,3 +425,19 @@ Asynchronous=Execution of more than one instruction at a time
 if (window.XMLHttpRequest); return new XMLHttpRequest()); #sends an HTTP request using AJAX
 ajaxUtils.sendGetRequest = function(requestURL, responseHandler);  #sends get request using AJAX utils , link below for full request
 https://github.com/evilusean/CourseraGoogle/blob/main/JohnsHopkins:%20Javascript-HTML-CSS%20for%20WebDevelopment/5AJAXUtilsGetRequest
+
+JSON(Javascript Object Notation):
+Lightweight data interchange format, simple textual representation of data, easy to read write and parse, human readable
+Subset of Javascript object literal syntax
+property names/string values MUST be in double quotes
+{
+"firstName": "Sean",
+"lastName": "Teams",
+"supportsCurrentThing": false,
+} #JSON Format
+JSON is NOT a Javascript Object Literal, need to convert JSON into a JS object literal
+to make it a variable string simply add single quotes by the curly braces; var jsonString = '{...}'
+var obj = JSON.parse(jsonString); #converts from string to object
+var str = JSON.stringify(obj); #convert from object to string
+
+

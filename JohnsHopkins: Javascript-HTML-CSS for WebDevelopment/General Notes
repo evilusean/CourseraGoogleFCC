@@ -445,3 +445,5 @@ $(function () {...} #dollar sign is name of jquery function name, same as docume
 .collapse #function from bootstrap.js, collapses an object on blur(unhighlight)
 SPA(Single Page Application)=Content inserted dynamically, relies on AJAX
 XHR(XML Http Request)=Used By AJAX
+Same Source/Same Origin Rule: 
+(CORS)Cross Origin Resource Sharing=HTTP Headers that allow access to certain resources as safe

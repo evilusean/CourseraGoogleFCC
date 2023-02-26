@@ -443,3 +443,5 @@ var str = JSON.stringify(obj); #convert from object to string
 $(function () {...} #dollar sign is name of jquery function name, same as document.addEventListener("DOMContentLoaded"...)
   $("#query") #$ dollar sign also serves as a query selector on (parenthesis)
 .collapse #function from bootstrap.js, collapses an object on blur(unhighlight)
+SPA(Single Page Application)=Content inserted dynamically, relies on AJAX
+XHR(XML Http Request)=Used By AJAX

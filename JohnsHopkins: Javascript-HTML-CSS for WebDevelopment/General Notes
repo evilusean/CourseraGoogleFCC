@@ -447,3 +447,4 @@ SPA(Single Page Application)=Content inserted dynamically, relies on AJAX
 XHR(XML Http Request)=Used By AJAX
 Same Source/Same Origin Rule: 
 (CORS)Cross Origin Resource Sharing=HTTP Headers that allow access to certain resources as safe
+{{Shortname: "L", name:"Lunch"}} #shortname used to search for data on a category in the JSON menu items file

@@ -26,9 +26,17 @@ End:10Feb2022
 
 https://www.coursera.org/learn/html-css-javascript-for-web-developers
 
+Certificate:
+
+https://www.coursera.org/account/accomplishments/verify/F73J9PHKP3MG
+
+Github Pages/Assignments:
+
+https://evilusean.github.io/Coursera-HTML-CSS-JS/
+
 Start:29Jan2023
 
-End:
+End: 27Feb2022
 
 # Google Project Management: Professional Certificate:
 

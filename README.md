@@ -20,7 +20,7 @@ https://www.credly.com/badges/d21d495c-caed-4fe5-8440-48aca0de59c3
 
 Start:28October2022
 
-End:10Feb2022
+End:10Feb2023
 
 # Johns Hopkins: HTML, CSS, and Javascript for Web Developers
 

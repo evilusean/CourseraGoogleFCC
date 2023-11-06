@@ -26,11 +26,34 @@ HTML5 has some elements that identify different content areas. These elements ma
   accessibility.
 Identify the main section of this page by adding a <main> opening tag before the h1 element, and a </main> closing tag after the p element.
 
+Step 6
+In the previous step, you put the h1, h2, comment, and p elements inside the main element. This is called nesting. Nested elements should be placed two spaces further
+  to the right of the element they are nested in. This spacing is called indentation and it is used to make HTML easier to read.
+The h1 element, h2 element and the comment are indented two spaces more than the main element in the code below. Use the space bar on your keyboard to add two more 
+  spaces in front of the p element so that it is indented properly as well.
 
+Step 7
+You can add images to your website by using the img element. img elements have an opening tag without a closing tag. 
+A tag for an element without a closing tag is known as a self-closing tag.
+Add an img element below the p element. At this point, no image will show up in the browser.
 
+Step 8
+HTML attributes are special words used inside the opening tag of an element to control the element's behavior. The src attribute in an img element specifies the image's
+  URL (where the image is located).
+Here is an example of an img element with a src attribute pointing to the freeCodeCamp logo:
+<img src="https://cdn.freecodecamp.org/platform/universal/fcc_secondary.svg">
+Inside the existing img element, add an src attribute with this URL:
+https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg
 
+Step 9
+All img elements should have an alt attribute. The alt attribute's text is used for screen readers to improve accessibility and is displayed if the image fails to load.
+For example, <img src="cat.jpg" alt="A cat"> has an alt attribute with the text A cat.
+Inside the img element, add an alt attribute with this text:
+A cute orange cat lying on its back
 
-
+Step 10
+You can link to another page with the anchor (a) element. For example, <a href='https://freecodecamp.org'></a> would link to freecodecamp.org.
+Add an anchor element after the paragraph that links to https://freecatphotoapp.com. At this point, the link won’t show up in the preview.
 
 
 

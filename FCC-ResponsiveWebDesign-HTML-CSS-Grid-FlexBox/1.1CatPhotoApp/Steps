@@ -95,6 +95,62 @@ Things cats love:
 Step 20
 After the h3 element with the Things cats love: text, add an unordered list (ul) element. Note that nothing will be displayed at this point.
 
+Step 21
+Use list item (li) elements to create items in a list. Here is an example of list items in an unordered list:
+<ul>
+  <li>milk</li>
+  <li>cheese</li>
+</ul>
+Within the ul element nest three list items to display three things cats love:
+cat nip laser pointers lasagna
+
+Step 22
+After the unordered list, add a new image with an src attribute value set to:
+https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg
+And its alt attribute value to:
+A slice of lasagna on a plate.
+
+Step 23
+The figure element represents self-contained content and will allow you to associate an image with a caption.
+Nest the image you just added within a figure element.
+
+Step 24
+A figure caption (figcaption) element is used to add a caption to describe the image contained within the figure element. 
+For example, <figcaption>A cute cat</figcaption> adds the caption A cute cat.
+After the image nested in the figure element, add a figcaption element with text set to:
+Cats love lasagna.
+
+Step 25
+Emphasize the word love in the figcaption element by wrapping it in an emphasis em element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

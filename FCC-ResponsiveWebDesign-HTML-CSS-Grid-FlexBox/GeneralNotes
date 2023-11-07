@@ -18,8 +18,8 @@ HTML attributes are special words used inside the opening tag of an element to c
   URL (where the image is located).
 All img elements should have an alt attribute. The alt attribute's text is used for screen readers to improve accessibility and is displayed if the image fails to load.
 You can link to another page with the anchor (a) element. For example, <a href='https://freecodecamp.org'></a> would link to freecodecamp.org.
-
-
+A link's text must be placed between the opening and closing tags of an anchor (a) element. 
+You can turn any text into a link, such as the text inside of a p element. <p>I think <a href="https://www.freecodecamp.org">freeCodeCamp</a> is great.</p>
 
 
 

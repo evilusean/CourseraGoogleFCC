@@ -25,7 +25,7 @@ Use list item (li) elements to create items in a list.
 A figure caption (figcaption) element is used to add a caption to describe the image contained within the figure element. 
 For example, <figcaption>A cute cat</figcaption> adds the caption A cute cat.
 Emphasize a word in the figcaption element by wrapping it in an emphasis em element.
-
+The code for an ordered list (ol) is similar to an unordered list, but list items in an ordered list are numbered when displayed.
 
 
 

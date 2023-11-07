@@ -21,9 +21,10 @@ You can link to another page with the anchor (a) element. For example, <a href='
 A link's text must be placed between the opening and closing tags of an anchor (a) element. 
 You can turn any text into a link, such as the text inside of a p element. <p>I think <a href="https://www.freecodecamp.org">freeCodeCamp</a> is great.</p>
 Before adding any new content, you should make use of a section element to separate the cat photos content from the future content.
-
-
-
+Use list item (li) elements to create items in a list.
+A figure caption (figcaption) element is used to add a caption to describe the image contained within the figure element. 
+For example, <figcaption>A cute cat</figcaption> adds the caption A cute cat.
+Emphasize a word in the figcaption element by wrapping it in an emphasis em element.
 
 
 

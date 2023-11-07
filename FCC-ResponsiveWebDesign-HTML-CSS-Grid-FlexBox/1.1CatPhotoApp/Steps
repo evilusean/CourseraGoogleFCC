@@ -55,15 +55,27 @@ Step 10
 You can link to another page with the anchor (a) element. For example, <a href='https://freecodecamp.org'></a> would link to freecodecamp.org.
 Add an anchor element after the paragraph that links to https://freecatphotoapp.com. At this point, the link won’t show up in the preview.
 
+Step 11
+A link's text must be placed between the opening and closing tags of an anchor (a) element. 
+For example, <a href="https://www.freecodecamp.org">click here to go to freeCodeCamp.org</a> is a link with the text click here to go to freeCodeCamp.org.
+Add the anchor text link to cat pictures to the anchor element. This will become the link's text.
 
+Step 12
+You can turn any text into a link, such as the text inside of a p element.
+<p>I think <a href="https://www.freecodecamp.org">freeCodeCamp</a> is great.</p>
+In the text of your p element, turn the words cat photos into a link by adding opening and closing anchor (a) tags around these words. 
+Then set the href attribute to https://freecatphotoapp.com
 
+Step 13
+Now that you turned the text cat photos inside the p element into a link,
+you don't need the second link below the p element. Delete the entire anchor element below the p element.
 
+Step 14
+Add a target attribute with the value _blank to the anchor (a) element's opening tag, so that the link opens in a new tab.
 
-
-
-
-
-
+Step 15
+In previous steps you used an anchor element to turn text into a link. Other types of content can also be turned into a link by wrapping it in anchor tags.
+Turn the image into a link by surrounding it with necessary element tags. Use https://freecatphotoapp.com as the anchor's href attribute value.
 
 
 

@@ -26,10 +26,9 @@ A figure caption (figcaption) element is used to add a caption to describe the i
 For example, <figcaption>A cute cat</figcaption> adds the caption A cute cat.
 Emphasize a word in the figcaption element by wrapping it in an emphasis em element.
 The code for an ordered list (ol) is similar to an unordered list, but list items in an ordered list are numbered when displayed.
-
-
-
-
+After the last img element, add a <figcaption> element with the text Cats hate other cats. Inside the <figure> element
+The strong element is used to indicate that some text is of strong importance or urgent.
+Now you will add a web form to collect information from users. add a form element.
 
 
 

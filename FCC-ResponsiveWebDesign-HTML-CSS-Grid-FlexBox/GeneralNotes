@@ -29,11 +29,14 @@ The code for an ordered list (ol) is similar to an unordered list, but list item
 After the last img element, add a <figcaption> element with the text Cats hate other cats. Inside the <figure> element
 The strong element is used to indicate that some text is of strong importance or urgent.
 Now you will add a web form to collect information from users. add a form element.
-
-
-
-
-
+The action attribute indicates where form data should be sent. For example, 
+  <form action="/submit-url"></form> tells the browser that the form data should be sent to the path /submit-url.
+The input element allows you several ways to collect data from a web form. Like img elements, input elements are self-closing and do not need closing tags.
+There are many kinds of inputs you can create using the type attribute. You can easily create a password field, reset button,
+  or a control to let users select a file from their computer.
+In order for a form's data to be accessed by the location specified in the action attribute, you must give the text field a name attribute and assign it a value 
+  to represent the data being submitted. For example, you could use the following syntax for an email address text field: <input type="text" name="email">.
+Placeholder text is used to give people a hint about what kind of information to enter into an input. For example, <input type="text" placeholder="Email address">.
 
 
 

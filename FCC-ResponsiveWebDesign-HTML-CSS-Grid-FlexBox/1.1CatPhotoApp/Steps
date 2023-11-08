@@ -142,15 +142,23 @@ Step 30
 To improve accessibility of the image you added, add an alt attribute with the text:
 Five cats looking around a field.
 
+Step 31
+After the last img element, add a figcaption element with the text Cats hate other cats.
 
+Step 32
+The strong element is used to indicate that some text is of strong importance or urgent.
+In the figcaption you just added, indicate that hate is of strong importance by wrapping it in a strong element.
 
+Step 33
+It is time to add a new section. Add a third section element below the second section element.
 
+Step 34
+Inside the third section element, add an h2 element with the text:
+Cat Form
 
-
-
-
-
-
+Step 35
+Now you will add a web form to collect information from users.
+After the Cat Form heading, add a form element.
 
 
 

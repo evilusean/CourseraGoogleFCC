@@ -210,15 +210,27 @@ label elements are used to help associate the text for an input element with the
 readers). For example, <label><input type="radio"> cat</label> makes it so clicking the word cat also selects the corresponding radio button.
 Nest your radio button inside a label element.
 
+Step 46
+The id attribute is used to identify specific HTML elements. Each id attribute's value must be unique from all other id values for the entire page.
+Add an id attribute with the value indoor to the radio button. When elements have multiple attributes, the order of the attributes doesn't matter.
 
+Step 47
+Create another radio button below the first one. Nest it inside a label element with Outdoor as the label text. 
+Give the radio button an id attribute with outdoor as the value.
 
+Step 48
+Notice that both radio buttons can be selected at the same time. To make it so selecting one radio button automatically deselects the other, both buttons must
+have a name attribute with the same value.
+Add the name attribute with the value indoor-outdoor to both radio buttons.
 
+Step 49
+If you select the Indoor radio button and submit the form, the form data for the button is based on its name and value attributes. Since your radio buttons do not 
+have a value attribute, the form data will include indoor-outdoor=on, which is not useful when you have multiple buttons.
+Add a value attribute to both radio buttons. For convenience, set the button's value attribute to the same value as its id attribute.
 
-
-
-
-
-
+Step 50
+The fieldset element is used to group related inputs and labels together in a web form. fieldset elements are block-level elements meaning that they appear on a new line
+Nest the Indoor and Outdoor radio buttons within a fieldset element, and don't forget to indent the radio buttons.
 
 
 

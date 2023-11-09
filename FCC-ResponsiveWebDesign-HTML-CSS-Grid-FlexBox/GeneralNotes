@@ -37,8 +37,10 @@ There are many kinds of inputs you can create using the type attribute. You can 
 In order for a form's data to be accessed by the location specified in the action attribute, you must give the text field a name attribute and assign it a value 
   to represent the data being submitted. For example, you could use the following syntax for an email address text field: <input type="text" name="email">.
 Placeholder text is used to give people a hint about what kind of information to enter into an input. For example, <input type="text" placeholder="Email address">.
-
-
+To prevent a user from submitting your form when required information is missing, you need to add the required attribute to an input element.
+  There's no need to set a value to the required attribute. Instead, just add the word required to the input element, making sure there is space between it and other
+  attributes.
+Use the button element to create a clickable button. For example, <button>Click Here</button> creates a button with the text Click Here.
 
 
 

@@ -45,8 +45,10 @@ The id attribute is used to identify specific HTML elements. Each id attribute's
 The fieldset element is used to group related inputs and labels together in a web form. fieldset elements are block-level elements meaning that they appear on a new line
 The legend element acts as a caption for the content in the fieldset element. It gives users context about what they should enter into that part of the form.
 Forms commonly use checkboxes for questions that may have more than one answer. For example, here's a checkbox with the option of tacos: <input type="checkbox"> tacos.
-
-
+There's another way to associate an input element's text with the element itself. You can nest the text within a label element and add a for attribute with the 
+  same value as the input element's id attribute.
+Like radio buttons, form data for selected checkboxes are name / value attribute pairs. While the value attribute is optional, it's best practice to include it with
+  any checkboxes or radio buttons on the page.
 
 
 

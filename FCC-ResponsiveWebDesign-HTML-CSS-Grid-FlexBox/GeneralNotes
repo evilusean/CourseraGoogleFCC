@@ -49,7 +49,8 @@ There's another way to associate an input element's text with the element itself
   same value as the input element's id attribute.
 Like radio buttons, form data for selected checkboxes are name / value attribute pairs. While the value attribute is optional, it's best practice to include it with
   any checkboxes or radio buttons on the page.
-
+In order to make a checkbox checked or radio button selected by default, you need to add the checked attribute to it. There's no need to set a value to the 
+  checked attribute. Instead, just add the word checked to the input element, making sure there is space between it and other attributes.
 
 
 

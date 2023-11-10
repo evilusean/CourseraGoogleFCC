@@ -43,8 +43,8 @@ To prevent a user from submitting your form when required information is missing
 Use the button element to create a clickable button. For example, <button>Click Here</button> creates a button with the text Click Here.
 The id attribute is used to identify specific HTML elements. Each id attribute's value must be unique from all other id values for the entire page.
 The fieldset element is used to group related inputs and labels together in a web form. fieldset elements are block-level elements meaning that they appear on a new line
-
-
+The legend element acts as a caption for the content in the fieldset element. It gives users context about what they should enter into that part of the form.
+Forms commonly use checkboxes for questions that may have more than one answer. For example, here's a checkbox with the option of tacos: <input type="checkbox"> tacos.
 
 
 

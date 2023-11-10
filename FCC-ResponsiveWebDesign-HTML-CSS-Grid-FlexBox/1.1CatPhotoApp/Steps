@@ -250,15 +250,27 @@ Loving
 Step 55
 Add an id attribute with the value loving to the checkbox input.
 
+Step 56
+There's another way to associate an input element's text with the element itself. You can nest the text within a label element and add a for attribute with the 
+  same value as the input element's id attribute.
+Associate the text Loving with the checkbox by nesting only the text Loving in a label element and giving it an appropriate for attribute.
 
+Step 57
+Add the name attribute with the value personality to the checkbox input element.
+While you won't notice this in the browser, doing this makes it easier for a server to process your web form, especially when there are multiple checkboxes.
 
+Step 58
+Add another checkbox after the one you just added. The id attribute value should be lazy and the name attribute value should be the same as the last checkbox.
+Also add a label element to the right of the new checkbox with the text Lazy. Make sure to associate the label element with the new checkbox using the for attribute.
 
+Step 59
+Add a final checkbox after the previous one with an id attribute value of energetic. The name attribute should be the same as the previous checkbox.
+Also add a label element to the right of the new checkbox with text Energetic. Make sure to associate the label element with the new checkbox.
 
-
-
-
-
-
+Step 60
+Like radio buttons, form data for selected checkboxes are name / value attribute pairs. While the value attribute is optional, it's best practice to include it with
+  any checkboxes or radio buttons on the page.
+Add a value attribute to each checkbox. For convenience, set each checkbox's value attribute to the same value as its id attribute.
 
 
 

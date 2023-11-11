@@ -51,10 +51,10 @@ Like radio buttons, form data for selected checkboxes are name / value attribute
   any checkboxes or radio buttons on the page.
 In order to make a checkbox checked or radio button selected by default, you need to add the checked attribute to it. There's no need to set a value to the 
   checked attribute. Instead, just add the word checked to the input element, making sure there is space between it and other attributes.
-
-
-
-
+The title element determines what browsers show in the title bar or tab for the page.
+<html lang="en">
+All pages should begin with <!DOCTYPE html>. This special string is known as a declaration and ensures the browser tries to meet industry-wide specifications.
+You can set browser behavior by adding self-closing meta elements in the head. Here's an example:<meta attribute="value">
 
 
 

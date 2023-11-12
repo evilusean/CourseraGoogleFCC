@@ -63,10 +63,14 @@ Inside the head element, nest a meta element with an attribute named charset set
 <meta charset="utf-8">
 Up until now, you have been limited regarding the presentation and appearance of the content you create. 
 To start taking control, add a style element within the head element.<style></style>
-
-
-
-
+You can add style to an element by specifying it in the style element and setting a property for it like this: element { property: value; }
+<style> h1 {text-align: center}</style>
+ You can add the same group of styles to many elements by creating a list of selectors. Each selector is separated with commas like this:
+selector1, selector2 {
+  property: value;
+}
+You have styled three elements by writing CSS inside the style tags. This works, but since there will be many more styles,
+  it's best to put all the styles in a separate file and link to it.
 
 
 

@@ -17,15 +17,22 @@ Step 5
 It's time to add some menu content. 
 Add a main element within the existing body element. It will eventually contain pricing information about coffee and desserts offered by the cafe.
 
+Step 6
+The name of the cafe is CAMPER CAFE. Add an h1 element within your main element. Give it the name of the cafe in capitalized letters to make it stand out.
 
+Step 7
+To let visitors know the cafe was founded in 2020, add a p element below the h1 element with the text Est. 2020.
 
+Step 8
+There will be two sections on the menu, one for coffees and one for desserts.
+Add a section element within the main element so you have a place to put all the coffees available.
 
+Step 9
+Create an h2 element in the section element and give it the text Coffee.
 
-
-
-
-
-
+Step 10
+Up until now, you have been limited regarding the presentation and appearance of the content you create. 
+To start taking control, add a style element within the head element.
 
 
 

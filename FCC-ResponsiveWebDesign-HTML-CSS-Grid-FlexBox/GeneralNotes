@@ -85,8 +85,10 @@ body {
 background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg)
 }
 article elements commonly contain multiple elements that have related information.
-
-
+p elements are block-level elements, so they take up the entire width of their parent element.
+To get them on the same line, you need to apply some styling to the p elements so they behave more like inline elements. To do that, start by adding a class attribute
+  with the value item 
+.item p { display:inline-block }
 
 
 

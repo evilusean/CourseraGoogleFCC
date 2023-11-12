@@ -80,9 +80,11 @@ The goal now is to make the div not take up the entire width of the page. The CS
 }
 Comments in CSS look like this: /* comment here */
 You can do this by setting its margin-left and margin-right properties to auto. Think of the margin as invisible space around an element.
-
-
-
+ you could use an image of coffee beans for the background of the page.
+body {
+background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg)
+}
+article elements commonly contain multiple elements that have related information.
 
 
 

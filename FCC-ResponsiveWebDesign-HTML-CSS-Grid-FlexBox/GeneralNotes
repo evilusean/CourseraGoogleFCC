@@ -61,7 +61,8 @@ Start off with : <!DOCTYPE html> <html lang="en"></html>
 The title is one of several elements that provide extra information not visible on the web page, but it is useful for search engines or how the page gets displayed.
 Inside the head element, nest a meta element with an attribute named charset set to the value utf-8 to tell the browser how to encode characters for the page.
 <meta charset="utf-8">
-
+Up until now, you have been limited regarding the presentation and appearance of the content you create. 
+To start taking control, add a style element within the head element.<style></style>
 
 
 

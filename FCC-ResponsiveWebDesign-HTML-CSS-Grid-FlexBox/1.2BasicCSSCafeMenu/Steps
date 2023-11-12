@@ -135,16 +135,27 @@ Step 30
 article elements commonly contain multiple elements that have related information. In this case, it will contain a coffee flavor and a price for that flavor. 
 Nest two p elements inside your article element. The first one's text should be French Vanilla, and the second's text 3.00.
 
+Step 31
+Starting below the existing coffee/price pair, add the following coffee and prices using article elements with two nested p elements inside each.
+As before, the first p element's text should contain the coffee flavor and the second p element's text should contain the price.
+Caramel Macchiato 3.75
+Pumpkin Spice 3.50
+Hazelnut 4.00
+Mocha 4.50
 
+Step 32
+The flavors and prices are currently stacked on top of each other and centered with their respective p elements. It would be nice if the flavor was on the left 
+and the price was on the right.
+Add the class name flavor to the French Vanilla p element.
 
+Step 33
+Using your new flavor class as a selector, set the text-align property's value to left.
 
+Step 34
+Next, you want to align the price to the right. Add a class named price to your p element that has 3.00 as its text.
 
-
-
-
-
-
-
+Step 35
+Now align the text to the right for the elements with the price class.
 
 
 

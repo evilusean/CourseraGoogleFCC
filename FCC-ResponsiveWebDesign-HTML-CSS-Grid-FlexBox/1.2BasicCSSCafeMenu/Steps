@@ -157,6 +157,58 @@ Next, you want to align the price to the right. Add a class named price to your 
 Step 35
 Now align the text to the right for the elements with the price class.
 
+Step 36
+That is kind of what you want, but now it would be nice if the flavor and price were on the same line.
+p elements are block-level elements, so they take up the entire width of their parent element.
+To get them on the same line, you need to apply some styling to the p elements so they behave more like inline elements. To do that, start by adding a class attribute
+with the value item to the first article element under the Coffee heading.
+
+Step 37
+The p elements are nested in an article element with the class attribute of item. You can style all the p elements nested anywhere in elements with a class named item 
+like this:
+.item p { }
+Using the above selector, add a display property with value inline-block so the p elements behave more like inline elements.
+
+Step 38
+That's closer, but the price didn't stay over on the right. This is because inline-block elements only take up the width of their content. 
+To spread them out, add a width property to the flavor and price class selectors that have a value of 50% each.
+
+Step 39
+Well that did not work. Styling the p elements as inline-block and placing them on separate lines in the code creates an extra space to the right of the 
+first p element, causing the second one to shift to the next line. One way to fix this is to make each p element's width a little less than 50%.
+Change the width value to 49% for each class to see what happens.
+
+Step 40
+That worked, but there is still a little space on the right of the price.
+You could keep trying various percentages for the widths. Instead, use the back space key on your keyboard to move the p element with the class price
+next to the p element with the class flavor so that they are on the same line in the editor. Make sure there is no space between them.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -110,15 +110,30 @@ Step 25
 Next, you want to center the #menu horizontally. You can do this by setting its margin-left and margin-right properties to auto. 
 Think of the margin as invisible space around an element. Using these two margin properties, center the #menu element within the body element.
 
+Step 26
+So far you have been using type and id selectors to style elements. However, it is more common to use a different selector to style your elements.
+A class selector is defined by a name with a dot directly in front of it, like this:
+.class-name {
+  styles
+}
+Change the existing #menu selector into a class selector by replacing #menu with a class named .menu.
 
+Step 27
+To apply the class's styling to the div element, remove the id attribute and add a class attribute to the div element's opening tag. 
+Make sure to set the class value to menu.
 
+Step 28
+Since the cafe's main product for sale is coffee, you could use an image of coffee beans for the background of the page.
+Delete the comment and its contents inside the body type selector. Now add a background-image property and set its value to 
+url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg).
 
+Step 29
+It’s looking good. Time to start adding some menu items. Add an empty article element under the Coffee heading.
+It will contain a flavor and price of each coffee you currently offer.
 
-
-
-
-
-
+Step 30
+article elements commonly contain multiple elements that have related information. In this case, it will contain a coffee flavor and a price for that flavor. 
+Nest two p elements inside your article element. The first one's text should be French Vanilla, and the second's text 3.00.
 
 
 

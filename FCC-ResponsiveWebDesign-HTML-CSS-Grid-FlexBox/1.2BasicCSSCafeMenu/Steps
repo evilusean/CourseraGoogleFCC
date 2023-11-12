@@ -84,14 +84,31 @@ The div element is used mainly for design layout purposes unlike the other conte
 Add a div element inside the body element and then move all the other elements inside the new div.
 Inside the opening div tag, add the id attribute with a value of menu.
 
+Step 21
+The goal now is to make the div not take up the entire width of the page. The CSS width property is perfect for this.
+You can use the id selector to target a specific element with an id attribute. An id selector is defined by placing the hash symbol # directly in front of the element's 
+id value. For example, if an element has the id of cat then you would target that element like this:
+#cat {
+  width: 250px;
+}
+Use the #menu selector to give your element a width of 300px.
 
+Step 22
+Comments in CSS look like this:
+/* comment here */
+In your style sheet, comment out the line containing the background-color property and value, so you can see the effect of only styling the #menu element. 
+This will make the background white again.
 
+Step 23
+Now use the existing #menu selector to set the background color of the div element to be burlywood.
 
+Step 24
+Now it's easy to see that the text is centered inside the #menu element. Currently, the width of the #menu element is specified in pixels (px).
+Change the width property's value to be 80%, to make it 80% the width of its parent element (body).
 
-
-
-
-
+Step 25
+Next, you want to center the #menu horizontally. You can do this by setting its margin-left and margin-right properties to auto. 
+Think of the margin as invisible space around an element. Using these two margin properties, center the #menu element within the body element.
 
 
 

@@ -89,7 +89,8 @@ p elements are block-level elements, so they take up the entire width of their p
 To get them on the same line, you need to apply some styling to the p elements so they behave more like inline elements. To do that, start by adding a class attribute
   with the value item 
 .item p { display:inline-block }
-
+If you make the width of the page preview smaller, you will notice at some point, some of the text on the left starts wrapping around to the next line. 
+  This is because the width of the p elements on the left side can only take up 50% of the space.
 
 
 

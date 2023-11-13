@@ -200,15 +200,22 @@ If you make the width of the page preview smaller, you will notice at some point
 This is because the width of the p elements on the left side can only take up 50% of the space.
 Since you know the prices on the right have significantly fewer characters, change the flavor class width value to be 75% and the price class width value to be 25%.
 
+Step 46
+You will come back to styling the menu in a few steps, but for now, 
+go ahead and add a second section element below the first for displaying the desserts offered by the cafe.
 
+Step 47
+Add an h2 element in the new section and give it the text Desserts.
 
+Step 48
+Add an empty article element under the Desserts heading. Give it a class attribute with the value item.
 
+Step 49
+Nest two p elements inside your article element. 
+The first one's text should be Donut, and the second's text 1.50. Put both of them on the same line making sure there is no space between them.
 
-
-
-
-
-
+Step 50
+For the two p elements you just added, add dessert as the value of the first p element's class attribute and the value price as the second p elements class attribute.
 
 
 

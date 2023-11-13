@@ -259,15 +259,21 @@ Add the fallback font serif after the Impact font.
 Step 60
 Make the Est. 2020 text italicized by creating an established class selector and giving it the font-style property with the value italic.
 
+Step 61
+Now apply the established class to the Est. 2020 text.
 
+Step 62
+The typography of heading elements (e.g. h1, h2) is set by default values of users' browsers.
+Add two new type selectors (h1 and h2). Use the font-size property for both, but use the value 40px for the h1 and 30px for the h2.
 
+Step 63
+Add a footer element below the main element, where you can add some additional information.
 
+Step 64
+Inside the footer, add a p element. Then, nest an anchor (a) element in the p that links to https://www.freecodecamp.org and has the text Visit our website.
 
-
-
-
-
-
+Step 65
+Add a second p element below the one with the link and give it the text 123 Free Code Camp Drive.
 
 
 

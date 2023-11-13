@@ -292,13 +292,22 @@ Notice how the thickness of the line looks bigger? The default value of a proper
 By changing the border to the same color as the background, the total height of the line is 5px (3px plus the top and bottom border width of 1px).
 Change the height property of the hr to be 2px, so the total height of it becomes 4px.
 
+Step 71
+Go ahead and add another hr element between the main element and the footer element.
 
+Step 72
+To create a little more room around the menu, add 20px of space on the inside of the body element by using the padding property.
 
+Step 73
+Focusing on the menu items and prices, there is a fairly large gap between each line.
+Use the existing selector that targets all the p elements nested in elements with the class named item and set their top and bottom margin to be 5px.
 
+Step 74
+Using the same style selector in the previous step, make the font size of the items and prices larger by using a value of 18px.
 
-
-
-
-
+Step 75
+Changing the margin-bottom to 5px looks great. However, now the space between the Cinnamon Roll menu item and the second hr element does not match the space
+between the top hr element and the Coffee heading.
+Add some more space by creating a class named bottom-line using 25px for the margin-top property.
 
 

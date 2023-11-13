@@ -92,8 +92,9 @@ To get them on the same line, you need to apply some styling to the p elements s
 If you make the width of the page preview smaller, you will notice at some point, some of the text on the left starts wrapping around to the next line. 
   This is because the width of the p elements on the left side can only take up 50% of the space.
 You can give your menu some space between the content and the sides with various padding properties.
-
-
+The current width of the menu will always take up 80% of the body element's width. On a very wide screen, the coffee and dessert appear far apart from their prices.
+  Add a max-width property to the menu class with a value of 500px to prevent it from growing too wide.
+You can change the font-family of text, to make it look different from the default font of your browser. Each browser has some common fonts available to it.
 
 
 

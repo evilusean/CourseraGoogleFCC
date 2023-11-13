@@ -275,13 +275,22 @@ Inside the footer, add a p element. Then, nest an anchor (a) element in the p th
 Step 65
 Add a second p element below the one with the link and give it the text 123 Free Code Camp Drive.
 
+Step 66
+You can use an hr element to display a divider between sections of different content.
+First, add an hr element between the p element with the class established and the first section element. Note that hr elements are self closing.
 
+Step 67
+The default properties of an hr element will make it appear as a thin light grey line. You can change the height of the line by specifying a value for the height property.
+Change the height of the hr element to be 3px.
 
+Step 68
+Notice the grey color along the edges of the line. Those edges are known as borders. Each side of an element can have a different color or they can all be the same.
+Make all the edges of the hr element the same color as the background of it using the border-color property.
 
-
-
-
-
+Step 70
+Notice how the thickness of the line looks bigger? The default value of a property named border-width is 1px for all edges of hr elements. 
+By changing the border to the same color as the background, the total height of the line is 5px (3px plus the top and bottom border width of 1px).
+Change the height property of the hr to be 2px, so the total height of it becomes 4px.
 
 
 

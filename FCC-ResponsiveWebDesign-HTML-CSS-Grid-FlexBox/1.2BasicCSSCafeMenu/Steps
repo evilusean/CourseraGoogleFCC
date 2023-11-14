@@ -327,16 +327,23 @@ property.
 
 Step 80
 You change properties of a link when the link has actually been visited by using a pseudo-selector that looks like a:visited { propertyName: propertyValue; }.
-
 Change the color of the footer Visit our website link to be grey when a user has visited the link.
 
+Step 81
+You change properties of a link when the mouse hovers over them by using a pseudo-selector that looks like a:hover { propertyName: propertyValue; }.
+Change the color of the footer Visit our website link to be brown when a user hovers over it.
 
+Step 82
+You change properties of a link when the link is actually being clicked by using a pseudo-selector that looks like a:active { propertyName: propertyValue; }.
+Change the color of the footer Visit our website link to be white when clicked on.
 
+Step 84
+The menu text CAMPER CAFE has a different space from the top than the address's space at the bottom of the menu. This is due to the browser having some default 
+top margin for the h1 element.
+Change the top margin of the h1 element to 0 to remove all the top margin.
 
-
-
-
-
+Step 85
+To remove some of the vertical space between the h1 element and the text Est. 2020, change the bottom margin of the h1 to 15px.
 
 
 

@@ -127,15 +127,25 @@ Now add a little more vertical space between your markers and the edge of the co
 In the .container CSS rule, use the shorthand padding property to add 10px of top and bottom padding, and set the left and right padding to 0. 
 This works similarly to the shorthand margin property you used earlier.
 
+Step 26
+In the additive RGB color model, primary colors are colors that, when combined, create pure white. But for this to happen, each color needs to be at its highest
+intensity.
+Before you combine colors, set your green marker back to pure green. For the rgb function in the .two CSS rule, set green back to the max value of 255.
 
+Step 27
+Now that you have the primary RGB colors, it's time to combine them.
+For the rgb function in the .container rule, set the red, green, and blue values to the max of 255.
 
+Step 28
+Secondary colors are the colors you get when you combine primary colors. You might have noticed some secondary colors in the last step as you changed the red, green, 
+and blue values.
+To create the first secondary color, yellow, update the rgb function in the .one CSS rule to combine pure red and pure green.
 
+Step 29
+To create the next secondary color, cyan, update the rgb function in the .two CSS rule to combine pure green and pure blue.
 
-
-
-
-
-
+Step 30
+To create the final secondary color, magenta, update the rgb function in the .three CSS rule to combine pure blue and pure red.
 
 
 

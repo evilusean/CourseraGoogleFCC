@@ -147,6 +147,55 @@ To create the next secondary color, cyan, update the rgb function in the .two CS
 Step 30
 To create the final secondary color, magenta, update the rgb function in the .three CSS rule to combine pure blue and pure red.
 
+Step 31
+Now that you're familiar with secondary colors, you'll learn how to create tertiary colors. Tertiary colors are created by combining a primary with a nearby secondary 
+color.
+To create the tertiary color orange, update the rgb function in the .one CSS rule so that red is at the max value, and set green to 127.
+
+Step 32
+Notice that, to create orange, you had to increase the intensity of red and decrease the intensity of the green rgb values. This is because orange is the combination
+of red and yellow.
+To create the tertiary color spring green, combine cyan with green. Update the rgb function in the .two CSS rule so that green is at the max value, and set blue to 127.
+
+Step 33
+And to create the tertiary color violet, combine magenta with blue. Update the rgb function in the .three CSS rule so that blue is at the max value, and set red to 127.
+
+Step 34
+There are three more tertiary colors: chartreuse green (green + yellow), azure (blue + cyan), and rose (red + magenta).
+To create chartreuse green, update the rgb function in the .one CSS rule so that red is at 127, and set green to the max value.
+For azure, update the rgb function in the .two CSS rule so that green is at 127 and blue is at the max value.
+And for rose, which is sometimes called bright pink, update the rgb function in the .three CSS rule so that blue is at 127 and red is at the max value.
+
+Step 35
+Now that you've gone through all the primary, secondary, and tertiary colors on a color wheel, it'll be easier to understand other color theory concepts and how they 
+impact design.
+First, in the CSS rules .one, .two, and .three, adjust the values in the rgb function so that the background-color of each element is set to pure black. Remember that 
+the rgb function uses the additive color model, where colors start as black and change as the values of red, green, and blue increase.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

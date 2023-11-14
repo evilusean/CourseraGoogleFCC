@@ -97,9 +97,9 @@ The current width of the menu will always take up 80% of the body element's widt
 You can change the font-family of text, to make it look different from the default font of your browser. Each browser has some common fonts available to it.
 You can use an hr element to display a divider between sections of different content.
 The default properties of an hr element will make it appear as a thin light grey line. You can change the height of the line by specifying a value for the height property.
-
-
-
+You change properties of a link when the link has actually been visited by using a pseudo-selector that looks like a:visited { propertyName: propertyValue; }.
+You change properties of a link when the mouse hovers over them by using a pseudo-selector that looks like a:hover { propertyName: propertyValue; }.
+You change properties of a link when the link is actually being clicked by using a pseudo-selector that looks like a:active { propertyName: propertyValue; }.
 
 
 

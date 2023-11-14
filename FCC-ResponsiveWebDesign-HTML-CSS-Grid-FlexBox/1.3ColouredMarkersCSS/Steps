@@ -21,15 +21,29 @@ You can have multiple self-closing meta elements on a web page. Each meta elemen
 Add another self-closing meta element within the head. Give it a name attribute set to viewport and a content attribute set to width=device-width, initial-scale=1.0 
 so your page looks the same on all devices.
 
+Step 6
+Now you're ready to start adding content to the page.
+Within the body, nest an h1 element with the text CSS Color Markers.
 
+Step 7
+In this project you'll work with an external CSS file to style the page. We've already created a styles.css file for you. But before you can use it, 
+you'll need to link it to the page.
+Nest a link element within the head element. Give it a rel attribute set to stylesheet and an href attribute set to styles.css.
 
+Step 8
+Now that your external CSS file is set up, you can start styling the page.
+As a reminder, here's how to target a paragraph element and align it to the right:
+p {
+  text-align: right;
+}
+Create a new CSS rule that targets the h1 element, and set its text-align property to center.
 
+Step 9
+Now you'll add some elements that you'll eventually style into color markers.
+First, within the body element, add a div element and set its class attribute to container. Make sure the div element is below the h1 element.
 
-
-
-
-
-
+Step 10
+Next, within the div element, add another div element and give it a class of marker.
 
 
 

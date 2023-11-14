@@ -100,7 +100,8 @@ The default properties of an hr element will make it appear as a thin light grey
 You change properties of a link when the link has actually been visited by using a pseudo-selector that looks like a:visited { propertyName: propertyValue; }.
 You change properties of a link when the mouse hovers over them by using a pseudo-selector that looks like a:hover { propertyName: propertyValue; }.
 You change properties of a link when the link is actually being clicked by using a pseudo-selector that looks like a:active { propertyName: propertyValue; }.
-
+There is an easier way, simply add a negative top margin to the img elements to pull them up from their current positions.
+  Negative values are created using a - in front of the value.
 
 
 

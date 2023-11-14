@@ -198,15 +198,21 @@ For now, use the rgb function in the .two CSS rule to set the background-color t
 Step 40
 And in the h1 CSS rule, remove the background-color property and value to go back to the default white color.
 
+Step 41
+Now it's time to add other details to the markers, starting with the first one.
+In the first marker div element, change the class one to red.
 
+Step 42
+Update the .one CSS rule to target the new red class.
 
+Step 43
+And update the rgb function in the .red CSS rule so that the red value is at the max.
 
+Step 44
+Next, change the class two to green in the second marker div, and the class three to blue in the third marker div.
 
-
-
-
-
-
+Step 45
+Update the CSS class selector .two so it targets the new green class. And update the .three class selector so it targets the new blue class.
 
 
 

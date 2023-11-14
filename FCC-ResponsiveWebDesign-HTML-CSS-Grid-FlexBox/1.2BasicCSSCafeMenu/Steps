@@ -345,6 +345,30 @@ Change the top margin of the h1 element to 0 to remove all the top margin.
 Step 85
 To remove some of the vertical space between the h1 element and the text Est. 2020, change the bottom margin of the h1 to 15px.
 
+Step 86
+Now the top spacing looks good. The space below the address at the bottom of the menu is a little bigger than the space at the top of the menu and the h1 element.
+To decrease the default margin space below the address p element, create a class selector named address and use the value 5px for the margin-bottom property.
+
+Step 87
+Now apply the address class to the p element containing the street address 123 Free Code Camp Drive.
+
+Step 88
+The menu looks good, but other than the coffee beans background image, it is mainly just text.
+Under the Coffee heading, add an image using the url https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg. Give the image an alt value of coffee icon.
+
+Step 89
+The image you added is not centered horizontally like the Coffee heading above it. img elements are "like" inline elements.
+To make the image behave like heading elements (which are block-level), create an img type selector and use the value block for the display property and use the
+applicable margin-left and margin-right values to center it horizontally.
+
+Step 90
+Add one last image under the Desserts heading using the url https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg. Give the image an alt value of pie icon.
+
+
+
+
+
+
 
 
 

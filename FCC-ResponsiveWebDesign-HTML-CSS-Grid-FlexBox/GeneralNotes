@@ -120,7 +120,9 @@ There are two main color models: the additive RGB (red, green, blue) model used 
   model used in print. rgb(0, 0, 0) #RGB model
 Each red, green, and blue value is a number from 0 to 255. 0 means that there's 0% of that color, and is black. 255 means that there's 100% of that color.
 Tertiary colors are created by combining a primary with a nearby secondary color.
-
+Notice that the red and cyan colors are very bright right next to each other. This contrast can be distracting if it's overused on a website, and can make text hard
+to read if it's placed on a complementary-colored background.
+It's better practice to choose one color as the dominant color, and use its complementary color as an accent to bring attention to certain content on the page.
 
 
 

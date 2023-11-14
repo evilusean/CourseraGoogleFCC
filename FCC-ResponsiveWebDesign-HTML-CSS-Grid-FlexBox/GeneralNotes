@@ -116,8 +116,9 @@ To center your marker on the page, set its margin property to auto.
 Multiple classes can be added to an element by listing them in the class attribute and separating them with a space. 
   For example, the following adds both the animal and dog classes to a div element.
   <div class="animal dog">
-
-
+There are two main color models: the additive RGB (red, green, blue) model used in electronic devices, and the subtractive CMYK (cyan, magenta, yellow, black)
+  model used in print. rgb(0, 0, 0) #RGB model
+Each red, green, and blue value is a number from 0 to 255. 0 means that there's 0% of that color, and is black. 255 means that there's 100% of that color.
 
 
 

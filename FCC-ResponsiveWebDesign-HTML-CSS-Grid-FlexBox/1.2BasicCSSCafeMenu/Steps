@@ -310,4 +310,40 @@ Changing the margin-bottom to 5px looks great. However, now the space between th
 between the top hr element and the Coffee heading.
 Add some more space by creating a class named bottom-line using 25px for the margin-top property.
 
+Step 76
+Now add the bottom-line class to the second hr element so the styling is applied.
+
+Step 77
+Next you are going to be styling the footer element. To keep the CSS organized, add a comment at the end of styles.css with the text FOOTER.
+
+Step 78
+Moving down to the footer element, make all the text have a value of 14px for the font size.
+
+Step 79
+The default color of a link that has not yet been clicked on is typically blue. The default color of a link that has already been visited from a page is typically
+purple.
+To make the footer links the same color regardless if a link has been visited, use a type selector for the anchor element (a) and use the value black for the color
+property.
+
+Step 80
+You change properties of a link when the link has actually been visited by using a pseudo-selector that looks like a:visited { propertyName: propertyValue; }.
+
+Change the color of the footer Visit our website link to be grey when a user has visited the link.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

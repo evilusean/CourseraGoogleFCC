@@ -296,15 +296,27 @@ Step 60
 The red marker is looking much more realistic. Now you'll do the same for the green marker, using a combination of the linear-gradient function and hex colors.
 In the .green CSS rule, change the background-color property to background.
 
+Step 61
+For this marker, you'll use hex color codes for your gradient.
+Use the linear-gradient function and set gradientDirection to 180deg. And for the first color argument, use a hex color code with the values 55 for red, 
+68 for green, and 0D for blue.
 
+Step 62
+For the second color argument, use a hex color code with the values 71 for red, F5 for green, and 3E for blue.
 
+Step 63
+That's looking better, but the bottom edge of the green marker needs to be darker to add a little more dimension.
+In the same linear-gradient function, add a hex color code with the values 11 for red, 6C for green, and 31 for blue as the third color argument.
 
+Step 64
+Even without the color-stops, you might have noticed that the colors for the green marker transition at the same points as the red marker. The first color is at 
+the start (0%), the second is in the middle (50%), and the last is at the end (100%) of the gradient line.
+The linear-gradient function automatically calculates these values for you, and places colors evenly along the gradient line by default.
+In the .red CSS rule, remove the three color stops from the linear-gradient function to clean up your code a bit.
 
-
-
-
-
-
+Step 65
+If no gradientDirection argument is provided to the linear-gradient function, it arranges colors from top to bottom, or along a 180 degree line, by default.
+Clean up your code a little more by removing the gradientDirection argument from both linear-gradient functions.
 
 
 

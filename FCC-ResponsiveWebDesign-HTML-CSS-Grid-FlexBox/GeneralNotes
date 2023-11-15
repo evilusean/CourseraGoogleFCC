@@ -167,6 +167,49 @@ All HTML elements have borders, though they're usually set to none by default. W
 on all sides, or just one side at a time. For a border to be visible, you need to set its width and style.
 Borders have several styles to choose from. You can make your border a solid line, but you can also use a dashed or dotted line if you prefer. 
 Solid border lines are probably the most common.
+Your border should be visible now. If no color is set, black is used by default.
+But to make your code more readable, it's better to set the border color explicitly.
+The border-left shorthand property lets you to set the left border's width, style, and color at the same time.
+Here is the syntax: border-left: width style color;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -251,6 +251,61 @@ transition itself. These can be any type of color, including color keywords, hex
 Now you'll apply a red-to-green gradient along a 90 degree line to the first marker.
 First, in the .red CSS rule, set the background property to linear-gradient(), and pass it the value 90deg as the gradientDirection.
 
+Step 51
+You'll use the rgb function for the colors of this gradient.
+In the linear-gradient function, use the rgb function to set the first color argument to pure red.
+
+Step 52
+You won't see gradient yet because the linear-gradient function needs at least two color arguments to work.
+In the same linear-gradient function, use the rgb function to set the second color argument to pure green.
+
+Step 53
+As you can see, the linear-gradient function produced a smooth red-green gradient. While the linear-gradient function needs a minimum of two color arguments to work,
+it can accept many color arguments.
+Use the rgb function to add pure blue as the third color argument to the linear-gradient function.
+
+Step 54
+Color-stops allow you to fine-tune where colors are placed along the gradient line. They are a length unit like px or percentages that follow a color in the
+linear-gradient function
+For example, in this red-black gradient, the transition from red to black takes place at the 90% point along the gradient line, so red takes up most of the available 
+space:
+linear-gradient(90deg, red 90%, black);
+In the linear-gradient function, add a 75% color stop after the first red color argument. Do not add color stops to the other colors arguments.
+
+Step 55
+Now that you know the basics of how the linear-gradient function and color-stops work, you can use them to make the markers look more realistic.
+In the linear-gradient function, set gradientDirection to 180deg.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

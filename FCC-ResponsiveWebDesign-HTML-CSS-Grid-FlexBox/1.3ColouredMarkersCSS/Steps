@@ -389,15 +389,29 @@ Borders have several styles to choose from. You can make your border a solid lin
 Solid border lines are probably the most common.
 In the .sleeve CSS rule, add the border-left-style property with the value solid.
 
+Step 81
+Your border should be visible now. If no color is set, black is used by default.
+But to make your code more readable, it's better to set the border color explicitly.
+In the .sleeve CSS rule, add the border-left-color property with the value black.
 
+Step 82
+The border-left shorthand property lets you to set the left border's width, style, and color at the same time.
+Here is the syntax:
+border-left: width style color;
+In the .sleeve CSS rule, replace the border-left-width, border-left-style, and border-left-color properties with the border-left shorthand property.
+The values for the width, style, and color of the left border should be the same.
 
+Step 83
+Your marker is looking good. But to make it look even more realistic, you can change the border style to double solid borders.
+For the border-left shorthand property, change the border style value from solid to double.
 
+Step 84
+The black color of your border looks pretty harsh against the more transparent sleeve. You can use an alpha channel to lower the opacity of the black border.
+For the border-left shorthand property, use the rgba function to set the color value to pure black with 75% opacity.
 
-
-
-
-
-
+Step 85
+Awesome. Your red marker is looking good. Now all you need to do is add the caps and sleeves to your other markers.
+Add a cap and sleeve to both the green and blue markers. You can just copy the div elements from the red marker and paste them into the other two markers.
 
 
 

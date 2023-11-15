@@ -276,15 +276,25 @@ Step 55
 Now that you know the basics of how the linear-gradient function and color-stops work, you can use them to make the markers look more realistic.
 In the linear-gradient function, set gradientDirection to 180deg.
 
+Step 56
+Next, set the color-stop for red to 0%, the color-stop for green to 50%, and the color-stop for blue to 100%.
 
+Step 57
+Now that the color-stops are set, you'll apply different shades of red to each color argument in the linear-gradient function. The shades on the top and bottom edges 
+of the marker will be darker, while the one in the middle will be lighter, as if there's a light above it.
+For the first color argument, which is currently pure red, update the rgb function so the value for red is 122, the value for green is 74, and the value for blue is 14.
 
+Step 58
+Now modify the second color argument in the linear-gradient function, which is currently pure green.
+Update the rgb function so the value for red is 245, the value of green is 62, and the value of blue is 113.
 
+Step 59
+Finally, modify the third color argument in the linear-gradient function, which is currently pure blue.
+Update the rgb function so the value for red is 162, the value of green is 27, and the value of blue is 27.
 
-
-
-
-
-
+Step 60
+The red marker is looking much more realistic. Now you'll do the same for the green marker, using a combination of the linear-gradient function and hex colors.
+In the .green CSS rule, change the background-color property to background.
 
 
 

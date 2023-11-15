@@ -160,9 +160,13 @@ You're already familiar with using the rgb function to set colors. To add an alp
 The rgba function works just like the rgb function, but takes one more number from 0 to 1.0 for the alpha channel:
 rgba(redValue, greenValue, blueValue, alphaValue);
 You can also use an alpha channel with hsl and hex colors.
-
-
-
+the default display property for div elements is block. So when two block elements are next to each other, they stack like actual blocks. 
+For example, your marker elements are all stacked on top of each other.
+To position two div elements on the same line, set their display properties to inline-block.
+All HTML elements have borders, though they're usually set to none by default. With CSS, you can control all aspects of an element's border, and set the border 
+on all sides, or just one side at a time. For a border to be visible, you need to set its width and style.
+Borders have several styles to choose from. You can make your border a solid line, but you can also use a dashed or dotted line if you prefer. 
+Solid border lines are probably the most common.
 
 
 

@@ -335,6 +335,48 @@ Step 70
 Now that the markers have the correct colors, it's time to build the marker sleeves. Start with the red marker.
 Inside the red marker div element, create a new div element and give it a class of sleeve.
 
+Step 71
+Create a new CSS rule that targets the class sleeve. Set the width property to 110px, and the height property to 25px.
+
+Step 72
+To make the marker look more realistic, give the sleeve a transparent white color.
+First, set the sleeve element's background-color to white.
+
+Step 73
+Opacity describes how opaque, or non-transparent, something is. For example, a solid wall is opaque, and no light can pass through. But a drinking glass is much more 
+transparent, and you can see through the glass to the other side.
+With the CSS opacity property, you can control how opaque or transparent an element is. With the value 0, or 0%, the element will be completely transparent, and at 
+1.0, or 100%, the element will be completely opaque like it is by default.
+In the .sleeve CSS rule, set the opacity property to 0.5.
+
+Step 74
+Another way to set the opacity for an element is with the alpha channel. Similar to the opacity property, the alpha channel controls how transparent or opaque a
+color is.
+You've already set sleeve's opacity with a named color and the opacity property, but you can add an alpha channel to the other CSS color properties.
+Inside the .sleeve rule, remove the opacity property and value.
+
+Step 75
+You're already familiar with using the rgb function to set colors. To add an alpha channel to an rgb color, use the rgba function instead.
+The rgba function works just like the rgb function, but takes one more number from 0 to 1.0 for the alpha channel:
+rgba(redValue, greenValue, blueValue, alphaValue);
+You can also use an alpha channel with hsl and hex colors. You will see how to do that soon.
+In the .sleeve rule, use the rgba function to set the background-color property to pure white with 50% opacity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

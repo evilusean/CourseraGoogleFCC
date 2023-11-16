@@ -450,12 +450,22 @@ Now that you're familiar with the box-shadow property you can finalize the shado
 In the .red CSS rule, update the values for the box-shadow property so offsetX is 0,offsetY is 0, blurRadius is 20px, spreadRadius is 0, and color is red. 
 Remember that you don't need to add units to a zero value.
 
+Step 91
+Next, update the color value of the red marker's box-shadow property.
+Replace the named color with the rgba function. Use the values 83 for red, 14 for green, 14 for blue and 0.8 for the alpha channel.
 
+Step 92
+The shadows for your green and blue markers will have the same position, blur, and spread. The only difference will be the colors.
+In the .green and .blue CSS rules, update the values for the box-shadow properties so offsetX is 0,offsetY is 0, blurRadius is 20px, and spreadRadius is 0. 
+Leave the colors as green and blue for now.
 
+Step 93
+For the green marker's box-shadow property, replace the named color with a hex color code. Use the values 3B for red, 7E for green, 20 for blue, and 
+CC for the alpha channel.
 
-
-
-
-
+Step 94
+Finally, for the blue marker's box-shadow property, replace the named color with the hsla function. Use the values 223 for hue, 59% for saturation, 31% for 
+lightness, and 0.8 for the alpha channel.
+And with that, your set of colored markers is complete! Well done.
 
 

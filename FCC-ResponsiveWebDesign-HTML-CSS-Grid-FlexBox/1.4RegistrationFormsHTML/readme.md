@@ -9,7 +9,7 @@ Showcases:Survey Forms, text input, labels, divs, emails, numbers, dropdown, che
 Link+Preview:<br>
 https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-forms-by-building-a-registration-form/step-1
 
-========================================================
+==================================================================================================================</br>
 End: </br>
 1.35 : Learn HTML Forms by Building a Registration Form </br>
 You can use HTML forms to collect information from people who visit your webpage. </br>

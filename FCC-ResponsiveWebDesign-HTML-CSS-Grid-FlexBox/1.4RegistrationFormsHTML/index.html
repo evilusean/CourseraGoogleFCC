@@ -13,14 +13,12 @@
         <h1 id="title">Registration Form</h1>  
         <p id="description">Survey Form</p>
         <form id="survey-form">
-            <label id="name-label" placeholder="name">Enter a Name</label>
-            <input id="name" type="text"></input>
-            <label id="email-label" placeholder="email">Enter an email: </label>
-            <input id="email-label" type="email" required></input>
-            <!-- TO DO : If you enter an email that is not formatted correctly,
-                 you will see an HTML5 validation error-->
-            <label id="number-label" placeholder="number">Enter a number between 1 and 1000</label>
-            <input id="number-label" type="number" min="1" max="1000"></input>
+            <label id="name-label" placeholder="text" required>Enter a Name</label>
+            <input id="name" type="text" required placeholder="name">Name</input>
+            <label id="email-label" placeholder= "text">Enter an email: </label>
+            <input id="email" type="email" required placeholder="email">Email</input>
+            <label id="number-label" placeholder="text">Enter a number between 1 and 1000</label>
+            <input id="number" type="number" min="1" max="1000" placeholder="number">Number</input>
             <!-- TO DO : The number input should not accept non-numbers, either by preventing you from typing them 
                 or by showing an HTML5 validation error (depending on your browser).
             If you enter numbers outside the range of the number input, which are defined by the min and max 

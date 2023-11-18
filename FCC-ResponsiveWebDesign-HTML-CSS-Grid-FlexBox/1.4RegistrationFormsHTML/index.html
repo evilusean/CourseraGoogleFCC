@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vooooteing Form</title>
+    <link rel="stylesheet" href="./1.4styles.css">
+  </head>
+  <body>
+    <main>
+        <h1 id="title">Voooooteing</h1>  
+        <p id="description">I Voooted. </p>
+        <form id="survey-form">
+        <div>
+            <label id="name-label" placeholder="text" required>Enter a Name</label>
+            <input id="name" type="text" required placeholder="name"></input>
+        </div>
+        <div>
+            <label id="email-label" placeholder= "text">Enter an email: </label>
+            <input id="email" type="email" required placeholder="email"></input>
+        </div>
+        <div>
+            <label id="number-label" placeholder="text">On a scale of 1 to 1000, how much do you trust network connected vooooooooteing machines?</label>
+            <input id="number" type="number" min="1" max="1000" placeholder="number"></input>
+        </div>
+        <div>
+                <label for="dropdoown">Do you like Taxes? </label>
+                <select id="dropdown">
+                    <option value="Opsean1">Yes</option>
+                    <option value="Opsean2">Yes, alot.</option>
+                </select>
+        </div>
+        <div>
+            <label for="radio">Select Puppet: </label>
+            <input type="radio" name="radio" id="radio" value="radio" attribute="radio">Red Puppet</input>
+            <input type="radio" name="radio" id="radio" value="radio" attribute="radio">Blue Puppet</input>
+        </div>
+        <div>
+            <label for="checkbox">I'm From the government, and I'm here to help : </label>
+        </div>
+        <div>
+            <input type="checkbox" name="checkbox" id="checkbox" value="checkbox" attribute="checkbox">What you can do for the government.</input>
+            <input type="checkbox" name="checkbox" id="checkbox" value="checkbox" attribute="checkbox">What your government has done to you. </input>
+        </div>
+        <div>
+        <textarea name="comments" rows="3" cols="30" placeholder="What has your government done to you?">What has govt done to you?</textarea>
+        </div>
+            <input type="submit" value="Submit" id="submit">4 More Years!</input>
+        </form>
+    </main>
+  </body>
+</html>

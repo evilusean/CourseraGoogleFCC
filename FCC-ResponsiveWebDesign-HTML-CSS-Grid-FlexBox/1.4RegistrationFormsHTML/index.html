@@ -13,11 +13,14 @@
         <h1 id="title">Registration Form</h1>  
         <p id="description">Survey Form</p>
         <form id="survey-form">
-            <input id="name" type="text"><label id="name-label" placeholder="name">Enter a Name</label></input>
-            <input id="email-label" type="email" required><label id="email-label" placeholder="email"></label>Enter an email: </label></input>
+            <label id="name-label" placeholder="name">Enter a Name</label>
+            <input id="name" type="text"></input>
+            <label id="email-label" placeholder="email">Enter an email: </label>
+            <input id="email-label" type="email" required></input>
             <!-- TO DO : If you enter an email that is not formatted correctly,
                  you will see an HTML5 validation error-->
-            <input id="number-label" type="number" min="1" max="1000"><label id="number-label" placeholder="number">Enter a number between 1 and 1000</label></input>
+            <label id="number-label" placeholder="number">Enter a number between 1 and 1000</label>
+            <input id="number-label" type="number" min="1" max="1000"></input>
             <!-- TO DO : The number input should not accept non-numbers, either by preventing you from typing them 
                 or by showing an HTML5 validation error (depending on your browser).
             If you enter numbers outside the range of the number input, which are defined by the min and max 
@@ -31,11 +34,14 @@
                     <option value="Opsean1">Opsean1</option>
                     <option value="Opsean2">Opsean2</option>
                 </select>
-                <input type="submit" value="submit" /> <!-- submit button -->
+            
             <!-- TO DO: Inside the form element, you can select an option from a group of at least two radio buttons that are grouped using the name attribute-->
-            <input type="radio" name="dropdown" id="dropdown" value="dropdown" attribute="dropdown"><option value="dropdown"></input><label for="dropdown">Dropdown</label>
-            <input type="radio" name="dropdown2" id="dropdown2" value="dropdown2" attribute="dropdown2"><label for="dropdown2"></label></input>
-            <!-- TO DO : Inside the form element, you can select several fields from a series of checkboxes, each of which must have a value attribute-->
+            <label for="dropdown">Dropdown</label>
+            <input type="radio" name="dropdown" id="dropdown" value="dropdown" attribute="dropdown"><option value="dropdown"></option></input>
+            <label for="dropdown2"></label>
+            <input type="radio" name="dropdown2" id="dropdown2" value="dropdown2" attribute="dropdown2"></input>
+            <input type="submit" value="submit"></input><!-- submit button -->
+            <!-- TO DO : Inside the form elemenVt, you can select several fields from a series of checkboxes, each of which must have a value attribute-->
             <!-- TO DO : Inside the form element, you are presented with a textarea for additional comments-->
             <!-- TO DO : Inside the form element, you are presented with a button with id of submit to submit all the inputs
             You should have at least two input elements with a type of radio (radio buttons).

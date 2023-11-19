@@ -215,7 +215,9 @@ To relate the radio inputs, give them the same name attribute with a value of ac
 Linking for labels with input Id's:<label for="terms-and-conditions"> <input id="terms-and-conditions" type="checkbox" required />
   I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></label>
 
-
+Submitting the form with an option selected would not send a useful value to the server. 
+As such, each option needs to be given a value attribute. Without which, the text content of the option will be submitted to the server.
+<option value="4">Other</option>
 
 
 

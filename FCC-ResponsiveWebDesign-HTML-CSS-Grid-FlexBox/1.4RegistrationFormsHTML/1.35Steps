@@ -189,15 +189,27 @@ Step 45
 Center the form element, by giving it a margin of 0 auto.
 Then, fix its size to a maximum width of 500px, and a minimum width of 300px. In between that range, allow it to have a width of 60vw.
 
+Step 46
+During development, it is useful to see the fieldset default borders. However, they make the content appear too separated.
+Remove the border, and add 2rem of padding only to the top and bottom of each fieldset. Be sure to remove the padding from the left and right.
 
+Step 47
+To give the fieldset elements a bit of separation, select them and give them a border-bottom of 3px solid #3b3b4f.
 
+Step 48
+The border of the last fieldset element looks a little out of place. You can select the last element of a specific type using the last-of-type CSS pseudo-class, 
+like this:
+p:last-of-type { }
+That will select the last p element. Create a new selector that targets the last fieldset element and set its border-bottom to none.
 
+Step 49
+It would be nicer to have the label text appear above the form elements.
+Select all input, textarea, and select elements, and make them take up the full width of their parent elements.
+Also, add 10px of margin to the top of the selected elements. Set the other margins to 0.
 
-
-
-
-
-
+Step 50
+For the second fieldset, you want the input and label text to appear on the same line.
+Start, by giving the input elements in the second fieldset a class of inline.
 
 
 

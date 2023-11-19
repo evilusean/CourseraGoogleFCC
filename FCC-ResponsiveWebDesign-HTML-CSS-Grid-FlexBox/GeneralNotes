@@ -212,7 +212,8 @@ pattern="[a-z0-5]{8,}" #regular expression which matches eight or more lowercase
 To relate the radio inputs, give them the same name attribute with a value of account-type. Now, it is not possible to select both radio inputs at the same time.
 <input type="radio" name="account-type" />
 <legend>Account type (required)</legend> #legend used to write in fieldset
-Linking for labels with input Id's: <label for="terms-and-conditions"><input type="checkbox" required id="terms-and-conditions"/></label>
+Linking for labels with input Id's:<label for="terms-and-conditions"> <input id="terms-and-conditions" type="checkbox" required />
+  I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></label>
 
 
 

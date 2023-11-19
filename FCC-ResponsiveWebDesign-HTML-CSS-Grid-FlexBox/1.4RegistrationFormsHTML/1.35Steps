@@ -73,13 +73,25 @@ Step 20
 The first input element with a type of submit is automatically set to submit its nearest parent form element.
 To handle the form submission, after the last fieldset element add an input element with the type attribute set to submit and the value attribute set to Submit.
 
+Step 21
+At this point, you should be able to submit the form. However, you might notice not much happens.
+To make the form more interactive, add the required attribute to the input elements in the first fieldset.
+Now, if you try to submit the form without filling in the required fields, you will see an error message.
 
+Step 22
+Certain type attribute values come with built-in form validation. For example, type="email" requires that the value be a valid email address.
+Add custom validation to the password input element, by adding a minlength attribute with a value of 8. Doing so prevents inputs of less than 8 characters being submitted.
 
+Step 23
+With type="password" you can use the pattern attribute to define a regular expression that the password must match to be considered valid.
+Add a pattern attribute to the password input element to require the input match: [a-z0-5]{8,}
+The above is a regular expression which matches eight or more lowercase letters or the digits 0 to 5. Then, remove the minlength attribute, and try it out.
 
+Step 24
+Let us go to the next part of the registration form. This section will ask for the type of account the user is opening.
+Start by adding two label elements to the second fieldset.
 
-
-
-
-
-
+Step 25
+Users will be allowed to choose either a Personal or Business.
+To do this, within each of the first two label elements, add one input element with type="radio".
 

@@ -13,15 +13,22 @@ Add a title and a meta element to the head. Give your project a title of Registr
 Step 5
 Nest a self-closing link element within the head element. Give it a rel attribute with value of stylesheet and an href attribute with a value of styles.css.
 
+Step 6
+Within the body, provide a heading context for the content, by adding an h1 with the text Registration Form.
 
+Step 7
+Below the heading, use the following text within a paragraph element to encourage users to register:
+Please fill out this form with the required information
 
+Step 8
+The vh unit stands for viewport height, and is relative to 1% of the height of the viewport.
+It is time to spruce the project up with some CSS. Begin by giving the body a width of 100%, and a height of 100vh.
 
+Step 9
+Now, get rid of the horizontal scroll-bar, by setting the body default margin added by some browsers to 0.
 
-
-
-
-
-
+Step 10
+That is better. Now, make the background easy on the eyes, by changing the body background-color to #1b1b32. Then, to see the text, change the color to #f5f6f7.
 
 
 

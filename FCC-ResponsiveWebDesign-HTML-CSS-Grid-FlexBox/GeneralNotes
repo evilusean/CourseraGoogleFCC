@@ -191,8 +191,9 @@ Like blurRadius, spreadRadius defaults to 0 if it isn't included.
 
 1.3 ===========================================================================================================Registration/Survey Forms:
 The vh unit stands for viewport height, and is relative to 1% of the height of the viewport.
-
-
+The method attribute specifies how to send form-data to the URL specified in the action attribute. The form-data can be sent via a GET request as URL 
+parameters (with method="get") or via a POST request as data in the request body (with method="post").
+As the form will have three distinct sections, add three fieldset elements within the form element.
 
 
 

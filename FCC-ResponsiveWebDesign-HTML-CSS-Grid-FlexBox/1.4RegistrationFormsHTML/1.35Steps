@@ -142,15 +142,31 @@ Start by adding a select element below the two label elements. Then nest 5 optio
 Step 35
 Nest the select element (with its option elements) within a label element with the text How did you hear about us?. The text should come before the select element.
 
+Step 36
+The dropdown options are currently empty. To give them content, add the following text to each subsequent option element:
+(select one)
+freeCodeCamp News
+freeCodeCamp YouTube Channel
+freeCodeCamp Forum
+Other
 
+Step 37
+Submitting the form with an option selected would not send a useful value to the server. 
+As such, each option needs to be given a value attribute. Without which, the text content of the option will be submitted to the server.
 
+Step 38
+The textarea element acts like an input element of type text, but comes with the added benefit of being able to receive multi-line text,
+and an initial number of text rows and columns.
+Users will be able to register with a bio. Add a label with the text Provide a bio: at the end of the fieldset.
+Add a textarea element inside the label element. Note that the textarea requires a closing tag.
 
+Step 39
+Link the applicable form elements and their label elements together.
+Use profile-picture, age, referrer, and bio as values for the respective id attributes.
 
-
-
-
-
-
+Step 40
+The textarea appears too small. To give it an initial size, you can add the rows and cols attributes.
+Add an initial size of 3 rows and 30 columns.
 
 
 

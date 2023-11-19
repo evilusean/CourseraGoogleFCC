@@ -194,10 +194,13 @@ The vh unit stands for viewport height, and is relative to 1% of the height of t
 The method attribute specifies how to send form-data to the URL specified in the action attribute. The form-data can be sent via a GET request as URL 
 parameters (with method="get") or via a POST request as data in the request body (with method="post").
 As the form will have three distinct sections, add three fieldset elements within the form element.
-
-
-
-
+The rem unit stands for root em, and is relative to the font size of the html element.
+As label elements are inline by default, they are all displayed side by side on the same line, making their text hard to read. To make them appear on separate lines, 
+add display: block to the label element, and add a margin of 0.5rem 0, to separate them from each other. = label {display: block; margin: 0.5rem 0;}}
+Following accessibility best practices, link the input elements and the label elements together using the for attribute.
+<label for="first-name">Enter Your First Name: <input id="first-name"/></label>
+Specifying the type attribute of a form element is important for the browser to know what kind of data it should expect.
+If the type is not specified, the browser will default to text.
 
 
 

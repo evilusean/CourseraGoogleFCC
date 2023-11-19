@@ -168,6 +168,46 @@ Step 40
 The textarea appears too small. To give it an initial size, you can add the rows and cols attributes.
 Add an initial size of 3 rows and 30 columns.
 
+Step 41
+To give Campers an idea of what to put in their bio, the placeholder attribute is used. 
+The placeholder accepts a text value,which is displayed until the user starts typing.
+Give the textarea a placeholder of I like coding on the beach....
+
+Step 42
+With form submissions, it is useful, and good practice, to provide each submittable element with a name attribute. 
+This attribute is used to identify the element in the form submission.
+Give each submittable element a unique name attribute of your choosing, except for the two radio inputs.
+
+Step 43
+The HTML for the registration form is finished. Now, you can spruce it up a bit.
+Start by changing the font to Tahoma, and the font size to 16px in the body.
+
+Step 44
+Center the h1 and p elements by giving them a margin of 1em auto. Then, align their text in the center as well.
+
+Step 45
+Center the form element, by giving it a margin of 0 auto.
+Then, fix its size to a maximum width of 500px, and a minimum width of 300px. In between that range, allow it to have a width of 60vw.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

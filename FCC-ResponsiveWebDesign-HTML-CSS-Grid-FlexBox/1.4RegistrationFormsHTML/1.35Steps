@@ -30,15 +30,26 @@ Now, get rid of the horizontal scroll-bar, by setting the body default margin ad
 Step 10
 That is better. Now, make the background easy on the eyes, by changing the body background-color to #1b1b32. Then, to see the text, change the color to #f5f6f7.
 
+Step 11
+As suggested by the title, you are creating a form. So, after the p element, insert a form with an action attribute targeting https://register-demo.freecodecamp.org.
 
+Step 12
+The method attribute specifies how to send form-data to the URL specified in the action attribute. The form-data can be sent via a GET request as URL 
+parameters (with method="get") or via a POST request as data in the request body (with method="post").
+Set the method attribute to send your form data via a POST request.
 
+Step 13
+As the form will have three distinct sections, add three fieldset elements within the form element.
 
+Step 14
+The first fieldset will hold name, email, and password fields. Start by adding four label elements to the first fieldset.
 
-
-
-
-
-
+Step 15
+Add the following text to the label elements:
+Enter Your First Name:
+Enter Your Last Name:
+Enter Your Email:
+Create a New Password:
 
 
 

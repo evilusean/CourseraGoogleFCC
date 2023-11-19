@@ -120,15 +120,27 @@ Add a label element. Inside the newly created label element add an input element
 Make this input element required so users can not sign up without agreeing to the terms and conditions.
 Add an id and for attribute with the value terms-and-conditions to the elements for accessibility.
 
+Step 31
+Add I accept the terms and conditions text to the newly added label, then link the text terms and conditions to the following location:
+https://www.freecodecamp.org/news/terms-of-service/
 
+Step 32
+Moving on to the final fieldset. What if you wanted to allow a user to upload a profile picture?
+Well, the input type file allows just that. Add a label with the text Upload a profile picture: , and nest an input accepting a file upload.
 
+Step 33
+Add another label after the first, with the text Input your age (years): . Then, nest an input with the type of number.
+Next, add a min attribute to the input with a value of 13 because users under the age of 13 should not register. 
+Also, users probably will not be over the age of 120; add a max attribute with a value of 120.
+Now, if someone tries to submit the form with values outside of the range, a warning will appear, and the form will not submit. Give it a try.
 
+Step 34
+Adding a dropdown to the form is easy with the select element. The select element is a container for a group of option elements, 
+and the option element acts as a label for each dropdown option. Both elements require closing tags.
+Start by adding a select element below the two label elements. Then nest 5 option elements within the select element.
 
-
-
-
-
-
+Step 35
+Nest the select element (with its option elements) within a label element with the text How did you hear about us?. The text should come before the select element.
 
 
 

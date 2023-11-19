@@ -201,10 +201,14 @@ Following accessibility best practices, link the input elements and the label el
 <label for="first-name">Enter Your First Name: <input id="first-name"/></label>
 Specifying the type attribute of a form element is important for the browser to know what kind of data it should expect.
 If the type is not specified, the browser will default to text.
-
-
-
-
+To make the form more interactive, add the required attribute to the input elements in the first fieldset.
+Now, if you try to submit the form without filling in the required fields, you will see an error message.
+Certain type attribute values come with built-in form validation. For example, type="email" requires that the value be a valid email address.
+Add custom validation to the password input element, by adding a minlength attribute with a value of 8. 
+Doing so prevents inputs of less than 8 characters being submitted. minlength=8
+With type="password" you can use the pattern attribute to define a regular expression that the password must match to be considered valid.
+Add a pattern attribute to the password input element to require the input match: 
+pattern="[a-z0-5]{8,}" #regular expression which matches eight or more lowercase letters or the digits 0 to 5
 
 
 

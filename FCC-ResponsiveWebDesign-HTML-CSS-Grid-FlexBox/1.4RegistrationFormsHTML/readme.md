@@ -9,6 +9,8 @@ Showcases:Survey Forms, text input, labels, divs, emails, numbers, dropdown, che
 Link+Preview:<br>
 https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-forms-by-building-a-registration-form/step-1
 
+<img src="https://github.com/evilusean/CourseraGoogleFCC/blob/main/FCC-ResponsiveWebDesign-HTML-CSS-Grid-FlexBox/1.4RegistrationFormsHTML/VoooteForm.png>
+
 =========================================================================</br>
 End: </br>
 1.35 : Learn HTML Forms by Building a Registration Form </br>

@@ -1,1 +1,4 @@
-
+body {
+    background-image: linear-gradient(rgb(255, 0, 0), rgb(0, 0, 255));
+    color: #f5f6f7;
+}

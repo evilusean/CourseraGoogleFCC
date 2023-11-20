@@ -14,9 +14,10 @@ https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-forms-b
 
 =========================================================================</br>
 End: 20 November 2023</br>
-1.35 : Learn the CSS Box Model by Building a Rothko Painting :</br>
-Every HTML element is its own box – with its own spacing and a border. This is called the Box Model.</br>
-In this course, you'll use CSS and the Box Model to create your own Rothko-style rectangular art pieces.</br>
+1.35 :Learn HTML Forms by Building a Registration Form : </br>
+You can use HTML forms to collect information from people who visit your webpage.</br>
+In this course, you'll learn HTML forms by building a signup page. </br>
+You'll learn how to control what types of data people can type into your form, and some new CSS tools for styling your page.</br>
 
 Link+Preview:<br>
 https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-forms-by-building-a-registration-form/step-1

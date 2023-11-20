@@ -250,7 +250,22 @@ Also, increase the font-size to 1.1rem.
 Step 60
 To make the submit button appear more distinct, give it a background-color of #3b3b4f, and a border-color of white.
 
+Step 61
+Lastly, for the submit button, you want to separate it from the fieldset above, and adjust its width to never be below 300px.
+Change the margin property to include 1em on the top and bottom, while leaving the right and left margins set to auto. Then set the width as described above.
 
+Step 62
+Most browsers inject their own default CSS properties and values for different elements. 
+If you look closely, you might be able to notice the file input is smaller than the other text input elements. 
+By default, a padding of 1px 2px is given to input elements you can type in.
+Using another attribute selector, style the input with a type of file to be the same padding as the other input elements.
 
+Step 63
+Speaking of padding, the submit button is sitting at the bottom of the form element. Add 2em of padding only to the bottom of the form.
 
+Step 64
+Make the input for the terms and conditions inline by adding the appropriate class in the HTML.
 
+Step 65
+Lastly change the text color of the terms and conditions link element to #dfdfe2 by adding a new selector in the CSS.
+Well done! You have completed the final part of the Registration Form practice project.

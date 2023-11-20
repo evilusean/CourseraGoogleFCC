@@ -211,15 +211,23 @@ Step 50
 For the second fieldset, you want the input and label text to appear on the same line.
 Start, by giving the input elements in the second fieldset a class of inline.
 
+Step 51
+Select only the .inline elements, and give them width of unset. This will remove the earlier rule which set all the input elements to width: 100%.
 
+Step 52
+Add some space between the .inline elements and the label text, by giving a right margin of 0.5em. Also, set all the other margin to 0.
 
+Step 53
+If you look close enough, you will notice the .inline elements are too high on the line.
+To combat this, set the vertical-align property to middle.
 
+Step 54
+To make the input and textarea elements blend in with the background theme, 
+set their background-color to #0a0a23. Then, give them a 1px, solid border with a color of #0a0a23.
 
-
-
-
-
-
+Step 55
+Currently, if you type in the input or textarea elements, you will not be able to see the text. Also, their height is too small to be easy to use.
+Fix this, by setting the color to #ffffff, and setting their min-height to 2em.
 
 
 

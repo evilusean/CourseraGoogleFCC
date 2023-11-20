@@ -2,13 +2,26 @@ Step 1
 By now, you should be familiar with the basic elements an HTML page should have.
 Set up your code with a DOCTYPE declaration, an html element with the language set to English, a head element, and a body element.
 
+Step 2
+Within the head element, add a meta tag which sets the charset to UTF-8, and a title element with the value Rothko Painting.
+Within the body element, add an img element with a src of https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-1.png.
 
+Step 3
+In the CSS box model, every HTML element is treated as a box with four areas.
+Imagine you receive a box from your favorite online retailer -- the content is the item in the box, or in our case, a header, paragraph, or image element.
+Change the src attribute in the <img> from https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-1.png to 
+https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-2.png.
 
+Step 4
+The content is surrounded by a space called padding, similar to how bubble wrap separates an item from the box around it.
+Think of the border like the cardboard box your item was shipped in.
+Change the src attribute to https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-3.png
 
-
-
-
-
+Step 5
+Margin is the area outside of the box, and can be used to control the space between other boxes or elements.
+Here the bottom element has a larger top margin, pushing it further down the page.
+Now that you understand the CSS box model, let's get started on the Rothko painting.
+Remove the <img> element.
 
 
 

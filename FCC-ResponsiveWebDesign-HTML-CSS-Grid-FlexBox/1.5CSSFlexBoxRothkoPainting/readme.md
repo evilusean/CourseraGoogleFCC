@@ -1,7 +1,7 @@
 End: </br>
-1.5 : Learn HTML Forms by Building a Registration Form </br>
-You can use HTML forms to collect information from people who visit your webpage. </br>
-In this course, you'll learn HTML forms by building a signup page. You'll learn how to control what types of data people can type into your form, and some new CSS tools for styling your page.</br>
+1.5 : Learn the CSS Box Model by Building a Rothko Painting :
+Every HTML element is its own box – with its own spacing and a border. This is called the Box Model.</br>
+In this course, you'll use CSS and the Box Model to create your own Rothko-style rectangular art pieces.</br>
 
 Link+Preview:<br>
 https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-the-css-box-model-by-building-a-rothko-painting/step-1

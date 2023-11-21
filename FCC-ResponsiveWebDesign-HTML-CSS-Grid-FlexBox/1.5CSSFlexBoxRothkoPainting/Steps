@@ -141,15 +141,22 @@ p {
 Step 35
 Create a rule that targets both .one and .two and increase their blur effect by 1 pixel.
 
+Step 36
+Increase the blur of .three by 2 pixels.
 
+Step 37
+The rectangles are too small and their edges don't have the soft quality of a painting.
+Increase the area and soften the edges of .one by setting its box-shadow to 0 0 3px 3px #efb762.
 
+Step 38
+Use the same box-shadow declaration for .two, but change the color from #efb762 to #8f0401.
 
+Step 39
+Add a box-shadow to .three with the values 0 0 5px 5px #b20403.
 
-
-
-
-
-
+Step 40
+The corners of each rectangle are still too sharp.
+Round each corner of the .one element by 9 pixels, using the border-radius property.
 
 
 

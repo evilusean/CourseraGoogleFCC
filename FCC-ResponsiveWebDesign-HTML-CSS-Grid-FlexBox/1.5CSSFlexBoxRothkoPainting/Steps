@@ -102,6 +102,31 @@ Create a new CSS rule using the .two selector and set its width to 475 pixels.
 Step 25
 Set the height of the .two element to 200 pixels.
 
+Step 26
+Set the background-color of the .two element to #8f0401
+
+Step 27
+Center the .two element by setting its margin to auto.
+
+Step 28
+Create a new div with a class value of three right under the .two element. This will be your third rectangle.
+
+Step 29
+You don't always have to use pixels when sizing an element.
+Create a new rule, .three, and set its width to 91%.
+
+Step 30
+Set the height of .three to 28%.
+
+
+
+
+
+
+
+
+
+
 
 
 

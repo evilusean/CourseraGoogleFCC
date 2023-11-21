@@ -46,15 +46,27 @@ Add the height property with the value 600px to your .canvas rule.
 Step 10
 Change the background-color of the canvas to #4d0f00.
 
+Step 11
+Every painting needs a frame.
+Wrap the .canvas element in another div. Give that div the frame class.
 
+Step 12
+Write a new rule using the .frame class selector.
+Use the border shorthand declaration to give the .frame element a solid, black border with a width of 50px.
 
+Step 13
+The frame is much too wide.
+In .frame, set its width to 500 pixels.
 
+Step 14
+Use padding to adjust the spacing within an element.
+In .frame, use the padding shorthand property to increase the space between the .frame and .canvas elements by 50px.
+The shorthand will increase space in the top, bottom, left, and right of the element's border and canvas within.
 
-
-
-
-
-
+Step 15
+Use margins to adjust the spacing outside of an element.
+Using the margin property, give the .frame element vertical margin of 20px, and horizontal margin of auto. 
+This will move the frame down 20 pixels and horizontally center it on the page.
 
 
 

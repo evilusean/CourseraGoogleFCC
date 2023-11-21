@@ -158,17 +158,27 @@ Step 40
 The corners of each rectangle are still too sharp.
 Round each corner of the .one element by 9 pixels, using the border-radius property.
 
+Step 40
+The corners of each rectangle are still too sharp.
+Round each corner of the .one element by 9 pixels, using the border-radius property.
 
+Step 41
+Use the border-radius property on the .two selector, to set its top-left radius and bottom-right radius to 8px, and top-right radius and bottom-left radius to 10px.
 
+Step 42
+The border-radius property accepts up to four values to round the top-left, top-right, bottom-right, and bottom-left corners.
+Round the top-left corner of .three by 30 pixels, the top-right by 25 pixels, the bottom-right by 60 pixels, and bottom-left by 12 pixels.
 
+Step 43
+Rotate each rectangle to give them more of an imperfect, hand-painted look.
+Use the transform property on the .one selector to rotate it counter clockwise by 0.6 degrees.
 
+Step 44
+Rotate the .two element clockwise by 0.4 degrees.
 
-
-
-
-
-
-
+Step 45
+Rotate .three counter clockwise by 0.2 degrees.
+With this final step, your Rothko painting is now complete.
 
 
 

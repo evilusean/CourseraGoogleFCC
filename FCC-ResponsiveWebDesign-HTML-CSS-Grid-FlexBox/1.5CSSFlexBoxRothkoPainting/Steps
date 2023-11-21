@@ -85,17 +85,22 @@ Step 20
 Use margins to position the .one element on the canvas.
 Add the shorthand margin property with a vertical margin of 20px and a horizontal margin of auto.
 
+Step 21
+Now .one is centered horizontally, but its top margin is pushing past the canvas and onto the frame's border, shifting the entire canvas down 20 pixels.
+Add padding of 1px to the .canvas element to give the .one element something solid to push off of.
 
+Step 22
+Adding 1 pixel of padding to the top, bottom, left, and right of the canvas changed its dimensions to 502 pixels x 602 pixels.
+Replace the padding property with overflow set to hidden - changing the canvas back to its original dimensions.
 
+Step 23
+Add another div with a class value of two just below your one element. This will be your second rectangle.
 
+Step 24
+Create a new CSS rule using the .two selector and set its width to 475 pixels.
 
-
-
-
-
-
-
-
+Step 25
+Set the height of the .two element to 200 pixels.
 
 
 

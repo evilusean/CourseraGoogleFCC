@@ -256,4 +256,9 @@ The align-items property positions the flex content along the cross axis. In thi
 Notice how some of your images have become distorted. This is because the images have different aspect ratios. 
 Rather than setting each aspect ratio individually, you can use the object-fit property to determine how images should behave.
 
+Your images need some space between them.
+The gap CSS shorthand property sets the gaps, also known as gutters, between rows and columns. 
+The gap property and its row-gap and column-gap sub-properties provide this functionality for flex, grid, and multi-column layout. 
 
+The alt image attribute should describe the image content. Screen readers announce the alternative text in place of images. 
+If the image can't be loaded, this text is presented in place of the image

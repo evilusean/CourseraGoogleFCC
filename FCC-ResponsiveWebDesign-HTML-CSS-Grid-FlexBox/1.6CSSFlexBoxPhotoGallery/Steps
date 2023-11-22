@@ -42,15 +42,35 @@ Step 10
 Now that you have figured out your box-sizing approach, you can clean up the CSS you added to see the changes.
 Remove your .gallery and img selectors, and all rules within.
 
+Step 11
+Now your images are too big.
+Create a .gallery img selector to target them. Give them all a width of 100% and a max-width of 350px.
+Also set the height property to 300px to keep your images a uniform size.
 
+Step 12
+Remove the margin from your body element, set the font-family to sans-serif, and give it a background-color of #f5f6f7 as the value.
 
+Step 13
+Align your .header text in the center. Make the text uppercase using the text-transform property with uppercase as the value.
+Give it a padding of 32px on all sides. Set the background to #0a0a23 and the text to #fff as the color values.
+Add a border-bottom with 4px solid #fdb347 as the value.
 
+Step 14
+Flexbox is a one-dimensional CSS layout that can control the way items are spaced out and aligned within a container.
+To use it, give an element a display property of flex. This will make the element a flex container. Any direct children of a flex container are called flex items.
+Create a .gallery selector and make it a flex container.
 
+Step 15
+Flexbox has a main and cross axis. The main axis is defined by the flex-direction property, which has four possible values:
+row (default): horizontal axis with flex items from left to right
+row-reverse: horizontal axis with flex items from right to left
+column: vertical axis with flex items from top to bottom
+column-reverse: vertical axis with flex items from bottom to top
+Note: The axes and directions will be different depending on the text direction. The values shown are for a left-to-right text direction.
 
+Try the different values to see how they affect the layout.
 
-
-
-
+When you are done, set an explicit flex-direction of row on the .gallery element.
 
 
 

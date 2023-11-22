@@ -262,3 +262,9 @@ The gap property and its row-gap and column-gap sub-properties provide this func
 
 The alt image attribute should describe the image content. Screen readers announce the alternative text in place of images. 
 If the image can't be loaded, this text is presented in place of the image
+
+
+1.7 =========================================================================================================== 1TypographyNutritionLabel:
+If you inspect your .label element with your browser's developer tools, you may notice that it's actually 288 pixels wide instead of 270. 
+This is because, by default, the browser includes the border and padding when determining an element's size.
+To solve this, reset the box model by creating a * selector and giving it a box-sizing property of border-box. * { box-sizing: border-box;}

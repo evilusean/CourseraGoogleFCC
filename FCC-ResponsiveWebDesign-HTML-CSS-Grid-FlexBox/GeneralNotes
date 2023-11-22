@@ -225,10 +225,14 @@ content is surrounded by a space called padding, similar to how bubble wrap sepa
 Think of the border like the cardboard box your item was shipped in.
 Margin is the area outside of the box, and can be used to control the space between other boxes or elements.
 
-
-
-
-
+1.6 =========================================================================================================== CSSFlexBoxPhotoGallery:
+Notice how the blue image border extends beyond the red gallery border. This is due to the way browsers calculate the size of container elements.
+The box-sizing property is used to set this behavior. By default, the content-box model is used. With this model, when an element has a specific width,
+that width is calculated based only on the element's content. Padding and border values get added to the total width, so the element grows to accommodate these values.
+Try setting box-sizing to content-box explicitly, with the global * selector. At this point, you will not see any changes, because you are using the default value.
+ * {  box-sizing: content-box; } # * is the global selector
+The border-box sizing model does the opposite of content-box. The total width of the element, including padding and border, will be the explicit width set. 
+The content of the element will shrink to make room for the padding and border.
 
 
 

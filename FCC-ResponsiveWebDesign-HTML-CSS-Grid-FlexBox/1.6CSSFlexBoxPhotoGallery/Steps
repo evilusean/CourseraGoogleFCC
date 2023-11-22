@@ -2,13 +2,20 @@ Step 1
 Begin with your standard HTML boilerplate. Add a DOCTYPE declaration, an html element, a head element, and a body element.
 Add the lang attribute to the opening <html> tag with en set as the value.
 
+Step 2
+Within your head element, add a meta tag with the name set to viewport and the content set to width=device-width, initial-scale=1.
+Also add a meta tag with the charset set to UTF-8.
 
+Step 3
+Within your head element, add a title element with the text set to Photo Gallery, and a link element to add your styles.css file to the page.
 
+Step 4
+Add a header element within the body element and assign a class of header to it.
+Inside the header, create an h1 with css flexbox photo gallery as the text.
 
-
-
-
-
+Step 5
+Below your .header element, create a new div element and assign it a class of gallery. This div will act as a container for the gallery images.
+Inside that .gallery element, create nine img elements.
 
 
 

@@ -188,5 +188,53 @@ Step 50
 Now you will have to add separate dividers below your .no-divider elements.
 Your first .no-divider element has a .divider after it. Create another .divider after your second .no-divider element.
 
+Step 51
+After your last .divider, create another p element with the text Trans Fat 0g. Italicize the word Trans by wrapping it in an i element.
+Give the new p element the class attribute set to indent no-divider. Wrap Trans Fat 0g in a span element for alignment.
+
+Step 52
+Create another .divider after your last p element.
+
+Step 53
+After your last .divider, create a new p element with the text Cholesterol 0mg 0%. Wrap the text Cholesterol in a span element,
+and give that span element the class of bold. Wrap the text 0% in another span element, with the class of bold. Finally, 
+nest the Cholesterol span element and the text 0mg in an additional span element for alignment.
+
+Step 54
+Below your last p element, create another p element with the text Sodium 160mg 7%. Wrap the text Sodium in a span element with a class attribute set to bold.
+Wrap the 7% text in another span element with the class set to bold. Also add an additional span element around Sodium 160mg for aligning it correctly.
+
+Step 55
+Add another p element with the text Total Carbohydrate 37g 13%. Like before, use span elements to make the text Total Carbohydrate and 13% bold.
+Also add an additional span element to wrap the Total Carbohydrate 37g text in a span element so to have it aligned to the left, and 13% to the right.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

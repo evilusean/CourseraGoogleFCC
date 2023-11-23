@@ -94,5 +94,62 @@ Wrap everything within the .label element in a new header element.
 Step 25
 Now update your h1 selector to be header h1 to specifically target your h1 element within your new header.
 
+Step 26
+Create a new div element below your header element, and give it a class attribute set to divider large.
+
+Step 27
+Create a new .large selector and give it a height property set to 10px. Also create an .large, .medium selector and set the background-color property to black.
+
+Step 28
+You may notice there is still a small border at the bottom of your .large element. To reset this, give your .large, .medium selector a border property set to 0.
+Note: the medium(medium) class will be utilized later for the thinner bars of the nutrition label.
+
+Step 29
+Create a new div below your .large element and give it a class attribute set to calories-info.
+
+Step 30
+Within your .calories-info element, create a div element. Give that div element a class attribute set to left-container. 
+Within the newly created div element, create a h2 element with the text Amount per serving. Give the h2 element a class attribute set to bold small-text.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

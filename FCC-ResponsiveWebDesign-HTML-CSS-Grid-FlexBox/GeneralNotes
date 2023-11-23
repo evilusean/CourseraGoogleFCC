@@ -271,7 +271,8 @@ To solve this, reset the box model by creating a * selector and giving it a box-
 
 Horizontal spacing between equally important elements can increase the readability of your text. Wrap the text 2/3 cup (55g) in a span element.
 
-
+The rem unit stands for root em, and is relative to the font size of the html element.
+Create a .small-text selector and set the font-size to 0.85rem, which would calculate to roughly 13.6px
 
 
 

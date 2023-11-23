@@ -79,15 +79,20 @@ Step 20
 Your new class does not have any styling yet. Create a .bold selector and give it a font-weight property set to 800 to make the text bold.
 Go ahead and remove the font-weight property from your h1 selector as well.
 
+Step 21
+Give your h1 element a class attribute set to bold. This will make the text bold again.
 
+Step 21
+Give your h1 element a class attribute set to bold. This will make the text bold again.
 
+Step 23
+Now we can add the horizontal spacing using flex. In your p selector, add a display property set to flex and a justify-content property set to space-between.
 
+Step 24
+Wrap everything within the .label element in a new header element.
 
-
-
-
-
-
+Step 25
+Now update your h1 selector to be header h1 to specifically target your h1 element within your new header.
 
 
 

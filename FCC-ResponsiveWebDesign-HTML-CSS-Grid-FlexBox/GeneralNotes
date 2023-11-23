@@ -268,3 +268,41 @@ If the image can't be loaded, this text is presented in place of the image
 If you inspect your .label element with your browser's developer tools, you may notice that it's actually 288 pixels wide instead of 270. 
 This is because, by default, the browser includes the border and padding when determining an element's size.
 To solve this, reset the box model by creating a * selector and giving it a box-sizing property of border-box. * { box-sizing: border-box;}
+
+Horizontal spacing between equally important elements can increase the readability of your text. Wrap the text 2/3 cup (55g) in a span element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

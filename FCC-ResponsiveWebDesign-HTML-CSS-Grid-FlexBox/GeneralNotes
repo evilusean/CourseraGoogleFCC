@@ -274,7 +274,10 @@ Horizontal spacing between equally important elements can increase the readabili
 The rem unit stands for root em, and is relative to the font size of the html element.
 Create a .small-text selector and set the font-size to 0.85rem, which would calculate to roughly 13.6px
 
-
+The :not pseudo-selector can be used to select all elements that do not match the given CSS rule.
+div:not(#example) {
+  color: red;
+}
 
 
 

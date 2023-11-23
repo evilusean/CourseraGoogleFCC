@@ -111,15 +111,25 @@ Step 30
 Within your .calories-info element, create a div element. Give that div element a class attribute set to left-container. 
 Within the newly created div element, create a h2 element with the text Amount per serving. Give the h2 element a class attribute set to bold small-text.
 
+Step 31
+The rem unit stands for root em, and is relative to the font size of the html element.
+Create a .small-text selector and set the font-size to 0.85rem, which would calculate to roughly 13.6px
+(remember that you set your html to have a font-size of 16px).
 
+Step 32
+Create a .calories-info h2 selector and remove all margins.
 
+Step 33
+Below your .small-text element, create a new p element with the text Calories. Also below the .left-container element, 
+create a new span element with the text 230.
 
+Step 34
+Create a new .calories-info selector and give it a display property set to flex. Also give it a justify-content property set to 
+space-between and align-items property set to flex-end.
 
-
-
-
-
-
+Step 35
+Create a new .left-container p selector setting the top and bottom margin to -5px, and the left and right margin to -2px.
+Also set the font-size to 2em and font-weight to 700.
 
 
 

@@ -131,15 +131,22 @@ Step 35
 Create a new .left-container p selector setting the top and bottom margin to -5px, and the left and right margin to -2px.
 Also set the font-size to 2em and font-weight to 700.
 
+Step 36
+Create a .calories-info span selector, set its font-size to 2.4em and font-weight to 700.
 
+Step 37
+Typography is often more art than science. You may have to tweak things like alignment until it looks correct.
+Give your .calories-info span selector a margin set to -7px -2px. This will shift your 230 text into place.
 
+Step 38
+Below your .calories-info element, add a div with the class attribute set to divider medium.
 
+Step 39
+Create an .medium selector and give it a height property of 5px.
 
-
-
-
-
-
+Step 40
+Create a new div element below your .medium element. Give it a class attribute set to daily-value small-text. Within this new div, 
+add a p element with the text % Daily Value *, and set the class attribute to bold right.
 
 
 

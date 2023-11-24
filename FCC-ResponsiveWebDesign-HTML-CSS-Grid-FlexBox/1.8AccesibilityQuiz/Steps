@@ -218,16 +218,31 @@ margin: 0 0.2rem;
 padding: 0.2rem;
 display: block;
 
+Step 46
+On the topic of visual accessibility, contrast between elements is a key factor. For example, 
+the contrast between the text and the background of a heading should be at least 4.5:1.
+Change the font color of all the anchor elements within the list elements to something with a contrast ratio of at least 7:1.
 
+Step 47
+To make the navigation buttons look more like typical buttons, remove the underline from the anchor tags.
+Then, create a new selector targeting the navigation list elements so that when the cursor hovers over them, 
+the background color and text color are switched, and the cursor becomes a pointer.
 
+Step 48
+Tidy up the header, by using Flexbox to put space between the children, and vertically center them.
+Then, fix the header to the top of the viewport.
 
+Step 49
+When the screen width is small, the h1 does not wrap its text content how it should. Align the text for the h1 element in the center.
+Then, give the main padding such that the Student Info section header can be fully seen.
 
-
-
-
-
-
-
+Step 50
+On small screens, the unordered list in the navigation bar overflows the right side of the screen.
+Fix this by using Flexbox to wrap the ul content. Then, set the following CSS properties to correctly align the text:
+align-items: center;
+padding-inline-start: 0;
+margin-block: 0;
+height: 100%;
 
 
 

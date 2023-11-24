@@ -251,9 +251,12 @@ Add a medium divider after your .daily-value element. Below that new divider, cr
 Give the p element the following text:
 * The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.
 
+Step 66
+Create a .note selector, and set the size of the font to 0.6rem. Also set the top and bottom margins to 5px, removing the left and right margins.
 
-
-
+Step 67
+Give the .note selector a left and right padding of 8px, removing the top and bottom padding. Also set the text-indent property to -8px.
+With these last changes, your nutrition label is complete!
 
 
 

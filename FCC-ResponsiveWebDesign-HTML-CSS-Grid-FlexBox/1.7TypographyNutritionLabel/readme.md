@@ -1,4 +1,4 @@
-End: </br>
+End: 23November2023</br>
 1.7 : Learn Typography by Building a Nutrition Label</br>
 Typography is the art of styling your text to be easily readable and suit its purpose.</br>
 In this course, you'll use typography to build a nutrition label webpage. </br>

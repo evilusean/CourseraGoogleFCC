@@ -295,10 +295,14 @@ Give your page a title that is descriptive and concise.
 A useful property of an SVG (scalable vector graphics) is that it contains a path attribute 
 which allows the image to be scaled without affecting the resolution of the resultant image.
 
+The child combinator selector > is used between selectors to target only elements that match the second selector and are a direct child of the first selector.
+This can be helpful when you have deeply nested elements and want to control the scope of your styling.
+nav > ul {
+  display: flex;
+  justify-content: space-evenly;}
 
-
-
-
+To increase the page accessibility, the role attribute can be used to indicate the purpose behind an element on the page to assistive technologies. 
+The role attribute is a part of the Web Accessibility Initiative (WAI), and accepts preset values.
 
 
 

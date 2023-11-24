@@ -51,15 +51,30 @@ Finally, add a padding of 0.4rem all around.
 Step 10
 Make the header take up the full width of its parent container, set its height to 50px, and set the background-color to #1b1b32. Then, set the display to use Flexbox.
 
+Step 11
+Change the h1 font color to #f1be32, and set the font size to min(5vw, 1.2em).
 
+Step 12
+To enable navigation on the page, add an unordered list with the following three list items:
+INFO
+HTML
+CSS
+The list items text should be wrapped in anchor tags.
 
+Step 13
+The child combinator selector > is used between selectors to target only elements that match the second selector and are a direct child of the first selector.
+This can be helpful when you have deeply nested elements and want to control the scope of your styling.
+Use the > selector to target the unordered list elements within the nav elements, and use Flexbox to evenly space the children.
 
+Step 14
+As this is a quiz, you will need a form for users to submit answers. You can semantically separate the content within the form using section elements.
+Within the main element, create a form with three nested section elements. Then, 
+make the form submit to https://freecodecamp.org/practice-project/accessibility-quiz, using the correct method.
 
-
-
-
-
-
+Step 15
+To increase the page accessibility, the role attribute can be used to indicate the purpose behind an element on the page to assistive technologies. 
+The role attribute is a part of the Web Accessibility Initiative (WAI), and accepts preset values.
+Give each of the section elements the region role.
 
 
 

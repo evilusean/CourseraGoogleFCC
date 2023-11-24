@@ -279,12 +279,18 @@ div:not(#example) {
   color: red;
 }
 
-
-
-
-
-
-
+1.8 =========================================================================================================== Accesibility Quiz:
+You may be familiar with the meta element already; it is used to specify information about the page, such as the title, description, keywords, and author.
+Give your page a meta element with an appropriate charset value.
+The charset attribute specifies the character encoding of the page, and, nowadays, UTF-8 is the only encoding supported by most browsers.
+Continuing with the meta elements, a viewport definition tells the browser how to render the page. 
+Including one betters visual accessibility on mobile, and improves SEO (search engine optimization).
+Add a viewport definition with a content attribute detailing the width and initial-scale of the page.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+Another important meta element for accessibility and SEO is the description definition. 
+The value of the content attribute is used by search engines to provide a description of your page.
+Lastly in the head, the title element is useful for screen readers to understand the content of a page. Furthermore, it is an important part of SEO.
+Give your page a title that is descriptive and concise.
 
 
 

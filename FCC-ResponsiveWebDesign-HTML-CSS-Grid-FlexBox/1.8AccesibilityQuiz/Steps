@@ -261,15 +261,31 @@ Then, increase the font size for all input elements.
 Step 55
 To make the first section look more inline, target only the input elements within .info elements, and set their width to 50%, and left-align their text.
 
+Step 56
+Target all label elements within .info elements, and set their width to 10%, and make it so they do not take up less than 55px.
 
+Step 57
+To align the input boxes with each other, create a new ruleset that targets all input and label elements within an
+.info element and set the display property to inline-block.
+Also, align the label element's text to the right.
 
+Step 58
+To neaten the .question-block elements, set the following CSS properties:
+text-align: left;
+display: block;
+width: 100%;
+margin-top: 20px;
+padding-top: 5px;
 
+Step 59
+Make the paragraph elements appear as a higher priority, with the following CSS properties:
+margin-top: 5px;
+padding-left: 15px;
+font-size: 20px;
 
-
-
-
-
-
+Step 60
+It is useful to see the default border around the fieldset elements, during development. However, it might not be the style you want.
+Remove the border and bottom padding on the .question elements.
 
 
 

@@ -76,14 +76,32 @@ To increase the page accessibility, the role attribute can be used to indicate t
 The role attribute is a part of the Web Accessibility Initiative (WAI), and accepts preset values.
 Give each of the section elements the region role.
 
+Step 16
+Every region role requires a label, which helps screen reader users understand the purpose of the region. 
+One method for adding a label is to add a heading element inside the region and then reference it with the aria-labelledby attribute.
+Add the following aria-labelledby attributes to the section elements:
+student-info
+html-questions
+css-questions
+Then, within each section element, nest one h2 element with an id matching the corresponding aria-labelledby attribute. Give each h2 suitable text content.
 
+Step 17
+Typeface plays an important role in the accessibility of a page. Some fonts are easier to read than others, and this is especially true on low-resolution screens.
+Change the font for both the h1 and h2 elements to Verdana, and use another web-safe font in the sans-serif family as a fallback.
+Also, add a border-bottom of 4px solid #dfdfe2 to h2 elements to make the sections distinct.
 
+Step 18
+To be able to navigate within the page, give each anchor element an href corresponding to the id of the h2 elements.
 
+Step 19
+Filling out the content of the quiz, below #student-info, add three div elements with a class of info.
+Then, within each div nest one label element, and one input element.
 
-
-
-
-
+Step 20
+It is important to link each input to the corresponding label element. This provides assistive technology users with a visual reference to the input.
+This is done by giving the label a for attribute, which contains the id of the input.
+This section will take a student's name, email address, and date of birth. Give the label elements appropriate for attributes, as well as text content. 
+Then, link the input elements to the corresponding label elements.
 
 
 

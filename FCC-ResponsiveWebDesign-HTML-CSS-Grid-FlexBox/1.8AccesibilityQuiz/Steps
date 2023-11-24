@@ -244,6 +244,37 @@ padding-inline-start: 0;
 margin-block: 0;
 height: 100%;
 
+Step 51
+Set the width of the section elements to 80% of their parent container. Then, use margins to center the section elements, adding 10px to the bottom margin.
+Also, ensure the section elements cannot be larger than 600px in width.
+
+Step 52
+Replace the top margin of the h2 elements with 60px of top padding.
+
+Step 53
+Add padding to the top and left of the .info elements, and set the other values to 0.
+
+Step 54
+Give the .formrow elements top margin, and left and right padding. The other padding values should be 0.
+Then, increase the font size for all input elements.
+
+Step 55
+To make the first section look more inline, target only the input elements within .info elements, and set their width to 50%, and left-align their text.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

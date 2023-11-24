@@ -329,8 +329,9 @@ clip: rect(0, 0, 0, 0);
 white-space: nowrap;
 border: 0;
 
-
-
+Although not required for label elements with a nested input, it is still best-practice to explicitly link a label with its corresponding input element.
+If you click on the radio inputs, you might notice both inputs within the same true/false fieldset can be selected at the same time.
+Group the relevant inputs together such that only one input from a pair can be selected at a time. name="samename"
 
 
 

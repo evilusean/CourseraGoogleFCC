@@ -1,4 +1,4 @@
-End: 24November2023 </br>
+End: </br>
 1.9 : Tribute Page: </br>
 This is one of the required projects to earn your certification.</br>
 For this project, you will build a tribute page for a subject of your choosing, fictional or real.</br>

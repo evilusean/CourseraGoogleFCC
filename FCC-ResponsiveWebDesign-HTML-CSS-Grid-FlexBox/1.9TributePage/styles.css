@@ -1,6 +1,7 @@
 body {
-    background-image: linear-gradient()
-}
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to right, 	#C4A484, #704e3e,#dd7747, #151b47);}
 
 image {
     max-width: 100%;

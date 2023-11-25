@@ -10,41 +10,8 @@ image {
 h2 {
     display: inline;
 }
-#img-div {
-
-}
 p {
     max-width: 80%;
+    text-align: right;
+    background-color: #ee9e78;
 }
-#img-caption {
-
-}
-#tribute-info {
-
-}
-#tribute-link{
-
-}
-#title {
-
-}
-<!-- Add background image linear gradient, make it FEEL like you're living in a barrel -->
-<!-- TO DO: ALL TESTS TOO PASS : You should have a main element with an id of main.
-Waiting:Your #img-div, #image, #img-caption, #tribute-info, and #tribute-link should all be descendants of #main.
-Waiting:You should have an element with an id of title.
-Waiting:Your #title should not be empty.
-Waiting:You should have a figure or div element with an id of img-div.
-Waiting:You should have an img element with an id of image.
-Waiting:Your #image should be a descendant of #img-div.
-Waiting:You should have a figcaption or div element with an id of img-caption.
-Waiting:Your #img-caption should be a descendant of #img-div.
-Waiting:Your #img-caption should not be empty.
-Waiting:You should have an element with an id of tribute-info.
-Waiting:Your #tribute-info should not be empty.
-Waiting:You should have an a element with an id of tribute-link.
-Waiting:Your #tribute-link should have an href attribute and value.
-Waiting:Your #tribute-link should have a target attribute set to _blank.
-Waiting:Your img element should have a display of block.
-Waiting:Your #image should have a max-width of 100%.
-Waiting:Your #image should have a height of auto.
-Waiting:Your #image should be centered within its parent.-->

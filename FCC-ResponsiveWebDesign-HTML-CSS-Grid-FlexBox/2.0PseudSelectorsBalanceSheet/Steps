@@ -63,15 +63,21 @@ In your third tr element, add a th element with the text Savings Funds set aside
 in a span element with the class attribute set to description.
 Following that, add three td elements with the following text (in order): $500, $650, $728. Give the third td element a class attribute set to current.
 
+Step 16
+In your fourth tr element, add a th element with the text Total Assets. Wrap the text Assets in a span element with the class attribute set to sr-only.
+Following that, add three td elements with the following text (in order): $579, $736, $809. Give the third td element a class attribute set to current.
 
+Step 17
+Time to move on to your second table. Start by giving it a caption element set to Liabilities. Then add your thead and tbody.
 
+Step 18
+Within your thead, add a tr. Inside that, add a td and three th elements.
 
+Step 19
+Give each th element a span element with the class set to sr-only and the following text, in order: 2019, 2020, and 2021.
 
-
-
-
-
-
+Step 20
+Within the tbody element, add four tr elements. Give the first three the class attribute set to data, and the fourth the class attribute set to total.
 
 
 

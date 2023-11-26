@@ -335,12 +335,18 @@ Group the relevant inputs together such that only one input from a pair can be s
 
 <br />The br tags will allow each part of the address to be on its own line and are useful for presenting address elements properly.
 
-
-
-
-
-
-
+2.0 =========================================================================================================== Pesudo Selectors Balance Sheet:
+Below your existing div element, add a new div element with a class set to table-wrap. This will be the container for your tables.
+Within that, add three table elements. You will be using CSS to style these into a single table, 
+HTML tables use the caption element to describe what the table is about. 
+The caption element should always be the first child of a table, but can be positioned with the caption-side CSS property.
+The thead and tbody elements are used to indicate which portion of your table is the header, and which portion contains the primary data or content.
+Add a thead and tbody to your first table, below the caption element.
+<table>
+<caption>Assets</caption><thead></thead><tbody></tbody>
+</table>
+The tr element is used to indicate a table row. Add a tr element within your thead element. In your new tr element, add a td element, followed by three th elements.
+The td element indicates a data cell, while the th element indicates a header cell.
 
 
 

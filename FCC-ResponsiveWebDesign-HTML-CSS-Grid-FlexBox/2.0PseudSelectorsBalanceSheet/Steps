@@ -142,15 +142,30 @@ Step 35
 Time to style your table heading. Create an h1 selector. Give it a max-width property set to 37.25rem, 
 a margin property set to 0 auto, and a padding property set to 1.5rem 1.25rem.
 
+Step 36
+Target your flex container with an h1 .flex selector. Give it a display property set to flex to enable the flexbox layout.
+Then set the flex-direction property to column-reverse - this will display the nested elements from bottom to top. Finally,
+set the gap property to 1rem to create some space between the elements.
 
+Step 37
+The :first-of-type pseudo-selector is used to target the first element that matches the selector.
+Create an h1 .flex span:first-of-type selector to target the first span element in your .flex container. 
+Remember that your span elements are reversed, visually, so this will appear to be the second element on the page.
+Give your new selector a font-size property of 0.7em to make it look like a sub-heading.
 
+Step 38
+The :last-of-type pseudo-selector does the exact opposite - it targets the last element that matches the selector. 
+Create an h1 .flex span:last-of-type selector to target the last span in your flex container, 
+and give it a font-size property set to 1.2em to make it look like a header.
 
+Step 39
+You wrapped your table in a section element - now you can style that to give your table a border. 
+Create a section selector, and give it a max-width property set to 40rem for responsive design. Set the margin property to 0 auto to center it,
+and set the border property to 2px solid #d0d0d5.
 
-
-
-
-
-
+Step 40
+The last part of your table heading is your years. Create a #years selector, and enable flexbox. Justify the content to the end of the flex direction, 
+and make the element sticky. Fix it to the top of its container with top: 0.
 
 
 

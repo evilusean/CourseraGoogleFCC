@@ -351,7 +351,7 @@ The td element indicates a data cell, while the th element indicates a header ce
 The CSS you are about to write is a common set of properties used to ensure elements are completely hidden visually.
 The span[class~="sr-only"] selector will select any span element whose class includes sr-only. Create that selector, and give it a border property set to 0.
 span[class~="sr-only"] {border: 0}
-
+The CSS clip property is used to define the visible portions of an element.   clip: rect(1px,1px,1px,1px);
 
 
 

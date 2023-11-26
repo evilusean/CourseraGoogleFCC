@@ -230,15 +230,25 @@ Step 55
 The [attribute="value"] selector targets any element that has an attribute with a specific value. Create a tr[class="total"] selector
 to target specifically your tr elements with the total class. Give it a bottom border of 4px double #0a0a23 and make the font bold.
 
+Step 56
+Using the same selector syntax, target the th elements within your table rows where the class is total. Align the text to the left, and
+give them a padding of 0.5rem 0 0.25rem 0.5rem.
 
+Step 57
+The key difference between tr[class="total"] and tr.total is that the first will select tr elements where the only class is total. 
+The second will select tr elements where the class includes total.
+In your case, tr.total will work. You can use this selector to target all td elements within your .total rows. Align the text to the right, 
+and give them a padding of 0 0.25rem.
 
+Step 58
+The :nth-of-type() pseudo-selector is used to target specific elements based on their order among siblings of the same type.
+Use this pseudo-selector to target the third td element within your total table rows. Give it a right padding of 0.5rem.
 
+Step 59
+Give your tr.total elements a hover effect that changes the background to #99c9ff.
 
-
-
-
-
-
+Step 60
+Select your td elements with the class value of current, and make the font italic.
 
 
 

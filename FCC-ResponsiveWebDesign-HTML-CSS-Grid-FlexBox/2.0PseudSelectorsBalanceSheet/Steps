@@ -167,6 +167,61 @@ Step 40
 The last part of your table heading is your years. Create a #years selector, and enable flexbox. Justify the content to the end of the flex direction, 
 and make the element sticky. Fix it to the top of its container with top: 0.
 
+Step 41
+Now apply some color to your #years. Make the text #fff and the background #0a0a23.
+
+Step 42
+The calc() function is a CSS function that allows you to calculate a value based on other values. For example, 
+you can use it to calculate the width of the viewport minus the margin of an element:
+.example {
+  margin: 10px;
+  width: calc(100% - 20px);
+}
+Give #years a margin of 0 -2px, and a padding set to 0.5rem calc(1.25rem + 2px) 0.5rem 0.
+
+Step 43
+Adding position sticky moved the element into its own stack. To ensure your #years element does not get hidden by different stacks, 
+add a z-index property set to 999 in the #years rule.
+
+Step 44
+Style the text within your #years element by creating a #years span[class] selector. The span[class] syntax will target any span element that has a 
+class attribute set, regardless of the attribute's value.
+Give your new selector a bold font, a width of 4.5rem, and text aligned to the right.
+
+Step 45
+You wrapped your tables in a container with the table-wrap class. Create a selector for that class, and give it a padding set to 0 0.75rem 1.5rem 0.75rem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

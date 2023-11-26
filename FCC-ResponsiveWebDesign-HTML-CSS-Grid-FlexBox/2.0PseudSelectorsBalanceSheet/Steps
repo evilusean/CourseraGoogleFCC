@@ -250,6 +250,33 @@ Give your tr.total elements a hover effect that changes the background to #99c9f
 Step 60
 Select your td elements with the class value of current, and make the font italic.
 
+Step 61
+Select the tr elements with the class set to data. Give them a background image of linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem).
+
+Step 62
+Select the th elements within your tr.data elements. Align the text to the left, and give them a top padding of 0.3rem and a left padding of 0.5rem.
+
+Step 63
+Create a tr.data th .description selector to target the elements with the class set to description that are within your th elements in your .data table rows. 
+Give them a block display, make the text italic with a normal weight, and position them with a padding set to 1rem 0 0.75rem and a right margin of -13.5rem.
+
+Step 64
+Your span elements now all have more specific styling, which means you can remove your span rule.
+
+Step 65
+Your dollar amounts are currently misaligned. Create a selector to target the td elements within your tr.data elements. 
+Vertically align the text to the top, horizontally align the text to the right, and set the padding to 0.3rem 0.25rem 0.
+
+Step 66
+Create another selector for the td elements within your tr.data element, but specifically select the last one. Give this a right padding of 0.5rem.
+With this, your balance sheet is complete!
+
+
+
+
+
+
+
 
 
 

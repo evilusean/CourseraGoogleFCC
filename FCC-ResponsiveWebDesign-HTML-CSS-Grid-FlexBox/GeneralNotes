@@ -348,8 +348,9 @@ Add a thead and tbody to your first table, below the caption element.
 The tr element is used to indicate a table row. Add a tr element within your thead element. In your new tr element, add a td element, followed by three th elements.
 The td element indicates a data cell, while the th element indicates a header cell.
 
-
-
+The CSS you are about to write is a common set of properties used to ensure elements are completely hidden visually.
+The span[class~="sr-only"] selector will select any span element whose class includes sr-only. Create that selector, and give it a border property set to 0.
+span[class~="sr-only"] {border: 0}
 
 
 

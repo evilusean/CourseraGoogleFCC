@@ -101,15 +101,26 @@ Following that, add three td elements with the following text (in order): $750, 
 Step 25
 For your third table, add a caption with the text Net Worth, and set up a table header and table body.
 
+Step 26
+Within your thead, create a tr element. In that, add a td and three th elements. Within each of the th elements,
+add a span element with the class set to sr-only and the following text, in order: 2019, 2020, and 2021.
 
+Step 27
+Within the tbody, add a tr with the class set to total. In that, add a th with the text Total Net Worth,
+and wrap Net Worth in a span with the class set to sr-only.
+Then add three td elements, giving the third a class set to current, and giving each the following text: $-171, $136, $334.
 
+Step 28
+Time to style your table. Start by resetting the box model. Create an html selector and give it a box-sizing property set to border-box.
 
+Step 29
+Create a body selector and give it a font-family property set to sans-serif and a color set to #0a0a23.
 
-
-
-
-
-
+Step 30
+Before you get too far into your styling, you should make use of the sr-only class. You can use CSS to make elements 
+with this class completely hidden from the visual page, but still be announced by screen readers.
+The CSS you are about to write is a common set of properties used to ensure elements are completely hidden visually.
+The span[class~="sr-only"] selector will select any span element whose class includes sr-only. Create that selector, and give it a border property set to 0.
 
 
 

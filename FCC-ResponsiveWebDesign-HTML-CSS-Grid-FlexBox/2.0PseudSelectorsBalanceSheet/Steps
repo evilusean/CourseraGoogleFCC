@@ -1,0 +1,99 @@
+Step 1
+Set up your HTML with the DOCTYPE, html indicating this document is in English, head, and body elements.
+Give your head element the appropriate meta elements for the charset and viewport, a title element with an appropriate title, and a link element for your stylesheet.\\\\
+
+Step 2
+Within your body element, nest a section element within a main element.
+
+Step 3
+Within your section element, add an h1 element with a nested span element.
+
+Step 4
+Screen readers announce HTML elements based on the document flow.
+We will eventually want the balance sheet to have a heading of "Balance Sheet" and a subheading of "AcmeWidgetCorp". 
+However, this order does not make sense if announced by a screen reader.
+Give your existing span the class attribute set to flex, and add two span elements within it. Give the first the text AcmeWidgetCorp.
+Give the second the text Balance Sheet. You will use CSS to reverse the order of the text on the page, but the HTML order will make more sense for a screen reader.
+
+Step 5
+Below your h1 element, create a div element. Give it an id attribute set to years. 
+You want this particular element to be hidden from screen readers, so give it the aria-hidden attribute set to true.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

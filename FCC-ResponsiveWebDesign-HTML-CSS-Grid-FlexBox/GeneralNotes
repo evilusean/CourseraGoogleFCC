@@ -353,10 +353,10 @@ The span[class~="sr-only"] selector will select any span element whose class inc
 span[class~="sr-only"] {border: 0}
 The CSS clip property is used to define the visible portions of an element.   clip: rect(1px,1px,1px,1px);
 
-
-
-
-
+The :first-of-type pseudo-selector is used to target the first element that matches the selector.
+h1 .flex span:first-of-type {font-size: 0.7em;}
+The :last-of-type pseudo-selector does the exact opposite - it targets the last element that matches the selector. 
+h1 .flex span:last-of-type {font-size: 1.2em;}
 
 
 

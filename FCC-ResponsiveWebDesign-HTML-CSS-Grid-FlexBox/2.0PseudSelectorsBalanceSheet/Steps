@@ -191,15 +191,26 @@ Give your new selector a bold font, a width of 4.5rem, and text aligned to the r
 Step 45
 You wrapped your tables in a container with the table-wrap class. Create a selector for that class, and give it a padding set to 0 0.75rem 1.5rem 0.75rem.
 
+Step 46
+Before you start diving in to the table itself, your span elements are currently bolded. Create a span:not(.sr-only) 
+selector and give it a font-weight property set to normal.
+The :not() pseudo-selector is used to target all elements that do not match the selector - in this case, any of your span elements that do not have 
+the sr-only class. This ensures that your earlier rules for the span[class~="sr-only"] selector are not overwritten.
 
+Step 47
+Rather than having to constantly double-check you are not overwriting your earlier properties, you can use the !important
+keyword to ensure these properties are always applied, regardless of order or specificity.
+Give each property in your span[class~="sr-only"] selector an !important keyword. Do not change any of the values.
 
+Step 48
+Now that you have added the !important keyword, you can remove the :not(.sr-only) from your span selector.
 
+Step 49
+Create a table selector to target your tables. Set the border-collapse property to collapse, which will allow cell borders to collapse into a single border,
+instead of a border around each cell. Also set the border property to 0 to hide the borders themselves.
 
-
-
-
-
-
+Step 50
+Ensure your table fills its container with a width property set to 100%, then position it relatively and give it a top margin of 3rem.
 
 
 

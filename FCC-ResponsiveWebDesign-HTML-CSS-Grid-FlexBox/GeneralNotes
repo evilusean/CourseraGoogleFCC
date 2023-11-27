@@ -378,9 +378,16 @@ The second will select tr elements where the class includes total.
 
 The :nth-of-type() pseudo-selector is used to target specific elements based on their order among siblings of the same type.
 
-
-
-
+2.1 =========================================================================================================== CSS Cat Painting:
+CSS positioning lets you set how you want an element to be positioned in the browser. It has a position property you can set to static, absolute, relative,
+sticky or fixed.
+Once you set the position property of the element, you can move the element around by setting a pixel or a percentage value for one or more of the top,
+right, left, or bottom properties.
+static is the default positioning for all elements. If you assign it to an element, you won't be able to move it around with top, right, left, or bottom.
+You could see that nothing happens. The .cat-head element did not move despite setting a top and left of 100px each. 
+But that's not the case with relative positioning.
+When you use the relative value, the element is still positioned according to the normal flow of the document, but the top, left, 
+bottom, and right values become active.
 
 
 

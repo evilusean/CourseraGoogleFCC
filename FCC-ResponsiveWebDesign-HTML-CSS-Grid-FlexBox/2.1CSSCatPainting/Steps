@@ -271,6 +271,43 @@ Rotate the left middle whisker at 3 degrees.
 Step 75
 Using a class selector, move the .cat-whisker-left-bottom into position with a position of absolute, a top of 134px, and a left of 52px.
 
+Step 76
+Rotate the left bottom whisker at -3 degrees.
+
+Step 77
+Now you will work on moving the right whiskers into place. Use class selector to target the .cat-whisker-right-top element 
+and give it a position of absolute, a top of 120px, and a left of 109px.
+
+Step 78
+Rotate the top-right whisker at -10 degrees.
+
+Step 79
+Use a class selector to target the cat-whisker-right-middle element, then move the right middle whisker into position with a position of absolute, 
+a top of 127px, and a left of 109px.
+
+Step 80
+Rotate the right middle whisker at -3 degrees.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

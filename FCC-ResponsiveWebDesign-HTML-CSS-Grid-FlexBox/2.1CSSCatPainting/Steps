@@ -116,5 +116,66 @@ As you did for the left ear, rotate the right ear at 45 degrees.
 Step 30
 Remove the sharp border of the right ear by setting the border-top-left-radius to 90px and the border-top-right-radius to 10px.
 
+Step 31
+The ears should always be placed above the part of the head it overlaps. You can do this with the z-index property.
+z-index is a property you can use to define the order of overlapping HTML elements. Any element with a higher z-index will
+always be positioned over an element with a lower z-index.
+To see z-index in action, set the z-indexproperty of the left ear to -1.
+
+Step 32
+That's not the behavior you want. You should make the ears display over the head so the borders that overlap with them don't show.
+Instead of -1, set the z-index property of the left ear to 1.
+
+Step 33
+Set the z-indexproperty of the right ear to 1 so it always stays over the head.
+
+Step 34
+Most cats have different colors in their ear and the inner part of the same ear. You can implement the same too.
+That's why you defined a div element for both right and left inner ears a while ago.
+Using a class selector, give your .cat-left-inner-ear element a left and right border of 20px solid transparent each.
+Also give it a bottom border of 40px solid #3b3b4f.
+
+Step 35
+Move the inner ear into position with a position property set to absolute, a top of 22px, and a left of -20px.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -39,15 +39,29 @@ When you use the relative value, the element is still positioned according to th
 bottom, and right values become active.
 Instead of static, give your .cat-head a position of relative, and leave both top and left properties as they are.
 
+Step 11
+The next position property is absolute. When you use the absolute value for your position property, 
+the element is taken out of the normal flow of the document, and then its position is determined by the top, right, bottom, and left properties.
+Set the position property of your .cat-head element to absolute, then set top and left properties to any pixel value.
 
+Step 12
+fixed is a position property value that lets you make an element fixed to the page no matter where the user scrolls to on the page.
+You'll have to do some more markups to see how fixed positioning works. In your HTML, create a div element with the class box.
 
+Step 13
+Use a class selector to give your .box element a width of 200px, 
+a height of 600px, and a background color of #000. Also, give it a position of absolute, a top of 800px and a left of 650px.
 
+Step 14
+Now replace the position property value of your .cat-head with fixed. Leave both top and left as they are.
+After that, scroll up and down to see how the fixed value works.
 
-
-
-
-
-
+Step 15
+The last position property value is sticky. sticky positioning is a hybrid of relative and fixed positioning.
+It allows an element to stick to a specific position within its containing element or viewport, based on the scroll position.
+Change the value of the position property of .cat-head to sticky, set top to 0, then remove left and its value.
+Note: To see how sticky works, you have to place a couple of texts before and after your .cat-head div element.
+If you scroll up after that, you'll see that the .cat-head gets stuck to the top and remains there.
 
 
 

@@ -14,15 +14,30 @@ Use the universal selector to add box-sizing: border-box; to your CSS. This ensu
 Step 5
 Give your body element a background-color of #c9d2fc.
 
+Step 6
+Back in your HTML, create a main element. Inside that main element, add a div element with the class cat-head.
 
+Step 7
+Using a class selector, give the .cat-head element a width of 205px and a height of 180px. Also, give it a border of 1px solid #000 and a border-radius of 46%.
 
+Step 8
+To see the cat-head element, give it a linear gradient background with #5e5e5e at 85% and #45454f at 100%.
+You might not notice the difference between these two colors, but they are there.
 
+Step 9
+CSS positioning lets you set how you want an element to be positioned in the browser. It has a position property you can set to static, absolute, relative,
+sticky or fixed.
+Once you set the position property of the element, you can move the element around by setting a pixel or a percentage value for one or more of the top,
+right, left, or bottom properties.
+static is the default positioning for all elements. If you assign it to an element, you won't be able to move it around with top, right, left, or bottom.
+Give .cat-head a position property of static, then set the top and left properties to 100px each.
 
-
-
-
-
-
+Step 10
+You could see that nothing happens. The .cat-head element did not move despite setting a top and left of 100px each. 
+But that's not the case with relative positioning.
+When you use the relative value, the element is still positioned according to the normal flow of the document, but the top, left, 
+bottom, and right values become active.
+Instead of static, give your .cat-head a position of relative, and leave both top and left properties as they are.
 
 
 

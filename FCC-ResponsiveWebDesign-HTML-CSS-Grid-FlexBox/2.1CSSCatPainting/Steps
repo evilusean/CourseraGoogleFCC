@@ -1,0 +1,68 @@
+Step 1
+Begin with the basic HTML structure. Add a DOCTYPE reference of html and an html element with its lang attribute set to en. Also,
+add a head and a body element within the html element.
+
+Step 2
+Within your head element, add a meta tag with the charset attribute of utf-8. Also add a title element with the text fCC Cat Painting.
+
+Step 3
+Add a link element within your head element. For that link element, set the rel attribute to stylesheet and the href to ./styles.css.
+
+Step 4
+Use the universal selector to add box-sizing: border-box; to your CSS. This ensures elements include padding and border in their specified width and height.
+
+Step 5
+Give your body element a background-color of #c9d2fc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

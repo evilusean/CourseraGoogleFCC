@@ -63,15 +63,23 @@ Change the value of the position property of .cat-head to sticky, set top to 0, 
 Note: To see how sticky works, you have to place a couple of texts before and after your .cat-head div element.
 If you scroll up after that, you'll see that the .cat-head gets stuck to the top and remains there.
 
+Step 16
+You should now center the cat head.
+Give the .cat-head element a position property set to absolute. Set a value of 0 for the right, left, top, bottom properties, 
+then set its margin property on all sides to auto. That's one way to center an element vertically and horizontally using CSS positioning.
 
+Step 17
+Remove the div element with class box because you don't need it anymore.
 
+Step 18
+Also, remove the .box CSS rule and its declarations because you don't need them anymore.
 
+Step 19
+Now you should work on the cat's ears. There will be a right and a left ear, and inside each, there will be an inner ear.
+Inside your .cat-head element, create a div element with the class cat-ears.
 
-
-
-
-
-
+Step 20
+Inside your .cat-ears element, create two div elements with the classes cat-left-ear and cat-right-ear respectively.
 
 
 

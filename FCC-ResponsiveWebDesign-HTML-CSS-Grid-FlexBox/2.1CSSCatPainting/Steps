@@ -238,15 +238,22 @@ Step 65
 The last thing you will work on is the whiskers. There are going to be 6 of them, meaning there will be three on each side.
 Create a div element with the class cat-whiskers.
 
+Step 66
+Inside the .cat-whiskers element, create two div elements with the class cat-whiskers-left and cat-whiskers-right.
 
+Step 67
+Inside the .cat-whiskers-left element, create three div elements with the classes cat-whisker-left-top, cat-whisker-left-middle, and cat-whisker-left-bottom.
 
+Step 68
+Inside the .cat-whiskers-right element, create 3 div elements with the class cat-whisker-right-top, cat-whisker-right-middle, and cat-whisker-right-bottom.
 
+Step 69
+Use a descendant selector to target the three div elements inside your .cat-whiskers-left element. 
+Give it a width of 40px, a height of 1px, and a background-color of #000.
 
-
-
-
-
-
+Step 70
+As you did in the previous step, use a descendant selector to target the three div elements inside your .cat-whiskers-right element. 
+Give it a width of 40px, a height of 1px, and a background-color of #000.
 
 
 

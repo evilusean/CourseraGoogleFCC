@@ -288,9 +288,12 @@ a top of 127px, and a left of 109px.
 Step 80
 Rotate the right middle whisker at -3 degrees.
 
+Step 81
+Use class selector to target the .cat-whisker-right-bottom element, then move it into place with a position of absolute, a top of 134px, and a left of 109px.
 
-
-
+Step 82
+Rotate the bottom-right whisker at 3 degrees.
+With this final step, your cat painting is now complete.
 
 
 

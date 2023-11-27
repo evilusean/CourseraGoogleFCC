@@ -205,15 +205,22 @@ Using a class selector, give your .cat-nose element a left and right border of 1
 Step 55
 Move the nose into position with a position property of absolute, a top of 108px, and a left of 85px.
 
+Step 56
+Remove the sharp edges of the nose with border radius of 50% each on the top-left, bottom-right, and bottom-left corners. Also, rotate it at 180 degrees.
 
+Step 57
+Now you will start working on the mouth. There will be a right line and left line for the mouth.
+Create a div element with the class cat-mouth.
 
+Step 58
+Inside your .cat-mouth element, create a div element with the class cat-mouth-line-left and another div with the class cat-mouth-line-right.
 
+Step 59
+Using a descendant selector, select the two div elements inside the div with class cat-mouth. Give it a width of 30px, a height of 50px, and a border of 2px solid #000.
 
-
-
-
-
-
+Step 60
+You are going to make the two mouth lines into an elliptical shape. So, give the .cat-mouth div selector a border color of black transparent
+transparent transparent and a border radius of 190%/190px 150px 0 0.
 
 
 

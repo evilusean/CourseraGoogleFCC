@@ -255,15 +255,21 @@ Step 70
 As you did in the previous step, use a descendant selector to target the three div elements inside your .cat-whiskers-right element. 
 Give it a width of 40px, a height of 1px, and a background-color of #000.
 
+Step 71
+Using a class selector, move the .cat-whisker-left-top element into place with a position of absolute, a top of 120px, and a left of 52px.
 
+Step 72
+Rotate the left top whisker at 10 degrees.
 
+Step 73
+Use a class selector to target the .cat-whisker-left-middle element. Then move it into place with a position property set to absolute, 
+a top of 127px, and a left of 52px.
 
+Step 74
+Rotate the left middle whisker at 3 degrees.
 
-
-
-
-
-
+Step 75
+Using a class selector, move the .cat-whisker-left-bottom into position with a position of absolute, a top of 134px, and a left of 52px.
 
 
 

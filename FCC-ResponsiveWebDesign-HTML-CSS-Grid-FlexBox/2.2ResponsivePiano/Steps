@@ -14,15 +14,30 @@ Nest a second div within your existing div, and set the class to be keys.
 Step 5
 Within your .keys element, add seven div elements. Give them all the class key.
 
+Step 6
+Remember that a class attribute can have multiple values. To separate your white keys from your black keys, you'll add a second class value of black--key.
+Add this to your second, third, fifth, sixth, and seventh .key elements.
 
+Step 7
+Now copy the set of seven .key elements, and paste two more sets into the .keys div.
 
+Step 8
+Add a link element within your head element. For that link element, set the rel attribute to stylesheet and the href to ./styles.css.
 
+Step 9
+Browsers can apply default margin and padding values to specific elements. To make sure your piano looks correct, you need to reset the box model.
+Add an html rule selector to your CSS file, and set the box-sizing property to border-box.
 
-
-
-
-
-
+Step 10
+html {box-sizing: border-box;}
+Now that you have reset the html box model, you need to pass that on to the elements within as well. 
+To do this, you can set the box-sizing property to inherit, which will tell the targeted elements to use the same value as the parent element.
+You will also need to target the pseudo-elements, which are special keywords that follow a selector. 
+The two pseudo-elements you will be using are the ::before and ::after pseudo-elements.
+The ::before selector creates a pseudo-element which is the first child of the selected element, 
+while the ::after selector creates a pseudo-element which is the last child of the selected element. These pseudo-elements are often used to create cosmetic content,
+which you will see later in this project.
+For now, create a CSS selector to target all elements with *, and include the pseudo-elements with ::before and ::after. Set the box-sizing property to inherit.
 
 
 

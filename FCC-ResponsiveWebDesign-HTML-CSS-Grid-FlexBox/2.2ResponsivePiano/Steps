@@ -55,15 +55,28 @@ Give the .keys a padding-left of 2px.
 Step 15
 Move the keys into position by adjusting the #piano selector. Set the padding property to 90px 20px 0 20px.
 
+Step 16
+Time to style the keys themselves. Create a class selector for the .key elements. Set the background-color set to the value #ffffff,
+the position property to relative, the width property to 41px, and the height property to 175px.
 
+Step 17
+Give the .key a margin of 2px and a float property set to left.
 
+Step 18
+Now it is time to use the pseudo-selectors you prepared for earlier. To create the black keys, add a new .key.black--key::after selector.
+This will target the elements with the class key black--key, and select the pseudo-element after these elements in the HTML.
+In the new selector, set the background-color to #1d1e22. Also set the content property to "". This will make the pseudo-elements empty.
+The content property is used to set or override the content of the element. By default, 
+the pseudo-elements created by the ::before and ::after pseudo-selectors are empty, and the elements will not be rendered to the page. 
+Setting the content property to an empty string "" will ensure the element is rendered to the page while still being empty.
+If you would like to experiment, try removing the background-color property and setting different values for the content property, such as "♥".
+Remember to undo these changes when you are done so the tests pass.
 
+Step 19
+Give the .key.black--key::after a position property set to absolute and a left property set to -18px.
 
-
-
-
-
-
+Step 20
+For the .key.black--key::after, set the width to 32px and the height to 100px.
 
 
 

@@ -95,21 +95,43 @@ To smooth the sharp edges of the piano and keys, start by giving the #piano a bo
 Step 25
 Give the .key selector a border-radius value of 0 0 3px 3px.
 
+Step 26
+Give the .key.black--key::after selector a border-radius of 0 0 3px 3px to match the keys.
 
+Step 27
+The @media at-rule, also known as a media query, is used to conditionally apply CSS. 
+Media queries are commonly used to apply CSS based on the viewport width using the max-width and min-width properties.
+In the below example the padding is applied to the .card class when the viewport is 960px wide and below.
+@media (max-width: 960px) {
+  .card {
+    padding: 2rem;
+  }
+}
+Add a media query that will be applied when the viewport is 768px wide and below.
 
+Step 28
+Add a new #piano selector within your @media query, and set the width to 358px.
 
+Step 29
+Within the @media query, add a .keys selector and set the width to 318px.
 
+Step 30
+Now add a .logo selector to the @media query, and set the width property to 150px.
 
+Step 31
+You might have noticed the keys collapse when the browser window is smaller than 768px. 
+Set overflow to hidden in the first .keys selector, to take care of this issue. This property will hide any element that is
+pushed outside the set width value of .keys.
 
+Step 32
+Logical operators can be used to construct more complex media queries. The and logical operator is used to query two media conditions.
+For example, a media query that targets a display width between 500px and 1000px would be:
+@media (min-width: 500px) and (max-width: 1000px){}
+Add another @media rule to apply if the browser window is wider than 769px but smaller than 1199px.
 
-
-
-
-
-
-
-
-
+Step 33
+For the new @media rule, set the width of the #piano to 675px and the width of the .keys to 633px.
+With that, your piano is complete!
 
 
 

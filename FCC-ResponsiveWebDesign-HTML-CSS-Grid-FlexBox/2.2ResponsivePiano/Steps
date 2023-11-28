@@ -39,15 +39,21 @@ while the ::after selector creates a pseudo-element which is the last child of t
 which you will see later in this project.
 For now, create a CSS selector to target all elements with *, and include the pseudo-elements with ::before and ::after. Set the box-sizing property to inherit.
 
+Step 11
+Now target your #piano element with an id selector. Set background-color property to #00471b, the width property to 992px and the height property to 290px.
 
+Step 12
+Set the margin of the #piano to 80px auto.
 
+Step 13
+Time to style the keys. Below the #piano rule, target the .keys element with a class selector. 
+Give the new rule a background-color property of #040404, a width property of 949px and a height property of 180px.
 
+Step 14
+Give the .keys a padding-left of 2px.
 
-
-
-
-
-
+Step 15
+Move the keys into position by adjusting the #piano selector. Set the padding property to 90px 20px 0 20px.
 
 
 

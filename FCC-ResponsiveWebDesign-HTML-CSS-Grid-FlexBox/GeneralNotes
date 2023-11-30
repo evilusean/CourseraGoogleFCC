@@ -436,3 +436,61 @@ Logical operators can be used to construct more complex media queries. The and l
 For example, a media query that targets a display width between 500px and 1000px would be:
 @media (min-width: 500px) and (max-width: 1000px){}
 
+2.4 =========================================================================================================== CSS City Skyline:
+Now you have something that is resembling a building. You are ready to create your first variable. Variable declarations begin with 
+two dashes (-) and are given a name and a value like this: --variable-name: value;. In the rule for the bb1 class, create a variable named 
+--building-color1 and give it a value of #999.
+To use a variable, put the variable name in parentheses with var in front of them like this: var(--variable-name). 
+Whatever value you gave the variable will be applied to whatever property you use it on.
+Add the variable --building-color1 you created in the previous step as the value of the background-color property of the .bb1a class.
+background-color: var(--building-color1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

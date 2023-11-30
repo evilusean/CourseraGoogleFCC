@@ -1,86 +1,44 @@
-
-@media only screen and (max-width: 815px) {
-#navbar {
-    background-color: white;
-    position: absolute;
-    top: 0;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    max-height: 275px;
-    border: none;
-    z-index: 1;
-    border-bottom: 2px solid;
-}}
-#navbar {
-    position: fixed;
-    min-width: 290px;
-    top: 0px;
-    left: 0px;
-    width: 300px;
+* {
+    background-color: #3a3240;
+  }
+  a {
+    color: #92869c;
+  }
+  a:hover {
+    background-color: #92869c;
+    color: #3a3240;
+  }
+  #navbar {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #92869c;
     height: 100%;
-    border-right: solid;
-    border-color: rgba(0, 22, 22, 0.4);
-}
-user agent stylesheet
-nav {
-    display: block;
-}
-html, body {
-    min-width: 290px;
-    color: #4d4e53;
-    background-color: #ffffff;
-    font-family: 'Open Sans', Arial, sans-serif;
-    line-height: 1.5;
-}
-
-
-
-
-/* Add a black background color to the top navigation BELOW : CSS for Navbar*/
-.nav {
-    background-color: #333;
-    overflow: hidden;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .nav a {
-    float: left;
-    color: #f2f2f2;
+    top: -5px;
+    left: -5px;
+    padding: 5px;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+    color: #92869c
   }
-  
-  /* Change the color of links on hover */
-  .nav a:hover {
-    background-color: #ddd;
+  @media (min-width: 480px) {
+    #navbar {
+      position: fixed;
+    }
+  }
+  main {
+    margin-left: 220px;
+    color: #92869c
+  }
+  header {
+    font-size: 20pt;
+  }
+  code {
+    background-color: #92869c;
+    border-style: dashed;
+    border-width: 2px;
+    border-color: #92869c;
+    padding: 5px;
     color: black;
   }
-  
-  /* Add a color to the active/current link */
-  .nav a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
- /* <!--
-  On regular sized devices (laptops, desktops), the element with id="navbar" should be shown 
-      on the left side of the screen and should always be visible to the user
-  Your technical documentation should use at least one media query-->
-  TO DO: FIX MEDIA QUERIES : MAKE ON LEFT SIDE ALWAYS  */
-  @media (max-width: 960px) {
-    .card {
-      padding: 2rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    #piano {
-      width: 358px;
-    }
-  .logo {width: 150px;}
-    .keys {
-      width: 318px;
-    }
+  footer {
+    text-align: center;
   }

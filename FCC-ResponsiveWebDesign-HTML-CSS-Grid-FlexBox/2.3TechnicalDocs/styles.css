@@ -1,5 +1,5 @@
 
-@media only screen and (max-width: 815px)
+@media only screen and (max-width: 815px) {
 #navbar {
     background-color: white;
     position: absolute;
@@ -11,7 +11,7 @@
     border: none;
     z-index: 1;
     border-bottom: 2px solid;
-}
+}}
 #navbar {
     position: fixed;
     min-width: 290px;

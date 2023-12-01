@@ -289,3 +289,55 @@ You want .bb4 to share the properties of .bb1 that center the sections. Instead 
 create a new class above the background building comment called building-wrap. Leave it empty for now; this class will be used in a 
 few places to save you some coding.
 
+Step 66
+Move the display, flex-direction, and align-items properties and values from .bb1 to the new building-wrap class.
+
+Step 67
+Add the new building-wrap class to the .bb1 and .bb4 elements. This will apply the centering properties to the buildings that need it.
+
+Step 68
+Create a new variable called --window-color4 in :root and give it a value of #8cb3d9. This will be the secondary color for the last background building.
+
+Step 69
+Nest four new div elements within .bb4c, give them all the class of bb4-window. These will be windows for this building.
+
+Step 70
+Give the bb4-window class a width of 18%, a height of 90%, and add your --window-color4 variable as the background-color.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

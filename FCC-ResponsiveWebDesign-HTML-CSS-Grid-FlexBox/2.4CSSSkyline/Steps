@@ -117,15 +117,25 @@ Step 30
 Nest six div elements within .foreground-buildings and give them the classes of fb1 through fb6 in that order. "fb" stands for "foreground building".
 These will be six more buildings for the foreground.
 
+Step 31
+Give the six new elements these width and height values: 10% and 60% to .fb1, 10% and 40% to .fb2, 10% and 35% to .fb3,
+8% and 45% to .fb4, 10% and 33% to .fb5, and 9% and 38% to .fb6.
 
+Step 32
+Add the same display, align-items, and justify-content properties and values to .foreground-buildings that you used on .background-buildings. 
+Again, this will use Flexbox to evenly space the buildings across the bottom of their container.
 
+Step 33
+You should optimize your code. Move the position and top properties and values from .foreground-buildings to .background-buildings. 
+Then select both .background-buildings and .foreground-buildings there, effectively applying those styles to both of the elements. 
+You can use a comma (,) to separate selectors like this: selector1, selector2.
 
+Step 34
+Now that you did that, you can delete the old .foreground-buildings declaration and all of its properties since they aren't needed anymore.
 
-
-
-
-
-
+Step 35
+The skyline is coming together. Fill in the background-color property of the foreground buildings. Use your --building-color1 variable to fill in .fb3 and .fb4,
+--building-color2 for .fb5, --building-color3 for .fb2 and .fb6, and --building-color4 for .fb1.
 
 
 

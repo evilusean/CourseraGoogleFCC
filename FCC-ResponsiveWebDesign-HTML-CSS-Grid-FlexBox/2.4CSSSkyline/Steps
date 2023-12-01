@@ -365,6 +365,51 @@ Add your window-wrap class to .fb2b to position the new window elements.
 Step 85
 Give the .fb2-window elements a width of 22%, height of 100%, and a background-color of your --window-color3 variable.
 
+Step 86
+Move the background-color property and value from .fb2 to .fb2b to just color the section and not the container.
+
+Step 87
+For .fb2a, add a border-bottom of 10vh solid var(--building-color3), and a border-left and border-right of 1vw solid transparent. 
+This time the border trick will create a trapezoid shape.
+
+Step 88
+For the next building, nest four div elements within .fb3 with classes of fb3a, fb3b, fb3a again, and fb3b again, in that order. 
+This building will have four sections, and the top two will be almost the same as the bottom two.
+
+Step 89
+Give the .fb3a element a width of 80% and height of 15%. Then give the .fb3b element a width of 100% and height of 35%.
+
+Step 90
+Remove the background-color property and value from .fb3, and add them to .fb3a and .fb3b.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -74,15 +74,27 @@ Step 20
 The buildings are currently stacked on top of each other. Align the buildings by turning the .background-buildings element into a flexbox parent. 
 Use the align-items and justify-content properties to evenly space the buildings across the bottom of the element.
 
+Step 21
+The buildings are too spaced out. Squeeze them together by adding two empty div elements to the top of the .background-buildings element, 
+two more at the bottom of it, and one more in between .bb3 and .bb4. These will be added as evenly-spaced elements across the container,
+effectively moving the buildings closer to the center.
 
+Step 22
+Create a new variable below your --building-color1 variable. Name your new variable --building-color2 and give it a value of #66cc99. 
+Then set it as the background-color of .bb2.
 
+Step 23
+That didn't work. You should add a fallback value to a variable by putting it as the second value of where you use the variable like this:
+var(--variable-name, fallback-value). The property will use the fallback value when there's a problem with the variable. Add a fallback value of green to the background-color of .bb2.
 
+Step 24
+Create a new variable below the other ones named --building-color3 and give it a value of #cc6699. 
+Then use it as the background-color of the .bb3 class and give it a fallback value of pink.
 
-
-
-
-
-
+Step 25
+That didn't work, because the variables you declared in .bb1 do not cascade to the .bb2 and .bb3 sibling elements. 
+That's just how CSS works. Because of this, variables are often declared in the :root selector. This is the highest level selector in CSS; 
+putting your variables there will make them usable everywhere. Add the :root selector to the top of your stylesheet, and move all your variable declarations there.
 
 
 

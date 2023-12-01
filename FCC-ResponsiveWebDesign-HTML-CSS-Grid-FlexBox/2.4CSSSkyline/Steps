@@ -210,15 +210,40 @@ Give .bb2b a width and height of 100% to make it fill the building container. Yo
 Step 50
 Create a new variable in :root named window-color2 with a value of #8cd9b3. This will be used as the secondary color for this building.
 
+Step 51
+Gradient transitions often gradually change from one color to another. You can make the change a solid line like this:
+linear-gradient(
+  var(--first-color) 0%,
+  var(--first-color) 40%,
+  var(--second-color) 40%,
+  var(--second-color) 80%
+);
+Add a linear-gradient to .bb2b that uses --building-color2 from 0% to 6% and --window-color2 from 6% to 9%.
 
+Step 52
+You can see the hard color change at the top of the section. Change the gradient type from linear-gradient to repeating-linear-gradient for this section. 
+This will make the four colors of your gradient repeat until it gets to the bottom of the element; giving you some stripes, and saving you from having to add a 
+bunch of elements to create them.
 
+Step 53
+In the next few steps, you are going to use some tricks with CSS borders to turn the .bb2a section into a triangle at the top of the building.
+First, remove the background-color from .bb2 since you don't need it anymore.
 
+Step 54
+Create and add the following properties to .bb2a:
+margin: auto;
+width: 5vw;
+height: 5vw;
+border-top: 1vw solid #000;
+border-bottom: 1vw solid #000;
+border-left: 1vw solid #999;
+border-right: 1vw solid #999;
+After you add these, you can see how a thick border on an element gives you some angles where two sides meet. 
+You are going to use that bottom border as the top of the building.
 
-
-
-
-
-
+Step 55
+Next, remove the width and height from .bb2a, and change the border-left and border-right to use 5vw instead of 1vw. 
+The element will now have zero size and the borders will come together in the middle.
 
 
 

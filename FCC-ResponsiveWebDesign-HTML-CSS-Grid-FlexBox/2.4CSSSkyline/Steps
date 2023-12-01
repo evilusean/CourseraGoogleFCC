@@ -137,15 +137,31 @@ Step 35
 The skyline is coming together. Fill in the background-color property of the foreground buildings. Use your --building-color1 variable to fill in .fb3 and .fb4,
 --building-color2 for .fb5, --building-color3 for .fb2 and .fb6, and --building-color4 for .fb1.
 
+Step 36
+Squeeze the buildings together again by adding two empty div elements within both the top and bottom of the .foreground-buildings element,
+and one more in between .fb2 and .fb3.
 
+Step 37
+Move the position of .fb4 relative to where it is now by adding a position of relative and left of 10% to it. 
+Do the same for .fb5 but use right instead of left. This will cover up the remaining white space in between the buildings.
 
+Step 38
+Your code is starting to get quite long. Add a comment above the .fb1 class that says FOREGROUND BUILDINGS - "fb" stands for "foreground building"
+to help people understand your code. Above the .bb1 class add another comment that says BACKGROUND BUILDINGS - "bb" stands for "background building". 
+If you don't remember, comments in CSS look like this: /* Comment here */.
 
+Step 39
+Create a new variable in :root called --window-color1 and give it a value of black. This will be a secondary color for the purple buildings.
 
-
-
-
-
-
+Step 40
+Gradients in CSS are a way to transition between colors across the distance of an element. They are applied to the background property and the syntax looks like this:
+gradient-type(
+  color1,
+  color2
+);
+In the example, color1 is solid at the top, color2 is solid at the bottom, and in between it transitions evenly from one to the next. 
+In .bb1a, add a background property below the background-color property. Set it as a gradient of type linear-gradient that uses --building-color1 as the first color
+and --window-color1 as the second.
 
 
 

@@ -445,12 +445,20 @@ Whatever value you gave the variable will be applied to whatever property you us
 Add the variable --building-color1 you created in the previous step as the value of the background-color property of the .bb1a class.
 background-color: var(--building-color1);
 
+You should optimize your code. Move the position and top properties and values from .foreground-buildings to .background-buildings. 
+Then select both .background-buildings and .foreground-buildings there, effectively applying those styles to both of the elements. 
+You can use a comma (,) to separate selectors like this: selector1, selector2.
 
+Squeeze the buildings together again by adding two empty div elements within both the top and bottom of the .foreground-buildings element,
+Or use CSS position: relative; left: 10%;
+comments in CSS look like this: /* Comment here */
 
-
-
-
-
+Gradients in CSS are a way to transition between colors across the distance of an element. They are applied to the background property and the syntax looks like this:
+gradient-type(
+  color1,
+  color2
+);
+background: linear-gradient(var(--building-color1), var(--window-color1)); #gradient using variable colors
 
 
 

@@ -272,13 +272,20 @@ Fill in .bb3 with a repeating-linear-gradient. Use 90deg for the direction, your
 and window-color3 at 15% for the third. When you don't specify a distance for a color, it will use the values that makes sense. 
 In this case, the first two colors will default to 0% and 7.5% because it starts at 0%, and 7.5% is half of the 15%.
 
+Step 61
+Remove the background-color property and value from .bb3 since you are using the gradient as the background now.
 
+Step 62
+The next building will have three sections. Nest three div elements within .bb4. Give them the classes of bb4a, bb4b and bb4c in that order.
 
+Step 63
+Give the new div elements these width and height values: 3% and 10% to .bb4a, 80% and 5% to .bb4b, and 100% and 85% to .bb4c.
 
+Step 64
+Remove the background-color property and value from .bb4, and add it to the three new sections .bb4a, .bb4b, and .bb4c, so only the sections are filled.
 
-
-
-
-
-
+Step 65
+You want .bb4 to share the properties of .bb1 that center the sections. Instead of duplicating that code, 
+create a new class above the background building comment called building-wrap. Leave it empty for now; this class will be used in a 
+few places to save you some coding.
 

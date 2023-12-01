@@ -304,15 +304,23 @@ Nest four new div elements within .bb4c, give them all the class of bb4-window. 
 Step 70
 Give the bb4-window class a width of 18%, a height of 90%, and add your --window-color4 variable as the background-color.
 
+Step 71
+The windows are stacked on top of each other at the left of the section, behind the purple building.
+Add a new class below .building-wrap called window-wrap. Make .window-wrap a flexbox container, and use the align-items and justify-content properties to
+center its child elements vertically and evenly space them in their parent, respectively.
 
+Step 72
+Add the new window-wrap class to the .bb4c element.
 
+Step 73
+Looks good! On to the foreground buildings! Turn the .fb1 building into three sections by nesting three new div elements within it. 
+Give them the classes of fb1a, fb1b and fb1c, in that order.
 
+Step 74
+Give .fb1b a width of 60% and height of 10%, and .fb1c a width of 100% and height of 80%.
 
-
-
-
-
-
+Step 75
+Add the building-wrap class to the .fb1 element to center the sections.
 
 
 

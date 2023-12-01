@@ -322,15 +322,33 @@ Give .fb1b a width of 60% and height of 10%, and .fb1c a width of 100% and heigh
 Step 75
 Add the building-wrap class to the .fb1 element to center the sections.
 
+Step 76
+Move the background-color property and value from .fb1 to .fb1b.
 
+Step 77
+Don't worry about the space at the bottom, everything will get moved down later when you add some height to the element at the top of the building.
+Add a repeating-linear-gradient to .fb1c with a 90deg angle, your --building-color4 from 0% to 10% and transparent from 10% to 15%.
 
+Step 78
+You can add multiple gradients to an element by separating them with a comma (,) like this:
+gradient1(
+  colors
+),
+gradient2(
+  colors
+);
+Add a repeating-linear-gradient to .fb1c below the one that's there; use your --building-color4 from 0% to 10% and --window-color4 from 10% and 90%.
+This will fill in behind the gradient you added last.
 
+Step 79
+You're going to use some more border tricks for the top section. Add a border-bottom with a value of 7vh solid var(--building-color4) to .fb1a. 
+This will put a 7vh height border on the bottom. But since the element has zero size, it only shows up as a 2px wide line from the 1px border that 
+is on all the elements.
 
-
-
-
-
-
+Step 80
+When you increase the size of the left and right borders, the border on the bottom will expand to be the width of the combined left and right border widths.
+Add 2vw solid transparent as the value of the border-left and border-right properties of .fb1a. They will be invisible, but it will make the border on the 
+bottom 4vw wide.
 
 
 

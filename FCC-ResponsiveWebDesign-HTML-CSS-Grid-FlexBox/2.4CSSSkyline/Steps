@@ -350,15 +350,20 @@ When you increase the size of the left and right borders, the border on the bott
 Add 2vw solid transparent as the value of the border-left and border-right properties of .fb1a. They will be invisible, but it will make the border on the 
 bottom 4vw wide.
 
+Step 81
+On to the next building! Nest two div elements within .fb2 and give them classes of fb2a and fb2b, in that order.
 
+Step 82
+Give .fb2a a width of 100% and .fb2b a width of 100% and height of 75%.
 
+Step 83
+Nest three div elements within .fb2b and give them a class of fb2-window. These will be windows for this section of the building.
 
+Step 84
+Add your window-wrap class to .fb2b to position the new window elements.
 
-
-
-
-
-
+Step 85
+Give the .fb2-window elements a width of 22%, height of 100%, and a background-color of your --window-color3 variable.
 
 
 

@@ -413,16 +413,28 @@ Nest six div elements within .fb4b and give them all a class of fb4-window.
 Step 100
 Give the .fb4-window elements a width of 30%, height of 10%, and border-radius of 50%. These will make some circular windows for this building.
 
+Step 101
+Fill in the windows with your secondary color for this building. Also add a margin of 10% to give the windows some space.
 
+Step 102
+The windows are stacked on top of each other on the rightmost purple building. Turn the building into a flexbox parent,
+and use the flex-wrap property to put the windows side by side, and push them down to a new row when they don't fit.
 
+Step 103
+This building is going to have another triangle on top. Give the top section a border-top of 5vh solid transparent,
+and a border-left that is 8vw, solid, and uses your building color variable as the color.
 
+Step 103
+This building is going to have another triangle on top. Give the top section a border-top of 5vh solid transparent,
+and a border-left that is 8vw, solid, and uses your building color variable as the color.
 
+Step 104
+On to the next building! It's the green one in the foreground. Give it a repeating-linear-gradient with your building color from 0% to 5%, 
+and transparent from 5% to 10%.
 
-
-
-
-
-
+Step 105
+Add another repeating-linear-gradient below the one you just added. Give it a 90deg direction, use your building color from 0% to 12% and window color 12% to 44%.
+This will make a bunch of rectangle windows.
 
 
 

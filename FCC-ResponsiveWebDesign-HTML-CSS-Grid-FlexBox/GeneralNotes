@@ -538,11 +538,23 @@ This information can be used in analytics to track how many users from your page
 Setting the rel attribute to noreferrer omits this information from the HTTP request. 
 Give your a element a rel attribute set to noreferrer. rel="noreferrer"
 
+Now you can style the layout of your grid. CSS Grid is similar to Flexbox in that it has a special property for both the parent and child elements.
+In this case, your parent element is the main element. Set the content to have a three-column layout by adding a grid-template-columns property with a value of 
+1fr 94rem 1fr. This will create three columns where the middle column is 94rem wide, and the first and last columns are both 1 fraction of the
+remaining space in the grid container.
+main {
+  display: grid;
+  grid-template-columns: 1fr 94rem 1fr;
+}
 
-
-
-
-
+Use the minmax function to make your columns responsive on any device. The minmax function takes two arguments, the first being the minimum value and the 
+second being the maximum. These values could be a length, percentage, fr, or even a keyword like max-content.
+Wrap each of your already defined values of the grid-template-columns property in a minmax function, using each value as the second argument. 
+To add space between rows in the grid layout, you can use the row-gap property.
+main {
+  display: grid;
+  grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr); row-gap: 3rem;
+}
 
 
 

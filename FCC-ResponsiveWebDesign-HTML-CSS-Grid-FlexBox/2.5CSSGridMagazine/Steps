@@ -203,16 +203,25 @@ Give your .heading element a grid-template-columns property set to repeat(2, 1fr
 Step 40
 Give your .heading selector a row-gap property set to 1.5rem.
 
+Step 41
+Remember that the grid-column property determines which columns an element starts and ends at.
+There may be times where you are unsure of how many columns your grid will have, but you want an element to stop at the last column. To do this, 
+you can use -1 for the end column.
+Create a .hero selector and give it a grid-column property set to 1 / -1. This will tell the element to span the full width of the grid.
 
+Step 42
+Give the .hero selector a position property set to relative.
 
+Step 43
+You should remove the temporary width attribute before writing the CSS for your .hero-img.
 
+Step 44
+Create an img selector and give it a width property set to 100%, and an object-fit property set to cover.
+The object-fit property tells the browser how to position the element within its container. In this case, cover will set the image to fill the container,
+cropping as needed to avoid changing the aspect ratio. img { width: 100%; object-fit: cover; }
 
-
-
-
-
-
-
+Step 45
+Create a .hero-title selector and give it a text-align property set to center, a color property set to orangered and a font-size property set to 8rem.
 
 
 

@@ -382,15 +382,20 @@ Give the .fb3a element a width of 80% and height of 15%. Then give the .fb3b ele
 Step 90
 Remove the background-color property and value from .fb3, and add them to .fb3a and .fb3b.
 
+Step 91
+Add your building-wrap class to the .fb3 element to center the sections.
 
+Step 92
+Nest three new div elements in the first .fb3a element. Give them each a class of fb3-window. These will be windows for this section.
 
+Step 93
+Give the .fb3-window elements a width of 25%, a height of 80%, and use your --window-color1 variable as the background-color value.
 
+Step 94
+Add your window-wrap class to the .fb3a element to center and space the windows.
 
-
-
-
-
-
+Step 95
+With CSS variables you can change values without searching everywhere in the stylesheet. Change the --window-color1 value to #bb99ff.
 
 
 

@@ -484,12 +484,26 @@ Copy and paste your whole sky class along with all of its properties and values 
 for the skyline that changes it from day to night.
 Note: You are going to need to scroll past the editable region to copy the class.
 
+Step 116
+In the sky class of the media query, change the two #ffcf33 color values to #ccc, the #ffff66 to #445, and the #bbeeff to #223. 
+Then you can resize your window to see the background change colors.
+  .sky {
+    background: radial-gradient(
+  closest-corner circle at 15% 15%,
+  #ccc,
+  #ccc 20%,
+  #445 21%,
+  #223 100%
+);
+  }
 
+Step 117
+Add a :root selector to the top of your media query. Then redefine all four of the --building-color variables to use the value #000 there.
 
-
-
-
-
+Step 118
+Lastly, in the :root selector of the media query, redefine all four of the --window-color variables to use #777. When you're done,
+resize the window and watch it go from day to night.
+Variables are primarily used with colors, and that's how you used them here. But they can be given any value and used on any property. Your project looks great!
 
 
 

@@ -556,11 +556,15 @@ main {
   grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr); row-gap: 3rem;
 }
 
+Your magazine will have three primary sections. You already set the overall layout in the main rule, but you can adjust the placement in the child rules.
+One option is the grid-column property, which is shorthand for grid-column-start and grid-column-end.
+The grid-column property tells the grid item which grid line to start and end at.
+Create a .heading rule and set the grid-column property to 2 / 3. This will tell the .heading element to start at grid line 2 and end at grid line 3.
 
+For additional control over the layout of your content, you can have a CSS Grid within a CSS Grid.
 
-
-
-
+The CSS repeat() function is used to repeat a value, rather than writing it out manually, and is helpful for grid layouts. 
+For example, setting the grid-template-columns property to repeat(20, 200px) would create 20 columns each 200px wide.
 
 
 

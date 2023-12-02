@@ -566,7 +566,9 @@ For additional control over the layout of your content, you can have a CSS Grid 
 The CSS repeat() function is used to repeat a value, rather than writing it out manually, and is helpful for grid layouts. 
 For example, setting the grid-template-columns property to repeat(20, 200px) would create 20 columns each 200px wide.
 
-
+Create an img selector and give it a width property set to 100%, and an object-fit property set to cover.
+The object-fit property tells the browser how to position the element within its container. In this case, cover will set the image to fill the container,
+cropping as needed to avoid changing the aspect ratio. img { width: 100%; object-fit: cover; }
 
 
 

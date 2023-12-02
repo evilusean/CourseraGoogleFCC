@@ -533,7 +533,10 @@ this means users with slow internet connections can view the content of your pag
 Give your new img element a loading attribute set to lazy.
 <img class="hero-img" src="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png" alt="freecodecamp logo" loading="lazy"></img>
 
-
+The Referer HTTP header contains information about the address or URL of a page that a user might be visiting from.
+This information can be used in analytics to track how many users from your page visit freecodecamp.org, for example. 
+Setting the rel attribute to noreferrer omits this information from the HTTP request. 
+Give your a element a rel attribute set to noreferrer. rel="noreferrer"
 
 
 

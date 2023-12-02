@@ -436,15 +436,21 @@ Step 105
 Add another repeating-linear-gradient below the one you just added. Give it a 90deg direction, use your building color from 0% to 12% and window color 12% to 44%.
 This will make a bunch of rectangle windows.
 
+Step 106
+You don't need the background-color for this building anymore so you can remove that property.
 
+Step 107
+Finally! You made it to the last building! Add a repeating gradient to it with a 90deg direction. Use the building color from 0% to 10% and transparent from 10% to 30%.
 
+Step 108
+Add another repeating gradient to this building; make it the same as the one you just added, except don't add the 90deg direction and use your
+window color instead of the two transparent colors.
 
+Step 109
+You can remove the background-color for this building now, since it isn't needed.
 
-
-
-
-
-
+Step 110
+Okay, the buildings are done. Go back to the * selector and remove the border you applied to everything at the beginning and the buildings will come together.
 
 
 

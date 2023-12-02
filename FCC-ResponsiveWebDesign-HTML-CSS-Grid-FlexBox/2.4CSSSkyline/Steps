@@ -397,6 +397,59 @@ Add your window-wrap class to the .fb3a element to center and space the windows.
 Step 95
 With CSS variables you can change values without searching everywhere in the stylesheet. Change the --window-color1 value to #bb99ff.
 
+Step 96
+Only three more buildings to go. Nest two new div elements within the .fb4 element and give them the classes of fb4a and fb4b, in that order.
+Remember that you sort of flipped the location of .fb4 and .fb5, so it's the rightmost purple building you are working on now.
+
+Step 97
+Give .fb4b a width of 100% and height of 89%.
+
+Step 98
+Add your --building-color1 variable as value of the background-color property of .fb4b. Then, remove the background-color from .fb4.
+
+Step 99
+Nest six div elements within .fb4b and give them all a class of fb4-window.
+
+Step 100
+Give the .fb4-window elements a width of 30%, height of 10%, and border-radius of 50%. These will make some circular windows for this building.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

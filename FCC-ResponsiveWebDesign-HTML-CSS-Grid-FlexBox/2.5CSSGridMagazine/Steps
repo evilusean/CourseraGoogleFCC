@@ -181,13 +181,27 @@ The first argument should be 2rem, min-content, and 2rem respectively.
 Step 35
 To add space between rows in the grid layout, you can use the row-gap property. Give the main selector a row-gap property of 3rem.
 
+Step 36
+Your magazine will have three primary sections. You already set the overall layout in the main rule, but you can adjust the placement in the child rules.
+One option is the grid-column property, which is shorthand for grid-column-start and grid-column-end.
+The grid-column property tells the grid item which grid line to start and end at.
+Create a .heading rule and set the grid-column property to 2 / 3. This will tell the .heading element to start at grid line 2 and end at grid line 3.
 
+Step 37
+Create a .text selector and give it a grid-column property set to 2 / 3.
 
+Step 38
+For additional control over the layout of your content, you can have a CSS Grid within a CSS Grid.
+Set the display property of your .heading selector to grid.
 
+Step 39
+Now you can style the content of the .heading element with CSS Grid.
+The CSS repeat() function is used to repeat a value, rather than writing it out manually, and is helpful for grid layouts. 
+For example, setting the grid-template-columns property to repeat(20, 200px) would create 20 columns each 200px wide.
+Give your .heading element a grid-template-columns property set to repeat(2, 1fr) to create two columns of equal width.
 
-
-
-
+Step 40
+Give your .heading selector a row-gap property set to 1.5rem.
 
 
 

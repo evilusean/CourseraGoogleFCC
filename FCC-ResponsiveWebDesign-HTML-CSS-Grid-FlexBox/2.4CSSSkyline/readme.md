@@ -1,4 +1,4 @@
-End: </br>
+End: 01December2023 </br>
 2.4 Learn CSS Variables by Building a City Skyline : </br>
 CSS variables help you organize your styles and reuse them. </br>
 In this course, you'll build a city skyline. </br>

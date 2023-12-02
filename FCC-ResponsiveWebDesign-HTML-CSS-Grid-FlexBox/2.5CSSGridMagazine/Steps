@@ -154,6 +154,78 @@ Create an h1 selector, and set the font-family property to Anton with the fallba
 Step 30
 Create an h2, h3, h4, h5, h6 selector. Give it a font-family property set to Raleway with a fallback of sans-serif.
 
+Step 31
+Create an a selector, and give it a text-decoration property set to none and a color property set to linen.
+
+Step 32
+Now you are ready to start putting together the grid layout. CSS Grid offers a two-dimensional grid-based layout, allowing you to center 
+items horizontally and vertically while still retaining control to do things like overlap elements.
+Begin by creating a main selector and giving it a display property set to grid.
+
+Step 33
+Now you can style the layout of your grid. CSS Grid is similar to Flexbox in that it has a special property for both the parent and child elements.
+In this case, your parent element is the main element. Set the content to have a three-column layout by adding a grid-template-columns property with a value of 
+1fr 94rem 1fr. This will create three columns where the middle column is 94rem wide, and the first and last columns are both 1 fraction of the
+remaining space in the grid container.
+main {
+  display: grid;
+  grid-template-columns: 1fr 94rem 1fr;
+}
+
+Step 34
+Use the minmax function to make your columns responsive on any device. The minmax function takes two arguments, the first being the minimum value and the 
+second being the maximum. These values could be a length, percentage, fr, or even a keyword like max-content.
+Wrap each of your already defined values of the grid-template-columns property in a minmax function, using each value as the second argument. 
+The first argument should be 2rem, min-content, and 2rem respectively.
+
+Step 35
+To add space between rows in the grid layout, you can use the row-gap property. Give the main selector a row-gap property of 3rem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

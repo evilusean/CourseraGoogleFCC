@@ -304,15 +304,21 @@ Now it's time to style your third section. Note that it has the text and text-wi
 inheriting the styles from your .text rule.
 Create a .text-with-images selector and set the display property to grid.
 
+Step 66
+You will need to have a column for text and a column for images. Give the .text-with-images selector a grid-template-columns property set to 1fr 2fr.
+Also set the column-gap property to 3rem to provide more spacing between the columns.
 
+Step 67
+Give the .text-with-images selector a margin-bottom property set to 3rem.
 
+Step 68
+Create a .lists selector and set the list-style-type property to none. This will get rid of the bullet points on the list items.
 
+Step 69
+Give the .lists selector a margin-top property set to 2rem.
 
-
-
-
-
-
+Step 70
+Create a .lists li rule to target the list items within your .lists element. Give it a margin-bottom property set to 1.5rem.
 
 
 

@@ -285,6 +285,47 @@ a margin-right property set to 1rem.
 Step 60
 Create an hr selector, and give it a margin property set to 1.5rem 0.
 
+Step 61
+To give the hr a color, you need to adjust the border property. Give the hr selector a border property set to 1px solid rgba(120, 120, 120, 0.6).
+
+Step 62
+Create a .quote selector. Give it a color property set to #00beef, a font-size property set to 2.4rem, and a text-align property set to center.
+
+Step 63
+To make the quote text stand out more, give the .quote selector a font-family property set to Raleway with a fallback of sans-serif.
+
+Step 64
+A quote is not really a quote without proper quotation marks. You can add these with CSS pseudo selectors.
+Create a .quote::before selector and set the content property to " with a space following it.
+Also, create a .quote::after selector and set the content property to " with a space preceding it.
+
+Step 65
+Now it's time to style your third section. Note that it has the text and text-with-images values for the class attribute, which means it is already 
+inheriting the styles from your .text rule.
+Create a .text-with-images selector and set the display property to grid.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

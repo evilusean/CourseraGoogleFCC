@@ -223,15 +223,22 @@ cropping as needed to avoid changing the aspect ratio. img { width: 100%; object
 Step 45
 Create a .hero-title selector and give it a text-align property set to center, a color property set to orangered and a font-size property set to 8rem.
 
+Step 46
+The subtitle also needs to be styled. Create a .hero-subtitle selector and give it a font-size property set to 2.4rem, a color property set to orangered, 
+and a text-align property set to center.
 
+Step 47
+Create an .author selector and give it a font-size property set to 2rem and a font-family property set to Raleway with a fallback of sans-serif.
 
+Step 48
+Create a .author-name a:hover selector and give it a background-color property set to #306203.
+This will create a hover effect only for the a element within the .author-name, showing the original freeCodeCamp green in the background.
 
+Step 49
+Create a .publish-date selector and give it a color property of rgba(255, 255, 255, 0.5).
 
-
-
-
-
-
+Step 50
+Create a .social-icons selector. Give it a display property set to grid, and a font-size property set to 3rem.
 
 
 

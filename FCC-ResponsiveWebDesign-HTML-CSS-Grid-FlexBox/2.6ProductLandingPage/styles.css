@@ -3,7 +3,8 @@ Your product landing page should utilize CSS flexbox at least once */
 * {
     background-color: #3a3240;
   }
-
+header { width: 50%;}
+video { width: 50%;}
   main {
     margin-left: 155px;
     color: #92869c }

@@ -320,15 +320,28 @@ Give the .lists selector a margin-top property set to 2rem.
 Step 70
 Create a .lists li rule to target the list items within your .lists element. Give it a margin-bottom property set to 1.5rem.
 
+Step 71
+Create a .list-title, .list-subtitle selector and set the color property to #00beef.
 
+Step 72
+Time to style the last section of the magazine - the images.
+The images are wrapped with an aside element using the image-wrapper class, so create an .image-wrapper selector. Set the display property to grid.
 
+Step 73
+The images should be within a two column, three row layout.
+Give the .image-wrapper selector a grid-template-columns property set to 2fr 1fr and a grid-template-rows property set to repeat(3, min-content).
+This will give our grid rows that adjust in height based on the content, but columns that remain a fixed width based on the container.
 
+Step 74
+The gap property is a shorthand way to set the value of column-gap and row-gap at the same time. If given one value, it sets the column-gap and row-gap 
+both to that value. If given two values, it sets the row-gap to the first value and the column-gap to the second.
+Give the .image-wrapper selector a gap property set to 2rem.
 
-
-
-
-
-
+Step 75
+The place-items property can be used to set the align-items and justify-items values at the same time. The place-items property takes one or two values.
+If one value is provided, it is used for both the align-items and justify-items properties. If two values are provided, the first value is used for the 
+align-items property and the second value is used for the justify-items property.
+Give the .image-wrapper selector a place-items property set to center.
 
 
 

@@ -575,8 +575,19 @@ If one value is provided, it is used for both the align-items and justify-items 
 align-items property and the second value is used for the justify-items property.
 Give the .image-wrapper selector a place-items property set to center. place-items: center;
 
+2.6 =========================================================================================================== Animated Ferris Wheel :
+The transform-origin property is used to set the point around which a CSS transformation is applied.
+For example, when performing a rotate (which you will do later in this project), the transform-origin determines around which point the element is rotated.
+Give the .line selector a transform-origin property of 0% 0%. This will offset the origin point by 0% from the left and 0% from the top, setting it to the top 
+left corner of the element. transform-origin: 0% 0%;
 
-
-
+Create a selector to target your second .line element. Set the transform property to rotate(60deg).
+Remember that the transform property allows you to manipulate the shape of an element. In this case, using the rotate(60deg) value will
+rotate the element around its transform-origin point by 60 degrees clockwise. 
+.line:nth-of-type(2) {transform: rotate(60deg)}
+.line:nth-of-type(3) {transform: rotate(120deg);}
+.line:nth-of-type(4) {transform: rotate(180deg);}
+.line:nth-of-type(5) {transform: rotate(240deg);}
+.line:nth-of-type(6) {transform: rotate(300deg);}
 
 

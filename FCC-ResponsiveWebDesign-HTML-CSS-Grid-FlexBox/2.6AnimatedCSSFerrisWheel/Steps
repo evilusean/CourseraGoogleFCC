@@ -58,16 +58,35 @@ The fourth .cabin should have the left property set to -8.5% and the top propert
 The fifth .cabin should have the left property set to 17% and the top property set to 7%.
 The sixth .cabin should have the right property set to 17% and the top property set to 7%.
 
+Step 16
+The @keyframes at-rule is used to define the flow of a CSS animation. Within the @keyframes rule, you can create selectors for specific points in 
+the animation sequence, such as 0% or 25%, or use from and to to define the start and end of the sequence.
+@keyframes rules require a name to be assigned to them, which you use in other rules to reference. 
+For example, the @keyframes freeCodeCamp { } rule would be named freeCodeCamp.
+Time to start animating. Create a @keyframes rule named wheel.
 
+Step 17
+You now need to define how your animation should start. To do this, create a 0% rule within your @keyframes wheel rule.
+The properties you set in this nested selector will apply at the beginning of your animation.
+As an example, this would be a 12% rule:
+@keyframes freecodecamp {
+  12% {
+    color: green;
+  }
+}
 
+Step 18
+Give the 0% rule a transform property set to rotate(0deg). This will start the animation with no rotation
 
+Step 19
+Now give the @keyframes wheel rule a 100% selector. Within that, set the transform to rotate(360deg).
+By doing this, your animation will now complete a full rotation.
 
-
-
-
-
-
-
+Step 20
+The animation-name property is used to link a @keyframes rule to a CSS selector. 
+The value of this property should match the name of the @keyframes rule. Give your .wheel selector an animation-name property set to wheel.
+The animation-duration property is used to set how long the animation should sequence to complete. 
+The time should be specified in either seconds (s) or milliseconds (ms). Set your .wheel selector to have an animation-duration property of 10s.
 
 
 

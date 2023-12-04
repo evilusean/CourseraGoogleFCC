@@ -16,15 +16,26 @@ Set the position property of the .wheel selector to absolute. Set the height and
 Step 5
 Give your .wheel selector a max-height and max-width property both set to 500px.
 
+Step 6
+Create a selector for your .line elements. Start by setting the background-color to black, the width to 50%, and the height to 2px.
 
+Step 7
+Set the .line selector's position property to absolute, the left property to 50%, and the top property to 50%.
 
+Step 8
+The transform-origin property is used to set the point around which a CSS transformation is applied.
+For example, when performing a rotate (which you will do later in this project), the transform-origin determines around which point the element is rotated.
+Give the .line selector a transform-origin property of 0% 0%. This will offset the origin point by 0% from the left and 0% from the top, setting it to the top 
+left corner of the element. transform-origin: 0% 0%;
 
+Step 9
+Create a selector to target your second .line element. Set the transform property to rotate(60deg).
+Remember that the transform property allows you to manipulate the shape of an element. In this case, using the rotate(60deg) value will
+rotate the element around its transform-origin point by 60 degrees clockwise.  .line:nth-of-type(2) {transform: rotate(60deg)}
 
-
-
-
-
-
+Step 10
+Using the same pattern, create a separate selector for the third .line, the fourth .line, the fifth .line, and the sixth .line.
+Set the transform property for the third .line to rotate(120deg), the fourth to rotate(180deg), the fifth to rotate(240deg), and the sixth to rotate(300deg).
 
 
 

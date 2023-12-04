@@ -37,15 +37,26 @@ Step 10
 Using the same pattern, create a separate selector for the third .line, the fourth .line, the fifth .line, and the sixth .line.
 Set the transform property for the third .line to rotate(120deg), the fourth to rotate(180deg), the fifth to rotate(240deg), and the sixth to rotate(300deg).
 
+Step 11
+Create a .cabin selector. Set the background-color to red, the width to 20%, and the height to 20%.
 
+Step 12
+Give the .cabin a position of absolute, and a border of 2px solid.
 
+Step 13
+Set the .cabin to have a transform-origin property of 50% 0%. This will set the origin point to be offset 50% from the left and 0% from the top, placing
+it in the middle of the top edge of the element.
 
+Step 14
+Time to position the cabins around the wheel. Select the first .cabin element. Set the right property to -8.5% and the top property to 50%.
 
-
-
-
-
-
+Step 15
+Continuing the pattern, select the following .cabin elements and apply the specific rules to them:
+The second .cabin should have the right property set to 17% and the top property set to 93.5%.
+The third .cabin should have the right property set to 67% and the top property set to 93.5%.
+The fourth .cabin should have the left property set to -8.5% and the top property set to 50%.
+The fifth .cabin should have the left property set to 17% and the top property set to 7%.
+The sixth .cabin should have the right property set to 17% and the top property set to 7%.
 
 
 

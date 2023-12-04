@@ -1,23 +1,26 @@
 /* Your product landing page should have at least one media query
 Your product landing page should utilize CSS flexbox at least once */
 * {
-    background-color: #3a3240;
+    background-color: #000000;
   }
-header { width: 50%;}
+  header {
+    width: 100%;
+    position: fixed;
+    margin: 0;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+  }
 video { width: 50%;}
+video-img { z-index: -1;}
   main {
     margin-left: 155px;
-    color: #92869c }
+    color: #f80606 }
 #navbar {
     border-style: solid;
-    border-width: 5px;
-    border-color: #92869c;
-    height: 100%;
-    top: -5px;
-    left: -5px;
-    padding: 5px;
+    border-color: #d32f12;
     text-align: center;
-    color: #92869c
+    color: #fa0000
   }
   @media (min-width: 480px) {
     #navbar {

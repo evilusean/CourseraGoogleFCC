@@ -590,4 +590,51 @@ rotate the element around its transform-origin point by 60 degrees clockwise.
 .line:nth-of-type(5) {transform: rotate(240deg);}
 .line:nth-of-type(6) {transform: rotate(300deg);}
 
+The @keyframes at-rule is used to define the flow of a CSS animation. Within the @keyframes rule, you can create selectors for specific points in 
+the animation sequence, such as 0% or 25%, or use from and to to define the start and end of the sequence.
+@keyframes rules require a name to be assigned to them, which you use in other rules to reference. 
+For example, the @keyframes freeCodeCamp { } rule would be named freeCodeCamp.
+Time to start animating. Create a @keyframes rule named wheel.
+You now need to define how your animation should start. To do this, create a 0% rule within your @keyframes wheel rule.
+The properties you set in this nested selector will apply at the beginning of your animation.
+As an example, this would be a 12% rule:
+@keyframes freecodecamp {
+  12% {
+    color: green;
+  }
+}
+
+The animation-name property is used to link a @keyframes rule to a CSS selector. 
+The value of this property should match the name of the @keyframes rule. Give your .wheel selector an animation-name property set to wheel.
+The animation-duration property is used to set how long the animation should sequence to complete. 
+The time should be specified in either seconds (s) or milliseconds (ms). Set your .wheel selector to have an animation-duration property of 10s.
+  animation-name: wheel;
+  animation-duration: 10s;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

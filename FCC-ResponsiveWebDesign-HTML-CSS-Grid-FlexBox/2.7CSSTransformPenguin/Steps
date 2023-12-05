@@ -248,15 +248,22 @@ In some browsers, the heart emoji may look slightly different from the previous 
 This is because some of the character's properties were overridden by the font-weight style of bold.
 Fix this, by targeting the div with the heart emoji, and setting its font-weight to its original value.
 
+Step 76
+Position the div with the heart emoji 22.5px from the top, and 12px from the left of its parent.
 
+Step 77
+Position the .shirt element 165px from the top, and 127.5px from the left of its parent. 
+Then, increase its stacking order such that it appears above the .penguin-body element.
 
+Step 78
+For the shirt's final touch, set the color to #6a6969.
 
+Step 79
+Fun fact: Penguins cannot stand without at least two feet.
+Within the .penguin-body element, add two div elements each with a class of foot. Give the first .foot a class of left, and the second .foot a class of right.
 
-
-
-
-
-
+Step 80
+Target the .foot elements, and give them a width of 15%, height of 30%, and background-color of orange.
 
 
 

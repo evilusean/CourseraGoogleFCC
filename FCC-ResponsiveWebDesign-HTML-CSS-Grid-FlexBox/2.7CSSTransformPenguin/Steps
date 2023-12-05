@@ -147,15 +147,21 @@ Start the penguin's face, by adding two div elements within .penguin-head, and g
 Step 45
 Give the .face elements a width of 60%, a height of 70%, and a background-color of white.
 
+Step 46
+Make the top corners of the .face elements have a radius of 70%, and the bottom corners have a radius of 60%.
 
+Step 47
+Position the .face elements so that they are 15% from the top.
 
+Step 48
+Currently, the two .face elements are on top of each other.
+Fix this, by adding a class of left to the first .face element, and a class of right to the second .face element.
 
+Step 49
+Target the .face element with the left class, and position it 5% left of its parent.
 
-
-
-
-
-
+Step 50
+Target the .face element with the right class, and position it 5% right of its parent.
 
 
 

@@ -66,15 +66,20 @@ Step 20
 Target the .back-mountain element, and set its width and height to 300px.
 Then, set the background to a linear gradient starting at rgb(203, 241, 228) and ending at rgb(47, 170, 255).
 
+Step 21
+Set the position property of the .back-mountain to prevent it from taking up space in the page layout.
 
+Step 22
+Change the stack level of the .back-mountain element such that it is directly behind the .left-mountain element.
 
+Step 23
+Rotate the .back-mountain element by 45deg clockwise. Then, give it a left property of 110px, and a top property of 225px
 
+Step 24
+To finish the background, add a sun, by creating a new div element immediately after the .back-mountain element, and give it the class of sun.
 
-
-
-
-
-
+Step 25
+Give the .sun element a width and height of 200px, and a background-color of yellow.
 
 
 

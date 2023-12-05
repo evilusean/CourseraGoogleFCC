@@ -81,15 +81,22 @@ To finish the background, add a sun, by creating a new div element immediately a
 Step 25
 Give the .sun element a width and height of 200px, and a background-color of yellow.
 
+Step 26
+Set the position property of the sun to prevent it from taking up space in the page layout, and set the border-radius such that the sun's shape is a circle.
 
+Step 27
+Position the sun in the top right corner of the screen such that 75px of its top and right edges are off screen.
 
+Step 28
+Your penguin will consist of two main sections: the head, and the body.
+Within .penguin, add two new div elements. The first with a class of penguin-head, and the second with a class of penguin-body.
 
+Step 29
+Change the stack level of the .penguin element such that it appears in front of the .ground element, and give it a position of relative.
 
-
-
-
-
-
+Step 30
+Target the .penguin-head element, and give it a width half of its parent's, and a height of 45%. 
+Then, set the background to a linear gradient at 45deg starting at gray, and ending at rgb(239, 240, 228).
 
 
 

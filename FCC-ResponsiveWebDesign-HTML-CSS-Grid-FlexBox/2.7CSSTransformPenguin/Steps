@@ -180,15 +180,22 @@ Create a custom CSS property called --penguin-face, and set it to white.
 Step 55
 Where relevant, replace property values with your --penguin-face variable.
 
+Step 56
+Below the .chin element, add two div elements each with a class of eye. 
+Also, give the first .eye element a class of left, and the second .eye element a class of right.
 
+Step 57
+Target the .eye elements, and give them a width of 15%, height of 17%, and background-color of black.
 
+Step 58
+Position the .eye elements 45% from the top of their parent, and give all corners a radius of 50%.
 
+Step 59
+Target the .eye element with the left class, and position it 25% from the left of its parent.
+Then, target the .eye element with the right class, and position it 25% from the right of its parent.
 
-
-
-
-
-
+Step 60
+Within each .eye element, add a div with a class of eye-lid.
 
 
 

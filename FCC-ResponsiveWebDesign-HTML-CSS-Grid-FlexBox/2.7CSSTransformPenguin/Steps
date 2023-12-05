@@ -318,23 +318,34 @@ Step 95
 Now, you are going to use CSS animations to make the penguin wave.
 Define a new @keyframes named wave.
 
+Step 96
+Give wave four waypoints starting at 10%, and incrementing by 10%.
 
+Step 97
+Within the first waypoint, rotate to 110deg, and retain the scaling of the left arm.
 
+Step 98
+Within the second waypoint, rotate to 130deg, and retain the scaling of the left arm.
 
+Step 99
+For the third and fourth waypoints, repeat the transform pattern once more.
 
+Step 100
+Use the wave animation on the left arm. Have the animation last 3s, infinitely iterate, and have a linear timing function.
 
+Step 101
+Target the .penguin element when it is active, and increase its size by 50% in both dimensions.
 
+Step 102
+When you activate the .penguin element, it might look as though you can drag it around. This is not true.
+Indicate this to users, by giving the active element a cursor property of not-allowed.
 
+Step 103
+Change the .penguin element's transition behavior during transformation to have a duration of 1s, a timing function of ease-in-out, and a delay of 0ms.
 
-
-
-
-
-
-
-
-
-
+Step 104
+Finally, calculate the height of the .ground element to be the height of the viewport minus the height of the .penguin element.
+Congratulations! You have completed the Responsive Web Design certification.
 
 
 

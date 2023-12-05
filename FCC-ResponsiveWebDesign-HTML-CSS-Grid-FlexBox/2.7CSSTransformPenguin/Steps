@@ -116,6 +116,78 @@ Target all descendent elements of the .penguin element, and give them a position
 Step 35
 Position the .penguin-head element 10% from the top, and 25% from the left of its parent.
 
+Step 36
+Position the .penguin-body element 40% from the top, and 23.5% from the left of its parent.
+
+Step 37
+Change the stack level of the .penguin-head element such that it appears in front of the .penguin-body element.
+
+Step 38
+To give the penguin body a crest, create a pseudo-element that is the first child of the .penguin-body element.
+Set the content property of the pseudo-element to an empty string.
+
+Step 39
+Position the pseudo-element relative to its closest positioned ancestor.
+
+Step 40
+Give the pseudo-element a width half that of its parent, a height of 45%, and a background-color of gray.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

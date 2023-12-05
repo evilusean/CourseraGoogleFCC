@@ -132,15 +132,20 @@ Position the pseudo-element relative to its closest positioned ancestor.
 Step 40
 Give the pseudo-element a width half that of its parent, a height of 45%, and a background-color of gray.
 
+Step 41
+Position the pseudo-element 10% from the top and 25% from the left of its parent.
 
+Step 42
+Round off the crest, by giving the pseudo-element bottom corners a radius of 100%, leaving the top corners at 0%.
 
+Step 43
+Increase the pseudo-element's transparency by 30%.
 
+Step 44
+Start the penguin's face, by adding two div elements within .penguin-head, and giving them both a class of face.
 
-
-
-
-
-
+Step 45
+Give the .face elements a width of 60%, a height of 70%, and a background-color of white.
 
 
 

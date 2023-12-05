@@ -163,15 +163,22 @@ Target the .face element with the left class, and position it 5% left of its par
 Step 50
 Target the .face element with the right class, and position it 5% right of its parent.
 
+Step 51
+Below the .face.right element, add a div element with a class of chin.
 
+Step 52
+Target the .chin element, and give it a width of 90%, height of 70%, and background-color of white.
 
+Step 53
+Position the .chin element such that it is 25% from the top, and 5% from the left of its parent. 
+Then, give the top corners a radius of 70%, and the bottom corners a radius of 100%.
 
+Step 54
+So far, the .face and .chin elements have the same background-color.
+Create a custom CSS property called --penguin-face, and set it to white.
 
-
-
-
-
-
+Step 55
+Where relevant, replace property values with your --penguin-face variable.
 
 
 

@@ -282,6 +282,50 @@ To make the penguin's feet look more penguiny, rotate the left foot by 80deg, an
 Step 85
 Change the stacking order of the .foot elements such that they appear beneath the .penguin-body element.
 
+Step 86
+Fun fact: Penguins cannot fly without wings.
+Within .penguin-body, before the .foot elements, add two div elements each with a class of arm. 
+Give the first .arm a class of left, and the second .arm a class of right.
+
+Step 87
+Target the .arm elements, and give them a width of 30%, a height of 60%,
+and a background of linear gradient at 90deg from clockwise, starting at gray, and ending at rgb(209, 210, 199).
+
+Step 88
+Create a custom CSS variable named --penguin-skin, and set it to gray. Then, replace all relevant property values with it.
+
+Step 89
+Target the .arm element with a class of left, and position it 35% from the top, and 5% from the left of its parent.
+Then, target the .arm element with a class of right, and position it 0% from the top, and -5% from the right of its parent.
+
+Step 90
+Within the .arm.left selector, alter the origin of the transform function to be the top left corner of its parent.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

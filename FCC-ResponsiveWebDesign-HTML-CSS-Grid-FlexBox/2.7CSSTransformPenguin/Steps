@@ -3,6 +3,20 @@ You will be building a happy Flappy Penguin, and further exploring CSS transform
 Begin with your basic HTML boilerplate. Include the DOCTYPE declaration, html element with a language set to English, the appropriate meta tags,
 a head, body, and title element. Also, link your stylesheet to the page.
 
+Step 2
+Target the body element to set the background to a linear gradient angled 45 degrees clockwise, starting at rgb(118, 201, 255) and ending at rgb(247, 255, 222).
+
+Step 3
+Normalise your page's sizing, by removing the body element's margin and padding.
+
+Step 4
+Normalise your page, by setting the width to 100%, and height to 100vh.
+
+Step 5
+Remove both the horizontal and vertical scrollbars, using only one property.
+
+
+
 
 
 

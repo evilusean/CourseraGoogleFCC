@@ -265,15 +265,22 @@ Within the .penguin-body element, add two div elements each with a class of foot
 Step 80
 Target the .foot elements, and give them a width of 15%, height of 30%, and background-color of orange.
 
+Step 81
+Position the .foot elements 85% from the top of their parent, and give all corners a radius of 50%.
 
+Step 82
+The penguin's beak and feet share the same color.
+Create a new custom CSS variable named --penguin-picorna, and replace all relevant property values with it.
 
+Step 83
+Target the .foot element with a class of left, and position it 25% left of its parent. 
+Then, target the .foot element with a class of right, and position it 25% right of its parent.
 
+Step 84
+To make the penguin's feet look more penguiny, rotate the left foot by 80deg, and the right by -80deg.
 
-
-
-
-
-
+Step 85
+Change the stacking order of the .foot elements such that they appear beneath the .penguin-body element.
 
 
 

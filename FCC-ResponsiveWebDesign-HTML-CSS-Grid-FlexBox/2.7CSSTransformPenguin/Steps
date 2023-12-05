@@ -30,15 +30,22 @@ As the .ground element will be third in the stacking context of the page layout,
 Step 10
 Above the .ground element, add a div with a class of penguin. This div will contain Flappy Penguin.
 
+Step 11
+Target the .penguin element, and set its width and height to 300px.
 
+Step 12
+Use the margin property to horizontally center the .penguin element, and set the margin-top to 75px.
 
+Step 13
+To create some scenery in the background, you will add two mountains.
+Above the .penguin element, add a div with a class of left-mountain.
 
+Step 14
+Target the .left-mountain element, and set its width and height to 300px.
+Then, set the background to a linear gradient starting at rgb(203, 241, 228) and ending at rgb(80, 183, 255).
 
-
-
-
-
-
+Step 15
+To prevent the mountain from pushing the .ground element, adjust its position to prevent it from taking up space in the page layout.
 
 
 

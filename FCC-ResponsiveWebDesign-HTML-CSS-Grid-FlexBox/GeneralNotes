@@ -611,9 +611,18 @@ The time should be specified in either seconds (s) or milliseconds (ms). Set you
   animation-name: wheel;
   animation-duration: 10s;
 
-
-
-
+The animation-iteration-count property sets how many times your animation should repeat. 
+This can be set to a number, or to infinite to indefinitely repeat the animation.
+Your Ferris wheel should never stop, so set the .wheel selector to have an animation-iteration-count of infinite.
+The animation-timing-function property sets how the animation should progress over time. 
+There are a few different values for this property, but you want the Ferris wheel animation to run at the same rate from start to finish. 
+Set the animation-timing-function to linear in your .wheel selector. animation-iteration-count: infinite; animation-timing-function: linear;
+ 
+With your .wheel selector, you created four different properties to control the animation.
+For your .cabin selector, you can use the animation property to set these all at once.
+Set the animation property of the .cabin rule to cabins 10s linear infinite.
+This will set the animation-name, animation-duration, animation-timing-function, and animation-iteration-count properties in that order.
+animation: cabins 10s linear infinite;
 
 
 

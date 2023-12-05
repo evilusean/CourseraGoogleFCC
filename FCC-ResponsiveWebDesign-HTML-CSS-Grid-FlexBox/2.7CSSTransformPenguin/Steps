@@ -213,15 +213,23 @@ Target the .blush elements, and give them a width of 15%, height of 10%, and bac
 Step 65
 Position the .blush elements 65% from the top of their parent, and give all corners a radius of 50%.
 
+Step 66
+Target the .blush element with a class of left, and position it 15% left of its parent. 
+Then, target the .blush element with a class of right, and position it 15% right of its parent.
 
+Step 67
+Below the .blush.right element, add two div elements each with a class of beak. 
+Also, give the first .beak element a class of top, and the second .beak element a class of bottom.
 
+Step 68
+Target the .beak elements, and give them a height of 10%, background-color of orange, and give all corners a radius of 50%.
 
+Step 69
+Target the .beak element with a class of top, give it a width of 20%, and position it 60% from the top, and 40% from the left of its parent.
 
-
-
-
-
-
+Step 70
+Target the .beak element with a class of bottom, and give it a width 4% smaller than .beak.top, 5% further from the top, 
+and 2% further from the left of its parent than .beak.top.
 
 
 

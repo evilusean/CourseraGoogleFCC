@@ -1,20 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <main>
-        <h1>Welcome to My Website</h1>
-    </main>
-  </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <title>Portfolio Website - Sean Teams</title>
   <meta charset="utf-8">
@@ -74,7 +59,40 @@
         </div>
     </div>
 </section>
-
+<!-- 
+    TODO:
+Your portfolio should have a welcome section with an id of welcome-section
+The welcome section should have an h1 element that contains text
+Your portfolio should have a projects section with an id of projects
+The projects section should contain at least one element with a class of 
+    project-tile to hold a project
+The projects section should contain at least one link to a project
+Your portfolio should have a navbar with an id of navbar
+The navbar should contain at least one link that you can click on to navigate to 
+    different sections of the page
+Your portfolio should have a link with an id of profile-link, which opens your 
+    GitHub or freeCodeCamp profile in a new tab
+Your portfolio should have at least one media query
+The height of the welcome section should be equal to the height of the viewport
+The navbar should always be at the top of the viewport
+Fulfill the user stories and pass all the tests below to complete this project.
+     Give it your own personal style. Happy Coding!
+TESTS:
+Your portfolio should have a "Welcome" section with an id of welcome-section.
+Waiting:Your #welcome-section element should contain an h1 element.
+Waiting:You should not have any empty h1 elements within #welcome-section element.
+Waiting:You should have a "Projects" section with an id of projects.
+Waiting:Your portfolio should contain at least one element with a class of project-tile.
+Waiting:Your #projects element should contain at least one a element.
+Waiting:Your portfolio should have a navbar with an id of navbar.
+Waiting:Your #navbar element should contain at least one a element whose href 
+attribute starts with #.
+Waiting:Your portfolio should have an a element with an id of profile-link.
+Waiting:Your #profile-link element should have a target attribute of _blank.
+Waiting:Your portfolio should use at least one media query.
+Waiting:Your #navbar element should always be at the top of the viewport.
+-->
+<section id="welcome-section"><h1>Welcome</h1></section>
 <!-- about section-->
 <section id="about">
     <div class="container mt-4 pt-4">
@@ -277,12 +295,12 @@
 </section>
 
 <!-- portfolio section-->
-<section id="portfolio">
+<section id="portfolio Projects">
     <div class="container mt-3">
         <h1 class="text-center">Portfolio</h1>
         <div class="row">
             <div class="col-lg-4 mt-4">
-                <div class="card portfolioContent">
+                <div class="card portfolioContent" id="project-tile">
                     <img class="card-img-top" src="images/Chadcomputer2.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">30+ Personal Python Projects!</h4>
@@ -403,7 +421,7 @@
     <div class="container-fluid">
         <!-- social media icons -->
         <div class="social-icons mt-4">
-            <a href="https://github.com/evilusean" target="_blank"><i class="fab fa-brands fa-github"></i></a>
+            <a href="https://github.com/evilusean" target="_blank" id="profile-link"><i class="fab fa-brands fa-github"></i></a>
             <a href="https://www.linkedin.com/in/evilusean/" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -412,36 +430,3 @@
         </div>
     </div>
 </footer>
-<!-- 
-    TODO:
-Your portfolio should have a welcome section with an id of welcome-section
-The welcome section should have an h1 element that contains text
-Your portfolio should have a projects section with an id of projects
-The projects section should contain at least one element with a class of 
-    project-tile to hold a project
-The projects section should contain at least one link to a project
-Your portfolio should have a navbar with an id of navbar
-The navbar should contain at least one link that you can click on to navigate to 
-    different sections of the page
-Your portfolio should have a link with an id of profile-link, which opens your 
-    GitHub or freeCodeCamp profile in a new tab
-Your portfolio should have at least one media query
-The height of the welcome section should be equal to the height of the viewport
-The navbar should always be at the top of the viewport
-Fulfill the user stories and pass all the tests below to complete this project.
-     Give it your own personal style. Happy Coding!
-TESTS:
-Your portfolio should have a "Welcome" section with an id of welcome-section.
-Waiting:Your #welcome-section element should contain an h1 element.
-Waiting:You should not have any empty h1 elements within #welcome-section element.
-Waiting:You should have a "Projects" section with an id of projects.
-Waiting:Your portfolio should contain at least one element with a class of project-tile.
-Waiting:Your #projects element should contain at least one a element.
-Waiting:Your portfolio should have a navbar with an id of navbar.
-Waiting:Your #navbar element should contain at least one a element whose href 
-attribute starts with #.
-Waiting:Your portfolio should have an a element with an id of profile-link.
-Waiting:Your #profile-link element should have a target attribute of _blank.
-Waiting:Your portfolio should use at least one media query.
-Waiting:Your #navbar element should always be at the top of the viewport.
--->

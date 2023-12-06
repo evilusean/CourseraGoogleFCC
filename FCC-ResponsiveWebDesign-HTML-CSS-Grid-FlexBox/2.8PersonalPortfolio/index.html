@@ -1,3 +1,6 @@
+<!-- Original Project(working images-only had 1 day to build and test this): https://github.com/evilusean/evilusean.github.io/tree/main/CV
+Original With working images: https://evilusean.github.io/CV/ 
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +22,7 @@
 </body>
 </html>
 
-<nav class="navbar navbar-expand-lg fixed-top navbarScroll">
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top navbarScroll">
     <div class="container">
         <a class="navbar-brand" href="#">Sean</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,39 +62,7 @@
         </div>
     </div>
 </section>
-<!-- 
-    TODO:
-Your portfolio should have a welcome section with an id of welcome-section
-The welcome section should have an h1 element that contains text
-Your portfolio should have a projects section with an id of projects
-The projects section should contain at least one element with a class of 
-    project-tile to hold a project
-The projects section should contain at least one link to a project
-Your portfolio should have a navbar with an id of navbar
-The navbar should contain at least one link that you can click on to navigate to 
-    different sections of the page
-Your portfolio should have a link with an id of profile-link, which opens your 
-    GitHub or freeCodeCamp profile in a new tab
-Your portfolio should have at least one media query
-The height of the welcome section should be equal to the height of the viewport
-The navbar should always be at the top of the viewport
-Fulfill the user stories and pass all the tests below to complete this project.
-     Give it your own personal style. Happy Coding!
-TESTS:
-Your portfolio should have a "Welcome" section with an id of welcome-section.
-Waiting:Your #welcome-section element should contain an h1 element.
-Waiting:You should not have any empty h1 elements within #welcome-section element.
-Waiting:You should have a "Projects" section with an id of projects.
-Waiting:Your portfolio should contain at least one element with a class of project-tile.
-Waiting:Your #projects element should contain at least one a element.
-Waiting:Your portfolio should have a navbar with an id of navbar.
-Waiting:Your #navbar element should contain at least one a element whose href 
-attribute starts with #.
-Waiting:Your portfolio should have an a element with an id of profile-link.
-Waiting:Your #profile-link element should have a target attribute of _blank.
-Waiting:Your portfolio should use at least one media query.
-Waiting:Your #navbar element should always be at the top of the viewport.
--->
+
 <section id="welcome-section"><h1>Welcome</h1></section>
 <!-- about section-->
 <section id="about">
@@ -295,18 +266,19 @@ Waiting:Your #navbar element should always be at the top of the viewport.
 </section>
 
 <!-- portfolio section-->
-<section id="portfolio Projects">
+<section id="portfolio projects">
+    <a href="https://github.com/evilusean/Pysean" id="project-tile" class="btn btn-success">Link</a>
     <div class="container mt-3">
-        <h1 class="text-center">Portfolio</h1>
+        <h1 class="text-center" id="project-tile">Projects</h1>
         <div class="row">
             <div class="col-lg-4 mt-4">
                 <div class="card portfolioContent" id="project-tile">
-                    <img class="card-img-top" src="images/Chadcomputer2.png" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">30+ Personal Python Projects!</h4>
-                        <p class="card-text">Over 30+ Personal Python Projects! Games, bots, plots, maps, encryption, clocks, science, and more!</p>
-                        <div class="text-center">
-                            <a href="https://github.com/evilusean/Pysean" class="btn btn-success">Link</a>
+                    <img id="project-tile" class="card-img-top" src="images/Chadcomputer2.png" alt="Card image" style="width:100%">
+                    <div class="card-body" id="project-tile">
+                        <h4 class="card-title" id="project-tile">30+ Personal Python Projects!</h4>
+                        <p class="card-text" id="project-tile">Over 30+ Personal Python Projects! Games, bots, plots, maps, encryption, clocks, science, and more!</p>
+                        <div class="text-center" id="project-tile">
+                            <a href="https://github.com/evilusean/Pysean" id="project-tile" class="btn btn-success">Link</a>
                         </div>
                     </div>
                 </div>

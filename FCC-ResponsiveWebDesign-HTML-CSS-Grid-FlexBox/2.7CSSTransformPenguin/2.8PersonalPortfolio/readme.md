@@ -1,6 +1,6 @@
 End: </br>
 Certification Project</br>
-Personal Portfolio WebpageCertification Project</br>
+Personal Portfolio Webpage: </br>
 This is one of the required projects to earn your certification.</br>
 For this project, you will build your own personal portfolio page.</br>
 

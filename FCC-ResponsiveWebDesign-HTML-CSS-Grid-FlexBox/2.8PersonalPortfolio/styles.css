@@ -1,0 +1,83 @@
+/* display background color black on navbar scroll */
+.navbar {
+    background-color: #000000; opacity: 0.5; filter: alpha(opacity=50);
+}
+/* hero background image */
+.bgimage {
+    height:100vh;
+    background: url('images/Chero.jpg');
+    background-size:cover;
+    position:relative;
+}
+/* text css above hero image*/
+.hero_title {
+    font-size: 4.5rem;
+}
+.hero_desc {
+    font-size: 2rem;
+}
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/* about section image css */
+.imageAboutPage {
+    width: 100%;
+}
+
+/* services section css */
+.servicesText.card {
+    height: 280px;
+    cursor: pointer;
+  }
+.servicesIcon {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+}
+.card-title {
+    text-align: center;
+}
+.card:hover .servicesIcon {
+    color: #008000;
+}
+.servicesText:hover {
+    border: 1px solid #008000;
+}
+/* External Links */
+.extLink {
+    margin: 10px
+}
+/* RedStrikeThrough */
+.RedStrike:hover {
+    color:red;
+    text-decoration:line-through;
+  }
+.RedStrike {
+    color: black;
+    text-decoration:line-through;
+}
+/* social media icons styling */
+.social-icons {
+    font-size: 36px;
+    cursor: pointer;
+}
+.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-twitch:hover {
+    color: #ff0505;
+}
+.fa-linkedin:hover, .fa-github:hover {
+    color: #008000;
+}
+.fab {
+    color: #000000;
+}
+/* footer styling */
+#footer {
+    background-color: #808080;
+    text-align: center;
+}

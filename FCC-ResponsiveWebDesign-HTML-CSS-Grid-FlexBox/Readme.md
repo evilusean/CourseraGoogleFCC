@@ -1,9 +1,5 @@
-# FreeCodeCamp : Responsive Web Design - HTML/CSS/CSSGrid/Flexbox:
-
-https://www.freecodecamp.org/learn/2022/responsive-web-design/
-
-Certificate:
-
-Start: 06 Nov 2023
-
-End:
+# FreeCodeCamp : Responsive Web Design - HTML/CSS/CSSGrid/Flexbox:</br>
+https://www.freecodecamp.org/learn/2022/responsive-web-design/ </br>
+Certificate:</br>
+Start: 06 November 2023</br>
+End: 06 December 2023</br>

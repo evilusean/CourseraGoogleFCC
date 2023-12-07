@@ -16,20 +16,40 @@ It is common to initialize a variable to an initial value in the same line as it
 var myVar = 0;
 Creates a new variable called myVar and assigns it an initial value of 0.
 
+When JavaScript variables are declared, they have an initial value of undefined. 
+If you do a mathematical operation on an undefined variable your result will be NaN which means "Not a Number". 
+If you concatenate a string with an undefined variable, you will get a string of undefined.
 
+In JavaScript all variables and function names are case sensitive. This means that capitalization matters.
+MYVAR is not the same as MyVar nor myvar. It is possible to have multiple distinct variables with the same name but different casing.
+Best Practice : Write variable names in JavaScript in camelCase. In camelCase, multi-word variable names have the first word in 
+lowercase and the first letter of each subsequent word is capitalized.
+Examples:
+var someVariable;
+var anotherVariableName;
+var thisVariableNameIsSoLong;
+One of the biggest problems with declaring variables with the var keyword is that you can easily overwrite variable declarations
 
+A keyword called let was introduced in ES6, a major update to JavaScript, to solve this potential issue with the var keyword. 
+let camper = "David";
+The error can be seen in your browser console.
+So unlike var, when you use let, a variable with the same name can only be declared once.
 
+The keyword let is not the only new way to declare variables. In ES6, you can also declare variables using the const keyword.
+const has all the awesome features that let has, with the added bonus that variables declared using const are read-only.
+They are a constant value, which means that once a variable is assigned with const, it cannot be reassigned:
+const FAV_PET = "Cats";
+FAV_PET = "Dogs";
+The console will display an error due to reassigning the value of FAV_PET.
+You should always name variables you don't want to reassign using the const keyword. 
+Note: It is common for developers to use uppercase variable identifiers for immutable values and lowercase or camelCase for mutable values (objects and arrays).
 
-
-
-
-
-
-
-
-
-
-
+Increment a Number with JavaScript
+You can easily increment or add one to a variable with the ++ operator.
+i++;
+is the equivalent of
+i = i + 1;
+Note: The entire line becomes i++;, eliminating the need for the equal sign.
 
 
 

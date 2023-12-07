@@ -62,14 +62,20 @@ Note: when you compute numbers, they are computed with finite precision. Operati
 
 The remainder operator % gives the remainder of the division of two numbers.
 
+myVar = myVar + 5;
+to add 5 to myVar. Since this is such a common pattern, there are operators which do both a mathematical operation and assignment in one step.
+myVar += 5;
+Like the += operator, -= subtracts a number from a variable. *= for multiply. /= for divide.
 
+When you are defining a string you must start and end with a single or double quote. What happens when you need a literal quote: " or ' inside of your string?
+In JavaScript, you can escape a quote from considering it as an end of string quote by placing a backslash (\) in front of the quote.
+const sampleStr = "Alan said, \"Peter is learning JavaScript\".";
+This signals to JavaScript that the following quote is not the end of the string, but should instead appear inside the string. 
+So if you were to print this to the console, you would get:
+Alan said, "Peter is learning JavaScript".
 
-
-
-
-
-
-
+String values in JavaScript may be written with single or double quotes, as long as you start and end with the same type of quote.
+The reason why you might want to use one type of quote over the other is if you want to use both in a string. 
 
 
 

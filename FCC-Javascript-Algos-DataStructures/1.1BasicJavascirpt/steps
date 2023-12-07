@@ -152,6 +152,44 @@ i = i + 1;
 Note: The entire line becomes i++;, eliminating the need for the equal sign.
 Change the code to use the ++ operator on myVar.
 
+16:Decrement a Number with JavaScript
+You can easily decrement or decrease a variable by one with the -- operator.
+i--;
+is the equivalent of
+i = i - 1;
+Note: The entire line becomes i--;, eliminating the need for the equal sign.
+Change the code to use the -- operator on myVar.
+
+17:Create Decimal Numbers with JavaScript
+We can store decimal numbers in variables too. Decimal numbers are sometimes referred to as floating point numbers or floats.
+Note: when you compute numbers, they are computed with finite precision. Operations using floating points may lead to different results than the desired outcome.
+If you are getting one of these results, open a topic on the freeCodeCamp forum.
+Create a variable myDecimal and give it a decimal value with a fractional part (e.g. 5.7).
+
+18:Multiply Two Decimals with JavaScript
+In JavaScript, you can also perform calculations with decimal numbers, just like whole numbers.
+Let's multiply two decimals together to get their product.
+Change the 0.0 so that product will equal 5.0.
+
+19:Divide One Decimal by Another with JavaScript
+Now let's divide one decimal by another.
+Change the 0.0 so that quotient will equal to 2.2.
+
+20:Finding a Remainder in JavaScript
+The remainder operator % gives the remainder of the division of two numbers.
+Example
+5 % 2 = 1
+5 / 2 = 2 remainder 1
+2 * 2 = 4
+5 - 4 = 1
+Usage
+In mathematics, a number can be checked to be even or odd by checking the remainder of the division of the number by 2. 
+Even numbers have a remainder of 0, while odd numbers a remainder of 1.
+17 % 2 = 1
+48 % 2 = 0
+Note: The remainder operator is sometimes incorrectly referred to as the modulus operator. 
+It is very similar to modulus, but does not work properly with negative numbers.
+Set remainder equal to the remainder of 11 divided by 3 using the remainder (%) operator.
 
 
 

@@ -246,6 +246,64 @@ Note: The backslash \ should not be confused with the forward slash /. They do n
 Change the provided string to a string with single quotes at the beginning and end and no escape characters.
 Right now, the <a> tag in the string uses double quotes everywhere. You will need to change the outer quotes to single quotes so you can remove the escape characters.
 
+26:Quotes are not the only characters that can be escaped inside a string. Escape sequences allow you to use characters you may not otherwise be able to use in a string.
+Code	Output
+\'	single quote
+\"	double quote
+\\	backslash
+\n	newline
+\t	tab
+\r	carriage return
+\b	backspace
+\f	form feed
+Note that the backslash itself must be escaped in order to display as a backslash.
+Assign the following three lines of text into the single variable myStr using escape sequences.
+FirstLine
+    \SecondLine
+ThirdLine
+You will need to use escape sequences to insert special characters correctly. 
+You will also need to follow the spacing as it looks above, with no spaces between escape sequences or words.
+Note: The indentation for SecondLine is achieved with the tab escape character, not spaces.
+
+27:Concatenating Strings with Plus Operator
+In JavaScript, when the + operator is used with a String value, it is called the concatenation operator.
+You can build a new string out of other strings by concatenating them together.
+Example
+'My name is Alan,' + ' I concatenate.'
+Note: Watch out for spaces. Concatenation does not add spaces between concatenated strings, so you'll need to add them yourself.
+Example:
+const ourStr = "I come first. " + "I come second.";
+The string I come first. I come second. would be displayed in the console.
+Build myStr from the strings This is the start. and This is the end. using the + operator. Be sure to include a space between the two strings.
+
+28:Concatenating Strings with the Plus Equals Operator
+We can also use the += operator to concatenate a string onto the end of an existing string variable. This can be very helpful to break a long string over several lines.
+Note: Watch out for spaces. Concatenation does not add spaces between concatenated strings, so you'll need to add them yourself.
+Example:
+let ourStr = "I come first. ";
+ourStr += "I come second.";
+ourStr now has a value of the string I come first. I come second..
+Build myStr over several lines by concatenating these two strings: This is the first sentence. and This is the second sentence. 
+using the += operator. Use the += operator similar to how it is shown in the example and be sure to include a space between the two strings. 
+Start by assigning the first string to myStr, then add on the second string.
+
+29:Constructing Strings with Variables
+Sometimes you will need to build a string. By using the concatenation operator (+), you can insert one or more variables into a string you're building.
+Example:
+const ourName = "freeCodeCamp";
+const ourStr = "Hello, our name is " + ourName + ", how are you?";
+ourStr would have a value of the string Hello, our name is freeCodeCamp, how are you?.
+Set myName to a string equal to your name and build myStr with myName between the strings My name is  and  and I am well!
+
+30:Appending Variables to Strings
+Just as we can build a string over multiple lines out of string literals, we can also append variables to a string using the plus equals (+=) operator.
+Example:
+const anAdjective = "awesome!";
+let ourStr = "freeCodeCamp is ";
+ourStr += anAdjective;
+ourStr would have the value freeCodeCamp is awesome!.
+Set someAdjective to a string of at least 3 characters and append it to myStr using the += operator.
+
 
 
 

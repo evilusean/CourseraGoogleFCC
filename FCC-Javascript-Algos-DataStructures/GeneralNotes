@@ -51,11 +51,16 @@ is the equivalent of
 i = i + 1;
 Note: The entire line becomes i++;, eliminating the need for the equal sign.
 
+Decrement a Number with JavaScript
+You can easily decrement or decrease a variable by one with the -- operator.
+i--;
+is the equivalent of
+i = i - 1;
 
+We can store decimal numbers in variables too. Decimal numbers are sometimes referred to as floating point numbers or floats.
+Note: when you compute numbers, they are computed with finite precision. Operations using floating points may lead to different results than the desired outcome.
 
-
-
-
+The remainder operator % gives the remainder of the division of two numbers.
 
 
 

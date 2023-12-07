@@ -111,8 +111,46 @@ lowercase, or camelCase variable identifiers.
 Change the code so that all variables are declared using let or const. Use let when you want the variable to change, and const when you want the variable to 
 remain constant. Also, rename variables declared with const to conform to common practices. Do not change the strings assigned to the variables.
 
+11:Add Two Numbers with JavaScript
+Number is a data type in JavaScript which represents numeric data.
+Now let's try to add two numbers using JavaScript.
+JavaScript uses the + symbol as an addition operator when placed between two numbers.
+Example:
+const myVar = 5 + 10;
+myVar now has the value 15.
+Change the 0 so that sum will equal 20.
 
+12: Subtract One Number from Another with JavaScript
+We can also subtract one number from another.
+JavaScript uses the - symbol for subtraction.
+Example
+const myVar = 12 - 6;
+myVar would have the value 6.
+Change the 0 so the difference is 12.
 
+13:Multiply Two Numbers with JavaScript
+We can also multiply one number by another.
+JavaScript uses the * symbol for multiplication of two numbers.
+Example
+const myVar = 13 * 13;
+myVar would have the value 169.
+Change the 0 so that product will equal 80.
+
+14:Divide One Number by Another with JavaScript
+We can also divide one number by another.
+JavaScript uses the / symbol for division.
+Example
+const myVar = 16 / 2;
+myVar now has the value 8.
+Change the 0 so that the quotient is equal to 2.
+
+15:Increment a Number with JavaScript
+You can easily increment or add one to a variable with the ++ operator.
+i++;
+is the equivalent of
+i = i + 1;
+Note: The entire line becomes i++;, eliminating the need for the equal sign.
+Change the code to use the ++ operator on myVar.
 
 
 

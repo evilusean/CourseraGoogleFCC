@@ -1,6 +1,6 @@
-# FreeCodeCamp : Javascipt Algorithims and Data Structures:</br>
-https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/ </br>
-Certificate:</br>
-</br>
-Start: 07 December 2023</br>
-End: </br>
+Responsive Web Design - HTML/CSS/CSSGrid/Flexbox:</br>
+https://www.freecodecamp.org/learn/2022/responsive-web-design/ </br>
+Certificate: </br>
+https://www.freecodecamp.org/certification/Evilusean/responsive-web-design</br>
+Start: 06 November 2023</br>
+End: 06 December 2023</br>

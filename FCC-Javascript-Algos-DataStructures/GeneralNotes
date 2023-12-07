@@ -3,6 +3,68 @@
 /* This is a
 multi-line comment */
 
+We tell JavaScript to create or declare a variable by putting the keyword var in front of it, like so:
+var ourName;
+creates a variable called ourName. 
+In JavaScript we end statements with semicolons.
+
+In JavaScript, you can store a value in a variable with the assignment operator (=).
+myVariable = 5;
+This assigns the Number value 5 to myVariable.
+
+It is common to initialize a variable to an initial value in the same line as it is declared.
+var myVar = 0;
+Creates a new variable called myVar and assigns it an initial value of 0.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

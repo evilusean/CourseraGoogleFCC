@@ -76,10 +76,11 @@ Alan said, "Peter is learning JavaScript".
 
 String values in JavaScript may be written with single or double quotes, as long as you start and end with the same type of quote.
 The reason why you might want to use one type of quote over the other is if you want to use both in a string. 
-
-
-
-
+Note that the backslash itself must be escaped in order to display as a backslash.
+\\	backslash
+\n	newline
+\b	backspace
+You will need to use escape sequences to insert special characters correctly. 
 
 
 

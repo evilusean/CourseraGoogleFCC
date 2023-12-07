@@ -1,4 +1,4 @@
-# FreeCodeCamp : Responsive Web Design - HTML/CSS/CSSGrid/Flexbox:</br>
+# FreeCodeCamp : Javascript Algorithims and Data Structures:</br>
 https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/ </br>
 Certificate:</br>
 </br>

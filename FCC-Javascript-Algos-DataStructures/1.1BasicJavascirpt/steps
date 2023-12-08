@@ -634,7 +634,61 @@ Examples
 In the second example, 3 is a Number type and '3' is a String type.
 Use the strict equality operator in the if statement so the function will return the string Equal when val is strictly equal to 7.
 
+61:Practice comparing different values
+In the last two challenges, we learned about the equality operator (==) and the strict equality operator (===). 
+Let's do a quick review and practice using these operators some more.
+If the values being compared are not of the same type, the equality operator will perform a type conversion, and then evaluate the values.
+However, the strict equality operator will compare both the data type and value as-is, without converting one type to the other.
+Examples
+3 == '3' returns true because JavaScript performs type conversion from string to number. 
+3 === '3' returns false because the types are different and type conversion is not performed.
+Note: In JavaScript, you can determine the type of a variable or a value with the typeof operator, as follows:
+typeof 3
+typeof '3'
+typeof 3 returns the string number, and typeof '3' returns the string string.
+The compareEquality function in the editor compares two values using the equality operator. Modify the function so that it returns the string Equal only when the values are strictly equal.
 
+62:Comparison with the Inequality Operator
+The inequality operator (!=) is the opposite of the equality operator. It means not equal and returns false where equality would return true and vice versa.
+Like the equality operator, the inequality operator will convert data types of values while comparing.
+Examples
+1 !=  2    // true
+1 != "1"   // false
+1 != '1'   // false
+1 != true  // false
+0 != false // false
+Add the inequality operator != in the if statement so that the function will return the string Not Equal when val is not equivalent to 99.
+
+63:Comparison with the Strict Inequality Operator
+The strict inequality operator (!==) is the logical opposite of the strict equality operator. It means "Strictly Not Equal" and 
+returns false where strict equality would return true and vice versa. The strict inequality operator will not convert data types.
+Examples
+3 !==  3  // false
+3 !== '3' // true
+4 !==  3  // true
+Add the strict inequality operator to the if statement so the function will return the string Not Equal when val is not strictly equal to 17
+
+64:Comparison with the Greater Than Operator
+The greater than operator (>) compares the values of two numbers. If the number to the left is greater than the number to the right, it returns true. 
+Otherwise, it returns false.
+Like the equality operator, the greater than operator will convert data types of values while comparing.
+Examples
+5   >  3  // true
+7   > '3' // true
+2   >  3  // false
+'1' >  9  // false
+Add the greater than operator to the indicated lines so that the return statements make sense.
+
+65:Comparison with the Greater Than Or Equal To Operator
+The greater than or equal to operator (>=) compares the values of two numbers. If the number to the left is greater than or equal to the number to the right,
+it returns true. Otherwise, it returns false.
+Like the equality operator, the greater than or equal to operator will convert data types while comparing.
+Examples
+6   >=  6  // true
+7   >= '3' // true
+2   >=  3  // false
+'7' >=  9  // false
+Add the greater than or equal to operator to the indicated lines so that the return statements make sense.
 
 
 

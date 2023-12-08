@@ -304,7 +304,54 @@ ourStr += anAdjective;
 ourStr would have the value freeCodeCamp is awesome!.
 Set someAdjective to a string of at least 3 characters and append it to myStr using the += operator.
 
+31:Find the Length of a String
+You can find the length of a String value by writing .length after the string variable or string literal.
+console.log("Alan Peter".length);
+The value 10 would be displayed in the console. Note that the space character between "Alan" and "Peter" is also counted.
+For example, if we created a variable const firstName = "Ada", we could find out how long the string Ada is by using the firstName.length property.
+Use the .length property to set lastNameLength to the number of characters in lastName.
 
+32:Use Bracket Notation to Find the First Character in a String
+Bracket notation is a way to get a character at a specific index within a string.
+Most modern programming languages, like JavaScript, don't start counting at 1 like humans do. They start at 0. This is referred to as Zero-based indexing.
+For example, the character at index 0 in the word Charles is C. So if const firstName = "Charles",
+you can get the value of the first letter of the string by using firstName[0].
+Example:
+const firstName = "Charles";
+const firstLetter = firstName[0];
+firstLetter would have a value of the string C.
+Use bracket notation to find the first character in the lastName variable and assign it to firstLetterOfLastName.
+Hint: Try looking at the example above if you get stuck.
+
+33:Understand String Immutability
+In JavaScript, String values are immutable, which means that they cannot be altered once created.
+For example, the following code will produce an error because the letter B in the string Bob cannot be changed to the letter J:
+let myStr = "Bob";
+myStr[0] = "J";
+Note that this does not mean that myStr could not be re-assigned. The only way to change myStr would be to assign it with a new value, like this:
+let myStr = "Bob";
+myStr = "Job";
+Correct the assignment to myStr so it contains the string value of Hello World using the approach shown in the example above.
+
+34:Use Bracket Notation to Find the Nth Character in a String
+You can also use bracket notation to get the character at other positions within a string.
+Remember that computers start counting at 0, so the first character is actually the zeroth character.
+Example:
+const firstName = "Ada";
+const secondLetterOfFirstName = firstName[1];
+secondLetterOfFirstName would have a value of the string d.
+Let's try to set thirdLetterOfLastName to equal the third letter of the lastName variable using bracket notation.
+Hint: Try looking at the example above if you get stuck.
+
+35:Use Bracket Notation to Find the Last Character in a String
+In order to get the last letter of a string, you can subtract one from the string's length.
+For example, if const firstName = "Ada", you can get the value of the last letter of the string by using firstName[firstName.length - 1].
+Example:
+const firstName = "Ada";
+const lastLetter = firstName[firstName.length - 1];
+lastLetter would have a value of the string a.
+Use bracket notation to find the last character in the lastName variable.
+Hint: Try looking at the example above if you get stuck.
 
 
 

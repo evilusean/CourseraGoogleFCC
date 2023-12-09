@@ -459,14 +459,54 @@ const myBreed = dogs[myDog];
 console.log(myBreed);
 The string Doberman would be displayed in the console.
 
+Updating Object Properties
+After you've created a JavaScript object, you can update its properties at any time just like you would update any other variable. 
+You can use either dot or bracket notation to update.
+For example, let's look at ourDog:
+const ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
+Since he's a particularly happy dog, let's change his name to the string Happy Camper. 
+Here's how we update his object's name property: ourDog.name = "Happy Camper"; or ourDog["name"] = "Happy Camper"; 
+Now when we evaluate ourDog.name, instead of getting Camper, we'll get his new name, Happy Camper.
 
+You can add new properties to existing JavaScript objects the same way you would modify them.
+Here's how we would add a bark property to ourDog:
+ourDog.bark = "bow-wow";
+or
+ourDog["bark"] = "bow-wow";
 
+Delete Properties from a JavaScript Object
+We can also delete properties from objects like this:
+delete ourDog.bark;
 
+Using Objects for Lookups
+Objects can be thought of as a key/value storage, like a dictionary. 
+If you have tabular data, you can use an object to lookup values rather than a switch statement or an if/else chain. 
+This is most useful when you know that your input data is limited to a certain range.
+Here is an example of an article object:
+const article = {
+  "title": "How to create objects in JavaScript",
+  "link": "https://www.freecodecamp.org/news/a-complete-guide-to-creating-objects-in-javascript-b0e2450655e8/",
+  "author": "Kaashan Hussain",
+  "language": "JavaScript",
+  "tags": "TECHNOLOGY",
+  "createdAt": "NOVEMBER 28, 2018"
+};
 
-
-
-
-
+Testing Objects for Properties
+To check if a property on a given object exists or not, you can use the .hasOwnProperty() method.
+someObject.hasOwnProperty(someProperty) returns true or false depending on if the property is found on the object or not.
+Example
+function checkForProperty(object, property) {
+  return object.hasOwnProperty(property);
+}
+checkForProperty({ top: 'hat', bottom: 'pants' }, 'top'); // true
+checkForProperty({ top: 'hat', bottom: 'pants' }, 'middle'); // false
+The first checkForProperty function call returns true, while the second returns false.
 
 
 

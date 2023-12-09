@@ -508,11 +508,60 @@ checkForProperty({ top: 'hat', bottom: 'pants' }, 'top'); // true
 checkForProperty({ top: 'hat', bottom: 'pants' }, 'middle'); // false
 The first checkForProperty function call returns true, while the second returns false.
 
+The sub-properties of objects can be accessed by chaining together the dot or bracket notation.
+Here is a nested object:
+const ourStorage = {
+  "desk": {
+    "drawer": "stapler"
+  },
+  "cabinet": {
+    "top drawer": { 
+      "folder1": "a file",
+      "folder2": "secrets"
+    },
+    "bottom drawer": "soda"
+  }
+};
+ourStorage.cabinet["top drawer"].folder2;
+ourStorage.desk.drawer;
+ourStorage.cabinet["top drawer"].folder2 would be the string secrets, and ourStorage.desk.drawer would be the string stapler.
 
+Accessing Nested Arrays
+As we have seen in earlier examples, objects can contain both nested objects and nested arrays. 
+Similar to accessing nested objects, array bracket notation can be chained to access nested arrays.
+Here is an example of how to access a nested array:
+const ourPets = [
+  {
+    animalType: "cat",
+    names: [
+      "Meowzer",
+      "Fluffy",
+      "Kit-Cat"
+    ]
+  },
+  {
+    animalType: "dog",
+    names: [
+      "Spot",
+      "Bowser",
+      "Frankie"
+    ]
+  }
+];
+ourPets[0].names[1];
+ourPets[1].names[0];
+ourPets[0].names[1] would be the string Fluffy, and ourPets[1].names[0] would be the string Spot.
 
-
-
-
+Iterate with JavaScript While Loops
+You can run the same code multiple times by using a loop.
+The first type of loop we will learn is called a while loop because it runs while a specified condition is true and stops once that condition is no longer true.
+const ourArray = [];
+let i = 0;
+while (i < 5) {
+  ourArray.push(i);
+  i++;
+}
+In the code example above, the while loop will execute 5 times and append the numbers 0 through 4 to ourArray.
 
 
 

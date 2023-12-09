@@ -306,12 +306,67 @@ bar(0)
 foo(0) will return the string Less than one, and bar(0) will return the string Less than two.
 Chaining If Else Statements : if/else statements can be chained together for complex logic.
 
+Selecting from Many Options with Switch Statements
+If you need to match one value against many options, you can use a switch statement.
+A switch statement compares the value to the case statements which define various possible values.
+Any valid JavaScript statements can be executed inside a case block and will run from the first matched case value until a break is encountered.
+Here is an example of a switch statement:
+switch (fruit) {
+  case "apple":
+    console.log("The fruit is an apple");
+    break;
+  case "orange":
+    console.log("The fruit is an orange");
+    break;
+}
+Adding a Default Option in Switch Statements
+In a switch statement you may not be able to specify all possible values as case statements. 
+Instead, you can add the default statement which will be executed if no matching case statements are found. 
+Think of it like the final else statement in an if/else chain.
+A default statement should be the last case.
+switch (num) {
+  case value1:
+    statement1;
+    break;
+  case value2:
+    statement2;
+    break;
+...
+  default:
+    defaultStatement;
+    break;
+}
+If the break statement is omitted from a switch statement's case, the following case statement(s) are executed until a break is encountered. 
+If you have many options to choose from, a switch statement can be easier to write than many chained if/else if statements. The following:
+if (val === 1) {
+  answer = "a";
+} else if (val === 2) {
+  answer = "b";
+} else {
+  answer = "c";
+}
+can be replaced with:
+switch (val) {
+  case 1:
+    answer = "a";
+    break;
+  case 2:
+    answer = "b";
+    break;
+  default:
+    answer = "c";
+}
 
-
-
-
-
-
+When a return statement is reached, the execution of the current function stops and control returns to the calling location.
+Example
+function myFun() {
+  console.log("Hello");
+  return "World";
+  console.log("byebye")
+}
+myFun();
+The above will display the string Hello in the console, and return the string World. The string byebye will never display in the console,
+because the function exits at the return statement.
 
 
 

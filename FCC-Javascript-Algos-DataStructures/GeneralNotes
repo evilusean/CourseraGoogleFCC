@@ -629,12 +629,55 @@ Use Math.random() to generate a random decimal number.
 Multiply that random decimal number by 20.
 Use Math.floor() to round this number down to its nearest whole number. 
 
+Generate Random Whole Numbers within a Range
+You can generate a random whole number in the range from zero to a given number. You can also pick a different lower number for this range.
+You'll call your minimum number min and your maximum number max.
+This formula gives a random whole number in the range from min to max. Take a moment to read it and try to understand what this code is doing:
+Math.floor(Math.random() * (max - min + 1)) + min
 
+Use the parseInt Function
+The parseInt() function parses a string and returns an integer. Here's an example:
+const a = parseInt("007");
+The above function converts the string 007 to the integer 7. If the first character in the string can't be converted into a number, then it returns NaN.
 
+Use the Conditional (Ternary) Operator
+The conditional operator, also called the ternary operator, can be used as a one line if-else expression.
+The syntax is a ? b : c, where a is the condition, b is the code to run when the condition returns true, and c is the code to run when the condition returns false.
+The following function uses an if/else statement to check a condition:
+function findGreater(a, b) {
+  if(a > b) {
+    return "a is greater";
+  }
+  else {
+    return "b is greater or equal";
+  }
+}
+This can be re-written using the conditional operator:
+function findGreater(a, b) {
+  return a > b ? "a is greater" : "b is greater or equal";
+}
 
-
-
-
-
+Use Multiple Conditional (Ternary) Operators
+In the previous challenge, you used a single conditional operator. You can also chain them together to check for multiple conditions.
+The following function uses if, else if, and else statements to check multiple conditions:
+function findGreaterOrEqual(a, b) {
+  if (a === b) {
+    return "a and b are equal";
+  }
+  else if (a > b) {
+    return "a is greater";
+  }
+  else {
+    return "b is greater";
+  }
+}
+The above function can be re-written using multiple conditional operators:
+function findGreaterOrEqual(a, b) {
+  return (a === b) ? "a and b are equal" 
+    : (a > b) ? "a is greater" 
+    : "b is greater";
+}
+It is considered best practice to format multiple conditional operators such that each condition is on a separate line, as shown above. 
+Using multiple conditional operators without proper indentation may make your code hard to read.
 
 

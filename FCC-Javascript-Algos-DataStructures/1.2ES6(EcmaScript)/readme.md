@@ -1,5 +1,6 @@
 End: </br>
-ES6: ECMAScript, or ES, is a standardized version of JavaScript.  </br>
+ES6: </br>
+ECMAScript, or ES, is a standardized version of JavaScript.  </br>
 Because all major browsers follow this specification, the terms ECMAScript and JavaScript are interchangeable. </br>
 Most of the JavaScript you've learned up to this point was in ES5 (ECMAScript 5), which was finalized in 2009.  </br>
 While you can still write programs in ES5, JavaScript is constantly evolving, and new features are released every year. </br>

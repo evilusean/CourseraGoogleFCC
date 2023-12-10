@@ -811,9 +811,38 @@ Here's an equivalent assignment statement using the ES6 destructuring syntax:
 const { name, age } = user;
 Again, name would have a value of the string John Doe, and age would have the number 34.
 
+Use Destructuring Assignment to Assign Variables from Nested Objects
+You can use the same principles from the previous two lessons to destructure values from nested objects.
+Using an object similar to previous examples:
+const user = {
+  johnDoe: { 
+    age: 34,
+    email: 'johnDoe@freeCodeCamp.com'
+  }
+};
+Here's how to extract the values of object properties and assign them to variables with the same name:
+const { johnDoe: { age, email }} = user;
+And here's how you can assign an object properties' values to variables with different names:
+const { johnDoe: { age: userAge, email: userEmail }} = user;
 
-
-
+Create Strings using Template Literals
+A new feature of ES6 is the template literal. This is a special type of string that makes creating complex strings easier.
+Template literals allow you to create multi-line strings and to use string interpolation features to create strings.
+Consider the code below:
+const person = {
+  name: "Zodiac Hasbro",
+  age: 56
+};
+const greeting = `Hello, my name is ${person.name}!
+I am ${person.age} years old.`;
+console.log(greeting);
+The console will display the strings Hello, my name is Zodiac Hasbro! and I am 56 years old..
+A lot of things happened there. Firstly, the example uses backticks (`), not quotes (' or "), 
+to wrap the string. Secondly, notice that the string is multi-line, both in the code and the output. 
+This saves inserting \n within strings. The ${variable} syntax used above is a placeholder. 
+Basically, you won't have to use concatenation with the + operator anymore. 
+To add variables to strings, you just drop the variable in a template string and wrap it with ${ and }. 
+Similarly, you can include other expressions in your string literal, for example ${a + b}. 
 
 
 

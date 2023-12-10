@@ -711,18 +711,68 @@ function countdown(n){
 }
 
 1.2 ================================================================================================================ ES6(EcmaScript):
+When you declare a variable with the var keyword, it is declared globally, or locally if declared inside a function.
+The let keyword behaves similarly, but with some extra features. When you declare a variable with the let keyword inside a block, 
+statement, or expression, its scope is limited to that block, statement, or expression.
+i is not defined because it was not declared in the global scope. It is only declared within the for loop statement.
 
+The const declaration has many use cases in modern JavaScript.
+Some developers prefer to assign all their variables using const by default, unless they know they will need to reassign the value. Only in that case, they use let.
+However, it is important to understand that objects (including arrays and functions) assigned to a variable using const are still mutable. 
+Using the const declaration only prevents reassignment of the variable identifier.
+const s = [5, 6, 7];
+s = [1, 2, 3];
+s[2] = 45;
+console.log(s);
+s = [1, 2, 3] will result in an error. After commenting out that line, the console.log will display the value [5, 6, 45].
+As you can see, you can mutate the object [5, 6, 7] itself and the variable s will still point to the altered array [5, 6, 45]. 
+Like all arrays, the array elements in s are mutable, but because const was used, you cannot use the variable identifier s to point
+to a different array using theassignment operator.
+const s = [5, 7, 2];
+function editInPlace() {
+  'use strict';
+  s[0] = 2;
+  s[1] = 5;
+  s[2] = 7;}
 
+const declaration alone doesn't really protect your data from mutation. 
+To ensure your data doesn't change, JavaScript provides a function Object.freeze to prevent data mutation.
+Any attempt at changing the object will be rejected, with an error thrown if the script is running in strict mode.
+let obj = {
+  name:"FreeCodeCamp",
+  review:"Awesome"
+};
+Object.freeze(obj);
 
+Use Arrow Functions to Write Concise Anonymous Functions
+In JavaScript, we often don't need to name our functions, especially when passing a function as an argument to another function. 
+Instead, we create inline functions. We don't need to name these functions because we do not reuse them anywhere else.
+To achieve this, we often use the following syntax:
+const myFunc = function() {
+  const myVar = "value";
+  return myVar;
+}
+ES6 provides us with the syntactic sugar to not have to write anonymous functions this way. Instead, you can use arrow function syntax:
+const myFunc = () => {
+  const myVar = "value";
+  return myVar;
+}
+When there is no function body, and only a return value, arrow function syntax allows you to omit the keyword return as well as the brackets surrounding the code. 
+This helps simplify smaller functions into one-line statements:
+const myFunc = () => "value";
+This code will still return the string value by default.
 
-
-
-
-
-
-
-
-
+Write Arrow Functions with Parameters
+Just like a regular function, you can pass arguments into an arrow function.
+const doubler = (item) => item * 2;
+doubler(4);
+doubler(4) would return the value 8.
+If an arrow function has a single parameter, the parentheses enclosing the parameter may be omitted.
+const doubler = item => item * 2;
+It is possible to pass more than one argument into an arrow function.
+const multiplier = (item, multi) => item * multi;
+multiplier(4, 2);
+multiplier(4, 2) would return the value 8.
 
 
 

@@ -997,7 +997,7 @@ catch is the method used when your promise has been rejected. It is executed imm
 myPromise.catch(error => {
 });
 
-
+1.3 ================================================================================================================ Regular Expressions:
 
 
 

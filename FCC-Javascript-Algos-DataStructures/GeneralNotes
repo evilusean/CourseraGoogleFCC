@@ -844,16 +844,96 @@ Basically, you won't have to use concatenation with the + operator anymore.
 To add variables to strings, you just drop the variable in a template string and wrap it with ${ and }. 
 Similarly, you can include other expressions in your string literal, for example ${a + b}. 
 
+Write Concise Object Literal Declarations Using Object Property Shorthand
+ES6 adds some nice support for easily defining object literals.
+Consider the following code:
+const getMousePosition = (x, y) => ({
+  x: x,
+  y: y
+});
+getMousePosition is a simple function that returns an object containing two properties. 
+ES6 provides the syntactic sugar to eliminate the redundancy of having to write x: x. 
+You can simply write x once, and it will be converted tox: x (or something equivalent) under the hood.
+Here is the same function from above rewritten to use this new syntax:
+const getMousePosition = (x, y) => ({ x, y });
 
+Write Concise Declarative Functions with ES6
+When defining functions within objects in ES5, we have to use the keyword function as follows:
+const person = {
+  name: "Taylor",
+  sayHello: function() {
+    return `Hello! My name is ${this.name}.`;
+  }
+};
+With ES6, you can remove the function keyword and colon altogether when defining functions in objects. Here's an example of this syntax:
+const person = {
+  name: "Taylor",
+  sayHello() {
+    return `Hello! My name is ${this.name}.`;
+  }
+};
 
+Use class Syntax to Define a Constructor Function
+ES6 provides a new syntax to create objects, using the class keyword.
+If the constructor method is not explicitly defined, then it is implicitly defined with no arguments.
+// Explicit constructor
+class SpaceShuttle {
+  constructor(targetPlanet) {
+    this.targetPlanet = targetPlanet;
+  }
+  takeOff() {
+    console.log("To " + this.targetPlanet + "!");
+  }
+}
+// Implicit constructor 
+class Rocket {
+  launch() {
+    console.log("To the moon!");
+  }
+}
+const zeus = new SpaceShuttle('Jupiter');
+// prints To Jupiter! in console
+zeus.takeOff();
+const atlas = new Rocket();
+// prints To the moon! in console
+atlas.launch();
+It should be noted that the class keyword declares a new function, to which a constructor is added. 
+This constructor is invoked when new is called to create a new object.
+Note: UpperCamelCase should be used by convention for ES6 class names, as in SpaceShuttle used above.
+The constructor method is a special method for creating and initializing an object created with a class.
 
+se getters and setters to Control Access to an Object
+You can obtain values from an object and set the value of a property within an object.
+These are classically called getters and setters.
+Getter functions are meant to simply return (get) the value of an object's private variable to the user without the user directly accessing the private variable.
+Setter functions are meant to modify (set) the value of an object's private variable based on the value passed into the setter function. 
+This change could involve calculations, or even overwriting the previous value completely.
+class Book {
+  constructor(author) {
+    this._author = author;
+  }
+  // getter
+  get writer() {
+    return this._author;
+  }
+  // setter
+  set writer(updatedAuthor) {
+    this._author = updatedAuthor;
+  }
+}
+const novel = new Book('anonymous');
+console.log(novel.writer);
+novel.writer = 'newAuthor';
+console.log(novel.writer);
+The console would display the strings anonymous and newAuthor.
+Notice the syntax used to invoke the getter and setter. They do not even look like functions.
+Getters and setters are important because they hide internal implementation details.
+Note: It is convention to precede the name of a private variable with an underscore (_). However, the practice itself does not make a variable private.
 
-
-
-
-
-
-
+In order to make JavaScript more modular, clean, and maintainable; ES6 introduced a way to easily share code among JavaScript files. 
+This involves exporting parts of a file for use in one or more other files, and importing the parts you need, where you need them. 
+In order to take advantage of this functionality, you need to create a script in your HTML document with a type of module. Here’s an example:
+<script type="module" src="filename.js"></script>
 
 
 

@@ -935,11 +935,34 @@ This involves exporting parts of a file for use in one or more other files, and 
 In order to take advantage of this functionality, you need to create a script in your HTML document with a type of module. Here’s an example:
 <script type="module" src="filename.js"></script>
 
+Use export to Share a Code Block
+Imagine a file called math_functions.js that contains several functions related to mathematical operations.
+One of them is stored in a variable, add, that takes in two numbers and returns their sum. You want to use this function in several different JavaScript files.
+In order to share it with these other files, you first need to export it.
+export const add = (x, y) => {
+  return x + y;
+}
+The above is a common way to export a single function, but you can achieve the same thing like this:
+const add = (x, y) => {
+  return x + y;
+}
+export { add };
+When you export a variable or function, you can import it in another file and use it without having to rewrite the code. 
 
+Reuse JavaScript Code Using import
+import allows you to choose which parts of a file or module to load. In the previous lesson, the examples exported add from the math_functions.js file.
+Here's how you can import it to use in another file:
+import { add } from './math_functions.js';
+Here, import will find add in math_functions.js, import just that function for you to use, and ignore the rest. 
+The ./ tells the import to look for the math_functions.js file in the same folder as the current file.
+The relative file path (./) and file extension (.js) are required when using import in this way.
+You can import more than one item from the file by adding them in the import statement like this:
+import { add, subtract } from './math_functions.js';
 
-
-
-
+Use * to Import Everything from a File
+Suppose you have a file and you wish to import all of its contents into the current file. 
+This can be done with the import * as syntax. Here's an example where the contents of a file named math_functions.js are imported into a file in the same directory:
+import * as myMathModule from "./math_functions.js";
 
 
 

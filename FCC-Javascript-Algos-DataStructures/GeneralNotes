@@ -1204,7 +1204,7 @@ rainbowRegex.test(american);
 rainbowRegex.test(british);
 Both uses of the test method would return true.
 
-
+1.4 ================================================================================================================ Debugging:
 
 
 

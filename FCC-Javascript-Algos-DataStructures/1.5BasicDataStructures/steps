@@ -289,3 +289,67 @@ or undefined if it is not present. Bracket notation is very useful because somet
 them in a more dynamic way.
 We've defined a function, checkInventory, which receives a scanned item as an argument. Return the current value of the scannedItem key in the foods object.
 You can assume that only valid keys will be provided as an argument to checkInventory.
+
+16:Use the delete Keyword to Remove Object Properties
+Now you know what objects are and their basic features and advantages. In short, they are key-value stores which provide a flexible, 
+intuitive way to structure data, and, they provide very fast lookup time. Throughout the rest of these challenges, we will describe 
+several common operations you can perform on objects so you can become comfortable applying these useful data structures in your programs.
+In earlier challenges, we have both added to and modified an object's key-value pairs. Here we will see how we can remove a key-value pair from an object.
+Let's revisit our foods object example one last time. If we wanted to remove the apples key, we can remove it by using the delete keyword like this:
+delete foods.apples;
+Use the delete keyword to remove the oranges, plums, and strawberries keys from the foods object.
+
+17:Check if an Object has a Property
+Now we can add, modify, and remove keys from objects. But what if we just wanted to know if an object has a specific property? 
+JavaScript provides us with two different ways to do this. One uses the hasOwnProperty() method and the other uses the in keyword.
+If we have an object users with a property of Alan, we could check for its presence in either of the following ways:
+users.hasOwnProperty('Alan');
+'Alan' in users;
+Both of these would return true.
+Finish writing the function so that it returns true if the object passed to it contains all four names, Alan, Jeff, Sarah and Ryan and returns false otherwise.
+
+18:Iterate Through the Keys of an Object with a for...in Statement
+Sometimes you need to iterate through all the keys within an object. You can use a for...in loop to do this. The for...in loop looks like:
+const refrigerator = {
+  'milk': 1,
+  'eggs': 12,
+};
+for (const food in refrigerator) {
+  console.log(food, refrigerator[food]);
+}
+This code logs milk 1 and eggs 12, with each key-value pair on its own line.
+We defined the variable food in the loop head and this variable was set to each of the object's keys on each iteration,
+resulting in each food's name being printed to the console.
+NOTE: Objects do not maintain an ordering to stored keys like arrays do; thus a key's position on an object,
+or the relative order in which it appears, is irrelevant when referencing or accessing that key.
+We've defined a function countOnline which accepts one argument, allUsers. Use a for...in statement inside
+this function to loop through the allUsers object and return the number of users whose online property is set to true.
+An example of an object which could be passed to countOnline is shown below. Each user will have an online property set to either true or false.
+{
+  Alan: {
+    online: false
+  },
+  Jeff: {
+    online: true
+  },
+  Sarah: {
+    online: false
+  }
+}
+
+19:Generate an Array of All Object Keys with Object.keys()
+We can also generate an array which contains all the keys stored in an object with the Object.keys() method.
+This method takes an object as the argument and returns an array of strings representing each property in the object. 
+Again, there will be no specific order to the entries in the array.
+Finish writing the getArrayOfUsers function so that it returns an array containing all the properties in the object it receives as an argument.
+
+20:Modify an Array Stored in an Object
+Now you've seen all the basic operations for JavaScript objects. You can add, modify, and remove key-value pairs, check if keys exist,
+and iterate over all the keys in an object. As you continue learning JavaScript you will see even more versatile applications of objects. 
+Additionally, the Data Structures lessons located in the Coding Interview Prep section of the curriculum also cover the ES6 Map and Set objects, 
+both of which are similar to ordinary objects but provide some additional features. Now that you've learned the basics of arrays and objects, 
+you're fully prepared to begin tackling more complex problems using JavaScript!
+Take a look at the object we've provided in the code editor. The user object contains three keys.
+The data key contains five keys, one of which contains an array of friends. From this, you can see how flexible objects are as data structures. 
+We've started writing a function addFriend. Finish writing it so that it takes a user object and adds the name of the friend argument to the array stored in
+user.data.friends and returns that array.

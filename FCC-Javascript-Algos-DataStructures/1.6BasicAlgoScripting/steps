@@ -152,3 +152,92 @@ function booWho(bool) {
 }
 booWho(null);
 
+11:Title Case a Sentence
+Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+For the purpose of this exercise, you should also capitalize connecting words like the and of.
+function titleCase(str) {
+  const words = str.split(" ");
+  var output = "";
+
+  for (let i = 0; i < words.length; i++){
+    var word = words[i];
+    var temp = "";
+    temp += word[0].toUpperCase();
+    var last = word.slice(1, );
+    temp += last.toLowerCase();
+    output += temp + " ";
+  }
+  return output.slice(0, output.length - 1);
+}
+console.log(titleCase("I'm a little tea pot"));
+
+12:Slice and Splice
+You are given two arrays and an index.
+Copy each element of the first array into the second array, in order.
+Begin inserting elements at index n of the second array.
+Return the resulting array. The input arrays should remain the same after the function runs.
+function frankenSplice(arr1, arr2, n) {
+  let output = [].concat(arr2.slice(0, n)).concat(arr1).concat(arr2.slice(n, ));
+  return output;
+}
+console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
+
+13:Falsy Bouncer
+Remove all falsy values from an array. Return a new array; do not mutate the original array.
+Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+Hint: Try converting each value to a Boolean.
+function bouncer(arr) {
+  const output = [];
+  for (let i = 0; i < arr.length; i++){
+    var temp = arr[i];
+    if ((temp != false) && (temp != null) && (temp != 0) && (temp != "") && (temp != undefined) && (!Number.isNaN(temp))){
+      output.push(temp);
+    }
+  }
+  return output
+}
+bouncer([7, "ate", "", false, 9]);
+
+14:Where do I Belong
+Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. 
+The returned value should be a number.
+For example, getIndexToIns([1,2,3,4], 1.5) should return 1 because it is greater than 1 (index 0), but less than 2 (index 1).
+Likewise, getIndexToIns([20,3,5], 19) should return 2 because once the array has been sorted it will look like [3,5,20] and 19 is less than 20 (index 2) 
+and greater than 5 (index 1).
+function getIndexToIns(arr, num) {
+  arr.sort((a, b) => a - b);
+  var output = -1;
+  for (let i = 0; i < arr.length; i++){
+    var temp = arr[i];
+    if (num > temp){
+      continue;
+    }
+    else{
+      output = i;
+      break;
+    }
+  }
+  if (output == -1){
+    output = arr.length;
+  }
+  console.log(output);
+  return output;
+}
+getIndexToIns([40, 60], 50);
+
+15:Mutations
+Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
+For example, ["hello", "Hello"], should return true because all of the letters in the second string are present in the first, ignoring case.
+The arguments ["hello", "hey"] should return false because the string hello does not contain a y.
+Lastly, ["Alien", "line"], should return true because all of the letters in line are present in Alien.
+function mutation(arr) {
+  const first = arr[0];
+  const second = arr[1];
+  for (let i = 0; i < second.length; i++){
+    if (!first.toLowerCase().includes(second[i].toLowerCase())){
+      return false;
+    }
+  }
+  return true;
+}
+mutation(["hello", "hey"]);

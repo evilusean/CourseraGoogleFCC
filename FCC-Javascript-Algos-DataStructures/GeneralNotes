@@ -1788,14 +1788,53 @@ for(let i = 0; i < this.length; i++){
   return newArray;
 };
 
+Return Part of an Array Using the slice Method
+The slice method returns a copy of certain elements of an array. It can take two arguments, the first gives the index of where to begin the slice,
+the second is the index for where to end the slice (and it's non-inclusive). If the arguments are not provided, the default is to start at the 
+beginning of the array through the end, which is an easy way to make a copy of the entire array. The slice method does not mutate the original array,
+but returns a new one.
+const arr = ["Cat", "Dog", "Tiger", "Zebra"];
+const newArray = arr.slice(1, 3);
+newArray would have the value ["Dog", "Tiger"].
 
+Remove Elements from an Array Using slice Instead of splice
+A common pattern while working with arrays is when you want to remove items and keep the rest of the array.
+JavaScript offers the splice method for this, which takes arguments for the index of where to start removing items, then the number of items to remove.
+If the second argument is not provided, the default is to remove items through the end. However, the splice method mutates the original array it is called on. 
+Here's an example:
+const cities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+cities.splice(3, 1);
+Here splice returns the string London and deletes it from the cities array. cities will have the value ["Chicago", "Delhi", "Islamabad", "Berlin"].
 
+Add Elements to the End of an Array Using concat Instead of push
+Functional programming is all about creating and using non-mutating functions.
+The last challenge introduced the concat method as a way to merge arrays into a new array without mutating the original arrays.
+Compare concat to the push method. push adds items to the end of the same array it is called on, which mutates that array. Here's an example:
+const arr = [1, 2, 3];
+arr.push(4, 5, 6);
+arr would have a modified value of [1, 2, 3, 4, 5, 6], which is not the functional programming way.
+concat offers a way to merge new items to the end of an array without any mutating side effects.
 
-
-
-
-
-
+Use the reduce Method to Analyze Data
+Array.prototype.reduce(), or simply reduce(), is the most general of all array operations in JavaScript. 
+You can solve almost any array processing problem using the reduce method.
+The reduce method allows for more general forms of array processing, and it's possible to show that both filter and 
+map can be derived as special applications of reduce. The reduce method iterates over each item in an array and returns a single value 
+(i.e. string, number, object, array). This is achieved via a callback function that is called on each iteration.
+The callback function accepts four arguments. The first argument is known as the accumulator, which gets assigned the return value of 
+the callback function from the previous iteration, the second is the current element being processed, the third is the index of that element and the fourth
+is the array upon which reduce is called.
+In addition to the callback function, reduce has an additional parameter which takes an initial value for the accumulator.
+If this second parameter is not used, then the first iteration is skipped and the second iteration gets passed the first element of the array as the accumulator.
+See below for an example using reduce on the users array to return the sum of all the users' ages. For simplicity, the example only uses the first and second arguments.
+const users = [
+  { name: 'John', age: 34 },
+  { name: 'Amy', age: 20 },
+  { name: 'camperCat', age: 10 }
+];
+const sumOfAges = users.reduce((sum, user) => sum + user.age, 0);
+console.log(sumOfAges);
+The console would display the value 64.
 
 
 

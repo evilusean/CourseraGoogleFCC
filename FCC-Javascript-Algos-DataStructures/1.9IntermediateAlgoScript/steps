@@ -2,5 +2,82 @@
 We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them.
 The lowest number will not always come first.
 For example, sumAll([4,1]) should return 10 because sum of all the numbers between 1 and 4 (both inclusive) is 10.
+function sumAll(arr) {
+  let num1 = arr[0];
+  let num2 = arr[1];
+  var smaller;
+  var bigger;
+  if (num1 < num2){
+    smaller = num1;
+    bigger = num2;
+  }
+  else{
+    smaller = num2;
+    bigger = num1;
+  }
+  var output = 0;
+  for (let i = smaller; i <= bigger; i++){
+    output += i
+  }
+  return output;
+}
+sumAll([1, 4]);
+
+2:Diff Two Arrays
+Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. 
+In other words, return the symmetric difference of the two arrays.
+Note: You can return the array with its elements in any order.
+function diffArray(arr1, arr2) {
+  const newArr = [];
+  for (let i = 0; i < arr1.length; i++){
+    let arr1Item = arr1[i];
+    if (!arr2.includes(arr1Item)){
+      newArr.push(arr1Item);
+    }
+  }
+  for (let i = 0; i < arr2.length; i++){
+    let arr2Item = arr2[i];
+    if (!arr1.includes(arr2Item)){
+      newArr.push(arr2Item);
+    }
+  }
+  return newArr;
+}
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+
+3:Seek and Destroy
+You will be provided with an initial array as the first argument to the destroyer function, followed by one or more arguments.
+Remove all elements from the initial array that are of the same value as these arguments.
+The function must accept an indeterminate number of arguments, also known as a variadic function. 
+You can access the additional arguments by adding a rest parameter to the function definition or using the arguments object.
+function destroyer() {
+  var array = arguments[0].slice(0);
+  for (let i = 1; i <= arguments.length; i++){
+    let toRemove = arguments[i];
+    array = array.filter((item) => {
+      return item != toRemove;
+    })
+  }
+  return array
+}
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+4:Wherefore art thou
+Make a function that looks through an array of objects (first argument) and returns an array of all objects that have matching name and value pairs (second argument). 
+Each name and value pair of the source object has to be present in the object from the collection if it is to be included in the returned array.
+For example, if the first argument is [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], 
+and the second argument is { last: "Capulet" }, then you must return the third object from the array (the first argument), because it contains the name and its value, 
+that was passed on as the second argument.
+
+5:Spinal Tap Case
+Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
+function spinalCase(str) {
+  let temp = str.replace(/([a-z])([A-Z])/g, "$1 $2");
+  let words = temp.split(/\s+|_+/g);
+  return words.join("-").toLowerCase();
+}
+
+spinalCase('This Is Spinal Tap');
+
 
 

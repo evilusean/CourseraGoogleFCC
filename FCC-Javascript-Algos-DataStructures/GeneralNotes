@@ -2090,11 +2090,82 @@ function uniteUnique() {
 }
 uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
 
+Sum All Odd Fibonacci Numbers
+Given a positive integer num, return the sum of all odd Fibonacci numbers that are less than or equal to num.
+The first two numbers in the Fibonacci sequence are 0 and 1. 
+Every additional number in the sequence is the sum of the two previous numbers. The first seven numbers of the Fibonacci sequence are 0, 1, 1, 2, 3, 5 and 8.
+For example, sumFibs(10) should return 10 because all odd Fibonacci numbers less than or equal to 10 are 1, 1, 3, and 5.
+function sumFibs(num) {
+  const fibonacci = [1, 1];
+  let i = 0, j = 1;
+  while (fibonacci[j] <= num){
+    let next = fibonacci[i] + fibonacci[j];
+    if (next <= num){
+      fibonacci.push(fibonacci[i] + fibonacci[j]);
+    }
+    i += 1;
+    j += 1;
+  }
+  const oddNums = fibonacci.filter((num) => {
+    return num % 2 != 0;
+  })
+  const sum = oddNums.reduce((partial, num) => partial + num, 0);
+  return sum;
+}
+sumFibs(4);
 
+Drop it
+Given the array arr, iterate through and remove each element starting from the first element (the 0 index) 
+until the function func returns true when the iterated element is passed through it.
+Then return the rest of the array once the condition is satisfied, otherwise, arr should be returned as an empty array.
+function dropElements(arr, func) {
+  let item;
+  const output = arr.slice(0);
+  for (let i = 0; i < arr.length; i++){
+    item = arr[i];
+    if (func(item)){
+      return output;
+    }
+    else{
+      output.splice(output.indexOf(item), 1);
+    }
+  }
+  return output;
+}
+dropElements([1, 2, 3], function(n) {return n < 3; });
 
+Make a Person
+Fill in the object constructor with the following methods below:
+getFirstName()
+getLastName()
+getFullName()
+setFirstName(first)
+setLastName(last)
+setFullName(first, last)
+Run the tests to see the expected output for each method. These methods must be the only available means of interacting with the object. 
+Each test will declare a new Person instance as new Person('Bob', 'Ross').
+const Person = function(firstAndLast) {
+  // Only change code below this line
+  // Complete the method below and implement the others similarly
+  let firstName = firstAndLast.split(" ")[0];
+  let lastName = firstAndLast.split(" ")[1];
+  let fullName = firstAndLast;
+  this.getFullName = function() {
+    return firstName + " " + lastName;
+  };
+  this.getFirstName = () => firstName;
+  this.getLastName = () => lastName;
+  this.setFullName = (firstAndLast) => {
+    firstName = firstAndLast.split(" ")[0];
+    lastName = firstAndLast.split(" ")[1];
+    fullName = firstAndLast;
+  };
+  this.setFirstName = (first) => firstName = first;
 
-
-
+  this.setLastName = (last) => lastName = last;
+}
+const bob = new Person('Bob Ross');
+bob.getFullName();
 
 
 

@@ -326,3 +326,118 @@ function dropElements(arr, func) {
 }
 dropElements([1, 2, 3], function(n) {return n < 3; });
 
+16:Steamroller
+Flatten a nested array. You must account for varying levels of nesting.
+function steamrollArray(arr) {
+  var output = [];
+  for (let i = 0; i < arr.length; i++){
+    if (Array.isArray(arr[i])){
+      output = output.concat(steamrollArray(arr[i]))
+    }
+    else{
+      output.push(arr[i]);
+    }
+  }
+  console.log(arr, output)
+  return output;
+}
+steamrollArray([1, [2], [3, [[4]]]]);
+
+17:Binary Agents
+Return an English translated sentence of the passed binary string.
+The binary string will be space separated.
+function binaryAgent(str) {
+  const items = str.split(" ");
+  const output = [];
+  for (let i = 0; i < items.length; i++){
+    output.push(String.fromCharCode(parseInt(items[i], 2)));
+  }
+  return output.join("");
+}
+
+18:Everything Be True
+Check if the predicate (second argument) is truthy on all elements of a collection (first argument).
+In other words, you are given an array collection of objects. The predicate pre will be an object property and you need to return true if its value is truthy.
+Otherwise, return false.
+In JavaScript, truthy values are values that translate to true when evaluated in a Boolean context.
+Remember, you can access object properties through either dot notation or [] notation.
+function truthCheck(collection, pre) {
+  let object;
+  let value;
+  for (let i = 0; i < collection.length; i++){
+    object = collection[i];
+    value = object[pre];
+
+    if (!value){
+      return false;
+    }
+  }
+  return true;
+}
+
+19:Arguments Optional
+Create a function that sums two arguments together. If only one argument is provided, then return a function that expects one argument and returns the sum.
+For example, addTogether(2, 3) should return 5, and addTogether(2) should return a function.
+Calling this returned function with a single argument will then return the sum:
+var sumTwoAnd = addTogether(2);
+sumTwoAnd(3) returns 5.
+If either argument isn't a valid number, return undefined.
+function addTogether() {
+  if (arguments.length == 1){
+    if (typeof arguments[0] != 'number'){
+      return undefined;
+    }
+    else{
+      return (a) => {
+        if (typeof a != 'number'){
+          return undefined;
+        }
+        else{
+          return arguments[0] + a;
+        }
+      }
+    }
+  }
+  else{
+    if (typeof arguments[0] != 'number' || typeof arguments[1] != 'number'){
+      return undefined;
+    }
+    else{
+      return arguments[0] + arguments[1];
+    }
+  }
+}
+addTogether(2,3);
+
+20:Make a Person
+Fill in the object constructor with the following methods below:
+getFirstName()
+getLastName()
+getFullName()
+setFirstName(first)
+setLastName(last)
+setFullName(first, last)
+Run the tests to see the expected output for each method. These methods must be the only available means of interacting with the object. 
+Each test will declare a new Person instance as new Person('Bob', 'Ross').
+const Person = function(firstAndLast) {
+  // Only change code below this line
+  // Complete the method below and implement the others similarly
+  let firstName = firstAndLast.split(" ")[0];
+  let lastName = firstAndLast.split(" ")[1];
+  let fullName = firstAndLast;
+  this.getFullName = function() {
+    return firstName + " " + lastName;
+  };
+  this.getFirstName = () => firstName;
+  this.getLastName = () => lastName;
+  this.setFullName = (firstAndLast) => {
+    firstName = firstAndLast.split(" ")[0];
+    lastName = firstAndLast.split(" ")[1];
+    fullName = firstAndLast;
+  };
+  this.setFirstName = (first) => firstName = first;
+
+  this.setLastName = (last) => lastName = last;
+}
+const bob = new Person('Bob Ross');
+bob.getFullName();

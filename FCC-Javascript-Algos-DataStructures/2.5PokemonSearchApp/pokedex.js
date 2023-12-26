@@ -2,10 +2,14 @@ const API_URL = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon"
 const pokemon = document.getElementById("search-input").value;
 const pokemon_URL = API_URL + pokemon
 addEventListener = document.getElementById("search-button") 
- { fetch(`${API_URL}/${pokemon}`)
-    
- }
-
+ { fetch(`${API_URL}/${pokemon}`) 
+ .then((response) => response.json())
+ .then((updatePokemon) => {
+ #pokemon-name, 
+ #pokemon-id, #weight, #height, #hp, #attack, #defense, #special-attack, and
+  #special-defense }
+ };
+//add if not found error message, and if found update all divs with stats
 
 
  // Need to add API_URL + pokemon to get data

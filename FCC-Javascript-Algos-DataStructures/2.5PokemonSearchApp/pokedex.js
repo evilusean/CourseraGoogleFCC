@@ -5,12 +5,30 @@ addEventListener = document.getElementById("search-button")
  { fetch(`${API_URL}/${pokemon}`) 
  .then((response) => response.json())
  .then((updatePokemon) => {
- #pokemon-name, 
- #pokemon-id, #weight, #height, #hp, #attack, #defense, #special-attack, and
-  #special-defense }
- };
+    const nme = document.getElementById(pokemon-name);
+    const id = document.getElementById(pokemon-id);
+    const weight = document.getElementById(weight);
+    const height = document.getElementById(height);
+    const hp = document.getElementById(hp);
+    const attack = document.getElementById(attack);
+    const defense = document.getElementById(defense);
+    const special-attack = document.getElementById(special-attack);
+    const special-defense = document.getElementById(special-defense);}
+ }
 //add if not found error message, and if found update all divs with stats
+/*
+  // Get the div element
+  const div = document.getElementById(divId);
 
+  // Fetch the JSON data
+  fetch(jsonUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      // Update the div with the new data
+      div.innerHTML = JSON.stringify(data);
+    });
+}
+*/
 
  // Need to add API_URL + pokemon to get data
  // Need to update all divs in index with pokemon data - how to post?

@@ -1,3 +1,43 @@
+const API_URL = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon";
+
+const searchButton = document.getElementById("search-button");
+
+searchButton.addEventListener("click", () => {
+  const pokemon = document.getElementById("search-input").value;
+  const pokemonURL = API_URL + pokemon;
+
+  fetch(pokemonURL)
+    .then((response) => response.json())
+    .then((data) => {
+      const nameElement = document.getElementById("pokemon-name");
+      nameElement.innerHTML = data.name;
+
+      const idElement = document.getElementById("pokemon-id");
+      idElement.innerHTML = data.id;
+
+      const weightElement = document.getElementById("weight");
+      weightElement.innerHTML = data.weight;
+
+      const heightElement = document.getElementById("height");
+      heightElement.innerHTML = data.height;
+
+      const hpElement = document.getElementById("hp");
+      hpElement.innerHTML = data.hp;
+
+      const attackElement = document.getElementById("attack");
+      attackElement.innerHTML = data.attack;
+
+      const defenseElement = document.getElementById("defense");
+      defenseElement.innerHTML = data.defense;
+
+      const specialAttackElement = document.getElementById("special-attack");
+      specialAttackElement.innerHTML = data.specialAttack;
+
+      const specialDefenseElement = document.getElementById("special-defense");
+      specialDefenseElement.innerHTML = data.specialDefense;
+    });
+});
+/*
 const API_URL = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon"
 const pokemon = document.getElementById("search-input").value;
 const pokemon_URL = API_URL + pokemon
@@ -23,7 +63,7 @@ addEventListener = document.getElementById("search-button")
     special_attack.innerHTML = updatePokemon.special-attack;
     const special_defense = document.getElementById(special-defense);
     special_defense.innerHTML = updatePokemon.special-defense;})
- }
+ } */
 //add if not found error message, and if found update all divs with stats
 // maybe use .replace to add new data if .innerhtml doesnt work
 /*

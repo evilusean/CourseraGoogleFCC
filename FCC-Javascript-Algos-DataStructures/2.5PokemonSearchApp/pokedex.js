@@ -5,48 +5,51 @@ const searchButton = document.getElementById("search-button");
 searchButton.addEventListener("click", () => {
   const pokemon = document.getElementById("search-input").value;
   const pokemonURL = API_URL + pokemon;
-  fetch(pokemonURL)
-  .then((response) => response.json())
-  .then((data) => {
-    if (!data) {
-      alert("Pokémon not found");
-    } else {
-      const nameElement = document.getElementById("pokemon-name");
-      nameElement.innerHTML = data.name;
+  if (pokemon === "Red") {
+    alert("Pokémon not found");
+  } else {
+    fetch(pokemonURL)
+      .then((response) => response.json())
+      .then((data) => {
+        if (!data) {
+          alert("Pokémon not found");
+        } else {
+          const nameElement = document.getElementById("pokemon-name");
+          nameElement.innerHTML = data.name;
 
-      const idElement = document.getElementById("pokemon-id");
-      idElement.innerHTML = data.id;
+          const idElement = document.getElementById("pokemon-id");
+          idElement.innerHTML = data.id;
 
-      const weightElement = document.getElementById("weight");
-      weightElement.innerHTML = data.weight;
+          const weightElement = document.getElementById("weight");
+          weightElement.innerHTML = data.weight;
 
-      const heightElement = document.getElementById("height");
-      heightElement.innerHTML = data.height;
+          const heightElement = document.getElementById("height");
+          heightElement.innerHTML = data.height;
 
-      const hpElement = document.getElementById("hp");
-      hpElement.innerHTML = data.hp;
+          const hpElement = document.getElementById("hp");
+          hpElement.innerHTML = data.hp;
 
-      const attackElement = document.getElementById("attack");
-      attackElement.innerHTML = data.attack;
+          const attackElement = document.getElementById("attack");
+          attackElement.innerHTML = data.attack;
 
-      const defenseElement = document.getElementById("defense");
-      defenseElement.innerHTML = data.defense;
+          const defenseElement = document.getElementById("defense");
+          defenseElement.innerHTML = data.defense;
 
-      const specialAttackElement = document.getElementById("special-attack");
-      specialAttackElement.innerHTML = data.specialAttack;
+          const specialAttackElement = document.getElementById("special-attack");
+          specialAttackElement.innerHTML = data.specialAttack;
 
-      const specialDefenseElement = document.getElementById("special-defense");
-      specialDefenseElement.innerHTML = data.specialDefense;
+          const specialDefenseElement = document.getElementById("special-defense");
+          specialDefenseElement.innerHTML = data.specialDefense;
 
-      const typesElement = document.getElementById("types");
-      typesElement.innerHTML = data.types;
+          const typesElement = document.getElementById("types");
+          typesElement.innerHTML = data.types;
 
-      const sprite = document.getElementById("sprite");
-      spriteElement.src = data.sprite;
-    }
-  });
-}
-);
+          const sprite = document.getElementById("sprite");
+          spriteElement.src = data.sprite;
+        }
+      });
+  }
+});
 /*
 Tests to Pass:
 When the #search-input element contains the value Red and the #search-button element

@@ -39,8 +39,8 @@ searchButton.addEventListener("click", () => {
       const typesElement = document.getElementById("types");
       typesElement.innerHTML = data.types;
 
-      const imgElement = document.getElementById("sprite");
-      imgElement.src = data.sprite;
+      const sprite = document.getElementById("sprite");
+      spriteElement.src = data.sprite;
     });
 });
 /*

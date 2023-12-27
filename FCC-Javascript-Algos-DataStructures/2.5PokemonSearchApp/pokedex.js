@@ -6,8 +6,9 @@ const pokemonURL = API_URL + pokemon;
 //Maybe variables names? JSON file? maybe the div text inputs? img element src is wrong? 
 //Maybe try document.createElemenet use the createElement() method to 
 //create an HTML element and then set the innerHTML property 
+// maybe try <phrase>.replace like "Weight : " + "$name".replace
 searchButton.addEventListener("click", () => {
-    if (pokemon === "Red" || pokemon === "red") {
+    if (pokemon === "Red" || pokemon == "Red") {
         alert("Pokémon not found");
       } else {
     fetch(pokemonURL)

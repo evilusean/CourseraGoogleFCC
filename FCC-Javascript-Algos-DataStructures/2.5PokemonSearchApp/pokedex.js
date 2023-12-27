@@ -6,17 +6,26 @@ addEventListener = document.getElementById("search-button")
  .then((response) => response.json())
  .then((updatePokemon) => {
     const nme = document.getElementById(pokemon-name);
-    nme.innerHTML = updatePokemon.name;
+    nme.innerHTML = updatePokemon.pokemon-name;
     const id = document.getElementById(pokemon-id);
+    id.innerHTML = updatePokemon.pokemon-id;
     const weight = document.getElementById(weight);
+    weight.innerHTML = updatePokemon.weight;
     const height = document.getElementById(height);
+    height.innerHTML = updatePokemon.height;
     const hp = document.getElementById(hp);
+    hp.innerHTML = updatePokemon.hp;
     const attack = document.getElementById(attack);
+    attack.innerHTML = updatePokemon.attack;
     const defense = document.getElementById(defense);
-    const special-attack = document.getElementById(special-attack);
-    const special-defense = document.getElementById(special-defense);})
+    defense.innerHTML = updatePokemon.defense;
+    const special_attack = document.getElementById(special-attack);
+    special_attack.innerHTML = updatePokemon.special-attack;
+    const special_defense = document.getElementById(special-defense);
+    special_defense.innerHTML = updatePokemon.special-defense;})
  }
 //add if not found error message, and if found update all divs with stats
+// maybe use .replace to add new data if .innerhtml doesnt work
 /*
   // Get the div element
   const div = document.getElementById(divId);

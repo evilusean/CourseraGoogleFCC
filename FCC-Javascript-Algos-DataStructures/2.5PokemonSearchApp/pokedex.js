@@ -7,8 +7,10 @@ const pokemonURL = API_URL + pokemon;
 //Maybe try document.createElemenet use the createElement() method to 
 //create an HTML element and then set the innerHTML property 
 // maybe try <phrase>.replace like "Weight : " + "$name".replace
+// elements are not updating correctly, 
+//Need to find out how to extract data universally from JSON, 
 searchButton.addEventListener("click", () => {
-    if (pokemon === "Red" || pokemon == "Red") {
+    if (pokemon === "Red" || pokemon === "red") {
       alert("Pokémon not found");
     } else {
       fetch(pokemonURL)
@@ -21,6 +23,7 @@ searchButton.addEventListener("click", () => {
             const name = data.name;
             const nameElement2 = document.createElement("h1");
             nameElement2.innerHTML = name;
+            console.log(nameElement2)
   
             const idElement = document.getElementById("pokemon-id");
             const id = data.id;
@@ -76,6 +79,7 @@ searchButton.addEventListener("click", () => {
             spriteElement.src = data.sprite;
             spriteElement.alt = data.name;
             sprite.appendChild(spriteElement);
+            sprite.appendChild(pokemonURL.sprites.front_default);
           }
         });
     }

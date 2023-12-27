@@ -6,6 +6,7 @@ addEventListener = document.getElementById("search-button")
  .then((response) => response.json())
  .then((updatePokemon) => {
     const nme = document.getElementById(pokemon-name);
+    nme.innerHTML = updatePokemon.name;
     const id = document.getElementById(pokemon-id);
     const weight = document.getElementById(weight);
     const height = document.getElementById(height);
@@ -13,7 +14,7 @@ addEventListener = document.getElementById("search-button")
     const attack = document.getElementById(attack);
     const defense = document.getElementById(defense);
     const special-attack = document.getElementById(special-attack);
-    const special-defense = document.getElementById(special-defense);}
+    const special-defense = document.getElementById(special-defense);})
  }
 //add if not found error message, and if found update all divs with stats
 /*
@@ -28,6 +29,21 @@ addEventListener = document.getElementById("search-button")
       div.innerHTML = JSON.stringify(data);
     });
 }
+
+// Attempt 2
+const API_URL = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon";
+
+const pokemon = document.getElementById("search-input").value;
+const pokemon_URL = API_URL + pokemon;
+
+addEventListener("click", () => {
+  fetch(pokemon_URL)
+    .then((response) => response.json())
+    .then((data) => {
+      const div = document.getElementById("pokemon-name");
+      div.innerHTML = data.name;
+    });
+});
 */
 
  // Need to add API_URL + pokemon to get data

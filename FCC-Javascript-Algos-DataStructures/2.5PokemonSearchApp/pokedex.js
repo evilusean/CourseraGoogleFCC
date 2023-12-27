@@ -76,10 +76,9 @@ searchButton.addEventListener("click", () => {
   
             const sprite = document.getElementById("sprite");
             const spriteElement = document.createElement("img");
-            spriteElement.src = data.sprite;
-            spriteElement.alt = data.name;
+            spriteElement.src = data.sprites.front_default;
+            spriteElement.alt = data.sprites.front_default;
             sprite.appendChild(spriteElement);
-            sprite.appendChild(pokemonURL.sprites.front_default);
           }
         });
     }

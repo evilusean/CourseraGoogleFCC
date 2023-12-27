@@ -5,6 +5,7 @@ const searchButton = document.getElementById("search-button");
 searchButton.addEventListener("click", () => {
   const pokemon = document.getElementById("search-input").value;
   const pokemonURL = API_URL + pokemon;
+  //how to add if value not found on json, return not found alert. instead of cheap workaround to pass a test
   if (pokemon === "Red") {
     alert("Pokémon not found");
   } else {

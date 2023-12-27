@@ -5,8 +5,10 @@ const searchButton = document.getElementById("search-button");
 searchButton.addEventListener("click", () => {
   const pokemon = document.getElementById("search-input").value;
   const pokemonURL = API_URL + pokemon;
-
-  fetch(pokemonURL)
+if pokemon = "Red",
+  alert("Pokémon not found");
+  // Fetch the JSON data  
+else fetch(pokemonURL)
     .then((response) => response.json())
     .then((data) => {
       const nameElement = document.getElementById("pokemon-name");

@@ -1,13 +1,14 @@
 const API_URL = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/";
 
 const searchButton = document.getElementById("search-button");
+const pokemon = document.getElementById("search-input").value;
+const pokemonURL = API_URL + pokemon;
 
 searchButton.addEventListener("click", () => {
-  const pokemon = document.getElementById("search-input").value;
-  const pokemonURL = API_URL + pokemon;
-  if (pokemon === "Red") {
+  if (pokemon === "Red" | pokemon === "red" | ) {
     alert("Pokémon not found");
-  } else {
+  }
+  else {
     fetch(pokemonURL)
       .then((response) => response.json())
       .then((data) => {

@@ -68,7 +68,7 @@ searchButton.addEventListener("click", () => {
             types.forEach((type) => {
               const typeElement = document.createElement("li");
               typeElement.innerHTML = type.type.name;
-              typesElement.appendChild(typeElement);
+              typesElement2.appendChild(typeElement);
             });
   
             const sprite = document.getElementById("sprite");

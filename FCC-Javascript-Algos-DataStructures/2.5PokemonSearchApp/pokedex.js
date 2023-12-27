@@ -1,4 +1,4 @@
-const API_URL = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon";
+const API_URL = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/";
 
 const searchButton = document.getElementById("search-button");
 

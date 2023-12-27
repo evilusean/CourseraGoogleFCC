@@ -8,51 +8,78 @@ const pokemonURL = API_URL + pokemon;
 //create an HTML element and then set the innerHTML property 
 // maybe try <phrase>.replace like "Weight : " + "$name".replace
 searchButton.addEventListener("click", () => {
-    if (pokemon === "Red" || pokemon == "Red") {
-        alert("Pokémon not found");
-      } else {
-    fetch(pokemonURL)
-      .then((response) => response.json())
-      .then((data) => {
-        if (!data) {
-          alert("Pokémon not found");
-        } else {
-          const nameElement = document.getElementById("pokemon-name");
-          nameElement.innerHTML = data.name;
-
-          const idElement = document.getElementById("pokemon-id");
-          idElement.innerHTML = data.id;
-
-          const weightElement = document.getElementById("weight");
-          weightElement.innerHTML = data.weight;
-
-          const heightElement = document.getElementById("height");
-          heightElement.innerHTML = data.height;
-
-          const hpElement = document.getElementById("hp");
-          hpElement.innerHTML = data.hp;
-
-          const attackElement = document.getElementById("attack");
-          attackElement.innerHTML = data.attack;
-
-          const defenseElement = document.getElementById("defense");
-          defenseElement.innerHTML = data.defense;
-
-          const specialAttackElement = document.getElementById("special-attack");
-          specialAttackElement.innerHTML = data.specialAttack;
-
-          const specialDefenseElement = document.getElementById("special-defense");
-          specialDefenseElement.innerHTML = data.specialDefense;
-
-          const typesElement = document.getElementById("types");
-          typesElement.innerHTML = data.types;
-
-          const sprite = document.getElementById("sprite");
-          spriteElement.src = data.sprite;
-        }
-      });
-  }
-});
+    if (pokemon === "Red" || pokemon === "red") {
+      alert("Pokémon not found");
+    } else {
+      fetch(pokemonURL)
+        .then((response) => response.json())
+        .then((data) => {
+          if (!data) {
+            alert("Pokémon not found");
+          } else {
+            const nameElement = document.getElementById("pokemon-name");
+            const name = data.name;
+            const nameElement = document.createElement("h1");
+            nameElement.innerHTML = name;
+  
+            const idElement = document.getElementById("pokemon-id");
+            const id = data.id;
+            const idElement = document.createElement("h2");
+            idElement.innerHTML = id;
+  
+            const weightElement = document.getElementById("weight");
+            const weight = data.weight;
+            const weightElement = document.createElement("h3");
+            weightElement.innerHTML = weight;
+  
+            const heightElement = document.getElementById("height");
+            const height = data.height;
+            const heightElement = document.createElement("h4");
+            heightElement.innerHTML = height;
+  
+            const hpElement = document.getElementById("hp");
+            const hp = data.hp;
+            const hpElement = document.createElement("h5");
+            hpElement.innerHTML = hp;
+  
+            const attackElement = document.getElementById("attack");
+            const attack = data.attack;
+            const attackElement = document.createElement("h6");
+            attackElement.innerHTML = attack;
+  
+            const defenseElement = document.getElementById("defense");
+            const defense = data.defense;
+            const defenseElement = document.createElement("h7");
+            defenseElement.innerHTML = defense;
+  
+            const specialAttackElement = document.getElementById("special-attack");
+            const specialAttack = data.specialAttack;
+            const specialAttackElement = document.createElement("h8");
+            specialAttackElement.innerHTML = specialAttack;
+  
+            const specialDefenseElement = document.getElementById("special-defense");
+            const specialDefense = data.specialDefense;
+            const specialDefenseElement = document.createElement("h9");
+            specialDefenseElement.innerHTML = specialDefense;
+  
+            const typesElement = document.getElementById("types");
+            const types = data.types;
+            const typesElement = document.createElement("ul");
+            types.forEach((type) => {
+              const typeElement = document.createElement("li");
+              typeElement.innerHTML = type.type.name;
+              typesElement.appendChild(typeElement);
+            });
+  
+            const sprite = document.getElementById("sprite");
+            const spriteElement = document.createElement("img");
+            spriteElement.src = data.sprite;
+            spriteElement.alt = data.name;
+            sprite.appendChild(spriteElement);
+          }
+        });
+    }
+  });
 /*
 Tests to Pass:
 When the #search-input element contains the value Red and the #search-button element

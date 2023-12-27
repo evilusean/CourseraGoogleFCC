@@ -4,7 +4,8 @@ const searchButton = document.getElementById("search-button");
 const pokemon = document.getElementById("search-input").value;
 const pokemonURL = API_URL + pokemon;
 //Maybe variables names? JSON file? maybe the div text inputs? img element src is wrong? 
-//Maybe try document.createElemenet
+//Maybe try document.createElemenet use the createElement() method to 
+//create an HTML element and then set the innerHTML property 
 searchButton.addEventListener("click", () => {
     if (pokemon === "Red" || pokemon === "red") {
         alert("Pokémon not found");

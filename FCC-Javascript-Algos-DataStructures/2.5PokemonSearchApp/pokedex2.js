@@ -13,6 +13,7 @@ const pokemonURL = API_URL + pokemon;
 //Maybe parse json, change name for variables(document -> nameElement)
 //maybe it is getElemenetByID on JSON or indexx,
 //did we target the correct divs? 
+// Maybe the json isnt referenced as data.?
 searchButton.addEventListener("click", () => {
     if (pokemon === "Red" || pokemon === "red") {
       alert("Pokémon not found");
@@ -20,7 +21,7 @@ searchButton.addEventListener("click", () => {
       fetch(pokemonURL)
         .then((response) => response.json())
         .then((data) => {
-          if (!data|| null) {
+          if (!data|| !data.name || data.name === null) {
             alert("Pokémon not found");
           } else {
             const nameElement = document.getElementById("pokemon-name");
@@ -124,4 +125,21 @@ The responseText property you use returns the response as purely text.
   you encounter.
 Using the JSON.parse method will convert the string to a Javascript
  object which does have a data property.
+
+ <script>
+       var data = '{"name": "mkyong","age": 30,"address": {"streetAddress": "88 8nd Street","city": "New York"},"phoneNumber": [{"type": "home","number": "111 111-1111"},{"type": "fax","number": "222 222-2222"}]}';
+
+	var json = JSON.parse(data);
+			
+	alert(json["name"]); //mkyong
+	alert(json.name); //mkyong
+	
+	alert(json.address.streetAddress); //88 8nd Street
+	alert(json["address"].city); //New York
+			
+	alert(json.phoneNumber[0].number); //111 111-1111
+	alert(json.phoneNumber[1].type); //fax
+			
+	alert(json.phoneNumber.number); //undefined
+</script>
 */

@@ -17,7 +17,7 @@ searchButton.addEventListener("click", () => {
       fetch(pokemonURL)
         .then((response) => response.json())
         .then((data) => {
-          if (!data) {
+          if (!data|| null) {
             alert("Pokémon not found");
           } else {
             const nameElement = document.getElementById("pokemon-name");

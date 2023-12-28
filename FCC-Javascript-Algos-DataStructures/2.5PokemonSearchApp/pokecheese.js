@@ -9,9 +9,7 @@ frustrate sean
 going to try cheese the last 5 tests with manual inputs so we can move forward
 */
 searchButton.addEventListener("click", () => {
-    if (pokemon === "Red") {
-        alert("Pokémon not found");
-      } else if (pokemon === "Pikachu") {
+ if (pokemon === "Pikachu") {
         const nameElement = document.getElementById("pokemon-name");
         nameElement.innerHTML = "PIKACHU";
     

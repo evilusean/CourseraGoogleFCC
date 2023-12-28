@@ -23,7 +23,7 @@ searchButton.addEventListener("click", () => {
             const nameElement = document.getElementById("pokemon-name");
             const name = data.name;
             const nameElement2 = document.createElement("h1");
-            nameElement2.innerHTML = name;
+            nameElement2.innerHTML = name.toUppercase();
             console.log(nameElement2)
   
             const idElement = document.getElementById("pokemon-id");

@@ -10,6 +10,8 @@ const pokemonURL = API_URL + pokemon;
 // elements are not updating correctly, 
 //Need to find out how to extract data universally from JSON, 
 // Might need to start console.log to debug, can't figure it out
+//Maybe try await or async keyword
+//maybe try using [indexing] to select each stat 
 searchButton.addEventListener("click", () => {
     if (pokemon === "Red") {
       alert("Pokémon not found");

@@ -14,8 +14,10 @@ const pokemonURL = API_URL + pokemon;
 //maybe it is getElemenetByID on JSON or indexx,
 //did we target the correct divs? 
 // Maybe the json isnt referenced as data.?
+//Maybe try await or async keyword
+//maybe try using [indexing] to select each stat 
 searchButton.addEventListener("click", () => {
-    if (pokemon === "Red") {
+    if (pokemon == "Red") {
       alert("Pokémon not found");
     } else {
       fetch(pokemonURL)

@@ -15,7 +15,7 @@ const pokemonURL = API_URL + pokemon;
 //did we target the correct divs? 
 // Maybe the json isnt referenced as data.?
 searchButton.addEventListener("click", () => {
-    if (pokemon === "Red" || pokemon === "red") {
+    if (pokemon === "Red") {
       alert("Pokémon not found");
     } else {
       fetch(pokemonURL)

@@ -11,7 +11,7 @@ const pokemonURL = API_URL + pokemon;
 //Need to find out how to extract data universally from JSON, 
 // Might need to start console.log to debug, can't figure it out
 searchButton.addEventListener("click", () => {
-    if (pokemon === "Red" || pokemon === "red") {
+    if (pokemon === "Red") {
       alert("Pokémon not found");
     } else {
       fetch(pokemonURL)

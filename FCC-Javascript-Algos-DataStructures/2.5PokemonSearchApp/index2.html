@@ -1,28 +1,76 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Pokémon Search App</title>
-  <link rel="stylesheet" href="styles.css"></link>
-  <script src="pokedex2.js"></script>
-</head>
-<body>
-  <h1>Pokémon Search App</h1>
-  <form>
-    <input type="text" id="search-input" required></input>
-    <button type="submit" id="search-button">Search</button>
-  </form>
-  <div id="pokemon-name"></div>
-  <div id="pokemon-id"></div>
-  <div id="weight"></div>
-  <div id="height"></div>
-  <div id="types"></div>
-  <div id="hp"></div>
-  <div id="attack"></div>
-  <div id="defense"></div>
-  <div id="special-attack"></div>
-  <div id="special-defense"></div>
-  <div id="speed"></div>
-  <div id="types"></div>
-  <img id="sprite"></img>
-</body>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel='stylesheet' href='styles.css' />
+    <title>Pokémon Search App</title>
+  </head>
+  <body>
+    <main>
+      <div id='container' class='container'>
+        <div id='card'>
+          <div id='card-border'>
+          </div>
+          <div id='imgcontainer' class='imgcontainer'>
+            
+          </div>
+          <div class='pokemonname'>
+            <h4 id='pokemon-name'></h4>
+            <h4 id='pokemon-id'></h4>
+          </div>
+          <div class='tablescroll'>
+            <table id='character' class='characteristics'>
+              <thead>
+                <tr>
+                  <th class="header">Base</th>
+                  <th class="header">Stats</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>HP</td>
+                  <td id='hp'></td>
+                </tr>
+                <tr>
+                  <td>Attack</td>
+                  <td id='attack'></td>
+                </tr>
+                <tr>
+                  <td>Defense</td>
+                  <td id='defense'></td>
+                </tr>
+                <tr>
+                  <td>Sp-l attack</td>
+                  <td id='special-attack'></td>
+                </tr>
+                <tr>
+                  <td>Sp-l defence</td>
+                  <td id='special-defense'></td>
+                </tr>
+                <tr>
+                  <td>Speed</td>
+                  <td id='speed'></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class='pokemonname weight'>
+            <h4 id='weight'></h4>
+          </div>
+          <div class='pokemonname height'>
+            <h4 id='height'></h4>
+          </div>
+          <div class="pokemonname parent">
+          </div>
+          <div class='types' id='types'>
+            
+          </div>
+        </div>
+        <input id='search-input' type='text' required />
+        <button id='search-button'> search </button>
+      </div>
+    </main>
+    <script src="pokedex2.js"></script>
+  </body>
 </html>

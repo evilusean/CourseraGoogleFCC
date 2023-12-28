@@ -19,7 +19,6 @@ searchButton.addEventListener("click", () => {
       alert("Pokémon not found");
     } else {
       fetch(pokemonURL)
-      fetch(pokemonURL)
       .then((response) => JSON.parse(response.responseText))
       .then((data) => {
           if (!data|| !data.name || data.name === null) {

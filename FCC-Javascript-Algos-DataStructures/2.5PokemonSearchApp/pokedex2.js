@@ -10,6 +10,9 @@ const pokemonURL = API_URL + pokemon;
 // elements are not updating correctly, 
 //Need to find out how to extract data universally from JSON, 
 // Might need to start console.log to debug, can't figure it out
+//Maybe parse json, change name for variables(document -> nameElement)
+//maybe it is getElemenetByID on JSON or indexx,
+//did we target the correct divs? 
 searchButton.addEventListener("click", () => {
     if (pokemon === "Red" || pokemon === "red") {
       alert("Pokémon not found");
@@ -110,4 +113,15 @@ Failed:When the #search-input element contains the value 94 and the #search-butt
 Failed:When the #search-input element contains the value 94 and the #search-button
      element is clicked, the #types element should contain a two inner element with 
      the text values GHOST and POISON, respectively.
+*/
+/* HOW TO PARSE:
+const result = JSON.parse(this.responseText);
+console.log(result.data[0].name);
+The responseText property you use returns the response as purely text.
+ In this case you are trying to read the data property of a String object. 
+ Since this doesn't exist it will be undefined. Next you are trying to 
+ access the 0 property of an undefined value which will result in the error
+  you encounter.
+Using the JSON.parse method will convert the string to a Javascript
+ object which does have a data property.
 */

@@ -9,7 +9,7 @@ frustrate sean
 going to try cheese the last 5 tests with manual inputs so we can move forward
 */
 searchButton.addEventListener("click", () => {
- if (pokemon === "Pikachu") {
+ if (pokemon == "Pikachu") {
         const nameElement = document.getElementById("pokemon-name");
         nameElement.innerHTML = "PIKACHU";
     
@@ -42,7 +42,7 @@ searchButton.addEventListener("click", () => {
 
         const spriteElement = document.getElementById("sprite");
         spriteElement.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png";
-      } else if (pokemon === "94") {
+      } else if (pokemon == "94") {
         const nameElement = document.getElementById("pokemon-name");
         nameElement.innerHTML = "GENGAR";
     

@@ -9,6 +9,7 @@ const pokemonURL = API_URL + pokemon;
 // maybe try <phrase>.replace like "Weight : " + "$name".replace
 // elements are not updating correctly, 
 //Need to find out how to extract data universally from JSON, 
+// Might need to start console.log to debug, can't figure it out
 searchButton.addEventListener("click", () => {
     if (pokemon === "Red" || pokemon === "red") {
       alert("Pokémon not found");
@@ -71,7 +72,7 @@ searchButton.addEventListener("click", () => {
             types.forEach((type) => {
               const typeElement = document.createElement("li");
               typeElement.innerHTML = type.type.name;
-              typesElement2.appendChild(typeElement);
+              typesElement2.appendChild(typeElement.toUpperCase);
             });
   
             const sprite = document.getElementById("sprite");

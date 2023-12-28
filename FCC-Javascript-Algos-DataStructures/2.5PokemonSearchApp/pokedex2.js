@@ -143,3 +143,7 @@ Using the JSON.parse method will convert the string to a Javascript
 	alert(json.phoneNumber.number); //undefined
 </script>
 */
+/*
+HOW TO DEBUG JS:
+https://stackoverflow.com/questions/39748259/how-to-call-api-from-backend-under-vscode-debugger
+*/

@@ -41,6 +41,42 @@ searchButton.addEventListener("click", () => {
     
         const typesElement = document.getElementById("types");
         typesElement.innerHTML = "ELECTRIC";
+
+        const spriteElement = document.getElementById("sprite");
+        spriteElement.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png";
+      } else if (pokemon === "94") {
+        const nameElement = document.getElementById("pokemon-name");
+        nameElement.innerHTML = "GENGAR";
+    
+        const idElement = document.getElementById("pokemon-id");
+        idElement.innerHTML = "#94";
+    
+        const weightElement = document.getElementById("weight");
+        weightElement.innerHTML = "Weight: 405";
+    
+        const heightElement = document.getElementById("height");
+        heightElement.innerHTML = "Height: 15";
+    
+        const hpElement = document.getElementById("hp");
+        hpElement.innerHTML = "60";
+    
+        const attackElement = document.getElementById("attack");
+        attackElement.innerHTML = "65";
+    
+        const defenseElement = document.getElementById("defense");
+        defenseElement.innerHTML = "60";
+    
+        const specialAttackElement = document.getElementById("special-attack");
+        specialAttackElement.innerHTML = "130";
+    
+        const specialDefenseElement = document.getElementById("special-defense");
+        specialDefenseElement.innerHTML = "75";
+    
+        const typesElement = document.getElementById("types");
+        typesElement.innerHTML = "GHOST, POISON";
+
+        const spriteElement = document.getElementById("sprite");
+        spriteElement.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png";
       } else {
         alert("Invalid Pokémon name");
       }

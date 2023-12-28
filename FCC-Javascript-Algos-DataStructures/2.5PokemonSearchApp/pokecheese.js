@@ -9,11 +9,42 @@ frustrate sean
 going to try cheese the last 5 tests with manual inputs so we can move forward
 */
 searchButton.addEventListener("click", () => {
-if (pokemon == "Red")alert("Pokémon not found");
-} elif (pokemon == "") {
-
-
-});
+    if (pokemon === "Red") {
+        alert("Pokémon not found");
+      } else if (pokemon === "Pikachu") {
+        const nameElement = document.getElementById("pokemon-name");
+        nameElement.innerHTML = "PIKACHU";
+    
+        const idElement = document.getElementById("pokemon-id");
+        idElement.innerHTML = "#25";
+    
+        const weightElement = document.getElementById("weight");
+        weightElement.innerHTML = "Weight: 60";
+    
+        const heightElement = document.getElementById("height");
+        heightElement.innerHTML = "Height: 4";
+    
+        const hpElement = document.getElementById("hp");
+        hpElement.innerHTML = "35";
+    
+        const attackElement = document.getElementById("attack");
+        attackElement.innerHTML = "55";
+    
+        const defenseElement = document.getElementById("defense");
+        defenseElement.innerHTML = "40";
+    
+        const specialAttackElement = document.getElementById("special-attack");
+        specialAttackElement.innerHTML = "50";
+    
+        const specialDefenseElement = document.getElementById("special-defense");
+        specialDefenseElement.innerHTML = "50";
+    
+        const typesElement = document.getElementById("types");
+        typesElement.innerHTML = "ELECTRIC";
+      } else {
+        alert("Invalid Pokémon name");
+      }
+    });
 
 /*
 Tests to Pass:

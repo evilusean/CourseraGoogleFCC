@@ -16,6 +16,8 @@ const pokemonURL = API_URL + pokemon;
 // Maybe the json isnt referenced as data.?
 //Maybe try await or async keyword
 //maybe try using [indexing] to select each stat 
+//maybe the unordered list isn't registering the types for tests
+//CHECK TESTING JS.SCRIPT BEFORE STARTING FROM SCRATCH
 searchButton.addEventListener("click", () => {
     if (pokemon == "Red") {
       alert("Pokémon not found");

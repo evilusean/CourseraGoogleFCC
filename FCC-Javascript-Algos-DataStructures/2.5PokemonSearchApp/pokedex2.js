@@ -1,3 +1,4 @@
+//ALL TESTS PASSED! Will finish CSS Tomo
 const API_URL = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon"
 
 const pokemonImgProx = 'https://static.vecteezy.com/system/resources/previews/027/127/591/original/pokemon-logo-pokemon-icon-transparent-free-png.png'

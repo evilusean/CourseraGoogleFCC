@@ -2,7 +2,6 @@ const API_URL = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon"
 
 const pokemonImgProx = 'https://static.vecteezy.com/system/resources/previews/027/127/591/original/pokemon-logo-pokemon-icon-transparent-free-png.png'
 
-// rename all variable names similar, but still work, change colors too
 const bckgrdNameId = document.getElementsByClassName('pokemonname')
 
 const searchInput = document.getElementById('search-input')
@@ -34,3 +33,6 @@ const pokemonSpeed = document.getElementById('speed')
 const cardBorder = document.getElementById('card-border')
 
 const searchButton = document.getElementById('search-button')
+
+
+pokemonImg.innerHTML = `<img id='sprite' src='${pokemonImgProx}' alt='pokemon-image' class='pokemonimage'/>`

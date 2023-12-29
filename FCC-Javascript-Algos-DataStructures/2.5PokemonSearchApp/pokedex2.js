@@ -86,3 +86,14 @@ const lookForPokemon = async (searchStr) => {
         pokemonSpeed.innerText = pokemon.stats[5].base_stat
         pokemonImg.innerHTML = `<img id="sprite" src="${pokemon.sprites.front_default}" alt="pokemon-image" class="pokemonimage" />`
     }
+
+    
+    searchButton.addEventListener('click', () => {
+        lookForPokemon(searchInput.value)
+     })
+     
+     searchInput.addEventListener('keypress', (e) => {
+         if (e.key === 'Enter') {
+             searchButton.click()
+         }
+     })

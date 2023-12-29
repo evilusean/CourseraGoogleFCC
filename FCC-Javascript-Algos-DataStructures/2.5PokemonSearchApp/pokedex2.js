@@ -43,3 +43,15 @@ const lookForPokemon = async (searchStr) => {
           showPokemon(searchResult)
         }
     }  
+
+    const getAllPokemons = async (url) => {
+  
+        const response = await fetch(url)
+      
+        if (!response.ok) {
+          alert('Pokémon not found');
+        } else {
+              const result = await response.json()
+          return result
+        }
+      }

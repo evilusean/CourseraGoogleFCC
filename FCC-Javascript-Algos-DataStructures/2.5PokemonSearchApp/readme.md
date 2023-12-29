@@ -4,6 +4,7 @@ In this project, you'll build an app that will search for Pokémon by name or ID
 To retrieve the Pokémon data and images, you'll use freeCodeCamp's PokéAPI Proxy.</br>
 
 ![AEsthetik](PokeDex.png)
+![sEArch](PokeDexSearch.png)
 
 Links/Preview: </br>
 https://pokemon-search-app.freecodecamp.rocks </br>

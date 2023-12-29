@@ -8,6 +8,7 @@ const pokemonURL = API_URL + pokemon;
 because it's an API call and has to promise a return, I can't even check if my inputs are going into the right divs, or if I'm even getting the correct inputs
 frustrate sean
 going to try cheese the last 5 tests with manual inputs so we can move forward
+Maybe it is .innerhtml? common denominator
 */
 searchButton.addEventListener("click", () => {
  if (pokemon == "Pikachu") {

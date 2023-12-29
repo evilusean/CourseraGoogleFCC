@@ -7,7 +7,7 @@ Link/Preview: </br>
 https://palindrome-checker.freecodecamp.rocks/</br>
 https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/build-a-palindrome-checker-project/build-a-palindrome-checker</br>
 
-
+=======================================================================</br>
 End: 22December2023</br>
 Palindrome Checker : </br>
 Return true if the given string is a palindrome. Otherwise, return false. </br>

@@ -87,7 +87,7 @@ const lookForPokemon = async (searchStr) => {
         pokemonImg.innerHTML = `<img id="sprite" src="${pokemon.sprites.front_default}" alt="pokemon-image" class="pokemonimage" />`
     }
 
-    
+
     searchButton.addEventListener('click', () => {
         lookForPokemon(searchInput.value)
      })
@@ -97,3 +97,35 @@ const lookForPokemon = async (searchStr) => {
              searchButton.click()
          }
      })
+
+
+     const colours = {
+        normal: '#A8A87B',
+        fire: '#EE8231',
+        water: '#6391F1',
+        electric: '#F7D12D',
+        grass: '#7AC84D',
+        ice: '#96DADC',
+        fighting: '#C22F29',
+        poison: '#A33FB2',
+        ground: '#E2C066',
+        flying: '#A990F4',
+        psychic: '#F95688',
+        bug: '#A6BA1B',
+        rock: '#B6A237',
+        ghost: '#735898',
+        dragon: '#6F36FD',
+        dark: '#705847',
+        steel: '#B7B8CF',
+        fairy: '#D686AE',
+    };
+    
+    const convertHexToRgb = (hex) => {
+        hex = hex.slice(1)
+        return [Number.parseInt(hex.slice(0,2), 16), Number.parseInt(hex.slice(2,4), 16), Number.parseInt(hex.slice(4,6), 16)]
+    }
+    
+    const contrastColor = (color) => {
+        let luminance = Number.parseFloat((0.299*color[0] + 0.587*color[1] + 0.114*color[2])/255)
+        return luminance>0.5 ? [0,0,0] : [255,255,255]
+    }

@@ -36,3 +36,10 @@ const searchButton = document.getElementById('search-button')
 
 
 pokemonImg.innerHTML = `<img id='sprite' src='${pokemonImgProx}' alt='pokemon-image' class='pokemonimage'/>`
+
+const lookForPokemon = async (searchStr) => {
+    if (searchStr) {
+      const searchResult = await getAllPokemons(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${searchStr.toLowerCase()}`)
+          showPokemon(searchResult)
+        }
+    }  

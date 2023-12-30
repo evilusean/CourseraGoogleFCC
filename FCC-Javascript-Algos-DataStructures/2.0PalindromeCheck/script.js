@@ -13,3 +13,4 @@ function palindrome(str) {
   
     return result;
   }
+//TO DO: ADD event listener on click, check text input 

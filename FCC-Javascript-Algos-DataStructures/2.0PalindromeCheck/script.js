@@ -20,13 +20,13 @@ const form = document.querySelector('form');
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const inputValue = document.querySelector('#palindrome').value;
+  const inputValue = document.querySelector('.text-input').value;
 
-  const result = palindrome(inputValue);
+  const result2 = palindrome(inputValue);
 
-  const div = document.querySelector('div');
+  const div = document.querySelector('result');
 
-  if (result) {
+  if (result2) {
     div.innerHTML = 'The input is a palindrome!';
   } else {
     div.innerHTML = 'The input is not a palindrome!';

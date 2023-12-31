@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    margin: 0 auto;
+    width: 500px;
+  }
+  
+  input {
+    margin-bottom: 10px;
+  }
+  
+  #check-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #clear-btn {
+    background-color: #ccc;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #results-div {
+    margin-top: 20px;
+    text-align: center;
+  }

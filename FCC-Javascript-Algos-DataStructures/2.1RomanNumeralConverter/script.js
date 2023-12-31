@@ -96,15 +96,19 @@ function convertToRoman(num) {
   */
   const form = document.querySelector('form');
 
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('click', (event) => {
     event.preventDefault();
   
     const number = document.getElementById('number').value;
     const output = document.getElementById('output');
   
-    const romanNumeral = convertNumberToRoman(number);
+    if (number === '') {
+      output.innerHTML = 'Please enter a valid number';
+    } else {
+      const romanNumeral = convertNumberToRoman(number);
   
-    output.innerHTML = romanNumeral;
+      output.innerHTML = romanNumeral;
+    }
   });
   
   function convertNumberToRoman(number) {

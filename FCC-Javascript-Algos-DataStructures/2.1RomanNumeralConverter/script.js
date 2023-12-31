@@ -106,6 +106,8 @@ function convertToRoman(num) {
       output.innerHTML = 'Please enter a valid number';
     } else if (number < 1) {
       output.innerHTML = 'Please enter a number greater than or equal to 1';
+    } else if (number > 3999) {
+      output.innerHTML = 'Please enter a number less than or equal to 3999';
     } else {
       const romanNumeral = convertNumberToRoman(number);
   

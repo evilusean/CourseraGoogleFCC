@@ -94,6 +94,7 @@ function convertToRoman(num) {
     return output;
   }
   */
+ /* ATTEMPT 2:
   const form = document.querySelector('form');
 
   form.addEventListener('click', (event) => {
@@ -141,5 +142,45 @@ function convertToRoman(num) {
       romanNumeral += romanNumerals[quotient * i];
     }
   
+    return romanNumeral;
+  }
+  */
+  document.getElementById('convert-btn').addEventListener('click', () => {
+    const inputNumber = parseInt(document.getElementById('number').value)
+    if (isNaN(inputNumber) || inputNumber < 1) {
+      document.getElementById('output').textContent = "Please enter a valid number"
+    } else if (inputNumber < 1) {
+      document.getElementById('output').textContent = "Please enter a number greater than or equal to 1"
+    } else if (inputNumber >= 4000) {
+      document.getElementById('output').textContent = "Please enter a number less than or equal to 3999"
+    } else {
+      const romanNumerals = convertToRoman(inputNumber);
+          document.getElementById('output').textContent = romanNumerals;
+    }
+  });
+  
+  function convertToRoman (num) {
+     let romanNumeral = '';
+     const romanNumeralMapping = [
+          { value: 1000, numeral: 'M' },
+          { value: 900, numeral: 'CM' },
+          { value: 500, numeral: 'D' },
+          { value: 400, numeral: 'CD' },
+          { value: 100, numeral: 'C' },
+          { value: 90, numeral: 'XC' },
+          { value: 50, numeral: 'L' },
+          { value: 40, numeral: 'XL' },
+          { value: 10, numeral: 'X' },
+          { value: 9, numeral: 'IX' },
+          { value: 5, numeral: 'V' },
+          { value: 4, numeral: 'IV' },
+          { value: 1, numeral: 'I' }
+     ];
+     for(let i=0; i < romanNumeralMapping.length; i++) {
+       while (num >= romanNumeralMapping[i].value) {
+        romanNumeral += romanNumeralMapping[i].numeral;
+        num -= romanNumeralMapping[i].value;
+       }
+    }
     return romanNumeral;
   }

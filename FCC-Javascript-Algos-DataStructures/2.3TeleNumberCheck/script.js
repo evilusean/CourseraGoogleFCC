@@ -25,3 +25,28 @@ function telephoneCheck(str) {
   
     return outcome;
   }
+
+  const form = document.querySelector('form');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const userInput = document.getElementById('user-input').value;
+
+  const resultsDiv = document.getElementById('results-div');
+
+  const isValid = telephoneCheck(userInput);
+
+  if (isValid) {
+    resultsDiv.innerHTML = 'The phone number is valid.';
+  } else {
+    resultsDiv.innerHTML = 'The phone number is invalid.';
+  }
+});
+/*
+function isValidPhoneNumber(phoneNumber) {
+  const phoneNumberRegex = /^(\d{3})-(\d{3})-(\d{4})$/;
+
+  return phoneNumberRegex.test(phoneNumber);
+}
+*/

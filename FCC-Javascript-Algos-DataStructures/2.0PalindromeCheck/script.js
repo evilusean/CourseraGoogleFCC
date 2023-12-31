@@ -14,8 +14,7 @@ function palindrome(str) {
   
     return result;
   } 
-//TO DO: ADD event listener on click, check text input 
-// return to where?
+
 const form = document.querySelector('form');
 
 form.addEventListener('click', (event) => {
@@ -30,9 +29,9 @@ form.addEventListener('click', (event) => {
     const isPalindrome = palindrome(value);
 
     if (isPalindrome) {
-      result.innerHTML = `<h1>${value} is a palindrome</h1>`;
+      result.innerText = `<h1>${value} is a palindrome</h1>`;
     } else {
-      result.innerHTML = `<h1>${value} is not a palindrome</h1>`;
+      result.innerText = `<h1>${value} is not a palindrome</h1>`;
     }
   }
 });

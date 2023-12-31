@@ -27,9 +27,9 @@ checkBtn.addEventListener("click", () => {
   const isPalindrome = palindrome(value);
 
   if (isPalindrome) {
-    result.innerHTML = `${value} is a palindrome`;
+    result.innerHTML = `<p>${value} is a palindrome</p>`;
   } else {
-    result.innerHTML = `${value} is not a palindrome`;
+    result.innerHTML = `<p>${value} is not a palindrome</p>`;
   }
 });
 

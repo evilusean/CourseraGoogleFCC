@@ -147,9 +147,9 @@ function convertToRoman(num) {
   */
   document.getElementById('convert-btn').addEventListener('click', () => {
     const inputNumber = parseInt(document.getElementById('number').value)
-    if (isNaN(inputNumber) || inputNumber < 1) {
+    if (isNaN(inputNumber) ) {
       document.getElementById('output').textContent = "Please enter a valid number"
-    } else if (inputNumber < 1) {
+    } else if (inputNumber <= 0) {
       document.getElementById('output').textContent = "Please enter a number greater than or equal to 1"
     } else if (inputNumber >= 4000) {
       document.getElementById('output').textContent = "Please enter a number less than or equal to 3999"

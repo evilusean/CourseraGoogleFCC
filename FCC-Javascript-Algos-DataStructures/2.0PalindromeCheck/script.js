@@ -18,18 +18,23 @@ function palindrome(str) {
 // return to where?
 const form = document.querySelector('form');
   
-const textInput = document.getElementById("text-input");
 const checkBtn = document.getElementById("check-btn");
 const result = document.getElementById("result");
 
 checkBtn.addEventListener("click", () => {
-  const value = textInput.value;
-  const isPalindrome = palindrome(value);
+  const textInput = document.getElementById('text-input');
 
-  if (isPalindrome) {
-    result.innerHTML = `<p>${value} is a palindrome</p>`;
+  if (textInput.value === '') {
+    alert('Please input a value');
   } else {
-    result.innerHTML = `<p>${value} is not a palindrome</p>`;
+    const value = textInput.value;
+    const isPalindrome = palindrome(value);
+
+    if (isPalindrome) {
+      result.innerHTML = `<p>${value} is a palindrome</p>`;
+    } else {
+      result.innerHTML = `<p>${value} is not a palindrome</p>`;
+    }
   }
 });
 

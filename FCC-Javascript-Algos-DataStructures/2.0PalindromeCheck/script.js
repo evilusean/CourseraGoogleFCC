@@ -1,3 +1,4 @@
+/* Old Code-variable names conflict -can do same with less
 function palindrome(str) {
     let strLowerCase = str.toLowerCase();
     let editedStr = strLowerCase.replace(/[^0-9a-z]/gi, ''); 
@@ -12,7 +13,7 @@ function palindrome(str) {
     }
   
     return result;
-  }
+  } */
 //TO DO: ADD event listener on click, check text input 
 // return to where?
 const form = document.querySelector('form');

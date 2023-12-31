@@ -1,4 +1,4 @@
-/* Old Code-variable names conflict -can do same with less
+
 function palindrome(str) {
     let strLowerCase = str.toLowerCase();
     let editedStr = strLowerCase.replace(/[^0-9a-z]/gi, ''); 
@@ -13,15 +13,14 @@ function palindrome(str) {
     }
   
     return result;
-  } */
+  } 
 //TO DO: ADD event listener on click, check text input 
 // return to where?
 const form = document.querySelector('form');
-  
-const checkBtn = document.getElementById("check-btn");
-const result = document.getElementById("result");
 
-checkBtn.addEventListener("click", () => {
+form.addEventListener('click', (event) => {
+  event.preventDefault();
+
   const textInput = document.getElementById('text-input');
 
   if (textInput.value === '') {
@@ -31,22 +30,22 @@ checkBtn.addEventListener("click", () => {
     const isPalindrome = palindrome(value);
 
     if (isPalindrome) {
-      result.innerHTML = `<p>${value} is a palindrome</p>`;
+      result.innerHTML = `<h1>${value} is a palindrome</h1>`;
     } else {
-      result.innerHTML = `<p>${value} is not a palindrome</p>`;
+      result.innerHTML = `<h1>${value} is not a palindrome</h1>`;
     }
   }
 });
 
-function palindrome(str) {
+/* function palindrome(str) {
   // Convert the string to lowercase and remove all non-alphanumeric characters.
-  const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
 
-  // Check if the cleaned string is empty or has only one character.
-  if (cleanedStr === "" || cleanedStr.length === 1) {
-    return true;
+
+  if (cleanedStr === '' ) {
+    alert('Please input a value');
   }
 
   // Compare the cleaned string to its reversed form.
   return cleanedStr === cleanedStr.split("").reverse().join("");
-}
+} */

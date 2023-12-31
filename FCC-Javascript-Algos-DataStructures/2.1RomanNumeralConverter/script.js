@@ -1,3 +1,4 @@
+/* OLD SCRIPT:
 function convertToRoman(num) {
     let remainingNum = num;
     let output = "";
@@ -91,4 +92,46 @@ function convertToRoman(num) {
     }
   
     return output;
+  }
+  */
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+  
+    const number = document.getElementById('number').value;
+    const output = document.getElementById('output');
+  
+    const romanNumeral = convertNumberToRoman(number);
+  
+    output.innerHTML = romanNumeral;
+  });
+  
+  function convertNumberToRoman(number) {
+    const romanNumerals = {
+      1: 'I',
+      4: 'IV',
+      5: 'V',
+      9: 'IX',
+      10: 'X',
+      40: 'XL',
+      50: 'L',
+      90: 'XC',
+      100: 'C',
+      400: 'CD',
+      500: 'D',
+      900: 'CM',
+      1000: 'M'
+    };
+  
+    let romanNumeral = '';
+  
+    for (let i = 1000; i >= 1; i /= 10) {
+      const quotient = Math.floor(number / i);
+      number %= i;
+  
+      romanNumeral += romanNumerals[quotient * i];
+    }
+  
+    return romanNumeral;
   }

@@ -45,6 +45,13 @@ function telephoneCheck(str) {
       }
     }
   });
+
+  const clearBtn = document.getElementById('clear-btn');
+
+  clearBtn.addEventListener('click', () => {
+    resultsDiv.innerHTML = '';
+  });
+/*
 /*
 function isValidPhoneNumber(phoneNumber) {
   const phoneNumberRegex = /^(\d{3})-(\d{3})-(\d{4})$/;

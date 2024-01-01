@@ -1,4 +1,4 @@
-
+//ATTEMPT # 10 - WHY WONT IT WORK - 
     function checkPhoneNumber(phoneNumber) {
         // Check if the phone number is in the correct format.
         if (!phoneNumber.match(/^(\d{3}-\d{3}-\d{4})|(\d{10})$/)) {
@@ -43,9 +43,13 @@ checkButton.addEventListener("click", () => {
 
   // Check if the phone number is valid.
   const isValid = checkPhoneNumber(phoneNumber);
+  if (input.value === "") {
+    alert("Please enter a valid phone number.");
+  } else {
 
   // Display the results.
   displayResults(isValid, phoneNumber);
+}
 });
 
 clearButton.addEventListener("click", () => {

@@ -32,3 +32,23 @@
         }
       }
 
+      const input = document.getElementById("user-input");
+
+input.addEventListener("click", () => {
+  // Get the phone number from the input field.
+  const phoneNumber = input.value;
+
+  // Check if the phone number is valid.
+  const isValid = checkPhoneNumber(phoneNumber);
+
+  // Display the results.
+  displayResults(isValid, phoneNumber);
+});
+
+clearButton.addEventListener("click", () => {
+    // Clear the input field.
+    input.value = "";
+  
+    // Clear the results div.
+    document.getElementById("results-div").innerHTML = "";
+  });

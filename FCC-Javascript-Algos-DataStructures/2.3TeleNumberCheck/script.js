@@ -17,7 +17,7 @@ function telephoneCheck(str) {
       }
   
       else{
-        return true;
+        return isValid;
       }
     }
   
@@ -41,7 +41,8 @@ function telephoneCheck(str) {
       if (isValid) {
         resultsDiv.innerHTML = 'Valid US number: ' + userInput + '';
       } else {
-        resultsDiv.innerHTML = 'Invalid US number: ' + userInput + '';      }
+        resultsDiv.innerHTML = 'Invalid US number: ' + userInput + '';
+      }
     }
   });
 

@@ -28,21 +28,25 @@ function telephoneCheck(str) {
 
   const form = document.querySelector('form');
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const userInput = document.getElementById('user-input').value;
-
-  const resultsDiv = document.getElementById('results-div');
-
-  const isValid = telephoneCheck(userInput);
-
-  if (isValid) {
-    resultsDiv.innerHTML = 'The phone number is valid.';
-  } else {
-    resultsDiv.innerHTML = 'The phone number is invalid.';
-  }
-});
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+  
+    const userInput = document.getElementById('user-input').value;
+  
+    if (userInput === '') {
+      alert('Please provide a phone number.');
+    } else {
+      const resultsDiv = document.getElementById('results-div');
+  
+      const isValid = telephoneCheck(userInput);
+  
+      if (isValid) {
+        resultsDiv.innerHTML = 'The phone number is valid.';
+      } else {
+        resultsDiv.innerHTML = 'The phone number is invalid.';
+      }
+    }
+  });
 /*
 function isValidPhoneNumber(phoneNumber) {
   const phoneNumberRegex = /^(\d{3})-(\d{3})-(\d{4})$/;

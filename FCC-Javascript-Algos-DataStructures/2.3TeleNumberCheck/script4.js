@@ -9,6 +9,7 @@ const checkButton = document.querySelector("#check-btn");
 const input = document.querySelector("input");
 checkButton.addEventListener("click", () => {
     // Get the phone number from the input field.
+    console.log(input.value);
     if (input.value == "" || null || undefined) {
       alert("Please provide a phone number");
       return;

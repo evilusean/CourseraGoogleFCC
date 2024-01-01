@@ -77,3 +77,10 @@ function checkPhoneNumber(phoneNumber) {
     document.getElementById("results-div").innerHTML = "";
   });
   
+// Add an event listener to the input field.
+input.addEventListener("input", () => {
+  // If the input field is empty, raise an alert.
+  if (input.value === "") {
+    alert("Please provide a phone number");
+  }
+});

@@ -33,8 +33,11 @@
       }
 
       const input = document.getElementById("user-input");
+      const clearButton = document.getElementById("clear-button");
+      const checkButton = document.getElementById("check-button");
 
-input.addEventListener("click", () => {
+// Add an event listener to the input field.
+checkButton.addEventListener("click", () => {
   // Get the phone number from the input field.
   const phoneNumber = input.value;
 

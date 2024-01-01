@@ -41,15 +41,26 @@ form.addEventListener('click', (event) => {
     const isValid = telephoneCheck(userInput);
 
     if (isValid) {
-      resultsDiv.innerText = 'Valid US number: ' + userInput + '';
-    } else {
-      resultsDiv.innerText = 'Invalid US number: ' + userInput + '';
+        const pTag = document.createElement('p');
+        pTag.className = 'results-text';
+        phoneRegex.test(input)
+          ? (pTag.style.color = '#00471b')
+          : (pTag.style.color = '#4d3800');
+        pTag.appendChild(
+          document.createTextNode(
+            `${phoneRegex.test(input) ? 'Valid' : 'Invalid'} US number: ${input}`
+          )
+        );
+        resultsDiv.appendChild(pTag);
+      } else {
+        resultsDiv.innerText = 'Invalid US number: ' + userInput + '';
+      }
     }
-  }
-});
+  });
 
 const clearBtn = document.getElementById('clear-btn');
 
 clearBtn.addEventListener('click', () => {
   resultsDiv.innerHTML = '';
 });
+

@@ -41,9 +41,9 @@ form.addEventListener('click', (event) => {
     const isValid = telephoneCheck(userInput);
 
     if (isValid) {
-      resultsDiv.innerText = 'Valid US number: ' + userInput + '';
+      resultsDiv.innerText = 'Valid US number: ' + userInput;
     } else {
-      resultsDiv.innerText = 'Invalid US number: ' + userInput + '';
+      resultsDiv.innerText = 'Invalid US number: ' + userInput;
     }
   }
 });

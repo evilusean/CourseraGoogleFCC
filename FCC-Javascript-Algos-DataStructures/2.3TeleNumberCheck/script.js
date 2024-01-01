@@ -109,3 +109,13 @@ clearBtn.addEventListener('click', () => {
   resultsDiv.textContent = '';
 });
 */
+
+IT WON'T EVEN PASS THE TEST I EXPLICITLY TELL IT TO
+THIS HOT GARBAGE RIGHT HERE
+const checkValidNumber = input => {
+    if (input === '') {
+      alert('Please provide a phone number');
+      return;
+    }
+APPARENTLY IF YOU TELL JS EXPLICITLY TO RAISE AN ALARM IT WILL NOT FCKING DO IT
+AND STILL FAIL THE FCKING TESTS

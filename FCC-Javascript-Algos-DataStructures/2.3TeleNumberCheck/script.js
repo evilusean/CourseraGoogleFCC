@@ -17,7 +17,7 @@ function telephoneCheck(str) {
       }
   
       else{
-        return isValid;
+        return true;
       }
     }
   

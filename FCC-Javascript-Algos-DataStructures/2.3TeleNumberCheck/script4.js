@@ -5,10 +5,10 @@ When you click on the #check-btn element without entering a value into the
 phone number.
 */
 
-const checkButton = document.getElementById("check-btn");
-const input = document.getElementById("user-input");
+const checkButton = document.querySelector("#check-btn");
+const input = document.querySelector("#user-input");
 checkButton.addEventListener("click", () => {
-    if (input.value === "" || null || undefined || !input.value) {
+    if (input.value == "" || null || undefined || !input.value || NaN) {
       alert("Please provide a phone number");
       return;
     }

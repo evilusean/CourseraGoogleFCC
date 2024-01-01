@@ -43,7 +43,7 @@ checkButton.addEventListener("click", () => {
 
   // Check if the phone number is valid.
   const isValid = checkPhoneNumber(phoneNumber);
-  if (input.value === "") {
+  if (user-input.value === "") {
     alert("Please enter a valid phone number.");
   } else {
 

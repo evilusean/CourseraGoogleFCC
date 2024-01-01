@@ -39,9 +39,9 @@ function telephoneCheck(str) {
       const isValid = telephoneCheck(userInput);
   
       if (isValid) {
-        resultsDiv.innerHTML = 'The phone number is valid.';
+        resultsDiv.innerHTML = 'Valid US number: ' + userInput + '';
       } else {
-        resultsDiv.innerHTML = 'The phone number is invalid.';
+        resultsDiv.innerHTML = 'Invalid US number: ' + userInput + '';
       }
     }
   });

@@ -6,7 +6,7 @@ phone number.
 */
 
 const checkButton = document.querySelector("#check-btn");
-input = document.querySelector("input");
+const input = document.querySelector("input");
 checkButton.addEventListener("click", () => {
     // Get the phone number from the input field.
     if (input.value == "" || null || undefined) {

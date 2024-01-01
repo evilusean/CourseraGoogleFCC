@@ -60,6 +60,7 @@ const phoneNumberRegex = /^(\d{3})-(\d{3})-(\d{4})$/;
 return phoneNumberRegex.test(phoneNumber);
 }
 */
+//literally the code from example project website, doesn't pass it's own tests. -.- 
 const userInput = document.getElementById('user-input');
 const checkBtn = document.getElementById('check-btn');
 const clearBtn = document.getElementById('clear-btn');

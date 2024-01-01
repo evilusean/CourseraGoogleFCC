@@ -24,37 +24,38 @@ function telephoneCheck(str) {
   
     return false;
   }
-
-  const form = document.querySelector('check-btn');
-
-  form.addEventListener('click', (event) => {
-    event.preventDefault();
-  
-    const userInput = document.getElementById('user-input').value;
-  
-    if (userInput === '') {
-      alert('Please provide a phone number.');
-    } else {
-      const resultsDiv = document.getElementById('results-div');
-  
-      const isValid = telephoneCheck(userInput);
-  
-      if (isValid) {
-        resultsDiv.innerText = 'Valid US number: ' + userInput + '';
-      } else {
-        resultsDiv.innerText = 'Invalid US number: ' + userInput + '';
-      }
-    }
-  });
-
-  const clearBtn = document.getElementById('clear-btn');
-
-  clearBtn.addEventListener('click', () => {
-    resultsDiv.innerHTML = '';
-  });
 */
-function isValidPhoneNumber(phoneNumber) {
-  const phoneNumberRegex = /^(\d{3})-(\d{3})-(\d{4})$/;
+const form = document.querySelector('check-btn');
 
-  return phoneNumberRegex.test(phoneNumber);
+form.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  const userInput = document.getElementById('user-input').value;
+
+  if (userInput === '') {
+    alert('Please provide a phone number.');
+  } else {
+    const resultsDiv = document.getElementById('results-div');
+
+    const isValid = telephoneCheck(userInput);
+
+    if (isValid) {
+      resultsDiv.innerText = 'Valid US number: ' + userInput + '';
+    } else {
+      resultsDiv.innerText = 'Invalid US number: ' + userInput + '';
+    }
+  }
+});
+
+const clearBtn = document.getElementById('clear-btn');
+
+clearBtn.addEventListener('click', () => {
+  resultsDiv.innerHTML = '';
+});
+
+function isValidPhoneNumber(phoneNumber) {
+const phoneNumberRegex = /^(\d{3})-(\d{3})-(\d{4})$/;
+
+return phoneNumberRegex.test(phoneNumber);
 }
+

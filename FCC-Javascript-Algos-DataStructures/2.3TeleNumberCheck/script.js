@@ -9,7 +9,6 @@ function telephoneCheck(str) {
     const case8 = /^1{1}\(\d{3}\)\d{3}-\d{4}$/; // 1(555)555-5555
     const case9 = /^1{1}\s{1}\d{3}-\d{3}-\d{4}$/; // 1 555-555-5555
     const cases = [case1, case2, case3, case4, case5, case6, case7, case8, case9];
-    let outcome = false;
     let caseIndex = 0;
   
     while (caseIndex < cases.length){
@@ -18,12 +17,11 @@ function telephoneCheck(str) {
       }
   
       else{
-        outcome = true;
-        break;
+        return true;
       }
     }
   
-    return outcome;
+    return false;
   }
 
   const form = document.querySelector('form');

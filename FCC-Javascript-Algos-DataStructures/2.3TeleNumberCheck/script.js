@@ -24,7 +24,7 @@ function telephoneCheck(str) {
     return false;
   }
 
-  const form = document.querySelector('form');
+  const form = document.querySelector('check-btn');
 
   form.addEventListener('click', (event) => {
     event.preventDefault();

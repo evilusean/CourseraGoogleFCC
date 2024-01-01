@@ -17,6 +17,10 @@ When you click on the #check-btn element without entering a value into the
 */
 //ATTEMPT # 11 - WHY WONT IT WORK - 
 function checkPhoneNumber(phoneNumber) {
+  if (input.value === "") {
+    alert("Please provide a phone number");
+    return;
+  }
   // Check if the phone number is in the correct format.
   if (!phoneNumber.match(/^(\d{3}-\d{3}-\d{4})|(\d{10})$/)) {
     return false;
@@ -43,9 +47,9 @@ function checkPhoneNumber(phoneNumber) {
 
 function displayResults(isValid, phoneNumber) {
   if (isValid) {
-    document.getElementById("results-div").innerText = `Valid US number: ${phoneNumber}`;
+    document.getElementById("results-div").innerHTML = `Valid US number: ${phoneNumber}`;
   } else {
-    document.getElementById("results-div").innerText = `Invalid US number: ${phoneNumber}`;
+    document.getElementById("results-div").innerHTML = `Invalid US number: ${phoneNumber}`;
   }
 }
 

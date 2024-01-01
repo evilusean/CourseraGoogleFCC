@@ -32,7 +32,7 @@
         }
       }
 
-      const input = document.getElementById("user-input");
+      const input = document.getElementById("user-input").value;
       const clearButton = document.getElementById("clear-button");
       const checkButton = document.getElementById("check-button");
 
@@ -43,8 +43,8 @@ checkButton.addEventListener("click", () => {
 
   // Check if the phone number is valid.
   const isValid = checkPhoneNumber(phoneNumber);
-  if (user-input.value === "") {
-    alert("Please enter a valid phone number.");
+  if (input.value === "" || input.value === null) {
+    alert("Please provide a phone number");
   } else {
 
   // Display the results.

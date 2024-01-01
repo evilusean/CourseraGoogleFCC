@@ -19,7 +19,7 @@ When you click on the #check-btn element without entering a value into the
 function checkPhoneNumber(phoneNumber) {
   if (input.value === "") {
     alert("Please provide a phone number");
-    return;
+
   }
   // Check if the phone number is in the correct format.
   if (!phoneNumber.match(/^(\d{3}-\d{3}-\d{4})|(\d{10})$/)) {
@@ -80,4 +80,5 @@ clearButton.addEventListener("click", () => {
   // Clear the results div.
   document.getElementById("results-div").innerHTML = "";
 });
+
 

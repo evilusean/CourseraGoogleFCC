@@ -32,7 +32,7 @@
         }
       }
 
-      const input = document.getElementById("user-input").value;
+      const input = document.getElementById("user-input");
       const clearButton = document.getElementById("clear-button");
       const checkButton = document.getElementById("check-button");
 

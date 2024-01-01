@@ -26,7 +26,7 @@ function telephoneCheck(str) {
 
   const form = document.querySelector('form');
 
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('click', (event) => {
     event.preventDefault();
   
     const userInput = document.getElementById('user-input').value;

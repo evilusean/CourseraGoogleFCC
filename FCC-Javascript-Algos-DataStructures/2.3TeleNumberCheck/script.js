@@ -1,3 +1,4 @@
+/* ATTEMPT 1
 function telephoneCheck(str) {
     const case1 = /^\d{3}-\d{3}-\d{4}$/; // 555-555-5555
     const case2 = /^\(\d{3}\)\d{3}-\d{4}$/; // (555)555-5555
@@ -9,7 +10,7 @@ function telephoneCheck(str) {
     const case8 = /^1{1}\(\d{3}\)\d{3}-\d{4}$/; // 1(555)555-5555
     const case9 = /^1{1}\s{1}\d{3}-\d{3}-\d{4}$/; // 1 555-555-5555
     const cases = [case1, case2, case3, case4, case5, case6, case7, case8, case9];
-    let caseIndex = 0;
+    let caseIndex =0;
   
     while (caseIndex < cases.length){
       if (cases[caseIndex].test(str) === false){
@@ -51,11 +52,9 @@ function telephoneCheck(str) {
   clearBtn.addEventListener('click', () => {
     resultsDiv.innerHTML = '';
   });
-/*
-/*
+*/
 function isValidPhoneNumber(phoneNumber) {
   const phoneNumberRegex = /^(\d{3})-(\d{3})-(\d{4})$/;
 
   return phoneNumberRegex.test(phoneNumber);
 }
-*/

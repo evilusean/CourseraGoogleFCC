@@ -53,8 +53,6 @@
   const userInput = document.getElementById('user-input');
   const resultsDiv = document.getElementById('results-div');
   clearBtn.addEventListener('click', () => {
-    resultsDiv.delete();
-    userInput.value = '';
     resultsDiv.innerHTML = '';
-    resultsDiv.reset();
+    userInput.value = '';
   });

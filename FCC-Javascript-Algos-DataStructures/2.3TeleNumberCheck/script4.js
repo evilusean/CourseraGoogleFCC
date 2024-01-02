@@ -42,13 +42,7 @@
       }
     }
   });
-/*
-  const clearBtn = document.getElementById('clear-btn');
 
-  clearBtn.addEventListener('click', () => {
-    resultsDiv.innerHTML = '';
-  });
-*/
   const clearBtn = document.getElementById('clear-btn');
   const userInput = document.getElementById('user-input');
   const resultsDiv = document.getElementById('results-div');

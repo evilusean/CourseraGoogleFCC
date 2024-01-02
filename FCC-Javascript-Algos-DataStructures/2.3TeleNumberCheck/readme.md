@@ -12,7 +12,7 @@ In the US, phone numbers can be formatted in many ways. Here are some examples o
 Note that the area code is required. Also, if the country code is provided, you must confirm that the country code is 1.</br>
 
 Objective: Build an app that is functionally similar to</br>
-![TeleNumValidator](TeleNumValidator)
+![TeleNumValidator](TeleNumValidator.png)
 
 Link/Preview:
 https://telephone-number-validator.freecodecamp.rocks/</br>

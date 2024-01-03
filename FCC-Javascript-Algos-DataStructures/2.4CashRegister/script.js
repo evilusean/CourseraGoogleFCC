@@ -1,3 +1,4 @@
+/* OLD CODE: 
 function checkCashRegister(price, cash, cid) {
     const cidCopy = cid.map((x) => x);
     let output = {status: "", change: []};
@@ -148,9 +149,9 @@ function checkCashRegister(price, cash, cid) {
   
     return output;
   }
-  
+*/  
 
-  const form = document.querySelector('form');
+  const form = document.selectelementedbyID('submit');
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -162,10 +163,13 @@ function checkCashRegister(price, cash, cid) {
     const change = cash - price;
   
     if (change < 0) {
-      document.querySelector('#result').innerHTML = 'You do not have enough cash.';
+      document.querySelector('#result').innerHTML = 'Customer does not have enough money to purchase the item';
     } else if (change > drawer) {
       document.querySelector('#result').innerHTML = 'The cash drawer does not have enough cash.';
-    } else {
+    } else if (change = drawer) {
+        document.querySelector('#result').innerHTML = 'No change due - customer paid with exact cash';
+      }
+    else {
       const changeInDollars = change / 100;
       const changeInCoins = [
         {

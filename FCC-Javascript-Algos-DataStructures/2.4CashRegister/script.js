@@ -149,5 +149,75 @@ function checkCashRegister(price, cash, cid) {
     return output;
   }
   
-  checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
+
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+  
+    const price = Number(document.querySelector('#price').value);
+    const cash = Number(document.querySelector('#cash').value);
+    const drawer = Number(document.querySelector('#drawer').value);
+  
+    const change = cash - price;
+  
+    if (change < 0) {
+      document.querySelector('#result').innerHTML = 'You do not have enough cash.';
+    } else if (change > drawer) {
+      document.querySelector('#result').innerHTML = 'The cash drawer does not have enough cash.';
+    } else {
+      const changeInDollars = change / 100;
+      const changeInCoins = [
+        {
+          name: 'ONE HUNDRED',
+          value: 100
+        },
+        {
+          name: 'TWENTY',
+          value: 20
+        },
+        {
+          name: 'TEN',
+          value: 10
+        },
+        {
+          name: 'FIVE',
+          value: 5
+        },
+        {
+          name: 'ONE',
+          value: 1
+        },
+        {
+          name: 'QUARTER',
+          value: 0.25
+        },
+        {
+          name: 'DIME',
+          value: 0.1
+        },
+        {
+          name: 'NICKEL',
+          value: 0.05
+        },
+        {
+          name: 'PENNY',
+          value: 0.01
+        }
+      ];
+  
+      const changeCoins = [];
+  
+      for (let i = 0; i < changeInCoins.length; i++) {
+        const coin = changeInCoins[i];
+  
+        while (changeInDollars >= coin.value) {
+          changeInDollars -= coin.value;
+          changeCoins.push(coin.name);
+        }
+      }
+  
+      document.querySelector('#result').innerHTML = `Your change is $${changeInDollars}. Here are your coins: ${changeCoins.join(', ')}`;
+    }
+  });
   

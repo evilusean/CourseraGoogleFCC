@@ -26,7 +26,7 @@ function giveCash(change, cid) {
   if (change == 0) {
     return []
   }
-  
+
   if (sumCid(cid)<change) {
     return [0]
     }
@@ -84,3 +84,11 @@ purchaseBtn.addEventListener('click', () => {
   }
   cashInput.value = '';
 });
+
+/* TESTS TO PASS:
+When price is 19.5, the value in the #cash element is 20, cid is 
+[["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], 
+["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]], and the
+ #purchase-btn element is clicked, the value in the #change-due 
+ element should be Status: CLOSED QUARTER: $0 DIME: $0 NICKEL: $0 PENNY: $0.5.
+*/

@@ -8,7 +8,7 @@ Certificate:
 
 Start: 07 Dec 2023
 
-End: 
+End: ~03 January 2023 (tester was broken for final project)
 
 # FreeCodeCamp : Responsive Web Design - HTML/CSS/CSSGrid/Flexbox:
 

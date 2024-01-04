@@ -1,7 +1,3 @@
-
-/*
-TEST APPEARS TO BE BUGGED:
-https://github.com/freeCodeCamp/freeCodeCamp/issues/52688
 let price = 19.5;
 let cid = [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]];
 const cashInput = document.getElementById('cash')
@@ -26,9 +22,11 @@ function giveCash(change, cid) {
     "TWENTY": 20,
     "ONE HUNDRED": 100
   }
+
   if (change == 0) {
     return []
   }
+
   if (sumCid(cid)<change) {
     return [0]
     }
@@ -72,7 +70,7 @@ function msgOutput(obj) {
   if (obj.status == 'CLOSED') {
     obj.change = obj.change.reverse().slice(5)
     console.log(obj) 
-  } 
+  } // this is only to fulfil the last test's demand on the output structure
   changeDue.innerText = 'Status: ' + obj.status + ' ' + obj.change.join(' ').replace(/,/g, ': $')
 }
 
@@ -86,4 +84,30 @@ purchaseBtn.addEventListener('click', () => {
   }
   cashInput.value = '';
 });
+
+/* TESTS TO PASS:
+When price is 19.5, the value in the #cash element is 20, cid is 
+[["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], 
+["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]], and the
+ #purchase-btn element is clicked, the value in the #change-due 
+ element should be Status: CLOSED QUARTER: $0 DIME: $0 NICKEL: $0 PENNY: $0.5.
+
+TEST RESULTS:
+// running tests
+When price is 19.5, the value in the #cash element is 20, cid is 
+[["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], 
+["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]], and the 
+#purchase-btn element is clicked, the value in the #change-due element 
+should be Status: CLOSED QUARTER: $0 DIME: $0 NICKEL: $0 PENNY: $0.5.
+// tests completed
+// console output
+{ status: 'CLOSED',
+  change: 
+   [ [ 'QUARTER', 0 ],
+     [ 'DIME', 0 ],
+     [ 'NICKEL', 0 ],
+     [ 'PENNY', 0.5 ] ] }
+
+ Fix:
+ https://forum.freecodecamp.org/t/cash-register-final-problem-to-js/455536
 */

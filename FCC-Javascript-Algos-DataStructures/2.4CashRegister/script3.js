@@ -110,4 +110,8 @@ should be Status: CLOSED QUARTER: $0 DIME: $0 NICKEL: $0 PENNY: $0.5.
 
  Fix:
  https://forum.freecodecamp.org/t/cash-register-final-problem-to-js/455536
-*/
+ Bug Reports(still broken):
+ https://forum.freecodecamp.org/t/build-a-cash-register-project-build-a-cash-register/661002
+ https://forum.freecodecamp.org/t/build-a-cash-register-project-build-a-cash-register/657768
+https://github.com/freeCodeCamp/freeCodeCamp/issues/52688
+ */

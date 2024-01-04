@@ -60,7 +60,7 @@ function checkCashRegister(price, cash, cid) {
     return {status: "INSUFFICIENT_FUNDS", change: []}
   }
   if ((cashInDrawer - sumCid(change)) == 0) {
-    return {status: "CLOSED", change: change}
+    return {status: "CLOSED", change: change.reverse()}
   } else {
     return {status: "OPEN", change: change.reverse()}
   }

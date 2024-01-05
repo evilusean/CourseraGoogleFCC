@@ -114,4 +114,5 @@ should be Status: CLOSED QUARTER: $0 DIME: $0 NICKEL: $0 PENNY: $0.5.
  https://forum.freecodecamp.org/t/build-a-cash-register-project-build-a-cash-register/661002
  https://forum.freecodecamp.org/t/build-a-cash-register-project-build-a-cash-register/657768
 https://github.com/freeCodeCamp/freeCodeCamp/issues/52688
+https://github.com/freeCodeCamp/freeCodeCamp/pull/52929
  */

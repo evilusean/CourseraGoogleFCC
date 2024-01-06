@@ -1,0 +1,347 @@
+Front End Development Libraries
+Now that you're familiar with HTML, CSS, and JavaScript, level up your skills by learning some of the most popular front end libraries in the industry.
+
+In the Front End Development Libraries Certification, you'll learn how to style your site quickly with Bootstrap. You'll also learn how to add logic to your CSS styles and extend them with Sass.
+
+Later, you'll build a shopping cart and other applications to learn how to create powerful Single Page Applications (SPAs) with React and Redux.
+
+Courses
+Bootstrap
+Bootstrap is a front end framework used to design responsive web pages and applications. It takes a mobile-first approach to web development, and includes pre-built CSS styles and classes, plus some JavaScript functionality.
+
+In this course, you'll learn how to build responsive websites with Bootstrap, and use its included classes to style buttons, images, forms, navigation, and other common elements.
+
+
+Collapse courseBootstrap
+0/31
+, 0 of 31 challenges completed
+Not Passed
+Use Responsive Design with Bootstrap Fluid Containers
+Not Passed
+Make Images Mobile Responsive
+Not Passed
+Center Text with Bootstrap
+Not Passed
+Create a Bootstrap Button
+Not Passed
+Create a Block Element Bootstrap Button
+Not Passed
+Taste the Bootstrap Button Color Rainbow
+Not Passed
+Call out Optional Actions with btn-info
+Not Passed
+Warn Your Users of a Dangerous Action with btn-danger
+Not Passed
+Use the Bootstrap Grid to Put Elements Side By Side
+Not Passed
+Ditch Custom CSS for Bootstrap
+Not Passed
+Use a span to Target Inline Elements
+Not Passed
+Create a Custom Heading
+Not Passed
+Add Font Awesome Icons to our Buttons
+Not Passed
+Add Font Awesome Icons to all of our Buttons
+Not Passed
+Responsively Style Radio Buttons
+Not Passed
+Responsively Style Checkboxes
+Not Passed
+Style Text Inputs as Form Controls
+Not Passed
+Line up Form Elements Responsively with Bootstrap
+Not Passed
+Create a Bootstrap Headline
+Not Passed
+House our page within a Bootstrap container-fluid div
+Not Passed
+Create a Bootstrap Row
+Not Passed
+Split Your Bootstrap Row
+Not Passed
+Create Bootstrap Wells
+Not Passed
+Add Elements within Your Bootstrap Wells
+Not Passed
+Apply the Default Bootstrap Button Style
+Not Passed
+Create a Class to Target with jQuery Selectors
+Not Passed
+Add id Attributes to Bootstrap Elements
+Not Passed
+Label Bootstrap Wells
+Not Passed
+Give Each Element a Unique id
+Not Passed
+Label Bootstrap Buttons
+Not Passed
+Use Comments to Clarify Code
+jQuery
+jQuery is one of the most widely used JavaScript libraries in the world.
+
+In 2006 when it was released, all major browsers handled JavaScript slightly differently. jQuery simplified the process of writing client-side JavaScript, and also ensured that your code worked the same way in all browsers.
+
+In this course, you'll learn how to use jQuery to select, remove, clone, and modify different elements on the page.
+
+
+Collapse coursejQuery
+0/18
+, 0 of 18 challenges completed
+Not Passed
+Learn How Script Tags and Document Ready Work
+Not Passed
+Target HTML Elements with Selectors Using jQuery
+Not Passed
+Target Elements by Class Using jQuery
+Not Passed
+Target Elements by id Using jQuery
+Not Passed
+Delete Your jQuery Functions
+Not Passed
+Target the Same Element with Multiple jQuery Selectors
+Not Passed
+Remove Classes from an Element with jQuery
+Not Passed
+Change the CSS of an Element Using jQuery
+Not Passed
+Disable an Element Using jQuery
+Not Passed
+Change Text Inside an Element Using jQuery
+Not Passed
+Remove an Element Using jQuery
+Not Passed
+Use appendTo to Move Elements with jQuery
+Not Passed
+Clone an Element Using jQuery
+Not Passed
+Target the Parent of an Element Using jQuery
+Not Passed
+Target the Children of an Element Using jQuery
+Not Passed
+Target a Specific Child of an Element Using jQuery
+Not Passed
+Target Even Elements Using jQuery
+Not Passed
+Use jQuery to Modify the Entire Page
+SASS
+Sass, or "Syntactically Awesome StyleSheets", is a language extension of CSS. It adds features that aren't available in basic CSS, which make it easier for you to simplify and maintain the style sheets for your projects.
+
+In this Sass course, you'll learn how to store data in variables, nest CSS, create reusable styles with mixins, add logic and loops to your styles, and more.
+
+
+Collapse courseSASS
+0/9
+, 0 of 9 challenges completed
+Not Passed
+Store Data with Sass Variables
+Not Passed
+Nest CSS with Sass
+Not Passed
+Create Reusable CSS with Mixins
+Not Passed
+Use @if and @else to Add Logic To Your Styles
+Not Passed
+Use @for to Create a Sass Loop
+Not Passed
+Use @each to Map Over Items in a List
+Not Passed
+Apply a Style Until a Condition is Met with @while
+Not Passed
+Split Your Styles into Smaller Chunks with Partials
+Not Passed
+Extend One Set of CSS Styles to Another Element
+React
+React is a popular JavaScript library for building reusable, component-driven user interfaces for web pages or applications.
+
+React combines HTML with JavaScript functionality into its own markup language called JSX. React also makes it easy to manage the flow of data throughout the application.
+
+In this course, you'll learn how to create different React components, manage data in the form of state props, use different lifecycle methods like componentDidMount, and much more.
+
+
+Collapse courseReact
+0/47
+, 0 of 47 challenges completed
+Not Passed
+Create a Simple JSX Element
+Not Passed
+Create a Complex JSX Element
+Not Passed
+Add Comments in JSX
+Not Passed
+Render HTML Elements to the DOM
+Not Passed
+Define an HTML Class in JSX
+Not Passed
+Learn About Self-Closing JSX Tags
+Not Passed
+Create a Stateless Functional Component
+Not Passed
+Create a React Component
+Not Passed
+Create a Component with Composition
+Not Passed
+Use React to Render Nested Components
+Not Passed
+Compose React Components
+Not Passed
+Render a Class Component to the DOM
+Not Passed
+Write a React Component from Scratch
+Not Passed
+Pass Props to a Stateless Functional Component
+Not Passed
+Pass an Array as Props
+Not Passed
+Use Default Props
+Not Passed
+Override Default Props
+Not Passed
+Use PropTypes to Define the Props You Expect
+Not Passed
+Access Props Using this.props
+Not Passed
+Review Using Props with Stateless Functional Components
+Not Passed
+Create a Stateful Component
+Not Passed
+Render State in the User Interface
+Not Passed
+Render State in the User Interface Another Way
+Not Passed
+Set State with this.setState
+Not Passed
+Bind 'this' to a Class Method
+Not Passed
+Use State to Toggle an Element
+Not Passed
+Write a Simple Counter
+Not Passed
+Create a Controlled Input
+Not Passed
+Create a Controlled Form
+Not Passed
+Pass State as Props to Child Components
+Not Passed
+Pass a Callback as Props
+Not Passed
+Use the Lifecycle Method componentWillMount
+Not Passed
+Use the Lifecycle Method componentDidMount
+Not Passed
+Add Event Listeners
+Not Passed
+Optimize Re-Renders with shouldComponentUpdate
+Not Passed
+Introducing Inline Styles
+Not Passed
+Add Inline Styles in React
+Not Passed
+Use Advanced JavaScript in React Render Method
+Not Passed
+Render with an If-Else Condition
+Not Passed
+Use && for a More Concise Conditional
+Not Passed
+Use a Ternary Expression for Conditional Rendering
+Not Passed
+Render Conditionally from Props
+Not Passed
+Change Inline CSS Conditionally Based on Component State
+Not Passed
+Use Array.map() to Dynamically Render Elements
+Not Passed
+Give Sibling Elements a Unique Key Attribute
+Not Passed
+Use Array.filter() to Dynamically Filter an Array
+Not Passed
+Render React on the Server with renderToString
+Redux
+As applications grow in size and scope, managing shared data becomes much more difficult. Redux is defined as a "predictable state container for JavaScript apps" that helps ensure your apps work predictably, and are easier to test.
+
+While you can use Redux with any view library, we introduce Redux here before combining it with React in the next set of courses.
+
+In this course, you'll learn the fundamentals of Redux stores, actions, reducers and middleware to manage data throughout your application.
+
+
+Collapse courseRedux
+0/17
+, 0 of 17 challenges completed
+Not Passed
+Create a Redux Store
+Not Passed
+Get State from the Redux Store
+Not Passed
+Define a Redux Action
+Not Passed
+Define an Action Creator
+Not Passed
+Dispatch an Action Event
+Not Passed
+Handle an Action in the Store
+Not Passed
+Use a Switch Statement to Handle Multiple Actions
+Not Passed
+Use const for Action Types
+Not Passed
+Register a Store Listener
+Not Passed
+Combine Multiple Reducers
+Not Passed
+Send Action Data to the Store
+Not Passed
+Use Middleware to Handle Asynchronous Actions
+Not Passed
+Write a Counter with Redux
+Not Passed
+Never Mutate State
+Not Passed
+Use the Spread Operator on Arrays
+Not Passed
+Remove an Item from an Array
+Not Passed
+Copy an Object with Object.assign
+React and Redux
+React and Redux are often mentioned together, and with good reason. The developer who created Redux was a React developer who wanted to make it easier to share data across different components.
+
+Now that you know how to manage the flow of shared data with Redux, it's time to combine that knowledge with React. In the React and Redux courses, you'll build a React component and learn how to manage state locally at the component level, and throughout the entire application with Redux.
+
+
+Collapse courseReact and Redux
+0/10
+, 0 of 10 challenges completed
+Not Passed
+Getting Started with React Redux
+Not Passed
+Manage State Locally First
+Not Passed
+Extract State Logic to Redux
+Not Passed
+Use Provider to Connect Redux to React
+Not Passed
+Map State to Props
+Not Passed
+Map Dispatch to Props
+Not Passed
+Connect Redux to React
+Not Passed
+Connect Redux to the Messages App
+Not Passed
+Extract Local State into Redux
+Not Passed
+Moving Forward From Here
+Front End Development Libraries Projects
+It's time to put your front end development libraries skills to the test. Use Bootstrap, jQuery, Sass, React, and Redux to build 5 projects that will test everything you've learned up to this point.
+
+Complete all 5 projects, and you'll earn the Front End Development Libraries certification.
+
+Build a Random Quote Machine
+Not Passed
+Build a Markdown Previewer
+Not Passed
+Build a Drum Machine
+Not Passed
+Build a JavaScript Calculator
+Not Passed
+Build a 25 + 5 Clock
+Not Passed

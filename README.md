@@ -1,14 +1,22 @@
+# FreeCodeCamp : Front End Development Libraries
+
+https://www.freecodecamp.org/learn/front-end-development-libraries/
+
+Certificate:
+
+Start: 05 January 2024
+
+End: 
+
 # FreeCodeCamp : JavaScript Algorithms and Data Structures:
 
 https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/
 
 Certificate:
 
-
-
 Start: 07 Dec 2023
 
-End: ~03 January 2023 (tester was broken for final project)
+End: ~03 January 2024 
 
 # FreeCodeCamp : Responsive Web Design - HTML/CSS/CSSGrid/Flexbox:
 

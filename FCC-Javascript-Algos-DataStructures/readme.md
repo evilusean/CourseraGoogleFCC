@@ -3,4 +3,4 @@ https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/ </
 Certificate:</br>
 </br>
 Start: 07 December 2023</br>
-End: 03 January 2023 </br>
+End: 03 January 2024 (tester was broken for final project) </br>

@@ -3,3 +3,9 @@ With responsive design, there is no need to design a mobile version of your webs
 You can add Bootstrap to any app by adding the following code to the top of your HTML:
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
 integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+Make Images Mobile Responsive
+First, add a new image below the existing one. Set its src attribute to https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg.
+It would be great if this image could be exactly the width of our phone's screen.
+Fortunately, with Bootstrap, all we need to do is add the img-responsive class to your image.
+

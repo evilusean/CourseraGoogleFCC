@@ -9,3 +9,38 @@ First, add a new image below the existing one. Set its src attribute to https://
 It would be great if this image could be exactly the width of our phone's screen.
 Fortunately, with Bootstrap, all we need to do is add the img-responsive class to your image.
 
+Create a Bootstrap Button
+Bootstrap has its own styles for button elements, which look much better than the plain HTML ones.
+Create a new button element below your large kitten photo. Give it the btn and btn-default classes, as well as the text of Like.
+<button class="btn btn-default">Like</button> 
+Normally, your button elements with the btn and btn-default classes are only as wide as the text that they contain.
+By making them block elements with the additional class of btn-block, your button will stretch to fill your page's entire horizontal space and any 
+elements following it will flow onto a "new line" below the block.
+<button class="btn btn-default btn-block">Submit</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

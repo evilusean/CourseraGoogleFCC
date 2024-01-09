@@ -22,3 +22,21 @@ Center Text with Bootstrap
 Now that we're using Bootstrap, we can center our heading element to make it look better. All we need to do is add the class text-center to our h2 element.
 Remember that you can add several classes to the same element by separating each of them with a space, like this:
 <h2 class="red-text text-center">your text</h2>
+
+Step 4:
+Create a Bootstrap Button
+Bootstrap has its own styles for button elements, which look much better than the plain HTML ones.
+Create a new button element below your large kitten photo. Give it the btn and btn-default classes, as well as the text of Like.
+
+Step 5:
+Create a Block Element Bootstrap Button
+Normally, your button elements with the btn and btn-default classes are only as wide as the text that they contain. For example:
+<button class="btn btn-default">Submit</button>
+This button would only be as wide as the word Submit.
+By making them block elements with the additional class of btn-block, your button will stretch to fill your page's entire horizontal space and any 
+elements following it will flow onto a "new line" below the block.
+<button class="btn btn-default btn-block">Submit</button>
+This button would take up 100% of the available width.
+Note that these buttons still need the btn class.
+Add Bootstrap's btn-block class to your Bootstrap button.
+

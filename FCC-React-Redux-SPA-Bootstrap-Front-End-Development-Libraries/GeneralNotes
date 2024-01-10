@@ -17,12 +17,25 @@ Normally, your button elements with the btn and btn-default classes are only as 
 By making them block elements with the additional class of btn-block, your button will stretch to fill your page's entire horizontal space and any 
 elements following it will flow onto a "new line" below the block.
 <button class="btn btn-default btn-block">Submit</button>
+The btn-primary class is the main color you'll use in your app. It is useful for highlighting actions you want your user to take.
 
+Call out Optional Actions with btn-info
+Bootstrap comes with several pre-defined colors for buttons. The btn-info class is used to call attention to optional actions that the user can take.
 
+Warn Your Users of a Dangerous Action with btn-danger
+Bootstrap comes with several pre-defined colors for buttons. The btn-danger class is the button color you'll use to notify users that the button performs a
+destructive action, such as deleting a cat photo.
+Create a button with the text Delete and give it the class btn-danger.
 
-
-
-
+Use the Bootstrap Grid to Put Elements Side By Side
+Bootstrap uses a responsive 12-column grid system, which makes it easy to put elements into rows and specify each element's relative width.
+Most of Bootstrap's classes can be applied to a div element.
+Bootstrap has different column width attributes that it uses depending on how wide the user's screen is. For example, phones have narrow screens,
+and laptops have wider screens.
+Take for example Bootstrap's col-md-* class. Here, md means medium, and * is a number specifying how many columns wide the element should be. 
+In this case, the column width of an element on a medium-sized screen, such as a laptop, is being specified.
+In the Cat Photo App that we're building, we'll use col-xs-*, where xs means extra small (like an extra-small mobile phone screen),
+and * is the number of columns specifying how many columns wide the element should be.
 
 
 

@@ -158,7 +158,10 @@ We'll build a jQuery playground, which we'll soon put to use in our jQuery chall
 To start with, create an h3 element, with the text jQuery Playground.
 Color your h3 element with the text-primary Bootstrap class, and center it with the text-center Bootstrap class.
 
-
+Step 20:
+House our page within a Bootstrap container-fluid div
+Now let's make sure all the content on your page is mobile-responsive.
+Let's nest your h3 element within a div element with the class container-fluid.
 
 
 

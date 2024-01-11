@@ -130,13 +130,33 @@ regardless of how wide the screen resolution is.
 Nest both your radio buttons within a <div class="row"> element. Then nest each of them within a <div class="col-xs-6"> element.
 Note: As a reminder, radio buttons are input elements of type radio.
 
+Step 16:
+Responsively Style Checkboxes
+Since Bootstrap's col-xs-* classes are applicable to all form elements, you can use them on your checkboxes too! 
+This way, the checkboxes will be evenly spread out across the page, regardless of how wide the screen resolution is.
+Nest all three of your checkboxes in a <div class="row"> element. Then nest each of them in a <div class="col-xs-4"> element.
 
+Step 17:
+Style Text Inputs as Form Controls
+You can add the fa-paper-plane Font Awesome icon by adding <i class="fa fa-paper-plane"></i> within your submit button element.
+Give your form's text input field a class of form-control. Give your form's submit button the classes btn btn-primary. 
+Also give this button the Font Awesome icon of fa-paper-plane.
+All textual <input>, <textarea>, and <select> elements with the class .form-control have a width of 100%.
 
+Step 18:
+Line up Form Elements Responsively with Bootstrap
+Now let's get your form input and your submission button on the same line. We'll do this the same way we have previously:
+by using a div element with the class row, and other div elements within it using the col-xs-* class.
+Nest both your form's text input and submit button within a div with the class row. Nest your form's text input within a div with the class of col-xs-7. 
+Nest your form's submit button in a div with the class col-xs-5.
+This is the last challenge we'll do for our Cat Photo App for now. We hope you've enjoyed learning Font Awesome, Bootstrap, and responsive design!
 
-
-
-
-
+Step 19:
+Create a Bootstrap Headline
+Now let's build something from scratch to practice our HTML, CSS and Bootstrap skills.
+We'll build a jQuery playground, which we'll soon put to use in our jQuery challenges.
+To start with, create an h3 element, with the text jQuery Playground.
+Color your h3 element with the text-primary Bootstrap class, and center it with the text-center Bootstrap class.
 
 
 

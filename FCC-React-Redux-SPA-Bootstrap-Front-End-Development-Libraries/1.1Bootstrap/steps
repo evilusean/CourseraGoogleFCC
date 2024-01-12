@@ -188,8 +188,36 @@ Apply the Default Bootstrap Button Style
 Bootstrap has another button class called btn-default.
 Apply both the btn and btn-default classes to each of your button elements.
 
+Step 26:
+Create a Class to Target with jQuery Selectors
+Not every class needs to have corresponding CSS. Sometimes we create classes just for the purpose of selecting these elements more easily using jQuery.
+Give each of your button elements the class target.
 
+Step 27:
+Add id Attributes to Bootstrap Elements
+Recall that in addition to class attributes, you can give each of your elements an id attribute.
+Each id must be unique to a specific element and used only once per page.
+Let's give a unique id to each of our div elements of class well.
+Remember that you can give an element an id like this:
+<div class="well" id="center-well">
+Give the well on the left the id of left-well. Give the well on the right the id of right-well.
 
+Step 28:
+Label Bootstrap Wells
+For the sake of clarity, let's label both of our wells with their ids.
+Above your left-well, inside its col-xs-6 div element, add a h4 element with the text #left-well.
+Above your right-well, inside its col-xs-6 div element, add a h4 element with the text #right-well.
+
+Step 29:
+Give Each Element a Unique id
+We will also want to be able to use jQuery to target each button by its unique id.
+Give each of your buttons a unique id, starting with target1 and ending with target6.
+Make sure that target1 to target3 are in #left-well, and target4 to target6 are in #right-well.
+
+Step 30:
+Label Bootstrap Buttons
+Just like we labeled our wells, we want to label our buttons.
+Give each of your button elements text that corresponds to its id selector.
 
 
 

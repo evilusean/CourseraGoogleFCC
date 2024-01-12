@@ -62,10 +62,16 @@ Create Bootstrap Wells
 Bootstrap has a class called well that can create a visual sense of depth for your columns.
 Nest one div element with the class well within each of your col-xs-6 div elements.
 
+Create a Class to Target with jQuery Selectors
+Not every class needs to have corresponding CSS. Sometimes we create classes just for the purpose of selecting these elements more easily using jQuery.
+Give Each Element a Unique id
+We will also want to be able to use jQuery to target each button by its unique id.
+Give each of your buttons a unique id, starting with target1 and ending with target6.
 
-
-
-
+Add id Attributes to Bootstrap Elements
+Recall that in addition to class attributes, you can give each of your elements an id attribute.
+Each id must be unique to a specific element and used only once per page.
+<div class="well" id="center-well">
 
 
 

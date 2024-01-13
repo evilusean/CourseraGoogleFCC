@@ -109,15 +109,35 @@ Then use jQuery's .addClass() function to add the classes animated and fadeOut.
 Here's how you'd make the button element with the id target6 fade out:
 $("#target6").addClass("animated fadeOut");
 
+Now you know three ways of targeting elements: by type: $("button"), by class: $(".btn"), and by id $("#target1").
 
+Remove Classes from an Element with jQuery
+In the same way you can add classes to an element with jQuery's addClass() function, you can remove them with jQuery's removeClass() function.
+Here's how you would do this for a specific button:
+$("#target2").removeClass("btn-default");
 
+Change the CSS of an Element Using jQuery
+We can also change the CSS of an HTML element directly with jQuery.
+jQuery has a function called .css() that allows you to change the CSS of an element.
+Here's how we would change its color to blue:
+$("#target1").css("color", "blue");
+This is slightly different from a normal CSS declaration, because the CSS property and its value are in quotes, and separated with a comma instead of a colon.
 
+Disable an Element Using jQuery
+You can also change the non-CSS properties of HTML elements with jQuery. For example, you can disable buttons.
+When you disable a button, it will become grayed-out and can no longer be clicked.
+jQuery has a function called .prop() that allows you to adjust the properties of elements.
+Here's how you would disable all buttons:
+$("button").prop("disabled", true);
 
-
-
-
-
-
+Change Text Inside an Element Using jQuery
+Using jQuery, you can change the text between the start and end tags of an element. You can even change HTML markup.
+jQuery has a function called .html() that lets you add HTML tags and text within an element. 
+Any content previously within the element will be completely replaced with the content you provide using this function.
+Here's how you would rewrite and emphasize the text of our heading:
+$("h3").html("<em>jQuery Playground</em>");
+jQuery also has a similar function called .text() that only alters text without adding tags. 
+In other words, this function will not evaluate any HTML tags passed to it, but will instead treat it as the text you want to replace the existing content with.
 
 
 

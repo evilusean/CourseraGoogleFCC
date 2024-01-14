@@ -73,13 +73,88 @@ div {
 Write a mixin for border-radius and give it a $radius parameter. It should use all the vendor prefixes from the example.
 Then use the border-radius mixin to give the #awesome element a border radius of 15px.
 
+Step 4:
+Use @if and @else to Add Logic To Your Styles
+The @if directive in Sass is useful to test for a specific case - it works just like the if statement in JavaScript.
+@mixin make-bold($bool) {
+  @if $bool == true {
+    font-weight: bold;
+  }
+}
+And just like in JavaScript, the @else if and @else directives test for more conditions:
+@mixin text-effect($val) {
+  @if $val == danger {
+    color: red;
+  }
+  @else if $val == alert {
+    color: yellow;
+  }
+  @else if $val == success {
+    color: green;
+  }
+  @else {
+    color: black;
+  }
+}
+Create a mixin called border-stroke that takes a parameter $val. The mixin should check for the following conditions using @if, @else if, and @else directives:
+light - 1px solid black
+medium - 3px solid black
+heavy - 6px solid black
+If the $val parameter value is not light, medium, or heavy, then the border property should be set to none.
 
+Step 5:
+Use @for to Create a Sass Loop
+The @for directive adds styles in a loop, very similar to a for loop in JavaScript.
+@for is used in two ways: "start through end" or "start to end". 
+The main difference is that the "start to end" excludes the end number as part of the count, and "start through end" includes the end number as part of the count.
+Here's a start through end example:
+@for $i from 1 through 12 {
+  .col-#{$i} { width: 100%/12 * $i; }
+}
+The #{$i} part is the syntax to combine a variable (i) with text to make a string. When the Sass file is converted to CSS, it looks like this:
+.col-1 {
+  width: 8.33333%;
+}
+.col-2 {
+  width: 16.66667%;
+}
+...
+.col-12 {
+  width: 100%;
+}
+This is a powerful way to create a grid layout. Now you have twelve options for column widths available as CSS classes.
+Write a @for directive that takes a variable $j that goes from 1 to 6.
+It should create 5 classes called .text-1 to .text-5 where each has a font-size set to 15px multiplied by the index.
+@for $j from 1 through 6 {
+  .text-#{$j} { font-size: 15px* $j; }
+}
 
-
-
-
-
-
+Step 6:
+Use @each to Map Over Items in a List
+The last challenge showed how the @for directive uses a starting and ending value to loop a certain number of times. 
+Sass also offers the @each directive which loops over each item in a list or map. On each iteration, 
+the variable gets assigned to the current value from the list or map.
+@each $color in blue, red, green {
+  .#{$color}-text {color: $color;}
+}
+A map has slightly different syntax. Here's an example:
+$colors: (color1: blue, color2: red, color3: green);
+@each $key, $color in $colors {
+  .#{$color}-text {color: $color;}
+}
+Note that the $key variable is needed to reference the keys in the map. 
+Otherwise, the compiled CSS would have color1, color2... in it. Both of the above code examples are converted into the following CSS:
+.blue-text {
+  color: blue;
+}
+.red-text {
+  color: red;
+}
+.green-text {
+  color: green;
+}
+Write an @each directive that goes through a list: blue, black, red and assigns each variable to a .color-bg class,
+where the color part changes for each item to the respective color. Each class should set the background-color to the respective color as well.
 
 
 

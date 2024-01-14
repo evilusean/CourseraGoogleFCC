@@ -203,9 +203,58 @@ h1 {
 One example where variables are useful is when a number of elements need to be the same color. 
 If that color is changed,the only place to edit the code is the variable value.
 
+Nest CSS with Sass
+Sass allows nesting of CSS rules, which is a useful way of organizing a style sheet.
+Normally, each element is targeted on a different line to style it, like so:
+article {
+  height: 200px;
+}
 
+article p {
+  color: white;
+}
 
+article ul {
+  color: blue;
+}
+For a large project, the CSS file will have many lines and rules. 
+This is where nesting can help organize your code by placing child style rules within the respective parent elements:
+article {
+  height: 200px;
 
+  p {
+    color: white;
+  }
+
+  ul {
+    color: blue;
+  }
+}
+
+Create Reusable CSS with Mixins
+In Sass, a mixin is a group of CSS declarations that can be reused throughout the style sheet.
+Newer CSS features take time before they are fully adopted and ready to use in all browsers. 
+As features are added to browsers, CSS rules using them may need vendor prefixes. Consider box-shadow:
+div {
+  -webkit-box-shadow: 0px 0px 4px #fff;
+  -moz-box-shadow: 0px 0px 4px #fff;
+  -ms-box-shadow: 0px 0px 4px #fff;
+  box-shadow: 0px 0px 4px #fff;
+}
+It's a lot of typing to re-write this rule for all the elements that have a box-shadow, or to change each value to test different effects.
+Mixins are like functions for CSS. Here is how to write one:
+@mixin box-shadow($x, $y, $blur, $c){ 
+  -webkit-box-shadow: $x $y $blur $c;
+  -moz-box-shadow: $x $y $blur $c;
+  -ms-box-shadow: $x $y $blur $c;
+  box-shadow: $x $y $blur $c;
+}
+The definition starts with @mixin followed by a custom name. The parameters (the $x, $y, $blur, and $c in the example above) are optional. 
+Now any time a box-shadow rule is needed, only a single line calling the mixin replaces having to type all the vendor prefixes.
+A mixin is called with the @include directive:
+div {
+  @include box-shadow(0px, 0px, 4px, #fff);
+}
 
 
 

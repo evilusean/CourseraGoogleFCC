@@ -15,12 +15,60 @@ This function call is what places your JSX into React's own lightweight represen
 React then uses snapshots of its own DOM to optimize updating only specific parts of the actual DOM.
 The current code uses JSX to assign a div element to the constant JSX. Replace the div with an h1 element and add the text Hello JSX! inside it.
 
+Step 2:
+Create a Complex JSX Element
+The last challenge was a simple example of JSX, but JSX can represent more complex HTML as well.
+One important thing to know about nested JSX is that it must return a single element.
+This one parent element would wrap all of the other levels of nested elements.
+For instance, several JSX elements written as siblings with no parent wrapper element will not transpile.
+Here's an example:
+Valid JSX:
+<div>
+  <p>Paragraph One</p>
+  <p>Paragraph Two</p>
+  <p>Paragraph Three</p>
+</div>
+Invalid JSX:
+<p>Paragraph One</p>
+<p>Paragraph Two</p>
+<p>Paragraph Three</p>
+Define a new constant JSX that renders a div which contains the following elements in order:
+An h1, a p, and an unordered list that contains three li items. You can include any text you want within each element.
+Note: When rendering multiple elements like this, you can wrap them all in parentheses, but it's not strictly required. 
+Also notice this challenge uses a div tag to wrap all the child elements within a single parent element. 
+If you remove the div, the JSX will no longer transpile. Keep this in mind, since it will also apply when you return JSX elements in React components.
 
+Step 3:
+Add Comments in JSX
+JSX is a syntax that gets compiled into valid JavaScript. Sometimes, for readability, you might need to add comments to your code. 
+Like most programming languages, JSX has its own way to do this.
+To put comments inside JSX, you use the syntax {/* */} to wrap around the comment text.
+The code editor has a JSX element similar to what you created in the last challenge.
+Add a comment somewhere within the provided div element, without modifying the existing h1 or p elements.
 
+Step 4:
+Render HTML Elements to the DOM
+So far, you've learned that JSX is a convenient tool to write readable HTML within JavaScript. 
+With React, we can render this JSX directly to the HTML DOM using React's rendering API known as ReactDOM.
+ReactDOM offers a simple method to render React elements to the DOM which looks like this: 
+ReactDOM.render(componentToRender, targetNode), where the first argument is the React element or component that you want to render,
+and the second argument is the DOM node that you want to render the component to.
+As you would expect, ReactDOM.render() must be called after the JSX element declarations, just like how you must declare variables before using them.
+The code editor has a simple JSX component. Use the ReactDOM.render() method to render this component to the page. 
+You can pass defined JSX elements directly in as the first argument and use document.getElementById() to select the DOM node to render them to.
+There is a div with id='challenge-node' available for you to use. Make sure you don't change the JSX constant.
+ReactDOM.render(JSX, document.getElementById('challenge-node'))
 
-
-
-
+Step 5:
+Define an HTML Class in JSX
+Now that you're getting comfortable writing JSX, you may be wondering how it differs from HTML.
+So far, it may seem that HTML and JSX are exactly the same.
+One key difference in JSX is that you can no longer use the word class to define HTML classes. 
+This is because class is a reserved word in JavaScript. Instead, JSX uses className.
+In fact, the naming convention for all HTML attributes and event references in JSX become camelCase.
+For example, a click event in JSX is onClick, instead of onclick. Likewise, onchange becomes onChange. 
+While this is a subtle difference, it is an important one to keep in mind moving forward.
+Apply a class of myDiv to the div provided in the JSX code.
 
 
 

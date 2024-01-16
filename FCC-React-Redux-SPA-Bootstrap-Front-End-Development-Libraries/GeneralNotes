@@ -411,8 +411,48 @@ This is because class is a reserved word in JavaScript. Instead, JSX uses classN
 In fact, the naming convention for all HTML attributes and event references in JSX become camelCase.
 For example, a click event in JSX is onClick, instead of onclick. Likewise, onchange becomes onChange. 
 
+Learn About Self-Closing JSX Tags
+So far, you’ve seen how JSX differs from HTML in a key way with the use of className vs. class for defining HTML classes.
+Another important way in which JSX differs from HTML is in the idea of the self-closing tag.
+In HTML, almost all tags have both an opening and closing tag: <div></div>; the closing tag always has a forward slash before the tag name that you are closing. 
+However, there are special instances in HTML called “self-closing tags”, or tags that don’t require both an opening and closing tag before another tag can start.
+For example the line-break tag can be written as <br> or as <br />, but should never be written as <br></br>, since it doesn't contain any content.
+In JSX, the rules are a little different. Any JSX element can be written with a self-closing tag, and every element must be closed. 
+The line-break tag, for example, must always be written as <br /> in order to be valid JSX that can be transpiled.
+A <div>, on the other hand, can be written as <div /> or <div></div>.
 
+Create a Stateless Functional Component
+Components are the core of React. Everything in React is a component and here you will learn how to create one.
+There are two ways to create a React component. The first way is to use a JavaScript function.
+Defining a component in this way creates a stateless functional component. The concept of state in an application will be covered in later challenges. 
+For now, think of a stateless component as one that can receive data and render it, but does not manage or track changes to that data. 
+To create a component with a function, you simply write a JavaScript function that returns either JSX or null. 
+One important thing to note is that React requires your function name to begin with a capital letter. 
+Here's an example of a stateless functional component that assigns an HTML class in JSX:
+const DemoComponent = function() {
+  return (
+    <div className='customClass' />
+  );
+};
+After being transpiled, the <div> will have a CSS class of customClass.
+Because a JSX component represents HTML, you could put several components together to create a more complex HTML page. 
+This is one of the key advantages of the component architecture React provides. It allows you to compose your UI from many separate, isolated components. 
+This makes it easier to build and maintain complex user interfaces.
 
-
-
-
+Create a React Component
+The other way to define a React component is with the ES6 class syntax. In the following example, Kitten extends React.Component:
+class Kitten extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <h1>Hi</h1>
+    );
+  }
+}
+This creates an ES6 class Kitten which extends the React.Component class. So the Kitten class now has access to many useful React features, 
+such as local state and lifecycle hooks.
+Also notice the Kitten class has a constructor defined within it that calls super(). It uses super() to call the constructor of the parent class, 
+in this case React.Component. The constructor is a special method used during the initialization of objects that are created with the class keyword. 
+It is best practice to call a component's constructor with super, and pass props to both. This makes sure the component is initialized properly. 

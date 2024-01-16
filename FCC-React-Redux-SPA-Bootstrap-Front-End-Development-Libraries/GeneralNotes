@@ -373,15 +373,43 @@ It's worth noting that under the hood the challenges are calling ReactDOM.render
 This function call is what places your JSX into React's own lightweight representation of the DOM. 
 React then uses snapshots of its own DOM to optimize updating only specific parts of the actual DOM.
 
+Create a Complex JSX Element
+One important thing to know about nested JSX is that it must return a single element.
+This one parent element would wrap all of the other levels of nested elements.
+For instance, several JSX elements written as siblings with no parent wrapper element will not transpile.
+Here's an example:
+Valid JSX:
+<div>
+  <p>Paragraph One</p>
+  <p>Paragraph Two</p>
+  <p>Paragraph Three</p>
+</div>
+Invalid JSX:
+<p>Paragraph One</p>
+<p>Paragraph Two</p>
+<p>Paragraph Three</p>
 
+Add Comments in JSX
+JSX is a syntax that gets compiled into valid JavaScript. Sometimes, for readability, you might need to add comments to your code. 
+Like most programming languages, JSX has its own way to do this.
+To put comments inside JSX, you use the syntax {/* */} to wrap around the comment text.
 
+Render HTML Elements to the DOM
+So far, you've learned that JSX is a convenient tool to write readable HTML within JavaScript. 
+With React, we can render this JSX directly to the HTML DOM using React's rendering API known as ReactDOM.
+ReactDOM offers a simple method to render React elements to the DOM which looks like this: 
+ReactDOM.render(componentToRender, targetNode), where the first argument is the React element or component that you want to render,
+and the second argument is the DOM node that you want to render the component to.
+As you would expect, ReactDOM.render() must be called after the JSX element declarations, just like how you must declare variables before using them.
+ReactDOM.render(JSX, document.getElementById('challenge-node'))
 
-
-
-
-
-
-
+Define an HTML Class in JSX
+Now that you're getting comfortable writing JSX, you may be wondering how it differs from HTML.
+So far, it may seem that HTML and JSX are exactly the same.
+One key difference in JSX is that you can no longer use the word class to define HTML classes. 
+This is because class is a reserved word in JavaScript. Instead, JSX uses className.
+In fact, the naming convention for all HTML attributes and event references in JSX become camelCase.
+For example, a click event in JSX is onClick, instead of onclick. Likewise, onchange becomes onChange. 
 
 
 

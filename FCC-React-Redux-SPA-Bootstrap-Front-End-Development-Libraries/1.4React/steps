@@ -274,9 +274,35 @@ you preface the code that you use to access it with this. For example, if an ES6
 Render an instance of the Welcome component in the parent component App. 
 Here, give Welcome a prop of name and assign it a value of a string. Within the child, Welcome, access the name prop within the strong tags
 
+Step 19:
+Review Using Props with Stateless Functional Components
+Except for the last challenge, you've been passing props to stateless functional components. These components act like pure functions.
+They accept props as input and return the same view every time they are passed the same props. 
+You may be wondering what state is, and the next challenge will cover it in more detail. Before that, here's a review of the terminology for components.
+A stateless functional component is any function you write which accepts props and returns JSX. 
+A stateless component, on the other hand, is a class that extends React.Component, but does not use internal state (covered in the next challenge). 
+Finally, a stateful component is a class component that does maintain its own internal state. 
+You may see stateful components referred to simply as components or React components.
+A common pattern is to try to minimize statefulness and to create stateless functional components wherever possible. 
+This helps contain your state management to a specific area of your application. 
+In turn, this improves development and maintenance of your app by making it easier to follow how changes to state affect its behavior.
+The code editor has a CampSite component that renders a Camper component as a child. Define the Camper component and assign it default props of { name: 'CamperBot' }.
+Inside the Camper component, render any code that you want, but make sure to have one p element that includes only the name value that is passed in as a prop. 
+Finally, define propTypes on the Camper component to require name to be provided as a prop and verify that it is of type string.
 
-
-
+Step 20:
+Create a Stateful Component
+One of the most important topics in React is state. State consists of any data your application needs to know about, that can change over time.
+You want your apps to respond to state changes and present an updated UI when necessary. 
+React offers a nice solution for the state management of modern web applications.
+You create state in a React component by declaring a state property on the component class in its constructor.
+This initializes the component with state when it is created. The state property must be set to a JavaScript object. Declaring it looks like this:
+this.state = {}
+You have access to the state object throughout the life of your component. You can update it, render it in your UI, and pass it as props to child components. 
+The state object can be as complex or as simple as you need it to be.
+Note that you must create a class component by extending React.Component in order to create state like this.
+There is a component in the code editor that is trying to render a firstName property from its state. However, there is no state defined. 
+Initialize the component with state in the constructor and assign your name to a property of firstName.
 
 
 

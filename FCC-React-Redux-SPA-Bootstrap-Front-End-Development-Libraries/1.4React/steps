@@ -236,11 +236,43 @@ For example, if you declare MyComponent.defaultProps = { location: 'San Francisc
 unless you specify otherwise. React assigns default props if props are undefined, but if you pass null as the value for a prop, it will remain null.
 The code editor shows a ShoppingCart component. Define default props on this component which specify a prop items with a value of 0.
 
+Step 16:
+Override Default Props
+The ability to set default props is a useful feature in React. The way to override the default props is to explicitly set the prop values for a component.
+The ShoppingCart component now renders a child component Items. This Items component has a default prop quantity set to the integer 0.
+Override the default prop by passing in a value of 10 for quantity.
+Note: Remember that the syntax to add a prop to a component looks similar to how you add HTML attributes. 
+However, since the value for quantity is an integer, it won't go in quotes but it should be wrapped in curly braces. 
+For example, {100}. This syntax tells JSX to interpret the value within the braces directly as JavaScript.
 
+Step 17:
+Use PropTypes to Define the Props You Expect
+React provides useful type-checking features to verify that components receive props of the correct type. 
+For example, your application makes an API call to retrieve data that you expect to be in an array, 
+which is then passed to a component as a prop. You can set propTypes on your component to require the data to be of type array. 
+This will throw a useful warning when the data is of any other type.
+It's considered a best practice to set propTypes when you know the type of a prop ahead of time. 
+You can define a propTypes property for a component in the same way you defined defaultProps.
+Doing this will check that props of a given key are present with a given type. Here's an example to require the type function for a prop called handleClick:
+MyComponent.propTypes = { handleClick: PropTypes.func.isRequired }
+In the example above, the PropTypes.func part checks that handleClick is a function.
+Adding isRequired tells React that handleClick is a required property for that component. 
+You will see a warning if that prop isn't provided. Also notice that func represents function. 
+Among the seven JavaScript primitive types, function and boolean (written as bool) are the only two that use unusual spelling.
+In addition to the primitive types, there are other types available. For example, you can check that a prop is a React element.
+Please refer to the documentation for all of the options.
+Note: As of React v15.5.0, PropTypes is imported independently from React, like this: import PropTypes from 'prop-types';
+Define propTypes for the Items component to require quantity as a prop and verify that it is of type number.
 
-
-
-
+Step 18:
+Access Props Using this.props
+The last several challenges covered the basic ways to pass props to child components. 
+But what if the child component that you're passing a prop to is an ES6 class component, rather than a stateless functional component?
+The ES6 class component uses a slightly different convention to access props.
+Anytime you refer to a class component within itself, you use the this keyword. To access props within a class component, 
+you preface the code that you use to access it with this. For example, if an ES6 class component has a prop called data, you write {this.props.data} in JSX.
+Render an instance of the Welcome component in the parent component App. 
+Here, give Welcome a prop of name and assign it a value of a string. Within the child, Welcome, access the name prop within the strong tags
 
 
 

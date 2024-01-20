@@ -529,6 +529,7 @@ React will apply the correct property name for us in the HTML.
 Add a style attribute to the div in the code editor to give the text a color of red and font size of 72px.
 Note that you can optionally set the font size to be a number, omitting the units px, or write it as "72px".
 
+Step 36:
 Add Inline Styles in React
 You may have noticed in the last challenge that there were several other syntax differences from HTML inline styles in addition to the
 style attribute set to a JavaScript object. First, the names of certain CSS style properties use camel case. For example, the last challenge
@@ -541,9 +542,29 @@ If you have a large set of styles, you can assign a style object to a constant t
 Declare your styles constant as a global variable at the top of the file. Initialize styles constant and assign an object with three style properties and their values 
 to it. Give the div a color of purple, a font-size of 40, and a border of 2px solid purple. Then set the style attribute equal to the styles constant.
 
+Step 37:
+Use Advanced JavaScript in React Render Method
+In previous challenges, you learned how to inject JavaScript code into JSX code using curly braces, { }, 
+for tasks like accessing props, passing props, accessing state, inserting comments into your code, and most recently, styling your components. 
+These are all common use cases to put JavaScript in JSX, but they aren't the only way that you can utilize JavaScript code in your React components.
+You can also write JavaScript directly in your render methods, before the return statement, without inserting it inside of curly braces.
+This is because it is not yet within the JSX code. When you want to use a variable later in the JSX code inside the return statement, 
+you place the variable name inside curly braces.
+In the code provided, the render method has an array that contains 20 phrases to represent the answers found in the classic 1980's Magic Eight Ball toy. 
+The button click event is bound to the ask method, so each time the button is clicked a random number will be generated and stored as the randomIndex in state. 
+On line 52, delete the string change me! and reassign the answer const so your code randomly accesses a different index of the possibleAnswers 
+array each time the component updates. Finally, insert the answer const inside the p tags
 
-
-
+Step 38:
+Render with an If-Else Condition
+Another application of using JavaScript to control your rendered view is to tie the elements that are rendered to a condition. 
+When the condition is true, one view renders. When it's false, it's a different view. 
+You can do this with a standard if/else statement in the render() method of a React component.
+MyComponent contains a boolean in its state which tracks whether you want to display some element in the UI or not. 
+The button toggles the state of this value. Currently, it renders the same UI every time. 
+Rewrite the render() method with an if/else statement so that if display is true, you return the current markup. 
+Otherwise, return the markup without the h1 element.
+Note: You must write an if/else to pass the tests. Use of the ternary operator will not pass here.
 
 
 

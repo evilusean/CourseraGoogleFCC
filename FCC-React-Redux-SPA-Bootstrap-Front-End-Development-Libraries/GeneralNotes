@@ -727,9 +727,25 @@ Another application of using JavaScript to control your rendered view is to tie 
 When the condition is true, one view renders. When it's false, it's a different view. 
 You can do this with a standard if/else statement in the render() method of a React component.
 
+Use && for a More Concise Conditional
+The if/else statements worked in the last challenge, but there's a more concise way to achieve the same result. 
+Imagine that you are tracking several conditions in a component and you want different elements to render depending on each of these conditions. 
+If you write a lot of else if statements to return slightly different UIs, you may repeat code which leaves room for error. 
+Instead, you can use the && logical operator to perform conditional logic in a more concise way.
+This is possible because you want to check if a condition is true,and if it is, return some markup. Here's an example:
+{condition && <p>markup</p>}
+If the condition is true, the markup will be returned. If the condition is false, the operation will immediately return false after evaluating the condition
+and return nothing. You can include these statements directly in your JSX and string multiple conditions together by writing && after each one. 
+This allows you to handle more complex conditional logic in your render() method without repeating a lot of code.
 
-
-
+Use a Ternary Expression for Conditional Rendering
+Before moving on to dynamic rendering techniques, there's one last way to use built-in JavaScript conditionals to render what you want: the ternary operator. 
+The ternary operator is often utilized as a shortcut for if/else statements in JavaScript. They're not quite as robust as traditional if/else statements,
+but they are very popular among React developers. One reason for this is because of how JSX is compiled, if/else statements can't be inserted directly into JSX code.
+You might have noticed this a couple challenges ago — when an if/else statement was required, it was always outside the return statement.
+Ternary expressions can be an excellent alternative if you want to implement conditional logic within your JSX.
+Recall that a ternary operator has three parts, but you can combine several ternary expressions together. Here's the basic syntax:
+condition ? expressionIfTrue : expressionIfFalse;
 
 
 

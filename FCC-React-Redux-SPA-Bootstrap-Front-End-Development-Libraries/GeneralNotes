@@ -693,9 +693,26 @@ This method is a useful way to optimize performance. For example, the default be
 even if the props haven't changed. You can use shouldComponentUpdate() to prevent this by comparing the props.
 The method must return a boolean value that tells React whether or not to update the component. 
 
+Introducing Inline Styles
+There are other complex concepts that add powerful capabilities to your React code. But you may be wondering about the more simple problem of how to style those
+JSX elements you create in React. You likely know that it won't be exactly the same as working with HTML because of the way you apply classes to JSX elements.
+If you import styles from a stylesheet, it isn't much different at all. You apply a class to your JSX element using the className attribute,
+and apply styles to the class in your stylesheet. Another option is to apply inline styles, which are very common in ReactJS development.
+You apply inline styles to JSX elements similar to how you do it in HTML, but with a few JSX differences. Here's an example of an inline style in HTML:
+<div style="color: yellow; font-size: 16px">Mellow Yellow</div>
+JSX elements use the style attribute, but because of the way JSX is transpiled, you can't set the value to a string. 
+Instead, you set it equal to a JavaScript object. Here's an example:
+<div style={{color: "yellow", fontSize: 16}}>Mellow Yellow</div>
 
-
-
+Add Inline Styles in React
+You may have noticed in the last challenge that there were several other syntax differences from HTML inline styles in addition to the
+style attribute set to a JavaScript object. First, the names of certain CSS style properties use camel case. For example, the last challenge
+set the size of the font with fontSize instead of font-size. Hyphenated words like font-size are invalid syntax for JavaScript object properties, 
+so React uses camel case. As a rule, any hyphenated style properties are written using camel case in JSX.
+All property value length units (like height, width, and fontSize) are assumed to be in px unless otherwise specified.
+If you want to use em, for example, you wrap the value and the units in quotes, like {fontSize: "4em"}. 
+Other than the length values that default to px, all other property values should be wrapped in quotes.
+If you have a large set of styles, you can assign a style object to a constant to keep your code organized.
 
 
 

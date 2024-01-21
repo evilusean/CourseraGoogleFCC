@@ -765,9 +765,20 @@ It can become difficult to keep track of changes, potentially making your UI unp
 you describe how the UI should look as a function of the application's state. There is a clear flow of information that only moves in one direction.
 This is the preferred method when writing applications with React.
 
+Use Array.map() to Dynamically Render Elements
+Conditional rendering is useful, but you may need your components to render an unknown number of elements.Often in reactive programming,
+a programmer has no way to know what the state of an application is until runtime, because so much depends on a user's interaction with that program. 
+Programmers need to write their code to correctly handle that unknown state ahead of time. Using Array.map() in React illustrates this concept.
+For example, you create a simple "To Do List" app. As the programmer, you have no way of knowing how many items a user might have on their list.
+You need to set up your component to dynamically render the correct number of list elements long before someone using the program decides that today is laundry day.
 
-
-
+Give Sibling Elements a Unique Key Attribute
+The last challenge showed how the map method is used to dynamically render a number of elements based on user input. 
+However, there was an important piece missing from that example. When you create an array of elements, each one needs a key attribute set to a unique value.
+React uses these keys to keep track of which items are added, changed, or removed. 
+This helps make the re-rendering process more efficient when the list is modified in any way.
+Note: Keys only need to be unique between sibling elements, they don't need to be globally unique in your application.
+The code editor has an array with some front end frameworks and a stateless functional component named Frameworks().
 
 
 

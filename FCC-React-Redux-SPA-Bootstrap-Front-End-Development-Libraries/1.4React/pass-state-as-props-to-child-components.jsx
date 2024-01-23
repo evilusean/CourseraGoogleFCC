@@ -2,7 +2,7 @@ class MyApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'CamperBot'
+      name: 'Chika Chika Slim Shady'
     }
   }
   render() {

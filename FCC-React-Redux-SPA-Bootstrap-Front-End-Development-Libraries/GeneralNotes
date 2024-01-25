@@ -798,7 +798,17 @@ If you render the initial HTML markup on the server and send this to the client,
 the initial page load contains all of the page's markup which can be crawled by search engines. Second, this creates a faster initial page load experience because 
 the rendered HTML is smaller than the JavaScript code of the entire app. React will still be able to recognize your app and manage it after the initial load.
 
-
-
+1.5 Redux =========================================================================================================================================================
+Create a Redux Store
+Redux is a state management framework that can be used with a number of different web technologies, including React.
+In Redux, there is a single state object that's responsible for the entire state of your application.
+This means if you had a React app with ten components, and each component had its own local state,the entire state of your app would be defined by a single state object
+housed in the Redux store. This is the first important principle to understand when learning Redux: 
+the Redux store is the single source of truth when it comes to application state.
+This also means that any time any piece of your app wants to update state, it must do so through the Redux store. 
+The unidirectional data flow makes it easier to track state management in your app.
+The Redux store is an object which holds and manages application state. There is a method called createStore() on the Redux object, 
+which you use to create the Redux store. This method takes a reducer function as a required argument. The reducer function is covered in a later challenge,
+and is already defined for you in the code editor. It simply takes state as an argument and returns state.
 
 

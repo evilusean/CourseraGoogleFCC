@@ -858,7 +858,12 @@ Note: At this point, don't worry about state immutability, since it is small and
 This is important because once your app has multiple reducers, they are all run any time an action dispatch is made, even when the action isn't related to that reducer. 
 In such a case, you want to make sure that you return the current state.
 
-
+Use const for Action Types
+A common practice when working with Redux is to assign action types as read-only constants, then reference these constants wherever they are used. 
+You can refactor the code you're working with to write the action types as const declarations.
+Declare LOGIN and LOGOUT as const values and assign them to the strings 'LOGIN' and 'LOGOUT', respectively.
+Then, edit the authReducer() and the action creators to reference these constants instead of string values.
+Note: It's generally a convention to write constants in all uppercase, and this is standard practice in Redux as well.
 
 
 

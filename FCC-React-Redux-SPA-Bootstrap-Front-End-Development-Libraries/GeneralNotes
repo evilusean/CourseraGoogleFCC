@@ -939,7 +939,7 @@ Here's an example:
 const newObject = Object.assign({}, obj1, obj2);
 This creates newObject as a new object, which contains the properties that currently exist in obj1 and obj2.
 
-
+1.6 React+Redux ====================================================================================================================================================
 
 
 

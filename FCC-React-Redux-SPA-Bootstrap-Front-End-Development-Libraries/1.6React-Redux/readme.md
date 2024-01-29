@@ -1,4 +1,4 @@
-Emd : </br>
+End : </br>
 
 React and Redux : </br>
 React and Redux are often mentioned together, and with good reason. </br>

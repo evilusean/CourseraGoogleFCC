@@ -125,6 +125,6 @@ Start: May2021</br>
 End: May2021</br>
 
 # FreeCodeCamp - Python for Beginners</br>
-[Github Repository Link](https://github.com/evilusean/FreeCodeCampPythonBeginners)https://github.com/evilusean/FreeCodeCampPythonBeginners</br>
+[Github Repository Link](https://github.com/evilusean/FreeCodeCampPythonBeginners)</br>
 Start: April2021</br>
 End: April2021</br>

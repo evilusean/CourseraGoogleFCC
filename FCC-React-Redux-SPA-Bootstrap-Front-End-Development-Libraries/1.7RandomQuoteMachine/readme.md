@@ -1,0 +1,16 @@
+Build a Random Quote Machine :</br>
+Note: React 18 has known incompatibilities with the tests for this project ([see issue](https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-random-quote-machine))
+
+Objective: Build an app that is functionally similar to this: https://random-quote-machine.freecodecamp.rocks/.</br>
+
+Fulfill the below user stories and get all of the tests to pass. Use whichever libraries or APIs you need. Give it your own personal style.</br>
+
+You can use any mix of HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, and jQuery to complete this project. </br>
+You should use a frontend framework (like React for example) because this section is about learning frontend frameworks. </br>
+Additional technologies not listed above are not recommended and using them is at your own risk. </br>
+We are looking at supporting other frontend frameworks like Angular and Vue, but they are not currently supported. </br>
+We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!</br>
+
+Link:</br>
+https://random-quote-machine.freecodecamp.rocks/.</br>
+https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-random-quote-machine</br>

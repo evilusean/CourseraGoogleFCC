@@ -99,24 +99,35 @@ End:28Jan2023
 # Section for links/old courses not found in this centralized repository
 
 ---
-
 #</br>
-Github Repository Link:</br>
+Github Repository Link</br>
 Start: </br>
 End: </br>
 Certificate: </br>
 
 #</br>
-Github Repository Link:</br>
+Github Repository Link</br>
 Start: </br>
 End: </br>
 Certificate: </br>
 
 #</br>
-
-Github Repository Link:</br>
+Github Repository Link</br>
 Start: </br>
 End: </br>
+Certificate: </br>
+
+# Edx-IBM Analyzing Data with Python</br>
+[Github Repository Link](https://github.com/evilusean/Edx-IBM-AnalyzingDataWithPython)</br>
+Start: Sept2021</br>
+End: Sept2021 </br>
+Certificate: </br>
+
+# Edx-MIT-6.001x Introduction-to-Computer-Science-using-Python</br>
+
+[Github Repository Link](https://github.com/evilusean/MIT-6.001x-edx-Introduction-to-Computer-Science-using-Python)</br>
+Start: 01June2021</br>
+End: 21August2021</br>
 Certificate: </br>
 
 # Python 4 Everyone </br>

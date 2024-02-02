@@ -9,10 +9,8 @@ cash: the amount of cash provided by the customer for the item, which is provide
 cid: cash-in-drawer, a 2D array listing available currency in the cash drawer.</br>
 If you'd like to test your application with different values for price and cid, make sure to declare them with the let keyword so they can be reassigned by our tests.</br>
 
-Your application should show different messages depending on the price of the item, the amount of cash provided by the customer, and the amount of cash in the drawer:
-https://cash-register.freecodecamp.rocks
-https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/build-a-cash-register-project/build-a-cash-register
-</br>
+Your application should show different messages depending on the price of the item, the amount of cash provided by the customer, and the amount of cash in the drawer: </br>https://cash-register.freecodecamp.rocks</br> https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/build-a-cash-register-project/build-a-cash-register 
+
 ===============================================================================
 End: 25December2023</br>
 

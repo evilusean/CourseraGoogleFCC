@@ -6,7 +6,8 @@ Certificate:
 
 Start: 05 January 2024
 
-End: 
+End: ~02 February 2024</br>
+Coursework completed, tester is still broken - can't earn the certificate - going to do some solo projects waiting for them to fix the tester so I can pass
 
 # FreeCodeCamp : JavaScript Algorithms and Data Structures:
 
@@ -16,7 +17,8 @@ Certificate:
 
 Start: 07 Dec 2023
 
-End: ~03 January 2024 
+End: ~03 January 2024 </br>
+Coursework completed, tester is still broken - can't earn the certificate - as of 02February2024 it's been broken for over a month 
 
 # FreeCodeCamp : Responsive Web Design - HTML/CSS/CSSGrid/Flexbox:
 

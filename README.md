@@ -119,7 +119,7 @@ Start: 21July2022 </br>
 End: 24July2022 </br>
 Certificate: </br>
 
-# Coursera-IBM Data Science Fundamentals with Python and SQL Specialization</br>
+# Coursera-IBM Data Science Fundamentals with Python and SQL</br>
 [Github Repository Link](https://github.com/evilusean/Coursera-IBM-Data-Science-Fundamentals-with-Python-and-SQL-Specialization)</br>
 Start: 31May2022 </br>
 End: 27July2022 </br>

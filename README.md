@@ -6,7 +6,8 @@ Certificate:
 
 Start: 05 January 2024
 
-End: 
+End: ~02 February 2024</br>
+Coursework completed, tester is still broken - can't earn the certificate - going to do some solo projects waiting for them to fix the tester
 
 # FreeCodeCamp : JavaScript Algorithms and Data Structures:
 
@@ -16,7 +17,8 @@ Certificate:
 
 Start: 07 Dec 2023
 
-End: ~03 January 2024 
+End: ~03 January 2024 </br>
+Coursework completed, tester is still broken - can't earn the certificate - as of 02February2024 it's been broken for over a month 
 
 # FreeCodeCamp : Responsive Web Design - HTML/CSS/CSSGrid/Flexbox:
 
@@ -94,4 +96,48 @@ Start:18October2022
 
 End:28Jan2023
 
+---
 
+# Section for links/old courses not found in this centralized repository
+
+---
+#</br>
+Github Repository Link</br>
+Start: </br>
+End: </br>
+Certificate: </br>
+
+#</br>
+Github Repository Link</br>
+Start: </br>
+End: </br>
+Certificate: </br>
+
+#</br>
+Github Repository Link</br>
+Start: </br>
+End: </br>
+Certificate: </br>
+
+# Edx-IBM Analyzing Data with Python</br>
+[Github Repository Link](https://github.com/evilusean/Edx-IBM-AnalyzingDataWithPython)</br>
+Start: Sept2021</br>
+End: Sept2021 </br>
+Certificate: </br>
+
+# Edx-MIT-6.001x Introduction-to-Computer-Science-using-Python</br>
+
+[Github Repository Link](https://github.com/evilusean/MIT-6.001x-edx-Introduction-to-Computer-Science-using-Python)</br>
+Start: 01June2021</br>
+End: 21August2021</br>
+Certificate: </br>
+
+# Python 4 Everyone </br>
+[Github Repository Link](https://github.com/evilusean/Python4Everyone)</br>
+Start: May2021</br>
+End: May2021</br>
+
+# FreeCodeCamp - Python for Beginners</br>
+[Github Repository Link](https://github.com/evilusean/FreeCodeCampPythonBeginners)</br>
+Start: April2021</br>
+End: April2021</br>

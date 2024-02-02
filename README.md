@@ -101,11 +101,37 @@ End:28Jan2023
 # Section for links/old courses not found in this centralized repository
 
 ---
-#</br>
+# </br>
 Github Repository Link</br>
 Start: </br>
 End: </br>
 Certificate: </br>
+
+# IBM4BostonHousingDataAnalysisProject</br>
+[Github Repository Link](https://github.com/evilusean/IBM4BostonHousingDataAnalysisProject)</br>
+Start: 21July2022 </br>
+End: 24July2022 </br>
+Certificate: </br>
+
+# [Coursera-IBM Data Science Fundamentals with Python and SQL Specialization](https://www.coursera.org/specializations/data-science-fundamentals-python-sql)</br>
+[Github Repository Link](https://github.com/evilusean/Coursera-IBM-Data-Science-Fundamentals-with-Python-and-SQL-Specialization)</br>
+Start: 31May2022 </br>
+End: 27July2022 </br>
+Certificate: </br>
+https://www.credly.com/earner/earned/badge/fb920878-c873-4d26-a96d-deb1d4fee496
+
+# IBM Python/SQL Webscraping Project For Data Science</br>
+[Github Repository Link](https://github.com/evilusean/IBMPythonWebscrapingStocksProjectForDataScience)</br>
+Start: 27June2022</br>
+End: 11July2022 </br>
+Certificate: </br>
+
+# Coursera-Google Data Analyst</br>
+[Github Repository Link](https://github.com/evilusean/CourseraGoogleDataAnalyst)</br>
+Start: 01January2022</br>
+End: 29May2022 </br>
+Certificate: </br>
+https://www.credly.com/badges/951ea09d-f4e4-4d91-9c28-d2c5a6eb2cdd/public_url
 
 # Edx-MIT-6.002x Introduction to Computer Science using Python </br>
 [Github Repository Link](https://github.com/evilusean/MIT-6.002x-edx-Introduction-to-Computational-Thinking-and-Data-Science)</br>

@@ -11,4 +11,5 @@ https://www.php.net/manual/en/install.unix.php
 
 PHP is a server side language that can interact with the client on the frontend.
 PHP integrates well with HTML, you can write your PHP with HTML and they work together perfectly.
+Powers Wordpress, used by 78.9% of all websites.
 

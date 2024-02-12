@@ -1,1 +1,14 @@
+MacOS install:
+https://www.php.net/manual/en/install.macosx.php
+Open Terminal (launchpad -> type in terminal):
+Install Brew:
+https://brew.sh/
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install php
+
+Linux Install:
+https://www.php.net/manual/en/install.unix.php
+
+PHP is a server side language that can interact with the client on the frontend.
+PHP integrates well with HTML, you can write your PHP with HTML and they work together perfectly.
 

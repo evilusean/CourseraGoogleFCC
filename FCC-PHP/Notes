@@ -12,6 +12,13 @@ Linux Install:
 https://www.php.net/manual/en/install.unix.php
 sudo apt install php
 
+Windows Install:
+Download Zip from PHP web, unzip
+You need to edit PATH variables, and add it to windows path, tell windows where the location of PHP is
+cmd #open command
+echo %PATH% #will print out all path variables on windows
+php -v #checks version of PHP
+
 PHP is a server side language that can interact with the client on the frontend.
 PHP integrates well with HTML, you can write your PHP with HTML and they work together perfectly.
 Powers Wordpress, used by 78.9% of all websites.

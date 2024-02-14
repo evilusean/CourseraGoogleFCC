@@ -44,11 +44,12 @@ the webserver 'serves' the page whenever it is requested(refreshed) the php code
 
 6. (27:30) Variables================================================================================================================================================================================
 If you need to change an object in php multiple times(or will in the future) use a variable
+A variable is just a container where you can store pieces of information, give a descriptive name to variables
+$name = "Sean" # used to create a variable in php with name of "Sean"
+<?php echo "My name is $name" ?> #posts the sentence "My name is Sean" in PHP
+You can change the $variable mid program to update everything after that point to the new variable
 
-
-
-
-
+7. (38:09) Data Types================================================================================================================================================================================
 
 
 

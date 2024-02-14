@@ -36,7 +36,7 @@ You can create a file in '/var/wwww/html' directory on linux and run it from the
 Everything in HTML is a tag, you can create special PHP tags <?php echo ("Hello World")?> anything you put inside of these tags is considered PHP
 echo is used to put text into php tags
 
-
+5. (20:29) Writing HTML=============================================================================================================================================================================
 
 
 

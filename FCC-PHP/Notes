@@ -43,7 +43,7 @@ from inside the <?php ?> tag you can write out an entire site
 the webserver 'serves' the page whenever it is requested(refreshed) the php code is executed, instructions are executed in order
 
 6. (27:30) Variables================================================================================================================================================================================
-
+If you need to change an object in php multiple times(or will in the future) use a variable
 
 
 

@@ -50,8 +50,13 @@ $name = "Sean" # used to create a variable in php with name of "Sean"
 You can change the $variable mid program to update everything after that point to the new variable
 
 7. (38:09) Data Types================================================================================================================================================================================
+Strings = will always be in "" quotation marks, you can also represent numbers as strings
+Integers = Whole Number(no decimal point), can be negative, doesn't need "" quotation marks
+Floating point = any number with a decimal point, there is a difference between '30' and '30.0'
+Boolean = can only be 'true' or 'false' - binary datatype
+Null = no value
 
-
+8. (44:27) Working With Strings=======================================================================================================================================================================
 
 
 

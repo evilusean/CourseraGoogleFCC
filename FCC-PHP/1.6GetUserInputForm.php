@@ -4,10 +4,12 @@
   <title>Get User Input</title>
 </head>
 <body>
-    Name: <form action="test.php" method="get"> 
+    Name: 
+<form action="test.php" method="get"> 
 <input type="text" name="username">
 <br>
-Age: <input type="number" name="age">
+Age: <br>
+<input type="number" name="age">
 <br>
 <input type="submit">
 <br>

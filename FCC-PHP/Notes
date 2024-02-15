@@ -57,6 +57,7 @@ Boolean = can only be 'true' or 'false' - binary datatype
 Null = no value
 
 8. (44:27) Working With Strings=======================================================================================================================================================================
+! Google PHP math functions for more (there are dozens more)
 all strings must be enclosed in "" or you can use a variable
 functions can be used to find out information about strings and modify strings, snippets of code strtolower() will convert to lowercase, strtoupper() will convert to upper
 echo strlen( $string ); #string length
@@ -70,9 +71,18 @@ echo substr($string, 8, 3) # substring grabs a portion of the string from [8] wi
 echo str_repeat($string, 2) #repeats the string 2 times
 
 9. (54:50) Working With Numbers========================================================================================================================================================================
-
-
-
+! Google PHP math functions for more (there are dozens more, log, sine, cosine, tangent)
+You don't need "" for typing numbers, PHP can also handle negative numbers, and decimal numbers(floats), can do math operations
+Math Operators : + * / - %(modulus operator = gives the remainder)
+echo 4 + 5 * 10 = 54 # PHP has an order of operations, will do multiplication of 5* 10 first and then add 4
+(4 + 5) * 10 = 90 #PHP will do the math in parenthesis first
+$num = 10 #can be stored in a variable
+$num++ #will add 1 to the #num variable
+$num = $num + 25; #will add 25 to num variable, shorthand version is $num += 25; you can also do -= *= and /=
+echo abs(-100); #will return the absolute number: 100 
+abs(-100) #will return absolute number : 100
+pow(2, 3) #will multiply 2 to the power of 3
+sqrt(144) # will get the square root of 144
 
 
 

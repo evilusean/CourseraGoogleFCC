@@ -93,10 +93,13 @@ Inside the form you can put text boxes, radio buttons, submit buttons - anything
 <?php echo $_GET["username"]; ?> #will print out the value that got submitted into the text box
 
 11. (1:15:37) Building a Basic Calculator================================================================================================================================================================
+Build a calculator that gets 2 numbers from the user and submits results back to PHP and submits the result on the site
+<input type="number" name="num1"> #Theres a special type for numbers that only allows input of numbers
+<?php echo $_GET["num1"] + $_GET["num2"]; ?> #PHP will add the numbers together like a normal calculation and return the answer using echo
+http://localhost/test.php?num1=10&num2=21 #I added 10 and 21, PHP stored the data in the HTML link with & seperating num1 and num2, you can change the information at the top instead of retyping inputs
+The information you submitted gets stored in the URL
 
-
-
-
+12. (1:22:13) Building a Mad Libs Game===================================================================================================================================================================
 
 
 

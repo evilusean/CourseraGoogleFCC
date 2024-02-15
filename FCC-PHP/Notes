@@ -85,4 +85,30 @@ pow(2, 3) #will multiply 2 to the power of 3
 sqrt(144) # will get the square root of 144
 
 10. (1:05:14) Getting User Input=========================================================================================================================================================================
+First thing you need to do to get user input is set up a form- which is a special html element to pass the info user enters to php
+Inside the form you can put text boxes, radio buttons, submit buttons - anything you want
+<form action="test.php" method="get"> #action tells the test.php how to handle the form, method tells the form what you are trying to do with it, here it is 'get' information
+<input type="text" name="username">#input tag allows the user to input information type="text" is a basic textbox, name needs to be unique and describe what it does
+<input type="submit"> #submits the information and all data in form to php
+<?php echo $_GET["username"]; ?> #will print out the value that got submitted into the text box
+
+11. (1:15:37) Building a Basic Calculator================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

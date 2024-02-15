@@ -100,10 +100,12 @@ http://localhost/test.php?num1=10&num2=21 #I added 10 and 21, PHP stored the dat
 The information you submitted gets stored in the URL
 
 12. (1:22:13) Building a Mad Libs Game===================================================================================================================================================================
+<form action="test.php" method="get"> #used to send results back to 
+Color : <input type="text" name="color"> #used to ask for color
+<?php $color = $_GET["color"]; #used to create a variable named $color from the input text
+echo "Roses are $color No Cap FR FR<br>"; ?> #used to post the color, no cap FR FR
 
-
-
-
+13. (1:28:59) URL Parameters=============================================================================================================================================================================
 
 
 

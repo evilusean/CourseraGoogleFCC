@@ -57,9 +57,19 @@ Boolean = can only be 'true' or 'false' - binary datatype
 Null = no value
 
 8. (44:27) Working With Strings=======================================================================================================================================================================
+all strings must be enclosed in "" or you can use a variable
+functions can be used to find out information about strings and modify strings, snippets of code strtolower() will convert to lowercase, strtoupper() will convert to upper
+echo strlen( $string ); #string length
+echo ucfirst( $string ); #first letter to upper
+echo ucwords( $string ) #first letter of each word to upper
+echo $string[0]; #first letter of string
+echo $string[-1]; #last letter of string
+$string[0] = "t"; #change first letter of string
+echo str_replace("String", "ting", $string) #replaces String with ting for $string var
+echo substr($string, 8, 3) # substring grabs a portion of the string from [8] with length of 3 characters
+echo str_repeat($string, 2) #repeats the string 2 times
 
-
-
+9. (54:50) Working With Numbers========================================================================================================================================================================
 
 
 

@@ -106,10 +106,17 @@ Color : <input type="text" name="color"> #used to ask for color
 echo "Roses are $color No Cap FR FR<br>"; ?> #used to post the color, no cap FR FR
 
 13. (1:28:59) URL Parameters=============================================================================================================================================================================
+URL parameters are values you can tack onto the end of a URL that can pass a value into PHP
+for URL parameters always ensure the method="get" <form action="test.php" method="get"> Name: <input type="text" name="userName"><br><input type="submit"> 
+<?php echo $_GET["userName"] ?> # will get the username from the text input field submitted form and post it to the URL below after the ?
+http://localhost/test.php?userName=Sean
+if you pass in another value, below will be age it will use an ampersand &
+http://localhost/test.php?userName=Sean&age=30
+the user can actually bookmark the URL and store all of the information
+google search engine uses a more complex form of this when you search for something
+the downside, is it is not secure
 
-
-
-
+14. (1:35:52) POST vs GET===============================================================================================================================================================================
 
 
 

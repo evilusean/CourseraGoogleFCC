@@ -123,8 +123,13 @@ method="get" # puts stores the information in the URL, less secure, DO NOT USE F
 echo $_POST["password"] #gets a password from POST method, more secure, won't show up in URL
 Most of the time developers prefer to use POST over GET when getting information from a form
 
-
-
+15. (1:41:44) Arrays====================================================================================================================================================================================
+An array is a container/structure where you can store multiple pieces of informations, like a variable but for more than one piece of data
+$arrayName = array("element1", "element2", "element3", "element4"); #Same way to create as a variable, use a descriptive name, commas to sepereate elements, can use strings, numbers, booleans
+echo $arrayName[0] #use index to access the first element in an array, index starts at [0]
+$arrayName[2] = "newElement"; # arrays are mutable, can be changed by using index number
+$arrayName[10] = "newBigElement" #you can add elements to the array that are larger than the array size
+echo count($arrayName); #will print out the count of the array elements
 
 
 

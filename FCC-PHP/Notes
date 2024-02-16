@@ -117,6 +117,39 @@ google search engine uses a more complex form of this when you search for someth
 the downside, is it is not secure
 
 14. (1:35:52) POST vs GET===============================================================================================================================================================================
+method="post" #similar to method="get" but more secure, 
+method="get" # puts stores the information in the URL, less secure, DO NOT USE FOR PASSWORDS or confidential information
+<form action="test.php" method="post">  Enter a Password : <input type="password" name="password"> #special input method for passwords, hide characters 
+echo $_POST["password"] #gets a password from POST method, more secure, won't show up in URL
+Most of the time developers prefer to use POST over GET when getting information from a form
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

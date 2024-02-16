@@ -1,7 +1,7 @@
 <!DOCTYPE php>
 <html>
 <head>
-  <title>ZoomZoom Madlibs</title>
+  <title>Post Method Password</title>
 </head>
 <body>
 <form action="test.php" method="post"> 

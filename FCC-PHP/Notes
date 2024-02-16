@@ -143,7 +143,29 @@ $grades["Jim"] = "F";  #allows you to change grades with "Jim" key
 In an associative array, all the keys must be unique, values can be the same
 
 18. (2:04:55) Functions==================================================================================================================================================================================
-
+DRY(Don't repeat yourself) if you have code that is going to be performing a common task multiple times, use a function
+You can take this repetitive code and put it in it's own special container called a function, allows you to organize all code on website and be reuseable
+function funcName(){} #syntax : function declares it is a function, funcName is the name of function, brackets = , curly brackets are where the function is written 
+funcName() #to call a function, type it's name
+anytime you put code in a function, that code is only going to execute when you call the function
+you can give a function parameters(information that gets passed in) in order to do different things
+Example Function : 
+  <?php 
+    function sayHi ($userName){
+      echo "Hello $userName";
+    }
+    sayHi("Sean");
+  ?>
+Example Function, with multiple parameters :
+  <?php 
+    function sayHi ($userName, $age){
+      echo "Hello $userName, you are $age. <br>";
+    }
+    sayHi("Sean", 40);
+    sayHi("Shawn", 65);
+    sayHi("Shun", 32);
+    sayHi("Shaun", 99);
+  ?>
 
 
 

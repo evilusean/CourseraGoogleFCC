@@ -142,7 +142,7 @@ $grades = array("Jim"=>"A+", "Bill"=>"B-", "Sue"=>"C+"); #create the key "name" 
 $grades["Jim"] = "F";  #allows you to change grades with "Jim" key
 In an associative array, all the keys must be unique, values can be the same
 
-
+18. (2:04:55) Functions==================================================================================================================================================================================
 
 
 

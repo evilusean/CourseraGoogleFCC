@@ -137,8 +137,10 @@ $fruits = $_POST["fruits"]; #you can store all the variables in an array in a va
 echo $fruits[0]; #checks first fruit, you can check each individual element in array with an index
 
 17. (1:57:22) Associative Arrays========================================================================================================================================================================
-
-
+Associate Array = a special array where you can store key value pairs, instead of just data, which allows you to access data differently
+$grades = array("Jim"=>"A+", "Bill"=>"B-", "Sue"=>"C+"); #create the key "name" and store value with => seperate each student with ,
+$grades["Jim"] = "F";  #allows you to change grades with "Jim" key
+In an associative array, all the keys must be unique, values can be the same
 
 
 

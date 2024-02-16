@@ -131,7 +131,7 @@ $arrayName[2] = "newElement"; # arrays are mutable, can be changed by using inde
 $arrayName[10] = "newBigElement" #you can add elements to the array that are larger than the array size
 echo count($arrayName); #will print out the count of the array elements
 
-
+16. (1:50:26) Using Checkboxes==========================================================================================================================================================================
 
 
 

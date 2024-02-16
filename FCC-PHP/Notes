@@ -132,8 +132,9 @@ $arrayName[10] = "newBigElement" #you can add elements to the array that are lar
 echo count($arrayName); #will print out the count of the array elements
 
 16. (1:50:26) Using Checkboxes==========================================================================================================================================================================
-
-
+Apples: <input type="checkbox" name="fruits[]" value="apples"><br> #if you want all values to be stored in the same array, you need to give them all the same name name="fruits[]"
+$fruits = $_POST["fruits"]; #you can store all the variables in an array in a variable, this snippet takes all the checked/selected fruits and stores them in the $fruits variable
+echo $fruits[0]; #checks first fruit, you can check each individual element in array with an index
 
 
 

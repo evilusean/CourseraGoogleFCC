@@ -180,16 +180,22 @@ whenver you place a return keyword everything after the function does not get ex
 You can use this to break out of a function if you want, such as to avoid an infinite loop
 
 20. (2:19:10) If Statements=================================================================================================================================================================================
-
-
-
-
-
-
-
-
-
-
+If statements are a special programming structure that allow our programs to make decisions
+if condition = true, perform an action / if condition = false, move on 
+if (cond) {action} #general syntax for PHP if statements, if condition is true perform action
+else {otherAction} #if condition is NOT true, perform else statement otherAction 
+  <?php 
+    $isMale = true; #storing a boolean value in a variable
+    if ($isMale){
+      echo "it is man";
+    } else {
+      echo "IT IS MA'AM";
+    }
+  ?>
+if ($isMale && $isTall){echo "you are a tall male";} # && and operator, can add multiple checks for a single if statement, if both(or more) are true, perform action
+|| # or operator, only one condition needs to be true
+elseif #used to check a secondary condition if the first one is false
+elseif($isMale && !$isTall){echo "you are a short male"} # '!' negation operator, checks if the condition is NOT true
 
 
 

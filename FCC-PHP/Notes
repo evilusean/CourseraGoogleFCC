@@ -210,11 +210,14 @@ code is pretty self explanatory:
 https://github.com/evilusean/CourseraGoogleFCC/blob/main/FCC-PHP/2.6BetterCalculator.php
 
 23. (2:56:53) Switch Statements=============================================================================================================================================================================
+Switch Statements = A special type of if statement that is used to compare one value to a bunch of other values
+very similar to an if statement but uses 'case' and 'break' keywords
+switch($variable){case "1": action1; break case "2": action2; break; case...default: defaultAction} 
+#above switch statement takes a variable, and goes through each case and performs an action if it matches, it will then break out after the action is performed,
+#at the end is the default: defaultAction, this will perform if no other case(and subsequent break) is performed, similar to the else code block in an if statement
+Everything you can do in a switch statement can be done in an in statement, switch statements are just easier to write and use
 
-
-
-
-
+24. (3:05:09) While Loops===================================================================================================================================================================================
 
 
 

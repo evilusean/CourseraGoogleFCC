@@ -177,7 +177,9 @@ you want to return the result of the function to whomever called the function
     $cubeResult = cube(4)
   ?> #will cube 4 and store the rturn statement into the variable $cubeResult
 whenver you place a return keyword everything after the function does not get executed
+You can use this to break out of a function if you want, such as to avoid an infinite loop
 
+20. (2:19:10) If Statements=================================================================================================================================================================================
 
 
 

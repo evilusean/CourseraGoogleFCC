@@ -167,10 +167,16 @@ Example Function, with multiple parameters :
     sayHi("Shaun", 99);
   ?>
 
-
-
-
-
+19. (2:12:10) Return Statements=============================================================================================================================================================================
+A function can also give information back, this is known as a return statement
+you want to return the result of the function to whomever called the function
+  <?php 
+    function cube ($num){
+      return $num * $num * $num;
+    }
+    $cubeResult = cube(4)
+  ?> #will cube 4 and store the rturn statement into the variable $cubeResult
+whenver you place a return keyword everything after the function does not get executed
 
 
 

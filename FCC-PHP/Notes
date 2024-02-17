@@ -202,10 +202,14 @@ Comparatives = you can compare different pieces of information and depending on 
 > , > , = , != , <= , >=
 
 22. (2:47:13) Building a Better Calculator==================================================================================================================================================================
+Create a calculator that takes 2 number inputs and the operation they want to perform(+ - * /)
+by default the <input type="number"> HTML will only do integers, whole numbers, you can fix this by adding a step feature <input type="number" step="0.1" name="num1"> which will do numbers to 1/10's place
+<input type="number" step="0.001" name="num1"> will do up to 3 decimal points
+use the else statement to catch invalid operators 
+code is pretty self explanatory:
+https://github.com/evilusean/CourseraGoogleFCC/blob/main/FCC-PHP/2.6BetterCalculator.php
 
-
-
-
+23. (2:56:53) Switch Statements=============================================================================================================================================================================
 
 
 

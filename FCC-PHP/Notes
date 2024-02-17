@@ -197,7 +197,7 @@ if ($isMale && $isTall){echo "you are a tall male";} # && and operator, can add 
 elseif #used to check a secondary condition if the first one is false
 elseif($isMale && !$isTall){echo "you are a short male"} # '!' negation operator, checks if the condition is NOT true
 
-
+21. (2:37:16) If Statements (con't)=========================================================================================================================================================================
 
 
 

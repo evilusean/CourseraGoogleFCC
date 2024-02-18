@@ -218,10 +218,16 @@ switch($variable){case "1": action1; break case "2": action2; break; case...defa
 Everything you can do in a switch statement can be done in an if statement, switch statements are just easier to write and use
 
 24. (3:05:09) While Loops===================================================================================================================================================================================
+While loops are a programming structure that allows you to loop over a specific block of code until a certain condition is true, repeats until true
+<?php $index = 1; while ($index <= 5) {echo "$index <br>"; $index++; } ?> #$index = 1; variable sets the counter, ($index <= 5) is the loop condition, {} is the action performed, $index++ increments the index variable
+every single iteration of the loop it will check if the condition is true, and repeat until it is, then break out of the loop
+avoid infinite loops, where the condition can never be fulfilled, forgetting '$index++;' would cause an infinite loop
 
+Do While Loop = exactly the same as a while loop but the condition to be met is at the bottom of the script after the {action}
+<?php $index = 1; do {echo "$index <br>"; $index++; } while ($index <= 5); ?>
+so instead of checking the condition first, and then executing, you execute first and then check.
 
-
-
+25. (3:15:18) For Loops=====================================================================================================================================================================================
 
 
 

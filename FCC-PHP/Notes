@@ -228,9 +228,13 @@ Do While Loop = exactly the same as a while loop but the condition to be met is 
 so instead of checking the condition first, and then executing, you execute first and then check.
 
 25. (3:15:18) For Loops=====================================================================================================================================================================================
-
-
-
+For Loops = special type of loop that is used in conjunction with an indexing variable, allows you to keep track of a specific variable while you go through your loop
+serves a more specific purpose, It can continue to loop while a certain condition is true, as you go through the loop, it can keep track of an iterating variable
+specifically designed for using an indexing variable like '$index'
+for(variable initialization; looping condition; iteration execution){action} #general syntax for for loops
+for ($index = 1; $index <= 5; $index++){echo "$index <br>";} #declares index=1, while $index <= 5, print $index, $index++
+the while loop takes 4 lines of code, the for loop takes up 2 lines to do the same thing
+<?php $luckyNumbers = array(4, 8, 14, 16, 23, 42); for ($i = 0; $i < count($luckyNumbers); $i++){echo "$luckyNumbers[$i] <br>"; }?>#will print out each number in the array
 
 
 

@@ -236,7 +236,7 @@ for ($index = 1; $index <= 5; $index++){echo "$index <br>";} #declares index=1, 
 the while loop takes 4 lines of code, the for loop takes up 2 lines to do the same thing
 <?php $luckyNumbers = array(4, 8, 14, 16, 23, 42); for ($i = 0; $i < count($luckyNumbers); $i++){echo "$luckyNumbers[$i] <br>"; }?>#will print out each number in the array
 
-
+26. (3:26:24) Comments######################################################################################################################################################################################
 
 
 

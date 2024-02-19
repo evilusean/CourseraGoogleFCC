@@ -258,7 +258,7 @@ you don't need to declare variables within the included PHP file, you can use a 
 the variable data will get populated from the main file, while using the included PHP as a template, using the new variables to populate the template 
 you can also include PHP files that have variables and functions inside of them, <?php include "useful-tools.php"; sayHi("Sean"); echo $feetInMiles; ?>
 
-
+29. (3:45:57) Classes & Objects=============================================================================================================================================================================
 
 
 

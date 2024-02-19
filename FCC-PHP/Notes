@@ -237,9 +237,10 @@ the while loop takes 4 lines of code, the for loop takes up 2 lines to do the sa
 <?php $luckyNumbers = array(4, 8, 14, 16, 23, 42); for ($i = 0; $i < count($luckyNumbers); $i++){echo "$luckyNumbers[$i] <br>"; }?>#will print out each number in the array
 
 26. (3:26:24) Comments######################################################################################################################################################################################
-
-
-
+Code is for telling the computer what to do, comments is for telling future yourself or other developers what to do
+// This is used for comments
+/* This is a comment block. Comment tags/Comment blocks are multiline  comments */
+//'Commenting Out' = Comment out lines of code to test different code without removing it before testing
 
 
 

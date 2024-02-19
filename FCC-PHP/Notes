@@ -259,13 +259,18 @@ the variable data will get populated from the main file, while using the include
 you can also include PHP files that have variables and functions inside of them, <?php include "useful-tools.php"; sayHi("Sean"); echo $feetInMiles; ?>
 
 29. (3:45:57) Classes & Objects=============================================================================================================================================================================
+Classes = certain custom datatypes in php you can work with, a specificiation for a custom datatype that will allow you to model something in the real world
+there is a lot of data that can't be represented by a single string, number, or boolean - you sometimes need 3 or 4 different datatypes to model what you need, this is what classes are for
+<?php class Book {var $title; var $author; var $pages;} #Create a book class with attributes $title, $author, $pages
+$book1 = new Book; #creates a new Book datatype object and stores it in $book1 variable
+$book1->title = "Tragedy and Hope"; #creates a title for the new book1 object variable
+$book1->author = "Carroll Quigley"; #adds an author to book1 class
+$book1->pages = 2000; #adds pages to the $book1 object variable
+echo $book1->title; #prints out $book1 variable object title
+whenever you are creating a class in php, break it up into a series of attributes, each class is a blueprint , an object is just an instance of a class
+The beauty of classes and objects is you can take something complex like a book, car, phone, water bottle, etc and represent it inside of our programs
 
-
-
-
-
-
-
+30. (3:56:23) Constructors==================================================================================================================================================================================
 
 
 

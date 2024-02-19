@@ -251,9 +251,12 @@ if you wanted to have the same header/footer for your entire website, and you di
 you can break up your website into small reusable components and just include them everywhere you want them, makes your website more modular, website components
 
 28. (3:36:51) Include: PHP==================================================================================================================================================================================
-
-
-
+<?php include "article-header.php" ?> #You can include other PHP files in your main PHP file, 
+if you want to reuse PHP code, you can use include to do it, or make your PHP file modular
+you don't need to declare variables within the included PHP file, you can use a $title; and have the variable in the main file, or put the variables in another variable PHP file
+<?php include "article-header.php"; $title="My Header Title"; ?> 
+the variable data will get populated from the main file, while using the included PHP as a template, using the new variables to populate the template 
+you can also include PHP files that have variables and functions inside of them, <?php include "useful-tools.php"; sayHi("Sean"); echo $feetInMiles; ?>
 
 
 

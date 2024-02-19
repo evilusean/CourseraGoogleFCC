@@ -243,13 +243,22 @@ Code is for telling the computer what to do, comments is for telling future your
 //'Commenting Out' = Comment out lines of code to test different code without removing it before testing
 
 27. (3:31:08) Including HTML================================================================================================================================================================================
+The include statement allows you to include another file inside of your php file
+use include to use all the code from another file in your current file
+if you wanted to have the same header/footer for your entire website, and you didn't want to change it 100 different times, you can have it in a centralized html file, and include it
+<?php include "header.html" ?> #without having typing out any of the code for the header, you can get access to it, and it appears in full 
+<?php include "foother.html" ?> #without having typing out any of the code for the footer, you can get access to it, and it appears in full, it will automatically show up every time it is included
+you can break up your website into small reusable components and just include them everywhere you want them, makes your website more modular, website components
 
+28. (3:36:51) Include: PHP==================================================================================================================================================================================
+<?php include "article-header.php" ?> #You can include other PHP files in your main PHP file, 
+if you want to reuse PHP code, you can use include to do it, or make your PHP file modular
+you don't need to declare variables within the included PHP file, you can use a $title; and have the variable in the main file, or put the variables in another variable PHP file
+<?php include "article-header.php"; $title="My Header Title"; ?> 
+the variable data will get populated from the main file, while using the included PHP as a template, using the new variables to populate the template 
+you can also include PHP files that have variables and functions inside of them, <?php include "useful-tools.php"; sayHi("Sean"); echo $feetInMiles; ?>
 
-
-
-
-
-
+29. (3:45:57) Classes & Objects=============================================================================================================================================================================
 
 
 

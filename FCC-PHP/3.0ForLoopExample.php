@@ -1,7 +1,7 @@
 <!DOCTYPE php>
 <html>
 <head>
-  <title>While Loops</title>
+  <title>For Loop</title>
 </head>
 <body>
     <?php 

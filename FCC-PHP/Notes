@@ -250,7 +250,7 @@ if you wanted to have the same header/footer for your entire website, and you di
 <?php include "foother.html" ?> #without having typing out any of the code for the footer, you can get access to it, and it appears in full, it will automatically show up every time it is included
 you can break up your website into small reusable components and just include them everywhere you want them, makes your website more modular, website components
 
-
+28. (3:36:51) Include: PHP==================================================================================================================================================================================
 
 
 

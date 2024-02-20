@@ -290,4 +290,15 @@ $this is a keyword in php that refers to the current object, you are setting the
 even if you use a constructor, you can still manually assign values if you want
 
 31. (4:06:18) Object Functions=============================================================================================================================================================================
-
+An Object Function = A function that you can define inside a class, and use within that class, and the different objects created with that class can use that function
+      function hasHonors() {
+        #how to check with $this keyword
+        if ($this->gpa >= 3.5) {
+          return "true";
+        }
+        return "false";
+      }
+    #call the function and check if student has honors
+    echo $student1->hasHonors();
+You can write the function one time and reuse it for every object made in that class
+everytime you create a new class in PHP you always want to think about which object functions you can create inside that class

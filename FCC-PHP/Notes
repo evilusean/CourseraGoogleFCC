@@ -302,3 +302,5 @@ An Object Function = A function that you can define inside a class, and use with
     echo $student1->hasHonors();
 You can write the function one time and reuse it for every object made in that class
 everytime you create a new class in PHP you always want to think about which object functions you can create inside that class
+
+32. (4:13:52) Getters & Setters=============================================================================================================================================================================

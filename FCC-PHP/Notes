@@ -271,10 +271,23 @@ whenever you are creating a class in php, break it up into a series of attribute
 The beauty of classes and objects is you can take something complex like a book, car, phone, water bottle, etc and represent it inside of our programs
 
 30. (3:56:23) Constructors==================================================================================================================================================================================
+A constructor is a special function that you can put inside of a class which is going to get called when you create an object of that class
+it will run everytime you create a new object, the function will get executed every time
+It must be INSIDE the class, and it must be named 'function __construct' basic syntax below:
+    class Book {
+        var $title;
+        var $author;
+        var $pages;
 
-
-
-
+        function __construct($aTitle, $aAuthor, $aPages) {
+            $this->title = $aTitle;
+            $this->author = $aAuthor;
+            $this->pages = $aPages;
+        }
+    }
+$book3 = new Book("Manufacturing Consent", "Noam Chomsky", 350) #creates a new book Instead of individually manually assigning each element in the object, 4 lines can be turned into 1 line of code
+$this is a keyword in php that refers to the current object, you are setting the title/authoer/pages to the value that was passed in the parameters
+even if you use a constructor, you can still manually assign values if you want
 
 
 

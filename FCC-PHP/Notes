@@ -318,4 +318,4 @@ function setRating($rating) {
         }
 #makes it so you can only set to certain ratings, if you choose an invalid rating, defaults to NR
 
-
+33. (4:29:17) Inheritance===================================================================================================================================================================================

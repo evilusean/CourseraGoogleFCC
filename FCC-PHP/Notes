@@ -304,3 +304,18 @@ You can write the function one time and reuse it for every object made in that c
 everytime you create a new class in PHP you always want to think about which object functions you can create inside that class
 
 32. (4:13:52) Getters & Setters=============================================================================================================================================================================
+Getters/Setters = Speical function that you can create inside a PHP classes which allow you to control the access that people have to the attributes of those classes
+If you want to limit the ratings that movies(or whatever) can have, you can use setters, if they choose an invalid option, you can insert a default value
+class Movie { pubblic $title; #visibility modifier, allows you to select who can see and change the objects attributes, public is open to everyone, same as var
+private $rating; #setting visibility modifier to private means that any code outside of Movie Class can not access the rating directly
+if something is rated private visibility modifier, only code inside the class {} can view (getters) and change it (setters)
+function setRating($rating) {
+            if ($rating == "G" || $rating == "PG" || $rating == "PG-13" || $rating == "R") {
+                $this->rating = $rating;
+            } else {
+                $this->rating = "NR";
+            }
+        }
+#makes it so you can only set to certain ratings, if you choose an invalid rating, defaults to NR
+
+

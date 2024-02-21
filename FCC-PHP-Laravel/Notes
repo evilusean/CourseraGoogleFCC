@@ -2,7 +2,13 @@ Building an instagram clone :
 Features = Follow/Unfollow/Edit Profile/Profile Image/Resize Images/Add New Post/Captions/Add Images/Logout/Users/Authentication/Register Users/Usernames
 Laravel - PHP = The fastest growing PHP framework to date, #1 framework in github, easy for newcomers, powerful
 
-
+PHP-Laravel Installer:
+https://laravel.com/docs/5.0/installation
+  1) Install Composer:
+  https://getcomposer.org/
+  https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md
+  2)Install Laravel:
+  composer global require "laravel/installer=~1.1"
 
 
 

@@ -319,3 +319,9 @@ function setRating($rating) {
 #makes it so you can only set to certain ratings, if you choose an invalid rating, defaults to NR
 
 33. (4:29:17) Inheritance===================================================================================================================================================================================
+Inheritance = In PHP, it is where a class can inherit the functionality/attributes from another class in PHP
+class ItalianChef extends Chef #use the 'extends' keyword to allow ItalianChef to inherit all the functionality of the normal Chef, and you can add additional attributes to the new class {}
+Overriding the function = You can create custom class attributes by overwriting the original class that was extended from the normal chef by simply rewriting the attribute under the extended class
+  and then when you call the class function, it will use the newly created function over the original inherited one
+Example Code(easier to see example and understand):
+https://github.com/evilusean/CourseraGoogleFCC/blob/main/FCC-PHP/3.6ClassInheritance.php

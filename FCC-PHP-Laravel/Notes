@@ -10,7 +10,8 @@ https://laravel.com/docs/5.0/installation
   2)Install Laravel:
   composer global require "laravel/installer=~1.1"
 
-
+Project Requires: PHP >8.2, node.js, npm, laravel - took hours to install on ubuntu, had to add laravel to $PATH in usr/bin/
+Project created in var/wwww/html/laravelapp
 
 
 

@@ -22,7 +22,7 @@ php artisan serve #Once you have started the Artisan development server, your ap
 php artisan serve --host=_your_ip_address --port=8000 #You can explicitly define the host and the port with artisan serve command
 php artisan serve --host=0.0.0.0 --port=8000 #place "0.0.0.0" at your host option and it will work without set any firewall or any extra. 
 sudo ufw allow 8000 #allow open port for firewall
-#use below too update before being able to host:
+#use below in root directory of project to update before being able to host:
 composer install --ignore-platform-reqs
 composer update --ignore-platform-reqs
 

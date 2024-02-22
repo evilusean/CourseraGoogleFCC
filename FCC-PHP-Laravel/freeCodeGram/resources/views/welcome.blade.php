@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>freeCodeGram</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -30,6 +30,12 @@
                     @endauth
                 </div>
             @endif
+
+            <div ckass="content">
+                <div class="title m-b-md">
+                    freeCodeGram
+                </div>
+            </div>
 
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
                 <div class="flex justify-center">

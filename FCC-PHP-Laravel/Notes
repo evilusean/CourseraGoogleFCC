@@ -13,7 +13,12 @@ https://laravel.com/docs/5.0/installation
 Project Requires: PHP >8.2, node.js, npm, laravel - took hours to install on ubuntu, had to add laravel to $PATH in usr/bin/
 Project created in var/wwww/html/laravelapp
 
-
+How to Start a project:
+https://laravel.com/docs/10.x/installation
+composer global require laravel/installer
+laravel new example-app
+cd example-app
+php artisan serve #Once you have started the Artisan development server, your application will be accessible in your web browser at http://localhost:8000
 
 
 

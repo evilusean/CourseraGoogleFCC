@@ -26,8 +26,23 @@ sudo ufw allow 8000 #allow open port for firewall
 composer install --ignore-platform-reqs
 composer update --ignore-platform-reqs
 
-
-
+(5:30) First look at the project=============================================================================================================================================================================
+After installing(finally) the first you notice is ALOT of files, don't worry about these, over time this becomes second nature to you and you know exactly where to find everything
+composer.json = will hold all of your files assets, unlike the dependancy manager composer, this file is for instructseans
+artisan = a command line tool that ships with laravel that allows you to do many things with your application, you can interact with your entire laravel application through artisan with tinker
+always ensure you are in the correct directory
+php artisan #lists all commands you can use in artisan, 'available commands' are unique to artisan, other commands are universal
+things like authorization are why you use a framework, to speed up development, instead of rebuilding things you don't need 
+php artisan serve #starts up the built in laravel PHP server, when you start in the terminal- you can then view all the requests made to the server, terminal must continue to run in the background
+HTML = root directory -> resources -> views -> welcome.blade.php 
+  blade is a rendering template that allows you throw in snippets of php in your views
+your views will primarily be composed of HTML markup, there is no reason you should ever be computing or fetching database queries in your view - that's what controllers are for
+php artisan make:auth #Laravel ships with an authentication system that allows you to register users, it allows you to log in and keeps track of all your sessions out of the box
+  in Laravel 6.0 php artisan make:auth no longer exists, solution run:
+  composer require laravel/ui
+  php artisan ui:auth
+  you can also generate the views only with:
+  php artisan ui:auth -views
 
 
 

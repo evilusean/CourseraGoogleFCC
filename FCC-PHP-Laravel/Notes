@@ -20,7 +20,7 @@ laravel new example-app
 cd example-app
 php artisan serve #Once you have started the Artisan development server, your application will be accessible in your web browser at http://localhost:8000
 php artisan serve --host=somedomain.com --port=8001 #You can explicitly define the host and the port with artisan serve command
-
+sudo ufw allow 8000 #allow open port for firewall
 
 
 

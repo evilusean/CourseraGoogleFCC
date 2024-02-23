@@ -47,10 +47,11 @@ php artisan make:auth #Laravel ships with an authentication system that allows y
   php artisan ui:auth
   you can also generate the views only with:
   php artisan ui:auth -views
+After using the above commands, you will have set up a login and register feature to your laravel project-quick and easy
 
 (12:04) Setting Up the Front End with Node and NPM============================================================================================================================================================
-
-
+First we need to fix the views
+The Javascript portion of laravel is found in welcome.blade.php / home.blade.php
 
 
 

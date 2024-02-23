@@ -61,7 +61,7 @@ npm -v #check version node package manager
 npm install #run in the project root directory to install npm and get all dependancies
 npm run dev #npm in front end development must be compiled before you can use 
 
-=====================================================================================ERROR FIX=================================================================================================
+=====================================================================================ERROR FIX================================================================================================================
 https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04
   #got an error when compiling, ran below to fix
   curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
@@ -75,11 +75,13 @@ https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubunt
 nvm list-remote #lists all available versions NVM can install, need above 14 to run 'npm run dev'
 nvm install v20.11.1 #installed version
 nvm list #This shows the currently active version on the first line
-
-
-
-
-
+Further TroubleShooting======================================================================================================================================================================================
+sudo apt remove nodejs #You can uninstall Node.js using apt or nvm, depending on how it was installed. To remove the version from the system repositories, use apt remove
+sudo apt purge nodejs #By default, apt remove retains any local configuration files that were created since install. If you don’t want to save the configuration files for later use, use apt purge
+nvm current #To uninstall a version of Node.js that you installed using nvm, first determine whether it is the current active version:
+nvm uninstall node_version #how to uninstall with nvm, replace node_version with what you want to remove
+nvm deactivate # If the version you would like to remove is the current active version, you’ll first need to deactivate nvm to enable your changes:
+FIXED: 'npm run dev' WORKS ===================================================================================================================================================================================
 
 
 

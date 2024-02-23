@@ -90,7 +90,7 @@ nvm current #To uninstall a version of Node.js that you installed using nvm, fir
 nvm uninstall node_version #how to uninstall with nvm, replace node_version with what you want to remove
 nvm deactivate # If the version you would like to remove is the current active version, you’ll first need to deactivate nvm to enable your changes:
 FIXED: 'npm run dev' WORKS ===================================================================================================================================================================================
-
+(20:00) Migrations and Setting Up SQLite======================================================================================================================================================================
 
 
 

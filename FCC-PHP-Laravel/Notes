@@ -59,7 +59,9 @@ If you're familiar with react/jquery or anything like that, you can rip everythi
 node -v #check version of node.js
 npm -v #check version node package manager
 npm install #run in the project root directory to install npm and get all dependancies
-npm run dev #npm in front end development must be compiled before you can use 
+npm run dev #npm in front end development must be compiled before you can use
+  What above command will do, is take everything that laravel ships with and compiles it down to a file you can actually use, done through webpack, compiles it all down to the smallest size you can
+If any errors in 'npm run dev' he reccomends deleting the node modual and then installing everything again
 
 =====================================================================================ERROR FIX================================================================================================================
 https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04
@@ -71,7 +73,6 @@ https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubunt
   curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
   #check versions of node to install, install through nvm allows you to get a newer version on ubuntu, automatically installs 12.22 for some reason instead of latest
   #ERROR MESSAGE : ERROR: npm v10.2.4 is known not to run on Node.js v12.22.9.  This version of npm supports the following node versions: `^18.17.0 || >=20.5.0`.
-
 nvm list-remote #lists all available versions NVM can install, need above 14 to run 'npm run dev'
 nvm install v20.11.1 #installed version
 nvm list #This shows the currently active version on the first line

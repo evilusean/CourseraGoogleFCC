@@ -52,21 +52,36 @@ After using the above commands, you will have set up a login and register featur
 (12:04) Setting Up the Front End with Node and NPM============================================================================================================================================================
 First we need to fix the views
 The Javascript portion of laravel is found in welcome.blade.php / home.blade.php
+Laravel is a full development framework - has a frontend and backend - ships with a working implementation of twitter bootstrap, and view.js - although you still do need to run a compilation
+to get view.js we need to use node pack manager(npm) in terminal
+front end = everything that a user can physically touch, when user clicks something, it goes to the backend, backend will do something and return it to the frontend
+If you're familiar with react/jquery or anything like that, you can rip everything out, switch out of view and start over with them or any other JS framework
+node -v #check version of node.js
+npm -v #check version node package manager
+npm install #run in the project root directory to install npm and get all dependancies
+npm run dev #npm in front end development must be compiled before you can use 
 
+=====================================================================================ERROR FIX================================================================================================================
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04
+  #got an error when compiling, ran below to fix
+  curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+  #had to install another program, nvm node version manager
+  sudo apt install curl
+  curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+  #check versions of node to install, install through nvm allows you to get a newer version on ubuntu, automatically installs 12.22 for some reason instead of latest
+  #ERROR MESSAGE : ERROR: npm v10.2.4 is known not to run on Node.js v12.22.9.  This version of npm supports the following node versions: `^18.17.0 || >=20.5.0`.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+nvm list-remote #lists all available versions NVM can install, need above 14 to run 'npm run dev'
+nvm install v20.11.1 #installed version
+nvm list #This shows the currently active version on the first line
+Further TroubleShooting======================================================================================================================================================================================
+sudo apt remove nodejs #You can uninstall Node.js using apt or nvm, depending on how it was installed. To remove the version from the system repositories, use apt remove
+sudo apt purge nodejs #By default, apt remove retains any local configuration files that were created since install. If you don’t want to save the configuration files for later use, use apt purge
+nvm current #To uninstall a version of Node.js that you installed using nvm, first determine whether it is the current active version:
+nvm uninstall node_version #how to uninstall with nvm, replace node_version with what you want to remove
+nvm deactivate # If the version you would like to remove is the current active version, you’ll first need to deactivate nvm to enable your changes:
+FIXED: 'npm run dev' WORKS ===================================================================================================================================================================================
 
 
 

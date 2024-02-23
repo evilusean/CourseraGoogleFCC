@@ -48,7 +48,7 @@ php artisan make:auth #Laravel ships with an authentication system that allows y
   you can also generate the views only with:
   php artisan ui:auth -views
 
-
+(12:04) Setting Up the Front End with Node and NPM============================================================================================================================================================
 
 
 

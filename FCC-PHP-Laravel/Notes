@@ -61,8 +61,15 @@ npm -v #check version node package manager
 npm install #run in the project root directory to install npm and get all dependancies
 npm run dev #npm in front end development must be compiled before you can use
   What above command will do, is take everything that laravel ships with and compiles it down to a file you can actually use, done through webpack, compiles it all down to the smallest size you can
-If any errors in 'npm run dev' he reccomends deleting the node modual and then installing everything again
-
+If any errors in 'npm run dev' he reccomends deleting the node module and then installing everything again
+app.css and app.js will be compiled from all the frontend assets
+resources -> js -> app.js #file you can edit(not compiled)
+  public -> js -> app.js #compiled file, lots of hieroglyphs and magic happened NEVER TOUCH DIRECTLY
+sass directory -> app.scss #file you can edit for CSS, you can add as many as you want, just ensure you import them
+  #above directory changed, it is now resources -> css -> app.css
+After all that and error fix, setup is finally complete and we can begin - took a day just to get started.
+views -> home.blade.php = What gets loaded when a user logs in to the application, at this point no one can log in, because we have not created any users
+to create a user, you need to have a database setup
 =====================================================================================ERROR FIX================================================================================================================
 https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04
   #got an error when compiling, ran below to fix

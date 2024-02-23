@@ -52,9 +52,10 @@ After using the above commands, you will have set up a login and register featur
 (12:04) Setting Up the Front End with Node and NPM============================================================================================================================================================
 First we need to fix the views
 The Javascript portion of laravel is found in welcome.blade.php / home.blade.php
-
-
-
+Laravel is a full development framework - has a frontend and backend - ships with a working implementation of twitter bootstrap, and view.js - although you still do need to run a compilation
+to get view.js we need to use node pack manager(npm) in terminal
+front end = everything that a user can physically touch, when user clicks something, it goes to the backend, backend will do something and return it to the frontend
+If you're familiar with react/jquery or anything like that, you can rip everything out, switch out of view and start over with them or any other JS framework
 
 
 

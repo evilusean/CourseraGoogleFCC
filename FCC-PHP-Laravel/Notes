@@ -56,13 +56,25 @@ Laravel is a full development framework - has a frontend and backend - ships wit
 to get view.js we need to use node pack manager(npm) in terminal
 front end = everything that a user can physically touch, when user clicks something, it goes to the backend, backend will do something and return it to the frontend
 If you're familiar with react/jquery or anything like that, you can rip everything out, switch out of view and start over with them or any other JS framework
+node -v #check version of node.js
+npm -v #check version node package manager
+npm install #run in the project root directory to install npm and get all dependancies
+npm run dev #npm in front end development must be compiled before you can use 
 
+=====================================================================================ERROR FIX=================================================================================================
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04
+  #got an error when compiling, ran below to fix
+  curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+  #had to install another program, nvm node version manager
+  sudo apt install curl
+  curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+  #check versions of node to install, install through nvm allows you to get a newer version on ubuntu, automatically installs 12.22 for some reason instead of latest
+  #ERROR MESSAGE : ERROR: npm v10.2.4 is known not to run on Node.js v12.22.9.  This version of npm supports the following node versions: `^18.17.0 || >=20.5.0`.
 
-
-
-
-
-
+nvm list-remote #lists all available versions NVM can install, need above 14 to run 'npm run dev'
+nvm install v20.11.1 #installed version
+nvm list #This shows the currently active version on the first line
 
 
 

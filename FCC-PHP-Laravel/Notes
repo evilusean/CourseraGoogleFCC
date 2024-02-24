@@ -151,7 +151,8 @@ If you can read this page, it means that the Apache HTTP server installed at thi
 From new root directory 'npm run dev' still doesn't work, and 'php artisan serve' keeps throwing an SQLITE error, can attempt to fix either/or..
 -It can only run index.html? that seems extremely limiting..
 ======================================================================================Attempt 2:===============================================================================================================
-
+Potential Fix, been at this for a few hours, taking a break:
+https://stackoverflow.com/questions/44701256/unable-to-load-pdo-sqlite-so-extension
 ====================================================================================FIXED======================================================================================================================
 Step 6) Create a new user -> Register Button
 

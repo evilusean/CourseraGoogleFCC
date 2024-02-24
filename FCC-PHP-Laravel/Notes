@@ -106,12 +106,28 @@ step 3) after checking file was created, go to root directory -> .env
 step 4) navigate to the database setup section, delete all of the DB_ lines, except DB_CONNECTION, by default it is using mysql, replace with sqlite, save
 how to migrate/how to get it to the latest state possible:
 Step 5) php artisan migrate
+  After fixing Error below, 
+  Preparing database.  
+
+  Creating migration table ........................................ 441ms DONE
+
+   INFO  Running migrations.  
+
+  2014_10_12_000000_create_users_table ............................ 188ms DONE
+  2014_10_12_100000_create_password_reset_tokens_table ............. 84ms DONE
+  2014_10_12_100000_create_password_resets_table .................. 169ms DONE
+  2019_08_19_000000_create_failed_jobs_table ...................... 198ms DONE
+  2019_12_14_000001_create_personal_access_tokens_table ........... 325ms DONE
+Succesfullly Completed users table, and passwords reset table:
+Users Table = holds all users in application
+passwords table = holds any passwords reset, when a user forgets password, will send an email, and that is stored in this table
+All of this ships with laravel, you don't need to create any of it.
 ===========================================================================ERROR==============================================================================================================================
 Illuminate\Database\QueryException 
   could not find driver (Connection: sqlite, SQL: PRAGMA foreign_keys = ON;)
 sudo apt-get install php-sqlite3 #downloads SQLITE
 php --ini #gets location of php init path, You also need to enable pdo_sqlite extension in your php.ini too, check the path of your loaded .ini with the below command
-nvim /etc/php/8.3/cli/php.ini #opens up the file, to add php sqlite3 to php
+sudo nvim /etc/php/8.3/cli/php.ini #opens up the file, to add php sqlite3 to php, don't forget sudo so you can edit.
 php -m | grep pdo_sqlite #checks if added
 ENABLE THE FOLLOWING IN php.ini:
 ;extension=pdo_sqlite by removing the /;/ should look like this extension=pdo_sqlite
@@ -119,7 +135,7 @@ ENABLE THE FOLLOWING IN php.ini:
 extension=pdo_sqlite
 extension=sqlite3
 ====================================================================================FIXED======================================================================================================================
-
+Step 6) Create a new user -> Register Button
 
 
 

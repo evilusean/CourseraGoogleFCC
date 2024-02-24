@@ -155,6 +155,8 @@ From new root directory 'npm run dev' still doesn't work, and 'php artisan serve
 Potential Fix, been at this for a few hours, taking a break:
 https://stackoverflow.com/questions/44701256/unable-to-load-pdo-sqlite-so-extension
 sudo apt install php8.3-sqlite3 #tried reinstalling the php version instead of generic 'sudo apt get install sqlite3'
+
+FIXED(Finally): open 2 terminals, You need to run 'npm run dev' first, and then 'php artisan serve' to get access to the registration form.. apparently one of the (many) copies of sqlite3 I installed worked, huzzah
 ====================================================================================FIXED======================================================================================================================
 Step 6) Create a new user -> Register Button
 

@@ -134,6 +134,12 @@ ENABLE THE FOLLOWING IN php.ini:
 ;extension=sqlite3 should be extension=sqlite3 without the ; symbol
 extension=pdo_sqlite
 extension=sqlite3
+=========================================================================================ERROR #2=============================================================================================================
+PHP Warning:  PHP Startup: Unable to load dynamic library 'pdo_sqlite' (tried: /usr/lib/php/20230831/pdo_sqlite (/usr/lib/php/20230831/pdo_sqlite: 
+cannot open shared object file: No such file or directory), /usr/lib/php/20230831/pdo_sqlite.so (/usr/lib/php/20230831/pdo_sqlite.so: undefined symbol: php_pdo_unregister_driver)) in Unknown on line 0
+PHP Warning:  Module "sqlite3" is already loaded in Unknown on line 0
+PHP 8.3.3-1+ubuntu22.04.1+deb.sury.org+1 (cli) (built: Feb 15 2024 18:38:52) (NTS)
+
 ====================================================================================FIXED======================================================================================================================
 Step 6) Create a new user -> Register Button
 

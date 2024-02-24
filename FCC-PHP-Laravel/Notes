@@ -153,6 +153,7 @@ From new root directory 'npm run dev' still doesn't work, and 'php artisan serve
 ======================================================================================Attempt 2:===============================================================================================================
 Potential Fix, been at this for a few hours, taking a break:
 https://stackoverflow.com/questions/44701256/unable-to-load-pdo-sqlite-so-extension
+sudo apt install php8.3-sqlite3 #tried reinstalling the php version instead of generic 'sudo apt get install sqlite3'
 ====================================================================================FIXED======================================================================================================================
 Step 6) Create a new user -> Register Button
 

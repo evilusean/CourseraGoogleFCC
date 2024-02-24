@@ -158,11 +158,11 @@ sudo apt install php8.3-sqlite3 #tried reinstalling the php version instead of g
 
 FIXED(Finally): open 2 terminals, You need to run 'npm run dev' first, and then 'php artisan serve' to get access to the registration form.. apparently one of the (many) copies of sqlite3 I installed worked, huzzah
 ====================================================================================FIXED======================================================================================================================
-Step 6) Create a new user -> Register Button
+Step 6) Create a new user -> Register Button -> Success -> Logout(test) -> Log back in(Success!) = database works
+  TestUser - Test@test.com - assword
+Anytime you make changes to .env file, you must stop the server and start it up again - thankfully already done after hours of troubleshooting
 
-
-
-
+(26:00) Designing the UI from Instagram=========================================================================================================================================================================
 
 
 

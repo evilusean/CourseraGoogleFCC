@@ -91,8 +91,21 @@ nvm uninstall node_version #how to uninstall with nvm, replace node_version with
 nvm deactivate # If the version you would like to remove is the current active version, you’ll first need to deactivate nvm to enable your changes:
 FIXED: 'npm run dev' WORKS ===================================================================================================================================================================================
 (20:00) Migrations and Setting Up SQLite======================================================================================================================================================================
-
-
+php artisan #gets a list of commands
+php migrate #migrations are files that describe your database, so instead of you going into database making changes and going into production server and making those same changes manually
+  you are going write these migration files that are going to describe your database - higher concept - a file that holds all the instructions you need to tell your database to create itself
+  throughout this project we are going to modify the database, but through migration - not directly into the database - describes each change in a systematic way, 
+  unless you document your changes very well, you will likely forget a step or 2 in your production and everything will get messed up - also other developers will not know how to recreate change(in teams)
+  allows everyone to have the same defininition of what the database is supposed to look like
+before you run the migration command, you need to set up some sort of database with laravel, we are using SQLite in this project, because it is easy to set up
+step 1) create a file, this file will flat file database file(how SQL lite works)
+  nvim database/database.sqlite #will create a new database file using nvim, will be left empty, to escape press 'esc' + :wq (w=write, q=quit)
+step 2) check out new database file, it's there
+step 3) after checking file was created, go to root directory -> .env 
+  .env = holds all of the different configurations that are specific to your (env)ironment
+step 4) navigate to the database setup section, delete all of the DB_ lines, except DB_CONNECTION, by default it is using mysql, replace with sqlite, save
+how to migrate/how to get it to the latest state possible:
+Step 5) php artisan migrate
 
 
 

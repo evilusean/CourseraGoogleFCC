@@ -106,14 +106,19 @@ step 3) after checking file was created, go to root directory -> .env
 step 4) navigate to the database setup section, delete all of the DB_ lines, except DB_CONNECTION, by default it is using mysql, replace with sqlite, save
 how to migrate/how to get it to the latest state possible:
 Step 5) php artisan migrate
-
-
-
-
-
-
-
-
+===========================================================================ERROR==============================================================================================================================
+Illuminate\Database\QueryException 
+  could not find driver (Connection: sqlite, SQL: PRAGMA foreign_keys = ON;)
+sudo apt-get install php-sqlite3 #downloads SQLITE
+php --ini #gets location of php init path, You also need to enable pdo_sqlite extension in your php.ini too, check the path of your loaded .ini with the below command
+nvim /etc/php/8.3/cli/php.ini #opens up the file, to add php sqlite3 to php
+php -m | grep pdo_sqlite #checks if added
+ENABLE THE FOLLOWING IN php.ini:
+;extension=pdo_sqlite by removing the /;/ should look like this extension=pdo_sqlite
+;extension=sqlite3 should be extension=sqlite3 without the ; symbol
+extension=pdo_sqlite
+extension=sqlite3
+====================================================================================FIXED======================================================================================================================
 
 
 

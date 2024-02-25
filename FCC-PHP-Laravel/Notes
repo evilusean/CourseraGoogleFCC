@@ -199,7 +199,7 @@ resources/js/app.js:3:1:
     at handleRequest (/media/sean/SeanDrive/Code/CourseraGoogleFCC/FCC-PHP-Laravel/freeCodeGram/node_modules/esbuild/lib/main.js:732:17)
     at handleIncomingPacket (/media/sean/SeanDrive/Code/CourseraGoogleFCC/FCC-PHP-Laravel/freeCodeGram/node_modules/esbuild/lib/main.js:757:7)
     at Socket.readFromStdout (/media/sean/SeanDrive/Code/CourseraGoogleFCC/FCC-PHP-Laravel/freeCodeGram/node_modules/esbuild/lib/main.js:680:7)
-
+trying to fix, going to comment out and see which part is breaking it.. either this or reinstall and start from scratch, have notes and everything to get back up to this point relatively easily if I need to
 
 (42:12) Adding Username to the Registration Flow
 

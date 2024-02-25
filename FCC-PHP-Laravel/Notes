@@ -174,7 +174,11 @@ after creating the .svg file and title, they are stacked on top of eachother, we
 =================================================================ERROR==========================================================================================================================================
 Bootstrap/CSS not working:
 https://www.cloudways.com/blog/laravel-bootstrap-template-integration/
-
+Commands in project root tried:
+composer require laravel/ui
+php artisan ui bootstrap
+npm install && npm run dev
+No Success.
 
 (42:12) Adding Username to the Registration Flow
 

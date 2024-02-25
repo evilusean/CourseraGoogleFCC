@@ -30,4 +30,7 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap-theme.min.css') }}">
+
+    <!-- Hail Mary -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>

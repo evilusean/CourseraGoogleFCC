@@ -170,6 +170,10 @@ at the top you see a div = <a class="navbar-brand" href={{url('/' }}> {{ config(
 public -> create new directory called 'svg' -> freeCodeCampLogo.svg = Time to add a logo, svg(Scalabe Vector Graphics) work at any size and have a good resolution, mathematical pictures
   <div><img src="/svg/freeCodeGram.svg" alt="freeCodeGram"></div> #notice how he starts with '/', this is because he does not need to go to public directory, because laravel starts in public
 whenever a user is accessing the site, they are default in the public directory, they do not have access to anything outside of the public directory
+after creating the .svg file and title, they are stacked on top of eachother, we can fix this with by changing it to a flex box by adding 'd-flex' to class
+=================================================================ERROR==========================================================================================================================================
+Bootstrap/CSS not working:
+https://www.cloudways.com/blog/laravel-bootstrap-template-integration/
 
 
 (42:12) Adding Username to the Registration Flow

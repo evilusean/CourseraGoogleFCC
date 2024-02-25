@@ -178,7 +178,7 @@ Commands in project root tried:
 composer require laravel/ui
 php artisan ui bootstrap
 npm install && npm run dev
-No Success.
+No Success. New Error Message after above commands: Installation failed, reverting ./composer.json and ./composer.lock to their original content.
 
 (42:12) Adding Username to the Registration Flow
 

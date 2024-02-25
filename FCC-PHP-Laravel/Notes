@@ -163,6 +163,78 @@ Step 6) Create a new user -> Register Button -> Success -> Logout(test) -> Log b
 Anytime you make changes to .env file, you must stop the server and start it up again - thankfully already done after hours of troubleshooting
 
 (26:00) Designing the UI from Instagram=========================================================================================================================================================================
+up until this point, laravel has been installing mostly everything itself(outside of troubleshooting)-
+views -> layouts -> app.blade.php = 
+at the top you see a div = <a class="navbar-brand" href={{url('/' }}> {{ config('app.name', 'laravel') }} #this is what is being passed in
+  remove this and added in freeCodeGram, wrapped in a div, 
+public -> create new directory called 'svg' -> freeCodeCampLogo.svg = Time to add a logo, svg(Scalabe Vector Graphics) work at any size and have a good resolution, mathematical pictures
+  <div><img src="/svg/freeCodeGram.svg" alt="freeCodeGram"></div> #notice how he starts with '/', this is because he does not need to go to public directory, because laravel starts in public
+whenever a user is accessing the site, they are default in the public directory, they do not have access to anything outside of the public directory
+
+
+(42:12) Adding Username to the Registration Flow
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

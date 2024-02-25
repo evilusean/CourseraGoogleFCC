@@ -187,25 +187,17 @@ Failed to scan for dependencies from entries:
 resources/js/app.js:3:1:
       3 │ @import "node_modules/bootstrap/css/bootstrap";
         ╵  ~~~~~~
-
-
-    at failureErrorWithLog (/media/sean/SeanDrive/Code/CourseraGoogleFCC/FCC-PHP-Laravel/freeCodeGram/node_modules/esbuild/lib/main.js:1651:15)
-    at /media/sean/SeanDrive/Code/CourseraGoogleFCC/FCC-PHP-Laravel/freeCodeGram/node_modules/esbuild/lib/main.js:1059:25
-    at runOnEndCallbacks (/media/sean/SeanDrive/Code/CourseraGoogleFCC/FCC-PHP-Laravel/freeCodeGram/node_modules/esbuild/lib/main.js:1486:45)
-    at buildResponseToResult (/media/sean/SeanDrive/Code/CourseraGoogleFCC/FCC-PHP-Laravel/freeCodeGram/node_modules/esbuild/lib/main.js:1057:7)
-    at /media/sean/SeanDrive/Code/CourseraGoogleFCC/FCC-PHP-Laravel/freeCodeGram/node_modules/esbuild/lib/main.js:1069:9
-    at new Promise (<anonymous>)
-    at requestCallbacks.on-end (/media/sean/SeanDrive/Code/CourseraGoogleFCC/FCC-PHP-Laravel/freeCodeGram/node_modules/esbuild/lib/main.js:1068:54)
-    at handleRequest (/media/sean/SeanDrive/Code/CourseraGoogleFCC/FCC-PHP-Laravel/freeCodeGram/node_modules/esbuild/lib/main.js:732:17)
-    at handleIncomingPacket (/media/sean/SeanDrive/Code/CourseraGoogleFCC/FCC-PHP-Laravel/freeCodeGram/node_modules/esbuild/lib/main.js:757:7)
-    at Socket.readFromStdout (/media/sean/SeanDrive/Code/CourseraGoogleFCC/FCC-PHP-Laravel/freeCodeGram/node_modules/esbuild/lib/main.js:680:7)
 trying to fix, going to comment out and see which part is breaking it.. either this or reinstall and start from scratch, have notes and everything to get back up to this point relatively easily if I need to
 I'm using Git, I could always revert changes, haven't done that yet-ever, and might lose all my notes - I think trying to manually fix is the best option, but even if I do, I still won't have CSS/BootStrap
   just fewer error messages - the project still 'works', but no CSS/bootstrap and alot of red when I 'npm run dev' - I still havn't actually figured out why CSS is not loading. 
 If I reinstall - I could be back to this point in a few hours, but install/fix css/bootstrap at the start before I start adding databases and other stuff, many opseans
 If I don't reinstall I added a bunch of files I have no idea what they do, and will affect the project later on, and even though they are added, have not fixed the core issue of CSS/bootstrap
 whichever directsean I go, it's going to cost me hours of work, and I still havn't figured out what the problem is, I imported/installed it, and it's not working - going to take a break - deciseans -
-
+-Fixed- Forgot that I removed something awhile ago, and created a master.blade.php to hold all the dependancies(is this the right term?)/modules/libraries
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+DO NOT REMOVE THAT AGAIN, FUTURE SEAN
+that was almost entirely my fault, pasted over the old code without reading, Going to try to remove some of the excess superfluous stuff I randomly threw in for seeing what sticks
+==================================================================================FIXED=========================================================================================
 
 (42:12) Adding Username to the Registration Flow
 

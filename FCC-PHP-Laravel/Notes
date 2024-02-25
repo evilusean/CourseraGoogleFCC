@@ -180,13 +180,6 @@ php artisan ui bootstrap
 npm install && npm run dev
 No Success. New Error Message after above commands: Installation failed, reverting ./composer.json and ./composer.lock to their original content.
 Just ran npm run dev, and I broke the project :(
-Failed to scan for dependencies from entries:
-  /media/sean/SeanDrive/Code/CourseraGoogleFCC/FCC-PHP-Laravel/freeCodeGram/resources/js/app.js
-
-  ✘ [ERROR] Expected identifier but found "import"
-resources/js/app.js:3:1:
-      3 │ @import "node_modules/bootstrap/css/bootstrap";
-        ╵  ~~~~~~
 trying to fix, going to comment out and see which part is breaking it.. either this or reinstall and start from scratch, have notes and everything to get back up to this point relatively easily if I need to
 I'm using Git, I could always revert changes, haven't done that yet-ever, and might lose all my notes - I think trying to manually fix is the best option, but even if I do, I still won't have CSS/BootStrap
   just fewer error messages - the project still 'works', but no CSS/bootstrap and alot of red when I 'npm run dev' - I still havn't actually figured out why CSS is not loading. 
@@ -196,6 +189,7 @@ whichever directsean I go, it's going to cost me hours of work, and I still havn
 -Fixed- Forgot that I removed something awhile ago, and created a master.blade.php to hold all the dependancies(is this the right term?)/modules/libraries
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 DO NOT REMOVE THAT AGAIN, FUTURE SEAN
+apparently even if you don't use vite, you are using vite to compile, it is vital, to life... of laravel
 that was almost entirely my fault, pasted over the old code without reading, Going to try to remove some of the excess superfluous stuff I randomly threw in for seeing what sticks
 ==================================================================================FIXED=========================================================================================
 

@@ -195,8 +195,10 @@ that was almost entirely my fault, pasted over the old code without reading, Goi
 tutorial is 5 years old, they also changed how the class="pl-3" padding left works, syntax has changed to pe-3/ps-3 = Scared me when I thought bootstrap still didn't work after all that ^
 https://getbootstrap.com/docs/5.1/utilities/spacing/#notation
 Padding left (pl-3) / padding right (pr-3) = Padding Left=PaddingEnd-size (pe-3) / Padding Right = PaddingStart-size (ps-3) 
-
-
+pt=padding top (pt-2) / padding all sides(p-5)
+class="rounded-circle" #redundant
+https://fonts.google.com/ #free fonts to use, you also need to import bold on top of the original 
+https://fonts.bunny.net/ #another free font resource
 
 (42:12) Adding Username to the Registration Flow
 

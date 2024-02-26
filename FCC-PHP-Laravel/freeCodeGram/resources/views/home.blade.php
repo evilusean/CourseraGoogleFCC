@@ -2,21 +2,12 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
+    <div class="row">
+        <div class="col-3">
+            <img src="https://github.com/evilusean/DaGram-InstagramClone/blob/main/Images/NP%20Seans/ChadNpc.png?raw=true" class="rounded-circle" style="width: 150px";></img>
+        </div>
+        <div class="col-9">
+        
         </div>
     </div>
 </div>

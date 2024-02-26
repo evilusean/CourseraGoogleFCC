@@ -192,7 +192,7 @@ DO NOT REMOVE THAT AGAIN, FUTURE SEAN
 apparently even if you don't use vite, you are using vite to compile, it is vital, to life... of laravel
 that was almost entirely my fault, pasted over the old code without reading, Going to try to remove some of the excess superfluous stuff I randomly threw in for seeing what sticks
 ==================================================================================FIXED=========================================================================================
-tutorial is 5 years old, they also changed how the class="pl-3" padding left works, syntax has changed to pe-3/ps-3
+tutorial is 5 years old, they also changed how the class="pl-3" padding left works, syntax has changed to pe-3/ps-3 = Scared me when I thought bootstrap still didn't work after all that ^
 https://getbootstrap.com/docs/5.1/utilities/spacing/#notation
 Padding left (pl-3) / padding right (pr-3) = Padding Left=PaddingEnd-size (pe-3) / Padding Right = PaddingStart-size (ps-3) 
 

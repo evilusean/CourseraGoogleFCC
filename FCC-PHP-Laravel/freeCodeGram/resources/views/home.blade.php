@@ -33,5 +33,16 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-4">
+            <img src="https://github.com/evilusean/DaGram-InstagramClone/blob/main/Images/NP%20Seans/BuffPC.png?raw=true"></img>
+        </div>
+        <div class="col-4">
+            <img src="https://github.com/evilusean/DaGram-InstagramClone/blob/main/Images/NP%20Seans/ChadEngage.jpg?raw=true"></img>
+        </div>
+        <div class="col-4">
+            <img src="https://github.com/evilusean/DaGram-InstagramClone/blob/main/Images/NP%20Seans/ChadCEONNEET.jpg?raw=true"></img>
+        </div>
+    </div>
 </div>
 @endsection

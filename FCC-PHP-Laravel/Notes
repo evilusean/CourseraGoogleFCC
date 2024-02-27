@@ -199,6 +199,11 @@ pt=padding top (pt-2) / padding all sides(p-5)
 class="rounded-circle" #redundant
 https://fonts.google.com/ #free fonts to use, you also need to import bold on top of the original 
 https://fonts.bunny.net/ #another free font resource
+after @importing the new larger Open+Sans:400,700 font you need to reference it
+resources -> sass -> _variables.scss #where you can reference new fonts to use in your project
+  to change the blueish background to white you can find the $body-bg: #f8fafc; in the above directory, 
+everytime you make changes to frontend you will need to rerun 'npm run dev' will recompile all the frontend for you, 
+
 
 (42:12) Adding Username to the Registration Flow
 

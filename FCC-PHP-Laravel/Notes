@@ -204,9 +204,18 @@ resources -> sass -> _variables.scss #where you can reference new fonts to use i
   to change the blueish background to white you can find the $body-bg: #f8fafc; in the above directory, 
 everytime you make changes to frontend you will need to rerun 'npm run dev' will recompile all the frontend for you, 
 
-
 (42:12) Adding Username to the Registration Flow
+We currently have text as a placeholder for {username} in the register form, there is no username, there is name/email/password
+we need to add a new column so that when a user registers, they can tell us what they want to their username to be
+the DB was created when we ran the make: auth command
+root -> public -> resources -> views -> auth #directory with 3 files created login.blade.php / register.blade.php / verify.blade.php
+inside the register.blade.php file, you have below code for name, email address, password, and confirm password
+  <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label> 
+we copied the email address and pasted to create the username, replaced all instances of 'email' with 'username'
+we havn't added a logout feature yet, need to figure out how to log out.. so we can view the new registration form
 
+
+(58:35) Creating the Profiles Controller
 
 
 

@@ -252,6 +252,25 @@ the final step in the RegisterController.php file is to actually create the user
         ]);
     }
 }
+created another test user test2@test.com - registration worked, 
+php artisan tinker #command that allows you to interact with your application, opens up a secondary command prompt where you can run commands to interact with your application
+User::all(); #allows you to view all users on the database, must initialize tinker through command first to access, doesn't work for some reason, supposed to show all users in DB
+exit #exits out of tinker
+after making changes to a database, you MUST remake/remigrate the database again
+php artisan migrate:fresh #erases everything on the old database and starts a fresh database with new settings, drops all tables and migrates database again
+root -> app -> Models -> User.php #a model class that models a row in your database
+after checking the model we can see that only three attributes are mass assignable are name, email, and password, and nothing else will be able to be filled, 'username' is missing
+  this is an extra layer of protection that laravel is giving us to stop malicious actors from adding things into our database that are not supposed to be there (SQL Injectseans)
+protected $fillable = [
+        'name',
+        'email',
+        'username',
+        'password',
+    ];
+success! new user created and after running 'php artisan tinker' and then 'User::all()' we have successfully created a new user, with username and stored it to database.
+We now want to use this username in the top right corner of our navigation log in screen which we can find in the app.blade.php
+resources -> resources -> views -> layouts -> app.blade.php #we are changing it to not user the name, and instead use the username
+  {{ Auth::user()->name }} #find this part of the file, and change name to username, it will fetch the Auth(enticated) Users -> username from our database and post it in the top right of the navigation
 
 (58:35) Creating the Profiles Controller
 

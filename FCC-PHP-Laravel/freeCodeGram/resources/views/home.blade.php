@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-5">
-            <img src="https://github.com/evilusean/DaGram-InstagramClone/blob/main/Images/NP%20Seans/ChadNpc.png?raw=true" class="rounded-circle" style="width: 150px";></img>
+            <img src="https://github.com/evilusean/DaGram-InstagramClone/blob/main/Images/NP%20Seans/ChadEngage.jpg?raw=true" class="rounded-circle" style="width: 150px; height: 150px";></img>
         </div>
         <div class="col-9 pt-5">
             <div>
@@ -33,15 +33,16 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-4">
-            <img src="https://github.com/evilusean/DaGram-InstagramClone/blob/main/Images/NP%20Seans/BuffPC.png?raw=true"></img>
+
+    <div class="row p-5">
+        <div class="col-4 ps-5">
+            <img src="https://github.com/evilusean/DaGram-InstagramClone/blob/main/Images/NP%20Seans/BuffPC.png?raw=true" class="w-100"></img>
         </div>
         <div class="col-4">
-            <img src="https://github.com/evilusean/DaGram-InstagramClone/blob/main/Images/NP%20Seans/ChadEngage.jpg?raw=true"></img>
+            <img src="https://github.com/evilusean/DaGram-InstagramClone/blob/main/Images/NP%20Seans/ChadNpc.png?raw=true" class="w-100"></img>
         </div>
-        <div class="col-4">
-            <img src="https://github.com/evilusean/DaGram-InstagramClone/blob/main/Images/NP%20Seans/ChadCEONNEET.jpg?raw=true"></img>
+        <div class="col-4 pe-5">
+            <img src="https://github.com/evilusean/DaGram-InstagramClone/blob/main/Images/NP%20Seans/ChadCEONNEET.jpg?raw=true" class="w-100"></img>
         </div>
     </div>
 </div>

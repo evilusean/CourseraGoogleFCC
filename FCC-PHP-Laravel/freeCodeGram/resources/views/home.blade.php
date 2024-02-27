@@ -34,15 +34,15 @@
         </div>
     </div>
 
-    <div class="row p-5 justify-content-center">
+    <div class="row p-5 d-flex justify-content-center">
         <div class="col-4 ps-5">
-            <img src="https://github.com/evilusean/DaGram-InstagramClone/blob/main/Images/NP%20Seans/BuffPC.png?raw=true" class="w-100" style="max-height: 300px; max-width: 300px;"></img>
+            <img src="https://github.com/evilusean/DaGram-InstagramClone/blob/main/Images/NP%20Seans/BuffPC.png?raw=true" class="w-100" style="max-height: 450px; max-width: 450px;"></img>
         </div>
         <div class="col-4">
-            <img src="https://github.com/evilusean/DaGram-InstagramClone/blob/main/Images/NP%20Seans/ChadNpc.png?raw=true" class="w-100" style="max-height: 300px; max-width: 300px;"></img>
+            <img src="https://github.com/evilusean/DaGram-InstagramClone/blob/main/Images/NP%20Seans/ChadNpc.png?raw=true" class="w-100" style="max-height: 450px; max-width: 450px;"></img>
         </div>
         <div class="col-4 pe-5">
-            <img src="https://github.com/evilusean/DaGram-InstagramClone/blob/main/Images/NP%20Seans/ChadCEONNEET.jpg?raw=true" class="w-100" style="max-height: 300px; max-width: 300px;"></img>
+            <img src="https://github.com/evilusean/DaGram-InstagramClone/blob/main/Images/NP%20Seans/ChadCEONNEET.jpg?raw=true" class="w-100" style="max-height: 450px; max-width: 450px;"></img>
         </div>
     </div>
 </div>

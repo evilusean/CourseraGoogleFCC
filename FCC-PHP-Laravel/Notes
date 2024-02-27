@@ -252,6 +252,10 @@ the final step in the RegisterController.php file is to actually create the user
         ]);
     }
 }
+created another test user test2@test.com - registration worked, 
+php artisan tinker #command that allows you to interact with your application, opens up a secondary command prompt where you can run commands to interact with your application
+User::all #allows you to view all users on the database, must initialize tinker through command first to access, doesn't work for some reason, supposed to show all users in DB
+exit #exits out of tinker
 
 (58:35) Creating the Profiles Controller
 

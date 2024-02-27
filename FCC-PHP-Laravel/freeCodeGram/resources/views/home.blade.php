@@ -20,11 +20,12 @@
                 <div class="pe-5">
                     <strong>212</strong> following
                 </div>
-                <div class="pt-4">
-                    <h4>freeCodeCamp.org</h4>
+                </div>
+                <div class="pt-4 font-weight-bold">
+                    <strong>freeCodeCamp.org</strong>
                 </div>
                 <div>
-                    <p>We're a global community of millions of people learning to code together. We're an open source, donor-supported, 501(c)(3) nonprofit.</p>
+                    We're a global community of millions of people learning to code together. We're an open source, donor-supported, 501(c)(3) nonprofit.
                 </div>
                 <div>
                     <a href="#">freeCodeCamp.org</a>

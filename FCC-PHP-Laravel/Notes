@@ -191,7 +191,7 @@ whichever directsean I go, it's going to cost me hours of work, and I still havn
 DO NOT REMOVE THAT AGAIN, FUTURE SEAN
 apparently even if you don't use vite, you are using vite to compile, it is vital, to life... of laravel
 that was almost entirely my fault, pasted over the old code without reading, Going to try to remove some of the excess superfluous stuff I randomly threw in for seeing what sticks
-==================================================================================FIXED=========================================================================================
+==================================================================================FIXED=========================================================================================================================
 tutorial is 5 years old, they also changed how the class="pl-3" padding left works, syntax has changed to pe-3/ps-3 = Scared me when I thought bootstrap still didn't work after all that ^
 https://getbootstrap.com/docs/5.1/utilities/spacing/#notation
 Padding left (pl-3) / padding right (pr-3) = Padding Left=PaddingEnd-size (pe-3) / Padding Right = PaddingStart-size (ps-3) 
@@ -204,7 +204,7 @@ resources -> sass -> _variables.scss #where you can reference new fonts to use i
   to change the blueish background to white you can find the $body-bg: #f8fafc; in the above directory, 
 everytime you make changes to frontend you will need to rerun 'npm run dev' will recompile all the frontend for you, 
 
-(42:12) Adding Username to the Registration Flow
+(42:12) Adding Username to the Registration Flow================================================================================================================================================================
 We currently have text as a placeholder for {username} in the register form, there is no username, there is name/email/password
 we need to add a new column so that when a user registers, they can tell us what they want to their username to be
 the DB was created when we ran the make: auth command
@@ -212,8 +212,46 @@ root -> public -> resources -> views -> auth #directory with 3 files created log
 inside the register.blade.php file, you have below code for name, email address, password, and confirm password
   <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label> 
 we copied the email address and pasted to create the username, replaced all instances of 'email' with 'username'
-we havn't added a logout feature yet, need to figure out how to log out.. so we can view the new registration form
-
+we havn't added a logout feature yet, need to figure out how to log out.. so we can view the new registration form - just needed to reset the server and 'npm run dev' / 'php artisan serve'
+if you remove the 'required' attribute, it will switch validation from HTML validation to laravel validation
+when you click register, we do a post back to the server, the server validates the data, and sends a reply back to client, all of the fields are required except the new username field
+  all we have done is added the markup field for the username in the form - in order to fix this, we need to edit another file
+root -> app -> HTTP -> controllers -> Auth -> RegisterController.php 
+  RegisterController.php = responsible for registering users, inside this is something called a protected function validator(array $data) {}
+  inside the validator is what we are using to validate the data, add a new entry for username         
+  'username' => ['required', 'string', 'max:255', 'unique:users'],
+  each of the strings in the array are selfexplanatory, each one is some sort of validation that needs to pass, 'unique: users' means there can only be one highlander in the database
+Controllers = where all the logic is stored, where you need to fetch data/manipulate the data, calculations, queries that is the job of the controller, not the view
+the view is used to put things in the right location, that's it, it should not be doing calculations or queries, that is the job of the controller
+After updating our registration form and validator, we need to add the username and make a modification to the migration
+root -> database -> migrations -> create_users_table.php #where to find the database migrations, created when you ininitially ran make: auth command
+  in here we can scroll down to public function up() {} instructseans, schema describes how to create a table in the database;
+  below is the code, schema describes the structure, create the table with the name of 'users', the Blueprint creates the table with a unique id that auto increments, with all the variables with the '$table'
+public function up(): void
+    {
+        Schema::create('users', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('username')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->rememberToken();
+            $table->timestamps();
+        });
+    }
+we added a new 'username' to the table, that must be unique, 2 users can not have the same username, this is a unqiue constraint at the database level
+the final step in the RegisterController.php file is to actually create the user AFTER validating you can create a new user
+    protected function create(array $data)
+    {
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'username' => $data['username'],
+            'password' => Hash::make($data['password']),
+        ]);
+    }
+}
 
 (58:35) Creating the Profiles Controller
 

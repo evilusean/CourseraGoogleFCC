@@ -282,10 +282,22 @@ php artisan help make:controller #replace make:controller with any command and p
 php artisan make:controller ProfilesController #used to make a new controller for profiles
   after creating the new controller, we added it to the web.php, replacing the HomeController
 
+(1:04:00) RESTful Resource Controller==============================================================================================================================================================================
+RESTful Resource Controllers = A predetermined number of verbs you can use(7) each of these actions will be matched to a URL/Verb/Action, imperative you follow the below documentasean conventions
+  facilitates development tremendously, makes controllers lighter, and makes your application way easier to update and make your codebase way cleaner
+Official Docs for RESTful Resources Controllers: 
+https://laravel.com/docs/5.1/controllers#restful-resource-controllers
+We are showing a single profile, not an index(which shows all resources available)
+he starts off by explaining by using the unique user id, instagram uses username in the URL
+Route::get('/profile/{user}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('profile.show'); #changed the get('/profile/{}') the curly brackets indicate it is going to have some sort of variable
+  also changed the name('profile.show') which is used in the naming convention in the documentasean above
+public function index($user) #added a parameter
+dd($user); #dump and die function, used for development and debugging, will echo out whatever '$user' is and stop all operation, returning what you are passing in
+root -> app -> Models -> User.php #shows a model of a single row in the database, represents a single user in the database, 
+use App\Models\User; #added to top of ProfilesController.php so we can use 'User::find($user);' without referencing /App/User::find($user);
+dd(User::find($user)); #we can use a dd function to get data from the table for debugging/figuring out what we can pull 
 
-
-
-
+(1:09:10) Passing Data to the View===================================================================================================================================================================================
 
 
 

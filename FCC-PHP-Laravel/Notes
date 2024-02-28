@@ -272,12 +272,15 @@ We now want to use this username in the top right corner of our navigation log i
 resources -> resources -> views -> layouts -> app.blade.php #we are changing it to not user the name, and instead use the username
   {{ Auth::user()->name }} #find this part of the file, and change name to username, it will fetch the Auth(enticated) Users -> username from our database and post it in the top right of the navigation
 
-(58:35) Creating the Profiles Controller
-
-
-
-
-
+(58:35) Creating the Profiles Controller==========================================================================================================================================================================
+roots -> routes -> web.php #where all of your routes are registered 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); #/home is calling the home controller, we are calling the 'index' method inside the HomeController.php
+  which returns a view called 'home' - which represents home.blade.php, 
+$this->middleware('auth'); #got created with make auth command, requires you to be authenticated, it should be viewable even if the user is not signed in, we will need to make our own controller
+php artisan make:controller [options] [--] <name> #syntax that allows you to make a controller, <name> is required
+php artisan help make:controller #replace make:controller with any command and php will get you information for any command that php artisan can use 
+php artisan make:controller ProfilesController #used to make a new controller for profiles
+  after creating the new controller, we added it to the web.php, replacing the HomeController
 
 
 

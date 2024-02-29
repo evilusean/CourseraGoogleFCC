@@ -326,8 +326,16 @@ App\Models\User {#665 ▼ // app/Http/Controllers/ProfilesController.php:13
     "username" => "TestUserName"
 ======================================================================================================FIXED==========================================================================================================
 (1:09:10) Passing Data to the View===================================================================================================================================================================================
-
-
+ <h1>{{ $user->username }}</h1> #allows us to use the users username in our home.blade.php with the return function below from the ProfilesController.php, will select the 'username' from $user
+public function index($user)
+    {
+        $user = User::find($user);
+        return view('home',
+            [
+                'user' => $user,
+            ]
+        );
+Instead of using <?=$user?> to echo out in our php view, we can use {{ $user }} 2 curly brackets/mustaches
 
 
 

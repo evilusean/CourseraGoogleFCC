@@ -301,10 +301,41 @@ Keep getting a 404 now, Going to rewatch the last 10 minutes of tutorial and the
 1:02:00 timestamp for figuring out what is broken, somewhere in ProfilesController.php / web.php / 
 Auth::routes(); #keeps throwing an error, but is neccesary, don't think I touched this after I uncommented
 Been working on this for a while, taking a break
-
+FIX:
+You are using Laravel 8. In a fresh install of Laravel 8, there is no namespace prefix being applied to your route groups that your routes are loaded into.
+https://stackoverflow.com/questions/63807930/error-target-class-controller-does-not-exist-when-using-laravel-8
+New Laravel = New Syntax, can not verbatim follow tutorial, positives, we are learning how to troubleshoot..
+Code Successfully completed the dd(User::find($user)); function: Progress!
+App\Models\User {#665 ▼ // app/Http/Controllers/ProfilesController.php:13
+  #connection: "sqlite"
+  #table: "users"
+  #primaryKey: "id"
+  #keyType: "int"
+  +incrementing: true
+  #with: []
+  #withCount: []
+  +preventsLazyLoading: false
+  #perPage: 15
+  +exists: true
+  +wasRecentlyCreated: false
+  #escapeWhenCastingToString: false
+  #attributes: array:9 [▼
+    "id" => 1
+    "name" => "TestUser"
+    "email" => "Test@test.com"
+    "username" => "TestUserName"
+======================================================================================================FIXED==========================================================================================================
 (1:09:10) Passing Data to the View===================================================================================================================================================================================
-
-
+ <h1>{{ $user->username }}</h1> #allows us to use the users username in our home.blade.php with the return function below from the ProfilesController.php, will select the 'username' from $user
+public function index($user)
+    {
+        $user = User::find($user);
+        return view('home',
+            [
+                'user' => $user,
+            ]
+        );
+Instead of using <?=$user?> to echo out in our php view, we can use {{ $user }} 2 curly brackets/mustaches
 
 
 

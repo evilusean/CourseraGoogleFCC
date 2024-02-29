@@ -296,6 +296,8 @@ dd($user); #dump and die function, used for development and debugging, will echo
 root -> app -> Models -> User.php #shows a model of a single row in the database, represents a single user in the database, 
 use App\Models\User; #added to top of ProfilesController.php so we can use 'User::find($user);' without referencing /App/User::find($user);
 dd(User::find($user)); #we can use a dd function to get data from the table for debugging/figuring out what we can pull 
+==================================================================================+ERROR============================================================================================================================
+Keep getting a 404 now, Going to rewatch the last 10 minutes of tutorial and then doublecheck code, and then check documentation, old tutorial = old syntax
 
 (1:09:10) Passing Data to the View===================================================================================================================================================================================
 

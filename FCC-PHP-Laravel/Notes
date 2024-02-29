@@ -298,6 +298,9 @@ use App\Models\User; #added to top of ProfilesController.php so we can use 'User
 dd(User::find($user)); #we can use a dd function to get data from the table for debugging/figuring out what we can pull 
 ==================================================================================+ERROR============================================================================================================================
 Keep getting a 404 now, Going to rewatch the last 10 minutes of tutorial and then doublecheck code, and then check documentation, old tutorial = old syntax
+1:02:00 timestamp for figuring out what is broken, somewhere in ProfilesController.php / web.php / 
+Auth::routes(); #keeps throwing an error, but is neccesary, don't think I touched this after I uncommented
+Been working on this for a while, taking a break
 
 (1:09:10) Passing Data to the View===================================================================================================================================================================================
 

@@ -337,8 +337,26 @@ public function index($user)
         );
 Instead of using <?=$user?> to echo out in our php view, we can use {{ $user }} 2 curly brackets/mustaches
 
+(1:10:20) Adding the Profiles Mode, Migration and Table==============================================================================================================================================================
+php artisan make:model #terminal command for php artisan to create a model
+php artisan help make:model #gives information for the mode make:model [options] [--] <name> #<name> is required
+a model represents a table in your database, and one object of your model represents a row
+Eloquent = is a word that laravel calls the database layer of a framework, the implimentation that laravel uses behind the scenes to fetch queries
+  you can have Eloquent models that are database agnostic(work in SQL/SQLite/PostGres) but use the exact same code
+currently we are using SQLite, but in a production server we will probably be using MySQL/MariaDB
+-m #migration tag that you can run, creates a new migration file for the model, will create 2 files instead of 1
+php artisan make:model Profile -m #command we used in project, explained above
+php artisan created 2 tables, migrated them, named them, and set them up for us
+strings are for short things, use 'text' for longer strings(like a descriptsean), we added 3 below to our model, we also made them nullable(user doesn't need to have them at all times)
+            $table->string('title')->nullable();
+            $table->text('description')->nullable();
+now we need to connect our profile to our user, relational databases, 
+$table->unsignedBigInteger('user_id'); #how to attach our 2 databases, so the profile belongs to that user_id belongs to that specific user at that id
+$table->index('user_id'); #this is a foreign key: we also need to add an index for any foreign key in our table, for better searchability and quicker queries
+UP method vs DOWN method = migrations can run either forwards or backwards
+php artisan migrate #command to migrate databases, must be run everytime you make changes
 
-
+(1:17:30) Adding Eloquent Relationships==============================================================================================================================================================================
 
 
 

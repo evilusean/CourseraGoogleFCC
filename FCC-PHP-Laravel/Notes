@@ -354,18 +354,34 @@ now we need to connect our profile to our user, relational databases,
 $table->unsignedBigInteger('user_id'); #how to attach our 2 databases, so the profile belongs to that user_id belongs to that specific user at that id
 $table->index('user_id'); #this is a foreign key: we also need to add an index for any foreign key in our table, for better searchability and quicker queries
 UP method vs DOWN method = migrations can run either forwards or backwards
-php artisan migrate #command to migrate databases, must be run everytime you make changes
+php artisan migrate #command to migrate databases, must be run everytime you make changes, 2 tables created
 
 (1:17:30) Adding Eloquent Relationships==============================================================================================================================================================================
+root -> app -> Models -> Profile.php #starting fresh from our newly created/migrated Model
+return $this->belongsTo(User::class); #belongsTo is a new keyword, laravel will take care of that relationship fetching a user_id and add it to our Profile table
+  naming convention is that user function are the same for both Profile.php and User.php, if you follow that naming convention, you don't need to do any weird overrides that tell laravel what to do
+We now need to reverse it, we want a profile that can fetch a user, and a user that can fetch a profile
+return $this->hasOne(Profile::class); #a profile belongs to a user, and a user has one profile, so this returns the profile to the user, hasOne is a new keyword that lets laravel know the user has One profile
+after these 2 functions, we have them hooked up at the laravel level, hooked up at the database level
+now we are going to manually add a profile, and add them manually, to see how it works
+php artisan tinker #command used to add a profile, opens another command window, tinker allows you to interact with your application one php line at a time
+we are going to add another profile through the command line
+$profile = new \App\Models\Profile(); #command didn't work for me, following tutorial, supposed to create a new app profile class
+$profile->title = 'Cool Title'; #supposed to set the new profile title to Cool Title
+$profile->description = 'DescriptSean' #supposed to set the description for our new profile to DescriptSean
+if we tried to save it at this point, it would fail, because the user_id is not nullable, and we need a user_id 
+$profile->user_id = 1; #this would give us our new user_id, since we only created 1 test profile so far, and it increments by 1 for each user created, it would link it to our Testuser User with unique id of 1
+$profile->save(); #will return true if saved, false if not, and save all of the above commands we just input and put it into our database
+$profile->user #will show the user from User.php using Profile.php because we linked together our 2 databases with the user_id, we fetched the user through the profile, pretty cool
+Now we will do the inverse:
+$user = App\Models\User::find(1); #will find the first profile created(unique id of 1) using the $user from User.php
+$user->profile #will get the profile from Profile.php from using the $user in User.php
+we are now able to fetch the relationships between databases forwards and backwards
+Since the above commands didn't work when we were going through tutorial, instead of inputting it manually - we will have to add it to our database once we are able to edit, and test it
+I don't want to spend hours literally TINKERING around trying to get the manual input to work when we should be able to do it automatically later on, I have less than a month to begin escaping communist canada
 
 
-
-
-
-
-
-
-
+(1:28:10) Fetching the Record From The Database=======================================================================================================================================================================
 
 
 

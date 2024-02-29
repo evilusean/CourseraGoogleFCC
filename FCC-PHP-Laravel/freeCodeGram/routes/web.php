@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use app\Http\Controllers\ProfilesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +19,7 @@ Route::GET('/', function () {
 
 Auth::routes(); 
 
-Route::GET('/profile/{user}', 'ProfilesController@index')->name('profile.show');
-/* Route::get('/profile/{user}', [App\Http\Controllers\ProfilesController::class, 'index',])->name('profile.show'); */
+/*Route::GET('/profile/{user}', 'ProfilesController@index')->name('profile.show'); */
+Route::get('/profile/{user}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('profile.show'); 
 /*Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show'); */
 /* above code what tutorial says */

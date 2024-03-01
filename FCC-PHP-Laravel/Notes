@@ -379,11 +379,29 @@ $user->profile #will get the profile from Profile.php from using the $user in Us
 we are now able to fetch the relationships between databases forwards and backwards
 Since the above commands didn't work when we were going through tutorial, instead of inputting it manually - we will have to add it to our database once we are able to edit, and test it
 I don't want to spend hours literally TINKERING around trying to get the manual input to work when we should be able to do it automatically later on, I have less than a month to begin escaping communist canada
-
-
-(1:28:10) Fetching the Record From The Database=======================================================================================================================================================================
-
-
+We can now make our profile on home.blade.php dynamic, instead of hardcoded in
+Since our URL is still nullable, laravel is smart enough to know if something is nullable, it just becomes an empty string
+==============================================================================ERROR:=================================================================================================================================
+After Testing code Received Error:
+Attempt to read property "title" on null
+All values are nullable, so it should be ok if there is nothing there.. 
+$table->string('title')->nullable();
+We can either: Fix it now, probably old syntax, or go back to hardcoded stuff for debugging and keep moving forward until we can create a new profile with the new database, no way to edit, YET
+  OR figure out how to get tinker working to add to our new database manually and then fix whatever may be broken.. this could be a cascade failure moment because we didn't take time to add to DB
+  or it could waste hours for something we didn't need to do by adding in manually
+1:24:00 of tutorial = When we have the break
+Potential Problem Files when we had the break:
+FCC-PHP-Laravel/freeCodeGram/database/migrations/2024_02_29_115218_create_profiles_table.php
+FCC-PHP-Laravel/freeCodeGram/app/Models/User.php
+FCC-PHP-Laravel/freeCodeGram/app/Models/Profile.php
+FCC-PHP-Laravel/freeCodeGram/app/Http/Controllers/ProfilesController.php
+FCC-PHP-Laravel/freeCodeGram/resources/views/home.blade.php
+{{ $user->profile->url }}
+{{ $user->profile->description }}
+{{ $user->profile->title}}
+Will attempt to figure out how to get tinker working after we take a break, we thankfully wrote down all the commands we need, just need to double check syntax, might be a quick fix, if not we put hardcode back in
+===========================================================================================================NOT FIXED: COMMENTED OUT AND HARDCODED TO KEEP MOVING FORWARD=============================================
+(1:28:10) Fetching the Record From The Database======================================================================================================================================================================
 
 
 

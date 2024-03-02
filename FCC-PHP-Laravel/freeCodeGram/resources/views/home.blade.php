@@ -7,8 +7,9 @@
             <img src="https://github.com/evilusean/DaGram-InstagramClone/blob/main/Images/NP%20Seans/ChadEngage.jpg?raw=true" class="rounded-circle" style="width: 150px; height: 150px";></img>
         </div>
         <div class="col-9 pt-5">
-            <div>
+            <div class="d-flex justify-content-between align-items-baseline">
                 <h1>{{ $user->username }}</h1>
+                <a href="#">Add New Post</a>
             </div>
             <div class="d-flex">
                 <div class="pe-5">

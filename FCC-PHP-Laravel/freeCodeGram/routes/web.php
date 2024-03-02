@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use app\Http\Controllers\ProfilesController;
+use app\Http\Controllers\PostsController;
 
 /*
 |--------------------------------------------------------------------------

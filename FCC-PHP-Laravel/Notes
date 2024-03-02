@@ -404,6 +404,17 @@ $profile #command used in tinker after we manually input all data, time to fix u
 {{ $user->profile->url ?? 'N/A' }} #?? = or operator, it will allow us to give a default, it will get the $user profile url OR give us 'N/A'
 $user->push(); #command in tinker we used to push(save all) all the data we stored in $user after it was assigned a new url, pushes your changes into the database
 (1:28:10) Fetching the Record From The Database======================================================================================================================================================================
+$user = User::findOrFail($user); #instead of ::find, use ::findOrFail, so that we will give a 404 error instead of a 500 which indicates server level fail
+
+(1:30:00) Adding Posts to the Database & Many To Many Relationship===================================================================================================================================================
+Posts is going to be another model, we are going to create a migration, create database/laravel relationships
+One to one = One user to one profile, that profile can not belong to more than one person, and that person can not have more than one profile
+One to many = there is going to be one user, but each user will have many posts
+$table->unsignedBigInteger('user_id'); #each post must belong to a user, so we must reference a user_id, and an index '$table->index('user_id');'
+$table->index('user_id'); #the index allows us to do some neat things at the database level, if we delete a user, there is no reason to keep the posts/profile, this is called cascading
+after adding in user_id, user_id index, title, caption, image - we are now going to hook them up at the laravel level
+public function posts(){return $this->hasMany(Post::class);} #when you have the hasMany keyword, post turns into posts, this user has many posts
+=============Creating a button:
 
 
 
@@ -414,16 +425,7 @@ $user->push(); #command in tinker we used to push(save all) all the data we stor
 
 
 
-
-
-
-
-
-
-
-
-
-
+(2:04:24) Creating Through a Relationship
 
 
 

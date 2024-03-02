@@ -391,9 +391,6 @@ We can either: Fix it now, probably old syntax, or go back to hardcoded stuff fo
   OR figure out how to get tinker working to add to our new database manually and then fix whatever may be broken.. this could be a cascade failure moment because we didn't take time to add to DB
   or it could waste hours for something we didn't need to do by adding in manually
 1:24:00 of tutorial = When we have the break
-{{ $user->profile->url }}
-{{ $user->profile->description }}
-{{ $user->profile->title }}
 Will attempt to figure out how to get tinker working after we take a break, we thankfully wrote down all the commands we need, just need to double check syntax, might be a quick fix, if not we put hardcode back in
 $profile #command used in tinker after we manually input all data, time to fix up the rest and have our new dynamic title and descriptsean
 = App\Models\Profile {#5017
@@ -401,6 +398,11 @@ $profile #command used in tinker after we manually input all data, time to fix u
     description: "DescriptSean",
     user_id: 1,
 ================================================================================================================FIXED================================================================================================
+{{ $user->profile->url }}
+{{ $user->profile->description }}
+{{ $user->profile->title }} # added all of the above to our home.blade.php so we can have dynamic profile pages
+{{ $user->profile->url ?? 'N/A' }} #?? = or operator, it will allow us to give a default, it will get the $user profile url OR give us 'N/A'
+$user->push(); #command in tinker we used to push(save all) all the data we stored in $user after it was assigned a new url, pushes your changes into the database
 (1:28:10) Fetching the Record From The Database======================================================================================================================================================================
 
 

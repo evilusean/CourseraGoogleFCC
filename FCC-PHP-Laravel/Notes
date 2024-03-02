@@ -367,7 +367,7 @@ now we are going to manually add a profile, and add them manually, to see how it
 php artisan tinker #command used to add a profile, opens another command window, tinker allows you to interact with your application one php line at a time
 we are going to add another profile through the command line
 1:21:30 Tutorial : where he starts manually inputting to the database, this is where we had our first error/break
-$profile = new \App\Models\Profile(); #command didn't work for me, following tutorial, supposed to create a new app profile class
+$profile = new App\Models\Profile(); #we had one too many '\' at the front, creates a new profile in tinker, it worked for him in the tutorial, not for me, strange.
 $profile->title = 'Cool Title'; #supposed to set the new profile title to Cool Title
 $profile->description = 'DescriptSean' #supposed to set the description for our new profile to DescriptSean
 if we tried to save it at this point, it would fail, because the user_id is not nullable, and we need a user_id 
@@ -391,17 +391,18 @@ We can either: Fix it now, probably old syntax, or go back to hardcoded stuff fo
   OR figure out how to get tinker working to add to our new database manually and then fix whatever may be broken.. this could be a cascade failure moment because we didn't take time to add to DB
   or it could waste hours for something we didn't need to do by adding in manually
 1:24:00 of tutorial = When we have the break
-Potential Problem Files when we had the break:
-FCC-PHP-Laravel/freeCodeGram/database/migrations/2024_02_29_115218_create_profiles_table.php
-FCC-PHP-Laravel/freeCodeGram/app/Models/User.php
-FCC-PHP-Laravel/freeCodeGram/app/Models/Profile.php
-FCC-PHP-Laravel/freeCodeGram/app/Http/Controllers/ProfilesController.php
-FCC-PHP-Laravel/freeCodeGram/resources/views/home.blade.php
+Will attempt to figure out how to get tinker working after we take a break, we thankfully wrote down all the commands we need, just need to double check syntax, might be a quick fix, if not we put hardcode back in
+$profile #command used in tinker after we manually input all data, time to fix up the rest and have our new dynamic title and descriptsean
+= App\Models\Profile {#5017
+    title: "Cool Title",
+    description: "DescriptSean",
+    user_id: 1,
+================================================================================================================FIXED================================================================================================
 {{ $user->profile->url }}
 {{ $user->profile->description }}
-{{ $user->profile->title}}
-Will attempt to figure out how to get tinker working after we take a break, we thankfully wrote down all the commands we need, just need to double check syntax, might be a quick fix, if not we put hardcode back in
-===========================================================================================================NOT FIXED: COMMENTED OUT AND HARDCODED TO KEEP MOVING FORWARD=============================================
+{{ $user->profile->title }} # added all of the above to our home.blade.php so we can have dynamic profile pages
+{{ $user->profile->url ?? 'N/A' }} #?? = or operator, it will allow us to give a default, it will get the $user profile url OR give us 'N/A'
+$user->push(); #command in tinker we used to push(save all) all the data we stored in $user after it was assigned a new url, pushes your changes into the database
 (1:28:10) Fetching the Record From The Database======================================================================================================================================================================
 
 

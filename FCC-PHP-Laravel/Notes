@@ -367,7 +367,7 @@ now we are going to manually add a profile, and add them manually, to see how it
 php artisan tinker #command used to add a profile, opens another command window, tinker allows you to interact with your application one php line at a time
 we are going to add another profile through the command line
 1:21:30 Tutorial : where he starts manually inputting to the database, this is where we had our first error/break
-$profile = new \App\Models\Profile(); #command didn't work for me, following tutorial, supposed to create a new app profile class
+$profile = new App\Models\Profile(); #we had one too many '\' at the front, creates a new profile in tinker, it worked for him in the tutorial, not for me, strange.
 $profile->title = 'Cool Title'; #supposed to set the new profile title to Cool Title
 $profile->description = 'DescriptSean' #supposed to set the description for our new profile to DescriptSean
 if we tried to save it at this point, it would fail, because the user_id is not nullable, and we need a user_id 

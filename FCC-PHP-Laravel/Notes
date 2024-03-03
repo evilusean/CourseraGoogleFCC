@@ -428,6 +428,9 @@ when we debug with dd() with no image/caption, it still works, we need to add so
 protected $gaurded = []; # you can override the protected/gaurded by placing this in your Post.php model, we are telling laravel it's ok, do not gaurd anything
 you want to ensure that you save to the correct user_id, and in case you are not signed in to create a post - you want to save through that relationship
 auth()->user()->posts the easiest way to get the authenticated user is through the auth function
+auth()->user()->posts()->create($data); #will create a user_id for that data before the next part 
+\App\Models\Post::create($data); #creates the actual post with the $data received from the validator
+use the above way, we don't have to tell laravel the user_id, it will figure it out for us, it will fail if you are not sign in and return a null
 
 (2:04:24) Creating Through a Relationship============================================================================================================================================================================
 

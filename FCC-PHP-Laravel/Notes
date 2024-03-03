@@ -440,6 +440,19 @@ Error was from one of the addons in VS Code I was using, it was highlighted in r
 =================================================================FIXED==============================================================================================================================================
 
 (2:04:24) Creating Through a Relationship============================================================================================================================================================================
+php artisan tinker
+post::all(); #shows all created posts, when debugging I kept getting a 404 error, can't figure out why, no posts were created, 
+
+===========================================================================================
+2:05:00 Tutorial Break - Took a break, too many things aren't working for me to build a SECOND instagram clone, go back 15 minutes when I start up again, if I don't get a job, 
+I begin my escape of communist canada on April 1st, I need more projects to show off on resume that actually work, it's not that impressive to take over a week for a 5 hour course which I've already built,
+  this is my SECOND instagram I built, I've already sunk in over a week on this project alone, and I've had the most errors because it is >5 years old, and a new language
+  Overall, I like PHP, might revisit this in the future, but I have a deadline to meet to escape - not sinking another week into this project just to get a second instagram 'why did you build 2?'
+Potential Problem Locations:
+FCC-PHP-Laravel/freeCodeGram/app/Http/Controllers/PostsController.php
+FCC-PHP-Laravel/freeCodeGram/app/Models/Post.php
+FCC-PHP-Laravel/freeCodeGram/app/Models/User.php
+FCC-PHP-Laravel/freeCodeGram/routes/web.php
 
 
 

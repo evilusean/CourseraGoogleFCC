@@ -448,6 +448,7 @@ post::all(); #shows all created posts, when debugging I kept getting a 404 error
 I begin my escape of communist canada on April 1st, I need more projects to show off on resume that actually work, it's not that impressive to take over a week for a 5 hour course which I've already built,
   this is my SECOND instagram I built, I've already sunk in over a week on this project alone, and I've had the most errors because it is >5 years old, and a new language
   Overall, I like PHP, might revisit this in the future, but I have a deadline to meet to escape - not sinking another week into this project just to get a second instagram 'why did you build 2?'
+  when I can build an ecommerce website or a jobsearch site or something new, or finish my certificaSeans
 Potential Problem Locations:
 FCC-PHP-Laravel/freeCodeGram/app/Http/Controllers/PostsController.php
 FCC-PHP-Laravel/freeCodeGram/app/Models/Post.php

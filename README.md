@@ -1,6 +1,6 @@
 # FreeCodeCamp : WeatherApp - Next.js / Tailwind / Typescript / CSS :
 [Tutorial:</br>
-[https://www.freecodecamp.org/news/beginner-web-dev-tutorial-build-a-weather-app-with-next-js-typescript/](https://www.freecodecamp.org/news/beginner-web-dev-tutorial-build-a-weather-app-with-next-js-typescript/)
+https://www.freecodecamp.org/news/beginner-web-dev-tutorial-build-a-weather-app-with-next-js-typescript/](https://www.freecodecamp.org/news/beginner-web-dev-tutorial-build-a-weather-app-with-next-js-typescript/)
 
 Start: 04March2024</br>
 End: </br>

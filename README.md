@@ -1,4 +1,4 @@
-# FreeCodeCamp : WeatherApp - Next.js / Tailwind / Typescript / CSS :
+# FreeCodeCamp : WeatherApp - React / Next.js / Tailwind / Typescript / CSS :
 [Tutorial:</br>
 https://www.freecodecamp.org/news/beginner-web-dev-tutorial-build-a-weather-app-with-next-js-typescript/](https://www.freecodecamp.org/news/beginner-web-dev-tutorial-build-a-weather-app-with-next-js-typescript/)
 

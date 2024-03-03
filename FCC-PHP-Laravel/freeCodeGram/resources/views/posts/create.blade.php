@@ -16,7 +16,8 @@
                         <input id="caption" 
                             type="text" 
                             class="form-control @error('caption') is-invalid @enderror" 
-                            caption="caption" value="{{ old('caption') }}" required 
+                            name="caption" 
+                            value="{{ old('caption') }}" required 
                             autocomplete="caption" autofocus>
 
                         @error('caption')

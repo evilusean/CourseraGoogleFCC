@@ -420,8 +420,9 @@ home.blade.php #extends('layouts.app') #particular to blade, you create your vie
 @yield('content') #keyword, whereever you yield, that's where that content is going to end up
 Follow the naming conventions laid out, it makes your code easier to write, follow and execute - and inevitably debug
 Now we need to add our image
-
-
+<form action="/p" enctype="multipart/form-data" method="post"> #action="/p" is where to post the image, enctype= encrytion type, method="post" = method to use
+@csrf # a csrf error 419 'page expired', allows laravel to limit who can post to forms, anyone could post, you need to limit who can post who is authorized, laravel does this with a long key name="_token"
+  one of the security features that laravel ships out of the box with, 
 
 
 

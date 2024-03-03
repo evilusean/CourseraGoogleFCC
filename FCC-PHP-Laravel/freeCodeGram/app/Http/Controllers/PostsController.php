@@ -20,5 +20,10 @@ class PostsController extends Controller
             'image' => ['required', 'image'],
         ]);
 
+        
+        \App\Models\Post::create($data);
+
+        // Create a new post using the request data die and dump debugging
+        //dd(request()->all());
     }
 }

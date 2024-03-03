@@ -431,6 +431,10 @@ auth()->user()->posts the easiest way to get the authenticated user is through t
 auth()->user()->posts()->create($data); #will create a user_id for that data before the next part 
 \App\Models\Post::create($data); #creates the actual post with the $data received from the validator
 use the above way, we don't have to tell laravel the user_id, it will figure it out for us, it will fail if you are not sign in and return a null
+=====================================================================ERROR==========================================================================================================================================
+Just tried to test my code, something broke, below code not working despite having included both use App\Models\Post; use App\Models\User;, the function is in User.php, but it can not find it for some reason.
+auth()->user()->posts()->create($data);
+
 
 (2:04:24) Creating Through a Relationship============================================================================================================================================================================
 

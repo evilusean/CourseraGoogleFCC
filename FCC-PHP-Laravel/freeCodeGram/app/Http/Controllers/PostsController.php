@@ -12,19 +12,13 @@ class PostsController extends Controller
     }
     public function store()
     {
-        // Create a new post using the request data)
-        dd(request()->all());
-        
+        // Create a new post using the request data die and dump debugging
+        //dd(request()->all());
         // Validate the data
-        $this->validate(request(), [
+        $data = request()->validate([
             'title' => 'required',
-            'body' => 'required'
+            'image' => ['required', 'image'],
         ]);
-        // Create a new post using the request data
-        auth()->user()->publish(
-            new Post(request(['title', 'body']))
-        );
-        // Redirect to the home page
-        return redirect('/');
+
     }
 }

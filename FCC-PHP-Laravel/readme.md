@@ -7,7 +7,7 @@ Summary:</br>
 Learn Laravel 5.8 by creating an Instagram clone in this full tutorial course for beginners. Laravel is a free, open-source PHP web framework used for creating web applications. </br>
 
 Showcases:</br>
-PHP Laravel, Controllers, Views, php artisan, tinker, migrations, databases, CRUD, authentication(secure), login, logout, passwords hashes, routes, JS, HTML/CSS, NPM, localhost, sqlite3, compilers, bootstrap. and more
+PHP Laravel, Controllers, Views, php artisan, tinker, migrations, databases, CRUD, authentication(secure), login, logout, passwords hashes, routes, JS, HTML/CSS, NPM, npm run dev, php artisan serve, localhost, sqlite3, composer, compilers, bootstrap, and more.
 
 Link:</br>
 https://www.youtube.com/watch?v=ImtZ5yENzgE&ab_channel=freeCodeCamp.org

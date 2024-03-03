@@ -1,0 +1,40 @@
+00:01 Learn to build a fully functional weather app using Next.js, Tailwind CSS, and TypeScript
+02:32 Setting up the weather app using Next.js
+07:33 Creating and styling the navigation component
+10:09 Installing and using React Icons for a weather app logo.
+15:13 Importing and styling icons and location display
+17:43 Creating a form with input and search icon
+22:27 Using event handlers and passing props in React form handling
+24:45 Creating the CN function and installing required libraries
+29:19 Replacing the API key and accessing weather data for a specific location
+31:27 Setting up React Query for data fetching
+36:15 Fetching and handling API data for weather information
+38:45 Creating loading component and UI for weather app
+43:25 Using the date-fns library to manipulate and format dates in the project.
+45:46 Creating a separate component for container usage
+50:24 Creating a function to convert Kelvin to Celsius
+52:44 Conditional handling using nullish coalescing operator
+57:20 Creating divs to display weather icons and temperature.
+59:39 Display time and temperature with formatting
+1:04:20 Customizing height for quality image and passing extra props
+1:06:38 Configuring OpenWeather image API and resolving errors
+1:11:10 Creating the 7-day weather forecast component
+1:13:29 Styling the weather app components
+1:18:15 Creating a single weather detail component
+1:20:35 Importing icons and creating props for the Weather App component
+1:25:07 Using default values for visibility, air pressure, and resolving import errors
+1:27:31 Converting sunrise and sunset data into time format and converting wind speed units.
+1:32:12 Creating props for weather forecast detail component
+1:34:46 Creating left and right sections for weather app UI.
+1:39:29 Mapping and displaying data
+1:41:43 Implement search and display weather report functionality.
+1:46:23 Storing and using the weather API key in a Next.js environment variable
+1:48:49 Creating a new component for session box and applying styling
+1:53:55 Creating click and submit functions for the Weather App
+1:56:15 Prevent page refresh and handle error state
+2:00:49 Implementing global state management for user's current city in the Weather App
+2:03:07 Implementing data fetching and state management with Next.js and TypeScript
+2:07:55 Handling loading state and delays after button click
+2:10:20 Implementing a conditional loading skeleton component
+2:15:07 Making the Navar responsive for mobile screens.
+2:17:23 Weather app project completed

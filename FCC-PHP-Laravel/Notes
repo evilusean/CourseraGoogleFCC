@@ -414,10 +414,12 @@ $table->unsignedBigInteger('user_id'); #each post must belong to a user, so we m
 $table->index('user_id'); #the index allows us to do some neat things at the database level, if we delete a user, there is no reason to keep the posts/profile, this is called cascading
 after adding in user_id, user_id index, title, caption, image - we are now going to hook them up at the laravel level
 public function posts(){return $this->hasMany(Post::class);} #when you have the hasMany keyword, post turns into posts, this user has many posts
-=============Creating a button:
-
-
-
+We added a link to create a post to the username div, used the bootstrap d-flex in order to make it not inline(new line), and justify-content-between to split each on both sides
+created a new view directory called 'posts' in resources -> public -> views -> layout -> posts to store all the created posts to later be put into our view
+home.blade.php #extends('layouts.app') #particular to blade, you create your views by stacking views on inside of eachother, similar to layers in PS
+@yield('content') #keyword, whereever you yield, that's where that content is going to end up
+Follow the naming conventions laid out, it makes your code easier to write, follow and execute - and inevitably debug
+Now we need to add our image
 
 
 

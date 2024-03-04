@@ -48,13 +48,21 @@ I can already tell our font-size is way too small, but it seems to scale with wh
 https://v2.tailwindcss.com/docs/font-size
 Added 2 more icons for location
 
+22:27 Using event handlers and passing props in React form handling=================================================================================================================================================================
+type Props = {
+    className?: string;
+    value: string;
+    onChange:React.ChangeEventHandler<HTMLInputElement> | undefined;
+    onSubmit: React.FormEventHandler<HTMLFormElement> | undefined;
+}
+#The value prop is used to set the value of the input field, the onChange prop is used to handle changes to the input field, and the onSubmit prop is used to handle form submissions.
+The SearchBox component returns a form element with an input field and a button. The input field is given the value prop, which sets its value to the current value of the value prop passed to the component. 
+The input field is also given the onChange prop, which handles changes to the input field. The button is given the onSubmit prop, which handles form submissions.
+When the user enters text into the input field, the onChange prop is called with the new value of the input field. This causes the value prop of the component to be updated, which in turn causes the input
+field to be re-rendered with the new value.
+the className?:string; #conditional, has a question, sometimes you need a className and sometimes you don't
 
-
-
-
-
-
-
+24:45 Creating the CN function and installing required libraries====================================================================================================================================================================
 
 
 

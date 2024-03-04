@@ -22,8 +22,8 @@ export default function SearchBox(props: Props) {
             border-gray-300 rounded-l-md focus:outline-none
             focus:border-blue-500 h-full" />
         <button className="px-4 py-[9px] bg-blue-500
-        text-white rounded-r-md focus:outline-none
-        hove:bg-blue-600 h-full">
+            text-white rounded-r-md focus:outline-none
+            hove:bg-blue-600 h-full">
             <IoSearch />
         </button>
     </form>

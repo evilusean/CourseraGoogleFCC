@@ -17,3 +17,10 @@ API, Next JS(React Framework), Todays Weather(3 hour intervals), Weekly Forecast
   weekly forecast, search function, current location, fully responsive
 
 (0:03:45) Navbar Component===========================================================================================================================================================================================================
+npx create-next-app@latest weatherapp #use nextjs to install with node, created our first nextJS project
+Typescript = Yes, ESLint = yes, Tailwind CSS = Yes, src/directory = yes, app router = yes, import alias = no
+367 dependancies installed, no errors
+cd weatherapp #change directory to newly created nextJS app
+code . #opens our current directory in VSCode
+npm run dev #test our new app, it works, localhost:3000
+

@@ -61,16 +61,29 @@ The input field is also given the onChange prop, which handles changes to the in
 When the user enters text into the input field, the onChange prop is called with the new value of the input field. This causes the value prop of the component to be updated, which in turn causes the input
 field to be re-rendered with the new value.
 the className?:string; #conditional, has a question, sometimes you need a className and sometimes you don't
+onChange={props.onChange} #after creating the props, you can simply hold mouse over it till a highlight pops up and copy the onChange:React.ChangeEventHandler<HTMLInputElement> | undefined;
 
 24:45 Creating the CN function and installing required libraries====================================================================================================================================================================
+'utils' created a new folder in src / app, created a new file called 'cn.ts'
+npm i tailwind-merge clsx #i installs tailwind merge to merge our tailwind classes, and clsx package to pass our package classes, run the command in terminal
+import clsx from "clsx"; #add imports from newly installed packages
+import { twMerge } from "tailwind-merge";
 
+export function cn(...inputs: ClassValue[]) {
+    return twMerge(clsx(...inputs))
+}
+The cn function is a utility function that helps you to write more concise and readable CSS code.
+It takes a list of class names as its arguments and returns a single string that can be used to set the className property of an element.
 
-
-
-
-
-
-
+29:19 Replacing the API key and accessing weather data for a specific location=====================================================================================================================================================
+openweathermap.org #first create an account, after that click on username, then click on my API keys
+'.env.local' after copying API key, create a new file in src directory, NEXT_PUBLIC_WEATHER_KEY = <API KEY> #replace <> with actual api key, after that you can use it globally whereever you want
+  in .env.local your API key will be stored privately, so that our API key is not exposed publicly
+https://openweathermap.org/api #website with documentation
+Use This for this project:
+https://openweathermap.org/api/geocoding-api
+Use this for API call:
+http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
 
 
 

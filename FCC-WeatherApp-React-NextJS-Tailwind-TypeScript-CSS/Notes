@@ -15,3 +15,5 @@ Under the hood, Next.js also abstracts and automatically configures tooling need
 Features:
 API, Next JS(React Framework), Todays Weather(3 hour intervals), Weekly Forecast, Weather Description(Visibility, Humidity, Wind Speed, Air Pressure, Sunrise time, Sunset time)
   weekly forecast, search function, current location, fully responsive
+
+(0:03:45) Navbar Component===========================================================================================================================================================================================================

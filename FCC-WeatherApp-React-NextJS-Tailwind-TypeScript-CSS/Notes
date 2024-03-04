@@ -26,3 +26,57 @@ npm run dev #test our new app, it works, localhost:3000
 removed everything from page.tsx, and globals.css 
 
 07:33 Creating and styling the navigation component==================================================================================================================================================================================
+created 'components' file in src / app , created Navbar.tsx
+<nav className='shadow-sm sticky top-0 left-0 z-50 bg-white'> #added shadow, sticky to top, positioned at top left, and a background of white
+<div className="h-[80px] w-full flex justify-between items-center max-w-7x1 px-3 mx-auto"> #created a duv with height of 80px, width=full, flex, justify between, items center, max width 7x1, padding=3, margin x of auto
+  mx-auto #margin x auto, will automatically center your container on the x axis
+<p className="flex items-center justify-center gap-2"></p> #added a paragraph with flex, items-center, justify content center, gap-2 Use gap-{size} to change the gap between both rows and columns in grid and flexbox layouts.
+<h2 className="text-gray-500 text-3x1"> #added header tag with gray text, and text size of 3x1
+import Navbar from "./components/Navbar"; #added our Navbar to our page.tsx with an import statement
+<div className="flex flex-col gap-4 bg-gray-100 min-h-screen"> #gave our background a gray background, flex display, flex of column, minimum height of the screen
+For Our Logo(Sun)-we will need icons, we can get icons for our projects here:
+https://react-icons.github.io/react-icons/
+Ctrl + Shift + `(backtick) = open a new terminal window in VSCode
+npm install react-icons --save #installs react-icons in your project, you can now use them, use the website search feature above to find your icon you wish to use
+After installing react-icons through the terminal, search through what you need for your project in top left search function
+import { BiSolidSun } from "react-icons/bi"; #sun we selected
+<BiSolidSun /> #How we can add sun to our project, after importing it
+After placing it, we now need to style our new icon,
+<BiSolidSun className="text-3x1 mt-1 text-yellow-500"/>
+I can already tell our font-size is way too small, but it seems to scale with whatever I place in the navbar div, staying the same, maybe the guy who made tutorial is using a very low res monitor
+  will need to come back and fix it after, tailwindCSS for ants, can add font-size in globals.css after we finish building, can keep this for now,
+https://v2.tailwindcss.com/docs/font-size
+Added 2 more icons for location
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

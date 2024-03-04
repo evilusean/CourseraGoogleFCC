@@ -1,0 +1,19 @@
+(0:00:13) Introduction =============================================================================================================================================================================================================
+Responsive, dynamic app with react components
+https://www.youtube.com/watch?v=KkC_wYM_Co4&ab_channel=freeCodeCamp.org
+OpenWeatherAPI: 
+https://openweathermap.org/api 
+Repo:
+https://github.com/whoisseth/weather-app-nextjs
+Next.js:
+https://nextjs.org/docs
+Next.js interactive tutorial:
+https://nextjs.org/learn
+Next.js is a React framework for building full-stack web applications. You use React Components to build user interfaces, and Next.js for additional features and optimizations.
+Under the hood, Next.js also abstracts and automatically configures tooling needed for React, like bundling, compiling, and more. This allows you to focus on building your application instead of spending time with configuration.
+
+Features:
+API, Next JS(React Framework), Todays Weather(3 hour intervals), Weekly Forecast, Weather Description(Visibility, Humidity, Wind Speed, Air Pressure, Sunrise time, Sunset time)
+  weekly forecast, search function, current location, fully responsive
+
+(0:03:45) Navbar Component===========================================================================================================================================================================================================

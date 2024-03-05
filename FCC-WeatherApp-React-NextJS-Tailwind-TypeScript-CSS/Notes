@@ -91,6 +91,7 @@ http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country
 // Above did not work, had to change the URL for the API key to pull data from the forecast endpoint:
 // http://api.openweathermap.org/data/2.5/forecast?q=Tokyo,JP&appid={process.env.NEXT_PUBLIC_API_KEY}&cnt=56
 // Above code cnt=56 means 56 hours of data with 3 hours of difference
+// you can replace {process.env.NEXT_PUBLIC_API_KEY} with your actual API key, and paste that URL in a browser to do a manual call
 Below, we did a count of 3, copied the API call we posted the URL into our browser, and asked google duet to create a type for our data, below is the result(what the heck is temp=276?-are we seriously doing kelvins?):
 {
   "cod": "200",

@@ -84,9 +84,112 @@ Use This for this project:
 https://openweathermap.org/api/geocoding-api
 Use this for API call:
 http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
-
-
-
+// Below Boilerplate for API Key:
+// http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
+// Below Working Copy for API Key NEXT_PUBLIC_API_KEY found in .env.local file:
+// http://api.openweathermap.org/geo/1.0/direct?q=Tokyo&appid={process.env.NEXT_PUBLIC_API_KEY}
+// Above did not work, had to change the URL for the API key to pull data from the forecast endpoint:
+// http://api.openweathermap.org/data/2.5/forecast?q=Tokyo,JP&appid={process.env.NEXT_PUBLIC_API_KEY}&cnt=56
+// Above code cnt=56 means 56 hours of data with 3 hours of difference
+Below, we did a count of 3, copied the API call we posted the URL into our browser, and asked google duet to create a type for our data, below is the result(what the heck is temp=276?-are we seriously doing kelvins?):
+{
+  "cod": "200",
+  "message": 0,
+  "cnt": 2,
+  "list": [
+    {
+      "dt": 1709629200,
+      "main": {
+        "temp": 279.42,
+        "feels_like": 276.07,
+        "temp_min": 278.3,
+        "temp_max": 279.42,
+        "pressure": 1018,
+        "sea_level": 1018,
+        "grnd_level": 1013,
+        "humidity": 88,
+        "temp_kf": 1.12
+      },
+      "weather": [
+        {
+          "id": 501,
+          "main": "Rain",
+          "description": "moderate rain",
+          "icon": "10n"
+        }
+      ],
+      "clouds": {
+        "all": 83
+      },
+      "wind": {
+        "speed": 5.01,
+        "deg": 22,
+        "gust": 7
+      },
+      "visibility": 3929,
+      "pop": 1,
+      "rain": {
+        "3h": 3.14
+      },
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2024-03-05 09:00:00"
+    },
+    {
+      "dt": 1709640000,
+      "main": {
+        "temp": 278.2,
+        "feels_like": 273.69,
+        "temp_min": 277.31,
+        "temp_max": 278.2,
+        "pressure": 1017,
+        "sea_level":1017,
+        "grnd_level":1011,
+        "humidity":92,
+        "temp_kf":0.89
+      },
+      "weather": [
+        {
+          "id": 501,
+          "main": "Rain",
+          "description": "moderate rain",
+          "icon": "10n"
+        }
+      ],
+      "clouds": {
+        "all":92
+      },
+      "wind": {
+        "speed": 7.1,
+        "deg": 352,
+        "gust":9.56
+      },
+      "visibility":898,
+      "pop":1,
+      "rain": {
+        "3h":4.34
+      },
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2024-03-05 12:00:00"
+    }
+  ],
+  "city": {
+    "id": 1850144,
+    "name": "Tokyo",
+    "coord": {
+      "lat": 35.6895,
+      "lon": 139.6917
+    },
+    "country": "JP",
+    "population": 12445327,
+    "timezone": 32400,
+    "sunrise": 1709586372,
+    "sunset": 1709627976
+  }
+}
 
 
 

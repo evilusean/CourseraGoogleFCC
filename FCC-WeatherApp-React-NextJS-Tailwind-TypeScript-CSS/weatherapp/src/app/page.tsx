@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar";
+import { useQuery } from "react-query";
 
 // Below Boilerplate for API Key:
 // http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
@@ -8,7 +9,7 @@ import Navbar from "./components/Navbar";
 // Above did not work, had to change the URL for the API key to pull data from the forecast endpoint:
 // http://api.openweathermap.org/data/2.5/forecast?q=Tokyo,JP&appid={process.env.NEXT_PUBLIC_API_KEY}&cnt=56
 // var format = require('date-format');
-// format('hh:mm:ss.SSS', new Date()); // just the time
+// format ('hh:mm:ss.SSS', new Date()); // just the time
 interface WeatherDetail {
   dt: number;
   main: {
@@ -65,6 +66,16 @@ interface WeatherData {
 }
 
 export default function Home() {
+  function Example() {
+    const { isLoading, error, data } = useQuery('repoData', async () =>
+      fetch('http://api.openweathermap.org/data/2.5/forecast?q=Tokyo,JP&appid={process.env.NEXT_PUBLIC_API_KEY}&cnt=56').then(res =>
+        res.json()
+      )
+    )
+  
+    if (isLoading) return 'Loading...'
+  }
+
   return (
     <div className="flex flex-col gap-4 bg-gray-100 min-h-screen">
       <Navbar />

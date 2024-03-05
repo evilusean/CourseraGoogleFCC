@@ -267,7 +267,11 @@ if you are using axios, you don't need to use fetch, or convert it into a json, 
 useQuery<WeatherData> #will allow us to read the type of data, that we made above with 'interface WeatherData' key:value pairs
 after testing, pressed F12 to look for our console.log("data", data); # we ended up getting a 401 unauthorized, need to see why 
   our{process.env.NEXT_PUBLIC_API_KEY} wouldn't work, had to break best practices and just paste my normal key, worked, fixed it with using '' back ticks and ${API_KEY} need dollar sign aswell
-
-
-
+after testing, you can now see console.log("data", data?.city.name); #you can now autocomplete the data points you want to see from the data, here is an example of city name
+if (isLoading) return <div className="flex items-center min-h-screen justify-center"> <p className="animate-bounce">Loading...</p> </div>;
+  #above code makes our loading screen nicer, adds a tailwind animated bounce, and positions it in center of screen, super easy-looks nice
+We are beginning to work on the layout of the next <main> section, in 2 <section> tags one for todays weather, and one for weekly forecast, each will require their own seperate logic
+const firstData = data?.list[0]; #will get the date, we need to then convert it into a day readable on our page
+npm install date-fns --save #installs a javascript library 'date-fns' that allows us to translate dates into a more readable format from our data fetched by API
+<p>{ format(parseISO(firstData?.dt_txt ?? ''), "EEEE" )}</p> #will give the name of the day we are currently on using newly installed date-fns library
 

@@ -274,4 +274,64 @@ We are beginning to work on the layout of the next <main> section, in 2 <section
 const firstData = data?.list[0]; #will get the date, we need to then convert it into a day readable on our page
 npm install date-fns --save #installs a javascript library 'date-fns' that allows us to translate dates into a more readable format from our data fetched by API
 <p>{ format(parseISO(firstData?.dt_txt ?? ''), "EEEE" )}</p> #will give the name of the day we are currently on using newly installed date-fns library
+<p className="text-lg">({ format(parseISO(firstData?.dt_txt ?? ''), "dd.MM.yyyy" )})</p> #created for d/m/y
+
+45:46 Creating a separate component for container usage===========================================================================================================================================================================
+created a reusable container that will take a custom className or default to it's original, with our cn(classname) function, that is used for div elements that we are going to be using 
+export default function Contrainer(props: React.HTMLProps<HTMLDivElement>) {
+  return (
+    <div 
+    {...props}
+    className={cn("w-full bg-white border rounded-xl flex py-4 shadow-sm",
+    props.className)}
+    />
+  );
+}#created in components/container.tsx
+<Container className="gap-10 px-6 items-center"> #will use all of the preassigned className's above and the addition 3 we just gave it, added to page.tsx
+the temperature is in kelvin lol, we will need to create a function that converts kelvin to celsius
+export function convertKelvinToCelsius(tempInKelvin: number): number {
+  const tempInCelsius = tempInKelvin - 273.15;
+  return Math.floor(tempInCelsius);
+}#will take a the temperature, subtract kelvin, and math.floor removes the decimal and returns an integer we can use for temp
+{{convertKelvinToCelsius(firstData?.main.temp ?? 296.15)}° #will use our above function and grab the data from our axios fetch in the .main.temp table, ?? = if there is no data pass the 296.15 into our kelvin function
+ctrl + k will save all
+===========================================================================================ERROR=========================================================================================================================
+Tried to test our code and got an error, wierd, that part we already tested and worked before, might of already burned through my 1000 free API calls already, NP, just wait 24 hours and start again.
+Unhandled Runtime Error
+RangeError: Invalid time value
+> 106 |     <p>{ format(parseISO(firstData?.dt_txt ?? ''), "EEEE" )}</p>
+tired of our code, will fix error tomorrow, if it doesn't fix itself.
+Left off @ 54:42
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

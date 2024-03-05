@@ -1,6 +1,9 @@
+'use client'
+
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 import { useQuery } from "react-query";
+import axios from "axios";
 
 // Below Boilerplate for API Key:
 // http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
@@ -66,15 +69,24 @@ interface WeatherData {
 }
 
 export default function Home() {
-  function Example() {
-    const { isLoading, error, data } = useQuery('repoData', async () =>
-      fetch('http://api.openweathermap.org/data/2.5/forecast?q=Tokyo,JP&appid={process.env.NEXT_PUBLIC_API_KEY}&cnt=56').then(res =>
-        res.json()
-      )
-    )
+    const { isLoading, error, data } = useQuery<WeatherData>(
+      'repoData', 
+      async () =>
+    {
+      const {data} = await axios.get(
+      'http://api.openweathermap.org/data/2.5/forecast?q=Tokyo,JP&appid=${process.env.NEXT_PUBLIC_API_KEY}=56');
+      return data;
+    }
+      //OLD METHOD: if you are using axios, you don't need to use fetch, or convert it into a json, with axios it will do it automatically
+      //fetch('http://api.openweathermap.org/data/2.5/forecast?q=Tokyo,JP&appid=${process.env.NEXT_PUBLIC_API_KEY}&cnt=56').then(res =>
+      //  res.json()
+      //)
+    );
   
-    if (isLoading) return 'Loading...'
-  }
+    console.log("data", data);
+
+    if (isLoading) return 'Loading...';
+  
 
   return (
     <div className="flex flex-col gap-4 bg-gray-100 min-h-screen">
@@ -82,3 +94,4 @@ export default function Home() {
     </div>
   );
 }
+

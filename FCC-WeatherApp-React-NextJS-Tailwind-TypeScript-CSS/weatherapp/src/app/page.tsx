@@ -4,6 +4,7 @@ import Image from "next/image";
 import Navbar from "./components/Navbar";
 import { useQuery } from "react-query";
 import axios from "axios";
+import { format, parseISO } from "date-fns";
 
 // Below Boilerplate for API Key:
 // http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
@@ -83,7 +84,9 @@ export default function Home() {
       //)
     );
   
-    console.log("data", data?.city);
+
+    const firstData = data?.list[0];
+    console.log("data", data);
 
     if (isLoading) return <div className="flex items-center min-h-screen justify-center">
       <p className="animate-bounce">Loading...</p>
@@ -98,8 +101,8 @@ export default function Home() {
         <section>
           <div>
             <h2 className="flex gap-1 text-2x1 items-end">
-              <p></p>
-              
+              <p>{ format(parseISO(firstData?.dt_txt ?? ''), "EEEE" )}</p>
+
             </h2>
             <div></div>
           </div>

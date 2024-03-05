@@ -228,14 +228,45 @@ interface WeatherData {
 }
 
 31:27 Setting up React Query for data fetching====================================================================================================================================================================================
+After succesfully recreating pipes for the API data, we now need to fetch our data
+to fetch our data we are going to use a react query
+Tanstack React Query V3 Official Docs:
+https://tanstack.com/query/v3/
+npm i react-query #used in terminal of project to install react-query
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
+#first import react-query
+const queryClient = new QueryClient()
+#below is how you do a query using react-query
+export default function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Example />
+    </QueryClientProvider>
+  )
+}
+next we wrapped our body in'layout.tsx' with the <QueryClientProvider client={queryClient}>
+const queryClient = new QueryClient() #then we added the queryClient provided by the documentation example, pasted it outside of the return function
+after attempting to run, it will throw an error, because it only works in client component, and we need to create a server component
+'use client' #place this at the top to remove the first error, for the second error, you need to remove/comment out all the metadata next components from 'layout.tsx'
 
-
-
-
-
-
-
-
+export default function Home() {
+  function Example() {
+    const { isLoading, error, data } = useQuery('repoData', () =>
+      fetch('https://api.github.com/repos/tannerlinsley/react-query').then(res =>
+        res.json()
+      )
+    )
+  
+    if (isLoading) return 'Loading...'
+  }#next copy this from the official docs of react query and add to 'page.tsx', then ctrl+space(shortcut) on useQuery keyword to import it aswell
+Next, replace their api with your api, while using the async function because you are fetching the data from an API, might take a few seconds
+We are going to use Axios with React-query to fetch our data
+npm i axios #installs axios
+if you are using axios, you don't need to use fetch, or convert it into a json, with axios it will do it automatically
+'await' keyword is the same as 'async'
+useQuery<WeatherData> #will allow us to read the type of data, that we made above with 'interface WeatherData' key:value pairs
+after testing, pressed F12 to look for our console.log("data", data); # we ended up getting a 401 unauthorized, need to see why 
+  our{process.env.NEXT_PUBLIC_API_KEY} wouldn't work, had to break best practices and just paste my normal key, worked, fixed it with using '' back ticks and ${API_KEY} need dollar sign aswell
 
 
 

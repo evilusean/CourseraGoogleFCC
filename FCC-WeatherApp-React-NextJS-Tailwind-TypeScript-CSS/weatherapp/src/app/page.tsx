@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar";
 import { useQuery } from "react-query";
 import axios from "axios";
 import { format, parseISO } from "date-fns";
+import Container from "./components/container";
+import { convertKelvinToCelsius } from "./utils/convertKelvinToCelsius";
 
 // Below Boilerplate for API Key:
 // http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
@@ -104,7 +106,12 @@ export default function Home() {
               <p>{ format(parseISO(firstData?.dt_txt ?? ''), "EEEE" )}</p>
               <p className="text-lg">({ format(parseISO(firstData?.dt_txt ?? ''), "dd.MM.yyyy" )})</p>
             </h2>
-            <div></div>
+            <Container className="gap-10 px-6 items-center">
+              <div className="flex flex-col px-4">
+                {convertKelvinToCelsius(firstData?.main.temp ?? 296.15)}°
+              </div>
+
+            </Container>
           </div>
 
         </section>

@@ -309,9 +309,11 @@ GET http://api.openweathermap.org/data/2.5/forecast?q=Tokyo,JP&appid=${process.e
 we added a span tag to our convert kelvin for first date function
 <p className="text-xs space-x-1 whitespace-nowrap"> # space-x-1 = we will give a full space of 1 pixel whitespace-nowrap = it will not break the line
 57:20 Creating divs to display weather icons and temperature.============================================================================================================================================================
+<div className="flex gap-10 sm:gap-16 overflow-x-auto w-full justify-between pr-3"> #gap-10 = 10 = 40 pixels, with sm:gap(small screens)=gap of 64 pixels, overflow-x-auto = will give us a scroll bar, w-full = width full
+className="flex flex-col justify-between gap-2 items-center text-xs font-semibold" #flex-col will show our data in columns, 
 
-
-
+59:39 Display time and temperature with formatting========================================================================================================================================================================
+{format(parseISO(firstData?.dt_txt ?? ""), "hh:mm")} # will get our data from the API call, and if no data ?? "" fill nothing, otherwise it will give us an Hour:Minute Time
 
 
 

@@ -77,7 +77,7 @@ export default function Home() {
       async () =>
     {
       const {data} = await axios.get(
-      'http://api.openweathermap.org/data/2.5/forecast?q=Tokyo,JP&appid=${process.env.NEXT_PUBLIC_API_KEY2}=56');
+      'http://api.openweathermap.org/data/2.5/forecast?q=Tokyo,JP&appid=${process.env.NEXT_PUBLIC_API_KEY}=56');
       return data;
     }
       //OLD METHOD: if you are using axios, you don't need to use fetch, or convert it into a json, with axios it will do it automatically
@@ -100,8 +100,8 @@ export default function Home() {
       <Navbar />
       <main className="px-3 max-w-7x1 mx-auto flex flex-col gap-9 w-full pb-10 pt-4">
         {/* TODAYS DATA */}
-        <section>
-          <div>
+        <section className="space-y-4">
+          <div className="space-y-2">
             <h2 className="flex gap-1 text-2x1 items-end">
               <p>{format(parseISO(firstData?.dt_txt ?? ""), "EEEE")}</p>
               <p className="text-lg">
@@ -109,10 +109,29 @@ export default function Home() {
               </p>
             </h2>
             <Container className="gap-10 px-6 items-center">
+              {/* TEMPERATURE */}
               <div className="flex flex-col px-4">
-                {convertKelvinToCelsius(firstData?.main.temp ?? 296.15)}°
+                <span className="text-5x1">
+                  {convertKelvinToCelsius(firstData?.main.temp ?? 296.15)}°
+                </span>
+                <p className="text-xs space-x-1 whitespace-nowrap">
+                  <span> Feels Like</span>
+                  <span>
+                    {convertKelvinToCelsius(firstData?.main.feels_like ?? 296.15)}°
+                  </span>
+                </p>
+                <p className="text-xs space-x-2">
+                  <span>
+                    {" "}
+                    {convertKelvinToCelsius(firstData?.main.temp_min ?? 296.15)}°↓
+                  </span>
+                  <span>
+                    {" "}
+                    {convertKelvinToCelsius(firstData?.main.temp_max ?? 296.15)}°↑
+                  </span>
+                </p>
               </div>
-
+              {/* TIME AND WEATHER ICON */}
             </Container>
           </div>
 

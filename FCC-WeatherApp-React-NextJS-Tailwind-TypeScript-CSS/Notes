@@ -307,7 +307,7 @@ Google search still isn't working when I look up my error, yandex is, could be o
 GET http://api.openweathermap.org/data/2.5/forecast?q=Tokyo,JP&appid=${process.env.NEXT_PUBLIC_API_KEY2}=56 401 
 =========================================================================================================================================================================================================================
 
-
+57:20 Creating divs to display weather icons and temperature.============================================================================================================================================================
 
 
 

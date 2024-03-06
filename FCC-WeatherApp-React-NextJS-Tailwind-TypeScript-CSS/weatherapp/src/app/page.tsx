@@ -77,7 +77,7 @@ export default function Home() {
       async () =>
     {
       const {data} = await axios.get(
-      'http://api.openweathermap.org/data/2.5/forecast?q=Tokyo,JP&appid=${process.env.NEXT_PUBLIC_API_KEY}=56');
+      'http://api.openweathermap.org/data/2.5/forecast?q=Tokyo,JP&appid=${process.env.NEXT_PUBLIC_API_KEY2}=56');
       return data;
     }
       //OLD METHOD: if you are using axios, you don't need to use fetch, or convert it into a json, with axios it will do it automatically
@@ -103,8 +103,10 @@ export default function Home() {
         <section>
           <div>
             <h2 className="flex gap-1 text-2x1 items-end">
-              <p>{ format(parseISO(firstData?.dt_txt ?? ''), "EEEE" )}</p>
-              <p className="text-lg">({ format(parseISO(firstData?.dt_txt ?? ''), "dd.MM.yyyy" )})</p>
+              <p>{format(parseISO(firstData?.dt_txt ?? ""), "EEEE")}</p>
+              <p className="text-lg">
+                ({ format(parseISO(firstData?.dt_txt ?? ''), "dd.MM.yyyy" )})
+              </p>
             </h2>
             <Container className="gap-10 px-6 items-center">
               <div className="flex flex-col px-4">

@@ -320,7 +320,7 @@ className="flex flex-col justify-between gap-2 items-center text-xs font-semibol
 {format(parseISO(firstData?.dt_txt ?? ""), "hh:mm")} # will get our data from the API call, and if no data ?? "" fill nothing, otherwise it will give us an Hour:Minute Time
 <p className="whitespace-nowrap"> #will force our data to be on a single line instead of breaking it into pieces, 
 
-1:04:20 Customizing height for quality image and passing extra props======================================================================================================================================================
+1:04:20 Customizing height for quality image and passing extra props / 1:06:38 Configuring OpenWeather image API and resolving errors==========================================================================================
 After testing our code we received an error:
 fixed by copying and pasting this code into our next.config.js, replaced all code and replaced boilerplate with the hostname, removed port and pathname:
 https://nextjs.org/docs/messages/next-image-unconfigured-host
@@ -336,8 +336,14 @@ module.exports = {
   }
 after replacing code, it crashed our 'npm run dev' local server and threw us another error, 
 ReferenceError: module is not defined in ES module scope
-
-
+https://github.com/vercel/next.js/issues/39375
+renamed .mjs to .js fixed it, or at least got it to run 'npm run dev' but got stuck on loading screen, read further through the github and placed below code into our next.config.js and it worked
+const nextConfig = {
+ experimental: {
+    transpilePackages: ["problematic-package", "other-problematic-package", "etc", "..."],
+  },
+}
+=========================================================================================Fixed!==============================================================================================================================
 
 
 

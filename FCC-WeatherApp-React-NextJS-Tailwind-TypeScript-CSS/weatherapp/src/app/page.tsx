@@ -7,6 +7,7 @@ import axios from "axios";
 import { format, parseISO } from "date-fns";
 import Container from "./components/container";
 import { convertKelvinToCelsius } from "./utils/convertKelvinToCelsius";
+import WeatherIcon from "./components/WeatherIcon";
 
 //const WEATHER_API_KEY = process.env.NEXT_PUBLIC_WEATHER_KEY;
 //console.log("WEATHER_API_KEY", WEATHER_API_KEY);
@@ -80,7 +81,7 @@ export default function Home() {
       async () =>
     {
       const {data} = await axios.get(
-        //`https://api.openweathermap.org/data/2.5/forecast?q=Tokyo&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}&cnt=56`);
+        `https://api.openweathermap.org/data/2.5/forecast?q=Tokyo&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}&cnt=56`);
       return data;
     });
       //OLD METHOD: if you are using axios, you don't need to use fetch, or convert it into a json, with axios it will do it automatically
@@ -146,7 +147,8 @@ export default function Home() {
                         {format(parseISO(d.dt_txt ?? ""), "h:mm a")}
                       </p>
                       <p>
-                        {convertKelvinToCelsius(firstData?.main.temp ?? 296.15)}°
+                        <WeatherIcon iconName={d.weather[0].icon} />
+                        {convertKelvinToCelsius(d?.main.temp ?? 296.15)}°
                       </p>
                     </div>
                 ))}

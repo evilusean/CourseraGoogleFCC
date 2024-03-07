@@ -344,9 +344,12 @@ const nextConfig = {
   },
 }
 =========================================================================================Fixed!==============================================================================================================================
+Now we are going to create a get day or night icon function, before 6am and after 6PM it will return night, else for day, 
+<WeatherIcon iconName={getDayOrNightIcon(d.weather[0].icon, d.dt_txt)} /> #will use our new function check the weather as first parameter and check the time as second parameter, and return appropriate icon
 
-
-
+1:11:10 Creating the 7-day weather forecast component========================================================================================================================================================================
+1:13:29 Styling the weather app components===================================================================================================================================================================================
+<Container className="w-fit justify-center flex-col px-4 items-center"> #w-fit = will resize width, flex-col will create columns, padding x axis=4, items will be centered
 
 
 

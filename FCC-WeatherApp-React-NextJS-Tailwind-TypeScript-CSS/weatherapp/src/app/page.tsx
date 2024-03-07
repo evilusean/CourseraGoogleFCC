@@ -8,6 +8,7 @@ import { format, parseISO } from "date-fns";
 import Container from "./components/container";
 import { convertKelvinToCelsius } from "./utils/convertKelvinToCelsius";
 import WeatherIcon from "./components/WeatherIcon";
+import { getDayOrNightIcon } from "./utils/getDayOrNightIcon";
 
 //const WEATHER_API_KEY = process.env.NEXT_PUBLIC_WEATHER_KEY;
 //console.log("WEATHER_API_KEY", WEATHER_API_KEY);
@@ -147,7 +148,7 @@ export default function Home() {
                         {format(parseISO(d.dt_txt ?? ""), "h:mm a")}
                       </p>
                       <p>
-                        <WeatherIcon iconName={d.weather[0].icon} />
+                        <WeatherIcon iconName={getDayOrNightIcon(d.weather[0].icon, d.dt_txt)} />
                         {convertKelvinToCelsius(d?.main.temp ?? 296.15)}°
                       </p>
                     </div>
@@ -158,8 +159,8 @@ export default function Home() {
 
         </section>
         {/* 7 DAY FORECAST */}
-        <section>
-          
+        <section className="flex w-full flex-col gap-4">
+          <p className="text-2xl">7 Day Forecast</p>
         </section>
       </main>
     </div>

@@ -134,12 +134,12 @@ export default function Home() {
               {/* TIME AND WEATHER ICON */}
               <div className="flex gap-10 sm:gap-16 overflow-x-auto w-full justify-between pr-3">
 
-                {data?.list.map(() => (
+                {data?.list.map((d, i) => (
                   <div 
                     key={i}
                     className="flex flex-col justify-between gap-2 items-center text-xs font-semibold">
                       <p className="whitespace-nowrap">
-                        {format(parseISO(firstData?.dt_txt ?? ""), "hh:mm a")}
+                        {format(parseISO(d.dt_txt ?? ""), "h:mm a")}
                       </p>
                       <p>
                         {convertKelvinToCelsius(firstData?.main.temp ?? 296.15)}°

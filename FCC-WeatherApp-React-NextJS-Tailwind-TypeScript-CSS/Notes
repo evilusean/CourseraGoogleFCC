@@ -305,6 +305,7 @@ Left off @ 54:42
 Tried again this morning with a new API_Key(second account), still broken, so it must be broken on their end, had a bunch of major outages (google/youtube/facebook/instagram/etc) 
 Google search still isn't working when I look up my error, yandex is, could be on their end, going to keep building, and try again in a few hours, I can still build out the functionality for my app and progress through tutorial
 GET http://api.openweathermap.org/data/2.5/forecast?q=Tokyo,JP&appid=${process.env.NEXT_PUBLIC_API_KEY2}=56 401 
+{"cod":401, "message": "Invalid API key. Please see https://openweathermap.org/faq#error401 for more info."}
 =========================================================================================================================================================================================================================
 we added a span tag to our convert kelvin for first date function
 <p className="text-xs space-x-1 whitespace-nowrap"> # space-x-1 = we will give a full space of 1 pixel whitespace-nowrap = it will not break the line

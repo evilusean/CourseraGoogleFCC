@@ -8,15 +8,15 @@ import { format, parseISO } from "date-fns";
 import Container from "./components/container";
 import { convertKelvinToCelsius } from "./utils/convertKelvinToCelsius";
 
-const WEATHER_API_KEY = process.env.NEXT_PUBLIC_WEATHER_KEY;
-console.log("WEATHER_API_KEY", WEATHER_API_KEY);
+//const WEATHER_API_KEY = process.env.NEXT_PUBLIC_WEATHER_KEY;
+//console.log("WEATHER_API_KEY", WEATHER_API_KEY);
 
 // Below Boilerplate for API Key:
 // http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
 // Below Working Copy for API Key NEXT_PUBLIC_API_KEY found in .env.local file:
 // http://api.openweathermap.org/geo/1.0/direct?q=Tokyo&appid={process.env.NEXT_PUBLIC_API_KEY}
 // Above did not work, had to change the URL for the API key to pull data from the forecast endpoint:
-// http://api.openweathermap.org/data/2.5/forecast?q=Tokyo,JP&appid={process.env.NEXT_PUBLIC_API_KEY}&cnt=56
+// http://api.openweathermap.org/data/2.5/forecast?q=Tokyo,JP&appid=${process.env.NEXT_PUBLIC_API_KEY}&cnt=56
 // var format = require('date-format');
 // format ('hh:mm:ss.SSS', new Date()); // just the time
 interface WeatherDetail {
@@ -80,7 +80,7 @@ export default function Home() {
       async () =>
     {
       const {data} = await axios.get(
-        `https://api.openweathermap.org/data/2.5/forecast?q=Tokyo&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}&cnt=56`);
+        //`https://api.openweathermap.org/data/2.5/forecast?q=Tokyo&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}&cnt=56`);
       return data;
     });
       //OLD METHOD: if you are using axios, you don't need to use fetch, or convert it into a json, with axios it will do it automatically
@@ -119,7 +119,9 @@ export default function Home() {
                 <p className="text-xs space-x-1 whitespace-nowrap">
                   <span> Feels Like</span>
                   <span>
-                    {convertKelvinToCelsius(firstData?.main.feels_like ?? 296.15)}°
+                    {convertKelvinToCelsius(
+                      firstData?.main.feels_like ?? 296.15
+                      )}°
                   </span>
                 </p>
                 <p className="text-xs space-x-2">

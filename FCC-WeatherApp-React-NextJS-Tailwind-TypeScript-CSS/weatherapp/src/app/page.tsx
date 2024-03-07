@@ -8,6 +8,9 @@ import { format, parseISO } from "date-fns";
 import Container from "./components/container";
 import { convertKelvinToCelsius } from "./utils/convertKelvinToCelsius";
 
+const WEATHER_API_KEY = process.env.NEXT_PUBLIC_WEATHER_KEY;
+console.log("WEATHER_API_KEY", WEATHER_API_KEY);
+
 // Below Boilerplate for API Key:
 // http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
 // Below Working Copy for API Key NEXT_PUBLIC_API_KEY found in .env.local file:

@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from './container';
 import WeatherIcon from './WeatherIcon';
-import { WeatherDetailProps } from './WeatherDetails';
+import WeatherDetails, { WeatherDetailProps } from './WeatherDetails';
 import { convertKelvinToCelsius } from '../utils/convertKelvinToCelsius';
 
 export interface ForecastWeatherDetailProps extends WeatherDetailProps {
@@ -51,7 +51,9 @@ export default function ForecastWeatherDetail(props: ForecastWeatherDetailProps)
                 </p>
             </div>
         </section>
-
+        <section className="overflow-x-auto flex justify-between gap-4 px-4 w-full pr-10">
+            <WeatherDetails {...props} />
+        </section>
     </Container>
   )
 }

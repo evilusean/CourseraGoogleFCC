@@ -12,6 +12,7 @@ import { getDayOrNightIcon } from "./utils/getDayOrNightIcon";
 import WeatherDetails from "./components/WeatherDetails";
 import { meterToKilometer } from "./utils/metersToKilometers";
 import { convertWindSpeed } from "./utils/convertWindSpeed";
+import ForecastWeatherDetail from "./components/ForecastWeatherDetail";
 
 //const WEATHER_API_KEY = process.env.NEXT_PUBLIC_WEATHER_KEY;
 //console.log("WEATHER_API_KEY", WEATHER_API_KEY);
@@ -191,6 +192,7 @@ export default function Home() {
         {/* 7 DAY FORECAST */}
         <section className="flex w-full flex-col gap-4">
           <p className="text-2xl">Forecast(7 Day)</p>
+          <ForecastWeatherDetail />
         </section>
       </main>
     </div>

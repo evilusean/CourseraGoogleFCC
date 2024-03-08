@@ -368,6 +368,9 @@ function SingleWeatherDetail(props: SingleWeatherDetailProps) {
     </div>
   );
 } #reusable function to create react components to display each value with individual react-icons
+=========================================================================================ERROR================================================================================================================================
+After trying to test I received an error, titles and icons are there, dynamic props are missing..:
+Type '{}' is missing the following properties from type 'WeatherDetailProps': visibility, humidity, windSpeed, airPressure, and 2 more.
 
 1:25:07 Using default values for visibility, air pressure, and resolving import errors========================================================================================================================================
 

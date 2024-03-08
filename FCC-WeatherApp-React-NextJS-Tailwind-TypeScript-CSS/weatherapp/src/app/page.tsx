@@ -98,6 +98,22 @@ export default function Home() {
     const firstData = data?.list[0];
     console.log("data", data);
 
+    const uniqueDates = [
+      ...new Set(
+        data?.list.map(
+          (entry) => new Date(entry.dt * 1000).toISOString().split("T")[0]
+        )
+      )
+    ];
+
+    const firstDataForEachDate = uniqueDates.map((date) => {
+      return data?.list.find((entry) => {
+        const entryDate = new Date(entry.dt * 1000).toISOString().split("T")[0];
+        const entryTime = new Date(entry.dt * 1000).getHours();
+        return entryDate === date && entryTime >= 6;
+      });
+    });
+
     if (isLoading) return <div className="flex items-center min-h-screen justify-center">
       <p className="animate-bounce">Loading...</p>
     </div>

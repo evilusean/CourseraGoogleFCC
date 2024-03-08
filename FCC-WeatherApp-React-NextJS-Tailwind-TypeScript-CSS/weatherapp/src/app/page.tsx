@@ -11,6 +11,7 @@ import WeatherIcon from "./components/WeatherIcon";
 import { getDayOrNightIcon } from "./utils/getDayOrNightIcon";
 import WeatherDetails from "./components/WeatherDetails";
 import { meterToKilometer } from "./utils/metersToKilometers";
+import { convertWindSpeed } from "./utils/convertWindSpeed";
 
 //const WEATHER_API_KEY = process.env.NEXT_PUBLIC_WEATHER_KEY;
 //console.log("WEATHER_API_KEY", WEATHER_API_KEY);
@@ -84,7 +85,7 @@ export default function Home() {
       async () =>
     {
       const {data} = await axios.get(
-        //`https://api.openweathermap.org/data/2.5/forecast?q=Tokyo&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}&cnt=56`);
+        `https://api.openweathermap.org/data/2.5/forecast?q=Tokyo&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}&cnt=56`);
       return data;
     });
       //OLD METHOD: if you are using axios, you don't need to use fetch, or convert it into a json, with axios it will do it automatically
@@ -170,23 +171,20 @@ export default function Home() {
                   />
             </Container>
             <Container className="bg-yellow-300/80 px-6 gap-4 justify-between overflow-x-auto">
-                <WeatherDetails visibility={meterToKilometer(firstData?.visibility ?? 10000)}
-                airPressure={'${firstData?.main.pressure} hPa'}
-                humidity={'${firstData?.main.humidity}%'} 
-                sunrise={format(
-                  fromUnixTime(data?.city.sunrise ?? 1702949452), 
-                  'H:mm'
+                <WeatherDetails 
+                  visibility={meterToKilometer(firstData?.visibility ?? 10000)}
+                  airPressure={`${firstData?.main.pressure} hPa`}
+                  humidity={`${firstData?.main.humidity}%`}
+                  sunrise={format(
+                    fromUnixTime(data?.city.sunrise ?? 1702949452), 
+                    'H:mm'
                   )} 
-                sunset={format(
-                  fromUnixTime(data?.city.sunset ?? 1702949452), 
-                  'H:mm'
+                  sunset={format(
+                    fromUnixTime(data?.city.sunset ?? 1702949452), 
+                    'H:mm'
                   )}
-                windSpeed={}
+                  windSpeed={convertWindSpeed(firstData?.wind.speed ?? 1.64)}
                 />
-
-            </Container>
-          </div>
-        </section/>
             </Container>
           </div>
         </section>

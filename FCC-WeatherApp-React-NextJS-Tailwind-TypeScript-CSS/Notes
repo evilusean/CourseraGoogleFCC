@@ -435,3 +435,5 @@ I was getting an error, using the 'Set' keyword you need to add '"target": "es20
                   windSpeed={`${convertWindSpeed(d?.wind.speed ?? 1.64)} `}
             />
 #(d = data, i = index), gets all the data for 7 day forecast and incorporates the logic from our above code, 
+
+1:41:43 Implement search and display weather report functionality.==============================================================================================================================================================

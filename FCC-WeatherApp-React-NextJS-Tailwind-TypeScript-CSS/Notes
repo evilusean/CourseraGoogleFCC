@@ -389,10 +389,26 @@ export interface ForecastWeatherDetailProps extends WeatherDetailProps {
   }
 #adds all new properties to our new function, and extends(includes) the ones we built previously(visibility, humidity, etc), imported our old code for use
 
+1:34:46 Creating left and right sections for weather app UI.===================================================================================================================================================================
+ <WeatherDetails {...props} /> #instead of passing all props manually again, you can simply write {...props} and it will automatically PROPagate
 
+1:39:29 Mapping and displaying data============================================================================================================================================================================================
+when we look at our console.log of data, we have 40 arrays, we need to create some logic to select the right day and place it appropriately in our app
+we are going to filter out a single piece of data, and use that for each day and store it in a seperate array then map it
+const uniqueDates = [
+      ...new Set(
+        data?.list.map(
+          (entry) => new Date(entry.dt * 1000).toISOString().split("T")[0]
+        )
+      )
+    ];
 
-
-
-
-
+const firstDataForEachDate = uniqueDates.map((date) => {
+    return data?.list.find((entry) => {
+      const entryDate = new Date(entry.dt * 1000).toISOString().split("T")[0];
+      const entryTime = new Date(entry.dt * 1000).getHours();
+      return entryDate === date && entryTime >= 6;
+    });
+  });#filters the data, by date, then mapping unique dates to the ...new Set, it will retrieve the first entry after 6AM
+I was getting an error, using the 'Set' keyword you need to add '"target": "es2015",' to tsconfig.json to fix
 

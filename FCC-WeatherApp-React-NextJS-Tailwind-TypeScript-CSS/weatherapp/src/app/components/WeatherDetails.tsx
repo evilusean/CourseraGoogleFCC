@@ -6,9 +6,6 @@ import { ImMeter } from "react-icons/im"
 import { LuSunrise } from "react-icons/lu";
 import { LuSunset } from "react-icons/lu";
 
-
-type Props = {}
-
 export interface WeatherDetailProps {
     visibility: string;
     humidity: string;
@@ -29,7 +26,8 @@ export default function WeatherDetails(props: WeatherDetailProps) {
         sunset = "18:48"
       } = props;
 
-  return (<>
+  return (
+  <>
   <SingleWeatherDetail 
     icon={<FaRegEye />}
     information = "Visibility"
@@ -61,7 +59,7 @@ export default function WeatherDetails(props: WeatherDetailProps) {
     value = {sunset}
   />
   </>
-  )
+  );
 }
 
 export interface SingleWeatherDetailProps {

@@ -9,6 +9,7 @@ import Container from "./components/container";
 import { convertKelvinToCelsius } from "./utils/convertKelvinToCelsius";
 import WeatherIcon from "./components/WeatherIcon";
 import { getDayOrNightIcon } from "./utils/getDayOrNightIcon";
+import WeatherDetails from "./components/WeatherDetails";
 
 //const WEATHER_API_KEY = process.env.NEXT_PUBLIC_WEATHER_KEY;
 //console.log("WEATHER_API_KEY", WEATHER_API_KEY);
@@ -96,7 +97,7 @@ export default function Home() {
 
     if (isLoading) return <div className="flex items-center min-h-screen justify-center">
       <p className="animate-bounce">Loading...</p>
-    </div>;
+    </div>
   
 
   return (
@@ -168,7 +169,7 @@ export default function Home() {
                   />
             </Container>
             <Container className="bg-yellow-300/80 px-6 gap-4 justify-between overflow-x-auto">
-
+                <WeatherDetails />
             </Container>
           </div>
         </section>

@@ -350,10 +350,26 @@ Now we are going to create a get day or night icon function, before 6am and afte
 1:11:10 Creating the 7-day weather forecast component========================================================================================================================================================================
 1:13:29 Styling the weather app components===================================================================================================================================================================================
 <Container className="w-fit justify-center flex-col px-4 items-center"> #w-fit = will resize width, flex-col will create columns, padding x axis=4, items will be centered
+created WeatherDetails.tsx, gave it default properties(props) if none are pulled from the API, setup an export interface for our values, and imported custom icons using react-icons
+export interface WeatherDetailProps {
+    visibility: string;
+    humidity: string;
+    windSpeed: string;
+    airPressure: string;
+    sunrise: string;
+    sunset: string;
+}#API values for our below function, which we reuse for building our app visually with different icons for each
+function SingleWeatherDetail(props: SingleWeatherDetailProps) {
+  return (
+    <div className="flex flex-col justify-between gap-2 items-center text-xs font-semibold text-black/80">
+      <p className="whitespace-nowrap">{props.information}</p>
+      <div className="text-3xl">{props.icon}</div>
+      <p>{props.value}</p>
+    </div>
+  );
+} #reusable function to create react components to display each value with individual react-icons
 
-
-
-
+1:25:07 Using default values for visibility, air pressure, and resolving import errors========================================================================================================================================
 
 
 

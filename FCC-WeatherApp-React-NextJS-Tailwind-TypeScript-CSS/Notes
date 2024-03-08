@@ -377,8 +377,17 @@ forgot to add API fetch call to our new component, finishing that now, looks goo
 1:25:07 Using default values for visibility, air pressure, and resolving import errors========================================================================================================================================
 1:27:31 Converting sunrise and sunset data into time format and converting wind speed units.==================================================================================================================================
 1:32:12 Creating props for weather forecast detail component==================================================================================================================================================================
-
-
+export interface ForecastWeatherDetailProps extends WeatherDetailProps {
+    weatherIcon: string;
+    date: string;
+    day: string;
+    temp: number;
+    feels_like: number;
+    temp_min: number;
+    temp_max: number;
+    description: string;
+  }
+#adds all new properties to our new function, and extends(includes) the ones we built previously(visibility, humidity, etc), imported our old code for use
 
 
 

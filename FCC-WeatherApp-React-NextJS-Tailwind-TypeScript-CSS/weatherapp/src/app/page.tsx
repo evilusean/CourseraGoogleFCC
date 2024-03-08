@@ -10,7 +10,7 @@ import { convertKelvinToCelsius } from "./utils/convertKelvinToCelsius";
 import WeatherIcon from "./components/WeatherIcon";
 import { getDayOrNightIcon } from "./utils/getDayOrNightIcon";
 import WeatherDetails from "./components/WeatherDetails";
-import { meterToKilometer } from "./utils/metersToKilometers";
+import { metersToKilometers } from "./utils/metersToKilometers";
 import { convertWindSpeed } from "./utils/convertWindSpeed";
 import ForecastWeatherDetail from "./components/ForecastWeatherDetail";
 
@@ -86,7 +86,7 @@ export default function Home() {
       async () =>
     {
       const {data} = await axios.get(
-        //`https://api.openweathermap.org/data/2.5/forecast?q=Tokyo&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}&cnt=56`);
+        `https://api.openweathermap.org/data/2.5/forecast?q=Tokyo&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}&cnt=56`);
       return data;
     });
       //OLD METHOD: if you are using axios, you don't need to use fetch, or convert it into a json, with axios it will do it automatically
@@ -189,7 +189,7 @@ export default function Home() {
             </Container>
             <Container className="bg-yellow-300/80 px-6 gap-4 justify-between overflow-x-auto">
                 <WeatherDetails 
-                  visibility={meterToKilometer(firstData?.visibility ?? 10000)}
+                  visibility={metersToKilometers(firstData?.visibility ?? 10000)}
                   airPressure={`${firstData?.main.pressure} hPa`}
                   humidity={`${firstData?.main.humidity}%`}
                   sunrise={format(
@@ -208,7 +208,30 @@ export default function Home() {
         {/* 7 DAY FORECAST */}
         <section className="flex w-full flex-col gap-4">
           <p className="text-2xl">Forecast(7 Day)</p>
-          <ForecastWeatherDetail />
+          {firstDataForEachDate.map((d, i) => (
+            <ForecastWeatherDetail key= {i} 
+            description={d?.weather[0].description ?? ""}
+                  weatherIcon={d?.weather[0].icon ?? "01d"}
+                  date={d ? format(parseISO(d.dt_txt), "dd.MM") : ""}
+                  day={d ? format(parseISO(d.dt_txt), "dd.MM") : "EEEE"}
+                  feels_like={d?.main.feels_like ?? 0}
+                  temp={d?.main.temp ?? 0}
+                  temp_max={d?.main.temp_max ?? 0}
+                  temp_min={d?.main.temp_min ?? 0}
+                  airPressure={`${d?.main.pressure} hPa `}
+                  humidity={`${d?.main.humidity}% `}
+                  sunrise={format(
+                    fromUnixTime(data?.city.sunrise ?? 1702517657),
+                    "H:mm"
+                  )}
+                  sunset={format(
+                    fromUnixTime(data?.city.sunset ?? 1702517657),
+                    "H:mm"
+                  )}
+                  visibility={`${metersToKilometers(d?.visibility ?? 10000)} `}
+                  windSpeed={`${convertWindSpeed(d?.wind.speed ?? 1.64)} `}
+            />
+          ))}
         </section>
       </main>
     </div>

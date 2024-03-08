@@ -16,7 +16,6 @@ export interface WeatherDetailProps {
 }
 
 export default function WeatherDetails(props: WeatherDetailProps) {
-    // DEFAULT VARIABLES:
     const {
         visibility = "25km",
         humidity = "61%",
@@ -31,22 +30,22 @@ export default function WeatherDetails(props: WeatherDetailProps) {
   <SingleWeatherDetail 
     icon={<FaRegEye />}
     information = "Visibility"
-    value = {props.visibility}
+    value = {visibility}
   />
   <SingleWeatherDetail 
     icon={<IoWaterOutline />}
     information = "Humidity"
-    value = {props.humidity}
+    value = {humidity}
   />
   <SingleWeatherDetail 
     icon={<MdAir />}
     information = "Wind Speed"
-    value = {props.windSpeed}
+    value = {windSpeed}
   />
   <SingleWeatherDetail 
     icon={<ImMeter />}
     information = "Air Pressure"
-    value = {props.airPressure}
+    value = {airPressure}
   />
     <SingleWeatherDetail 
     icon={<LuSunrise />}

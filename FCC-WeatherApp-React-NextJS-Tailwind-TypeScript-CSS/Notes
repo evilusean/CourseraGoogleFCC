@@ -372,10 +372,11 @@ function SingleWeatherDetail(props: SingleWeatherDetailProps) {
 After trying to test I received an error, titles and icons are there, dynamic props are missing..:
 Type '{}' is missing the following properties from type 'WeatherDetailProps': visibility, humidity, windSpeed, airPressure, and 2 more.
 fixed? changed {props.visibility} to {visibility} still getting error, but now I'm getting defaults I put in, instead of the dynamic ones from the API call/fetch, at least it looks pretty even if it is broken
+forgot to add API fetch call to our new component, finishing that now, looks good, nothing is broke
 
 1:25:07 Using default values for visibility, air pressure, and resolving import errors========================================================================================================================================
-
-
+1:27:31 Converting sunrise and sunset data into time format and converting wind speed units.==================================================================================================================================
+1:32:12 Creating props for weather forecast detail component==================================================================================================================================================================
 
 
 

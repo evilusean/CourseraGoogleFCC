@@ -437,3 +437,38 @@ I was getting an error, using the 'Set' keyword you need to add '"target": "es20
 #(d = data, i = index), gets all the data for 7 day forecast and incorporates the logic from our above code, 
 
 1:41:43 Implement search and display weather report functionality.==============================================================================================================================================================
+Time to add the search functionality inside of our <Navbar /> component, first we need to create a useState and onChange that will autocomplete our search feature,
+const  [city, setCity] = useState("");
+we will also need to create an error state, in case people look up wakanda or, "Prosperous and Free Canada" it will send an error back that state does not exist
+const [error, setError] = useState("");
+now we need to create a useState that will store our suggestions, and another state to store our suggestions or not
+    const [suggestions, setSiggestions] = useState<string[]>([]);
+    const [showSiggestions, setShowSuggestions] = useState(false);
+next we created a try try catch block so we can catch errors, and store suggestions,
+    async function handInputChange(value: string) {
+        setCity(value);
+        if (value.length >= 3) {
+            try {
+                const response = await axios.get(
+                    `https://api.openweathermap.org/data/2.5/forecast?q=${value}&appid=${API_KEY}&cnt=56`
+                );
+                const suggestions = response.data.list.map((item:any)=>item.name); //will store all suggestions in a variable
+                setSuggestions(suggestions);
+                setError('');
+                setShowSuggestions(true);
+            } catch (error) {
+                setSuggestions([])
+                setShowSuggestions(false);
+            }   
+        }
+        else {
+            setSuggestions([])
+            setShowSuggestions(false);
+        }
+    }
+next we need to still our <ul>#unordered list, and <li>#list for our search feature
+
+
+
+
+

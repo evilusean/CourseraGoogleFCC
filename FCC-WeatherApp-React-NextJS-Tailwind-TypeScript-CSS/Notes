@@ -411,4 +411,29 @@ const firstDataForEachDate = uniqueDates.map((date) => {
     });
   });#filters the data, by date, then mapping unique dates to the ...new Set, it will retrieve the first entry after 6AM
 I was getting an error, using the 'Set' keyword you need to add '"target": "es2015",' to tsconfig.json to fix
+{firstDataForEachDate.map((d, i) => (
+            <ForecastWeatherDetail key= {i} 
+            description={d?.weather[0].description ?? ""}
+                  weatherIcon={d?.weather[0].icon ?? "01d"}
+                  date={d ? format(parseISO(d.dt_txt), "dd.MM") : ""}
+                  day={d ? format(parseISO(d.dt_txt), "dd.MM") : "EEEE"}
+                  feels_like={d?.main.feels_like ?? 0}
+                  temp={d?.main.temp ?? 0}
+                  temp_max={d?.main.temp_max ?? 0}
+                  temp_min={d?.main.temp_min ?? 0}
+                  airPressure={`${d?.main.pressure} hPa `}
+                  humidity={`${d?.main.humidity}% `}
+                  sunrise={format(
+                    fromUnixTime(data?.city.sunrise ?? 1702517657),
+                    "H:mm"
+                  )}
+                  sunset={format(
+                    fromUnixTime(data?.city.sunset ?? 1702517657),
+                    "H:mm"
+                  )}
+                  visibility={`${metersToKilometers(d?.visibility ?? 10000)} `}
+                  windSpeed={`${convertWindSpeed(d?.wind.speed ?? 1.64)} `}
+            />
+#(d = data, i = index), gets all the data for 7 day forecast and incorporates the logic from our above code, 
 
+1:41:43 Implement search and display weather report functionality.==============================================================================================================================================================

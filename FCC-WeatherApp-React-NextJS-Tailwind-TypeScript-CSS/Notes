@@ -466,8 +466,28 @@ next we created a try try catch block so we can catch errors, and store suggesti
             setShowSuggestions(false);
         }
     }
-next we need to still our <ul>#unordered list, and <li>#list for our search feature
-
+next we need to still our <ul>#unordered list, and <li>#list for our search feature, we added props and error message conditionals 
+function SuggestionBox({
+  showSuggestions,
+  suggestions,
+  handleSuggestionClick,
+  error
+}: {
+    showSuggestions: boolean;
+    suggestions: string[];
+    handleSuggestionClick: (item: string) => void;
+    error: string;
+}){
+    return (
+    <>
+        { ((showSuggestions && suggestions.length >1) || error) && (
+            <ul className="mb-4 bg-white gap-1 py-2 px-2 flex flex-col absolute border top-[44px] left-0 border-gray-300 rounded-md min-w-[200px]">
+                <li className="cursor-pointer p-1 rounded hover:bg-gray-200"></li>
+            </ul>
+        )}
+    </>
+    );
+}
 
 
 

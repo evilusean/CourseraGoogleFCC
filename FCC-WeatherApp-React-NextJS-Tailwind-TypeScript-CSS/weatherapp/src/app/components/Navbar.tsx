@@ -17,7 +17,7 @@ export default function Navbar({}: Props) {
     const [error, setError] = useState("");
 
     const [suggestions, setSuggestions] = useState<string[]>([]);
-    const [showSiggestions, setShowSuggestions] = useState(false);
+    const [showSuggestions, setShowSuggestions] = useState(false);
 
     async function handInputChange(value: string) {
         setCity(value);
@@ -52,12 +52,13 @@ export default function Navbar({}: Props) {
                     <MdMyLocation className='text-3x1 text-gray-400 hover:opacity-80 cursor-pointer' />
                     <MdOutlineLocationOn className='text-3x1 text-gray-400 hover:opacity-80 cursor-pointer' />
                     <p className="text-slate-900/80 text-sm">  Failed State canada  </p>
-                    <div>
+                    <div className="relative">
                         <SearchBox 
                             value={city}
                             //onSubmit={}
                             onChange = {(e)=>handInputChange(e.target.value)}
                         />
+                        <SuggestionBox />
                     </div>
                 </section>
             </div>
@@ -65,6 +66,24 @@ export default function Navbar({}: Props) {
     )
 }
 
-function SuggestionBox(){
-    return <ul className="mb-4"><li></li></ul>
+function SuggestionBox({
+  showSuggestions,
+  suggestions,
+  handleSuggestionClick,
+  error
+}: {
+    showSuggestions: boolean;
+    suggestions: string[];
+    handleSuggestionClick: (item: string) => void;
+    error: string;
+}){
+    return (
+    <>
+        { ((showSuggestions && suggestions.length >1) || error) && (
+            <ul className="mb-4 bg-white gap-1 py-2 px-2 flex flex-col absolute border top-[44px] left-0 border-gray-300 rounded-md min-w-[200px]">
+                <li className="cursor-pointer p-1 rounded hover:bg-gray-200"></li>
+            </ul>
+        )}
+    </>
+    );
 }

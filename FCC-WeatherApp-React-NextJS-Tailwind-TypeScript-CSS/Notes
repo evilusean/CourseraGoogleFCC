@@ -479,16 +479,39 @@ function SuggestionBox({
     error: string;
 }){
     return (
-    <>
-        { ((showSuggestions && suggestions.length >1) || error) && (
-            <ul className="mb-4 bg-white gap-1 py-2 px-2 flex flex-col absolute border top-[44px] left-0 border-gray-300 rounded-md min-w-[200px]">
-                <li className="cursor-pointer p-1 rounded hover:bg-gray-200"></li>
+        <>
+          {((showSuggestions && suggestions.length > 1) || error) && (
+            <ul className="mb-4 bg-white absolute border top-[44px] left-0 border-gray-300 rounded-md min-w-[200px] flex flex-col gap-1 py-2 px-2">
+              {error && suggestions.length < 1 && (
+                <li className="text-red-500 p-1 "> {error}</li>
+              )}
+              {suggestions.map((item, i) => (
+                <li
+                  key={i}
+                  onClick={() => handleSuggestionClick(item)}
+                  className="cursor-pointer p-1 rounded hover:bg-gray-200"
+                >
+                  {item}
+                </li>
+              ))}
             </ul>
-        )}
-    </>
-    );
-}
+          )}
+        </>
+      );
+    }
 
+1:53:55 Creating click and submit functions for the Weather App================================================================================================================================================================
+function handleSuggestionClick(value: string) {
+        setCity(value);
+        setShowSuggestions(false);
+    }#sets values of city and suggestions on search click
+e.preventDefault(); #stops a page from refreshing on submit
+
+2:00:49 Implementing global state management for user's current city in the Weather App========================================================================================================================================
+for us to get our city we need to use a global state, that will then search the API for the city data
+Jotai(state manager for react-global state management solusean):
+https://jotai.org/
+npm i jotai #installs jotai  
 
 
 

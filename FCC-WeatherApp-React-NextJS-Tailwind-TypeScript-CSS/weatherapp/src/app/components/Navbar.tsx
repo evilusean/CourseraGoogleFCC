@@ -31,7 +31,7 @@ export default function Navbar({location}: Props) {
                 const response = await axios.get(
                     `https://api.openweathermap.org/data/2.5/forecast?q=${value}&appid=${API_KEY}&cnt=56`
                 );
-                const suggestions = response.data.list.map((item:any)=>item.name); //will store all suggestions in a variable
+                const suggestions = response.data.list.map((item:any)=>item.name);
                 setSuggestions(suggestions);
                 setError('');
                 setShowSuggestions(true);
@@ -53,15 +53,21 @@ export default function Navbar({location}: Props) {
     }
 
     function handleSubmitSearch(e: React.FormEvent<HTMLFormElement>) {
+        setLoadingCity(true);
         e.preventDefault();
         if (suggestions.length == 0) {
             setError("Location not found");
+            setLoadingCity(false);
         } else {
             setError("");
+            setTimeout(() => {
+            setLoadingCity(false);
+            setPlace(city);
             setShowSuggestions(false);
+            }, 500);
           }
-        }
-      }
+    }
+      
     return (
         <nav className='shadow-sm sticky top-0 left-0 z-50 bg-white'>
             <div className="h-[80px] w-full flex justify-between items-center max-w-7x1 px-3 mx-auto">
@@ -76,8 +82,8 @@ export default function Navbar({location}: Props) {
                     <div className="relative">
                         <SearchBox 
                             value={city}
-                            onSubmit={(e)=>}
-                            onChange = {(e)=>handleInputChange(e.target.value)}
+                            onSubmit={handleSubmitSearch}
+                            onChange = {(e )=> handleInputChange(e.target.value)}
                         />
                         <SuggestionBox 
                             {...{
@@ -85,7 +91,7 @@ export default function Navbar({location}: Props) {
                                 suggestions,
                                 handleSuggestionClick,
                                 error
-                            }} 
+                            }}
                         />
                     </div>
                 </section>

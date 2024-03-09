@@ -7,14 +7,14 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import SearchBox from './SearchBox';
 import axios from 'axios';
 import { useAtom } from 'jotai';
-import { placeAtom } from '../atom';
+import { loadingCityAtom, placeAtom } from '../atom';
 
 
-type Props = {}
+type Props = { location?: string };
 
 const API_KEY = process.env.NEXT_PUBLIC_WEATHER_KEY;
 
-export default function Navbar({}: Props) {
+export default function Navbar({location}: Props) {
     const [city, setCity] = useState("");
     const [error, setError] = useState("");
 
@@ -22,6 +22,7 @@ export default function Navbar({}: Props) {
     const [showSuggestions, setShowSuggestions] = useState(false);
 
     const [place, setPlace] = useAtom(placeAtom)
+    const [_, setLoadingCity] = useAtom(loadingCityAtom)
 
     async function handleInputChange(value: string) {
         setCity(value);
@@ -71,7 +72,7 @@ export default function Navbar({}: Props) {
                 <section className="flex gap-2 items-center">
                     <MdMyLocation className='text-3x1 text-gray-400 hover:opacity-80 cursor-pointer' />
                     <MdOutlineLocationOn className='text-3x1 text-gray-400 hover:opacity-80 cursor-pointer' />
-                    <p className="text-slate-900/80 text-sm">  Failed State canada  </p>
+                    <p className="text-slate-900/80 text-sm">  {location}  </p>
                     <div className="relative">
                         <SearchBox 
                             value={city}

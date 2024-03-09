@@ -6,6 +6,8 @@ import { MdMyLocation } from "react-icons/md";
 import { MdOutlineLocationOn } from "react-icons/md";
 import SearchBox from './SearchBox';
 import axios from 'axios';
+import { useAtom } from 'jotai';
+import { placeAtom } from '../atom';
 
 
 type Props = {}
@@ -19,6 +21,8 @@ export default function Navbar({}: Props) {
     const [suggestions, setSuggestions] = useState<string[]>([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
 
+    const [place, setPlace] = useAtom(placeAtom)
+
     async function handleInputChange(value: string) {
         setCity(value);
         if (value.length >= 3) {
@@ -31,12 +35,13 @@ export default function Navbar({}: Props) {
                 setError('');
                 setShowSuggestions(true);
             } catch (error) {
-                setSuggestions([])
+                setSuggestions([]);
                 setShowSuggestions(false);
             }   
         }
         else {
-            setSuggestions([])
+            setSuggestions([]);
+            setPlace(city);
             setShowSuggestions(false);
         }
     }

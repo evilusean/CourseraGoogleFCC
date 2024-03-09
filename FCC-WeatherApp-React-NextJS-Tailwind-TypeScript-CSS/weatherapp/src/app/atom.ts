@@ -1,5 +1,5 @@
 import { atom } from "jotai";
 
-export const placeAtom = atom("Failed State of canada");
+export const placeAtom = atom("Tokyo");
 
 export const loadingCityAtom = atom(false);

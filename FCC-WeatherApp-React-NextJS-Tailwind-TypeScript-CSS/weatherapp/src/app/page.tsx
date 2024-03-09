@@ -245,9 +245,10 @@ return (
                 visibility={`${metersToKilometers(d?.visibility ?? 10000)} `}
                 windSpeed={`${convertWindSpeed(d?.wind.speed ?? 1.64)} `}
           />
-        ))}
-      </section>
-      </>
+          ))}
+          </section>
+        </>
+      )}
     </main>
   </div>
 );

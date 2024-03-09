@@ -19,7 +19,7 @@ export default function Navbar({}: Props) {
     const [suggestions, setSuggestions] = useState<string[]>([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
 
-    async function handInputChange(value: string) {
+    async function handleInputChange(value: string) {
         setCity(value);
         if (value.length >= 3) {
             try {
@@ -71,7 +71,7 @@ export default function Navbar({}: Props) {
                         <SearchBox 
                             value={city}
                             onSubmit={(e)=>}
-                            onChange = {(e)=>handInputChange(e.target.value)}
+                            onChange = {(e)=>handleInputChange(e.target.value)}
                         />
                         <SuggestionBox 
                             {...{

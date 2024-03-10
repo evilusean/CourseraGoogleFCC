@@ -121,7 +121,7 @@ export default function Navbar({location}: Props) {
                 </section>
             </div>
         </nav>
-        <section>
+        {/* <section>
         <div className="relative">
             <SearchBox 
                 value={city}
@@ -137,7 +137,7 @@ export default function Navbar({location}: Props) {
                 }}
                 />
             </div>
-        </section>
+        </section> */}
         </>
     )
 }

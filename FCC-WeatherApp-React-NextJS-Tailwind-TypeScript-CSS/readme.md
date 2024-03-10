@@ -15,3 +15,5 @@ type 'npm run dev' from root</br>
 
 Start: 04March2024</br>
 End: 09March2024</br>
+
+![FCC-WeatherApp](https://github.com/evilusean/CourseraGoogleFCC/blob/main/FCC-WeatherApp-React-NextJS-Tailwind-TypeScript-CSS/Screenshot%20from%202024-03-10%2004-10-28.png?raw=true)

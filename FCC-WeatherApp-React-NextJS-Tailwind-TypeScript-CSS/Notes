@@ -518,3 +518,4 @@ import { atom } from "jotai";
 export const placeAtom = atom("Failed State of canada");
 const [place, setPlace] = useAtom(placeAtom) #add this to navbar component
 
+2:10:20 Implementing a conditional loading skeleton component===================================================================================================================================================================

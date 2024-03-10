@@ -4,5 +4,14 @@ https://www.freecodecamp.org/news/beginner-web-dev-tutorial-build-a-weather-app-
 
 Learn to build a Weather App using Next.js, Tailwind CSS, and TypeScript in this hands-on tutorial! Create a responsive, dynamic app from scratch with React components.
 
+Features: </br>
+API fetch, Interface/Index, Search, Geolocation, temperature, humidity, cloud visibility, time and city, 7 day forecast, 24 hour detailed weather report, and more </br>
+Showcases:</br>
+NextJS, React Components, Typescript, Tailwind CSS, API's, axios, jotai, react-icons, react-query, date-fns, Index/Interfaces</br>
+
+To use: install node/nextJS, download repository</br>
+create an account on https://openweathermap.org/api/ ,take your API and create a .env.local (in root directory) with a variable named(replace API key with your API_key): NEXT_PUBLIC_WEATHER_KEY=API_KEY </br>
+type 'npm run dev' from root</br>
+
 Start: 04March2024</br>
-End: </br>
+End: 09March2024</br>

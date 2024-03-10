@@ -89,6 +89,7 @@ export default function Navbar({location}: Props) {
     }
 
     return (
+        <>
         <nav className='shadow-sm sticky top-0 left-0 z-50 bg-white'>
             <div className="h-[80px] w-full flex justify-between items-center max-w-7x1 px-3 mx-auto">
                 <div className="flex items-center justify-center gap-2">
@@ -102,7 +103,7 @@ export default function Navbar({location}: Props) {
                     className='text-3x1 text-gray-400 hover:opacity-80 cursor-pointer' />
                     <MdOutlineLocationOn className='text-3x1 text-gray-400 hover:opacity-80 cursor-pointer' />
                     <p className="text-slate-900/80 text-sm">  {location}  </p>
-                    <div className="relative">
+                    <div className="relative hidden md:flex">
                         <SearchBox 
                             value={city}
                             onSubmit={handleSubmitSearch}
@@ -120,6 +121,24 @@ export default function Navbar({location}: Props) {
                 </section>
             </div>
         </nav>
+        <section>
+        <div className="relative">
+            <SearchBox 
+                value={city}
+                onSubmit={handleSubmitSearch}
+                onChange = {(e )=> handleInputChange(e.target.value)}
+            />
+            <SuggestionBox 
+                {...{
+                    showSuggestions,
+                    suggestions,
+                    handleSuggestionClick,
+                    error
+                }}
+                />
+            </div>
+        </section>
+        </>
     )
 }
 

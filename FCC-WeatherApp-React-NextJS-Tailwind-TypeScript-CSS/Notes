@@ -518,4 +518,24 @@ import { atom } from "jotai";
 export const placeAtom = atom("Failed State of canada");
 const [place, setPlace] = useAtom(placeAtom) #add this to navbar component
 
+
 2:10:20 Implementing a conditional loading skeleton component===================================================================================================================================================================
+function handleCurrentLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(async(position)=> {
+                const { latitude, longitude} = position.coords
+                try {
+                    setLoadingCity(true);
+                    const response = await axios.get(
+                        `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`
+                      );
+                      setTimeout(() => {
+                        setLoadingCity(false);
+                        setPlace(response.data.name);
+                      }, 500);
+                    } catch (error) {
+                      setLoadingCity(false);
+                }
+            });
+        }
+    }

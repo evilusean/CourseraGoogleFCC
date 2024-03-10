@@ -1,0 +1,2 @@
+npx @ create-next-app@13.4.13 #creates app in selected folder(run in terminal) uses version 13.4.13, so we don't have any compatibility problems and spend 4 hours debugging every 15 mins(cough... laravel)
+

@@ -26,8 +26,7 @@ export default TicketPage;
 
 if you don't want routing enabled, simply wrap your folder in (parenthesis), such as for our (components) folder we created, it won't set up routing for that
 created Nav.jsx in our (components) folder, 'rafce' will create boilerplate code for it
-
-13:00====================================================================================================================================================================================================================
+==========================================================================ERROR==========================================================================================================================================
 How to fix eslint red error messages:
 https://stackoverflow.com/questions/68163385/parsing-error-cannot-find-module-next-babel
 #create in root: '.babel.rc' file
@@ -40,11 +39,65 @@ https://stackoverflow.com/questions/68163385/parsing-error-cannot-find-module-ne
   "extends": ["next/babel", "next/core-web-vitals"]
 }
 
+13:00====================================================================================================================================================================================================================
+layout.js #import { Inter } from 'next/font/google' allows you to use google fonts directly, contains some meta data title/descriptsean
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
+  )
+}
+#default layout.js, it displays each 'page' as children, if you want <Nav /> to show up in every page, you can add it here, like below, don't foget to import, now it will show up on every page of project
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        <Nav />
+        {children}
+      </body>
+    </html>
+  );
+}
+15:00====================================================================================================================================================================================================================
+we are going to install some libraries for our project, 
+npm install @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome #installs fortawesome/fontawesome icons for our project
+'tailwind.config.js' # allows us to set up our default colors, use standardized color names we can create, and we can change them later in our project if we want
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      colors: {
+        nav: "#18222f",
+        page: "#2b3441",
+        card: "#47566a",
+        "card-hover": "#4f5e74",
+        "default-text": "#f1f3f5",
+        "blue-accent": "#0084d4",
+        "blue-accent-hover": "#009fff",
+      },
+    },
+  },
+  plugins: [],
+};
 
+18:00===================================================================================================================================================================================================================
+inside our 'layout.js' file we need to fix a few things, when you are loading in icons sometimes they load in very large, and redefine back down, to fix that we can, import and sub in CSS (add below):
+import config from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
 
-
-
-
+21:00===================================================================================================================================================================================================================
 
 
 

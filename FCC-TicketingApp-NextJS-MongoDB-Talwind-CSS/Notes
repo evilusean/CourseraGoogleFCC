@@ -93,14 +93,15 @@ module.exports = {
 
 18:00===================================================================================================================================================================================================================
 inside our 'layout.js' file we need to fix a few things, when you are loading in icons sometimes they load in very large, and redefine back down, to fix that we can, import and sub in CSS (add below):
-import config from "@fortawesome/fontawesome-svg-core";
+import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 
 21:00===================================================================================================================================================================================================================
+<div className="flex-grow overflow-y-auto bg-page text-default-text"> #flex-grow = expands the main page to fill up the whole page, bg-page/text-default-text  will use the preset we created in our tailwind.config.js above
+<nav className="flex justify-between bg-nav p-4"> #justify-between = will split content horizontally, instead of flex-col which stacks content
 
-
-
+31:00===================================================================================================================================================================================================================
 
 
 

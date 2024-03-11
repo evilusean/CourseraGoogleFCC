@@ -28,7 +28,17 @@ if you don't want routing enabled, simply wrap your folder in (parenthesis), suc
 created Nav.jsx in our (components) folder, 'rafce' will create boilerplate code for it
 
 13:00====================================================================================================================================================================================================================
-
+How to fix eslint red error messages:
+https://stackoverflow.com/questions/68163385/parsing-error-cannot-find-module-next-babel
+#create in root: '.babel.rc' file
+{
+  "presets": ["next/babel"],
+  "plugins": []
+}
+#add to 'eslint.rc.json' file
+{
+  "extends": ["next/babel", "next/core-web-vitals"]
+}
 
 
 

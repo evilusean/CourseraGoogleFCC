@@ -1,2 +1,93 @@
 npx @ create-next-app@13.4.13 #creates app in selected folder(run in terminal) uses version 13.4.13, so we don't have any compatibility problems and spend 4 hours debugging every 15 mins(cough... laravel)
 added some vscode extensions: ES7 React/Redux/React Native snippets by dsznajder + ESLint + Prettier(formats code on save) + tailwind CSS intelliSense
+ctrl+shift+P to open settings menu, go to 'Preferences Open Settings(UI)' and search 'formatter', change Default Formatter to prettier, and check format on save
+
+npm run dev in terminal to start project
+start off in global.css, delete all except @tailwind imports
+go to page.js, remove everything, now trying out the snippet libary
+'rafce' #type rafce to boilerplate a default page
+ctrl+shift+L = highlight some text, press ctrl+shift+L and it will highlight all instances of that text, can change all at once
+rename all instances of 'page' to 'dashboard'
+create new folder in src / app called 'TicketPage', inside is 'page.jsx', also renamed our src / app 'page.js' to 'page.jsx'
+Routing in react can work through how you laid out your folder structure
+const TicketPage = () => {
+  return <div>TicketPage</div>;
+};
+
+export default TicketPage;
+#will automatically route http://localhost:3000/TicketPage to your 'page.jsx' inside of your 'TicketPage' folder, very cool
+created a new folder inside 'TicketPage' folder called [id], moved our 'page.jsx' inside that folder, and added params 
+const TicketPage = ({ params }) => {
+  return <div>TicketPage {params.id}</div>;
+};
+
+export default TicketPage;
+#using our new [id] folder, will allow us to type in http://localhost:3000/TicketPage/12345 and it will return a page with 'TicketPage 12345' based on whatever id we input, very nice
+
+if you don't want routing enabled, simply wrap your folder in (parenthesis), such as for our (components) folder we created, it won't set up routing for that
+created Nav.jsx in our (components) folder, 'rafce' will create boilerplate code for it
+
+13:00====================================================================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

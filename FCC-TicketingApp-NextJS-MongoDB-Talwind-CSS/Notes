@@ -104,22 +104,58 @@ config.autoAddCss = false;
 31:00===================================================================================================================================================================================================================
 Created new components "DeleteBlock.jsx" "TicketCard.jsx" "PriorityDisplay.jsx" "ProgressDisplay.jsx" "StatusDisplay.jsx"
 
+41:00===================================================================================================================================================================================================================
+<div className="ml-auto"> #will automatically give it the correct margin-left to slide it over to the right
+<div className="flex flex-col bg-card hover:bg-card-hover rounded-md shadow-lg p-3 m-2"> #will use our preset tailwind.config.js, hover:bg-card-hover = will change color on hover
+<hr className="h-px border-0 bg-page mb-2" /> #bg-page = will make background color the same color as page, mb-2 = margin bottom 2
+<p className="whitespace-pre-wrap"> #Use whitespace-pre-wrap to preserve newlines and spaces within an element. Text will be wrapped normally.
+Our <h4> and <p> tag look exactly the same, we can fix this by going back into our 'globals.css'(we previously deleted everything in here at start)
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-bold;
+  }
+  h1 {
+    @apply text-4xl;
+  } #fixed all our css one's with ',' apply to all and h1 {} is targetted to <h1>
+<div className="flex-grow"></div> # flex-grow = will ensure that all cards are the same size regardless of how much text inside
+to individually edit each component styling, attach a <div className=""> with your tailwind CSS stylings
+<div className="p-5"> #padding-5
+<div className="lg:grid grid-cols-2 xl:grid-cols-4"> #responsive design built in to tailwind lg:grid = if large screen grid, grid-cols-2 = create 2 grid columns, xl:grid-cols-4 = if xl screen 4 columns
+  # if a small screen, take up the entire screen with tickets, no grid
 
+51:00===================================================================================================================================================================================================================
+Basic responsive layout completed, now to set up the database, using mongo DB atlas, and mongoose- which allows you to have data integrity
+Mongo DB = in mongo, you don't define types like you do in a traditional database
+npm i mongodb mongoose #installs mongodb and mongoose from root directory 
+https://www.mongodb.com/atlas/database
+set up an account, created our first mongoDB, connected to IP, downloaded VSCode extension, created .env.local file, stored our PW and account name, 
+went to collections -> new DB named 'TicketDB.tickets', need to create our model of DB,
+MONGODB_URI = mongodb+srv://evilusean:<password>@cluster0.ep7lzo3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0 #mongodb connection code, username:<password>, replace <PW> with given one
+?retryWrites=true&w=majority&appName=Cluster0 #end part can be removed, and replaced with whatever you called your new database
+MONGODB_URI = mongodb+srv://evilusean:<PW>@cluster0.ep7lzo3.mongodb.net/TicketDB
+after that, we created a new folder in src / app called '(models)', created a new file called 'ticket.js'
+  import mongoose, { Schema } from "mongoose"; #import new db tools into ticket.js
+  mongoose.connect(process.env.MONGODB_URI) #connects to the variable we set up in '.env.local'
+  mongoose.Promise = global.Promise
+const ticketSchema = new Schema (
+    {
+        title: String,
+        description: String,
+        category: String,
+        Priority: Number,
+        status: String,
+        active: Boolean,
+    },
+    {
+        timestamps: true,
+    }
+); #sets up our data integrity, you can count on a ticket being created a certain way
+const Ticket = mongoose.models.Tickets || mongoose.model("Ticket", ticketSchema); #grabs our ticket if it is already created, ||OR creates it if it doesn't exist
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+61:00=====================================================================================================================================================================================================================
 
 
 

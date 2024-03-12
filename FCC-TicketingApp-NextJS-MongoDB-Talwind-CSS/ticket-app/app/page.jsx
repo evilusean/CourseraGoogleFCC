@@ -8,6 +8,7 @@ const Dashboard = () => {
         <TicketCard />
         <TicketCard />
         <TicketCard />
+        <TicketCard />
       </div>
     </div>
   );

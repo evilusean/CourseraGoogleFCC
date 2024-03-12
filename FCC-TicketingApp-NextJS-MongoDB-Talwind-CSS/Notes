@@ -127,15 +127,35 @@ to individually edit each component styling, attach a <div className=""> with yo
   # if a small screen, take up the entire screen with tickets, no grid
 
 51:00===================================================================================================================================================================================================================
+Basic responsive layout completed, now to set up the database, using mongo DB atlas, and mongoose- which allows you to have data integrity
+Mongo DB = in mongo, you don't define types like you do in a traditional database
+npm i mongodb mongoose #installs mongodb and mongoose from root directory 
+https://www.mongodb.com/atlas/database
+set up an account, created our first mongoDB, connected to IP, downloaded VSCode extension, created .env.local file, stored our PW and account name, 
+went to collections -> new DB named 'TicketDB.tickets', need to create our model of DB,
+MONGODB_URI = mongodb+srv://evilusean:<password>@cluster0.ep7lzo3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0 #mongodb connection code, username:<password>, replace <PW> with given one
+?retryWrites=true&w=majority&appName=Cluster0 #end part can be removed, and replaced with whatever you called your new database
+MONGODB_URI = mongodb+srv://evilusean:<PW>@cluster0.ep7lzo3.mongodb.net/TicketDB
+after that, we created a new folder in src / app called '(models)', created a new file called 'ticket.js'
+  import mongoose, { Schema } from "mongoose"; #import new db tools into ticket.js
+  mongoose.connect(process.env.MONGODB_URI) #connects to the variable we set up in '.env.local'
+  mongoose.Promise = global.Promise
+const ticketSchema = new Schema (
+    {
+        title: String,
+        description: String,
+        category: String,
+        Priority: Number,
+        status: String,
+        active: Boolean,
+    },
+    {
+        timestamps: true,
+    }
+); #sets up our data integrity, you can count on a ticket being created a certain way
+const Ticket = mongoose.models.Tickets || mongoose.model("Ticket", ticketSchema); #grabs our ticket if it is already created, ||OR creates it if it doesn't exist
 
-
-
-
-
-
-
-
-
+61:00=====================================================================================================================================================================================================================
 
 
 

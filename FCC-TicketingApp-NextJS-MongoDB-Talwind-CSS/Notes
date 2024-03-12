@@ -104,13 +104,29 @@ config.autoAddCss = false;
 31:00===================================================================================================================================================================================================================
 Created new components "DeleteBlock.jsx" "TicketCard.jsx" "PriorityDisplay.jsx" "ProgressDisplay.jsx" "StatusDisplay.jsx"
 
+41:00===================================================================================================================================================================================================================
+<div className="ml-auto"> #will automatically give it the correct margin-left to slide it over to the right
+<div className="flex flex-col bg-card hover:bg-card-hover rounded-md shadow-lg p-3 m-2"> #will use our preset tailwind.config.js, hover:bg-card-hover = will change color on hover
+<hr className="h-px border-0 bg-page mb-2" /> #bg-page = will make background color the same color as page, mb-2 = margin bottom 2
+<p className="whitespace-pre-wrap"> #Use whitespace-pre-wrap to preserve newlines and spaces within an element. Text will be wrapped normally.
+Our <h4> and <p> tag look exactly the same, we can fix this by going back into our 'globals.css'(we previously deleted everything in here at start)
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-bold;
+  }
+  h1 {
+    @apply text-4xl;
+  } #fixed all our css one's with ',' apply to all and h1 {} is targetted to <h1>
+<div className="flex-grow"></div> # flex-grow = will ensure that all cards are the same size regardless of how much text inside
+to individually edit each component styling, attach a <div className=""> with your tailwind CSS stylings
+<div className="p-5"> #padding-5
+<div className="lg:grid grid-cols-2 xl:grid-cols-4"> #responsive design built in to tailwind lg:grid = if large screen grid, grid-cols-2 = create 2 grid columns, xl:grid-cols-4 = if xl screen 4 columns
+  # if a small screen, take up the entire screen with tickets, no grid
 
-
-
-
-
-
-
+51:00===================================================================================================================================================================================================================
 
 
 

@@ -102,7 +102,7 @@ config.autoAddCss = false;
 <nav className="flex justify-between bg-nav p-4"> #justify-between = will split content horizontally, instead of flex-col which stacks content
 
 31:00===================================================================================================================================================================================================================
-
+Created new components "DeleteBlock.jsx" "TicketCard.jsx" "PriorityDisplay.jsx" "ProgressDisplay.jsx" "StatusDisplay.jsx"
 
 
 

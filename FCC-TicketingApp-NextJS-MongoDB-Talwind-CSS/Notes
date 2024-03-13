@@ -225,11 +225,24 @@ const TicketForm = () => {
         </select> #creates a dropdown menu with three options
 
 1:26:00=================================================================================================================================================================================================================
+  const handleSubmit = (e) => { #(e) =  going to get an event
+    e.preventDefault(); #prevents page refresh(default)
+    const res = await fetch("api/Tickets", { #constant response = await fetch
+        method: 'POST', #POST method
+        body: JSON.stringify({formData}), #pass the data to the post method through JSON stringify method
+        "content-type": "application/json" #json type
+    })
+    if (!res.ok){ #if response not ok, throw an error
+        throw new Error("Failed to create Ticket.")
+    }
+    router.refresh() #if it doesn't throw an error, the router will refresh the page,
+    router.push("/") #after the refresh, it will push back to the default page
+  };
 
+import { useRouter } from "next/navigation"; #router import
+const router = useRouter() #creates a router variable
 
-
-
-
+1:30:00===================================================================================================================================================================================================================
 
 
 

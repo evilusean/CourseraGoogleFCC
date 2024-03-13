@@ -156,9 +156,40 @@ const ticketSchema = new Schema (
 const Ticket = mongoose.models.Tickets || mongoose.model("Ticket", ticketSchema); #grabs our ticket if it is already created, ||OR creates it if it doesn't exist
 
 61:00=====================================================================================================================================================================================================================
+Unknown at rule @apply / Unknown at rule @tailwind # 11 error messages, yellow, doesn't break any code, didn't fix, can't find the settings.json file stack overflow told me to find
+https://byby.dev/at-rule-tailwind
 
+Now we are going to create our API, created new folder in src / app / 'api' - new filed called 'route.js' - filename is important for this, NextJS knows that it is an API call to reach out to DB
+we are going to create a form that allows people to add data, and attach it to the request, and pass it to the ticket
+import Ticket from "../(models)/Ticket"; #imports our model we just created for our DB
+import { NextResponse } from "next/server"; 
 
+export async function POST(req) {#exports our async function post request
+    try {
+        const body = await req.json() #awaits whatever was on request.json
+        const ticketData = body.formData #using that formData, we will create our ticketData
+        await Ticket.create(ticketData) #mongoose function that awaits for our ticketData to be create, our ticket will then be created
 
+        return NextResponse.json ({message: "Ticket Created!",},  {status: 201}); #sends a response, that ticket was created, sends a status code of 201, which means successfully created
+    } catch (error) {
+        return NextResponse.json {message: "Error", error},  {status: 500}; #will catch any errors and send a message back, with the error message, and a 500 status code - because it failed
+    }
+}#backend setup for our ticketData creation
+src / app / (components) / new file 'TicketForm.jsx' Now we will need to build a form that will allow us to create tickets :
+"in client"; # it uses server side JS by default, you need to explicitly state that you want to use client side JS at the top if you need to
+import { useRouter } from "next/navigation"; #make sure you don't auto import the first one, this one is in the "next/navigation", the first import is from "next/router"
+import React, { useState } from "react"; #state management on client side
+const TicketForm = () => {
+    const startingTicketData = {
+        title: "",
+        description: "",
+        priority: 1,
+        progress: 0,
+        status: "not started",
+        category: "Hardware Problem",
+    }#will be used to create the starting state with default inputs, we are going to update the state and keep track of that and pass that data eventually to API to create the ticket
+const [formData, setForm] = useState(startingTicketData); #create a variable, with API formData, and setForm data, useState(startingTicketData); = will give us our starting state from above
+<input id="title" name="title" type="text" onChange={handleChange} required={true} value={formData.title} /> #creates an input for text
 
 
 

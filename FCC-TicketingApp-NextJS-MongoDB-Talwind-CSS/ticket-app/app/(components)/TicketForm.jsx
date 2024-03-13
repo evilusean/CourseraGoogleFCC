@@ -113,6 +113,17 @@ const TicketForm = () => {
           />
           <label>5</label>
         </div>
+        <label>Progress</label>
+        <input
+          type="range"
+          id="progress"
+          name="progress"
+          value={formData.progress}
+          min="0"
+          max="100"
+          onChange={handleChange}
+        />
+        <label>Status</label>
       </form>
     </div>
   );

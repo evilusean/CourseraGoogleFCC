@@ -191,12 +191,40 @@ const TicketForm = () => {
 const [formData, setForm] = useState(startingTicketData); #create a variable, with API formData, and setForm data, useState(startingTicketData); = will give us our starting state from above
 <input id="title" name="title" type="text" onChange={handleChange} required={true} value={formData.title} /> #creates an input for text
 
+1:11:00===================================================================================================================================================================================================================
+const TicketForm = () => {
+  const handleChange = (e) => {
+    const value = e.target.value; #creates a variable value from the targeted .value on form
+    const name = e.target.name; #creates a variable name from the targeted .name on form
 
+    setFormData((prevState) => ({ #sets the form of previous state
+      ...prevState, #everything from the previous state
+      [name]: value, #only changes the [name] value, 
+    }));
+  };
 
+        <textarea
+          id="description"
+          name="description"
+          type="text"
+          onChange={handleChange}
+          required={true}
+          value={formData.description}
+          rows="5" #rows = 5, will create a large box for you to input text, instead of on a single line
+        /> #creates a textarea 5 rows deep for text input
 
+<label>Category</label>
+        <select
+          name="category"
+          value={formData.category}
+          onChange={handleChange}
+        >
+          <option value="Hardware Problem">Hardware Problem</option>
+          <option value="Software Problem">Software Problem</option>
+          <option value="Project">Project</option>
+        </select> #creates a dropdown menu with three options
 
-
-
+1:21:00=================================================================================================================================================================================================================
 
 
 

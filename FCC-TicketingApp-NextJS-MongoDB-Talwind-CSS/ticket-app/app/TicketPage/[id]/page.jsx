@@ -1,5 +1,3 @@
-"in client";
-
 import TicketForm from "../../(components)/TicketForm";
 
 const TicketPage = ({ params }) => {

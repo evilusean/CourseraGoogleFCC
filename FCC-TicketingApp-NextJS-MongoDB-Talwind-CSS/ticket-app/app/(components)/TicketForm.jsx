@@ -45,8 +45,8 @@ const TicketForm = () => {
           required={true}
           value={formData.title}
         />
-        <label>Dsecription</label>
-        <input
+        <label>Description</label>
+        <textarea
           id="description"
           name="description"
           type="text"
@@ -55,6 +55,16 @@ const TicketForm = () => {
           value={formData.description}
           rows="5"
         />
+        <label>Category</label>
+        <select
+          name="category"
+          value={formData.category}
+          onChange={handleChange}
+        >
+          <option value="Hardware Problem">Hardware Problem</option>
+          <option value="Software Problem">Software Problem</option>
+          <option value="Project">Project</option>
+        </select>
       </form>
     </div>
   );

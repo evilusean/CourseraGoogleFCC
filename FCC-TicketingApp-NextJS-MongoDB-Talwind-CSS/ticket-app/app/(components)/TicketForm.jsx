@@ -1,4 +1,4 @@
-"in client";
+"use client";
 
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
@@ -14,6 +14,10 @@ const TicketForm = () => {
     }));
   };
 
+  const handleSubmit = () => {
+    console.log("submitted");
+  };
+
   const startingTicketData = {
     title: "",
     description: "",
@@ -26,7 +30,11 @@ const TicketForm = () => {
   const [formData, setForm] = useState(startingTicketData);
   return (
     <div className="flex justify-center">
-      <form>
+      <form
+        className="flex flex-col gap-3 w-1/2"
+        method="post"
+        onSubmit="handleSubmit"
+      >
         <h3>Create Your Ticket</h3>
         <label>Title</label>
         <input
@@ -36,6 +44,16 @@ const TicketForm = () => {
           onChange={handleChange}
           required={true}
           value={formData.title}
+        />
+        <label>Dsecription</label>
+        <input
+          id="description"
+          name="description"
+          type="text"
+          onChange={handleChange}
+          required={true}
+          value={formData.description}
+          rows="5"
         />
       </form>
     </div>

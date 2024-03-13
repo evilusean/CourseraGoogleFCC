@@ -242,6 +242,11 @@ const TicketForm = () => {
 import { useRouter } from "next/navigation"; #router import
 const router = useRouter() #creates a router variable
 
+Error:
+File '/media/sean/SeanDrive/Code/CourseraGoogleFCC/FCC-TicketingApp-NextJS-MongoDB-Talwind-CSS/ticket-app/app/api/route.js' not found.
+  The file is in the program because:
+    Matched by default include pattern '**/*'
+
 1:30:00===================================================================================================================================================================================================================
 
 

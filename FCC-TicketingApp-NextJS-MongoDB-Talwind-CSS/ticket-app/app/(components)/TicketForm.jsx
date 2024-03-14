@@ -45,7 +45,7 @@ const TicketForm = () => {
       <form
         className="flex flex-col gap-3 w-1/2"
         method="post"
-        onSubmit="handleSubmit"
+        onSubmit={handleSubmit}
       >
         <h3>Create Your Ticket</h3>
         <label>Title</label>

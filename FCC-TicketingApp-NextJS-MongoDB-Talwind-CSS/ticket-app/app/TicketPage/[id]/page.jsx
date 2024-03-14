@@ -1,4 +1,4 @@
-import TicketForm from "../../(components)/TicketForm";
+import TicketForm from "@/app/(components)/TicketForm";
 
 const TicketPage = ({ params }) => {
   return <TicketForm />;

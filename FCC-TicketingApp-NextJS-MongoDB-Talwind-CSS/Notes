@@ -246,6 +246,14 @@ Error:
 File '/media/sean/SeanDrive/Code/CourseraGoogleFCC/FCC-TicketingApp-NextJS-MongoDB-Talwind-CSS/ticket-app/app/api/route.js' not found.
   The file is in the program because:
     Matched by default include pattern '**/*'
+Fixed: replaced everything within jsconfig.js with below, for some reason it was targetting our (models) folder
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./*"]
+    }
+  }
+}
 
 1:30:00===================================================================================================================================================================================================================
 

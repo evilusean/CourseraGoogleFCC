@@ -14,3 +14,12 @@ export async function POST(req) {
     return NextResponse.json({ message: "Error", err }, { status: 500 });
   }
 }
+
+export async function GET() {
+  try {
+    const tickets = await Ticket.find();
+    return NextResponse.json({ message: tickets }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ message: "Error", err }, { status: 500 });
+  }
+}

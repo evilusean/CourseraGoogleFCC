@@ -255,9 +255,23 @@ Fixed: replaced everything within jsconfig.js with below, for some reason it was
   }
 }
 
+New Error:
+Unhandled Runtime Error
+ReferenceError: setFormData is not defined
+
+Source
+app/(components)/TicketForm.jsx (13:4) @ setFormData
+
+  11 | const name = e.target.name;
+  12 |
+> 13 | setFormData((prevState) => ({
+     |^
+  14 |   ...prevState,
+  15 |   [name]: value,
+  16 | }));
+Fixed:
+const [formData, setFormData] = useState(startingTicketData); #accidently wrote setForm instead of setFormData
 1:30:00===================================================================================================================================================================================================================
-
-
 
 
 

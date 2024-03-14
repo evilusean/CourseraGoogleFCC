@@ -272,6 +272,8 @@ app/(components)/TicketForm.jsx (13:4) @ setFormData
 Fixed:
 const [formData, setFormData] = useState(startingTicketData); #accidently wrote setForm instead of setFormData
 1:30:00===================================================================================================================================================================================================================
+DB not updating, problem started around 1:29:00, could be the MONGODB_URI, going back in tutorial to double check, 
+Ctrl + Shift + I = brings up debugging console
 
 
 

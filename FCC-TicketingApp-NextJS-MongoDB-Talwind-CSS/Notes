@@ -277,11 +277,39 @@ Potential problems files: .env.local / route.js / Ticket.js / TicketForm.jsx
 onSubmit={handleSubmit} #was previously a string 'handleSubmit' - we done goofed, I think that should fix it, found by checking console, just tested, DB works!
 1:30:00===================================================================================================================================================================================================================
 Ctrl + Shift + I = brings up debugging console
+const getTickets = async () => { #create a variable to get tickets, async function
+  try {
+    const res = await fetch("http://localhost:3000/api/Tickets", { #response = await fetch, we are using a server, not client, so we need full URL for API to get tickets, and save response
+      cache: "no-store", #cache = no-store = every time this runs, it will check if there is new data inside
+    });
+    return res.json(); #if there is, it will return that response
+  } catch (error) {
+    console.log("Failed to get tickets", error); #if there is an error, prints it to console
+  } 
+}; 
+const Dashboard = async () => { #await always requires async
+  const { tickets } = await getTickets(); #getTickets(); function is above this
 
+  const uniqueCategories = [ #will sort the tickets by category (software, hardware, project)
+    ... new Set(tickets?.map(({category}) => category)), #... new Set = will take all results, and remove duplicates, will map all tickets, destructure it and return a new category of sorted tickets
+  ]
+#below will take the sorted tickets and return the divs to the UI, with a unique index
+  return (
+    <div className="p-5"> #padding-5
+      <div>
+        {tickets && #if tickets are available
+          uniqueCategories?.map((uniqueCategory, categoryIndex) => ( #take the unique categories and map over them, for each unique category(singular), get a categoryIndex
+            <div key={categoryIndex} className="mb-4"> #key of our unique categoryIndex
+              <h2>{uniqueCategory}</h2> #will place the uniqueCategory in the header of whatever category you are currently under
+              <div className="lg:grid grid-cols-2 xl:grid-cols-4"> #will make the grid for the tickets(responsive)
+                {tickets.filter((ticket) => ticket.category === uniqueCategory).map((filteredTicket, _index) => ( #will filter tickets by category, will grab a singular ticket, if it equals the uniqueCategory, it will map it by index
+                  <TicketCard id={_index} key={_index} ticket={ticket}/> #TicketCard component with id and key to the _index and ticket={ticket} will put the data inside the card, making it dynamic
+              </div>
+            </div>
+          ))}
 
-
-
-
+Error: have data in DB, tried to test, getting no tickets, broke around 1:40:00, going to keep progressing, if still broken, will come back to it tommorrow, might need to populate more data on DB, only have 1 ticket
+1:43:00=============================================================================================================================================================================================================================
 
 
 

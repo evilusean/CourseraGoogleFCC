@@ -271,8 +271,11 @@ app/(components)/TicketForm.jsx (13:4) @ setFormData
   16 | }));
 Fixed:
 const [formData, setFormData] = useState(startingTicketData); #accidently wrote setForm instead of setFormData
+
+DB not updating, problem started around 1:29:00, could be the MONGODB_URI, going back in tutorial to double check,  ~55:00 mongo DB setup, 
+Potential problems files: .env.local / route.js / Ticket.js / TicketForm.jsx
+onSubmit={handleSubmit} #was previously a string 'handleSubmit' - we done goofed, I think that should fix it, found by checking console, just tested, DB works!
 1:30:00===================================================================================================================================================================================================================
-DB not updating, problem started around 1:29:00, could be the MONGODB_URI, going back in tutorial to double check, 
 Ctrl + Shift + I = brings up debugging console
 
 

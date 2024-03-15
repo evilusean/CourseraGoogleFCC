@@ -405,9 +405,18 @@ const TicketPage = async ({ params }) => {
 }; #will get ticket data if it exists, otherwise will change _id to "new" and passes it down to the <TicketForm /> which gets returned to our app
 
 2:15:00==============================================================================================================================================================================================================================
+Adding inputs to populate when we want to edit a ticket
+  if (EDITMODE) {
+    startingTicketData["title"] = ticket.title;
+    startingTicketData["description"] = ticket.description;
+    startingTicketData["priority"] = ticket.priority;
+    startingTicketData["progress"] = ticket.progress;
+    startingTicketData["status"] = ticket.status;
+    startingTicketData["category"] = ticket.category;
+  } #we placed this before we update the state, so the state should be updated with our old values if we are EDITMODE
+we now need to change our "Create Your Ticket" to conditional rendering so it let's us know we are updating a ticket, making it dynamic
 
-
-
+2:20:00=============================================================================================================================================================================================================================
 
 
 

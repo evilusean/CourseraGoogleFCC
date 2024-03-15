@@ -338,10 +338,40 @@ Error: have data in DB, tried to test, getting no tickets, broke around 1:40:00,
 }; #switch statement(short if/else) that will go threw each option for status display name and color, and return the proper value
 
 1:53:00============================================================================================================================================================================================================================
+added in some more data to DB, by creating tickets, everything worked, and they are populating correctly on our main page.
+creating a function to format our timestamps:
+now we are going to create the delete function, created a new folder in src / app / api / tickets / [id] 'route.js' name is important, 
+export async function DELETE(req, { params }) { #takes in request and parameters
+  try {
+    const { id } = params; #id is the parameters 
+    await Ticket.findByIdAndDelete(id); #finds and deletes by ID 
+    return NextResponse.hson({ message: "Ticket Deleted" }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ message: "Error", error }, { status: 500 });
+  }
+}
+Added delete to our 'DelteBlock.jsx':
+const DeleteBlock = ({ id }) => { #takes in id, and saves as a variable
 
+  const router = useRouter; #make sure you are using the correct router, import { NextResponse } from "next/server";
 
+  const deleteTicket = async () => { #async function for await
+    const res = await fetch(`http://localhost:3000/api/Tickets/${id}` , { #why file location is important, will delete whatever the ${id} is, make sure to use ` backticks `
+      method: "DELETE" #the method used to delete from DB
+    });
+    if (res.ok) { #if response is ok 
+      router.refresh() #refresh the page
+    }
+  };
+  return (
+    <FontAwesomeIcon
+      icon={faX}
+      className="text-red-400 hover:cursor-pointer hover:text-red-200"
+      onClick={deleteTicket} #when the delete icon is clicked, it will run the delete function
+    />
+  );
 
-
+2:01:00============================================================================================================================================================================================================================
 
 
 

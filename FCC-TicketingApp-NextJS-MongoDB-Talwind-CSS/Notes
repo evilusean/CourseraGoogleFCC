@@ -351,27 +351,27 @@ export async function DELETE(req, { params }) { #takes in request and parameters
   }
 }
 Added delete to our 'DelteBlock.jsx':
-const DeleteBlock = ({ id }) => {
+const DeleteBlock = ({ id }) => { #takes in id, and saves as a variable
 
-  const router = useRouter;
+  const router = useRouter; #make sure you are using the correct router, import { NextResponse } from "next/server";
 
-  const deleteTicket = async () => {
-    const res = await fetch(`http://localhost:3000/api/Tickets/${id}` , {
-      method: "DELETE"
+  const deleteTicket = async () => { #async function for await
+    const res = await fetch(`http://localhost:3000/api/Tickets/${id}` , { #why file location is important, will delete whatever the ${id} is, make sure to use ` backticks `
+      method: "DELETE" #the method used to delete from DB
     });
-    if (res.ok) {
-      router.refresh()
+    if (res.ok) { #if response is ok 
+      router.refresh() #refresh the page
     }
   };
   return (
     <FontAwesomeIcon
       icon={faX}
       className="text-red-400 hover:cursor-pointer hover:text-red-200"
-      onClick={deleteTicket}
+      onClick={deleteTicket} #when the delete icon is clicked, it will run the delete function
     />
   );
 
-
+2:01:00============================================================================================================================================================================================================================
 
 
 

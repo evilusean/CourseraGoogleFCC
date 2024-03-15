@@ -310,12 +310,34 @@ const Dashboard = async () => { #await always requires async
 
 Error: have data in DB, tried to test, getting no tickets, broke around 1:40:00, going to keep progressing, if still broken, will come back to it tommorrow, might need to populate more data on DB, only have 1 ticket
 1:43:00=============================================================================================================================================================================================================================
+<FontAwesomeIcon #component for priority
+        icon={faFire} #icon for priority
+        className={` pr-1 ${ #padding right-1
+          priority > 0 ? " text-red-400" : " text-slate-400" #conditional argument, if priority > 0 make text red, else make text grey
+        }`}
+      />
 
+  const getColor = (status) => {
+    let color;
+    switch (status.toLowerCase()) {
+      case "done":
+        color = "bg-green-200";
+        return color;
 
+      case "started":
+        color = "bg-yellow-200";
+        return color;
 
+      case "not started":
+        color = "bg-red-200";
+        return color;
+      default:
+        color = "bg-slate-700";
+    }
+    return color;
+}; #switch statement(short if/else) that will go threw each option for status display name and color, and return the proper value
 
-
-
+1:53:00============================================================================================================================================================================================================================
 
 
 

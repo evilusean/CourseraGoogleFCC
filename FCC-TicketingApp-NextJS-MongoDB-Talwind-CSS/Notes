@@ -388,3 +388,26 @@ const getTicketById = async (id) => { #gets ticket id
 };
 
 2:11:00=============================================================================================================================================================================================================================
+added a GET request to pull ticketData _id from our request, awaits reponse and pulls data so we can reuse
+const TicketPage = async ({ params }) => { 
+  const EDITMODE = params.id === "new" ? false : true;
+  let updateTicketData = {};
+
+  if (EDITMODE) {
+    updateTicketData = await getTicketById(params.id);
+    updateTicketData = updateTicketData.foundTicket;
+  } else {
+    updateTicketData = {
+      _id: "new",
+    };
+  }
+  return <TicketForm ticket={updateTicketData} />;
+}; #will get ticket data if it exists, otherwise will change _id to "new" and passes it down to the <TicketForm /> which gets returned to our app
+
+2:15:00==============================================================================================================================================================================================================================
+
+
+
+
+
+

@@ -18,8 +18,9 @@ export async function POST(req) {
 export async function GET() {
   try {
     const tickets = await Ticket.find();
-    return NextResponse.json({ message: tickets }, { status: 200 });
-  } catch (error) {
+    return NextResponse.json({ tickets }, { status: 200 });
+  } catch (err) {
+    console.log(err);
     return NextResponse.json({ message: "Error", err }, { status: 500 });
   }
 }

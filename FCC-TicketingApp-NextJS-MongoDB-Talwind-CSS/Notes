@@ -372,6 +372,19 @@ const DeleteBlock = ({ id }) => { #takes in id, and saves as a variable
   );
 
 2:01:00============================================================================================================================================================================================================================
+fixed some bugs, delete function works with our DB, very nice
+we now only need to create our Update of our CRUD functionality, we want it to take it to our ticket when we click on our ticket from our main page, 
+<Link href={`/TicketPage/${ticket._id}`} style={{ display: "contents" }}> #will get the ticket._id from our db and take us to the update page, when we click the style= will make it so it won't mess up our ticket display
+const EDITMODE = params.id === "new" ? false : true #EDITMODE will check if were editing a ticket or a new ticket, if it is a new ticket, id will === new, and EDITMODE will be false, otherwise it will be false
+const getTicketById = async (id) => { #gets ticket id
+  const res = await fetch(`http://localhost:3000/api/Tickets/${id}`, { #gets response from our API to fetch ticket data
+    cache: "no-store", #doesnt store data cache
+  });
+  if (!res.ok) { #if no response, throw error
+    throw new Error("Failed to get ticket.");
+  }
 
+  return res.json(); #return response.json
+};
 
-
+2:11:00=============================================================================================================================================================================================================================

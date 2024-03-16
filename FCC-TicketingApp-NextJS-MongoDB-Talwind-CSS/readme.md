@@ -6,6 +6,8 @@
 Learn how to create a cutting-edge ticketing application from scratch using Next.js, the new app router, and the power of Tailwind CSS for sleek styling. </br>
 Learn how to set up a MongoDB Atlas database and seamlessly connect it to your Next.js app using the Mongoose library. </br>
 
+Build a modern ticketing app with Next.js, App Router, Tailwind CSS, MongoDB, and other technologies. Whether you're a beginner or an experienced developer, this course will equip you with the skills to develop web applications using the latest technologies. A ticketing application in software development is a centralized tool for developers to manage tasks, issues, and projects efficiently. It enables the creation, assignment, tracking, and collaboration on tickets representing specific work items. These tools enhance teamwork, integrate with development workflows, and streamline communication and project management.
+
 Showcases: CRUD, MONGO DB, NextJS/React Components, TailwindCSS, mongoose, fontawesome, HTML/CSS, Routing, Folder Setups for Routing, DB Schema, API Fetch, .env.local, and more..(no authenticASean - proof of concept)
 
 Start: 10March2024</br>

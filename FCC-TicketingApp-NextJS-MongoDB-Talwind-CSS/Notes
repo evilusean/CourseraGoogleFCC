@@ -417,6 +417,31 @@ Adding inputs to populate when we want to edit a ticket
 we now need to change our "Create Your Ticket" to conditional rendering so it let's us know we are updating a ticket, making it dynamic
 
 2:20:00=============================================================================================================================================================================================================================
+ if (EDITMODE) { #if in EDITMODE
+      const res = await fetch(`/api/Tickets/${ticket._id}`, { #fetch the ticket with its unique ID
+        method: "PUT", #instead of "POST" method, we will use "PUT" - which means we update our data
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({ formData }),
+     });
+      if (!res.ok) { #if response not ok
+        throw new Error("Failed to update ticket"); #throw an error
+      }
+New Update in 'src / app / api / Tickets / [id] / route.js, similar to DELETE , new keyword 'Ticket.findByIdAndUpdate'
+export async function PUT(req, { params }) {
+  try {
+    const { id } = params;
+    const body = await req.json();
+    const ticketData = body.formatData;
 
+    const updateTicketData = await Ticket.findByIdAndUpdate(id, {
+      ...ticketData,
+    });
 
-
+    return NextResponse.hson({ message: "Ticket Updated" }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ message: "Error", error }, { status: 500 });
+  }
+}
+Update not working, creating a new ticket instead of updating the current one, delete create read all work

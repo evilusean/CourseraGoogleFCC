@@ -6,5 +6,11 @@
 Learn how to create a cutting-edge ticketing application from scratch using Next.js, the new app router, and the power of Tailwind CSS for sleek styling. </br>
 Learn how to set up a MongoDB Atlas database and seamlessly connect it to your Next.js app using the Mongoose library. </br>
 
+Showcases: CRUD, MONGO DB, NextJS/React Components, mongoose, fontawesome, HTML/CSS, Routing, Folder Setups for Routing, DB Schema, and more..(no authenticASean - proof of concept)
+
 Start: 10March2024</br>
-End: </br>
+End: 15March2024</br>
+
+![Home Page](https://github.com/evilusean/CourseraGoogleFCC/blob/main/FCC-TicketingApp-NextJS-MongoDB-Talwind-CSS/Screenshot%20from%202024-03-16%2007-45-07.png?raw=true)
+
+![Create a Ticket](https://github.com/evilusean/CourseraGoogleFCC/blob/main/FCC-TicketingApp-NextJS-MongoDB-Talwind-CSS/Screenshot%20from%202024-03-16%2007-49-07.png?raw=true)

@@ -1,3 +1,11 @@
+# FreeCodeCamp - E-Commerce App - Next.js / TypeScript / TailwindCSS / Prisma / DaisyUI / AppRouter :
+[Tutorial:</br>](https://www.youtube.com/watch?v=K4ziF0MhbLc&ab_channel=freeCodeCamp.org)
+[https://www.freecodecamp.org/news/ecommerce-site-with-next-js-tailwind-daisyui-course/
+](https://www.freecodecamp.org/news/ecommerce-site-with-next-js-tailwind-daisyui-course/)
+
+Start: 16March2024</br>
+End: </br>
+
 # FreeCodeCamp - Ticketing App - Next.js / MongoDB / Tailwind / CSS : 
 [Tutorial:</br>](https://www.youtube.com/watch?v=H0vhkoXljq0&t=64s&ab_channel=freeCodeCamp.org)
 [https://www.freecodecamp.org/news/use-next-js-tailwind-css-and-mongodb-to-build-a-ticketing-application/

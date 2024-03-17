@@ -9,3 +9,7 @@ server side rendering - good for SEO(search engine optimization) - all data avai
 search functionality 
 responsive design - changes based on screen size
 tailwind css
+
+npx create-next-app@latest
+typescript: yes / eslint: yes / ESLint: yes / TailwindCSS: yes / src/directory: yes / AppRouter: yes / import alias: no
+

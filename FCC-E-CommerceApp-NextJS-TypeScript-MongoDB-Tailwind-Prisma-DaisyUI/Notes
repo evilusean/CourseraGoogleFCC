@@ -1,1 +1,11 @@
-
+Features:
+Completely dynamic product loading - products are not hardcoded, and will load chronologically
+pagination - fast page loading - pre rendered and cached
+cart - with total cost, subtotal, and quantity, server action nextJS feature, POST request
+anonymous shopping cart - if you log out of account, new shopping cart will be created, and you can add items to it, and merge when you log back in
+authentication - can log into accounts
+checkout button is a dummy 
+server side rendering - good for SEO(search engine optimization) - all data available when you open webpage
+search functionality 
+responsive design - changes based on screen size
+tailwind css

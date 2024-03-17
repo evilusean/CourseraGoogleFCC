@@ -1,1 +1,37 @@
+Course:
+https://www.freecodecamp.org/news/ecommerce-site-with-next-js-tailwind-daisyui-course/
+Youtube:
+https://www.youtube.com/watch?v=K4ziF0MhbLc&ab_channel=freeCodeCamp.org
+Github:
+https://github.com/codinginflow/nextjs-ecommerce/tree/0-Starting-Point
+
+Resources:
+MongoDB Atlas:
+https://www.mongodb.com/atlas/database
+tailwind.config.js:
+https://github.com/codinginflow/nextjs-ecommerce/blob/0-Starting-Point/tailwind.config.js
+Favicon:
+https://github.com/codinginflow/nextjs-ecommerce/blob/0-Starting-Point/src/app/favicon.ico
+OpenGraph Image:
+https://github.com/codinginflow/nextjs-ecommerce/blob/0-Starting-Point/src/app/opengraph-image.png
+Image Assets:
+https://github.com/codinginflow/nextjs-ecommerce/tree/0-Starting-Point/src/assets
+Add To Cart Button:
+https://github.com/codinginflow/nextjs-ecommerce/blob/7-Add-to-Cart-Button/src/app/products/%5Bid%5D/AddToCartButton.tsx
+Footer:
+https://github.com/codinginflow/nextjs-ecommerce/blob/8-Navbar-Footer/src/app/Footer.tsx
+Google Cloud Console:
+https://console.cloud.google.com/
+Prisma schema with user accounts:
+https://github.com/codinginflow/nextjs-ecommerce/blob/10-User-Authentication/prisma/schema.prisma
+UserMenuButton with SVG icon:
+https://github.com/codinginflow/nextjs-ecommerce/blob/10-User-Authentication/src/app/Navbar/UserMenuButton.tsx
+Pagination Bar:
+https://github.com/codinginflow/nextjs-ecommerce/blob/12-Pagination/src/components/PaginationBar.tsx
+
+
+
+
+
+
 

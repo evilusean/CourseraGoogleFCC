@@ -12,4 +12,7 @@ tailwind css
 
 npx create-next-app@latest
 typescript: yes / eslint: yes / ESLint: yes / TailwindCSS: yes / src/directory: yes / AppRouter: yes / import alias: no
+'npm run dev' to test if setup was successful localhost:3000
 
+Installing prerequisite packages:
+npm i daisyui prisma @prisma/client next-auth @auth/prisma-adapter prettier eslint-config-prettier prettier-plugin-tailwindcss

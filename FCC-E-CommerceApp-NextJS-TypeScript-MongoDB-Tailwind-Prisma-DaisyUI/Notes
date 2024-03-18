@@ -76,14 +76,23 @@ Next installed 'Prisma' extension, an ORM , it works with our MongoDB, will help
 npm i zod #final package we need to install for our project,
 
 27:00===============================================================================================================================================================================================================================
+opengraph-image.png #downloaded for tut, the file needs that exact name and MUST be in src / app folder, it is used for the display image on pages like facebook
+Now it's time to set up MongoDB:
+https://www.mongodb.com/atlas/database
+we already have an account from our last project, top left drop down -> New Project - NextJS-E-Commerce
+MongoDB is good because they take care of a lot of things you would otherwise need to set up for yourself, such as replicas and switches, additional backup servers
+created our first DB;DB name: ecommerce / Collection Name: products
+added in our first product manually, by clicking 'INSERT DOCUMENT' in top right, Dummy Data Schema Below:
+_id:65f87c86d239b4b6af147de7 ObjectId
+name:"Product Name" String
+description: "Product Description" String
+imageUrl: "https://product-image.com: String
+price:999 Int32
+Floats are inacurrate, so we created our price as an integer32
+Prisma(what we are using to work with our DB):
+https://www.prisma.io/
 
-
-
-
-
-
-
-
+34:00=============================================================================================================================================================================================================================
 
 
 

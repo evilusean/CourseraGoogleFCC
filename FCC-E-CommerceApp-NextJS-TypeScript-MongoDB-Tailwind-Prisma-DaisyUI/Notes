@@ -16,3 +16,94 @@ typescript: yes / eslint: yes / ESLint: yes / TailwindCSS: yes / src/directory: 
 
 Installing prerequisite packages:
 npm i daisyui prisma @prisma/client next-auth @auth/prisma-adapter prettier eslint-config-prettier prettier-plugin-tailwindcss
+
+Setting up TailwindCSS:
+https://tailwindcss.com/docs/installation
+https://tailwindcss.com/docs/editor-setup
+VSCode Extensions:
+Tailwind CSS IntelliSense
+Reccomended VS Code Settings:
+'files.associations' settings to always open .css files in Tailwind CSS mode; top drop down menu -> file -> preferences -> settings or 'ctrl' + ',' search 'files: association' -> add item -> items: *.css Value: tailwind.css
+  #after doing above, tailwindcss will now work in .css files (no more yellow warnings for the entire project!)
+"files.associations":  {
+  "*.css: "tailwindcss"
+  }
+'editor.quickSuggestions' =   top drop down menu -> file -> preferences -> settings or 'ctrl' + ',' search 'editor.quickSuggestions' -> add item -> strings: on
+#by default VScode will not trigger completions when editing string content, updating the 'editor.quickSuggestions' settings may improve your experience, autosuggestions in strings
+"editor.quickSuggestions': {
+  "strings": true
+}
+
+20:00===============================================================================================================================================================================================================================
+Daisy UI Configuration:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

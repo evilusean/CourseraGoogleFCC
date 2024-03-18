@@ -56,6 +56,7 @@ module.exports = {
   } 
 installed 'prettier - code formatter' extension
 to make default for editing: top drop down File -> Preferences -> Settings - Change from 'none' to 'Prettier'
+
 Error: Fixed:
 Create file called .babelrc in your root directory and add this code:
 {
@@ -68,9 +69,13 @@ And in .eslintrc, replace the existing code with:
   "extends": ["next/babel","next/core-web-vitals"]
 }
 
+For Future Sean: Prettier and ESlint can conflict, that's why you need to do the above fix every time you use it,
+https://nextjs.org/docs/app/building-your-application/configuring/eslint#prettier
+Installed ESLint extension aswell,
+Next installed 'Prisma' extension, an ORM , it works with our MongoDB, will help us set up our schema file and gives us autocompletion, and helps with formatting
+npm i zod #final package we need to install for our project,
 
-
-
+27:00===============================================================================================================================================================================================================================
 
 
 

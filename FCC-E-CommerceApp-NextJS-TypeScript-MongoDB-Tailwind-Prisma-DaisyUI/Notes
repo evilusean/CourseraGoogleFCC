@@ -106,8 +106,10 @@ Getting Prisma to work with NextJS:
 https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/nextjs-prisma-client-dev-practices
 
 45:00==============================================================================================================================================================================================================================
-
-
+After introspecting our schema, we can now delete our dummy data
+'npm run dev' #time to start building
+created a new folder in src / app / add-product 'page.tsx' routing will load this automatically, we can navigate to it through localhost:3000/add-product
+Error: Fixed = had to delete babl.rc and remove next/babel from config file, was causing a problem
 
 
 

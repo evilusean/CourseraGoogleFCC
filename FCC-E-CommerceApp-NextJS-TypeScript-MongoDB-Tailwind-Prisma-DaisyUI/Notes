@@ -89,16 +89,23 @@ description: "Product Description" String
 imageUrl: "https://product-image.com: String
 price:999 Int32
 Floats are inacurrate, so we created our price as an integer32
-Prisma(what we are using to work with our DB):
-https://www.prisma.io/
 
 34:00=============================================================================================================================================================================================================================
+Prisma(what we are using to work with our DB):
+https://www.prisma.io/
+'npx prisma init' #will initialize prisma, creates a .env file with database URL placeholder, replace that string with the connect string from MongoDB
+'npx prisma db pull' #we can tell prisma to pull the dummy data we added to our collection and add a schema from that data, so we don't have to set it up ourselves.
+introspection = infers the db from the data you already have input in the DB
+createdAt DateTime @default(now()) #creates a timestamp when data is created
+@@map("products") #will map our model with a different name(Product) to the ecommerce.products of our DB
+'npx prisma db push' #changes will be applied to our MongoDB from our schema code
+'npx prisma generate' #will generate a prisma client, which you can use to call different DB operations on, whenever you make changes to schema, you need to regenerate your prisma client
+  import { PrismaClient } from '@prisma/client'
+  const prisma = new PrismaClient()
+Getting Prisma to work with NextJS:
+https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/nextjs-prisma-client-dev-practices
 
-
-
-
-
-
+45:00==============================================================================================================================================================================================================================
 
 
 

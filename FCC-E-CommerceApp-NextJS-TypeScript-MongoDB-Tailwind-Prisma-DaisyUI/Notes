@@ -36,12 +36,37 @@ Reccomended VS Code Settings:
 
 20:00===============================================================================================================================================================================================================================
 Daisy UI Configuration:
+https://daisyui.com/docs/install/
+DaisyUI is a components libarary, that has components prebuilt that are already configured, buttons, modal dialogues, progress bar, custom themes, theme generator - copy paste into tailwind file
+https://daisyui.com/theme-generator/
+Cool random generator for color palletes, or you can use a prebuilt like synthwave, I went with what was recomended
+'tailwindconfig.js' #add below code to it, delete 'theme:' block
+module.exports = {
+  //...
+  plugins: [require("daisyui")],
+}
+instead of hardcoding, if you set up a theme, you can change it all at once from one file, good to set up before you start coding, going with default for now wasted too much time fiddling around with palletes
+after DaisyUI import, deleted everything from 'globals.css', except lines at top @tailwind
+next, we need to import our automatic class ordering with tailwindcss and prettier, we already installed, but need to add to plugin to our prettier config
+https://github.com/tailwindlabs/prettier-plugin-tailwindcss
+npm install -D prettier prettier-plugin-tailwindcss
+go into 'root' folder and create a new file called 'prettier.config.js' and added below code
+module.exports = {
+    plugins: ['prettier-plugin-tailwindcss'],
+  } 
+installed 'prettier - code formatter' extension
+to make default for editing: top drop down File -> Preferences -> Settings - Change from 'none' to 'Prettier'
+Error: Fixed:
+Create file called .babelrc in your root directory and add this code:
+{
+  "presets": ["next/babel"],
+  "plugins": []
+}
+And in .eslintrc, replace the existing code with:
 
-
-
-
-
-
+{
+  "extends": ["next/babel","next/core-web-vitals"]
+}
 
 
 

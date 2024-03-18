@@ -111,7 +111,7 @@ After introspecting our schema, we can now delete our dummy data
 created a new folder in src / app / add-product 'page.tsx' routing will load this automatically, we can navigate to it through localhost:3000/add-product
 Error: Fixed = had to delete babl.rc and remove next/babel from config file, was causing a problem
 
-
+48:00==============================================================================================================================================================================================================================
 
 
 

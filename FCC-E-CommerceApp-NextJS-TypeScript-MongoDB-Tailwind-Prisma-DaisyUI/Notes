@@ -125,7 +125,9 @@ What daisy UI does is it already has pre-styled all tailwindCSS components, so y
 <main className="p-4 max-w-7xl m-auto min-w-[300px]"> #created a new main tag that will apply styling of padding and max-width/min width[with a custom value] and auto-margin center to all of our pages
 
 60:00==============================================================================================================================================================================================================================
-
+export const metadata = {
+    title: "Add Product"
+} #overrides the default metadata in our 'layout.tsx' file, will change the title but only for the page where we put the 'export const metadata'
 
 
 

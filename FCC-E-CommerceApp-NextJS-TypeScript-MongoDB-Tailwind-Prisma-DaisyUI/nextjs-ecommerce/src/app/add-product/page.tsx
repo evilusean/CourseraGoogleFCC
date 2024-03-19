@@ -29,6 +29,9 @@ export default function AddProductPage() {
           type="number"
           className="mb-3 w-full input input-bordered"
         />
+        <button className="btn btn-primary btn-block" type="submit">
+          Add Product
+        </button>
       </form>
     </div>
   );

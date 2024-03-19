@@ -128,10 +128,14 @@ What daisy UI does is it already has pre-styled all tailwindCSS components, so y
 export const metadata = {
     title: "Add Product"
 } #overrides the default metadata in our 'layout.tsx' file, will change the title but only for the page where we put the 'export const metadata'
+when we submit the form, we want to store a new product in our database, 1) turn it into a client component so we can execute JS, 2)take input of form and send by a fetch to server endpoint and add a product to a DB
+  you can't make server operations on the client, because it exposes the DB credentials on the client, why you must route connections like this over a server 
+NextJS Server Actions:
+https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations
+Next JS server actions will allow you to a way to do server mutation directly through components without having to set up a server endpoint, just put a function inside of component and you can alter DB
+Error : Cannot find name 'redirect'.
 
-
-
-
+1:12:00============================================================================================================================================================================================================================
 
 
 

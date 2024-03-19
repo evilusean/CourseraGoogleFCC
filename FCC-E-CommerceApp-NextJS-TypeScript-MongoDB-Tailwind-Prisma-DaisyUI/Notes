@@ -110,13 +110,21 @@ After introspecting our schema, we can now delete our dummy data
 'npm run dev' #time to start building
 created a new folder in src / app / add-product 'page.tsx' routing will load this automatically, we can navigate to it through localhost:3000/add-product
 Error: Fixed = had to delete babl.rc and remove next/babel from config file, was causing a problem
+Error: Our Tailwind classes are not working Fixed: added below code to 'tailwind.config.js'
+/** @type {import('tailwindcss').Config} */
 
 48:00==============================================================================================================================================================================================================================
 className = "" #used by tailwind to style different elements and components
 we get autocompletion with our tailwind VSCode extension, you can hover over the individual items in className to see what each one does with detail
+'Shift' + 'Alt' + F = shortcut to reorder all classes in correct order(windows only, doesn't work on linux)
+Daisy UI components:
+https://daisyui.com/components/input/
+What daisy UI does is it already has pre-styled all tailwindCSS components, so you don't need to do it manually, you can search for whatever component you need above, and hover over to see tailwindCSS inputs in VSCode
+<input className="mb-3 w-full input input-bordered" /> #will create a rounded box input with predesigned tailwindCSS from daisyUI with custom classNames we searched up
 
-Error: Our Tailwind classes are not working Fixed: added below code to 'tailwind.config.js'
-/** @type {import('tailwindcss').Config} */
+
+
+
 
 
 

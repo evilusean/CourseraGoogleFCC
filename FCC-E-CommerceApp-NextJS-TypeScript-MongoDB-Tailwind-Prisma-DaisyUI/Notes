@@ -134,6 +134,7 @@ NextJS Server Actions:
 https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations
 Next JS server actions will allow you to a way to do server mutation directly through components without having to set up a server endpoint, just put a function inside of component and you can alter DB
 Error : Cannot find name 'redirect'.
+https://nextjs.org/docs/app/building-your-application/routing/redirecting
 
 1:12:00============================================================================================================================================================================================================================
 

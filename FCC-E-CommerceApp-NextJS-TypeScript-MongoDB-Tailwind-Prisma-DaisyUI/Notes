@@ -121,8 +121,10 @@ Daisy UI components:
 https://daisyui.com/components/input/
 What daisy UI does is it already has pre-styled all tailwindCSS components, so you don't need to do it manually, you can search for whatever component you need above, and hover over to see tailwindCSS inputs in VSCode
 <input className="mb-3 w-full input input-bordered" /> #will create a rounded box input with predesigned tailwindCSS from daisyUI with custom classNames we searched up
+'layout.tsx' is the root layout, where all styling will be applied to every page in your app, which returns your components/pages as children 
+<main className="p-4 max-w-7xl m-auto min-w-[300px]"> #created a new main tag that will apply styling of padding and max-width/min width[with a custom value] and auto-margin center to all of our pages
 
-
+60:00==============================================================================================================================================================================================================================
 
 
 

@@ -112,7 +112,10 @@ created a new folder in src / app / add-product 'page.tsx' routing will load thi
 Error: Fixed = had to delete babl.rc and remove next/babel from config file, was causing a problem
 
 48:00==============================================================================================================================================================================================================================
+className = "" #used by tailwind to style different elements and components
+we get autocompletion with our tailwind VSCode extension, you can hover over the individual items in className to see what each one does with detail
 
+Error: Our Tailwind classes are not working
 
 
 

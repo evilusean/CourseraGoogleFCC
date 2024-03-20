@@ -137,6 +137,11 @@ Error : Cannot find name 'redirect'.
 https://nextjs.org/docs/app/building-your-application/routing/redirecting
 
 1:12:00============================================================================================================================================================================================================================
+You can also use react hooks for validation, but need to make it a client component to use JS actions
+Later in tutorial, we are going to protect the route 'page.tsx' add product page by making it so you can only add a product if you are logged in with the right credentials, after we add authentication
+Where to get our images for products(free):
+https://unsplash.com/
+search product images, click, 'copy image address' and paste into our add-product page ImageUrl
 
 
 

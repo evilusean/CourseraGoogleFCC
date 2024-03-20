@@ -13,6 +13,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     >
       <div className="card-body">
         <h2 className="card-title">{product.name}</h2>
+        <p>{product.description}</p>
       </div>
     </Link>
   );

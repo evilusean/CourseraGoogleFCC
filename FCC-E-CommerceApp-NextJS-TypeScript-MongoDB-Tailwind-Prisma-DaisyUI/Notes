@@ -173,6 +173,16 @@ Created a new file called 'error.tsx' in src / app #will be the page that automa
 all 'error.tsx' components MUST be "use client";
 
 1:30:00=============================================================================================================================================================================================================================
+in src / app 'page.tsx' removed ALL boilerplate code, started with a fresh <div>
+by default pages in the app directory are server components, so we can do database configs and async functions, because it will be executed on the server, not the client.. unless we say "use client"
+  making DB requests and using credentials is safe, because it will not be leaked to the client, so we can use prisma here safely
+export default async function Home() {
+  const products = await prisma.product.findMany({
+    orderBy: {id: "desc"}
+  }) #will check our DB for product using the findMany function, and order them by id descending, so newest products first
+in src / app / components 'ProductCard.tsx' for our product card, which will pull the data from our DB and post it on main page
+
+1:40:00=============================================================================================================================================================================================================================
 
 
 

@@ -166,9 +166,13 @@ export default function FormSubmitButton(
 }
 
 1:21:00=============================================================================================================================================================================================================================
+We now have a loading button that should disable our add product submit form button component when it is sending data to the server, then redirects us to main page
+the server action is treated as a post request
+He added 2 more products to the DB, commented out the redirect before uploading so it didn't kick him back to main page
+Created a new file called 'error.tsx' in src / app #will be the page that automatically gets shown when you have an error, naming conventions are important for this file
+all 'error.tsx' components MUST be "use client";
 
-
-
+1:30:00=============================================================================================================================================================================================================================
 
 
 

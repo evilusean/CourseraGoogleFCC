@@ -222,7 +222,14 @@ Now we need to remove our hardcoded <ProductCard /> and make it dynamic and load
       </div>
 
 1:58:00=============================================================================================================================================================================================================================
-Grid works. but need to add more products, only have 3
+Grid works. but need to add more products, only have 3 - will need >7ish, tedious work, will do tomo, future sean problem
+the reason why you set up the<Image width={800}> is so that certain breakpoints (764pixel for large) will still have an image. even though the image is still relative based on the screen size
+by default server components in react are statically cached, all products are fetched when we compile the project, even if we add new products, they will not appear
+as soon as you add a search component in react JS it is automatically dynamically rendered, instead of static
+next we are going to set up our src /  app  / 'products' / [id] 'page.tsx' #new file, the [] are critical for routing, page.tsx will render the product with the relevant unique id for each product
+we created another file in src / app 'not-found.tsx' #will be the default page that gets loaded when a user tries to go to a page that does not exist (404), name of file is important for routing
+now that we created a new 404 page, we can redirect to it dynamically, 
+
 
 
 

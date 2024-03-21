@@ -1,5 +1,6 @@
 import { Product } from "@prisma/client";
 import Link from "next/link";
+import PriceTag from "./PriceTag";
 
 interface ProductCardProps {
   product: Product;
@@ -14,6 +15,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       <div className="card-body">
         <h2 className="card-title">{product.name}</h2>
         <p>{product.description}</p>
+        <PriceTag price={product.price} />
       </div>
     </Link>
   );

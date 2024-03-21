@@ -209,8 +209,20 @@ Now we need to remove our hardcoded <ProductCard /> and make it dynamic and load
       </div> #will load our hero image, using DaisyUI Docs, it will use those className's to create our hero image, loading the [0] most recent product, the 'priority' tag will tell nextJS to load this item first
 
 1:50:00==============================================================================================================================================================================================================================
+<div className="hero-content flex-col lg:flex-row"> #how you make tailwindCSS responsive, will be flex-column(vertically) until large screens and then turn into flex-row(horizontally)
+  the one without the modifier will be your default for small screens the lg: will be the modifier for large screens or larger
+            <Link
+              href={"/products/" + products[0].id}
+              className="btn btn-primary"
+            > #will create a link to the /products/[id] with id being whichever product is attached to the unique id and it's own product page
+<div className="my-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"> #responsive grid
+        {products.slice(1).map((product) => ( #map turns each product in an array to it's own product card, which we rended with our ProductCard component
+          <ProductCard key={product.id} product={product} /> #renders dynamic with unique id for product_id
+        ))}
+      </div>
 
-
+1:58:00=============================================================================================================================================================================================================================
+Grid works. but need to add more products, only have 3
 
 
 

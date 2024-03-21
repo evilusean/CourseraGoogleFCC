@@ -183,11 +183,32 @@ export default async function Home() {
 in src / app / components 'ProductCard.tsx' for our product card, which will pull the data from our DB and post it on main page
 
 1:40:00=============================================================================================================================================================================================================================
+we are going to create another component in components folder called 'PriceTag.tsx'
+Now we need to take our pricetag component and place it in our 'ProductCard.tsx' 
+Below adds an image to our productcard, DaisyUI documentation recomends wrapping image in a figure, the image component is 'import Image from "next/image";' width and height are relative, and will change depending on screen size
+      <figure>
+        <Image
+          src={product.imageUrl}
+          alt={product.name}
+          width={800}
+          height={400}
+          className="h-48 object-cover" #h-48 = sets the height, object-cover = center crops image
+        />
+      </figure>
+const isNew = Date.now() - new Date(product.createdAt).getTime() <1000 * 60 * 60 * 24 * 7; #miliseconds x 60 seconds x 60 minutes x 24 hours x 7 days, if product is newer than 7 days =  true
+Now we need to remove our hardcoded <ProductCard /> and make it dynamic and load in all the props we input into our DB
+      <div className="hero rounded-xl bg-base-200">
+        <Image 
+        src={products[0].imageUrl}
+        alt={products[0].name}
+        width={400}
+        height={800}
+        className="w-full max-w-sm rounded-lg shadow-2xl"
+        priority
+        />
+      </div> #will load our hero image, using DaisyUI Docs, it will use those className's to create our hero image, loading the [0] most recent product, the 'priority' tag will tell nextJS to load this item first
 
-
-
-
-
+1:50:00==============================================================================================================================================================================================================================
 
 
 

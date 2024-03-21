@@ -230,7 +230,8 @@ next we are going to set up our src /  app  / 'products' / [id] 'page.tsx' #new 
 we created another file in src / app 'not-found.tsx' #will be the default page that gets loaded when a user tries to go to a page that does not exist (404), name of file is important for routing
 now that we created a new 404 page, we can redirect to it dynamically, 
 
-
+2:10:00=============================================================================================================================================================================================================================
+TODO: Add MetaData to the page
 
 
 

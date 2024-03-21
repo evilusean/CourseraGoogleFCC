@@ -17,7 +17,7 @@ export default async function ProductPage({
   });
   if (!product) notFound();
   return (
-    <div className="flex flex-col lg:flex-row ">
+    <div className="flex flex-col lg:flex-row gap-4 lg:items-center">
       <Image
         src={product.imageUrl}
         alt={product.name}

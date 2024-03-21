@@ -1,6 +1,7 @@
 import Image from "next/image";
 import prisma from "./lib/db/prisma";
 import ProductCard from "@/components/ProductCard";
+import Link from "next/link";
 
 export default async function Home() {
   const products = await prisma.product.findMany({
@@ -21,6 +22,13 @@ export default async function Home() {
           />
           <div>
             <h1 className="text-5xl font-bold">{products[0].name}</h1>
+            <p className="py-6">{products[0].description}</p>
+            <Link
+              href={"/products/" + products[0].id}
+              className="btn btn-primary"
+            >
+              View Product
+            </Link>
           </div>
         </div>
       </div>

@@ -273,6 +273,19 @@ model CartItem {
 } #added 2 models, one for our Cart, and items in the Cart
 
 2:20:00=========================================================================================================================================================================================================================
+we need to tell prisma what each id belongs to which model and they work with eachother(joins), for this we can use relations,  
+  product   Product @relation(fields: [productId], references: [id]) #will add a relationship between CartItem and Product after you reformat, shortcut below
+Ctrl + Shift + 'I' = Reformats code, 
+  CartItem    CartItem[] #was added to Product model after we reformatted
+now we need to do the same for our cart, 
+cart      Cart    @relation(fields: [cartId], references: [id]) #adds a relationship between CartItem and Cart
+CartItem  CartItem[] #same thing was added to our Cart model, will allow us to fetch all CartItems that belong to a particular cart, we renamed in to 'items  CartItem[]'
+naming conventions are lowercase, and plural for MongoDb
+@@map("carts") #will map our carts collection to our mongoDB database
+@@map("cartitems") #same for our cartitems, same naming convention for our DB
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade) #what this does if we delete a product, all the card items containing it will also be deleted
+'npx prisma db push' #will push all of our DB changes to our mongoDB server, created 2 new collections one for 'carts' and one for 'cartitems'
+
 
 
 

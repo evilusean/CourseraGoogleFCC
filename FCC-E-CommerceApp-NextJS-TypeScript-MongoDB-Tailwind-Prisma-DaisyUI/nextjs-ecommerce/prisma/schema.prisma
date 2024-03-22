@@ -18,3 +18,17 @@ model Product {
 
   @@map("products")
 }
+
+model Cart {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model CartItem {
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  productId String @db.ObjectId
+  quantity  Int
+  cartId    String @db.ObjectId
+}

@@ -285,9 +285,14 @@ naming conventions are lowercase, and plural for MongoDb
 @@map("cartitems") #same for our cartitems, same naming convention for our DB
   product   Product @relation(fields: [productId], references: [id], onDelete: Cascade) #what this does if we delete a product, all the card items containing it will also be deleted
 'npx prisma db push' #will push all of our DB changes to our mongoDB server, created 2 new collections one for 'carts' and one for 'cartitems'
+'npx prisma generate' #regenerate prisma client with new schema, remember everytime you make changes to DB to do this, so our new models will be available
+Next we want to add a button to add item to our cart and a success message to let our customer know it was added succesfully
+Only a client component can contain state, so we can wrap our button with the client component logic, and the rest of our page can remain a server component(more efficient)
+src / app / products / [id] 'AddToCartButton.tsx'
+We added a svg file, forgot to use "use client" for this component, fixed everything, looks good
+now we need to add a server component for our client component, created 'actions.ts' in the same directory, we can use server actions in client components if it is in a seperate file
 
-
-
+2:30:00=======================================================================================================================================================================================================================
 
 
 

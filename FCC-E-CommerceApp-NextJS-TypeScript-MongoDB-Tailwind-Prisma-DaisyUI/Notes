@@ -231,9 +231,48 @@ we created another file in src / app 'not-found.tsx' #will be the default page t
 now that we created a new 404 page, we can redirect to it dynamically, 
 
 2:10:00=============================================================================================================================================================================================================================
-TODO: Add MetaData to the page
 Added 6 more products this morning, used chat gpt to write product descriptions, way faster.  Can test our responsive grid layout now
+Metadata, in order to add metadata dynamically(product name, etc) we need to create a function, we can't do what we did before with metadata: ...
+spelling is important for this function or nextJS will not recgonize it, it also must be async/promise because it needs to fetch the data from the DB
+since we will be reusing this data later on in our code, we should cache it so we don't need to fetch it twice, it is done automatically if you use the 'fetch' function in JS
+const getProduct = cache(async (id: string) => {
+  const product = await prisma.product.findUnique({
+    where: { id },
+  });
+  if (!product) notFound();
+  return product;
+});
 
+export async function generateMetadata({
+  params: { id },
+}: ProductPageProps): Promise<Metadata> {
+  const product = await getProduct(id);
+  return {
+    title: product.name,
+    description: product.description,
+    openGraph: {
+      images: [{ url: product.imageUrl }],
+    },
+  };
+}
+
+Next we need to create a loading page to run while data is being fetched from our DB; src / app / 'loading.tsx' #name must be exact
+Next we need to create the shopping cart in our DB and add a button, start in 'schema.prisma' file to create a new table;
+we could make the changes by using dummy data in our MongoDB and then using introspection again to change the schema, but it is actually easier to modify the schema and then push the changes to our DB
+model Cart {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+model CartItem {
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  productId String @db.ObjectId
+  quantity  Int
+  cartId    String @db.ObjectId
+} #added 2 models, one for our Cart, and items in the Cart
+
+2:20:00=========================================================================================================================================================================================================================
 
 
 

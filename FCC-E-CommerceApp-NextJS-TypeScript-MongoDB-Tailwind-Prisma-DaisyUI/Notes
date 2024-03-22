@@ -293,6 +293,31 @@ We added a svg file, forgot to use "use client" for this component, fixed everyt
 now we need to add a server component for our client component, created 'actions.ts' in the same directory, we can use server actions in client components if it is in a seperate file
 
 2:30:00=======================================================================================================================================================================================================================
+src / app / lib / db 'cart.ts' #created for seperate server components to be used in a client component page
+we are going to store the user in a cookie, to see if the user is logged in before we create a cart, in production this should be more secure(encrypted card.id, so user can't just modify cookies/ids)
+  cookies also need additional security settings which we aren't doing in this tutorial, would also need secure settings in production
+export async function createCart() {
+  const newCart = await prisma.cart.create({
+    data: {},
+  });
+
+  cookies().set("localCartId", newCart.id);
+} #will create a cart
+export async function getCart() {
+  const localCartId = cookies().get("localCartId")?.value;
+  const cart = localCartId
+    ? await prisma.cart.findUnique({
+        where: {
+          id: localCartId,
+        },
+        include: { items: { include: { product: true } } },
+      })
+    : null;
+
+  return cart;
+} #will fetch a cart, if it exists, add products/items, else return null
+
+2:40:00========================================================================================================================================================================================================================
 
 
 

@@ -322,7 +322,8 @@ export type CartWithProducts = Prisma.CartGetPayload<{
   include: { items: { include: { product: true } } };
 }>; #will allow us to use our cart in our server components
 
-
+2:50:00========================================================================================================================================================================================================================
+We need to use startTransition(()) so if an error occurs, it will stay serverside and won't crash the page/app
 
 
 

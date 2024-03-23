@@ -323,8 +323,21 @@ export type CartWithProducts = Prisma.CartGetPayload<{
 }>; #will allow us to use our cart in our server components
 
 2:50:00========================================================================================================================================================================================================================
-We need to use startTransition(()) so if an error occurs, it will stay serverside and won't crash the page/app
-
+We need to use startTransition(()) hook so if an error occurs, it will stay serverside and won't crash the page/app
+const [isPending, StartTransition] = useTransition(); # how we initialize variables and naming convention, and the react hook useTransition we will be using to handle our onClick
+  #useTransition takes care of handling the error and loading state properly
+const [success, setSuccess] = useState(false); #used for success message and loading state with a boolean value, how it handles onClick below
+<button className="btn btn-primary" onClick={() => {
+        setSuccess(false);
+        startTransition(async () => {
+          await incrementProductQuantity(productId);
+          setSuccess(true);
+        }) #how we implemented the onClick handling with startTransition function, which will increment or add product, then setSuccess to (true) so we can show a success message
+      </button> #placed following logic below to display success message or loading spinner after our button
+      {isPending && <span className="loading loading-spinner loading-md " />}
+      {!isPending && success && (
+        <span className="text-success">Added to Cart!</span>
+      )}
 
 
 

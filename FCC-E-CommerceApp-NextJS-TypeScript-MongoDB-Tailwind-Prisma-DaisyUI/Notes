@@ -318,6 +318,9 @@ export async function getCart() {
 } #will fetch a cart, if it exists, add products/items, else return null
 
 2:40:00========================================================================================================================================================================================================================
+export type CartWithProducts = Prisma.CartGetPayload<{
+  include: { items: { include: { product: true } } };
+}>; #will allow us to use our cart in our server components
 
 
 

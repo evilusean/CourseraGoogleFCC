@@ -2,9 +2,13 @@
 
 interface AddToCartButtonProps {
   productId: string;
+  incrementProductQuantity: (ProductId: string) => Promise<void>;
 }
 
-export default function AddToCartButton({ productId }: AddToCartButtonProps) {
+export default function AddToCartButton({
+  productId,
+  incrementProductQuantity,
+}: AddToCartButtonProps) {
   return (
     <div className="flex items-center gap-2">
       <button className="btn btn-primary" onClick={() => {}}>

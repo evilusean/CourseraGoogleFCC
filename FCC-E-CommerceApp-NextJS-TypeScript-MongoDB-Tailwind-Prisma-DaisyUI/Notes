@@ -354,9 +354,12 @@ It should also create a cookie, F12 -> Application Tab -> Cookies to test, how t
 We are going to need to figure out a way to automatically delete a cart after a certain duration so we don't get too many carts stored up from AFK carts
 
 3:00:00=========================================================================================================================================================================================================================
+He deleted both cart and cartitems in DB, everything still worked, tested race conditions by double clicking, simply added a cart item and increased the quantity to 2
+now it's time to add a navbar and footer so we can navigate between pages
+src / app / 'Navbar' / 'Navbar.tsx'
+we want our Navbar to be available for every page on our webapp so we put the <Navbar> component in the app / 'layout.tsx' 
 
-
-
+3:10:00=========================================================================================================================================================================================================================
 
 
 

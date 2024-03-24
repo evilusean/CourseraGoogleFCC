@@ -360,6 +360,16 @@ src / app / 'Navbar' / 'Navbar.tsx'
 we want our Navbar to be available for every page on our webapp so we put the <Navbar> component in the app / 'layout.tsx' 
 
 3:10:00=========================================================================================================================================================================================================================
+Added a search to the navbar, we need to use a server action to do our search, since our navbar isn't a 'use client' component, we can put the server action in the navbar directly
+async function searchProducts(formData: FormData) {
+    "use server";
+    const searchQuery = formData.get("searchQuery")?.toString();
+    if (searchQuery) {
+        redirect("/search?query=" + searchQuery); 
+    } #will redirect the form data to the URL+/search?query=<whatever you typed in search>
+doesn't require any JS, so our search will work even without being a client side JS component, in order to maintain navbar as a server component created in app / Navbar / 'ShoppingCartButton.tsx' in order to add JS
+
+
 
 
 

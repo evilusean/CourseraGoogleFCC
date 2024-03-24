@@ -9,6 +9,8 @@ server side rendering - good for SEO(search engine optimization) - all data avai
 search functionality 
 responsive design - changes based on screen size
 tailwind css
+Cookies - will store cart details and authentication 
+
 
 npx create-next-app@latest
 typescript: yes / eslint: yes / ESLint: yes / TailwindCSS: yes / src/directory: yes / AppRouter: yes / import alias: no
@@ -323,11 +325,35 @@ export type CartWithProducts = Prisma.CartGetPayload<{
 }>; #will allow us to use our cart in our server components
 
 2:50:00========================================================================================================================================================================================================================
-We need to use startTransition(()) so if an error occurs, it will stay serverside and won't crash the page/app
+We need to use startTransition(()) hook so if an error occurs, it will stay serverside and won't crash the page/app
+const [isPending, StartTransition] = useTransition(); # how we initialize variables and naming convention, and the react hook useTransition we will be using to handle our onClick
+  #useTransition takes care of handling the error and loading state properly
+const [success, setSuccess] = useState(false); #used for success message and loading state with a boolean value, how it handles onClick below
+<button className="btn btn-primary" onClick={() => {
+        setSuccess(false);
+        startTransition(async () => {
+          await incrementProductQuantity(productId);
+          setSuccess(true);
+        }) #how we implemented the onClick handling with startTransition function, which will increment or add product, then setSuccess to (true) so we can show a success message
+      </button> #placed following logic below to display success message or loading spinner after our button
+      {isPending && <span className="loading loading-spinner loading-md " />}
+      {!isPending && success && (
+        <span className="text-success">Added to Cart!</span>
+      )}
 
+Tested our add to cart feature, works, code looks pretty rough in db though:
+_id
+65ff378b8a6a37cea5671cc2
+productId
+65fd58ee90b4cfa1d26c644a
+quantity
+1
+cartId
+65ff378a8a6a37cea5671cc1
+It should also create a cookie, F12 -> Application Tab -> Cookies to test, how the real ecommerce sites do it(use cookies)
+We are going to need to figure out a way to automatically delete a cart after a certain duration so we don't get too many carts stored up from AFK carts
 
-
-
+3:00:00=========================================================================================================================================================================================================================
 
 
 

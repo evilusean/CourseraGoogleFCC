@@ -12,6 +12,17 @@ export default function Navbar() {
             Flowmazon
           </Link>
         </div>
+        <div className="flex-none gap-2">
+          <form>
+            <div className="form-control">
+              <input
+                name="searchQuery"
+                placeholder="Search"
+                className="input input-bordered w-full min-w-[100px]"
+              />
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );

@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../assets/logo.png";
 import { redirect } from "next/navigation";
+import ShoppingCartButton from "./ShoppingCartButton";
+import { getCart } from "../lib/db/cart";
 
 async function searchProducts(formData: FormData) {
   "use server";

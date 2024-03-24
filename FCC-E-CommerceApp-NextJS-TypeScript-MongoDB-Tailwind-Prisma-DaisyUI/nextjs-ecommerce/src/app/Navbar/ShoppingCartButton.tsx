@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ShoppingCart } from "../lib/db/cart";
 import { formatPrice } from "../lib/format";
 
@@ -38,6 +39,11 @@ export default function ShoppingCartButton({ cart }: ShoppingCartButtonProps) {
           <span className="text-info">
             Subtotal: {formatPrice(cart?.subtotal || 0)}
           </span>
+          <div className="card-actions">
+            <Link href="/cart" className="btn btn-primary btn-block">
+              View Cart
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -7,8 +7,9 @@ export default function Navbar() {
     <div className="bg-base-100">
       <div className="navbar max-w-7xl m-auto flex-col sm:flex-row gap-2">
         <div className="flex-1">
-          <Link href="/">
+          <Link href="/" className="btn btn-ghost text-xl normal-case">
             <Image src={logo} height={40} width={40} alt="Flowmazon logo" />
+            Flowmazon
           </Link>
         </div>
       </div>

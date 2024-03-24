@@ -369,10 +369,11 @@ async function searchProducts(formData: FormData) {
     } #will redirect the form data to the URL+/search?query=<whatever you typed in search>
 doesn't require any JS, so our search will work even without being a client side JS component, in order to maintain navbar as a server component created in app / Navbar / 'ShoppingCartButton.tsx' in order to add JS
 
-3:20:00=========================================================================================================================================================================================================================
+3:21:00=========================================================================================================================================================================================================================
+We added a dropdown link to our cart page, now we need to actually set up the "/cart" page
+src / app / cart / 'page.tsx'
 
-
-
+3:30:00=========================================================================================================================================================================================================================
 
 
 

@@ -4,4 +4,6 @@ interface ShoppingCartButtonProps {
   cart: ShoppingCart;
 }
 
-export default function ShoppingCartButton() {}
+export default function ShoppingCartButton({ cart }: ShoppingCartButtonProps) {
+  return <div className="dropdown dropdown-end"></div>;
+}

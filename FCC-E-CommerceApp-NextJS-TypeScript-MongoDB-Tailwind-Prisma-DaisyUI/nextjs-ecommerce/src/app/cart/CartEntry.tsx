@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { CartItemithProduct } from "../lib/db/cart";
+import Link from "next/link";
 
 interface CartEntryProps {
   cartItem: CartItemithProduct;
@@ -12,7 +13,7 @@ export default function CartEntry({
 }: CartEntryProps) {
   return (
     <div>
-      <div className="fkex flex-wrap items-center gap-3">
+      <div className="flex flex-wrap items-center gap-3">
         <Image
           src={product.imageUrl}
           alt={product.name}
@@ -20,6 +21,11 @@ export default function CartEntry({
           height={200}
           className="rounded-lg"
         />
+        <div>
+          <Link href={"/products/" + product.id} className="font-bold">
+            {product.name}
+          </Link>
+        </div>
       </div>
       <div className="divider" />
     </div>

@@ -396,6 +396,10 @@ created new 'actions.ts' in src / app / cart / 'actions.ts' #created for logic i
 The next step is to add user authentication so the user can log in and maintain the same cart, to handle authentication we are using 'nextauth.js'
 Next-Auth.js.org(official docs):
 https://next-auth.js.org/
+There are many different providers you can choose to log in from(da gram, linkedIn, FB, google, etc) we are just going to set up the google provider
+https://next-auth.js.org/providers/google
+It has different DB adapters you can use, there is one for prisma and mongodb, makes it easy to store session and user data in mongodb
+ https://next-auth.js.org/adapters
 
 
 

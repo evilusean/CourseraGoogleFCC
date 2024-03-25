@@ -4,6 +4,7 @@ import Image from "next/image";
 import { CartItemithProduct } from "../lib/db/cart";
 import Link from "next/link";
 import { formatPrice } from "../lib/format";
+import { useTransition } from "react";
 
 interface CartEntryProps {
   cartItem: CartItemithProduct;
@@ -14,6 +15,7 @@ export default function CartEntry({
   cartItem: { product, quantity },
   setProductQuantity,
 }: CartEntryProps) {
+  const [isPending, startTransition] = useTransition();
   const quantityOptions: JSX.Element[] = [];
   for (let i = 1; i <= 99; i++) {
     quantityOptions.push(
@@ -42,7 +44,12 @@ export default function CartEntry({
             <select
               className="select select-bordered w-full max-w-[80px]"
               defaultValue={quantity}
-              onChange={(e) => {}}
+              onChange={(e) => {
+                const newQuantity = parseInt(e.currentTarget.value);
+                startTransition(async () => {
+                  await setProductQuantity(product.id, newQuantity);
+                });
+              }}
             >
               {quantityOptions}
             </select>

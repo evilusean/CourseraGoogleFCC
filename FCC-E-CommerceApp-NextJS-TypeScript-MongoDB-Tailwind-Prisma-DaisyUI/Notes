@@ -374,7 +374,16 @@ We added a dropdown link to our cart page, now we need to actually set up the "/
 src / app / cart / 'page.tsx'
 
 3:30:00=========================================================================================================================================================================================================================
+<div className="flex flex-wrap items-center gap-3"> #flex-wrap will cause it to start a second row if it can not fit
+const quantityOptions: JSX.Element[] = [];
+  for (let i = 1; i <= 99; i++) {
+    quantityOptions.push(
+      <option value={i} key={i}>
+        {i}
+      </option>,
+    ); #for loop to create 99 options but a switch aint one
 
+3:40:00=========================================================================================================================================================================================================================
 
 
 

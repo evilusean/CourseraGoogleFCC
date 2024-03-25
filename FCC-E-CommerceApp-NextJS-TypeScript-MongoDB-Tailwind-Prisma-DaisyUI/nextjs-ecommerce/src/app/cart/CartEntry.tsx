@@ -37,7 +37,9 @@ export default function CartEntry({
           <div>Price: {formatPrice(product.price)}</div>
           <div className="my-1 fkex items-center gap-2">
             Quantity:
-            <select>{quantityOptions}</select>
+            <select className="select select-bordered w-full max-w-[80px]">
+              {quantityOptions}
+            </select>
           </div>
           <div className="flex items-center gap-3">
             Total: {formatPrice(product.price * quantity)}

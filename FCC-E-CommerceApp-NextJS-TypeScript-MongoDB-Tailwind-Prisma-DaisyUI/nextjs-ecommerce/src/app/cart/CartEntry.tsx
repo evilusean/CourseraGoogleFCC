@@ -56,8 +56,10 @@ export default function CartEntry({
           </div>
           <div className="flex items-center gap-3">
             Total: {formatPrice(product.price * quantity)}
+            {isPending && (
+              <span className="loading loading-spinner loading-sm" />
+            )}
           </div>
-          {isPending && <span className="loading loading-spinner loading-sm" />}
         </div>
       </div>
       <div className="divider" />

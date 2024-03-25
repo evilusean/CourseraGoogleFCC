@@ -7,10 +7,12 @@ import { formatPrice } from "../lib/format";
 
 interface CartEntryProps {
   cartItem: CartItemithProduct;
+  setProductQuantity: (productId: string, quantity: number) => Promise<void>;
 }
 
 export default function CartEntry({
   cartItem: { product, quantity },
+  setProductQuantity,
 }: CartEntryProps) {
   const quantityOptions: JSX.Element[] = [];
   for (let i = 1; i <= 99; i++) {

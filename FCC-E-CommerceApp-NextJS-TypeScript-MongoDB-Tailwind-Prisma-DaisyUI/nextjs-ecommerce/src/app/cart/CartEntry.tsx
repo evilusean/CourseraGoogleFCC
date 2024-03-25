@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { CartItemithProduct } from "../lib/db/cart";
 import Link from "next/link";
+import { formatPrice } from "../lib/format";
 
 interface CartEntryProps {
   cartItem: CartItemithProduct;
@@ -25,6 +26,10 @@ export default function CartEntry({
           <Link href={"/products/" + product.id} className="font-bold">
             {product.name}
           </Link>
+          <div>Price: {formatPrice(product.price)}</div>
+          <div className="flex items-center gap-3">
+            Total: {formatPrice(product.price * quantity)}
+          </div>
         </div>
       </div>
       <div className="divider" />

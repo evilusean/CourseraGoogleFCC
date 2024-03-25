@@ -400,10 +400,14 @@ There are many different providers you can choose to log in from(da gram, linked
 https://next-auth.js.org/providers/google
 It has different DB adapters you can use, there is one for prisma and mongodb, makes it easy to store session and user data in mongodb
  https://next-auth.js.org/adapters
+too implement google you need a project in the google cloud:
+https://console.cloud.google.com/welcome
+Create a new project, after that go to top left dropdown -> API's -> Credentials -> 0Auth consent Screen -> Create -> External 
+Authorized redirect URI(What nextJS expects):
+http://localhost:3000/api/auth/callback/google
+Added Credentials(GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET) to .env file
 
-
-
-
+4:00:00==========================================================================================================================================================================================================================
 
 
 

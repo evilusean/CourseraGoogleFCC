@@ -408,6 +408,7 @@ http://localhost:3000/api/auth/callback/google
 Added Credentials(GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET) to .env file
 
 4:00:00==========================================================================================================================================================================================================================
+also added 'NEXTAUTH_URL="http://localhost:3000"' and NEXTAUTH_SECRET to .env file, secret can be any alphanumeric mix of characters, used for encrypting session cookie, both names are required to be the same, else error
 
 
 

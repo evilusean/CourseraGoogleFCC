@@ -428,6 +428,41 @@ import SessionProvider from "./SessionProvider"; #will also need to change the i
 4:10:00=========================================================================================================================================================================================================================
 Next we need to add models for our prisma schema for authentication in the DB 'schema.prisma' file:
 https://authjs.dev/reference/adapter/prisma?_gl=1*18v7nsv*_gcl_au*MTY1NTY5MzU1Ni4xNzExMzg4Mjkx
+model User #contains email account and username and image
+model Account #stores google account in a seperate DB
+model session #when the user is logged on, alternative to JWT authentication, when a user is logged in there is a session entry created in our DB, contains user ID and expiration date
+now we need to connect a shopping cart to a user with their unique userId, copied and pasted models, made some changes to model cart
+now we need to push our changes to the DB again, 'npx prisma db push', added sessions users, verificationtokens, and accounts models to our MongoDB
+after that we need to regenerate our db 'npx prisma generate'
+next we want to add a button in our navbar that shows the profile image of our user when they are logged in and a dropdown menu for them to logout
+src / app / Navbar / 'UserMenuButton.tsx'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

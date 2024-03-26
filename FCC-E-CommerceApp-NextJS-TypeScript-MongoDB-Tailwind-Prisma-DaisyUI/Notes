@@ -9,7 +9,7 @@ server side rendering - good for SEO(search engine optimization) - all data avai
 search functionality 
 responsive design - changes based on screen size
 tailwind css
-Cookies - will store cart details and authentication 
+Cookies - will store cart details and authentication, NextAuth will send encrypted cookie in browser of user to verify the session in database
 
 
 npx create-next-app@latest
@@ -438,9 +438,9 @@ next we want to add a button in our navbar that shows the profile image of our u
 src / app / Navbar / 'UserMenuButton.tsx'
 
 4:20:00===========================================================================================================================================================================================================================
+tabIndex={0} #allows us to navigate with 'tab' in our UI
 
-
-
+4:30:00===========================================================================================================================================================================================================================
 
 
 

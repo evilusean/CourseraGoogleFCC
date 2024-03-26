@@ -437,7 +437,7 @@ after that we need to regenerate our db 'npx prisma generate'
 next we want to add a button in our navbar that shows the profile image of our user when they are logged in and a dropdown menu for them to logout
 src / app / Navbar / 'UserMenuButton.tsx'
 
-
+4:20:00===========================================================================================================================================================================================================================
 
 
 

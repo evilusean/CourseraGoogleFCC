@@ -426,8 +426,8 @@ export { SessionProvider as default } from "next-auth/react"; #takes in the defa
 import SessionProvider from "./SessionProvider"; #will also need to change the import in our 'layout.tsx'
 
 4:10:00=========================================================================================================================================================================================================================
-
-
+Next we need to add models for our prisma schema for authentication in the DB 'schema.prisma' file:
+https://authjs.dev/reference/adapter/prisma?_gl=1*18v7nsv*_gcl_au*MTY1NTY5MzU1Ni4xNzExMzg4Mjkx
 
 
 

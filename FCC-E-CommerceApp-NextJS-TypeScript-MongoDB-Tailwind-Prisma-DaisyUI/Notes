@@ -409,10 +409,23 @@ Added Credentials(GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET) to .env file
 
 4:00:00==========================================================================================================================================================================================================================
 also added 'NEXTAUTH_URL="http://localhost:3000"' and NEXTAUTH_SECRET to .env file, secret can be any alphanumeric mix of characters, used for encrypting session cookie, both names are required to be the same, else error
+src / app / 'api' / 'auth' / '[...nextauth]' / 'route.ts' the way next auth works is we have to set up a route handler or an API endpoint, under a very specific URL, every authentication request will go threw this URL 
+above we created 3 new folders and one new file 'route.ts' for the route handler, the '[...nextauth]' is called a catch-all statement, and can handle many different routes and not just a single one
+import prisma from "@/app/lib/db/prisma";
+import { env } from "@/app/lib/env";
+import { PrismaAdapter } from "@auth/prisma-adapter";
+import { NextAuthOptions } from "next-auth";
+import { Adapter } from "next-auth/adapters";
+import NextAuth from "next-auth/next";
+import GoogleProvider from "next-auth/providers/google";
+# lots of imports for a short file
+Next we need to go into our src / 'layout.tsx' and set it up so it will use our session provider for our logged in user is available to our app, 
+import { SessionProvider } from "next-auth/react"; #wrapped everything in our body with the <SessionProvider> component
+"use client"; #created a new 'SessionProvider.tsx' and added one line below to turn our component into a client side component
+export { SessionProvider as default } from "next-auth/react"; #takes in the default SessionProvider and exports it as a client side component
+import SessionProvider from "./SessionProvider"; #will also need to change the import in our 'layout.tsx'
 
-
-
-
+4:10:00=========================================================================================================================================================================================================================
 
 
 

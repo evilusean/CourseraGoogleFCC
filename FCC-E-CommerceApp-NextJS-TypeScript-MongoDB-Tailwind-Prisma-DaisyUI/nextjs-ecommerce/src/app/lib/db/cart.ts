@@ -78,3 +78,24 @@ export async function createCart(): Promise<ShoppingCart> {
     subtotal: 0,
   };
 }
+
+export async function mergeAnonymousCartIntoUserCart(userId: string) {
+  const localCartId = cookies().get("localCartId")?.value;
+
+  const localCart = localCartId
+    ? await prisma.cart.findUnique({
+        where: {
+          id: localCartId,
+        },
+        include: { items: true },
+      })
+    : null;
+  if (!localCart) return;
+
+  const userCart = await prisma.cart.findFirst({
+    where: { userId },
+    include: { items: true },
+  });
+
+  await prisma.$transaction(async (tx) => {});
+}

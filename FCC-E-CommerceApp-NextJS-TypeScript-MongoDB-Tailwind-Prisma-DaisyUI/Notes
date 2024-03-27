@@ -442,12 +442,31 @@ tabIndex={0} #allows us to navigate with 'tab' in our UI
 
 4:30:00===========================================================================================================================================================================================================================
 had to fix a bug for some reason '@' isn't working for our app, need to use '../'
+Now that we have authentication sorted out, we can now add some protection to our 'add-product' page, so that not anyone can add a product to our DB
+session.user.id = user.id; #was throwing an error, in order to fix we need to...
+go into root directory, above src and create a new folder called '@types' and create a new file called 'next-auth.d.ts' #d.ts files are typescript decoration files, that allow us to make changes to existing types
+declare module "next-auth" {
+  interface Session {
+    user: {
+      id: string;
+    } & DefaultSession["user"];
+  }
+} #will give us a user id of type string and all the other values available to the user with DefaultSession["user"]
+ERROR!: '=>' expected. 
+  callbacks: {
+    session: ({session, user}) {
+      session.user.id = user.id;
+      return session;
+    },
+  }, #asked AI and it told me to replace above with below, deviated from tutorial, but error is gone
+callbacks: {
+    session: ({ session, user }: { session: any; user: any }) => {
+      session.user.id = user.id;
+      return session;
+    },
+  },
 
-
-
-
-
-
+4:40:00=========================================================================================================================================================================================================================
 
 
 

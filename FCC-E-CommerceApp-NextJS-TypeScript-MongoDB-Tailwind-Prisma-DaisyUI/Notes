@@ -441,7 +441,7 @@ src / app / Navbar / 'UserMenuButton.tsx'
 tabIndex={0} #allows us to navigate with 'tab' in our UI
 
 4:30:00===========================================================================================================================================================================================================================
-
+had to fix a bug for some reason '@' isn't working for our app, need to use '../'
 
 
 

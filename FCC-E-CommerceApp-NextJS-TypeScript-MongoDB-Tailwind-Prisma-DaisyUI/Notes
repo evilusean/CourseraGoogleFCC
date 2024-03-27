@@ -453,10 +453,20 @@ declare module "next-auth" {
   }
 } #will give us a user id of type string and all the other values available to the user with DefaultSession["user"]
 ERROR!: '=>' expected. 
+  callbacks: {
+    session: ({session, user}) {
+      session.user.id = user.id;
+      return session;
+    },
+  }, #asked AI and it told me to replace above with below, deviated from tutorial, but error is gone
+callbacks: {
+    session: ({ session, user }: { session: any; user: any }) => {
+      session.user.id = user.id;
+      return session;
+    },
+  },
 
-
-
-
+4:40:00=========================================================================================================================================================================================================================
 
 
 

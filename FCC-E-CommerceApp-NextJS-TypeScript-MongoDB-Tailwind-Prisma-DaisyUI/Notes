@@ -483,8 +483,8 @@ function mergeCartItems(...cartItems: CartItem[][]) {} # will take in ...cartIte
 } #goes through each cart item and combines the items
 
 4:50:00========================================================================================================================================================================================================================
-
-
+had a bug, fixed it, '->' is incorrect, '=>' is correct, was late, was tired, fixed now
+cookies().set("localCartId", ""); #this is how you delete a cookie in NextJS
 
 
 

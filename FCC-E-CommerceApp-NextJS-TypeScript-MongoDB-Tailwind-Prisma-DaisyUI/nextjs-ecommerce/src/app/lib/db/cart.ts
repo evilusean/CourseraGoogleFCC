@@ -127,6 +127,10 @@ export async function mergeAnonymousCartIntoUserCart(userId: string) {
         },
       });
     }
+    await tx.cart.delete({
+      where: { id: localCart.id },
+    });
+    cookies().set("localCartId", "");
   });
 }
 

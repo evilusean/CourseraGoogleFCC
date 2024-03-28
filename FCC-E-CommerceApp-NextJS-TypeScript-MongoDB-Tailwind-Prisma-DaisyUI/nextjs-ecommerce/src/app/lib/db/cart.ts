@@ -113,6 +113,19 @@ export async function mergeAnonymousCartIntoUserCart(userId: string) {
         })),
       });
     } else {
+      await tx.cart.create({
+        data: {
+          userId,
+          items: {
+            createMany: {
+              data: localCart.items.map((item) => ({
+                productId: item.productId,
+                quantity: item.quantity,
+              })),
+            },
+          },
+        },
+      });
     }
   });
 }

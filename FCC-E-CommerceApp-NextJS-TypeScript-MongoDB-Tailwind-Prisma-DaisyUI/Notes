@@ -467,6 +467,22 @@ callbacks: {
   },
 
 4:40:00=========================================================================================================================================================================================================================
+now we need to implement the logic that merges the anonymous cart with the user cart when you log in, like how it works in amazon
+function mergeCartItems(...cartItems: CartItem[][]) {} # will take in ...cartItems as an array of an array, so any number of carts can be merged, 2, 3 etc
+ return cartItems.reduce((acc, items) => {
+    items.forEach((item) => {
+      const existingItem = acc.find((i) => i.productId === item.productId);
+      if (existingItem) {
+        existingItem.quantity += item.quantity;
+      } else {
+        acc.push(item);
+      }
+    });
+    return acc;
+  }, [] as CartItem[]);
+} #goes through each cart item and combines the items
+
+4:50:00========================================================================================================================================================================================================================
 
 
 

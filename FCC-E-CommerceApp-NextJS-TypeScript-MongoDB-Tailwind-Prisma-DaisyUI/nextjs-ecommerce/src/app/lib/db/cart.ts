@@ -99,21 +99,20 @@ export async function mergeAnonymousCartIntoUserCart(userId: string) {
 
   await prisma.$transaction(async (tx) => {
     if (userCart) {
-      const mergedCartItems = mergeCartItems(localCart.items, userCart.items)
-    
+      const mergedCartItems = mergeCartItems(localCart.items, userCart.items);
+
       await tx.cartItem.deleteMany({
-        where: {cartId: userCart.id }
-      })
+        where: { cartId: userCart.id },
+      });
 
       await tx.cartItem.createMany({
-        data: mergedCartItems.map(item -> ({
+        data: mergedCartItems.map((item) => ({
           cartId: userCart.id,
           productId: item.productId,
           quantity: item.quantity,
-        }))
-      })
+        })),
+      });
     } else {
-
     }
   });
 }

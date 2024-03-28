@@ -485,6 +485,11 @@ function mergeCartItems(...cartItems: CartItem[][]) {} # will take in ...cartIte
 4:50:00========================================================================================================================================================================================================================
 had a bug, fixed it, '->' is incorrect, '=>' is correct, was late, was tired, fixed now
 cookies().set("localCartId", ""); #this is how you delete a cookie in NextJS
+after creating our merge function, we want to call it right when the user has logged in, also how amazon handles it
+if an error is thrown even at the end of the tx(transaction), it will not go threw, even though it is thrown after they all go threw and the merge will fail
+whenever you fetch cookies, the route that uses that session is automatically dynamically rendered
+
+5:00:00========================================================================================================================================================================================================================
 
 
 

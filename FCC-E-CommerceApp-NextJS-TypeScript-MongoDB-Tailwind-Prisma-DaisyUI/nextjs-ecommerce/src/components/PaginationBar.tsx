@@ -23,4 +23,6 @@ export default function PaginationBar({
       ></Link>,
     );
   }
+
+  return <div className="join">{numberedPageItems}</div>;
 }

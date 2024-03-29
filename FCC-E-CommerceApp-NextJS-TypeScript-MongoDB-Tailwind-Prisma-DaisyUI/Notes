@@ -503,8 +503,13 @@ src / app / components / 'PaginationBar.tsx'
 we don't want to show all 50 items on the same page, we want to create a subset that calculates the page numbers
 const maxPage = Math.min(totalPages, Math.max(currentPage + 4, 10)) #.min returns smallest of values passed, .max opposite, currentPage +4 will be max 13=17, and on page 1 will show pages up until 10 or else it would be small
   if there is no page +4 then it will show total pages instead
+for (let page = minPage; page <= maxPage; page++) {
+    numberedPageItems.push(
+        <Link href={"/?page=" + page} key={page} className={`join-item btn ${currentPage === page ? "btn-active pointer-events-none" : ""}`}>
+#we declared numberedPageItems above, for each page it will push a link that has the page number, with a key, with a special daisy UI classname `join-item` combining them into a single bar,
+  if the current page is = page(the one you are on) it will become unclickable, else ""(nothing)
 
-
+5:10:00===========================================================================================================================================================================================================================
 
 
 

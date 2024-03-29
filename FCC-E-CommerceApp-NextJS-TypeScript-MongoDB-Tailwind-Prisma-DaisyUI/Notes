@@ -487,14 +487,29 @@ had a bug, fixed it, '->' is incorrect, '=>' is correct, was late, was tired, fi
 cookies().set("localCartId", ""); #this is how you delete a cookie in NextJS
 after creating our merge function, we want to call it right when the user has logged in, also how amazon handles it
 if an error is thrown even at the end of the tx(transaction), it will not go threw, even though it is thrown after they all go threw and the merge will fail
-whenever you fetch cookies, the route that uses that session is automatically dynamically rendered
+'cart.ts' whenever you fetch cookies, the route that uses that session is automatically dynamically rendered
 
 5:00:00========================================================================================================================================================================================================================
+When we show the cart of the user, the data is different for each user, so we don't want to cache our data on our backend - whenever you use cookies, the page will be rendered dynamically automatically
+  why we don't need to add revalidate 0 to our cart page, after running 'npm run build' the page will show a lambda symbol which shows that it is not cached
+'npm run build' #will build the code for production mode
+For the next part we will implement pagination, so we won't show all our products at once - future sean will need to add new products - future shawn problem, he used a for loop in 'page.tsx' of add-product
+for (let i = 0; i < 50, i++) {
+  await prisma.product.create({
+  data: {name, description, imageUrl, price }, 
+});
+}
+src / app / components / 'PaginationBar.tsx' 
+we don't want to show all 50 items on the same page, we want to create a subset that calculates the page numbers
+const maxPage = Math.min(totalPages, Math.max(currentPage + 4, 10)) #.min returns smallest of values passed, .max opposite, currentPage +4 will be max 13=17, and on page 1 will show pages up until 10 or else it would be small
+  if there is no page +4 then it will show total pages instead
+for (let page = minPage; page <= maxPage; page++) {
+    numberedPageItems.push(
+        <Link href={"/?page=" + page} key={page} className={`join-item btn ${currentPage === page ? "btn-active pointer-events-none" : ""}`}>
+#we declared numberedPageItems above, for each page it will push a link that has the page number, with a key, with a special daisy UI classname `join-item` combining them into a single bar,
+  if the current page is = page(the one you are on) it will become unclickable, else ""(nothing)
 
-
-
-
-
+5:10:00===========================================================================================================================================================================================================================
 
 
 

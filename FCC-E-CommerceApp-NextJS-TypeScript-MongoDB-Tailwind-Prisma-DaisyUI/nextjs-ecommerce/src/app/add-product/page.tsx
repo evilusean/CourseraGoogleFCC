@@ -25,6 +25,12 @@ async function addProduct(formData: FormData) {
     throw new Error("Missing required fields");
   }
 
+  // for (let i = 0; i < 50; i++) {
+  //   await prisma.product.create({
+  //   data: {name, description, imageUrl, price },
+  // })
+  // }
+
   await prisma.product.create({
     data: {
       name,

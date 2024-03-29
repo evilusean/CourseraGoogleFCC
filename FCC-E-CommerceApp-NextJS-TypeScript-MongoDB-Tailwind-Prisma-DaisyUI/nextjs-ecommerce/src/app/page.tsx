@@ -2,6 +2,7 @@ import Image from "next/image";
 import prisma from "./lib/db/prisma";
 import ProductCard from "@/components/ProductCard";
 import Link from "next/link";
+import PaginationBar from "@/components/PaginationBar";
 
 export default async function Home() {
   const products = await prisma.product.findMany({
@@ -37,6 +38,7 @@ export default async function Home() {
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
+      <PaginationBar currentPage={3} totalPages={99} />
     </div>
   );
 }

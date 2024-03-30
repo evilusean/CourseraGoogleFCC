@@ -591,9 +591,10 @@ export default async function Navbar() {
   const session = await getServerSession(authOptions);
   const cart = await getCart();
 <ShoppingCartButton cart={cart} />
-
-
-
+FIXED(maybe): maybe autocomplete? was found in 'cart.ts' idk why I put that there, I see null reasON, code still works
+export async function getCart(): Promise<ShoppingCart | null> {
+  const session = await getServerSession(authOptions);
+Just going to ignore for now, don't want to break anything before I take pictures so I can git a job and escape this frozen decadent sh!thole and never have to deal with these idiots again
 
 
 

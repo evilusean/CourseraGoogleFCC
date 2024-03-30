@@ -562,12 +562,25 @@ export default async function SearchPage({
   #if no products are found, it will give us a div that says no products found, if there are, it will return them 
 Pagination was not added, added metadata that will update our tab info with the search query
 Features wise the app is completed here, we still need to deploy it, 
-prisma extension is a new feature, 
 
 5:35:00==========================================================================================================================================================================================================================
-
-
-
+prisma extension is a new feature, because we can create anonymous shopping carts in our DB, we might accumulate alot of abandoned carts over time 
+once the cookie is deleted(incognito mode) there is no way to make a connection to the anon shopping cart and the one on DB and retrieve it, they create a new one every time
+we should delete them from time to time, we can check the updated at timestamp together with user id, then we want to delete it
+we can use a relation query to change the cart and update the timestamp
+src / app / cart / actions.ts
+  if (quantity === 0) {
+    if (articleInCart) {
+      await prisma.cart.update({
+        where: { id: cart.id },
+        data: {
+          items: {
+            delete: { id: articleInCart.id },
+          },
+        },
+      });
+    }
+ERROR: Messed up, added 50 naruto figurines, and pagination bar isn't showing any numbers for each page to click, they 'work' but don't show anything
 
 
 

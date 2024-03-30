@@ -581,7 +581,7 @@ src / app / cart / actions.ts
       });
     }
 ERROR: Messed up, added 50 naruto figurines, and pagination bar isn't showing any numbers for each page to click, they 'work' but don't show anything
-
+  shadow clone no jutsu'ed myself straight into an error, FIXED: forgot {page} 
 
 
 

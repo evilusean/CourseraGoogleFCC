@@ -22,9 +22,16 @@ export async function setProductQuantity(productId: string, quantity: number) {
     }
   } else {
     if (articleInCart) {
-      await prisma.cartItem.update({
-        where: { id: articleInCart.id },
-        data: { quantity },
+      await prisma.cart.update({
+        where: { id: cart.id },
+        data: {
+          items: {
+            update: {
+              where: { id: articleInCart.id },
+              data: { quantity },
+            },
+          },
+        },
       });
     } else {
       await prisma.cartItem.create({

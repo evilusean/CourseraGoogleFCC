@@ -19,10 +19,6 @@ export async function setProductQuantity(productId: string, quantity: number) {
           },
         },
       });
-
-      await prisma.cartItem.delete({
-        where: { id: articleInCart.id },
-      });
     }
   } else {
     if (articleInCart) {

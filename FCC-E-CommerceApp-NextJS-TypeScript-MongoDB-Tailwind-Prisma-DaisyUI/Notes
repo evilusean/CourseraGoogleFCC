@@ -518,8 +518,22 @@ return <div className="join hidden sm:block">{numberedPageItems}</div>; #join is
 created 2 more, one for current page and one for next page
 
 5:15:00===========================================================================================================================================================================================================================
+In our home src / app / 'page.tsx' we need to add a prop for getting the page information to feed into our pagination bar
+interface HomeProps {
+  searchParams: { page: string}
+}
+to avoid magic numbers in your code that will cause later confusesean, store your values in a variable that is aptly named
+const totalItemCount = await prisma.product.count(); # will get an amount of items in DB, that will allow us to create the correct number of pages dynamically
+const totalPages = Math.ceil((totalItemCount - heroItemCount) / pageSize) #will get the correct number of pages, subtract the hero item count(page 1) and divide by page size, math.ceil will round up
+Order of operations: PEMDAS
+We want to skip the items on the first page if we are on the second, so we will add the skip to our prisma query
+const products = await prisma.product.findMany({
+    orderBy: { id: "desc" },
+    skip: (currentPage - 1) * pageSize + (currentPage === 1 ? 0 : heroItemCount) #if we are on the first page, it won't skip any, if we are on any page it will subtract 1 from current page and remove that many items * pagesize
+    take: pageSize + (currentPage === 1? heroItemCount : 0) #if you are on page one, it will take the heroitemcount from the pagesize, and if not, it will return all items
+});
 
-
+5:25:00===========================================================================================================================================================================================================================
 
 
 

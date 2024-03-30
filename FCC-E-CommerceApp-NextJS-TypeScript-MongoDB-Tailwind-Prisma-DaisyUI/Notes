@@ -560,10 +560,11 @@ export default async function SearchPage({
   );
 }#prisma searches our product DB 'OR' keyword allows us to find any products that match any of the categories we give it, mode: "insensitive"  #doesn't need to be case sensitive, ID has a timestamp, will order them by date
   #if no products are found, it will give us a div that says no products found, if there are, it will return them 
+Pagination was not added, added metadata that will update our tab info with the search query
+Features wise the app is completed here, we still need to deploy it, 
+prisma extension is a new feature, 
 
- 
-
-
+5:35:00==========================================================================================================================================================================================================================
 
 
 

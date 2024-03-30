@@ -510,8 +510,14 @@ for (let page = minPage; page <= maxPage; page++) {
   if the current page is = page(the one you are on) it will become unclickable, else ""(nothing)
 
 5:10:00===========================================================================================================================================================================================================================
+After testing, our bar is too large if the screen is too small, we need to make it responsive
+return <div className="join hidden sm:block">{numberedPageItems}</div>; #join is a keyword for the look of our bar, will be hidden by default, small screens will be a block with arrows
+<> </> don't forget fragments, you can not return a div by itself, you must always have a parent element
+<div className="join block sm:hidden">{currentPage > 1 && <Link href={"?page=" + (currentPage - 1)} className="btn join-item"> #below the above code, we will place another div a link that will be hidden on small screens
+  and shown on larger screens, the link will take us to current page -1, so the previous page, if the current page is greater than 1(can't go negative pages)
+created 2 more, one for current page and one for next page
 
-
+5:15:00===========================================================================================================================================================================================================================
 
 
 

@@ -597,5 +597,7 @@ export async function getCart(): Promise<ShoppingCart | null> {
 Just going to ignore for now, don't want to break anything before I take pictures so I can git a job and escape this frozen decadent sh!thole and never have to deal with these brainwashed idiots again(canadians)
 Need to add 7 more products with AI written product descriptseans, so I don't look like a major weeb - an almost universally hated creature - here(sh!thole canada) and Japan
 
+5:40:00=========================================================================================================================================================================================================================
+Next we need to update the other server actions file 'actions.ts' for our products
 
 

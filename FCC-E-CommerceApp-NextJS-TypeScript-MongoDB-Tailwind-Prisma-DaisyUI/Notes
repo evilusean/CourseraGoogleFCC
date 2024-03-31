@@ -599,5 +599,6 @@ Need to add 7 more products with AI written product descriptseans, so I don't lo
 
 5:40:00=========================================================================================================================================================================================================================
 Next we need to update the other server actions file 'actions.ts' for our products
-
+and finally our 'cart.ts' file in lib
+everytime you get a new ORM/language/model, make sure you get an extension that allows you to get autocomplete , we won't have a tutorial holding our hand next time when we git a job
 

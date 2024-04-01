@@ -649,10 +649,11 @@ add the below code before importing to vercel for production:
 }
 it happens because the way vercel tries to cache the prisma client
 
-ERROR: 
+ERROR while trying to deploy to vercel: 
 Failed to compile.
 src/app/api/auth/[...nextauth]/route.ts
 Type error: Route "src/app/api/auth/[...nextauth]/route.ts" does not match the required types of a Next.js Route.
   "authOptions" is not a valid Route export field.
 Error: Command "npm run build" exited with 1
-
+I've been at this for ~6hours and have made no progress, if I remove the 'export' at start of below code, then I get another error, that I didn't export it to my navbar and a bunch of other files, 
+export const authOptions: NextAuthOptions = {

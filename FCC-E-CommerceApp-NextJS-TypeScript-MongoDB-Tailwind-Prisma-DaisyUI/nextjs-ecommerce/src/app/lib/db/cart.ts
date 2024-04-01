@@ -1,5 +1,5 @@
 import { cookies } from "next/headers";
-import prisma from "./prisma";
+import prismaBase from "./prisma";
 import { Cart, CartItem, Prisma } from "@prisma/client";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
@@ -23,14 +23,14 @@ export async function getCart(): Promise<ShoppingCart | null> {
   let cart: CartWithProducts | null = null;
 
   if (session) {
-    cart = await prisma.cart.findFirst({
+    cart = await prismaBase.cart.findFirst({
       where: { userId: session.user.id },
       include: { items: { include: { product: true } } },
     });
   } else {
     const localCartId = cookies().get("localCartId")?.value;
     cart = localCartId
-      ? await prisma.cart.findUnique({
+      ? await prismaBase.cart.findUnique({
           where: {
             id: localCartId,
           },
@@ -58,13 +58,13 @@ export async function createCart(): Promise<ShoppingCart> {
   let newCart: Cart;
 
   if (session) {
-    newCart = await prisma.cart.create({
+    newCart = await prismaBase.cart.create({
       data: {
         userId: session.user.id,
       },
     });
   } else {
-    newCart = await prisma.cart.create({
+    newCart = await prismaBase.cart.create({
       data: {},
     });
 
@@ -83,7 +83,7 @@ export async function mergeAnonymousCartIntoUserCart(userId: string) {
   const localCartId = cookies().get("localCartId")?.value;
 
   const localCart = localCartId
-    ? await prisma.cart.findUnique({
+    ? await prismaBase.cart.findUnique({
         where: {
           id: localCartId,
         },
@@ -92,12 +92,12 @@ export async function mergeAnonymousCartIntoUserCart(userId: string) {
     : null;
   if (!localCart) return;
 
-  const userCart = await prisma.cart.findFirst({
+  const userCart = await prismaBase.cart.findFirst({
     where: { userId },
     include: { items: true },
   });
 
-  await prisma.$transaction(async (tx) => {
+  await prismaBase.$transaction(async (tx) => {
     if (userCart) {
       const mergedCartItems = mergeCartItems(localCart.items, userCart.items);
 

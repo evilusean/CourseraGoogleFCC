@@ -1,5 +1,5 @@
 import ProductCard from "@/components/ProductCard";
-import prisma from "../lib/db/prisma";
+import prismaBase from "../lib/db/prisma";
 import { Metadata } from "next";
 
 interface SearchPageProps {
@@ -17,7 +17,7 @@ export function generateMetadata({
 export default async function SearchPage({
   searchParams: { query },
 }: SearchPageProps) {
-  const products = await prisma.product.findMany({
+  const products = await prismaBase.product.findMany({
     where: {
       OR: [
         { name: { contains: query, mode: "insensitive" } },

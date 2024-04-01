@@ -601,4 +601,22 @@ Need to add 7 more products with AI written product descriptseans, so I don't lo
 Next we need to update the other server actions file 'actions.ts' for our products
 and finally our 'cart.ts' file in lib
 everytime you get a new ORM/language/model, make sure you get an extension that allows you to get autocomplete , we won't have a tutorial holding our hand next time when we git a job
+Prisma client extensions(used you to hook into queries and autoupdate/do something everytime you do an operation):
+https://www.prisma.io/docs/orm/prisma-client/client-extensions
+src / app / lib / db / 'prisma.ts' #where you need to add the extension to automatically update the updated at timestamp
+delete export default prisma; 
+rename all instances of 'prisma' to 'prismaBase' 
+export const prisma = prismaBase.$extends({
+  query: {
+    cart: {
+      async update({ args, query }) {
+        args.data = { ...args.data, updatedAt: new Date() };
+        return query(args);
+      },
+    },
+  },
+});#will allow us to hook into the queries ...args.data will keep all the existing arguments, and will add a new arg that will update the date giving the current timestamp
+F2 = Shortcut to automatically rename all instances of a word in code 
+ERROR: Tried to add the extension, got a wall of red text from all the errors, code broke, don't want to spend time fixing it, won't be needing it anyways, not for production code
 
+5:45:00==========================================================================================================================================================================================================================

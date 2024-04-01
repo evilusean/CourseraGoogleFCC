@@ -601,4 +601,47 @@ Need to add 7 more products with AI written product descriptseans, so I don't lo
 Next we need to update the other server actions file 'actions.ts' for our products
 and finally our 'cart.ts' file in lib
 everytime you get a new ORM/language/model, make sure you get an extension that allows you to get autocomplete , we won't have a tutorial holding our hand next time when we git a job
+Prisma client extensions(used you to hook into queries and autoupdate/do something everytime you do an operation):
+https://www.prisma.io/docs/orm/prisma-client/client-extensions
+src / app / lib / db / 'prisma.ts' #where you need to add the extension to automatically update the updated at timestamp
+delete export default prisma; 
+rename all instances of 'prisma' to 'prismaBase' 
+export const prisma = prismaBase.$extends({
+  query: {
+    cart: {
+      async update({ args, query }) {
+        args.data = { ...args.data, updatedAt: new Date() };
+        return query(args);
+      },
+    },
+  },
+});#will allow us to hook into the queries ...args.data will keep all the existing arguments, and will add a new arg that will update the date giving the current timestamp
+F2 = Shortcut to automatically rename all instances of a word in code 
+ERROR: Tried to add the extension, got a wall of red text from all the errors, code broke, don't want to spend time fixing it, won't be needing it anyways, not for production code
+
+5:45:00==========================================================================================================================================================================================================================
+Last Section for the prisma client extension, you only need it to update the timestamp to remove excess carts, we finished 2 days ago with all the features working, just want to complete tutorial fully
+Since it's not production we don't need this, just good to know about
+We can use a cron-job to execute tasks that runs at a certain time interval
+Vercel:
+https://vercel.com/docs/cron-jobs
+will check from time to time and delete all of our carts that havn't been touched in a while
+Now it's time to deploy our code to production, so we can use our website over the internet, easiest way to deploy is by 'vercel.com' the company that created next.js, which is a hosting provider
+vercel is optimized to deploy a nextJS project
+Steps:
+first you must deploy it to github, push your project to a repository(can be private) 
+Sign up to vercel and connect it to your github
+then you need to click on add-new, and just import
+Before doing all that, you need to add a post install script in 'package.json' :
+https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/vercel-caching-issue
+Next you need to add IP address to MongoDB (allow connections from anywhere)
+add the below code before importing to vercel for production:
+{
+  ...
+    "scripts" {
+      "postinstall": "prisma generate"
+    }
+  ...
+}
+it happens because the way vercel tries to cache the prisma client
 

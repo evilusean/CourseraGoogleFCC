@@ -1,5 +1,5 @@
 import Image from "next/image";
-import prismaBase from "./lib/db/prisma";
+import prisma from "./lib/db/prisma";
 import ProductCard from "@/components/ProductCard";
 import Link from "next/link";
 import PaginationBar from "@/components/PaginationBar";
@@ -16,11 +16,11 @@ export default async function Home({
   const pageSize = 6;
   const heroItemCount = 1;
 
-  const totalItemCount = await prismaBase.product.count();
+  const totalItemCount = await prisma.product.count();
 
   const totalPages = Math.ceil((totalItemCount - heroItemCount) / pageSize);
 
-  const products = await prismaBase.product.findMany({
+  const products = await prisma.product.findMany({
     orderBy: { id: "desc" },
     skip:
       (currentPage - 1) * pageSize + (currentPage === 1 ? 0 : heroItemCount),

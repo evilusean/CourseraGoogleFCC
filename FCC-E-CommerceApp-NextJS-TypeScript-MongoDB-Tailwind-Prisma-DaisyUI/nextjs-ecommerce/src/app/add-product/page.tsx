@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import prismaBase from "../lib/db/prisma";
+import prisma from "../lib/db/prisma";
 import FormSubmitButton from "@/components/FormSubmitButton";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../api/auth/[...nextauth]/route";
@@ -32,7 +32,7 @@ async function addProduct(formData: FormData) {
   //  });
   //}
 
-  await prismaBase.product.create({
+  await prisma.product.create({
     data: {
       name,
       description,

@@ -620,3 +620,28 @@ F2 = Shortcut to automatically rename all instances of a word in code
 ERROR: Tried to add the extension, got a wall of red text from all the errors, code broke, don't want to spend time fixing it, won't be needing it anyways, not for production code
 
 5:45:00==========================================================================================================================================================================================================================
+Last Section for the prisma client extension, you only need it to update the timestamp to remove excess carts, we finished 2 days ago with all the features working, just want to complete tutorial fully
+Since it's not production we don't need this, just good to know about
+We can use a cron-job to execute tasks that runs at a certain time interval
+Vercel:
+https://vercel.com/docs/cron-jobs
+will check from time to time and delete all of our carts that havn't been touched in a while
+Now it's time to deploy our code to production, so we can use our website over the internet, easiest way to deploy is by 'vercel.com' the company that created next.js, which is a hosting provider
+vercel is optimized to deploy a nextJS project
+Steps:
+first you must deploy it to github, push your project to a repository(can be private) 
+Sign up to vercel and connect it to your github
+then you need to click on add-new, and just import
+Before doing all that, you need to add a post install script in 'package.json' :
+https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/vercel-caching-issue
+Next you need to add IP address to MongoDB (allow connections from anywhere)
+add the below code before importing to vercel for production:
+{
+  ...
+    "scripts" {
+      "postinstall": "prisma generate"
+    }
+  ...
+}
+it happens because the way vercel tries to cache the prisma client
+

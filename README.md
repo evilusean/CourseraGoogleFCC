@@ -4,7 +4,7 @@
 ](https://www.freecodecamp.org/news/ecommerce-site-with-next-js-tailwind-daisyui-course/)
 
 Start: 16March2024</br>
-End: </br>
+End: 30March2024</br>
 
 # FreeCodeCamp - Ticketing App - Next.js / MongoDB / Tailwind / CSS : 
 [Tutorial:</br>](https://www.youtube.com/watch?v=H0vhkoXljq0&t=64s&ab_channel=freeCodeCamp.org)

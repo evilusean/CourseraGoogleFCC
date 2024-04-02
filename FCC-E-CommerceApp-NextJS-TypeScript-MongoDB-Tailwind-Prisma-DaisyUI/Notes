@@ -667,4 +667,4 @@ Problem Files(need the const+libraries) =
 ./src/app/Navbar/Navbar.tsx:9:10
 ./src/app/lib/db/cart.ts
 ./src/app/add-product/page.tsx
-Or we could just remove 'const session = await getServerSession(authOptions);' 
+Or we could just remove the export const and //comment out this 'const session = await getServerSession(authOptions);' 

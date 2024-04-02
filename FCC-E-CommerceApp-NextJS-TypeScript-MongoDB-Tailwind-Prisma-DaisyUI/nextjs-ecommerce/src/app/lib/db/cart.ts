@@ -8,7 +8,7 @@ export type CartWithProducts = Prisma.CartGetPayload<{
   include: { items: { include: { product: true } } };
 }>;
 
-export type CartItemithProduct = Prisma.CartItemGetPayload<{
+export type CartItemWithProduct = Prisma.CartItemGetPayload<{
   include: { product: true };
 }>;
 

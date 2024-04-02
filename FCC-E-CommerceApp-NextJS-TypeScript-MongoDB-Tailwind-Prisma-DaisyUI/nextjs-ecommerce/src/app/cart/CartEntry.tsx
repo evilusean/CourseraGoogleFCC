@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { CartItemithProduct } from "../lib/db/cart";
+import { CartItemWithProduct } from "../lib/db/cart";
 import Link from "next/link";
 import { formatPrice } from "../lib/format";
 import { useTransition } from "react";
 
 interface CartEntryProps {
-  cartItem: CartItemithProduct;
+  cartItem: CartItemWithProduct;
   setProductQuantity: (productId: string, quantity: number) => Promise<void>;
 }
 
@@ -39,7 +39,7 @@ export default function CartEntry({
             {product.name}
           </Link>
           <div>Price: {formatPrice(product.price)}</div>
-          <div className="my-1 fkex items-center gap-2">
+          <div className="my-1 flex items-center gap-2">
             Quantity:
             <select
               className="select select-bordered w-full max-w-[80px]"

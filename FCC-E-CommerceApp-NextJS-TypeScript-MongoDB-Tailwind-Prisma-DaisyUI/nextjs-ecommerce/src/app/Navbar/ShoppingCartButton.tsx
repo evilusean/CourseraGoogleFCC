@@ -5,7 +5,7 @@ import { ShoppingCart } from "../lib/db/cart";
 import { formatPrice } from "../lib/format";
 
 interface ShoppingCartButtonProps {
-  cart: ShoppingCart;
+  cart: ShoppingCart | null;
 }
 
 export default function ShoppingCartButton({ cart }: ShoppingCartButtonProps) {

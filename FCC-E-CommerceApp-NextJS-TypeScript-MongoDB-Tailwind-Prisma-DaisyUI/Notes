@@ -634,7 +634,11 @@ Sign up to vercel and connect it to your github
 then you need to click on add-new, and just import
 Before doing all that, you need to add a post install script in 'package.json' :
 https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/vercel-caching-issue
-Next you need to add IP address to MongoDB (allow connections from anywhere)
+Next you need to add IP address to MongoDB (allow connections from anywhere) :
+  from the dashboard, go to 'Network Access' , Click on 'Add IP Address', click on 'Allow Access from Anywhere'
+Import Project into vercel from github, 
+Next go to project settings, 'Environment Variables' and add all of our .env variables we used for API's/DB MGMT
+
 add the below code before importing to vercel for production:
 {
   ...
@@ -645,3 +649,24 @@ add the below code before importing to vercel for production:
 }
 it happens because the way vercel tries to cache the prisma client
 
+ERROR while trying to deploy to vercel: 
+Failed to compile.
+src/app/api/auth/[...nextauth]/route.ts
+Type error: Route "src/app/api/auth/[...nextauth]/route.ts" does not match the required types of a Next.js Route.
+  "authOptions" is not a valid Route export field.
+Error: Command "npm run build" exited with 1
+I've been at this for ~6hours and have made no progress, if I remove the 'export' at start of below code, then I get another error, that I didn't export it to my navbar and a bunch of other files, 
+export const authOptions: NextAuthOptions = {
+Maybe we need to wrap it in a return and export default function? Will fix tomorrow, need to do writeup as well, would like a working copy of project to show
+Potential Fix/workaround: remove the export that was throwing the first error and for below errors add the const authoptions with library dependancies, should in theory work:
+Type error: Module '"../api/auth/[...nextauth]/route"' declares 'authOptions' locally, but it is not exported.
+   7 | import UserMenuButton from "./UserMenuButton";
+   8 | import { getServerSession } from "next-auth";
+>  9 | import { authOptions } from "../api/auth/[...nextauth]/route";
+Problem Files(need the const+libraries) = 
+./src/app/Navbar/Navbar.tsx:9:10
+./src/app/lib/db/cart.ts
+./src/app/add-product/page.tsx
+Or we could just remove the export const and //comment out this 'const session = await getServerSession(authOptions);' 
+Reading the docs:
+https://next-auth.js.org/configuration/nextjs

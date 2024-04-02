@@ -9,3 +9,9 @@ Build and deploy a full-stack e-commerce website with Next.js 13.4 and the new a
 
 Start: 16March2024</br>
 End: 30March2024</br>
+
+Features/ScreenShots:</br>
+
+![SeAnazon Top](https://github.com/evilusean/CourseraGoogleFCC/blob/main/FCC-E-CommerceApp-NextJS-TypeScript-MongoDB-Tailwind-Prisma-DaisyUI/nextjs-ecommerce/src/app/assets/SeANazonTop.png?raw=true)
+![SeAnazon Bot](https://github.com/evilusean/CourseraGoogleFCC/blob/main/FCC-E-CommerceApp-NextJS-TypeScript-MongoDB-Tailwind-Prisma-DaisyUI/nextjs-ecommerce/src/app/assets/SeANazonBot.png?raw=true)
+![SeAnaon Cart](https://github.com/evilusean/CourseraGoogleFCC/blob/main/FCC-E-CommerceApp-NextJS-TypeScript-MongoDB-Tailwind-Prisma-DaisyUI/nextjs-ecommerce/src/app/assets/SeANazonCart.png?raw=true)

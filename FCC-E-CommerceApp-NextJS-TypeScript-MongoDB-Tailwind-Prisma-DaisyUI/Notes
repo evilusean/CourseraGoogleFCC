@@ -638,6 +638,10 @@ Next you need to add IP address to MongoDB (allow connections from anywhere) :
   from the dashboard, go to 'Network Access' , Click on 'Add IP Address', click on 'Allow Access from Anywhere'
 Import Project into vercel from github, 
 Next go to project settings, 'Environment Variables' and add all of our .env variables we used for API's/DB MGMT
+Success! 1.5 days of work, we deployed our project! not just 4 pictures and a 'trust me bro' to show people
+Next we need to add it to our google auth: copy the link from vercel https://next-js-ecommerce-sean-teams-projects.vercel.app, found in google cloud -> API -> credentials -> Edit 0Auth Client 
+  Next add the /api/auth/callback/google to it, and we can now log in with google
+
 
 add the below code before importing to vercel for production:
 {

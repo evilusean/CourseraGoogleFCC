@@ -3,6 +3,8 @@
 [https://www.freecodecamp.org/news/ecommerce-site-with-next-js-tailwind-daisyui-course/
 ](https://www.freecodecamp.org/news/ecommerce-site-with-next-js-tailwind-daisyui-course/)
 
+[Working Link: https://next-js-ecommerce-sean-teams-projects.vercel.app/](https://next-js-ecommerce-sean-teams-projects.vercel.app/)
+
 Start: 16March2024</br>
 End: 30March2024</br>
 

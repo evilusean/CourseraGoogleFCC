@@ -670,3 +670,8 @@ Problem Files(need the const+libraries) =
 Or we could just remove the export const and //comment out this 'const session = await getServerSession(authOptions);' 
 Reading the docs:
 https://next-auth.js.org/configuration/nextjs
+figured it out, I think, since it won't export 'route.ts', why not just put it in all the problem files? DRY and all that, but hey, it works(maybe) and we can move on
+Fixed another bug in the process 'ShoppingCartButton.tsx':
+interface ShoppingCartButtonProps {
+  cart: ShoppingCart | null;
+}

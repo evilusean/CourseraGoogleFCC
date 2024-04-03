@@ -11,6 +11,14 @@ Start: 16March2024</br>
 End: 30March2024</br>
 
 Features/ScreenShots:</br>
+Completely dynamic product loading - products are not hardcoded, and will load chronologically</br>
+Authentication - fully secured login with NextAuth and google</br>
+Add Product Page - Will upload our products to MongoDB quickly and easily.</br>
+pagination - fast page loading - pre rendered and cached - also responsive</br>
+Responsive design - layout changes based on screen size</br>
+cart - with total cost, subtotal, and quantity, server action nextJS feature, POST request, anonymous carts merge with </br>
+server side rendering - good for SEO(search engine optimization) - all data available when you open webpage</br>
+Cookies - will store cart details and authentication, NextAuth will send encrypted cookie in browser of user to verify the session in database</br>
 
 ![SeAnazon Top](https://github.com/evilusean/CourseraGoogleFCC/blob/main/FCC-E-CommerceApp-NextJS-TypeScript-MongoDB-Tailwind-Prisma-DaisyUI/nextjs-ecommerce/src/app/assets/SeANazonTop.png?raw=true)
 ![SeAnazon Bot](https://github.com/evilusean/CourseraGoogleFCC/blob/main/FCC-E-CommerceApp-NextJS-TypeScript-MongoDB-Tailwind-Prisma-DaisyUI/nextjs-ecommerce/src/app/assets/SeANazonBot.png?raw=true)

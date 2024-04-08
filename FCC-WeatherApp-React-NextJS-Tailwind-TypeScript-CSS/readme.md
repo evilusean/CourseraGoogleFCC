@@ -2,7 +2,7 @@
 [Tutorial:</br>
 https://www.freecodecamp.org/news/beginner-web-dev-tutorial-build-a-weather-app-with-next-js-typescript/](https://www.freecodecamp.org/news/beginner-web-dev-tutorial-build-a-weather-app-with-next-js-typescript/)
 
-Learn to build a Weather App using Next.js, Tailwind CSS, and TypeScript in this hands-on tutorial! Create a responsive, dynamic app from scratch with React components.
+Learn to build a Weather App using Next.js, Tailwind CSS, OpenWeather API and TypeScript! A responsive, dynamic app from scratch with React components.
 
 Features: </br>
 API fetch, Interface/Index, Search, Geolocation, temperature, humidity, cloud visibility, time and city, 7 day forecast, 24 hour detailed weather report, and more </br>

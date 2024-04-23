@@ -5,5 +5,5 @@ GraphQL has been transforming the way that developers interact with APIs and dat
 Developed by Facebook in 2012 and released as an open-source project in 2015, GraphQL provides a more efficient, powerful, and flexible alternative to the traditional REST API. Instead of having multiple endpoints for different data needs,
 with GraphQL, you can request exactly what you need, all in one query. This can result in faster and more precise data retrieval.
 
-Start: 22April2024</br>
+Start: 23April2024</br>
 End: 

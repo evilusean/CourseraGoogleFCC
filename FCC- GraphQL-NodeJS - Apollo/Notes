@@ -38,11 +38,19 @@ Query {
   }
 } # example query where we specify to query the course with id of '1' and returns nested results for 'author' and 'courses' done by him and any related data with 'id' 'title' 'thumbnail_url'
 When you scale up an app, the data layer becomes much more complex, 
+Mutations = You can ask the GraphQL Server to update data/Delete Data/Create data, similar to a PUSH request, but on a single endpoint
 
 10:00==================================================================================================================================================================================================================================
+We are going to create a GraphQL Server using NodeJS and apollo server, responsible for handling all the queries and mutations, to send the queries we will use apollo explorer
+Apollo Sandbox:
+https://www.apollographql.com/docs/graphos/explorer/sandbox/
+When you open the sandbox, it connects to a dummy GraphQL server, so you don't have to make an account(Cough-Steppoop) to practice and play around with it. 
+A GraphQL server can expose multiple different resources to the client, You can specify which resources you want to use as entry points in the query, and what data you want to fetch from that resource: query QueryName{resource{data}}
+If you want to specify which resource you want to pull from use (): Query{ game(id: "2"){title}} #will query the game with with id of 2 for it's title
+Here is an example of a nested Query: Query { game(id: "2") {title, review { rating, author {name} }, } # will get the game with id of 2 , with title, review rating with the author name in a nested query, different resources 1 query
+Apollo Sandbox also allows us to practice Mutations for 'AddMutation' 'DeleteMutation' and 'UpdateMutation'
 
-
-
+Lesson 3=Making our very own GraphQL Server on the backend:
 
 
 

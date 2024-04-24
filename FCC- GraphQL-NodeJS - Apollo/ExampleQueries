@@ -1,0 +1,54 @@
+{
+  me {
+    name
+  }
+} 
+#above how a basic query looks, will return below
+{
+  "me": {
+    "name" : "Sean"
+  }
+}
+
+#GraphQL Query:
+{
+  hero {
+    name
+    friends {
+      name
+      homeWorld {
+        name
+        climate
+      }
+      species {
+        name
+        lifespan
+        origin {
+          name
+        }
+      }
+    }
+  }
+}
+#GraphQL Schema for above query:
+type Query {
+  hero: Character
+}
+ 
+type Character {
+  name: String
+  friends: [Character]
+  homeWorld: Planet
+  species: Species
+}
+ 
+type Planet {
+  name: String
+  climate: String
+}
+ 
+type Species {
+  name: String
+  lifespan: Int
+  origin: Planet
+}

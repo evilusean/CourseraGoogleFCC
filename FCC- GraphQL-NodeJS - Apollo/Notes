@@ -2,13 +2,44 @@ Start: 23April2024
 
 https://www.youtube.com/watch?v=5199E50O7SI&ab_channel=freeCodeCamp.org
 https://graphql.org/
+Course Github(Each Lesson has it's own branch, click on the branch dropdown to select - can download a zip folder / or clone repo):
+https://github.com/iamshaunjp/graphql-crash-course
+Apollo Explorer = Free Tool for testing different kinds of queries(not steppoop-Thank God)
+https://www.apollographql.com/docs/graphos/explorer/
 
 GraphQL = Query Language for your API, with a server-side run time for executing queries, using a type system you define for your data, GraphQL isn't tied to any specific database or storage engine
 GraphQL creates a uniform API across your entire application without being limited by a specific storage engine. Write GraphQL APIs that leverage your existing data and code with GraphQL engines available in many languages.
+GraphQL = Query Language, a specific syntax to query a server to request or mutate data, instead of a REST API using endpoints - Architectual Style - http requests - REST API's don't scale well, or with complex data
+  Actual Language with it's own syntax/language - allows you to select what data you want to query - 
+OverFetching = Getting more data than we need
+UnderFetching = Getting less data than we need - you would need to make a different request to an additional endpoint to get the data you need - each method GET POST REQUEST DELETE ETC, would typically have it's own endpoint
+With GraphQL we use a single endpoint - The syntax allows us to specify exactly what data and what fields we need back from the server, also allows us to fetch nested related data in a single query
+Query {
+  courses {
+    id,
+    title,
+    thumbnail_url
+  }
+} # would specify that we want the 'courses' resource, and we want to return the 'id' 'title' and 'thumbnail_url' only
 
+Query {
+  course(id: "1") {
+  id,
+  title,
+  thumbnail_url,
+  author {
+    name,
+    id,
+    courses {
+      id,
+      title,
+      thumbnail_url
+    }
+  }
+} # example query where we specify to query the course with id of '1' and returns nested results for 'author' and 'courses' done by him and any related data with 'id' 'title' 'thumbnail_url'
+When you scale up an app, the data layer becomes much more complex, 
 
-
-
+10:00==================================================================================================================================================================================================================================
 
 
 

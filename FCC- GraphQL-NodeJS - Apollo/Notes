@@ -5,60 +5,6 @@ https://graphql.org/
 
 GraphQL = Query Language for your API, with a server-side run time for executing queries, using a type system you define for your data, GraphQL isn't tied to any specific database or storage engine
 GraphQL creates a uniform API across your entire application without being limited by a specific storage engine. Write GraphQL APIs that leverage your existing data and code with GraphQL engines available in many languages.
-{
-  me {
-    name
-  }
-} 
-#above how a basic query looks, will return below
-{
-  "me": {
-    "name" : "Sean"
-  }
-}
-
-#GraphQL Query:
-{
-  hero {
-    name
-    friends {
-      name
-      homeWorld {
-        name
-        climate
-      }
-      species {
-        name
-        lifespan
-        origin {
-          name
-        }
-      }
-    }
-  }
-}
-#GraphQL Schema for above query:
-type Query {
-  hero: Character
-}
- 
-type Character {
-  name: String
-  friends: [Character]
-  homeWorld: Planet
-  species: Species
-}
- 
-type Planet {
-  name: String
-  climate: String
-}
- 
-type Species {
-  name: String
-  lifespan: Int
-  origin: Planet
-}
 
 
 

@@ -50,7 +50,8 @@ If you want to specify which resource you want to pull from use (): Query{ game(
 Here is an example of a nested Query: Query { game(id: "2") {title, review { rating, author {name} }, } # will get the game with id of 2 , with title, review rating with the author name in a nested query, different resources 1 query
 Apollo Sandbox also allows us to practice Mutations for 'AddMutation' 'DeleteMutation' and 'UpdateMutation'
 
-Lesson 3=Making our very own GraphQL Server on the backend:
+Lesson 3=20:00==========================================================================================================================================================================================================================
+Making our very own GraphQL Server on the backend:
 
 
 

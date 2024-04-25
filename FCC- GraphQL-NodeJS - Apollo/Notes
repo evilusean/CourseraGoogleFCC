@@ -51,7 +51,121 @@ Here is an example of a nested Query: Query { game(id: "2") {title, review { rat
 Apollo Sandbox also allows us to practice Mutations for 'AddMutation' 'DeleteMutation' and 'UpdateMutation'
 
 Lesson 3=20:00==========================================================================================================================================================================================================================
-Making our very own GraphQL Server on the backend:
+Making our very own GraphQL Server on the backend: using NodeJS and Apollo Server
+Apollo Server is one of many different libraries you can use to spin up a GraphQL server, the good thing about Apollo Server is it automatically spins up an instance on Apollo Explorer for us on LocalHost we can use to test API
+resolver functions = respond to incoming queries, also let's us easily model our different data types
+'schema.js' Will allow us to dictate how every different graph is connected
+Apollo Docs - Getting Started:
+https://www.apollographql.com/docs/apollo-server/getting-started/
+
+Step 1: Create a new project
+From your preferred development directory, create a directory for a new project and cd into it:
+mkdir graphql-server-example 
+cd graphql-server-example
+
+Step 2: Install dependencies
+Initialize a new Node.js project with npm (or another package manager you prefer, such as Yarn):
+npm init --yes && npm pkg set type="module" #sets up a project using ES Modules, which simplifies our examples and allows us to use top-level await.
+npm install @apollo/server graphql #installs apollo server and graphql
+
+Step 3: Define your GraphQL schema
+If you're using JavaScript, use .js and .jsx file extensions wherever .ts and .tsx appear.
+Every GraphQL server (including Apollo Server) uses a schema to define the structure of data that clients can query. 
+const typeDefs = `#graphql
+  # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
+
+  # This "Book" type defines the queryable fields for every book in our data source.
+  type Book {
+    title: String
+    author: String
+  }
+
+  # The "Query" type is special: it lists all of the available queries that
+  # clients can execute, along with the return type for each. In this
+  # case, the "books" query returns an array of zero or more Books (defined above).
+  type Query {
+    books: [Book]
+  }
+`;# This snippet defines a simple, valid GraphQL schema. Clients will be able to execute a query named books, and our server will return an array of zero or more Books.
+
+Imports:
+import { ApolloServer } from '@apollo/server';
+import { startStandaloneServer } from '@apollo/server/standalone';
+
+Step 4: Define your data set
+Now that we've defined the structure of our data, we can define the data itself.
+Apollo Server can fetch data from any source you connect to (including a database, a REST API, a static object storage service, or even another GraphQL server). 
+const books = [
+  {
+    title: 'The Awakening',
+    author: 'Kate Chopin',
+  },
+  {
+    title: 'City of Glass',
+    author: 'Paul Auster',
+  },
+];
+
+Step 5: Define a resolver
+// Resolvers define how to fetch the types defined in your schema.
+// This resolver retrieves books from the "books" array above.
+const resolvers = {
+  Query: {
+    books: () => books,
+  },
+};
+
+Step 6: Create an instance of ApolloServer
+We've defined our schema, data set, and resolver. Now we need to provide this information to Apollo Server when we initialize it.
+Add the following to the bottom of your index.ts file:
+// The ApolloServer constructor requires two parameters: your schema
+// definition and your set of resolvers.
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+});
+// Passing an ApolloServer instance to the `startStandaloneServer` function:
+//  1. creates an Express app
+//  2. installs your ApolloServer instance as middleware
+//  3. prepares your app to handle incoming requests
+const { url } = await startStandaloneServer(server, {
+  listen: { port: 4000 },
+});
+console.log(`🚀  Server ready at: ${url}`);
+
+Step 7: Start the server
+npm start
+
+Step 8: Execute your first query
+We can now execute GraphQL queries on our server. To execute our first query, we can use Apollo Sandbox.
+Visit http://localhost:4000 in your browser, which will open the Apollo Sandbox:
+
+26:00=Lesson 4: Schema and Types======================================================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

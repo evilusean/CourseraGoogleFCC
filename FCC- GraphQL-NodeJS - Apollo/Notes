@@ -141,17 +141,23 @@ We can now execute GraphQL queries on our server. To execute our first query, we
 Visit http://localhost:4000 in your browser, which will open the Apollo Sandbox:
 
 26:00=Lesson 4: Schema and Types======================================================================================================================================================================================================
-Type Defs = Definitions of the different types you want to express on your graph and specify the different fields(data) that each resource might have = All of this combined will be called the 'schema'
+type Defs = Definitions of the different types you want to express on your graph and specify the different fields(data) that each resource might have = All of this combined will be called the 'schema'
 Installed 'GraphQL: Syntax Highlighting' extension in VSCode for highlighting each different type in a different color
 export const typeDefs = `#graphql #`` backticks are 'template strings'
 Built into GraphQL there are 5 different types: int / floats / strings / boolean / ID(key-serialized strings-unique type in GraphQL)
 You can create your own types in GraphQL(unlikely you will ever do this, but you can.)
+[] = you can say that something is going to be an array of something with []'s 'platform: [String]' = it will be an array of strings
+! = you can make a field required by adding on an exclamation mark 'title: String!', if you don' thave ! it can be nullable, you will need 2 ! for an array 'platform: [String!]!' = non nullable array of strings
+type Query {} #Every single GraphQL schema requires this, it is not optional, it's job is to define the entry points to the graph and specify the return types of those entry points, a way of gatekeeping entry on the graph
+type Query {
+  reviews: [Reviews] #will return a list of reviews
+  games: [Game] #will return a list of game objects
+}
+export const tpesDefs #always make sure that your typeDefs are exported, so you can use your schema and import it in other files
+import { typeDefs } from './schema.js'
 
-
-
-
-
-
+36:30=Lesson 5: Resolver Functions=====================================================================================================================================================================================================
+resolvers = a function that handles any incoming request and returns data to the client
 
 
 

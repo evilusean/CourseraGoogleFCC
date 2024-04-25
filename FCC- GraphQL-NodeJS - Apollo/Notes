@@ -141,9 +141,11 @@ We can now execute GraphQL queries on our server. To execute our first query, we
 Visit http://localhost:4000 in your browser, which will open the Apollo Sandbox:
 
 26:00=Lesson 4: Schema and Types======================================================================================================================================================================================================
-
-
-
+Type Defs = Definitions of the different types you want to express on your graph and specify the different fields(data) that each resource might have = All of this combined will be called the 'schema'
+Installed 'GraphQL: Syntax Highlighting' extension in VSCode for highlighting each different type in a different color
+export const typeDefs = `#graphql #`` backticks are 'template strings'
+Built into GraphQL there are 5 different types: int / floats / strings / boolean / ID(key-serialized strings-unique type in GraphQL)
+You can create your own types in GraphQL(unlikely you will ever do this, but you can.)
 
 
 

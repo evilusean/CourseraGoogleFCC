@@ -153,7 +153,7 @@ type Query {
   reviews: [Reviews] #will return a list of reviews
   games: [Game] #will return a list of game objects
 }
-export const tpesDefs #always make sure that your typeDefs are exported, so you can use your schema and import it in other files
+export const typesDefs #always make sure that your typeDefs are exported, so you can use your schema and import it in other files
 import { typeDefs } from './schema.js'
 
 36:30=Lesson 5: Resolver Functions=====================================================================================================================================================================================================

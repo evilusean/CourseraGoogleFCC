@@ -157,11 +157,27 @@ export const typeDefs #always make sure that your typeDefs are exported, so you 
 import { typeDefs } from './schema.js'
 
 36:30=Lesson 5: Resolver Functions=====================================================================================================================================================================================================
-resolvers = a function that handles any incoming request and returns data to the client
+resolvers = a function that handles any incoming request and returns data to the client, how you respond to queries on a graph. 
+const resolvers = {
+  Query: {
+    games() {
+      return db.games;
+    }
+  }
+}; #basic layout of a resolver function, 'Query: {}' must match exactly the type name, 'type Query' from type Defs query function
+How to make a query:
+games { title } #will return all games with the title property
+node 'filename' #how to start node server
+nodemon (automatically restarts the server each time there is a save/change):
+https://www.npmjs.com/package/nodemon
+npm install -g nodemon #installs nodemon globally
+nodemon 'filename' #after installing nodemon, how to start a nodemon server
+after starting up the server in the top left corner you can see the 'schema' button, click that and it will review your code, and tell you what queries you can make based on what you created
+  it will also show each entrypoint and query which resources/data types (id, title, etc) from those entrypoints
+'explorer' is where you can test your queries, there is an autocomplete feature, and will send you back an array of your succesful queries, very cool
+you can use the resolver function with the data you returned to automatically filter out any of the fields the user doesn't need,
 
-
-
-
+46:30=Query Variables=================================================================================================================================================================================================================
 
 
 

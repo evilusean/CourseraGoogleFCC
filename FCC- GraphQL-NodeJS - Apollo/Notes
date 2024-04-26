@@ -178,11 +178,29 @@ after starting up the server in the top left corner you can see the 'schema' but
 you can use the resolver function with the data you returned to automatically filter out any of the fields the user doesn't need,
 
 46:30=Query Variables=================================================================================================================================================================================================================
+If a user just wants to query for a single author/review/game,
+you need to specify that a user can enter that entry point in the graph (our queries are currently set up for ALL the games, reviews, etc)
+You also need a resolver function to handle queries for a single item(again, ours handles ALL of the games, authors, reviews)
+The way to fix this is to add more entry points under the graph in your 'type Query {}', like below:
+    reviews: [Review] #will fetch ALL reviews for the [Review]'s
+    review(id: ID!): Review #will ask the user to send a variable in the '(id: ID!)' to enter the entry point and find a single review and return it, '!' means can't be null, it must be passed
+Below will show the difference between ALL queries and a single query, notice the () will have (_, args) telling us we will need to provide parameters for our argument, in this case an id.
+const resolvers = {
+  Query: {
+    games() {
+      return db.games; #Will return ALL games
+    },
+    game(_, args) { #
+      return db.games.find((game) => game.id === args.id); #will return a single game, where it will search for the given 'args.id' and match it to the 'game.id'
+    },
+(parent) = the first args we can pass which refers to the parent resolver in a resolver chain
+(_, args) = refers to arguments, which will be supplied in the query
+.find = find method, will find a single item inside of the targeted array, it will cycle through each item, and when you return true it will stop and return that item it found in the array
+to send a query variable from the frontend when making a query, after the query name add () to pass a variable, can be multiple variables, declare each variable with a '$' and the variable name, like below:
+query ReviewQuery($id: ID!) { game(id: $id) {title } }
+to pass the variable in Apollo Sandbox, go to the bottom part, and select 'Variables', then you can make a JSON object of key: value pairs "id": "1", it will then pass the variables up to your query
 
-
-
-
-
+56:03=Related Data===================================================================================================================================================================================================================
 
 
 

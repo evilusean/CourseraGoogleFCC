@@ -218,6 +218,7 @@ Resolver Chain = will find the inital one defined inside the query object, then 
 1:10:00=Mutations(Add and Delete)====================================================================================================================================================================================================
 We have figured out how to create and query our server/graphs and fetch data, now we need to add and remove data. Mutations are for these
 The first thing we need to do is define our allowed mutations in our 'schema.js' by making a new 'type Mutation{}'
+deleteGame(id: ID!): [Game] #argument 'deleteGame' specifys to delete... game. (id: ID!) specifies that it will take a non nullable ID as an argument, and [Game] is the return, it will send back an updated list/array of all the games
 
 
 

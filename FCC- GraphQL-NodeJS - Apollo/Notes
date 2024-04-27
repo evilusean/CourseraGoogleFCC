@@ -201,7 +201,11 @@ query ReviewQuery($id: ID!) { game(id: $id) {title } }
 to pass the variable in Apollo Sandbox, go to the bottom part, and select 'Variables', then you can make a JSON object of key: value pairs "id": "1", it will then pass the variables up to your query
 
 56:03=Related Data===================================================================================================================================================================================================================
-
+We can now query lists of data, and single items of data
+we havn't defined any relationships that are made between the data (inner/outer joins), we need to define these in our 'schema.js' so apollo knows to make those relationships
+game: Game!, author: Author! #every review is associated with a game and an author
+reviews: [Review!] #every game is going to have list of reviews
+after making our connections in the schema, now we need to make some resolver functions to find those relationships in 'index.js'
 
 
 

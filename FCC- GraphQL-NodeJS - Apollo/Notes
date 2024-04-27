@@ -206,8 +206,16 @@ we havn't defined any relationships that are made between the data (inner/outer 
 game: Game!, author: Author! #every review is associated with a game and an author
 reviews: [Review!] #every game is going to have list of reviews
 after making our connections in the schema, now we need to make some resolver functions to find those relationships in 'index.js'
+We won't make our resolvers in the 'Query: {}' - these are the entry points into our graph, we will make a seperate section with a nested request to pull all the reviews when we search for a game, like below:
+  Game: { #our entry point for the query is a single game, Apollo will run that initial query to get that, to resolve the reviews for that game - it's going to look for the reviews resolver to grab the reviews
+    reviews(parent) { #the parent argument is a reference to the value returned by the previouw parent resolver, game object will return id associated with all games to return all reviews associated with game
+      return db.reviews.filter((r) => r.game_id === parent.id); #will filter out any review that doesn't have same game_id the same as the parent, any review with the same game_id will be passed in an array
+    }, #'r' refers to each review item, each review contains a game_id that matches a particular game, if they don't match they are filtered out
+Since Review is attached to both game and author - you will need to set up a new resolver for each connection, instead using '.find', like above:
+Top left, can create a 'New Query' in apollo explorer, switch between and test, when writing the queries, you still need to tell it what data to pull (title, platform, etc)
+Resolver Chain = will find the inital one defined inside the query object, then it will move on to the next, essentially a nested query, and can go to each graph pulling the data you requested, you always have access to previous resolver
 
-
+1:10:00=Mutations(Add and Delete)====================================================================================================================================================================================================
 
 
 

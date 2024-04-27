@@ -216,6 +216,8 @@ Top left, can create a 'New Query' in apollo explorer, switch between and test, 
 Resolver Chain = will find the inital one defined inside the query object, then it will move on to the next, essentially a nested query, and can go to each graph pulling the data you requested, you always have access to previous resolver
 
 1:10:00=Mutations(Add and Delete)====================================================================================================================================================================================================
+We have figured out how to create and query our server/graphs and fetch data, now we need to add and remove data. Mutations are for these
+The first thing we need to do is define our allowed mutations in our 'schema.js' by making a new 'type Mutation{}'
 
 
 

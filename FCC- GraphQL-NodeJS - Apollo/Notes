@@ -254,9 +254,33 @@ Below are the JSON variables for the game:
   "platform" : ["Xbox 180", "Sega Dreamcast"] } #title will be given from the random UID generator above, 
 
 1:21:21=Mutations(Update)==============================================================================================================================================================================================================
+updateGame(id: ID!, edits: EditGameInput): Game #updates Game, requires an ID!, 'edits: EditGameInput!' takes from the input type below, and updates the new data with inputs, will return list of Game
+input EditGameInput {
+    title: String,
+    platform: [String!]
+  } 
+Notice how there is no ID to correct the ID of the game for above inputs, that will be sorted out in the resolver function below:
+updateGame(_, args) { #takes in an argument
+      db.games = db.games.map((g) => { #games array on db, maps it to 'db.games', 'g' being the id, for each item in the array it checks 
+        if (g.id === args.id) { #if the argument id matches g.id 
+          return {...g, ...args.edits} #returns updated current object, and adds argument edits, 'spreading'
+        }
 
+        return g #if no matches, just returns the original object of the array
+      })
 
-
+      return db.games.find((g) => g.id === args.id) #returns the new updated game after running all of the above code
+    }
+To search/test in apollo sandbox:
+mutation EditMutation($edits: EditGameInput!,  $id: ID!) {
+  updateGame(edits: $edits, id: $id) {
+    title, 
+    platform }}
+variables for above mutation:
+{ "edits": {
+  "title" : "New Game Title",
+  } "id": "2"
+} # will update the title for game with the id of 2
 
 
 

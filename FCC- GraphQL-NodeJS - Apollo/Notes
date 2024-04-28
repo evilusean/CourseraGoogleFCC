@@ -219,13 +219,41 @@ Resolver Chain = will find the inital one defined inside the query object, then 
 We have figured out how to create and query our server/graphs and fetch data, now we need to add and remove data. Mutations are for these
 The first thing we need to do is define our allowed mutations in our 'schema.js' by making a new 'type Mutation{}'
 deleteGame(id: ID!): [Game] #argument 'deleteGame' specifys to delete... game. (id: ID!) specifies that it will take a non nullable ID as an argument, and [Game] is the return, it will send back an updated list/array of all the games
+Now we need to make resolvers in 'index.js'
+Mutation: { #Mutation object
+    deleteGame(_, args) { #deleteGame resolver, will take in the same argument, we will need the game_id to delete the game
+      db.games = db.games.filter((g) => g.id !== args.id); #filters our db, false !== filters out ALL games that DON'T match our game, instead of searching for just our game, 
+  #if they are NOT equal it returns true and they stay in the array, if they are equal, it returns false and they remain in the array
+      return db.games; #returns the updated games array
+    },
+  },
+In Apollo Sandbox, we can make and test a mutation from our server, autocomplete will help you write your mutation, don't forget to add variables '"id" : "2"' in the bottom left to test, when you restart the server the data will return
+  the server is just for testing your queries and mutations, so when it is restarted you will have all of our data still intact, even if you do delete - but it will show it still missing, in practice
+addGame(game: AddGameInput!): Game #addGame, will require all the inputs that make a new game(id, title, platform, reviews), will take below new 'input AddGameInput' as an argument, to add all neccesary data
+  input AddGameInput { #new special input type, will allow us to update the game with all the neccesary arguments, which allows us to group together several arguments into one type, that can be used as a single argument 
+    title: String!,
+    platform: [String!]!
+  }
+we can generate a random ID in the resolver linter for this new game ID!
+    addGame(_, args) { #makes a new game object, and adds it to the games DB, takes arguments 
+      let game = {
+        ...args.game, #name of variable '...args.game' takes in all previous
+        id: Math.floor(Math.random() * 10000).toString(), #randomly generates a UID, not sequential(1-2-3-4-5-etc) normally I'd want this to be chronological - don't use something like this for production, .floor converts to int
+      };
+      db.games.push(game); #will push onto the games array, 
+  return game; #will return a single game entity from the array
+So to add the arguments, you need to do below and pass variables as a JSON
+mutation AddMutation($game: AddGameInput!) {
+  addGame(game:$game) {
+    id,
+    title,
+    platform }}
+Below are the JSON variables for the game:
+"game": {
+  "title" : "New Game Title",
+  "platform" : ["Xbox 180", "Sega Dreamcast"] } #title will be given from the random UID generator above, 
 
-
-
-
-
-
-
+1:21:21=Mutations(Update)==============================================================================================================================================================================================================
 
 
 

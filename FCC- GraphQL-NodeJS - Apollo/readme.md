@@ -6,4 +6,4 @@ Developed by Facebook in 2012 and released as an open-source project in 2015, Gr
 with GraphQL, you can request exactly what you need, all in one query. This can result in faster and more precise data retrieval.
 
 Start: 23April2024</br>
-End: 
+End: 27April2024

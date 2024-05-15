@@ -50,7 +50,7 @@ console.log(reverse("hello"));
 //METHOD 5: ONE LINER, SAME AS ABOVE BUT TO USE .SPLIT ON AN INTEGER YOU MUST FIRST CONVERT AN INTEGER INTO A STRING. with .toString() method
 function reverseInt(n) {
   const reversed = n.toString().split("").reverse().join(""); // first we need to convert the integer into a string
-  return reversed; // WILL RETURN
-}
+  return parseInt(reversed) * Math.sign(n); // USE 'parseInt()' method for the edge case of negative numbers, '-15' into '51-'
+} // Math.sign is another built in method that will take the sign (+ or -) and maintain it,
 
-console.log(reverseInt(21963));
+console.log(reverseInt(-21963));

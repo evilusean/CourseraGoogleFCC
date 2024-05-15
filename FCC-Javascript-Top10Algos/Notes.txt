@@ -35,3 +35,14 @@ function reverse(str) {
     const reversed = n.toString().split("").reverse().join(""); // first we need to convert the integer into a string
     return reversed; // WILL RETURN THE REVERSED RESULT
   }
+
+We made an error above, for edge cases where the number is negative, it will first turn '-15' into '51-' to fix this, you need to use the parseInt()
+//METHOD 5: ONE LINER, SAME AS ABOVE BUT TO USE .SPLIT ON AN INTEGER YOU MUST FIRST CONVERT AN INTEGER INTO A STRING. with .toString() method
+function reverseInt(n) {
+  const reversed = n.toString().split("").reverse().join(""); // first we need to convert the integer into a string
+  return parseInt(reversed) * Math.sign(n); // USE 'parseInt()' method for the edge case of negative numbers, '-15' into '51-'
+} // Math.sign is another built in method that will take the sign (+ or -) and maintain it,
+
+console.log(reverseInt(-21963)); 
+
+11:30 = Palindrome ==============================================================================================================================

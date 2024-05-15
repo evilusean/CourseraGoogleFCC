@@ -1,38 +1,16 @@
 Started: 15May2024
 
-1:00 = Reverse a String / Int : ============================================================================================================================================================================================================
+1:00 = Reverse a String / Int : =============================================================================================================
 Do the string first, because once you can reverse a string, you can easily reverse an integer.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+All you would have to do is convert the integer into a string, do the reversal and convert it back into an integer
+node 1-reverse-string.js #To test our code, use node. Be sure to cd to correct directory 'Exercises-Completed'
+First test worked,
+function reverse(str) {
+let reversed = "";
+for (let i = 0; i < str.length; i++) { #while the for loop is less than the length of str, i++
+reversed = str[i] + reversed; #will go through each and add one by one the characters of the reversed string
+}
+return reversed;
+}
+// Built in Function way of doing it : Array.prototype.reverse() # can only be used on arrays, convert a string into an array and do the reverse.
+//Will need to convert into an array, then convert back into a str/integer

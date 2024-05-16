@@ -59,6 +59,9 @@ function palindrome(str) {
   const reversed = str.split("").reverse().join("");
   return str === reversed;
 } 
+This problem can also be solved with below 2 methods:
+2 Pointers Technique = https://www.geeksforgeeks.org/two-pointers-technique/ 
+JS built in Method 'Every' = https://www.w3schools.com/jsref/jsref_every.asp#:~:text=The%20every()%20method%20returns,the%20function%20for%20empty%20elements.
 
-
+16:00 = Max Char =================================================================================================================================
 

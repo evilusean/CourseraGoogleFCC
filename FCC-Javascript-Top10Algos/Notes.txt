@@ -64,4 +64,28 @@ This problem can also be solved with below 2 methods:
 JS built in Method 'Every' = https://www.w3schools.com/jsref/jsref_every.asp#:~:text=The%20every()%20method%20returns,the%20function%20for%20empty%20elements.
 
 16:00 = Max Char =================================================================================================================================
+Given a string return the character that is most commonly used in the string:
+We will need some type of a data structure to keep count of every time a character appears in the string, so we need a character map 
+data structures in JS called {objects} or maps
+function maxChar(str) {
+  const charMap = {}; //create an empty object to hold all the characters we loop through
+  for (let char of str) {
+    if (charMap[char]) {
+      charMap[char] = charMap[char] + 1;
+    } else {
+      charMap[char] = 1;
+    }
+  }
+  return charMap;
+}
+
+
+
+
+
+
+
+
+
+
 

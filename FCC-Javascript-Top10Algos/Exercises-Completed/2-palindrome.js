@@ -9,9 +9,12 @@
 //   palindrome("codingmoney") === false
 
 function palindrome(str) {
-  const reveresed = str.split("").reverse().join(""); //first we need to find the reverse of our input string, first .split turns it into an array,
+  const reversed = str.split("").reverse().join(""); //first we need to find the reverse of our input string, first .split turns it into an array,
   // .reverse inverts the array, and .join turns it back into a string
   if (str === reversed) {
     return true; // if input str, is equal to reversed(above variable) return true(it is a palindrome)
   }
+  return false; //otherwise return false
 }
+
+console.log(palindrome("refer"));

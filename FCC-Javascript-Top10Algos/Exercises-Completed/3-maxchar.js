@@ -9,12 +9,13 @@ function maxChar(str) {
   const charMap = {}; //create an empty object to hold all the characters we loop through
   for (let char of str) {
     if (charMap[char]) {
-      charMap[char] = charMap[char + 1];
+      charMap[char] = charMap[char] + 1;
     } else {
       charMap[char] = 1;
     }
   }
+  return charMap;
 }
 
-console.log(maxChar("abcccccccd") === "c");
-console.log(maxChar("apple 1231111") === "1");
+console.log(maxChar("abcccccccd"));
+console.log(maxChar("apple 1231111"));

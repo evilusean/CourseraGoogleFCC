@@ -16,5 +16,5 @@ function maxChar(str) {
   }
 }
 
-maxChar("abcccccccd") === "c";
-maxChar("apple 1231111") === "1";
+console.log(maxChar("abcccccccd") === "c");
+console.log(maxChar("apple 1231111") === "1");

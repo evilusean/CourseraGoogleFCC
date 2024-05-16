@@ -32,14 +32,14 @@ function maxChar(str) {
     }
   }
   for (const [key, value] of Object.entries(charMap)) {
-    //will convert each key:value letter:count in the charMap object into an array
+    //will convert each key:value letter:count in the charMap object into an array, this will loop through each key:value pair in the array
     if (value > max) {
       //if the value of the current key is greater than the current max,
       max = value; //set new max is current value count
       maxChar = key; //set new maxChar as the current key
     }
   }
-  return charMap;
+  return maxChar;
 }
 
 console.log(maxChar("abcccccccd"));

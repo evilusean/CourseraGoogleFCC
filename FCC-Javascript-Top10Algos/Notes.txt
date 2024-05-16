@@ -104,8 +104,24 @@ function maxChar(str) {
   return maxChar;
 }
 
+// METHOD 3: Optimized Cleaner version of above:
+function maxChar(str) {
+  const charMap = {}; //create an empty object to hold all the characters we loop through
+  let max = 0; // to find the maxCharacter(character used the most) we need to have a variable that keeps track of it
+  let maxChar = ""; // same as above but for the key, instead of the count
+  for (let char of str) {
+    charMap[char] = charMap[char] + 1 || 1;
+  }
+  for (let key in charMap) {
+    if (charMap[key] > max) {
+      max = charMap[key];
+      maxChar = key;
+    }
+  }
+  return maxChar;
+}
 
-
+33:45 = Array Chunking ========================================================================================================================================
 
 
 

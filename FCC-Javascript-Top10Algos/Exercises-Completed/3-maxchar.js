@@ -51,13 +51,8 @@ function maxChar(str) {
   const charMap = {}; //create an empty object to hold all the characters we loop through
   let max = 0; // to find the maxCharacter(character used the most) we need to have a variable that keeps track of it
   let maxChar = ""; // same as above but for the key, instead of the count
-
   for (let char of str) {
-    if (charMap[char]) {
-      charMap[char] = charMap[char] + 1;
-    } else {
-      charMap[char] = 1;
-    }
+    charMap[char] = charMap[char] + 1 || 1;
   }
   for (let key in charMap) {
     if (charMap[key] > max) {

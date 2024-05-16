@@ -70,13 +70,38 @@ data structures in JS called {objects} or maps
 function maxChar(str) {
   const charMap = {}; //create an empty object to hold all the characters we loop through
   for (let char of str) {
+    if (charMap[char]) { //checks if the character exists on the character map
+      charMap[char] = charMap[char] + 1; // if the character exists on the character map, add 1
+    } else {
+      charMap[char] = 1; // if it doesn't exist on the character map, add it and set it to 1
+    }
+  }
+  return charMap;
+} //Will return a character map with a count of each character and a number
+Now we need to loop through the object to find the maximum character in the character map
+Object.entries(charMap) //will convert the charMap into an array with key:value pairs
+//Object.entries(charMap) METHOD: Will sort through the object we created and turn it into an array with key:value pairs, so we can find the maxChar
+function maxChar(str) {
+  const charMap = {}; //create an empty object to hold all the characters we loop through
+  let max = 0; // to find the maxCharacter(character used the most) we need to have a variable that keeps track of it
+  let maxChar = ""; // same as above but for the key, instead of the count
+
+  for (let char of str) {
     if (charMap[char]) {
       charMap[char] = charMap[char] + 1;
     } else {
       charMap[char] = 1;
     }
   }
-  return charMap;
+  for (const [key, value] of Object.entries(charMap)) {
+    //will convert each key:value letter:count in the charMap object into an array, this will loop through each key:value pair in the array
+    if (value > max) {
+      //if the value of the current key is greater than the current max,
+      max = value; //set new max is current value count
+      maxChar = key; //set new maxChar as the current key
+    }
+  }
+  return maxChar;
 }
 
 

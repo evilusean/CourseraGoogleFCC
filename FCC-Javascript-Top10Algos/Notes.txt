@@ -47,7 +47,8 @@ console.log(reverseInt(-21963));
 
 11:30 = Palindrome ==============================================================================================================================
 We are given a string, return true if the string is a palindrome or false if it is not, a palindrome = read the same way forwards and backwards ex (civic, radar, level, rotor, kayak, madam, and refer)
-
+We already learned how to reverse a string 'return str.split("").reverse().join("");' 
+first we need to find the reverse of our input string
 
 
 

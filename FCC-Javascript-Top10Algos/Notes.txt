@@ -153,5 +153,15 @@ function capitalize(str) {
     // for each word in words variable that was split at " " space,
     result.push(word[0].toUpperCase() + word.slice(1)); //will capitalize first letter, and then add the rest of the word after .slice will take[1] index
   }
-  return result; //return the pushed capitalized letter + words
+  return result.join(" ");; //return the pushed capitalized letter + words
 }
+If you don't want to create a new array, you can use the '.map' method, and 
+//METHOD 2: Map
+function capitalize(str) {
+  const words = str.split(" "); // wil split the strong at every " " space and save it as an array
+  return words.map((word) => word[0].toUpperCase() + word.slice(1)).join(" ");
+}
+
+console.log(capitalize("this is Sean from coding money"));
+
+49:30 = Anagrams ====================================================================================================================================================

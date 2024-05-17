@@ -122,6 +122,7 @@ function maxChar(str) {
 }
 
 33:45 = Array Chunking ========================================================================================================================================
+We are given an array, and a chunk size, divide the array into many subarrays where each subarray is of length chunk size
 
 
 

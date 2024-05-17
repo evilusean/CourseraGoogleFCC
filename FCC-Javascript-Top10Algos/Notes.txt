@@ -124,9 +124,24 @@ function maxChar(str) {
 33:45 = Array Chunking ========================================================================================================================================
 We are given an array, and a chunk size, divide the array into many subarrays where each subarray is of length chunk size
 Divide and conquer, how to get the first 2 elements from the array? 
-We can use the built in array function called '.slice()'
+We can use the built in array function called '.slice()':
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+array.slice(0,size) //already takes size as an inital parameter, JS is 0 based indexed, will start at 0, slice at 'size' parameter
+will only take 1 slice, we need to return all of the sliced results. first we need to get the chunks, and store them in a 'result' and return that result as an array 
+so we will need a variable to keep track of the index, how many chunks we have to add to the array 'let index = 0' 'result.push(array.slice(index,size))'
+//METHOD 1: WORKS
+function chunk(array, size) {
+  const result = []; //ARRAY TO STORE PUSHED VALUES ON
+  let index = 0; //DEFAULT STARTS AT 0 '0 BASED INDEX'
+  while (index < array.length) {
+    //WHILE INDEX IS LESS THAN ARRAY.LENGTH,
+    result.push(array.slice(index, index + size)); //PUSH NEW VALUES, array.slice (INDEX VALUE, INDEX VALUE + SIZE) # WILL RETURN NEW SLICE FOR ARRAY
+    index += size; //ADDS NEXT SIZE TO INDEX, SO WE CAN PUSH ON THE NEXT SLICE TO THE ARRAY
+  }
+  return result; //RETURNS THE NEW ARRAY
+}
 
-
+console.log(chunk([1, 2, 3, 4, 5], 4));
 
 
 

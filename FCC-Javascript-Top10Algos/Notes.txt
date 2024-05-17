@@ -122,7 +122,9 @@ function maxChar(str) {
 }
 
 33:45 = Array Chunking ========================================================================================================================================
-
+We are given an array, and a chunk size, divide the array into many subarrays where each subarray is of length chunk size
+Divide and conquer, how to get the first 2 elements from the array? 
+We can use the built in array function called '.slice()'
 
 
 

@@ -165,3 +165,39 @@ function capitalize(str) {
 console.log(capitalize("this is Sean from coding money"));
 
 49:30 = Anagrams ====================================================================================================================================================
+Check to see if 2 strings are anagrams of eachother: one string is an anagram of another if it uses the same chracters in the same quantity, only consider chracters, not spaces or punctuations or capitalisation
+// METHOD 1: Build a character map for stringA, then build character map for stringB, then compare the maps to see if they are equal
+function charMap(str) {
+  const charmap = {}; //start by creating an empty object for storing each character:count key:value pair
+  str = str.toLowerCase().replace(/[\W]/g, ""); //to remove all capital letters, and to remove all punctuation use a regex
+  // REGEX : '/[\W]/g CHARACTER SET: BIG 'W' WILL MATCH ALL CHARACTERS THAT ARE NOT A WORD
+  for (let char of str) {
+    // will go through each character in the string, and add it if not there, and ++ add one if it exists already
+    charmap[char] = ++charmap[char] || 1;
+  }
+  return charmap;
+}
+// will check that the length of each charmap is the same, then check that the key:value pairs are the same, if both tests pass, return true
+function anagrams(stringA, stringB) {
+  const charmapA = charMap(stringA);
+  const charmapB = charMap(stringB);
+  if (Object.keys(charmapA).length !== Object.keys(charmapB).length)
+    return false;
+
+  for (let key in charmapA) {
+    if (charmapA[key] !== charmapB[key]) return false;
+  }
+  return true;
+}
+
+
+
+
+
+
+
+
+
+
+
+

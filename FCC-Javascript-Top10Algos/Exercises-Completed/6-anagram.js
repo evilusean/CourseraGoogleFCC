@@ -13,7 +13,11 @@ function anagrams(stringA, stringB) {
   const charmapA = {}; //start by creating an empty object for storing each character:count key:value pair
   stringA = stringA.toLowerCase().replace(/[\W]/g, ""); //to remove all capital letters, and to remove all punctuation use a regex
   // REGEX : '/[\W]/g CHARACTER SET: BIG 'W' WILL MATCH ALL CHARACTERS THAT ARE NOT A WORD
-  return stringA;
+  for (let char of stringA) {
+    // will go through each character in the string, and add it if not there, and ++ add one if it exists already
+    charmapA[char] = ++charmapA[char] || 1;
+  }
+  return charmapA;
 }
 
 console.log(anagrams("RAIL! SAFETY!", "fairy tales"));

@@ -19,10 +19,17 @@ function charMap(str) {
   }
   return charmap;
 }
-
+// will check that the length of each charmap is the same, then check that the key:value pairs are the same, if both tests pass, return true
 function anagrams(stringA, stringB) {
   const charmapA = charMap(stringA);
-  return charmapA;
+  const charmapB = charMap(stringB);
+  if (Object.keys(charmapA).length !== Object.keys(charmapB).length)
+    return false;
+
+  for (let key in charmapA) {
+    if (charmapA[key] !== charmapB[key]) return false;
+  }
+  return true;
 }
 
 console.log(anagrams("RAIL! SAFETY!", "fairy tales"));

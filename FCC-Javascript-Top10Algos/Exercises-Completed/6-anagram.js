@@ -9,14 +9,19 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 // METHOD 1: Build a character map for stringA, then build character map for stringB, then compare the maps to see if they are equal
-function anagrams(stringA, stringB) {
-  const charmapA = {}; //start by creating an empty object for storing each character:count key:value pair
-  stringA = stringA.toLowerCase().replace(/[\W]/g, ""); //to remove all capital letters, and to remove all punctuation use a regex
+function charMap(str) {
+  const charmap = {}; //start by creating an empty object for storing each character:count key:value pair
+  str = str.toLowerCase().replace(/[\W]/g, ""); //to remove all capital letters, and to remove all punctuation use a regex
   // REGEX : '/[\W]/g CHARACTER SET: BIG 'W' WILL MATCH ALL CHARACTERS THAT ARE NOT A WORD
-  for (let char of stringA) {
+  for (let char of str) {
     // will go through each character in the string, and add it if not there, and ++ add one if it exists already
-    charmapA[char] = ++charmapA[char] || 1;
+    charmap[char] = ++charmap[char] || 1;
   }
+  return charmap;
+}
+
+function anagrams(stringA, stringB) {
+  const charmapA = charMap(stringA);
   return charmapA;
 }
 

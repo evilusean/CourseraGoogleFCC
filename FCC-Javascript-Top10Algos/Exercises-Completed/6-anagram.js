@@ -31,6 +31,10 @@ function anagrams(stringA, stringB) {
   return true;
 }
 */
-//METHOD 2:
+//METHOD 2: Easier and more intuitive solusean, sort stringA+B, sort function is only possible on arrays, can not be done on strings.
+
+function anagrams(stringA, stringB) {
+  return stringA.toLowerCase().replace(/[\W]/g, "").split("").sort().join("");
+}
 
 console.log(anagrams("RAIL! SAFETY!", "fairy tales"));

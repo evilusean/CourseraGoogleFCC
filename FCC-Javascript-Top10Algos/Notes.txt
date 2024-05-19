@@ -199,8 +199,12 @@ function anagrams(stringA, stringB) {
 }
 
 1:08:00 = Count Vowels =====================================================================================================================================
-
-
+We need to write a function that returns the number of vowels are in a string. AEIOU - 
+/* METHOD 1: Regex : Built in JS function called 'match', returns null if there are no matches, will return an array with all the matches */
+function vowels(str) {
+  const matches = str.match(/[aeiou]/gi); //g flag = won't stop at first match, i flag = case insensitivty, can be caps or lower
+  return matches ? matches.length : 0; //if there are matches, return how many there are(.length) of array - will give us a number : or zero
+}
 
 
 

@@ -8,7 +8,7 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-// METHOD 1: Build a character map for stringA, then build character map for stringB, then compare the maps to see if they are equal
+/* METHOD 1: Build a character map for stringA, then build character map for stringB, then compare the maps to see if they are equal
 function charMap(str) {
   const charmap = {}; //start by creating an empty object for storing each character:count key:value pair
   str = str.toLowerCase().replace(/[\W]/g, ""); //to remove all capital letters, and to remove all punctuation use a regex
@@ -25,11 +25,12 @@ function anagrams(stringA, stringB) {
   const charmapB = charMap(stringB);
   if (Object.keys(charmapA).length !== Object.keys(charmapB).length)
     return false;
-
   for (let key in charmapA) {
     if (charmapA[key] !== charmapB[key]) return false;
   }
   return true;
 }
+*/
+//METHOD 2:
 
 console.log(anagrams("RAIL! SAFETY!", "fairy tales"));

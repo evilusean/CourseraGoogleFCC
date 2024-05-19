@@ -32,9 +32,11 @@ function anagrams(stringA, stringB) {
 }
 */
 //METHOD 2: Easier and more intuitive solusean, sort stringA+B, sort function is only possible on arrays, can not be done on strings.
-
+function cleanStr(str) {
+  return str.toLowerCase().replace(/[\W]/g, "").split("").sort().join("");
+} // will lower case all, regex removes ALL special characters, will .split into an array, .sort the arrays, .join back into a string
 function anagrams(stringA, stringB) {
-  return stringA.toLowerCase().replace(/[\W]/g, "").split("").sort().join("");
+  return cleanStr(stringA) === cleanStr(stringB); //Will compare both sorted strings to make sure they match, if they do === anagram
 }
 
 console.log(anagrams("RAIL! SAFETY!", "fairy tales"));

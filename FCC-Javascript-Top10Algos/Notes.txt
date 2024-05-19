@@ -198,7 +198,7 @@ function anagrams(stringA, stringB) {
   return cleanStr(stringA) === cleanStr(stringB); //Will compare both sorted strings to make sure they match, if they do === anagram
 }
 
-
+1:08:00 = Count Vowels =====================================================================================================================================
 
 
 

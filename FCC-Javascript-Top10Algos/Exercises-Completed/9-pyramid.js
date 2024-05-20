@@ -28,5 +28,4 @@ function pyramid(n) {
     console.log(line);
   }
 }
-
 pyramid(3);

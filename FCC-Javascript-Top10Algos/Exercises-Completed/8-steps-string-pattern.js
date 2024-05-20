@@ -17,6 +17,15 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
-
+function steps(n) {
+  for (let row = 1; row <= n; row++) {
+    let line = "";
+    // will loop for row
+    for (let col = 1; col <= n; col++) {
+      //will loop for col
+      line += "#";
+    }
+    console.log(line);
+  }
+}
 steps(3);

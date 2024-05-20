@@ -23,7 +23,11 @@ function steps(n) {
     // will loop for row
     for (let col = 1; col <= n; col++) {
       //will loop for col
-      line += "#";
+      if (col <= row) {
+        line += "#";
+      } else {
+        line += " ";
+      }
     }
     console.log(line);
   }

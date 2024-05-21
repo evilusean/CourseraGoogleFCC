@@ -2,7 +2,7 @@
 [Tutorial:](https://www.youtube.com/watch?v=ufBbWIyKY2E&ab_channel=freeCodeCamp.org) [https://www.freecodecamp.org/news/top-10-javascript-algorithms-for-coding-challenges/](https://www.freecodecamp.org/news/top-10-javascript-algorithms-for-coding-challenges/)
 
 Start: 15May2024</br>
-End:
+End: 20May2024</br>
 
 # FreeCodeCamp - GraphQL / NodeJS / Apollo :
 [Tutorial:](https://www.youtube.com/watch?v=5199E50O7SI&ab_channel=freeCodeCamp.org) [https://www.freecodecamp.org/news/graphql-database-tutorial/](https://www.freecodecamp.org/news/graphql-database-tutorial/)

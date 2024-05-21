@@ -276,3 +276,15 @@ function pyramid(n) {
 pyramid(3);
 
 1:39:30 = Spiral Matrix ====================================================================================================================================
+// Write a function that accepts an integer N // and returns a NxN spiral matrix. can be viewed as an array
+We first need to define a few variables : start row, start col, end col, end row, and we need a counter variable : start >  end col \/  end row <  start col /\ 
+once you do one 'loop' you need to decrement the end col by 1, same with start row, 
+put variables inside the while loop
+
+
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-# FCC - Learn Three.JS By Building Five Projects: </br>
+# FreeCodeCamp - Learn Three.JS By Building Five Projects: </br>
 [Tutorial:](https://www.youtube.com/watch?v=UMqNHi1GDAE&ab_channel=freeCodeCamp.org) [https://www.freecodecamp.org/news/learn-threejs-by-building-five-projects/](https://www.freecodecamp.org/news/learn-threejs-by-building-five-projects/) 
 
 Start: 26June2024 </br>

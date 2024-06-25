@@ -1,2 +1,51 @@
 Start:26Jun2024
 End:
+
+1 Basics = 2:00 ======================================================================================================================================================================================================================
+Three.JS transforms code into awesome visual experiences - 
+Download Starter Template - https://github.com/bobbyroe/getting-started-with-threejs
+Download VS Code / Download 'Live Server' Extension for VSCode - 
+  Start 'Live Server' - Bottom Right Hand Corner of VSCode 'Go Live' 
+<script type="importmap">
+			{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
+        }
+			}
+#Above is an import map, a convenient way to define your JS import paths, first time I've seen this. 
+ThreeJS needs 3 things for a scene: A renderer, A camera, and an Object
+import * as THREE from "three"; #first import Three.js
+const w = window.innerWidth; #get width 
+const h = window.innerHeight; #get height
+const renderer = new THREE.WebGLRenderer({ antialias: true}) #create a renderer
+renderer.setSize(w, h); #get window size
+document.body.appendChild(renderer.domElement); #dom=html page, will append the canvas element to the dom, this is the easier way 
+#Another way to do above, is to create a canvas element inside your HTML and use that to set up the render
+const camera = new THREE.PerspectiveCamera(75, w / h, 0.1, 1000); #next create a camera, requires 4 things to make a perspective camera: field of view(75 degrees), an aspect(width / height), a near(0.1), and a far(1000)
+camera.position.z = 2; #set the position at '2' on the Z axis
+const scene = new THREE.Scene(); #next, set the scene, so above, you can see we have 'Renderer' 'Camera' and we are missing the object..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

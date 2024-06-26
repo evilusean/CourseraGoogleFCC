@@ -34,7 +34,13 @@ const mesh = new THREE.Mesh(geo. mat); #combine the geometry and mesh into one o
 scene.add(mesh) #add the newly created object to our previously built scene
 #all of the above code to create a blue squareish ball on screen, requires a 'Renderer' 'Camera' and 'Object' and each object requires a 'Geometry' and 'Mesh' - Also need a 'Viewport'(aspect ratio) for the canvas/scene
 
-
+#next we are creating an animation, wrapping the render call in a function, you can repeatedly render
+function animate(t = 0) {
+    requestAnimationFrame(animate); #how it animates, through an API 'requestAnimationFrame(animate)' pass name of function as an argument, by default will be called every second
+    mesh.scale.setScalar(Math.cos(t * 0.001) + 1.0) //Will cause the orb to shrink and expand over and over again
+    renderer.render(scene, camera);
+}
+animate(); #ensure you call the function, to start the animation
 
 
 

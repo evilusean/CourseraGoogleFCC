@@ -54,7 +54,7 @@ const hemiLight = new THREE.HemisphereLight(0x0099ff, 0xaa5500); #changed the co
 import { OrbitControls } from "jsm/controls/OrbitControls.js"; #Will allow you to orbit around 
 const controls = new OrbitControls(camera, renderer.domElement); #will allow you to orbit around with mouse, scroll in with middle
 
-
+2 Earth = 19:00 =========================================================================================================================================================================================================================
 
 
 

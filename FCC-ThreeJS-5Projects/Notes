@@ -25,8 +25,14 @@ document.body.appendChild(renderer.domElement); #dom=html page, will append the 
 const camera = new THREE.PerspectiveCamera(75, w / h, 0.1, 1000); #next create a camera, requires 4 things to make a perspective camera: field of view(75 degrees), an aspect(width / height), a near(0.1), and a far(1000)
 camera.position.z = 2; #set the position at '2' on the Z axis
 const scene = new THREE.Scene(); #next, set the scene, so above, you can see we have 'Renderer' 'Camera' and we are missing the object..
-
-
+#The above code will always need to be setup in some manner, no matter what you are doing, so might as well git good at it, that's the core of ThreeJS
+renderer.render(scene, camera); #will render our first scene.. a blank black screen.. Success!
+#Primitives = Built in ThreeJS Geometry(Euclidean shapes), below is one
+const geo = new THREE.IcosahedronGeometry(1.0, 2); #1.0 = size, 2 = detail
+const mat = new THREE.MeshBasicMaterial({ color: 0xccff }) #how to add a mesh - basic material is just a color, only requires what color you want as an arg
+const mesh = new THREE.Mesh(geo. mat); #combine the geometry and mesh into one object
+scene.add(mesh) #add the newly created object to our previously built scene
+#all of the above code to create a blue squareish ball on screen, requires a 'Renderer' 'Camera' and 'Object' and each object requires a 'Geometry' and 'Mesh' - Also need a 'Viewport'(aspect ratio) for the canvas/scene
 
 
 

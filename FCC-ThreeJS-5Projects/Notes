@@ -42,10 +42,10 @@ function animate(t = 0) {
 }
 animate(); #ensure you call the function, to start the animation
 
-
-
-
-
+'MeshBasicMaterial' does not interact with lights, 'MeshStandardMaterial' does
+const hemiLight = new THREE.HemisphereLight(0xffffff, 0x000000); #will add a light (White = top , Black = bottom)
+const mat = new THREE.MeshBasicMaterial({ flatShading: true, }) #wiill remove smooth shading and show a sphere object, you can reduce or increase the amounts of faces by changing below
+const geo = new THREE.IcosahedronGeometry(1.0, 2); #change the '2' to add or remove faces from the object
 
 
 

@@ -4,6 +4,7 @@ import { OrbitControls } from 'jsm/controls/OrbitControls.js';
 import getStarfield from "./src/getStarfield.js";
 import { getFresnelMat } from "./src/getFresnelMat.js";
 
+//ThreeJS BoilerPlate - Sets up the scene
 const w = window.innerWidth;
 const h = window.innerHeight;
 const scene = new THREE.Scene();
@@ -20,12 +21,12 @@ const earthGroup = new THREE.Group();
 earthGroup.rotation.z = -23.4 * Math.PI / 180;
 scene.add(earthGroup);
 new OrbitControls(camera, renderer.domElement);
-const detail = 12;
-const loader = new THREE.TextureLoader();
-const geometry = new THREE.IcosahedronGeometry(1, detail);
+const detail = 12; //change this to change how round the ico geo is, less detail = less round/fewer faces
+const loader = new THREE.TextureLoader(); //In order to use a texture(picture) we need to create a loader
+const geometry = new THREE.IcosahedronGeometry(1, detail); //1 unit, with a detail of 12
 const material = new THREE.MeshPhongMaterial({
-  map: loader.load("./textures/00_earthmap1k.jpg"),
-  specularMap: loader.load("./textures/02_earthspec1k.jpg"),
+  map: loader.load("./textures/00_earthmap1k.jpg"), //will load the earth textures we downloaded
+  specularMap: loader.load("./textures/02_earthspec1k.jpg"), //uses the loader we previously created 
   bumpMap: loader.load("./textures/01_earthbump1k.jpg"),
   bumpScale: 0.04,
 });
@@ -67,7 +68,7 @@ scene.add(sunLight);
 function animate() {
   requestAnimationFrame(animate);
 
-  earthMesh.rotation.y += 0.002;
+  earthMesh.rotation.y += 0.002; //Starts the earth rotation
   lightsMesh.rotation.y += 0.002;
   cloudsMesh.rotation.y += 0.0023;
   glowMesh.rotation.y += 0.002;

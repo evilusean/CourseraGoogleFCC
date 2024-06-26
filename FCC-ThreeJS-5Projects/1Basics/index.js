@@ -21,6 +21,18 @@ const mat = new THREE.MeshBasicMaterial({ color: 0xccff })
 const mesh = new THREE.Mesh(geo, mat);
 scene.add(mesh);
 
+function animate(t = 0) {
+    requestAnimationFrame(animate);
+    //uncomment below 2 to rotate
+    //mesh.rotation.x += 0.01;
+    //mesh.rotation.y += 0.01;
+    mesh.scale.setScalar(Math.cos(t * 0.001) + 1.0) //Will cause the orb to shrink and expand over and over again
+    renderer.render(scene, camera);
+}
+animate();
+
+
+
 renderer.render(scene, camera);
 
 

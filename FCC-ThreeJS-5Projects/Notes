@@ -27,7 +27,7 @@ camera.position.z = 2; #set the position at '2' on the Z axis
 const scene = new THREE.Scene(); #next, set the scene, so above, you can see we have 'Renderer' 'Camera' and we are missing the object..
 #The above code will always need to be setup in some manner, no matter what you are doing, so might as well git good at it, that's the core of ThreeJS
 renderer.render(scene, camera); #will render our first scene.. a blank black screen.. Success!
-#Primitives = Built in ThreeJS Geometry(Euclidean shapes), below is one
+#Primitives = Built in ThreeJS Geometry(Euclidean Vs Platonic shapes), below is one
 const geo = new THREE.IcosahedronGeometry(1.0, 2); #1.0 = size, 2 = detail
 const mat = new THREE.MeshBasicMaterial({ color: 0xccff }) #how to add a mesh - basic material is just a color, only requires what color you want as an arg
 const mesh = new THREE.Mesh(geo. mat); #combine the geometry and mesh into one object
@@ -55,9 +55,13 @@ import { OrbitControls } from "jsm/controls/OrbitControls.js"; #Will allow you t
 const controls = new OrbitControls(camera, renderer.domElement); #will allow you to orbit around with mouse, scroll in with middle
 
 2 Earth = 19:00 =========================================================================================================================================================================================================================
+Earth Moon Meshes/Textures:
+https://planetpixelemporium.com/earth.html
 
-
-
+I will just be explaining what each part does, what I downloaded was already finished, don't need to build much, gonna be doing a moon project here next after this tut, so should pay attention
+const geometry = new THREE.IcosahedronGeometry(1, 12); #for a round shape, use 1 unit and a detail of '12'
+const loader = new THREE.TextureLoader(); //In order to use a texture(picture) we need to create a loader so we can apply it to the mesh
+  earthMesh.rotation.y += 0.002; //Starts the earth rotation
 
 
 

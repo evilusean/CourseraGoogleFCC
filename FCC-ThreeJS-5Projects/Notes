@@ -46,8 +46,13 @@ animate(); #ensure you call the function, to start the animation
 const hemiLight = new THREE.HemisphereLight(0xffffff, 0x000000); #will add a light (White = top , Black = bottom)
 const mat = new THREE.MeshBasicMaterial({ flatShading: true, }) #wiill remove smooth shading and show a sphere object, you can reduce or increase the amounts of faces by changing below
 const geo = new THREE.IcosahedronGeometry(1.0, 2); #change the '2' to add or remove faces from the object
+const wireMat = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true }); #wireframe: true will create a wire mesh, that is solid lines along the faces/vertices, which are see through
+mesh.add(wireMesh); #notice how we used 'mesh.add' instead of 'scene.add' this will add it to our previously named mesh variable(contains a geo and a material) as a child, and will create a wire overlay over the old mesh
+wireMesh.scale.setScalar(1.01); #will make the wire mesh slightly larger than the old mesh to avoid clipping/flickering, by scaling it up slightly
+const hemiLight = new THREE.HemisphereLight(0x0099ff, 0xaa5500); #changed the colour of the white geo by adding a blue light on top and orange light on bottom, aesthetic
 
-
+import { OrbitControls } from "jsm/controls/OrbitControls.js"; #Will allow you to orbit around 
+const controls = new OrbitControls(camera, renderer.domElement); #will allow you to orbit around with mouse, scroll in with middle
 
 
 

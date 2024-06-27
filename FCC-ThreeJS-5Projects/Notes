@@ -78,6 +78,6 @@ const material = new THREE.MeshPhongMaterial({
 const earthMesh = new THREE.Mesh(geometry, material);
 earthGroup.add(earthMesh); // Adds to the earthGroup we created above, instead of adding to scene, so we add the earthgroup to the scene, so if we change one, we can change them all
 
-
+3 Fly Through A WireFrame WormHole = 38:30 ==============================================================================================================================================================================================
 
 

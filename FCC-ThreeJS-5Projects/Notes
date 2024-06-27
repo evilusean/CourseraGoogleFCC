@@ -63,9 +63,20 @@ const geometry = new THREE.IcosahedronGeometry(1, 12); #for a round shape, use 1
 const loader = new THREE.TextureLoader(); //In order to use a texture(picture) we need to create a loader so we can apply it to the mesh
   earthMesh.rotation.y += 0.002; //Starts the earth rotation
 
+const earthGroup = new THREE.Group(); //instead of adding to the scene, add to the earthgroup, so you can change all with one 
+earthGroup.rotation.z = -23.4 * Math.PI / 180; //Earth tilt
+scene.add(earthGroup); //add the earthgroup to the scene
 
-
-
+const geometry = new THREE.IcosahedronGeometry(1, 12); //1 unit, with a detail of 12(faces/resolution)
+const material = new THREE.MeshPhongMaterial({
+  map: loader.load("./textures/00_earthmap1k.jpg"), //will load the earth textures we downloaded
+  specularMap: loader.load("./textures/02_earthspec1k.jpg"), //uses the loader we previously created 
+  bumpMap: loader.load("./textures/01_earthbump1k.jpg"),
+  bumpScale: 0.04,
+});
+// material.map.colorSpace = THREE.SRGBColorSpace;
+const earthMesh = new THREE.Mesh(geometry, material);
+earthGroup.add(earthMesh); // Adds to the earthGroup we created above, instead of adding to scene, so we add the earthgroup to the scene, so if we change one, we can change them all
 
 
 

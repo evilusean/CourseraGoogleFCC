@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { OrbitControls } from 'jsm/controls/OrbitControls.js';
+import { OrbitControls } from 'jsm/controls/OrbitControls.js'; // don't forget the .js - for some reason
 
 import getStarfield from "./src/getStarfield.js";
 import { getFresnelMat } from "./src/getFresnelMat.js";
@@ -8,19 +8,19 @@ import { getFresnelMat } from "./src/getFresnelMat.js";
 const w = window.innerWidth;
 const h = window.innerHeight;
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, w / h, 0.1, 1000);
-camera.position.z = 5;
-const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setSize(w, h);
-document.body.appendChild(renderer.domElement);
+const camera = new THREE.PerspectiveCamera(75, w / h, 0.1, 1000); //viewport degrees, viewport aspect ratio, min, max
+camera.position.z = 5;//initial camera position
+const renderer = new THREE.WebGLRenderer({ antialias: true }); // create a renderer to animate the scene
+renderer.setSize(w, h); // width / height = aspect ratio
+document.body.appendChild(renderer.domElement); // add the renderer to the page, will create the canvas 
 // THREE.ColorManagement.enabled = true;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
 
-const earthGroup = new THREE.Group();
-earthGroup.rotation.z = -23.4 * Math.PI / 180;
-scene.add(earthGroup);
-new OrbitControls(camera, renderer.domElement);
+const earthGroup = new THREE.Group(); //instead of adding to the scene, add to the earthgroup, so you can change all with one 
+earthGroup.rotation.z = -23.4 * Math.PI / 180; //Earth Rotation
+scene.add(earthGroup); //add the earthgroup to the scene
+new OrbitControls(camera, renderer.domElement); // allows you to move around the scene
 const detail = 12; //change this to change how round the ico geo is, less detail = less round/fewer faces
 const loader = new THREE.TextureLoader(); //In order to use a texture(picture) we need to create a loader
 const geometry = new THREE.IcosahedronGeometry(1, detail); //1 unit, with a detail of 12

@@ -81,7 +81,7 @@ earthGroup.add(earthMesh); // Adds to the earthGroup we created above, instead o
 3 Fly Through A WireFrame WormHole = 38:30 ==============================================================================================================================================================================================
 WireFrame WormHole AEffect - 
 Spline = Representation of a line in 3D space tp create geometry
-
+Mostly a finished work, took notes from tut and put them in with the 'index.js' explaining line by line what each part of the code does for future reference
 
 
 

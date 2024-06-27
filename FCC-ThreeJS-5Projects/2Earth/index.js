@@ -53,7 +53,7 @@ const cloudsMesh = new THREE.Mesh(geometry, cloudsMat); //creates mesh from the 
 cloudsMesh.scale.setScalar(1.003); //makes this mesh slightly larger so it sits on top of the city lights and the topography
 earthGroup.add(cloudsMesh); //adds it to the earthgroup
 
-const fresnelMat = getFresnelMat();
+const fresnelMat = getFresnelMat(); // This is the Aura
 const glowMesh = new THREE.Mesh(geometry, fresnelMat);
 glowMesh.scale.setScalar(1.01);
 earthGroup.add(glowMesh);
@@ -69,10 +69,10 @@ function animate() {
   requestAnimationFrame(animate);
   //mesh.scale.setScalar(Math.cos(t * 0.001) + 1.0) //Will cause the orb to shrink and expand over and over again 2DaMoon
   earthMesh.rotation.y += 0.002; //Starts the earth rotation
-  lightsMesh.rotation.y += 0.002;
-  cloudsMesh.rotation.y += 0.0023;
-  glowMesh.rotation.y += 0.002;
-  stars.rotation.y -= 0.0002;
+  lightsMesh.rotation.y += 0.002; //Starts the lights rotation
+  cloudsMesh.rotation.y += 0.0023; //cloud rotation, clouds move slightly faster to simulate... clouds 
+  glowMesh.rotation.y += 0.002; //RIP Terry. They glow in the dark. You can see em if your driving. 
+  stars.rotation.y -= 0.0002; 
   renderer.render(scene, camera);
 }
 

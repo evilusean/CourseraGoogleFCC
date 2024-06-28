@@ -84,7 +84,8 @@ Spline = Representation of a line in 3D space tp create geometry
 Mostly a finished work, took notes from tut and put them in with the 'index.js' explaining line by line what each part of the code does for future reference
 
 4 Transition Effect = 1:00:00 ===========================================================================================================================================================================================================
-
+Transition effect = Features 2 different scenes that are just smoothly transitioned between with different transitions, appears that there are more scenes, with colors randomized, wire mesh -> shell material 
+This one is largely completed as well, just going to take notes/comments on that 'index.html' explaining what each line does, for future sean
 
 
 

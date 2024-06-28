@@ -24,9 +24,9 @@ const controls = new OrbitControls(camera, renderer.domElement); // Create orbit
 controls.enableDamping = true; // Enable damping for smooth movement
 controls.dampingFactor = 0.03; // Set damping factor for control smoothness
 
-// post-processing
+// post-processing - glow effect to the cube and the the tube - remember this future sean for synth wave glory
 const renderScene = new RenderPass(scene, camera); // Create a render pass that renders the scene with the camera.
-const bloomPass = new UnrealBloomPass(new THREE.Vector2(w, h), 1.5, 0.4, 100); // Create bloom pass
+const bloomPass = new UnrealBloomPass(new THREE.Vector2(w, h), 1.5, 0.4, 100); // Create bloom pass - where the glow comes from
 // Create an UnrealBloomPass object for applying a bloom effect.
 // Arguments:
 // - new THREE.Vector2(w, h): The resolution of the bloom effect.
@@ -85,13 +85,14 @@ for (let i = 0; i < numBoxes; i += 1) { // box helper for loop
     Math.random() * Math.PI,
     Math.random() * Math.PI
   );// Creates a random rotation vector for the box
-  box.rotation.set(rote.x, rote.y, rote.z); // random rotation on box
-  const edges = new THREE.EdgesGeometry(boxGeo, 0.2);
-  const color = new THREE.Color().setHSL(0.7 - p, 1, 0.5);
-  const lineMat = new THREE.LineBasicMaterial({ color });
-  const boxLines = new THREE.LineSegments(edges, lineMat);
-  boxLines.position.copy(pos);
-  boxLines.rotation.set(rote.x, rote.y, rote.z);
+  box.rotation.set(rote.x, rote.y, rote.z); // random rotation on box using the above vector3's
+  const edges = new THREE.EdgesGeometry(boxGeo, 0.2); //arguments = source, line width
+  const color = new THREE.Color().setHSL(0.7 - p, 1, 0.5); //random color 'p' is the value of position in tube
+  //will change color as you progress through the tube, starting at red to purple back to red, as you traverse
+  const lineMat = new THREE.LineBasicMaterial({ color }); //changes color(random)
+  const boxLines = new THREE.LineSegments(edges, lineMat); // create mesh from edges geo(cube) and lineMat(random color)
+  boxLines.position.copy(pos); // copies the position
+  boxLines.rotation.set(rote.x, rote.y, rote.z); //
   // scene.add(box);
   scene.add(boxLines);
 }
@@ -99,7 +100,10 @@ for (let i = 0; i < numBoxes; i += 1) { // box helper for loop
 //Fly through - progresses along the curve/tube - 
 function updateCamera(t) {
   const time = t * 0.1; //grabs a point along the spline, the points are between 0 and 1
-  const looptime = 10 * 1000; 
+  const looptime = 10 * 1000; //change the '10' multiplier to increase the speed
+  // This line defines a constant variable called `looptime` and sets it to 10 * 1000, which is 10,000 milliseconds. 
+  // This value represents the duration of one complete loop of the camera's movement along the tube. 
+  // It's essentially the time it takes for the camera to travel the entire length of the tube and return to its starting point.
   const p = (time % looptime) / looptime; // will give the remainder of dividing by the looptime, and then divides that by the looptime again 
   const pos = tubeGeo.parameters.path.getPointAt(p); //gets current position
   const lookAt = tubeGeo.parameters.path.getPointAt((p + 0.03) % 1); //calculates a position slightly ahead of current 

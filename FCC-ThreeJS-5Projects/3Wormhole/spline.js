@@ -36,19 +36,19 @@ const curvePath = [10.136184463414924, -1.374508746897471, 10.384881573913269,
 	11.225959519544134, -1.374508746897471, 14.279002555560753,
 	11.288646925965876, -1.374508746897471, 11.926359497447137,
 	10.136184463414924, -1.374508746897471, 10.384881573913269
-];
+]; //represents the path that the camera follows
 
 // construct tunnel track
 const points = [];
 const len = curvePath.length;
 for (let p = 0; p < len; p += 3) {
-  points.push(new THREE.Vector3(
+  points.push(new THREE.Vector3( //points get converted to 'Vector3'
     curvePath[p], 
     curvePath[p + 1], 
     curvePath[p + 2])
   );
-}
+}//points get converted, 
 
-const spline = new THREE.CatmullRomCurve3(points);
+const spline = new THREE.CatmullRomCurve3(points); //allows you to interpolate smoothly between points
 
 export default spline;

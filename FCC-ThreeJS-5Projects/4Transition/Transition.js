@@ -73,7 +73,8 @@ export function getTransition({ renderer, sceneA, sceneB }) {
       		gl_FragColor = mix( texel2, texel1, mixRatio );
       	}
       }`,
-  });
+  });// Texture shader, this is what takes the image textures, and transititions between the 2 scenes 
+  //change : swap in a different texture to get a different effect
 
   const geometry = new THREE.PlaneGeometry(w, h);
   const mesh = new THREE.Mesh(geometry, material);

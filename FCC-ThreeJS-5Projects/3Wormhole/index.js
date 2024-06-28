@@ -16,23 +16,38 @@ const camera = new THREE.PerspectiveCamera(75, w / h, 0.1, 1000); //view degrees
 camera.position.z = 5; //camera position
 const renderer = new THREE.WebGLRenderer(); //renderer
 renderer.setSize(w, h); //aspect ratio screen/canvas size
-renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.outputColorSpace = THREE.SRGBColorSpace;
-document.body.appendChild(renderer.domElement);
+renderer.toneMapping = THREE.ACESFilmicToneMapping; // ACESFilmicToneMapping is a specific tone mapping algorithm that aims to produce a more realistic and film-like look.
+renderer.outputColorSpace = THREE.SRGBColorSpace;  // SRGB (Standard Red Green Blue) is a color space designed to mimic how humans perceive colors. 
+document.body.appendChild(renderer.domElement); // This line appends the renderer's canvas element (renderer.domElement) to the HTML document's body. 
 
-const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
-controls.dampingFactor = 0.03;
+const controls = new OrbitControls(camera, renderer.domElement); // Create orbit controls
+controls.enableDamping = true; // Enable damping for smooth movement
+controls.dampingFactor = 0.03; // Set damping factor for control smoothness
 
 // post-processing
-const renderScene = new RenderPass(scene, camera);
-const bloomPass = new UnrealBloomPass(new THREE.Vector2(w, h), 1.5, 0.4, 100);
-bloomPass.threshold = 0.002;
-bloomPass.strength = 3.5;
-bloomPass.radius = 0;
-const composer = new EffectComposer(renderer);
-composer.addPass(renderScene);
-composer.addPass(bloomPass);
+const renderScene = new RenderPass(scene, camera); // Create a render pass that renders the scene with the camera.
+const bloomPass = new UnrealBloomPass(new THREE.Vector2(w, h), 1.5, 0.4, 100); // Create bloom pass
+// Create an UnrealBloomPass object for applying a bloom effect.
+// Arguments:
+// - new THREE.Vector2(w, h): The resolution of the bloom effect.
+// - 1.5: The strength of the bloom effect.
+// - 0.4: The threshold for applying the bloom effect.
+// - 100: The radius of the bloom effect.
+bloomPass.threshold = 0.002; // Set bloom threshold
+// Set the threshold for applying the bloom effect.
+// Lower values will result in more areas being affected by the bloom.
+bloomPass.strength = 3.5; // Set bloom strength
+// Set the strength of the bloom effect.
+// Higher values will result in a stronger bloom effect.
+bloomPass.radius = 0; // Set bloom radius
+// Set the radius of the bloom effect.
+// Higher values will result in a larger bloom effect.
+const composer = new EffectComposer(renderer); // Create composer
+// Create an EffectComposer object for applying post-processing effects.
+composer.addPass(renderScene); // Add render pass to composer
+// This will render the scene before any post-processing effects are applied
+composer.addPass(bloomPass); // Add bloom pass to composer
+// This will apply the bloom effect to the rendered scene.
 
 // create a line geometry from the spline
 const points = spline.getPoints(100); //creates the line from 100 points of 'spline.js'

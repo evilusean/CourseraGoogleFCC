@@ -16,23 +16,25 @@ function init() {
   container.appendChild(renderer.domElement);
 
   const materialA = new THREE.MeshBasicMaterial({
-    color: 0x00FF00,
+    //color: 0x00FF00, // Color for the wireframe, matrix green
+    color: 0xff0000, // new color, looks way better, dark red
     wireframe: true
   });
   const materialB = new THREE.MeshStandardMaterial({
-    color: 0xFF9900,
+    color: 0xFF9900, // Color for the solid color, is random from 'FXScene.js' 
     flatShading: true,
   });
   const sceneA = getFXScene({
     renderer,
     material: materialA,
     clearColor: 0x000000
+    //needsAnimatedColor: true, //sets the color for the wireframe, keeps it as one color, disabled, looks better 
   });
   const sceneB = getFXScene({
     renderer,
     material: materialB,
     clearColor: 0x000000,
-    needsAnimatedColor: true,
+    needsAnimatedColor: true, 
   });
 
   transition = getTransition({ renderer, sceneA, sceneB });

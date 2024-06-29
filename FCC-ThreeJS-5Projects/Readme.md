@@ -1,6 +1,6 @@
 # FCC - Learn Three.JS By Building Five Projects: </br>
 Start: 26June2024 </br>
-End: </br>
+End: 29June2024</br>
 
 [Tutorial:](https://www.youtube.com/watch?v=UMqNHi1GDAE&ab_channel=freeCodeCamp.org) [https://www.freecodecamp.org/news/learn-threejs-by-building-five-projects/](https://www.freecodecamp.org/news/learn-threejs-by-building-five-projects/) </br>
 

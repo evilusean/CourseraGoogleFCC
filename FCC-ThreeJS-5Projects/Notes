@@ -88,4 +88,7 @@ Transition effect = Features 2 different scenes that are just smoothly transitio
 This one is largely completed as well, just going to take notes/comments on that 'index.html' explaining what each line does, for future sean
 
 5 Add Physics to Three.js with Rapier = 1:08:30 =========================================================================================================================================================================================
-
+Rapier Physics Enginer = Fast Stable Web Assembly Module + ThreeJS - with a few lines of JS, dynamic collisions and forces to ThreeJS Scenes
+Foundational setup to linking collisional bodies with 3D Objects
+Process = Start Simple - ThreeJS scene with a single object, add more geometry, wire up mouse controls, add alight to the mouse, add rapier physics enginer, add post processing(the bloom effect)
+Going to take notes in the files

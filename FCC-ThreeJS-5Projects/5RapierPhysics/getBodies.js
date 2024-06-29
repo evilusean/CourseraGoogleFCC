@@ -19,13 +19,13 @@ function getBody(RAPIER, world) { // Define a function to create a physics body
 
     const geometry = new THREE.IcosahedronGeometry(size, 1); // Create an IcosahedronGeometry object with the specified size and detail
     const material = new THREE.MeshStandardMaterial({ // Create a MeshStandardMaterial object with the specified properties
-      color: 0xffffff, // Set the color of the material to white
+      color: 0x000000, // Set the color of the material to white
       flatShading: true // Enable flat shading for the material
     });
     const mesh = new THREE.Mesh(geometry, material); // Create a Mesh object using the geometry and material
 
     const wireMat = new THREE.MeshBasicMaterial({ // Create a MeshBasicMaterial object for the wireframe
-      color: 0x990000, // Set the color of the wireframe to red
+      color: 0xff0000, // Set the color of the wireframe to red
       wireframe: true // Enable wireframe for the material
     });
     const wireMesh = new THREE.Mesh(geometry, wireMat); // Create a Mesh object for the wireframe using the geometry and wireframe material

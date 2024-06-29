@@ -2,7 +2,7 @@
 [Tutorial:](https://www.youtube.com/watch?v=UMqNHi1GDAE&ab_channel=freeCodeCamp.org) [https://www.freecodecamp.org/news/learn-threejs-by-building-five-projects/](https://www.freecodecamp.org/news/learn-threejs-by-building-five-projects/) 
 
 Start: 26June2024 </br>
-End: </br>
+End: 29June2024</br>
 
 # FreeCodeCamp - Top 10 JS Algorithms : 
 [Tutorial:](https://www.youtube.com/watch?v=ufBbWIyKY2E&ab_channel=freeCodeCamp.org) [https://www.freecodecamp.org/news/top-10-javascript-algorithms-for-coding-challenges/](https://www.freecodecamp.org/news/top-10-javascript-algorithms-for-coding-challenges/)

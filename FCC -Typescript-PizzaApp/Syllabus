@@ -1,0 +1,32 @@
+⭐️ Course Contents ⭐️
+0:00:00 Introduction
+0:06:39 Intro to Pizza app
+0:16:49 Move code to TS
+0:19:58 Defensive coding
+0:24:36 Obligatory types basics lesson
+0:28:29 Add type to orderId
+0:29:55 Defining Custom Types
+0:33:44 Adding a Pizza type
+0:38:00 Nested object types
+0:43:15 Optional properties
+0:45:58 Adding an Order type
+0:47:20 Typing arrays
+0:52:00 Type orderQueue
+0:56:13 Literal types
+0:58:57 Unions
+1:01:57 Update order status to use literal type unions
+1:04:59 Add ids to pizzas
+1:07:41 Type Narrowing
+1:12:39 Be explicit whenever you can
+1:14:54 Function return types
+1:17:53 TS-specific types: any
+1:20:48 Add return type to getPizzaDetail
+1:24:11 Void return type
+1:26:09 Add automatic ids to menu items
+1:30:31 Utility Types & Partial
+1:37:39 Omit Utility Type
+1:44:42 Fix TS warnings with Omit
+1:48:53 Generics
+1:56:17 Generic functions in the pizza restaurant
+1:59:43 Explicitly type generic function calls
+2:04:08 Conclusion... for now

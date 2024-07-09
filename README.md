@@ -1,3 +1,9 @@
+# FCC - Learn TypeScript - Full Course for Beginners:
+[Tutorial: https://www.youtube.com/watch?v=SpwzRDUQ1GI&ab_channel=freeCodeCamp.org](https://www.youtube.com/watch?v=SpwzRDUQ1GI&ab_channel=freeCodeCamp.org)</br>
+
+Start: 10July2024 </br>
+End: </br>
+
 # FreeCodeCamp - Learn Three.JS By Building Five Projects: </br>
 [Tutorial:](https://www.youtube.com/watch?v=UMqNHi1GDAE&ab_channel=freeCodeCamp.org) [https://www.freecodecamp.org/news/learn-threejs-by-building-five-projects/](https://www.freecodecamp.org/news/learn-threejs-by-building-five-projects/) 
 

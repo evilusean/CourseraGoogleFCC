@@ -21,6 +21,10 @@ simply change the extension from '.js' to '.ts' - greeted with a wall of red tex
 every time you see the red squigglie lines, just hover the mouse over to see the problem/intellisense - sometimes recomendations for fixes
 when you use Typescript, you aren't introducing new bugs, it's just showing you where they currently are - they already existed
 
+Lesson 4: Defensive Coding = 20:00 =====================================================================================================================================================================================================
+Assume that code pushed to production will take the 'sad path' - it assumes that problems will occur, edge cases will happen, and address the problems in the code from the start instead of in production = Defensive Coding
+if one of our variables is undefined we can use an if else statement : if selectedPizza exists run the code, else it doesn't - return null
+'completeOrder("1")' #typescript could not detect this bug in the code, it should be just a number
 
 
 

@@ -8,6 +8,6 @@ const menu = [
 const cashInRegister = 100
 const orderQeue = []
 
-/**
- Challenge: Add a utility function "addNewPizza" that takes a pizza object and adds it to the menu
- */
+ function addNewPizza(pizza) {
+    menu.push(pizza);
+}

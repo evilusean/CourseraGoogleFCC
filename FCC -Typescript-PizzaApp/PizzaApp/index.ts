@@ -5,8 +5,8 @@ const menu = [
     { name: "Veggie", price: 9 },
 ]
 
-const cashInRegister = 100
-const orderQeue = []
+let cashInRegister = 100
+let orderQeue = []
 let nextOrderId = 1;
 
 /*
@@ -61,7 +61,7 @@ placeOrder("Chicken Bacon Ranch")
 completeOrder("1")
 
 console.log("Menu", menu)
-console.log("Cash in Register",cashInRegister)
+console.log("Cash in Register", cashInRegister)
 console.log("Order Queue", orderQeue)
 
 

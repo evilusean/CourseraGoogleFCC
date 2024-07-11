@@ -11,3 +11,12 @@ const orderQeue = []
  function addNewPizza(pizza) {
     menu.push(pizza);
 }
+
+/**
+ * Write another utility function, placeOrder, that takes a pizza name parameter and:
+ *  1: finds that pizza object in the menu,
+ *  2: adds the income to the cash register
+ * 3: pushes a new "order object" to the orderQeue EG:
+ * {pizza: selectedPizzaObject, status: "ordered"}
+ * 4: returns the new order object
+ *  */

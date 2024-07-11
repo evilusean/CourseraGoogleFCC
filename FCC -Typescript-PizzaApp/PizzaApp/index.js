@@ -8,6 +8,10 @@ const menu = [
 const cashInRegister = 100
 const orderQeue = []
 
+/*
+Challenge: Add a utility function "addNewPizza" that takes a pizza object and adds it to the menu
+*/
+
  function addNewPizza(pizza) {
     menu.push(pizza);
 }
@@ -20,3 +24,15 @@ const orderQeue = []
  * {pizza: selectedPizzaObject, status: "ordered"}
  * 4: returns the new order object
  *  */
+
+function placeOrder(pizzaName) {
+    const selectedPizza = menu.find(pizza => pizza.name === pizzaName);
+    if (selectedPizza) {
+        cashInRegister += selectedPizza.price;
+        const newOrder = { pizza: selectedPizza, status: "ordered" };
+        orderQeue.push(newOrder);
+        return newOrder;
+    } else {
+        return null;
+    }
+}

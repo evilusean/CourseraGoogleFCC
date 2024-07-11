@@ -58,7 +58,7 @@ addNewPizza({ name: "BBQ Chicken", price: 12 })
 addNewPizza({ name: "Spicey Sausage", price: 11 })
 
 placeOrder("Chicken Bacon Ranch")
-completeOrder("1")
+completeOrder(1)
 
 console.log("Menu", menu)
 console.log("Cash in Register", cashInRegister)

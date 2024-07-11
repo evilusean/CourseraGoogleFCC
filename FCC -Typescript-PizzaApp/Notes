@@ -5,6 +5,15 @@ Typescript is a superset of Javascript - all valid JS will work as TS
 TS enhances coding experience by enabling you to write code with greater confidence in the stability and longevity of projects, Makes your code less error prone
 
 Lesson 1: Introduction = 0:30 =========================================================================================================================================================================================================
+Checks code during compile time - in real time with a linter - dramatically reduces the amount of app crashing run time errors that can occur -TS catches alot of errors before they even pop up/pushed live
+Adds productivity - Takes slightly more time to write than regular JS, but TS has autocomplete/refactoring capabilities, immediate error checking, improves DX and more
+Improves Employability - Learning TS is considered "Table Steaks" - even as a junior/mid level developer, you should know TS - will set you aparat from other juniors
+The Course Covers:
+  Basic, Literal, and Custom types / Optional Properties / Unions / Type Narrowing / Utility Types(built in types) / Generics(custom utility types)  
+It is discouraging to see the wall of red errors pop up when you convert a '.js' into a '.tsx' : 'Typescript is not making your life terrible. It's showing you how terrible your life already is.' (vs living(surviving) in canada)
+TS doesn't solve every programming problem - It's main purpose is fixing possible runtime errors / type errors - Not every error in your code is a runtime type error - Won't protect against logical errors
+
+
 
 
 

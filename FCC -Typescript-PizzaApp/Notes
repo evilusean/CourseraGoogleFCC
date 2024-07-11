@@ -16,7 +16,10 @@ TS doesn't solve every programming problem - It's main purpose is fixing possibl
 Lesson 2: Intro To Pizza App = 6:45 ====================================================================================================================================================================================================
 Pizza Restaurant Menu - Will have an array of items, each of those items will have a name 
 
-
+Lesson 3: Move code to TS = 16:55 ======================================================================================================================================================================================================
+simply change the extension from '.js' to '.ts' - greeted with a wall of red text, 5 errors
+every time you see the red squigglie lines, just hover the mouse over to see the problem/intellisense - sometimes recomendations for fixes
+when you use Typescript, you aren't introducing new bugs, it's just showing you where they currently are - they already existed
 
 
 

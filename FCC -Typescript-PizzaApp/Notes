@@ -14,7 +14,7 @@ It is discouraging to see the wall of red errors pop up when you convert a '.js'
 TS doesn't solve every programming problem - It's main purpose is fixing possible runtime errors / type errors - Not every error in your code is a runtime type error - Won't protect against logical errors
 
 Lesson 2: Intro To Pizza App = 6:45 ====================================================================================================================================================================================================
-
+Pizza Restaurant Menu - Will have an array of items, each of those items will have a name 
 
 
 

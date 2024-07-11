@@ -7,6 +7,7 @@ const menu = [
 
 const cashInRegister = 100
 const orderQeue = []
+let nextOrderId = 1;
 
 /*
 Challenge: Add a utility function "addNewPizza" that takes a pizza object and adds it to the menu
@@ -29,7 +30,7 @@ function placeOrder(pizzaName) {
     const selectedPizza = menu.find(pizza => pizza.name === pizzaName);
     if (selectedPizza) {
         cashInRegister += selectedPizza.price;
-        const newOrder = { pizza: selectedPizza, status: "ordered" };
+        const newOrder = { id: nextOrderId++, pizza: selectedPizza, status: "ordered" };
         orderQeue.push(newOrder);
         return newOrder;
     } else {
@@ -46,3 +47,34 @@ Note: you'll need to ensure that we're adding the ID's to our orders when we cre
 global 'nextOrderId' variable and increment it every time a new order is created 
 to simulate real IDs being managed for us by a database
 */
+function completeOrder(orderId) {
+    const orderIndex = orderQeue.find(order => order.id === orderId);
+    order.status = "completed";
+    return order;
+}
+
+addNewPizza({ name: "Chicken Bacon Ranch", price: 12 })
+addNewPizza({ name: "BBQ Chicken", price: 12 })
+addNewPizza({ name: "Spicey Sausage", price: 11 })
+
+placeOrder("Chicken Bacon Ranch")
+completeOrder("1")
+
+console.log("Menu", menu)
+console.log("Cash in Register",cashInRegister)
+console.log("Order Queue", orderQeue)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

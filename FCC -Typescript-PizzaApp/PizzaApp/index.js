@@ -36,3 +36,13 @@ function placeOrder(pizzaName) {
         return null;
     }
 }
+
+/*
+Challenge: Write another utility function, completeORder, that takes an orderId as a parameter
+finds the correct order in the orderQeue, and marks its status as "completed". for good measure, 
+return the founder order from the function
+
+Note: you'll need to ensure that we're adding the ID's to our orders when we create new orders. You can use a
+global 'nextOrderId' variable and increment it every time a new order is created 
+to simulate real IDs being managed for us by a database
+*/

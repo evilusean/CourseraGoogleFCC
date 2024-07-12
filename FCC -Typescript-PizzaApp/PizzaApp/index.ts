@@ -47,7 +47,7 @@ Note: you'll need to ensure that we're adding the ID's to our orders when we cre
 global 'nextOrderId' variable and increment it every time a new order is created 
 to simulate real IDs being managed for us by a database
 */
-function completeOrder(orderId) {
+function completeOrder(orderId: number) {
     const orderIndex = orderQeue.find(order => order.id === orderId);
     order.status = "completed";
     return order;

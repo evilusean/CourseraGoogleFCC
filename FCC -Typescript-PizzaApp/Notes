@@ -36,7 +36,7 @@ JS Dynamic typing nature, is considered a strength by some because the above cod
 I could rewrite any project that is done in original JS and redo it in TS and it would be a new project, or do any old leetcode I already did in JS and redo it in TS to review it
 Primitive Data Types = string / number / boolean #all in in non caps - not like the JS String / Number constructors
 
-
+Lesson 6: Add type to orderId = 28:30 ===================================================================================================================================================================================================
 
 
 

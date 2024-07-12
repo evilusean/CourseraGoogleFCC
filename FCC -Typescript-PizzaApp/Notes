@@ -53,7 +53,7 @@ to create a type for an object, instead of supplying a value to the name, supply
   } #you can use ',' ';' or ' '(leave blank) inbetween each property when writing the type TS
 let person1: Person = { name: "Sean", Age: 66, isStudent: false } #how to use the newly created type
 
-
+Lesson 8: Adding a Pizza Type = 33:45 ===================================================================================================================================================================================================
 
 
 

@@ -26,12 +26,20 @@ Assume that code pushed to production will take the 'sad path' - it assumes that
 if one of our variables is undefined we can use an if else statement : if selectedPizza exists run the code, else it doesn't - return null
 'completeOrder("1")' #typescript could not detect this bug in the code, it should be just a number
 
+Lesson 5: Obligatory types basics lesson = 24:35 ========================================================================================================================================================================================
+The very basics of TS = How to type a variable :
+  let myName = "Sean" #{ myName: string; }
+  let myName: string = "Sean" #how to type a variable in JS, it's new syntax ': string' - but once you know it, then you know what you're looking at
+  myName = 5 #will give you an error after above code, trying to reassign this variable to a number as it was originally assigned as a string
+TypeScript is smart, and able to infer what dataType the above variable is, it is able to figure out the datatype simply from what you assigned to it
+JS Dynamic typing nature, is considered a strength by some because the above code would not be a problem, but in a strongly typed JS superset it is, in practice though TS prevents alot of errors
+I could rewrite any project that is done in original JS and redo it in TS and it would be a new project, or do any old leetcode I already did in JS and redo it in TS to review it
+Primitive Data Types = string / number / boolean #all in in non caps - not like the JS String / Number constructors
 
+Lesson 6: Add type to orderId = 28:30 ===================================================================================================================================================================================================
+function completeOrder(orderId: number) { } #using typescript inside of a function
 
-
-
-
-
+Lesson 7: Defining Custom Types = 30:00 =================================================================================================================================================================================================
 
 
 

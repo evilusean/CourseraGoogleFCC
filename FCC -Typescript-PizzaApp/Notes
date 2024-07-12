@@ -26,7 +26,7 @@ Assume that code pushed to production will take the 'sad path' - it assumes that
 if one of our variables is undefined we can use an if else statement : if selectedPizza exists run the code, else it doesn't - return null
 'completeOrder("1")' #typescript could not detect this bug in the code, it should be just a number
 
-
+Lesson 5: Obligatory types basics lesson = 24:35 ========================================================================================================================================================================================
 
 
 

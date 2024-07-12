@@ -1,3 +1,8 @@
+type Pizza = {
+    name: string,
+    price: number
+}
+
 const menu = [
     { name: "Margherita", price: 8 },
     { name: "Pepperoni", price: 10 },
@@ -13,7 +18,7 @@ let nextOrderId = 1;
 Challenge: Add a utility function "addNewPizza" that takes a pizza object and adds it to the menu
 */
 
- function addNewPizza(pizza) {
+ function addNewPizza(pizza: Pizza) {
     menu.push(pizza);
 }
 
@@ -26,7 +31,7 @@ Challenge: Add a utility function "addNewPizza" that takes a pizza object and ad
  * 4: returns the new order object
  *  */
 
-function placeOrder(pizzaName) {
+function placeOrder(pizzaName: string) {
     const selectedPizza = menu.find(pizza => pizza.name === pizzaName);
     if (selectedPizza) {
         cashInRegister += selectedPizza.price;

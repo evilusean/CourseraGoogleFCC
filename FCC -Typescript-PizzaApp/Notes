@@ -40,9 +40,18 @@ Lesson 6: Add type to orderId = 28:30 ==========================================
 function completeOrder(orderId: number) { } #using typescript inside of a function
 
 Lesson 7: Defining Custom Types = 30:00 =================================================================================================================================================================================================
-
-
-
+We can also create our own Custom Types by using the 'type' keyword - convention is that types start with a capital letter
+  type Food = string #creates a custom type of Food that is a string
+  let favoriteFood: Food = "pizza" #will assign favoriteFood variable the type of 'Food'
+You can also create types around objects {name: value}
+One of the benefits of TS is it forces you to stay consistent, if you mistype something it will catch it (sometimes) like 'isstudent' vs 'isStudent'
+to create a type for an object, instead of supplying a value to the name, supply it with a type, so it will check if the name is spelled correctly and that the value of the type is consistent/correct:
+  type Person = {
+    name: string,
+    age: number;
+    isStudent: boolean
+  } #you can use ',' ';' or ' '(leave blank) inbetween each property when writing the type TS
+let person1: Person = { name: "Sean", Age: 66, isStudent: false } #how to use the newly created type
 
 
 

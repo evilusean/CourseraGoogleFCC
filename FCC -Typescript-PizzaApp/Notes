@@ -90,6 +90,7 @@ to create an array of people objects(multiple data types - strings, numbers, boo
   let people: Array<Person> = [ ... ] #you can also use this syntax to accomplish the same thing
 
 Lesson 13: Type orderQeue = 52:00 =======================================================================================================================================================================================================
+Just because all the errors are gone in your TS doesn't mean that there are no errors - program might still break, might still have edge cases
 
 
 

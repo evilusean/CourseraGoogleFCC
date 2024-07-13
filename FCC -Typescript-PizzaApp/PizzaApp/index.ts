@@ -3,6 +3,12 @@ type Pizza = {
     price: number
 }
 
+type Order = {
+    id: number,
+    pizza: Pizza,
+    status: string
+}
+
 const menu = [
     { name: "Margherita", price: 8 },
     { name: "Pepperoni", price: 10 },
@@ -11,7 +17,7 @@ const menu = [
 ]
 
 let cashInRegister = 100
-let orderQeue = []
+let orderQeue: Order[] = []
 let nextOrderId = 1;
 
 /*
@@ -53,7 +59,11 @@ global 'nextOrderId' variable and increment it every time a new order is created
 to simulate real IDs being managed for us by a database
 */
 function completeOrder(orderId: number) {
-    const orderIndex = orderQeue.find(order => order.id === orderId);
+    const order = orderQeue.find(order => order.id === orderId);
+    if (!order) {
+        console.error(`${orderId} not found in the order queue`)
+        return null;
+    }
     order.status = "completed";
     return order;
 }

@@ -79,7 +79,7 @@ increased flexibility is decreased typesafety
   type Person = { ... address?: Address }
 console.log(`${person.name} lives at ${person.address?.street}`) #will throw the error if no street address 'Joe lives at undefined' but won't crash the program with a type error - work around
 
-
+Lesson 11: Adding an Order type = 46:00 =================================================================================================================================================================================================
 
 
 

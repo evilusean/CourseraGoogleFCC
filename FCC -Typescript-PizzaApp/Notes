@@ -73,6 +73,11 @@ type Address { ... }
 type Person { ... address: Address } #'...' is to demonstrate take all the old values, and take the properties from the old one, simply refer to the 'type Address' in the old person object schema
 
 Lesson 10: Optional Properties - 6 = 43:15 ==============================================================================================================================================================================================
+When you want to create an object type with optional properties, You can define them to be optional, there are many ways to go about that in TS
+increased flexibility is decreased typesafety
+'?' when defining your type simply put a '?' questionmark after your type to make it optional/nullable
+  type Person = { ... address?: Address }
+console.log(`${person.name} lives at ${person.address?.street}`) #will throw the error if no street address 'Joe lives at undefined' but won't crash the program with a type error - work around
 
 
 

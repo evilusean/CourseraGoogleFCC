@@ -97,7 +97,11 @@ Literal Type = when the type isn't a generic(string/number/boolean) - It's a lit
   const myName: "Sean" = "Sean" #manually typing a Literal Type for the const variable
 
 Lesson 15: Unions = 59:00 ===============================================================================================================================================================================================================
-
+Literal Types are often combined with Unions :
+Let's say you had an app where you wanted to designate the user as one of three categories 'Guest' Vs 'Member' Vs 'Admin' We can use unions to teach TS that the User Role should only be allowed one of a certain # of strings
+'|' Pipe Character = Union, syntax below:
+  type UserRole = "guest" | "admin" | "member" #UserRole must be one of these three string literals
+  let userRole: UserRole = "admin" #would be valid TS, won't allow you to use "h4ck3r" as a UserRole
 
 
 

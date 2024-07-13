@@ -93,6 +93,8 @@ Lesson 13: Type orderQeue = 52:00 ==============================================
 Just because all the errors are gone in your TS doesn't mean that there are no errors - program might still break, might still have edge cases
 
 Lesson 14: Literal Types = 56:20 ========================================================================================================================================================================================================
+Literal Type = when the type isn't a generic(string/number/boolean) - It's a literal type, an actual value type 'const myName = "Sean"' #value will not be reassigned with const, so the value is literally "Sean"
+  const myName: "Sean" = "Sean" #manually typing a Literal Type for the const variable
 
 
 

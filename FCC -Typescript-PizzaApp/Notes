@@ -82,7 +82,7 @@ console.log(`${person.name} lives at ${person.address?.street}`) #will throw the
 Lesson 11: Adding an Order type = 46:00 =================================================================================================================================================================================================
 When trying to apply the newly created 'type Order = {}' to the orderQeue, it ran into an array, because we were trying to type an array 'let orderQeue = []'
 
-
+Lesson 12: Typing Arrays = 47:20 ========================================================================================================================================================================================================
 
 
 

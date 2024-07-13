@@ -73,11 +73,23 @@ type Address { ... }
 type Person { ... address: Address } #'...' is to demonstrate take all the old values, and take the properties from the old one, simply refer to the 'type Address' in the old person object schema
 
 Lesson 10: Optional Properties - 6 = 43:15 ==============================================================================================================================================================================================
+When you want to create an object type with optional properties, You can define them to be optional, there are many ways to go about that in TS
+increased flexibility is decreased typesafety
+'?' when defining your type simply put a '?' questionmark after your type to make it optional/nullable
+  type Person = { ... address?: Address }
+console.log(`${person.name} lives at ${person.address?.street}`) #will throw the error if no street address 'Joe lives at undefined' but won't crash the program with a type error - work around
 
+Lesson 11: Adding an Order type = 46:00 =================================================================================================================================================================================================
+When trying to apply the newly created 'type Order = {}' to the orderQeue, it ran into an array, because we were trying to type an array 'let orderQeue = []'
 
+Lesson 12: Typing Arrays = 47:20 ========================================================================================================================================================================================================
+when trying to assign 'let ages: number = [101, 102]' it will give you an error when you hover over it 'the type [] is not assignable to type number' to get TS to realize it's an array only of number use below syntax
+  let ages: number[] = [101, 102] #correct way to assign TS to an array, notice the '[]' after number
+you actually don't even need to put in the ':number[]', TS is able to infer it from the context
+to create an array of people objects(multiple data types - strings, numbers, boolean), create a 'type Person = { ... }' and then add 'let people: Person[] = [ ... ]' #TS can also infer this as well
+  let people: Array<Person> = [ ... ] #you can also use this syntax to accomplish the same thing
 
-
-
+Lesson 13: Type orderQeue = 52:00 =======================================================================================================================================================================================================
 
 
 

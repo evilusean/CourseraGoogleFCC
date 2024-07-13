@@ -72,7 +72,7 @@ you can also create a seperate type for the address instead of nesting it like a
 type Address { ... }
 type Person { ... address: Address } #'...' is to demonstrate take all the old values, and take the properties from the old one, simply refer to the 'type Address' in the old person object schema
 
-
+Lesson 10: Optional Properties - 6 = 43:15 ==============================================================================================================================================================================================
 
 
 

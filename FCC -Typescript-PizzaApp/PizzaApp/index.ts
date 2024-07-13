@@ -6,7 +6,7 @@ type Pizza = {
 type Order = {
     id: number,
     pizza: Pizza,
-    status: string
+    status: "ordered" | "completed"
 }
 
 const menu = [
@@ -41,7 +41,7 @@ function placeOrder(pizzaName: string) {
     const selectedPizza = menu.find(pizza => pizza.name === pizzaName);
     if (selectedPizza) {
         cashInRegister += selectedPizza.price;
-        const newOrder = { id: nextOrderId++, pizza: selectedPizza, status: "ordered" };
+        const newOrder: Order = { id: nextOrderId++, pizza: selectedPizza, status: "ordered" };
         orderQeue.push(newOrder);
         return newOrder;
     } else {

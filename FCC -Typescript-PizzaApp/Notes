@@ -3,6 +3,7 @@ End:
 
 Typescript is a superset of Javascript - all valid JS will work as TS
 TS enhances coding experience by enabling you to write code with greater confidence in the stability and longevity of projects, Makes your code less error prone
+I could rewrite any project that is done in original JS and redo it in TS and it would be a new project, or do any old leetcode I already did in JS and redo it in TS to review it
 
 Lesson 1: Introduction = 0:30 =========================================================================================================================================================================================================
 Checks code during compile time - in real time with a linter - dramatically reduces the amount of app crashing run time errors that can occur -TS catches alot of errors before they even pop up/pushed live
@@ -33,7 +34,6 @@ The very basics of TS = How to type a variable :
   myName = 5 #will give you an error after above code, trying to reassign this variable to a number as it was originally assigned as a string
 TypeScript is smart, and able to infer what dataType the above variable is, it is able to figure out the datatype simply from what you assigned to it
 JS Dynamic typing nature, is considered a strength by some because the above code would not be a problem, but in a strongly typed JS superset it is, in practice though TS prevents alot of errors
-I could rewrite any project that is done in original JS and redo it in TS and it would be a new project, or do any old leetcode I already did in JS and redo it in TS to review it
 Primitive Data Types = string / number / boolean #all in in non caps - not like the JS String / Number constructors
 
 Lesson 6: Add type to orderId = 28:30 ===================================================================================================================================================================================================
@@ -57,8 +57,20 @@ Lesson 8: Adding a Pizza Type = 33:45 ==========================================
 When you hover over an object without a type it will implicitly have an 'any' type, you 
 
 Lesson 9: Nested object types (5) = 38:00 ===============================================================================================================================================================================================
-
-
+Let's say you wanted to add an address object to the person object - the easiest way to do this would be to add a nested object 
+type Person = {
+  name: string
+  age: number
+  isStudent: boolean
+  address: { 
+    street: string
+    city: string
+    country: string
+  }
+} #after adding the address property, the other 'person1' variables went red, because when you add a new property to a type definition, you have to update all of the old ones, this can be made optional
+you can also create a seperate type for the address instead of nesting it like above
+type Address { ... }
+type Person { ... address: Address } #'...' is to demonstrate take all the old values, and take the properties from the old one, simply refer to the 'type Address' in the old person object schema
 
 
 

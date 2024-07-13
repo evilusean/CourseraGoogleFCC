@@ -103,7 +103,7 @@ Let's say you had an app where you wanted to designate the user as one of three 
   type UserRole = "guest" | "admin" | "member" #UserRole must be one of these three string literals
   let userRole: UserRole = "admin" #would be valid TS, won't allow you to use "h4ck3r" as a UserRole
 
-
+Lesson 16: Update order status to use literal type unions = 1:02:00 =====================================================================================================================================================================
 
 
 

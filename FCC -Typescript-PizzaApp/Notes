@@ -106,7 +106,8 @@ Let's say you had an app where you wanted to designate the user as one of three 
 Lesson 16: Update order status to use literal type unions = 1:02:00 =====================================================================================================================================================================
 
 Lesson 17: Add ids to pizzas = 1:05:00 ==================================================================================================================================================================================================
-
+TS is good at inferring primitive types(numbers, strings, booleans)
+After updating the 'type Pizza' with an 'id: number' it immediately showed us where all the problems in the code were, TS can actually save you time once it is established in the codebase
 
 
 

@@ -74,6 +74,14 @@ Challenge : Create a new utility function called getPizzaDetail. it will take a 
 but theres a twistL we want this identifier to be allowed to either be the string name of the pizza (e.g. "Pepperoni")
 OR to be the number ID of the pizza 
 */
+function getPizzaDetail(identifier: string | number) {
+    if (typeof identifier === 'string') {
+        return menu.find(pizza => pizza.name.toLowerCase() === identifier.toLowerCase());
+    } else {
+        return menu.find(pizza => pizza.id === identifier);
+    }
+}
+
 
 addNewPizza({ id: 5, name: "Chicken Bacon Ranch", price: 12 })
 addNewPizza({ id: 6, name: "BBQ Chicken", price: 12 })

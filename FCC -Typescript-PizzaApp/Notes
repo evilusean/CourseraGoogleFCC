@@ -122,6 +122,10 @@ You can also use '|' unions with more generic types like below(instead of string
 Type Narrowing = When we are writing a function and don't neccesarily know what the datatype of that function is, TS will expect us to narrow down the type and handle each usecase and potentially provide a default
 
 Lesson 19: Be explicit whenever you can = 1:12:45 =======================================================================================================================================================================================
+Be as explicit as you can when writing your code - 
+In some instances, your code will be in just plain JS file, and the TS won't be there to protect it, you can add 'export'(like React?) in front of function and import it into JS - 
+He just did what I thought, premonISean - added a new else if and else clause to throw a type error - Yaassss Slay Sean - Getting good enough to know where the instructor is missing stuff - Still can't git a job though ~ Escape.
+
 
 
 

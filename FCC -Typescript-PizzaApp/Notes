@@ -147,9 +147,15 @@ hover over an object/function/value to see what the inferred type typescript is 
  function addNewPizza(pizza: Pizza): void { menu.push(pizza);} #explicitly tells TS to return nothing, since you are adding a pizza, this makes sense
 
 Lesson 24: Add automatic ids to menu items = 1:26:15 ====================================================================================================================================================================================
+Typescript can also help with refactoring code, it can also detect when scope (positioning) is messed up, if you declare a variable after you use it, TS will yell at you to hoist it up
+'nextPizzaId++' You can use this for an ID when declaring the array of pizzas, it will automatically increment the id number as the pizza objects go on the array, instead of manually filling it in
+for the 'function addNewPizza' it wasn't automatically putting in the ID, here is the fixed code for adding ID below
+ function addNewPizza(pizza: Pizza): void {
+    pizza.id = nextPizzaId++;
+    menu.push(pizza);
+  }
 
-
-
+Lesson 25: Utility Types & Partial = 1:30:40 ===========================================================================================================================================================================================
 
 
 

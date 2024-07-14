@@ -74,7 +74,7 @@ Challenge : Create a new utility function called getPizzaDetail. it will take a 
 but theres a twistL we want this identifier to be allowed to either be the string name of the pizza (e.g. "Pepperoni")
 OR to be the number ID of the pizza 
 */
-export function getPizzaDetail(identifier: string | number) {
+export function getPizzaDetail(identifier: string | number): Pizza | undefined {
     if (typeof identifier === 'string') {
         return menu.find(pizza => pizza.name.toLowerCase() === identifier.toLowerCase());
     } else if (typeof identifier === 'number') {

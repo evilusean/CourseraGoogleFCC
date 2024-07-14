@@ -110,8 +110,16 @@ TS is good at inferring primitive types(numbers, strings, booleans)
 After updating the 'type Pizza' with an 'id: number' it immediately showed us where all the problems in the code were, TS can actually save you time once it is established in the codebase
 
 Lesson 18: Type Narrowing = 1:07:45 =====================================================================================================================================================================================================
-
-
+You can also use '|' unions with more generic types like below(instead of string literals) :
+  function getPizzaDetail(identifier: string | number) {
+    if (typeof identifier === 'string') {
+        return menu.find(pizza => pizza.name.toLowerCase() === identifier.toLowerCase()); #will put it to lower case to avoid capitalization errors
+    } else {
+        return menu.find(pizza => pizza.id === identifier);
+    }
+  } #will find the pizza by name if the identifier is a string, else it will search for it's ID number, could do a catch error block or if/else for edge cases/wrong inputs
+.toLowerCase() #TS will parse and understand the code and tell us that .toLowerCase() is not usable on numbers, because we told it to look for either a string or a number
+Type Narrowing = When we are writing a function and don't neccesarily know what the datatype of that function is, TS will expect us to narrow down the type and handle each usecase and potentially provide a default
 
 
 

@@ -126,7 +126,7 @@ Be as explicit as you can when writing your code -
 In some instances, your code will be in just plain JS file, and the TS won't be there to protect it, you can add 'export'(like React?) in front of function and import it into JS - 
 He just did what I thought, premonISean - added a new else if and else clause to throw a type error - Yaassss Slay Sean - Getting good enough to know where the instructor is missing stuff - Still can't git a job though ~ Escape.
 
-
+Lesson 20: Function return types = 1:15:00 ==============================================================================================================================================================================================
 
 
 

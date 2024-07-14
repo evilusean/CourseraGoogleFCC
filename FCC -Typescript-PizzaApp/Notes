@@ -139,7 +139,9 @@ Lesson 21: TS-specific types: any = 1:18:00 ====================================
 : unknown = use when you don't know which type to use instead of 'any'
 
 Lesson 22: Add return type to getPizzaDetail = 1:20:55 ==================================================================================================================================================================================
+export function getPizzaDetail(identifier: string | number): Pizza | undefined { ... } #will return either a type Pizza or undefined
 
+Lesson 23: Void return type = 1:24:20 ===================================================================================================================================================================================================
 
 
 

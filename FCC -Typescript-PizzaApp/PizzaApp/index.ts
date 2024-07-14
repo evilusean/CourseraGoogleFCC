@@ -25,7 +25,7 @@ let nextOrderId = 1;
 Challenge: Add a utility function "addNewPizza" that takes a pizza object and adds it to the menu
 */
 
- function addNewPizza(pizza: Pizza) {
+ function addNewPizza(pizza: Pizza): void {
     menu.push(pizza);
 }
 
@@ -38,7 +38,7 @@ Challenge: Add a utility function "addNewPizza" that takes a pizza object and ad
  * 4: returns the new order object
  *  */
 
-function placeOrder(pizzaName: string) {
+function placeOrder(pizzaName: string): Order | undefined | null {
     const selectedPizza = menu.find(pizza => pizza.name === pizzaName);
     if (selectedPizza) {
         cashInRegister += selectedPizza.price;
@@ -59,7 +59,7 @@ Note: you'll need to ensure that we're adding the ID's to our orders when we cre
 global 'nextOrderId' variable and increment it every time a new order is created 
 to simulate real IDs being managed for us by a database
 */
-function completeOrder(orderId: number) {
+function completeOrder(orderId: number): Order | undefined | null {
     const order = orderQeue.find(order => order.id === orderId);
     if (!order) {
         console.error(`${orderId} not found in the order queue`)

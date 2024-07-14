@@ -121,7 +121,7 @@ You can also use '|' unions with more generic types like below(instead of string
 .toLowerCase() #TS will parse and understand the code and tell us that .toLowerCase() is not usable on numbers, because we told it to look for either a string or a number
 Type Narrowing = When we are writing a function and don't neccesarily know what the datatype of that function is, TS will expect us to narrow down the type and handle each usecase and potentially provide a default
 
-
+Lesson 19: Be explicit whenever you can = 1:12:45 =======================================================================================================================================================================================
 
 
 

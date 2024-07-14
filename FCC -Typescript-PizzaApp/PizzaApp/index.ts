@@ -69,6 +69,12 @@ function completeOrder(orderId: number) {
     return order;
 }
 
+/*
+Challenge : Create a new utility function called getPizzaDetail. it will take a parameter called 'indentifir',
+but theres a twistL we want this identifier to be allowed to either be the string name of the pizza (e.g. "Pepperoni")
+OR to be the number ID of the pizza 
+*/
+
 addNewPizza({ id: 5, name: "Chicken Bacon Ranch", price: 12 })
 addNewPizza({ id: 6, name: "BBQ Chicken", price: 12 })
 addNewPizza({ id: 7, name: "Spicey Sausage", price: 11 })

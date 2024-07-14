@@ -133,7 +133,7 @@ Function Return Types = Will tell you what the return type should be (properties
   function fetchUserDetails(username: string): User { ... } #notice how it takes a username as a string and returns a 'User' object with above properties
  
 Lesson 21: TS-specific types: any = 1:18:00 =============================================================================================================================================================================================
-: void = another typescript specific type
+: void = another typescript specific type, a function that doesn't return anything, like null
 : any = when you apply 'any' in typescript, you are essentially turning off typescript for that object/value, use this as a ghetto fix (this isn't a good idea) to get rid of red, better ded than red 
   1 legitimate use is when you are transitioning a JS code base to TS and don't immediately have the time to write all your complex types, so you just need a way to 'get around TS' for now - Temporary fix
 : unknown = use when you don't know which type to use instead of 'any'
@@ -142,6 +142,35 @@ Lesson 22: Add return type to getPizzaDetail = 1:20:55 =========================
 export function getPizzaDetail(identifier: string | number): Pizza | undefined { ... } #will return either a type Pizza or undefined
 
 Lesson 23: Void return type = 1:24:20 ===================================================================================================================================================================================================
+: void = another typescript specific type, a function that doesn't return anything, like null
+hover over an object/function/value to see what the inferred type typescript is using for each
+ function addNewPizza(pizza: Pizza): void { menu.push(pizza);} #explicitly tells TS to return nothing, since you are adding a pizza, this makes sense
+
+Lesson 24: Add automatic ids to menu items = 1:26:15 ====================================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -133,6 +133,14 @@ Function Return Types = Will tell you what the return type should be (properties
   function fetchUserDetails(username: string): User { ... } #notice how it takes a username as a string and returns a 'User' object with above properties
  
 Lesson 21: TS-specific types: any = 1:18:00 =============================================================================================================================================================================================
+: void = another typescript specific type
+: any = when you apply 'any' in typescript, you are essentially turning off typescript for that object/value, use this as a ghetto fix (this isn't a good idea) to get rid of red, better ded than red 
+  1 legitimate use is when you are transitioning a JS code base to TS and don't immediately have the time to write all your complex types, so you just need a way to 'get around TS' for now - Temporary fix
+: unknown = use when you don't know which type to use instead of 'any'
+
+Lesson 22: Add return type to getPizzaDetail = 1:20:55 ==================================================================================================================================================================================
+
+
 
 
 

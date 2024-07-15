@@ -162,7 +162,7 @@ Utility Types = in TS there are a number of types that can take other types in l
 Partial Type = takes in a type that you pass in and turns all the properties into optional properties '?'
   type UpdatedUser = Partial<User> #passed in the custom 'type User' and it will turn it into a partial type that allows all properties to be optional, so when updating you don't need to update everything and can just update one part
 
-
+Lesson 26: Omit Utility Type = 1:37:45 ==================================================================================================================================================================================================
 
 
 

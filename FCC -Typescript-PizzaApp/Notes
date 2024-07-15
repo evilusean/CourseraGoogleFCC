@@ -163,9 +163,22 @@ Partial Type = takes in a type that you pass in and turns all the properties int
   type UpdatedUser = Partial<User> #passed in the custom 'type User' and it will turn it into a partial type that allows all properties to be optional, so when updating you don't need to update everything and can just update one part
 
 Lesson 26: Omit Utility Type = 1:37:45 ==================================================================================================================================================================================================
+'...' = spread operator - you can use the spread operator to spread the rest of a types properties onto a newly created type
+Omit Type = Omit takes in a type AND a string(or union of strings) propert name(s), and returns a new type with those properties removed - will return a brand new type with properties specified removed
+// This function adds a new user to the users array.
+function addNewUser(newUser: Omit<User, "id">): User { //will ignore the 'id' and add it through the below increment
+  // Create a new user object with the next available user ID.
+  const user: User = {
+    id: nextUserId++, // Increment the nextUserId counter and assign it to the user's ID.
+    ...newUser, // Spread the properties from the newUser object into the user object.
+  }
+  // Push the new user object to the users array.
+  users.push(user)
+  // Return the newly created user object.
+  return user
+}
 
-
-
+Lesson 27: Fix TS Warnings with Omit = 1:44:50 ==========================================================================================================================================================================================
 
 
 

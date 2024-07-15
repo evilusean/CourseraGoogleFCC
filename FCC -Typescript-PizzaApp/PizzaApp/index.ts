@@ -27,9 +27,13 @@ const menu: Pizza[] = [
 Challenge: Add a utility function "addNewPizza" that takes a pizza object and adds it to the menu
 */
 
- function addNewPizza(pizza: Pizza): void {
-    pizza.id = nextPizzaId++;
-    menu.push(pizza);
+ function addNewPizza(pizza: Omit<Pizza, "id">): Pizza {
+    const newPizza: Pizza = { 
+        id: nextPizzaId++;
+        ...pizza
+    }
+    menu.push(newPizza);
+    return newPizza
 }
 
 /**

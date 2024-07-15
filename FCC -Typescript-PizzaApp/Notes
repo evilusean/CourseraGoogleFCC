@@ -156,6 +156,11 @@ for the 'function addNewPizza' it wasn't automatically putting in the ID, here i
   }
 
 Lesson 25: Utility Types & Partial = 1:30:40 ===========================================================================================================================================================================================
+Utility Types = in TS there are a number of types that can take other types in like a function as a parameter and return a new type, with some changes made to it
+  built in to TypeScript; perform commonly needed modifications to existing types, uses <Generics Syntax>
+<Generics Syntax> = Uses angle brackets <>
+Partial Type = takes in a type that you pass in and turns all the properties into optional properties '?'
+  type UpdatedUser = Partial<User> #passed in the custom 'type User' and it will turn it into a partial type that allows all properties to be optional, so when updating you don't need to update everything and can just update one part
 
 
 

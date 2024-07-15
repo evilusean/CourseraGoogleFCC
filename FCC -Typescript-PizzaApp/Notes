@@ -179,7 +179,14 @@ function addNewUser(newUser: Omit<User, "id">): User { //will ignore the 'id' an
 }
 
 Lesson 27: Fix TS Warnings with Omit = 1:44:50 ==========================================================================================================================================================================================
-
+ function addNewPizza(pizza: Omit<Pizza, "id">): Pizza { #will omit the ID from addNewPizza function to array
+    const newPizza: Pizza = {  #create a new pizza object to increment the id
+        id: nextPizzaId++; #increment ID
+        ...pizza #spread all old values of pizza (name/price)
+    }
+    menu.push(newPizza); #add new pizza object to array that contains all pizzas
+    return newPizza #returns the new pizza object
+}
 
 
 

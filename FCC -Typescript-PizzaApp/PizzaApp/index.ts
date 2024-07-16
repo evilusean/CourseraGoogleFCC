@@ -29,7 +29,7 @@ Challenge: Add a utility function "addNewPizza" that takes a pizza object and ad
 
  function addNewPizza(pizza: Omit<Pizza, "id">): Pizza {
     const newPizza: Pizza = { 
-        id: nextPizzaId++;
+        id: nextPizzaId++,
         ...pizza
     }
     menu.push(newPizza);

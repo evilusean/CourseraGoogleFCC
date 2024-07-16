@@ -203,7 +203,7 @@ Lesson 30: Explicitly type generic function calls = 1:59:50 ====================
 In our 'type Order = { ... status: "ordered" | "completed" } it won't register that we have added another string, because it infers to look for a string, not a string literal so when we add 'done' it won't register this is wrong
 to fix this be more explicit and add <Order> generic typing - once you change it, the intellisense will recgonized the incorrect string literal, and highlight to fix it
 
-
+Lesson 31: Conclusion... for now = 2:04:20 ===============================================================================================================================================================================================
 
 
 

@@ -1,5 +1,5 @@
 Start: 11July2024
-End: 
+End: 16July2024
 
 Typescript is a superset of Javascript - all valid JS will work as TS
 TS enhances coding experience by enabling you to write code with greater confidence in the stability and longevity of projects, Makes your code less error prone
@@ -204,13 +204,3 @@ In our 'type Order = { ... status: "ordered" | "completed" } it won't register t
 to fix this be more explicit and add <Order> generic typing - once you change it, the intellisense will recgonized the incorrect string literal, and highlight to fix it
 
 Lesson 31: Conclusion... for now = 2:04:20 ===============================================================================================================================================================================================
-
-
-
-
-
-
-
-
-
-

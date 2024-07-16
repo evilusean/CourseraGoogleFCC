@@ -196,6 +196,8 @@ placeholders for whatever a type is going to be used, flexible typesafety
   function getLastItem<PlaceholderType>(array: PlaceholderType[]) { return array[array.length -1] } #function that will return the last item of an array, whether it's strings/numbers/objects/etc - it will be consistent in TS
 
 Lesson 29: Generic functions in the pizza = 1:56:25 ======================================================================================================================================================================================
+<T> #when adding generic types, use a single letter 'T' in <> angled brackets - that is the general generic conventions
+  function addToArray<T>(array: T[], item: T) {...} #will take a generic type of 'T' with an array of type 'T' and a single item of type 'T' Mr<T> Pities Da Fu
 
 
 

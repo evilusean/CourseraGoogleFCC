@@ -195,7 +195,7 @@ act like function parameters, but for types
 placeholders for whatever a type is going to be used, flexible typesafety
   function getLastItem<PlaceholderType>(array: PlaceholderType[]) { return array[array.length -1] } #function that will return the last item of an array, whether it's strings/numbers/objects/etc - it will be consistent in TS
 
-
+Lesson 29: Generic functions in the pizza = 1:56:25 ======================================================================================================================================================================================
 
 
 

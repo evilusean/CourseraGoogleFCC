@@ -189,7 +189,11 @@ Lesson 27: Fix TS Warnings with Omit = 1:44:50 =================================
 }
 
 Lesson 28: Generics = 1:49:00 ============================================================================================================================================================================================================
-
+Generics are a powerful tool that allow us to add some flexibility to the types of our existing functions, types, etc
+<> use angle brackets
+act like function parameters, but for types
+placeholders for whatever a type is going to be used, flexible typesafety
+  function getLastItem<PlaceholderType>(array: PlaceholderType[]) { return array[array.length -1] } #function that will return the last item of an array, whether it's strings/numbers/objects/etc - it will be consistent in TS
 
 
 

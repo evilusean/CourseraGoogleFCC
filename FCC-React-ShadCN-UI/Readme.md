@@ -1,6 +1,6 @@
+# ShadCN UI Component Library Course:
 Start: 17July2024</br>
 End: </br>
-# ShadCN UI Component Library Course:
 [Tutorial:](https://www.youtube.com/watch?v=oidnyW71W0A) [https://www.freecodecamp.org/news/mastering-shadcn-ui-components/](https://www.freecodecamp.org/news/mastering-shadcn-ui-components/)</br>
 Shadcn is a unique collection of reusable React components designed for modern web development. In this course, you'll learn how to integrate beautifully designed, accessible, and customizable UI elements into your Next.js projects.</br>
 Shadcn is not your typical component library. Instead of installing it as a dependency through npm, Shadcn offers a collection of beautifully designed, accessible, and customizable React components that you can 

@@ -1,7 +1,7 @@
 # ShadCN UI Component Library Course:
 [Tutorial:](https://www.youtube.com/watch?v=oidnyW71W0A) [https://www.freecodecamp.org/news/mastering-shadcn-ui-components/](https://www.freecodecamp.org/news/mastering-shadcn-ui-components/)</br>
 
-Start: 17July2024</br>
+Start: 18July2024</br>
 End: </br>
 
 # FCC - Learn TypeScript - Full Course for Beginners:

@@ -12,21 +12,36 @@ https://www.youtube.com/watch?v=oidnyW71W0A
 FCC - ShadCN With NextJS 14:
 https://www.freecodecamp.org/news/shadcn-with-next-js-14/
 
-Intro = 0:45 ============================================================================================================================================================================================================================
+Install = 0:45 ===========================================================================================================================================================================================================================
 https://ui.shadcn.com/docs/installation
 https://ui.shadcn.com/docs/installation/next
 npx create-next-app@latest recipsean --typescript --tailwind --eslint #installs shadcn with react, next js, tailwind, and typescript in the 'RecipSean' repo from the terminal in current working directory
 cd recipsean #don't forget to change directory to newly created app folder
 npx shadcn-ui@latest init #after creating the app with npx above, use this to initialize shadcn opseans = Default / Slate / CSS Variables for colors = Yes
 if you are using shadcn, you should always install it at the begining of the development process, if you use the same naming conventions like naming a folder 'components' shadcn will overwrite it on install
+'npm run build' #build for testing
+'npm run dev' #start the testing server
 
 ShadCN Accordian = 3:35 ==================================================================================================================================================================================================================
-
-
-
-
-
-
+First Component :
+https://ui.shadcn.com/docs/components/accordion
+Accordion = Dropdown list when clicked, with smooth animations
+ShadCN Components will have a preview, After looking at the preview and deciding you want that component, you can then scroll down to the 'Installation' either through the CLI or Manual 
+  After installing it, you can alter it to suit your own needs, 
+npx shadcn-ui@latest add accordion #will install accordian through CLI, will create a components folder in 'src/app/components/ui/accordion.tsx'
+'tailwind.config.js' #after installing the component, you will need to update tailwindcss.config for the keyframes(animation) copy and paste can be found on 'https://ui.shadcn.com/docs/components/accordion'
+'import' after installing the component, and updating tailwindconfig, add the import, copy and paste can be found on 'https://ui.shadcn.com/docs/components/accordion'
+'usage' after insstalling the component, and updating tailwindconfig, and adding the import, it will show you how to add the new component to your project/app (below is example)
+<Accordion type="single" collapsible>
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+Created new folder for building components, 'src/app/SHADCN/' and used React snippet 'rfce' to create a functional component
+In order to make more than one, do below - ShadCN takes one parent component, and then many children components, compare/juxtapose above with below to see the differences:
 
 
 

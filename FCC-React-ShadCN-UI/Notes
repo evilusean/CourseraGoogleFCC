@@ -60,9 +60,14 @@ In order to make more than one, do below - ShadCN takes one parent component, an
 </div>
 
 SHADCN - Alert = 11:15 =================================================================================================================================================================================================================
+https://ui.shadcn.com/docs/components/alert
+Just a plain box outlined with a messsage(different variations, can be made red with big red text), many different types:
+npx shadcn-ui@latest add alert #through CLI will install a new component in 'src/app/components/ui/alert.tsx'
+If you want to change icons, go to below site:
+https://lucide.dev/icons/
+Can be used to give messages to the users, or an error alert message
 
-
-
+SHADCN - Alert Dialog = 25:55 ===========================================================================================================================================================================================================
 
 
 

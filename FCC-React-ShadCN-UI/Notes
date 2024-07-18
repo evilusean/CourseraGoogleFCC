@@ -41,9 +41,25 @@ npx shadcn-ui@latest add accordion #will install accordian through CLI, will cre
   </AccordionItem>
 </Accordion>
 Created new folder for building components, 'src/app/SHADCN/' and used React snippet 'rfce' to create a functional component
-In order to make more than one, do below - ShadCN takes one parent component, and then many children components, compare/juxtapose above with below to see the differences:
+In order to make more than one, do below - ShadCN takes one parent component, and then many children components, compare/juxtapose above with below to see the differences, you can control styling from the div:
+<div className='w-[400px] p-4'>
+<Accordion type="single" collapsible>
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Seans A Team</AccordionTrigger>
+    <AccordionContent>
+      Testing the Dropdown component, my first ShadCN component, This is very cool, 
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-2">
+    <AccordionTrigger>Seans B Team</AccordionTrigger>
+    <AccordionContent>
+      Sean Team 6(RIP) - CARTHAGO DELENDA EST - Ceterum (autem) censeo Carthaginem esse delendam ("Furthermore, I consider Carthage to need to be destroyed") - Based Cato
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+</div>
 
-
+SHADCN - Alert = 11:15 =================================================================================================================================================================================================================
 
 
 

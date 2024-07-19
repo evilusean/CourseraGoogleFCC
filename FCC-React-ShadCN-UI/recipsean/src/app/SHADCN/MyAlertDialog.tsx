@@ -13,15 +13,16 @@ import {
 
 function MyAlertDialog() {
   return (
-    <div>
+    <div className="w-[400px] p-4">
         <AlertDialog>
-  <AlertDialogTrigger>Open</AlertDialogTrigger>
+  <AlertDialogTrigger>UnSean</AlertDialogTrigger>
   <AlertDialogContent>
     <AlertDialogHeader>
-      <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+      <AlertDialogTitle>Becomes Sean!</AlertDialogTitle>
       <AlertDialogDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
+        Remember VaxCattle, no refundz($cience juice paid for with taxes, lawsuits paid for with taxes, courts paid for with taxes, side effects paid for with taxes, non-compliant(smart) purged from every institutSean, are you starting to get it? )
+        do you choose to get an experimental untested god knows what in you because TV, govt, big pharma all told you to?
+        Proving to yourselves and your owners that you are a subcattle incapable of thinking for yourselves?
       </AlertDialogDescription>
     </AlertDialogHeader>
     <AlertDialogFooter>

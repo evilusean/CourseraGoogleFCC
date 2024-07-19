@@ -11,7 +11,7 @@ function MyAccordion() {
 <div className='w-[400px] p-4'>
 <Accordion type="single" collapsible>
   <AccordionItem value="item-1">
-    <AccordionTrigger>Seans A Team</AccordionTrigger>
+    <AccordionTrigger>Seans A Team Accordion</AccordionTrigger>
     <AccordionContent>
       Testing the Dropdown component, my first ShadCN component, This is very cool, 
     </AccordionContent>

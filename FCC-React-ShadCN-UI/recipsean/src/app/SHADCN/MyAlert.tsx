@@ -14,7 +14,7 @@ function MyAlert() {
     {/* TO CHANGE THE ICON, GO TO 'https://lucide.dev/icons/' and select a new one REPLACE 'ALERTCIRCLE' BELOW TO CHANGE ICON, 
     NOTICE THE IMPORTS AT TOP '"from lucide-react"', that is where you can get new icons, and change them, simply change/add import  */ }
       <AlertCircle className="h-4 w-4" />
-      <AlertTitle>Error</AlertTitle>
+      <AlertTitle>Error-Alert</AlertTitle>
       <AlertDescription>
         TO CHANGE THE ICON, GO TO 'https://lucide.dev/icons/' AND IMPORT A NEW ONE, REPLACE THE 'AlertCircle' Above here
       </AlertDescription>

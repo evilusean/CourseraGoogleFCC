@@ -9,7 +9,9 @@ function page() {
     <div>
       <MyAccordion />
       <MyAlert />
-      <MyAlertDialog />
+      <MyAlertDialog text="Sean-AlertDialog" title="Sean-Title" content="Becomes Sean, Reuseable with props-Content" />
+      <MyAlertDialog text="UnSean-Use Components in Typescript props" title="Sean-Title" content={ <MyAlert/> } />
+      <MyAlertDialog text="UnSean-Use Components in Typescript props" title="Sean-Title" content={ <MyAccordion /> } />
     </div>
   )
 }

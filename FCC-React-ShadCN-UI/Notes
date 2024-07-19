@@ -68,8 +68,9 @@ https://lucide.dev/icons/
 Can be used to give messages to the users, or an error alert message
 
 SHADCN - Alert Dialog = 25:55 ===========================================================================================================================================================================================================
-
-
+https://ui.shadcn.com/docs/components/alert-dialog
+Creates a popup dialog with buttons 
+Going to make the title / text dialog as dynamic so you can use the same code, but just change the props to change the content
 
 
 

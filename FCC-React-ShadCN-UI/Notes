@@ -69,9 +69,12 @@ Can be used to give messages to the users, or an error alert message
 
 SHADCN - Alert Dialog = 25:55 ===========================================================================================================================================================================================================
 https://ui.shadcn.com/docs/components/alert-dialog
-Creates a popup dialog with buttons 
+Creates a popup dialog with buttons when you click some text
 Going to make the title / text dialog as dynamic so you can use the same code, but just change the props to change the content
+Made reuseable with props, can use other components in TS with 'function MyAlertDialog({title, content, text}: {title: string, content: React.ReactNode, text: React.ReactNode}) { ... }'
+'React.ReactNode' #will allow us to use other components in our typescript, or strings, etc very versatile Typescript above
 
+SHADCN - Image Ratio = 39:15 =============================================================================================================================================================================================================
 
 
 

@@ -75,6 +75,7 @@ Made reuseable with props, can use other components in TS with 'function MyAlert
 'React.ReactNode' #will allow us to use other components in our typescript, or strings, etc very versatile Typescript above
 
 SHADCN - Image Ratio = 39:15 =============================================================================================================================================================================================================
+https://ui.shadcn.com/docs/components/aspect-ratio
 Aspect Ratio ? for videos / maintaing a certain aspect ratio for an image/video player
 Copy + Paste - same deal as before - add an image, 
 You can change 16 / 9 aspect ratio, className="..." src="..."
@@ -84,12 +85,18 @@ after adding 'fill' you can change the aspect ratio manually, <AspectRatio = { 3
 Also don't forget, when you add an Image source, you need to change the config, 'next.config.mjs' and add the host, I'll probably forget this as future sean and just look up the error message, again
 
 SHADCN - Avatar = 57:30 ==================================================================================================================================================================================================================
+https://ui.shadcn.com/docs/components/avatar
 Rounded circle image for profiles 
 <Avatar className="w-20 h-20"> #use this to change size with className
   <AvatarImage src="https://github.com/shadcn.png" /> #image source
   <AvatarFallback> #fallback is what will be put in place if the image doesn't load
 
 SHADCN - Badge = 1:01:20 =================================================================================================================================================================================================================
+https://ui.shadcn.com/docs/components/badge
+A small component that is a rounded button, can show status updates, colors, user status, etc - has many different variations
+you can see the other variants by removing the 'variant=""' and allowing intellisense to show you
+function MyBadge({title, className, variant} : {title: string, className: string, variant: "default" | "secondary" | "destructive" | "outline"} ) #added props, 'title' string 'className' string 'variant' string literals x4
+
 
 
 

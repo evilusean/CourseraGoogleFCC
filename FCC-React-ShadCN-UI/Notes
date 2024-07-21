@@ -75,7 +75,10 @@ Made reuseable with props, can use other components in TS with 'function MyAlert
 'React.ReactNode' #will allow us to use other components in our typescript, or strings, etc very versatile Typescript above
 
 SHADCN - Image Ratio = 39:15 =============================================================================================================================================================================================================
-
+Aspect Ratio ? for videos / maintaing a certain aspect ratio for an image/video player
+Copy + Paste - same deal as before - add an image, 
+You can change 16 / 9 aspect ratio, className="..." src="..."
+you will need to add props, width={450} height={200}, but the aspect ratio messes this up, this tut guy just rambled for 20 mins
 
 
 

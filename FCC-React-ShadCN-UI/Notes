@@ -79,9 +79,10 @@ Aspect Ratio ? for videos / maintaing a certain aspect ratio for an image/video 
 Copy + Paste - same deal as before - add an image, 
 You can change 16 / 9 aspect ratio, className="..." src="..."
 you will need to add props, width={450} height={200}, but the aspect ratio messes this up, this tut guy just rambled for 20 mins
+'fill' you can add instead of height/width, when you want image controlled by parent container
+after adding 'fill' you can change the aspect ratio manually, <AspectRatio = { 3 / 2 } >
 
-
-
+SHADCN - Avatar = 57:30 ==================================================================================================================================================================================================================
 
 
 

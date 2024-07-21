@@ -84,6 +84,11 @@ after adding 'fill' you can change the aspect ratio manually, <AspectRatio = { 3
 Also don't forget, when you add an Image source, you need to change the config, 'next.config.mjs' and add the host, I'll probably forget this as future sean and just look up the error message, again
 
 SHADCN - Avatar = 57:30 ==================================================================================================================================================================================================================
+Rounded circle image for profiles 
+<Avatar className="w-20 h-20"> #use this to change size with className
+  <AvatarImage src="https://github.com/shadcn.png" /> #image source
+  <AvatarFallback> #fallback is what will be put in place if the image doesn't load
+
 
 
 

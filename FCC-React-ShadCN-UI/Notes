@@ -97,7 +97,7 @@ A small component that is a rounded button, can show status updates, colors, use
 you can see the other variants by removing the 'variant=""' and allowing intellisense to show you
 function MyBadge({title, className, variant} : {title: string, className: string, variant: "default" | "secondary" | "destructive" | "outline"} ) #added props, 'title' string 'className' string 'variant' string literals x4
 
-
+SHADCN - Breadcrumb = 1:12:05 ============================================================================================================================================================================================================
 
 
 

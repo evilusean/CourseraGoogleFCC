@@ -79,9 +79,11 @@ Aspect Ratio ? for videos / maintaing a certain aspect ratio for an image/video 
 Copy + Paste - same deal as before - add an image, 
 You can change 16 / 9 aspect ratio, className="..." src="..."
 you will need to add props, width={450} height={200}, but the aspect ratio messes this up, this tut guy just rambled for 20 mins
+'fill' you can add instead of height/width, when you want image controlled by parent container
+after adding 'fill' you can change the aspect ratio manually, <AspectRatio = { 3 / 2 } >
+Also don't forget, when you add an Image source, you need to change the config, 'next.config.mjs' and add the host, I'll probably forget this as future sean and just look up the error message, again
 
-
-
+SHADCN - Avatar = 57:30 ==================================================================================================================================================================================================================
 
 
 

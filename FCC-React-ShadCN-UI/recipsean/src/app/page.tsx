@@ -3,6 +3,7 @@ import MyAccordion from './SHADCN/MyAccordion'
 import MyAlert from './SHADCN/MyAlert'
 import MyAlertDialog from './SHADCN/MyAlertDialog'
 import MyAspectRatio from './SHADCN/MyAspectRatio'
+import MyAvatar from './SHADCN/MyAvatar'
 
 function page() {
   return (
@@ -14,6 +15,7 @@ function page() {
       <MyAlertDialog text="UnSean-Use Components in Typescript props" title="Sean-Title" content={ <MyAlert/> } />
       <MyAlertDialog text="UnSean-Use Components in Typescript props" title="Sean-Title" content={ <MyAccordion /> } />
       <MyAspectRatio />
+      <MyAvatar />
     </div>
   )
 }

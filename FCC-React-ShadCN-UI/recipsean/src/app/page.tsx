@@ -20,6 +20,7 @@ function page() {
       <MyAvatar />
       <MyBadge title="Badge+Props" variant="destructive" />
       <MyBreadCrumb />
+      <MyButton />
     </div>
   )
 }

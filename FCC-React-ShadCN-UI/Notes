@@ -98,11 +98,12 @@ you can see the other variants by removing the 'variant=""' and allowing intelli
 function MyBadge({title, className, variant} : {title: string, className: string, variant: "default" | "secondary" | "destructive" | "outline"} ) #added props, 'title' string 'className' string 'variant' string literals x4
 
 SHADCN - Breadcrumb = 1:12:05 ============================================================================================================================================================================================================
+https://ui.shadcn.com/docs/components/breadcrumb
+Breadcrumb : Displays the path to the current resource using a hierarchy of links. Just / ... / Like / This
+Will link to other pages in your app, like a directory URL - each 'BreadcrumbLink' has an 'href=""' allowing you to link to other pages
 
-
-
-
-
+SHADCN - Button = 1:28:15 ================================================================================================================================================================================================================
+https://ui.shadcn.com/docs/components/button
 
 
 

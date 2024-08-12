@@ -104,8 +104,8 @@ Will link to other pages in your app, like a directory URL - each 'BreadcrumbLin
 
 SHADCN - Button = 1:28:15 ================================================================================================================================================================================================================
 https://ui.shadcn.com/docs/components/button
-
-
+Button : Displays a button or a component that looks like a button. -  can use <Link> tags to for href(change page)
+This tut is pretty garbage, this guy shouldn't be making tut's he should be watching them - completed +3 days - doing something else - I can do this better and faster on my own 
 
 
 

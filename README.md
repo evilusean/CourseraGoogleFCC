@@ -1,8 +1,14 @@
-# ShadCN UI Component Library Course:
+# FreeCodeCamp - Learn System Design Principles:
+Start: 13August2024</br>
+End: </br>
+
+[Tutorial:](https://www.youtube.com/watch?v=F2FmTdLtb_4&t=1s) [https://www.freecodecamp.org/news/learn-system-design-principles/](https://www.freecodecamp.org/news/learn-system-design-principles/)
+
+# FreeCodeCamp - UI Component Library Course:
 [Tutorial:](https://www.youtube.com/watch?v=oidnyW71W0A) [https://www.freecodecamp.org/news/mastering-shadcn-ui-components/](https://www.freecodecamp.org/news/mastering-shadcn-ui-components/)</br>
 
 Start: 18July2024</br>
-End: </br>
+End: 21July2024</br>
 
 # FCC - Learn TypeScript - Full Course for Beginners:
 [Tutorial: https://www.youtube.com/watch?v=SpwzRDUQ1GI&ab_channel=freeCodeCamp.org](https://www.youtube.com/watch?v=SpwzRDUQ1GI&ab_channel=freeCodeCamp.org)</br>

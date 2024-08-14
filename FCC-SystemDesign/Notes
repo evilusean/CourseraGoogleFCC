@@ -1,2 +1,35 @@
 Start: 13August2024
 End:
+
+Computer Architecture - 
+Computers can only understand binary, compiler abstracted = C abstracted = Python Abstracted = Function/package 
+Bit = 0 or 1
+Byte = 8 bits
+KB = 1024 bytes
+MB = 1024 KB
+GB = 1024 MB
+TB = 1024 GB
+Disk Storage = HDD/SSD - Non volatile data storage - HDD Speed = 80 - 160 MB / s - SSD Speed = 500 - 3500 MB / s
+RAM = Random Access Memory = Holds data structures, variables, application data that are currently in use or being processed - Volatile memory (needs power) RAM Speed = >5000 MB / s
+Cache = Smaller than ram, Cpu first checks L1 Cache -> L2 -> L3 then RAM
+CPU = Brain of computer, processes operations, 
+Motherboard = Connects everything
+
+High Level Architecture of Production Ready App - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

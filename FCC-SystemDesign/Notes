@@ -1,7 +1,7 @@
 Start: 13August2024
 End:
 
-Computer Architecture - 
+Computer Architecture - ==================================================================================================================================================================================================================
 Computers can only understand binary, compiler abstracted = C abstracted = Python Abstracted = Function/package 
 Bit = 0 or 1
 Byte = 8 bits
@@ -15,7 +15,7 @@ Cache = Smaller than ram, Cpu first checks L1 Cache -> L2 -> L3 then RAM
 CPU = Brain of computer, processes operations, 
 Motherboard = Connects everything
 
-High Level Architecture of Production Ready App - 
+High Level Architecture of Production Ready App - 4:30 ===================================================================================================================================================================================
 
 
 

@@ -16,6 +16,38 @@ CPU = Brain of computer, processes operations,
 Motherboard = Connects everything
 
 High Level Architecture of Production Ready App - 4:30 ===================================================================================================================================================================================
+CICD = Continuous Integration / Continuous Deployment
+CICD Pipeline = ensures that the code goes through the repository through a series of tests and pipeline checks and onto the production server without any manual intervention
+Can use Jenkins or github actions for automating deployment processes
+Load balncer = manages user requests, ensures that requests are evenly distributed accross multiple servers maintaining a smooth user experience even during peak traffic spikes 
+NginX = manages reverse proxies
+Server also stores data, you should also have an external storage server that is not running on the same production server which is connected over a network (3, 2, 1 method for data safety, 1 is none, 2 is one, etc)
+  Servers can also communicate with other servers
+  Logging and monitoring systems = to ensure that everything is running smoothly, storing logs and analyzing data, standard practice to store logs on external services, outside of primary production server
+  PM2 = A tool that can be used for logging and monitoring
+  Sentry = A tool to capture and report errors in real times
+If you have a failed request, you should have an alerting service that alerts the correct people when things are failing or push notify users if something fails (generic things, payment failure)
+  Slack = Standard practice to integrate alerting into a platform like slack, a dedicated slack channel for alerts to pop up the moment an issue arises
+To Debug = Find the issue, find issue in logs, search for patterns, replicate the bug in a safe environment, the golden rule is to never debug in a production environment, recreate the issue in a staging/testing environment
+  Once the bug is fixed, a hotfix is rolled out, a temporary fix designed to get things running, a patch before a more permanent solution can be implemented
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

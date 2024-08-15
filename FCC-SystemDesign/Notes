@@ -32,6 +32,21 @@ To Debug = Find the issue, find issue in logs, search for patterns, replicate th
   Once the bug is fixed, a hotfix is rolled out, a temporary fix designed to get things running, a patch before a more permanent solution can be implemented
 
 Pillars of System Design - 7:15 ===========================================================================================================================================================================================================
+Good Design Principles :
+  Scalability = System grows with its userbase
+  Maintainability = Ensuring future developers can understand and improve the system
+  Efficiency = Making the best use of your resources
+  Reliability = Planning for failure, redunancies, performs well when things go wrong
+3 Key Elements of System Design = 
+  Moving Data = Ensuring that data can flow seamlessly from one part of the system to others (user requests/DB data transfers) optimize for speed and security
+  Storing Data = SQL vs NoSQL DB's, understanding access patterns, indexing strategies, backup solutions. Ensure that data isn't only stored securely, but readily available when needed
+  Transforming Data = Taking raw data and turning it into meaningful information (aggragating log data for analysis, converting user input to a different format)
+CAP Theorem(Brewers Theorem) = Eric Brewers set of principles that guide you in making informed tradeoffs between 3 key components of a distributed system
+  Consistency = Ensure that all nodes in a distributed system have the same data at the same time, if you make a change to one node, that change should also be reflected across all nodes
+  Availability = The system is always operational and responsive to requests regardless of what might be happening behind the scenes
+  Partition Tolerance = Refers to the systems ability to continue functioning even when a disruption of communication in a group of nodes, the system still works, 
+CA vs CP vs AP = According to CAP Theorem, a distributed system can only acheive 2 / 3 of these properties at the same time, you can focus on 2 at the expense/compromise of one
+
 
 
 

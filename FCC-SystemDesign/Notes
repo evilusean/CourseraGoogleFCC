@@ -31,7 +31,7 @@ If you have a failed request, you should have an alerting service that alerts th
 To Debug = Find the issue, find issue in logs, search for patterns, replicate the bug in a safe environment, the golden rule is to never debug in a production environment, recreate the issue in a staging/testing environment
   Once the bug is fixed, a hotfix is rolled out, a temporary fix designed to get things running, a patch before a more permanent solution can be implemented
 
-
+Pillars of System Design - 7:15 ===========================================================================================================================================================================================================
 
 
 

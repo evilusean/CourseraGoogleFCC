@@ -46,6 +46,27 @@ CAP Theorem(Brewers Theorem) = Eric Brewers set of principles that guide you in 
   Availability = The system is always operational and responsive to requests regardless of what might be happening behind the scenes
   Partition Tolerance = Refers to the systems ability to continue functioning even when a disruption of communication in a group of nodes, the system still works, 
 CA vs CP vs AP = According to CAP Theorem, a distributed system can only acheive 2 / 3 of these properties at the same time, you can focus on 2 at the expense/compromise of one
+If you prioritize Consistency and Partition Tolerance, you might have to compromise on availability 
+A banking system needs Consistency and partition tolerance, coming at the cost of availability(speed)
+A system optimized for read operations, might perform poorly on write operations 
+There is no perfect solution, there is finding the best solution for your specific use case - "There are no solutions, only tradeoffs" - Thomas Sewell
+Availability = Measurement of Systems operational performance and reliability - is the system up and running when the users need it - often measured in terms of percentage 
+99.9% availability = 8.76 hours of downtime per year
+'Golden 5 9's' = 99.999% availability = 5 minutes of downtime
+SLO = Service Level Objectives = Setting goals for system performance and availability 
+SLA = Service Level Agreements = Formal contracts for users/customers, define the minimum level of service that you are capable of providing
+Redundant systems/backups help with availability - ensuring there is always a backup ready to take over in case of failure
+  Or you can design the system to degrade gracefully, so if certain features are unavailable the core functionality remains intact
+Reliability = ensuring the system works correctly and consitently
+Fault Tolerance = preparing for when things go wrong, how does the system handle unexpected failures 
+Redundancy = Having backups, ensuring that if one part of the system fails, there is another ready to take its place
+Speed (optimizing in one can also lead to sacrifices in the other):
+  Throughput = Measures how much data a system can handle over a certain period of time (Server Throughput = measured in requests per second / DB throughput = Queries per second / Data throughput = Bytes per second)
+  Latency = How long it takes to handle a single request, how long a request takes to get a response 
+Bad system design can leard to many problems down the line like performance bottlenecks, security vulnerabilities, etc
+Code can be refactored easily, redesigning a system can not be done easily - Get it right the first time - Build a solid FoundASean
+
+
 
 
 

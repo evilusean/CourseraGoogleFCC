@@ -135,7 +135,7 @@ in GraphQL use new fields 'products' becomes 'products_v2'
 Another best practice is to set rate limitations, this can prevent the API from DDoS attacks, used to control the number of requests a user can make in a certain timeframe, prevents a single user from sending too many requests
 CORS = Cross Origin Resource Sharing =Another best practice is to also set CORS settings, you can control which domains can access your API, preventing unwanted cross-site interaction
 
-
+Caching and CDN -29:20 ========================================================================================================================================================================================================================
 
 
 

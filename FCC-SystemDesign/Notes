@@ -90,10 +90,27 @@ Networking Infrastructure = Public vs Private IP Address
 Ports = When combined with an IP address create a unique identifier for a network service, some ports are reserved for specific protocols (80=HTTP / HTTPS = 443 / SSH = 22 / MySQL = 3306 /etc )
 
 Application Protocols - 19:00 ================================================================================================================================================================================================================
+HTTP = HyperText Transfer Protocol = Built on TCP/IP, a request - response protocol
+  Status Codes = 2xx = Success / 3xx = Redirection / 4xx = Client Error Codes / 5xx = Server Error Codes
+  Methods = Get / Post / Put / Delete
+Websockets = Used for 2 way communication channel over a single long lived connection - used for streaming / chat applications / stock feeds
 
+Email Protocols :
+SMTP = Simple Mail Transfer Protocol = The standard for sending emails over the internet, between servers, used for sending, somtimes the servers will use IMAP or POP3 to recevieve but use SMTP to send
+IMAP = Internet Message Access Protocol = Used to retrieve emails from a server, ideal for retrieving emails from multiple devices, 
+POP3 = Post Office Protocol V3 = Used for downloading emails from a server to a local client, typically used when emails are managed from a single device
 
+File Transfer Protocols :
+FTP = File Transfer Protocol = Traditional method of transferring files over the internet, used for larges files, between the client and server
+SSH = Secure Shell = For command line login and file transfer, used for operating network services securely on an unsecured network - Log in to a remote machine and execute commands
 
+Real Time Communication Protocols : 
+WebRTC = Enables browser-to-browser applications for voice calling, video chat, and file sharing without internal or external plugins, essential for video conferencing and livestreaming
+MQTT = Message Queuing Telemetry Transport = Lightweight messaging protocol, ideal for devices with limited processing power and scenarios where you have very low bandwidth such as IoT
+AQMP = Advanced Message Queing Protocol = Protocol for message-oriented middleware, provides robust security for enterprise level communication 
+RPC = Remote Procedure Call = Allows a program on one computer to execute code on another PC or server, evokes functions as if it were a local call, when in reality it is executed remotely
 
+API Design - 24:00 ===========================================================================================================================================================================================================================
 
 
 

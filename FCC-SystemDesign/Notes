@@ -186,7 +186,7 @@ Types of Proxy Servers :
   Distorting Proxy = Provides an incorrect original IP to the destination server, similar to anonymous proxy but spoofs the IP Address
   High Anonymity Proxy/Elite Proxy = Makes detecting the proxy use very difficult, these proxies do not send identifying headers and ensure maximum anonymity
 
-
+Common Strategies and Algorithms Used in Load Balancing - 43:00 =================================================================================================================================================================================
 
 
 

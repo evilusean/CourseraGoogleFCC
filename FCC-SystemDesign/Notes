@@ -166,7 +166,7 @@ CDN = Content Delivery Networks = A network of servers which are distributed geo
 Use origin server when you are serving dynamic content that changes frequently or is personalized for individual users / handling tasks that require real-time processsing or access to up-to-date data
   Or when the application requires complex server-side logic that cannot be replicated or cached by a CDN
 
-
+Proxy Servers(Forward/Reverse Proxies) - 36:30 ==================================================================================================================================================================================================
 
 
 

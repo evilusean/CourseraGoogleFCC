@@ -167,7 +167,24 @@ Use origin server when you are serving dynamic content that changes frequently o
   Or when the application requires complex server-side logic that cannot be replicated or cached by a CDN
 
 Proxy Servers(Forward/Reverse Proxies) - 36:30 ==================================================================================================================================================================================================
-
+Proxy servers act as an intermediary between the client and the servers, it can serve various purposes like caching resources, anonymizing requests, and load balancing multiple servers
+  Receives requests from clients -> forwards to relevant servers -> returns the servers response back to the client
+Types of Proxy Servers :
+  Forward Proxy = in front of clients, used to send requests to other servers on the internet, often used within the internal networks to control access, hides clients IP address
+    Types of forward proxies : Instagram Proxies = Used to manage multiple accounts without triggering bans or restrictions for marketing and social media 'influencers'(Lol, Lmao) - will appear as if they are located in different area/users
+    Internet Use Control Proxies = Monitor and control a networks traffic, can block access to non work related sites, protect against web based threats, scan for viruses(virii?)/malware from incoming content
+    Caching = used for caching popular websites/content, reducing bandwidth usage and speeding up access for users within the network - can also be used for anonymizing web access
+  Reverse Proxy = Sits in front of one or more webservers, intercepts requests from the internet, used for load balancing, web acceleration, and a security layer
+    Can also compress data, cache files, manage SSL encryption, the client won't know which servers it is connected too because the proxy acts as an intermediary
+    Types of reverse proxies : Load Balancers = Distribute incoming network traffic across multiple servers - distributed traffic prevents any single server becoming a bottleneck 
+    CDN(content delivery networks) are also a type of reverse proxies, based on geographical area of the user
+    WAF(Web Application Firewalls) = positioned in front of web applications, inspect incoming traffic to block hacking attempts/unwanted traffic - protect against common web exploits
+    SSL Offlloading/Acceleration = Some proxies handle the encryption/decryption of TLS traffic, offloading that task from webservers to optimize their performance
+  Open Proxy = Allows any user to connect and use the proxy, often used to anonymize web browsing and bypass content restrictions
+  Transparent Proxy = Passes on requests and resources without modifying them, often used for cacheing and content filtering
+  Anonymous Proxy = Identifiable as a proxy server, but does not make the original IP address available - used for anonymous browsing
+  Distorting Proxy = Provides an incorrect original IP to the destination server, similar to anonymous proxy but spoofs the IP Address
+  High Anonymity Proxy/Elite Proxy = Makes detecting the proxy use very difficult, these proxies do not send identifying headers and ensure maximum anonymity
 
 
 

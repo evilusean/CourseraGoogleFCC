@@ -136,8 +136,35 @@ Another best practice is to set rate limitations, this can prevent the API from 
 CORS = Cross Origin Resource Sharing =Another best practice is to also set CORS settings, you can control which domains can access your API, preventing unwanted cross-site interaction
 
 Caching and CDN -29:20 ========================================================================================================================================================================================================================
-
-
+To reduce latency for users :
+Caching = A technique to improve performance and efficiency of a system, involves storing a copy of certain data in a temporary storage(cache) so that future requests for that data can be served faster.4Common places where a Cache is stored :
+  Browser Caching = Where website resources are stored on a users local machine, so when a user revisits a site, the browser can load the site from the local cache rather than fetching everything from the server
+    Users can disable caching by adjusting the browser settings : Developer Tools -> Network Tab -> Top Part - Disable Cache 
+    Browser Caches store HTML/CSS/JS bundle files on the users local machine, typically in a dedicated cache directory managed by the browser
+    Cache-Control = Header found in developer tools, allows you to control how long it should be cached
+    Cache Hit = When the requested data is found in the cache 
+    Cache Miss = When the requested data is not in the cache
+    Cache Ratio = Percentage of requests that are served from the cache compared to all requests (Cache Hits / Cache Hit + Cache Misses) A higher ratio indicates a more effective cache
+  Server Caching = Where you store frequently accessed data on the servers, reducing the need to perform expensive operations like DB queries, typically the server checks the cache before querying the DB
+    Write-Around-Cache = Where data is written directly to permanent storage, bypassing the cache, used when write performance is less critical
+    Write-Through-Cache = Where data is simultaneously written to cache and permanent storage, ensures data consistency, but can be slower 
+    Write-Back Cache = Where data is first written to the cache, and then to permanent storage, this improves write performance but you have a rick of losing data in case of a crash of server
+      Evicition Policies = Incase the cache is full and you havn't written all data to the server which determines which items to remove from the cache when it is full
+      LRU = Least Recently Used = A common policy to remove items that haven't been used recently
+      FIFO = First in First Out = First Data in is the first data out
+      LFU = Least Frequently Used = Remove the least frequently used
+  Database Caching = Refers to the practice of caching database query results to improve the performance of DB driven applications, often done within the DB system itself or by an external cache layer like 'Redis' or 'Memcache'
+    When a DB is queried succesfully, it will save that result in the cache for future use/speed
+CDN = Content Delivery Networks = A network of servers which are distributed geographically - Generally used to serve static content like JS/HTML/CSS or image and video files, 
+  cache content from original server and deliver it to users from the nearest CDN server (having a central hub to store data, with caches all over) reducing latency
+  When the user makes a request, the request is redirected to the nearest CDN server, if the CDN server has the cached content, it delivers it to the user, if not it fetches the content from the origin server, caches it and forwards to user
+  'Pull-based' CDN = Above is called a PB CDN and automatically pulls the content if it's not cached from the origin server,
+    ideal for websites with alot of static content which is updated regularly, requires less management since CDN is automatic
+  'Push-Based' CDN = Where you upload the content to the origin server and then it distributes the files to the CDN servers, useful when you have large files that are infrequently updated, but need to be quickly distributed on update
+    Requires more active management 
+  Both CDN methods will reduce the load on the origin server / Reduce Latency / Improve UX - CDN Benefits = Reduced Latency /High Availability /Improved Security (DDoS / Traffic Encryption) 
+Use origin server when you are serving dynamic content that changes frequently or is personalized for individual users / handling tasks that require real-time processsing or access to up-to-date data
+  Or when the application requires complex server-side logic that cannot be replicated or cached by a CDN
 
 
 

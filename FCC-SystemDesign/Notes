@@ -67,10 +67,29 @@ Bad system design can leard to many problems down the line like performance bott
 Code can be refactored easily, redesigning a system can not be done easily - Get it right the first time - Build a solid FoundASean
 
 Networking Basics - 14:45 ==================================================================================================================================================================================================================
+How computers communicate with each other - When 2 computers communicate over a network, they send and receive packets of data - 
+IP Address = A unique indentifier for each device on a network
+IP (Internet protocol) = A set of rules that govern defines how data is sent and received
+IPv4 Address = 32 bit = ~4Billion unique addresses
+IPv6 = 128 bit = ~340Trillion unique addresses
+IP Layer = Each packet contains an IP header, like sender and receiver IP address, 
+Application Layer = Where data specific to the application protocol is stored, the data in these packets is formatted in according to it's use (like http for web browsing)
+Transport Layer (TCP/UDP) :
+  TCP = Transport Control Protocol = contains TCP header with data packet that contains checksum, ensuring you receive the correct data, also contains port numbers
+  UDP = User Data Protocol = UDP is faster, but less reliable than TCP - no 3 way handshake, doesn't establish a connection before sending data - preferered for video/live communications where speed is crucial and data loss is acceptable
+ThreeWay HandShake = Syn -> Syn + Ack -> Ack
+DNS = Domain Name System = Internet's phonebook, translates human friendly domain names into IP addresses(URL) allowing you to establish a connection to the server and retrieve the webpage
+ICANN = Internet Corporation for Assigned Names and Numbers = oversees DNS, Domain Name Registars(where you buy a URL) are accreddited by ICANN
+'A' Record = Maps a domain name to an IPv4 address
+'AAAA' Record =Maps a domain name to an IPv6 address
+Networking Infrastructure = Public vs Private IP Address
+  Public IP address = Unique accross the internet, 
+  Private IP address = unique within a local network
+  Static IP Address = permanently assigned to a device
+  Dynamic IP Address = changes over time
+Ports = When combined with an IP address create a unique identifier for a network service, some ports are reserved for specific protocols (80=HTTP / HTTPS = 443 / SSH = 22 / MySQL = 3306 /etc )
 
-
-
-
+Application Protocols - 19:00 ================================================================================================================================================================================================================
 
 
 

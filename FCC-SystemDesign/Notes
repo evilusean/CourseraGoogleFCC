@@ -111,10 +111,29 @@ AQMP = Advanced Message Queing Protocol = Protocol for message-oriented middlewa
 RPC = Remote Procedure Call = Allows a program on one computer to execute code on another PC or server, evokes functions as if it were a local call, when in reality it is executed remotely
 
 API Design - 24:00 ===========================================================================================================================================================================================================================
-
-
-
-
+Example used in tut was from shopify, an ecommerce platform with thousands of businesses and millions of customers :
+In API design, you are concerned with defining the inputs(key value pairs) which is provided by a seller and the outputs which is the information returned when someone queries a product off an API
+CRUD = Create / Read / Update / Delete = Basic Operations of any data driven app 
+  Post = Example POST Request = '/api/v2/products'
+  Read = GET Request = '/api/products'
+  Update = PUT/Patch Request = '/api/products/:id'
+  Delete = DELTE = '/api/products/:id'
+Another thing you need to decide is the communication protocol that you will use, above CRUD is using an HTTP request
+Data Transfer Mechanism = JSON / XML / CSV 
+API Paradigms  = Rest Vs GraphQL Vs gRPC 
+  Restful API = Representational State Transfer = Stateless(request from client to server) / Uses Standard HTTP methods(GET/POST/PUT/etc) / easily consumed by different browsers or mobile apps - downsides = overfetching/underfetching (use JSON)
+  GraphQL = Allow clients to requests exactly what they need, avoids overfetching and underfetching / Strongly typed schema based queries - downsides = complex queries can impact server performance / 
+    ALL requests are sent as POST requests / Only responds with 'HTTP 200' status codes, even in the case of errors / 
+  gRPC = Google Remote Procedure Call = Built on HTTP2 / Supports multiplexing and server push / uses protocol buffers / Efficient in terms of bandwidth and resources - downside = less human readable / requires HTTP2 to operate
+You need to design API endpoints to reflect what they do : '/api/v1/users/:userId/orders' GET would show the users orders
+GET '/api/products?limit=100&offset=0' #common queries would use limit and offset / GET '/api/products?startDate={date}&endDate={date}' #also a common filter you will need to implement start/end dates
+  Allowing the user/client to get specific sets of data without overwhelming the system
+Idempotent = calling it multiple times doesn't change the result, and it shouldn't change the result = A well designed get request should be Idempotent
+GET requests should never mutate data, meant only for retrieval 
+When modifying endpoints it's important to put in backward compatibility and versioning - ensure that changes don't break existing clients '/api/v2/products POST' notice the 'v2' version 
+in GraphQL use new fields 'products' becomes 'products_v2'
+Another best practice is to set rate limitations, this can prevent the API from DDoS attacks, used to control the number of requests a user can make in a certain timeframe, prevents a single user from sending too many requests
+CORS = Cross Origin Resource Sharing =Another best practice is to also set CORS settings, you can control which domains can access your API, preventing unwanted cross-site interaction
 
 
 

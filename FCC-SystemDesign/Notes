@@ -187,9 +187,20 @@ Types of Proxy Servers :
   High Anonymity Proxy/Elite Proxy = Makes detecting the proxy use very difficult, these proxies do not send identifying headers and ensure maximum anonymity
 
 Common Strategies and Algorithms Used in Load Balancing - 43:00 =================================================================================================================================================================================
-
-
-
+Round Robin = Simplest form of load balancing, where each server in the pool gets a request in sequential rotating order (1,2,3,4,repeat) when last server is reached it loops back to first,
+  Works well for servers with similar specifications and the load is uniformly distributable
+Least Connection = Directs the traffic to the server with the fewest active connections, ideal for longer tasks or where the server load is not evenly distributed
+Least Response Time = Chooses the server with the lowest response time, and fewest active connections, effective for when you want to provide the quickest response time to requests
+IP Hash = Determines which server will receive the request based on the clients IP address, ensures that client consistently connects to the same server, useful for session persistance in applications where it's important to connect to same
+Weighted Algorithms = Can be used in conjunction with other algorithms above, where servers are assigned weights based on their computational capacity / performance metrics - best servers get more requests
+  Effective for when the computers in the pool have different capabilities(CPU/Ram)
+Geographic Algorithm  = Direct requests to the server with the closest geographic location/region to the client, useful for global services where latency reduction is priority
+Consistent Hashing = Uses a hash function to distribute data accross various nodes, 'Hash Ring' - a circle where it wraps around to the begining, and both the keys and the nodes - client will consitently connect to same server every time
+Health Check = An essential feature of load balancers is continuous health checking of the servers to ensure that traffic is only directed towards the servers which are only and responsive, if a server fails it will stop sending traffic 2 it
+Load Balancers - Can be Hardware/Software/ or cloudbased solutions(someone elses hardware) services - Hardware LB = f5 / Citrix - Software Load Balancer = HAProxy / NginX(can be a webserver/load balancer) - Cloud = AWS/Azure/GCloud 
+Load balancer is a single point of failure, if it goes down, so do all the servers, to avoid this, redundancy (more than one - pairs) + Health checks = Detect any issue early before it becomes a problem
+Fail-Over = run load balancers in pairs if one fails, the other will take over
+Auto Scaling /Self Healing Systems = Automatically detect the failure of load balancer and replace it with a new instance without any intervention
 
 
 

@@ -203,11 +203,20 @@ Fail-Over = run load balancers in pairs if one fails, the other will take over
 Auto Scaling /Self Healing Systems = Automatically detect the failure of load balancer and replace it with a new instance without any intervention
 
 Database Essentials (Sharding, Replication, ACID, Vertical and Horizontal Scaling) - 48:00 =======================================================================================================================================================
-
-
-
-
-
-
-
-
+Relational Database = PostGreSQL/MySQL/SQLite are examples, all SQL DB's use tables for and use SQL as a query language, All SQL DB's are ACID compliant, 
+ACID (Atomicity (transactions are all or nothing) / Consistency (after transaction DB should be in constent state) / Isolation (transactions should be independant) / Durability (once transaction is commited data is stored)
+NoSQL DB's Drop the 'C' property from 'ACID' - No consistency, similar to a brainstorming board with sticky notes instead of a well organized filing cabinet, also schema less so don't have keys linking different tables together
+NOSQL DB's = MongoDB(Document based) / Cassandra / ReDis(Key-Value Pairs based) / Neo4j (Graph Based) - Good for unstructured data, ideal for scalalbilty, quick iteration, and simple queries
+In-Memory Databases = Redis / Memcache - Like having a whiteboard for quick calculations, everything is in memeory, used primarily for caching and session storage
+'Vertical Scaling' (Scale Up) = Improve the performance of DB by enhancing the performance capabilties of an individual server where the data is running - Increasing CPU power / More RAM / Adding Disk Storage / Upgrading Network
+'Horizontal Scaling' (Scale Out) = Improve the system by adding more machines, distribute data across a cluster of machines, good for DB sharding, data replication
+Data Sharding = Distributing different portions of a DB accross multiple servers, split the data into smaller chunks and distribute it across 
+  Range Based Sharding = Distribute based on the range of a given key
+  Directory Based Sharding = Lookup service to direct traffic to the database
+  Geographical Sharding = Based on geographical location
+Replication = Keeping copies of data on multiple server for high availability
+  Master - Slave replication = where you have one master(Read/Write) DB and several slave(Read Only) DB's 
+  Master - Master Replication = Multiple Read/Write DB's 
+Database Performance = Caching isn't just for webservers, can be done with redis for DB's
+  Indexing = Can increase the performance of DB, creating an index for frequently accessed columns will significantly increase your DB retrieval time
+  Query Optimization = Optimize Queries for fast data retrieval/access, try to minimize joins, use tools such as 'SQLQuery Analyzer'

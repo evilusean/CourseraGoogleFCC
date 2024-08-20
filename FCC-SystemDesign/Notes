@@ -202,7 +202,7 @@ Load balancer is a single point of failure, if it goes down, so do all the serve
 Fail-Over = run load balancers in pairs if one fails, the other will take over
 Auto Scaling /Self Healing Systems = Automatically detect the failure of load balancer and replace it with a new instance without any intervention
 
-
+Database Essentials (Sharding, Replication, ACID, Vertical and Horizontal Scaling) - 48:00 =======================================================================================================================================================
 
 
 

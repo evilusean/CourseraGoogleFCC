@@ -10,8 +10,13 @@ Do people hate VIM? : Skill Issue, It's not that hard. Build muscle memory. "Peo
 PDP-7 = Programmed Data Processor-7 = Created in 1964, a micro-computer created by big DEC(Digital Equipment Corporation) - had no OS, only tools
 11:03 - Unix : 1969 UNIplexed Information Computing System(UNIX) - written in C(created by Dennis Ritchie)- created by Bell Labs in 1969 - Bell Labs = Subsidiary of AT&T
 14:30 - Unix Emulated : 1972 - No VI/VIM yet-
-19:40 - What is Ed? :
-
+19:40 - What is Ed? : 1963 Ed is a text editor built for UNIX OS = 'Ed'itor - line oriented text editor, hard to use because you could not visually see editing in your text file(no terminal back then)
+  Teletype Machines = like a typewriter, where you enter the input and the output would print out on paper 'Print' command would literally print on paper
+  Almost any edition of UNIX will always have 'Ed' - single letters for input commands 'a' = input mode(append) '.' = while in input mode, the period would commit entries
+  '1,$p' #enter command mode, and print, '1' = first line ',' = range operator '$' =regex for last line 'p' for print 
+  'wq <filename.txt>' #would write and quit filename, this is where vim got :wq
+  'ed hello.txt' #to enter a text file
+33:30 - What is EX? :
 
 
 

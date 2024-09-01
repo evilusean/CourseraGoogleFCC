@@ -24,6 +24,10 @@ PDP-7 = Programmed Data Processor-7 = Created in 1964, a micro-computer created 
 FreeBSD = Software that is still around today, non-copyleft license, powers MacOS, can be commercialized. just watched a video on this yesterday : https://www.youtube.com/watch?v=NKHzcXwTdB4
 https://www.freebsd.org/
   Starts looking like 'VIM' to get back to command mode, type ':'
+  'k' goes up
+  'j' goes down
+  'i' goes to insert mode 'esc' back to normal mode
+50:00 - What is VI? 
 
 
 

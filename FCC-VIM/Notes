@@ -16,8 +16,14 @@ PDP-7 = Programmed Data Processor-7 = Created in 1964, a micro-computer created 
   '1,$p' #enter command mode, and print, '1' = first line ',' = range operator '$' =regex for last line 'p' for print 
   'wq <filename.txt>' #would write and quit filename, this is where vim got :wq
   'ed hello.txt' #to enter a text file
-33:30 - What is EX? :
-
+33:30 - What is EX? : 1976 'EX'tended = a line oriented editor created in 1976 that improved the feature set of 'Ed'
+  More extensive Commands, history, and undo, multi buffer support, visual mode
+  'Em' = A better version of 'Ed' created by George Couloris that could take advantage of video displays, Billy Joel added it to the BSD(Berkley Software Distribution v1.1) in 1978
+  ':' = Ex syntax starts to use the ':' colon to declare commands, 'command mode' 
+  ':vi' # Visual Mode, added in that allowed users to see the document while they entered commands - no longer needed to enter in line by line
+FreeBSD = Software that is still around today, non-copyleft license, powers MacOS, can be commercialized. just watched a video on this yesterday : https://www.youtube.com/watch?v=NKHzcXwTdB4
+https://www.freebsd.org/
+  Starts looking like 'VIM' to get back to command mode, type ':'
 
 
 

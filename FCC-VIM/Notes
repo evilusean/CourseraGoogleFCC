@@ -31,9 +31,12 @@ https://www.freebsd.org/
   Vi at the time was not considered a lightweight, small portable editor, barely being able to fit into the memory of a PDP-11 or PDP-7
 1:10:00 - Finally figures out how to install - <Time Wasted> * <Users Watched> = <Amount of time wasted>. It's just disrespectful, thousands, potentially millions of hours wasted.
 Tut - Spent 20 minutes installing vi, why do none of these dudes know how to edit? It only took 2 VM's and 2 OS'. 20 minutes to show 'h' go left 'l' go right.. I feel cheated
-
-
-
+1:12:00 - What is Vim? : 1991 - Written by Bram Moolenaar a clone of VI - Stands for 'VI(Improved)' that greatly improved the programs functionality
+  Added in syntax highlighting, plugin support, multi level undos, multiple new modes, enhanced search and replace, split windows and tabs, command line history, autocompletion, and more.
+  Vim is often set as the default editor in many OS, "How do I exit vim? 'esc' ':q!'"
+  Vim has a built in tutorial for beginners called 'vimtutor' which is usually installed along with vim, but is a seperate executable, can be run with a shell command
+1:13:45 - VimTutor Vim Help : Read through it, tells you how to use vim, lots of reading
+  ':help' easier way to learn vim commands - the docs 
 
 
 

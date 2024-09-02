@@ -5,7 +5,7 @@ https://www.youtube.com/watch?v=JYNA9j8SXs4
 Sites With Docker that you can test code on:
 https://www.gitpod.io/
 https://github.com/features/codespaces
-AWS - Container with Docker Installed
+AWS(or google or azure) - Container with Docker Installed
 
 First Edition UNIX(1972) with Docker:
 https://github.com/bahamat/docker-unix-1st-ed

@@ -27,7 +27,11 @@ https://www.freebsd.org/
   'k' goes up
   'j' goes down
   'i' goes to insert mode 'esc' back to normal mode
-50:00 - What is VI? 
+50:00 - What is VI? Vi is a text editor built for the UNIX OS, when BSD 2.0 was being released 'Ex' was renamed to 'Vi' - Visual mode was now just the default mode
+  Vi at the time was not considered a lightweight, small portable editor, barely being able to fit into the memory of a PDP-11 or PDP-7
+1:10:00 - Finally figures out how to install - <Time Wasted> * <Users Watched> = <Amount of time wasted>. It's just disrespectful, thousands, potentially millions of hours wasted.
+Tut - Spent 20 minutes installing vi, why do none of these dudes know how to edit? It only took 2 VM's and 2 OS'. 20 minutes to show 'h' go left 'l' go right.. I feel cheated
+
 
 
 

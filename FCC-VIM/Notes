@@ -37,7 +37,7 @@ Tut - Spent 20 minutes installing vi, why do none of these dudes know how to edi
   Vim has a built in tutorial for beginners called 'vimtutor' which is usually installed along with vim, but is a seperate executable, can be run with a shell command
 1:13:45 - VimTutor Vim Help : Read through it, tells you how to use vim, lots of reading
   ':help' easier way to learn vim commands - the docs 
-
+1:22:35 - VimScript :
 
 
 

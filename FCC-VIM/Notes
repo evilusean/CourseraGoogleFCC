@@ -43,7 +43,13 @@ Tut - Spent 20 minutes installing vi, why do none of these dudes know how to edi
   '.gvimrc' = used for configuring graphical version of GVim or MacVim
   'i' = insert mode when in vim, 
   'esc' ':' + w + q = write and quit
-1:33:25 - Vim Plugin Managers : 
+1:33:25 - Vim Plugin Managers : Vim-plug / Pathogen /Vundle / Dien.vim / Neobundle / Volt
+  Vim has not conformed to a single plugin manager and there may be plugins that only work with specific plug in manager
+  Since Vim 8 you can just git clone to the correct directory for plugins
+  Vimball is a self extracting archive format to install plugins and scripts
+1:35:00 - What is Janus? : A distribution of plug ins and mappings for vim to quickly configure vim to provide a modern experience (NeoVimChad for non-chads)
+  https://github.com/carlhuda/janus
+1:48:10 - Install A plugin with Vim Plug :
 
 
 

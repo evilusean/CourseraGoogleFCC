@@ -1,9 +1,28 @@
-h = move left
-j = move down
-k = move up
-l = move right
-w = move forward a word
-b = move backward a word
+Motion Commands : Are shortcuts triggered in Normal mode that allow you to quickly move around your document with preceision
+  '<#>g' = go to line number <#>
+  'w' = go to start of next word
+  'b' = move backward a word
+Operator Commands: can be used with motion commands:
+  'c' = change
+  'd' = delete
+  'y' = yank (copy)
+  '~' = swap case (only if 'tildeop' is set
+  'g~' = swap case
+  'gu' = make lowercase
+  'gq' = text formatting
+  '>' = shift right
+  '<' = shift left
+Examples:
+  'd' + 'w' = delete the current word
+  'c' + '3" + 'w' = change three words
+Directional Motions: 
+  'h' = right
+  'j' = down 
+  'k' = up
+  'l' = right
+Examples: 
+  '10' + 'h' = move 10 characters left
+  '25' + 'j' = move down 25 lines
 
 Vim Modes : 
   Normal Mode = Default Mode, you can always return to default mode by pressing 'esc', 

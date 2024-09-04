@@ -118,8 +118,16 @@ Vimium Tabs:
     'R' = Replace mode, but will stay in it as you replace multiple characters
   Other Modes : Select Mode = similar to visual selection / Ex-mode = Sequence of commands / Terminal Job Mode = (interacting with a job in a terminal window) / Sicko Mode / Beast Mode / John Wick Mode
 The Command line bar will tell you what mode you are in
-2:20:20 - File Commands : 
-
+2:20:20 - File Commands : Most file commands are entered via the command line and start with ':'
+  ':w' = write file(save) 
+  ':w <filename>' = write file at this <filename> path (save new file)
+  ':w!' = attempt to force the file to save(useful for read-only files)
+  ':wa' = save all files
+  ':q' = quit
+  ':q!' = quit force - quit without saving changes
+  'qa' = quit all open files
+  'Z' = quit(can be used without colon or command line mode)
+2:22:15 - Motion Commands :
 
 
 

@@ -1,1 +1,28 @@
+h = move left
+j = move down
+k = move up
+l = move right
 
+Vim Modes : 
+  Normal Mode = Default Mode, you can always return to default mode by pressing 'esc', 
+  Command Line Mode : 
+    ':' any time you type a colon it will be followed by a command
+    '/' = Search forwards, will search the rest of your code
+    '?' = Search Backwards, will search previous code for what follows '?'
+  Insert Mode :
+    'i' = will insert at cursor
+    'I' = will insert at start of line
+    'a' = insert at after current character
+    'A' = Insert at end of Line
+    'o' = open below
+    'O' = Open above
+    'c' = change*
+    'C' = change at end of the line
+    'c' + 'w' = change word
+  Visual Mode : 'V' has two modes, visual line mode and visual mode
+    'V' = Visual Mode
+    'V' = Visual Line Mode
+    'Ctrl' + 'V' = Visual Block Mode - A way of selecting text and doing something with that text
+  Replace Mode : 
+    'r' = replace a character(exits mode immediately)
+    'R' = Replace mode, but will stay in it as you replace multiple characters

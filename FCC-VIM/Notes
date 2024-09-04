@@ -50,7 +50,10 @@ Tut - Spent 20 minutes installing vi, why do none of these dudes know how to edi
 1:35:00 - What is Janus? : A distribution of plug ins and mappings for vim to quickly configure vim to provide a modern experience (NeoVimChad for non-chads)
   https://github.com/carlhuda/janus
 1:48:10 - Install A plugin with Vim Plug :
-
+  https://github.com/junegunn/vim-plug
+    Follow the instructions from repo above and edit the 'vimrc' file, specify which plugins you want, then run ':PlugInstall()' in vim
+  Get AI code assistant in VIM :
+  https://github.com/madox2/vim-ai
 
 
 

@@ -89,9 +89,11 @@ Vimium Tabs:
   T       search through your open tabs
   W       move current tab to new window
   <a-p>   pin/unpin current tab
-2:13:35 - Vim support in other IDE's :
-
-
+2:13:35 - Vim support in other IDE's : Most IDE's will have direct or through plugins/extensions a way to emulate VIM commands within their editors
+  VSCode has a a VIM extension :
+    https://github.com/VSCodeVim/Vim
+  '/' = Default <Leader> Key
+2:16:25 - Vim Modes : 
 
 
 

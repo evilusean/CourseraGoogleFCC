@@ -46,6 +46,8 @@ Switching Tabs(useful for VS code extension/vimium for chromium/neovim and vim)
     If you have a lot of tabs open and want to switch between them quickly, you can use the gt and gT commands. 
     The gt command will move the cursor to the next tab in the list, while the gT command will move the cursor to the previous tab.
     You can also use a number before the gt or gT command to move to a specific tab. For example, 2gt will move the cursor to the second tab in the list.
+  'x' = Will close current tab
+  'Shift' + 'Z' (x2) = Tap Twice, will close current tab in vscode (x doesn't work in VSCode)
   ':tabnext'To switch to the next tab in Vim, press the :tabnext command. This will move the cursor to the next tab in the list.
   ':tabn <number>' If you want to switch to a specific tab, you can press :tabn [number], where [number] is the number of the tab you want to switch to. 
     For example, you would press :tabn 3 to switch to the third tab.

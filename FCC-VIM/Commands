@@ -29,6 +29,17 @@ Vim Modes :
     'r' = replace a character(exits mode immediately)
     'R' = Replace mode, but will stay in it as you replace multiple characters
 
+File Commands : Most file commands are entered via the command line and start with ':'
+  ':w' = write file(save) 
+  ':w <filename>' = write file at this <filename> path (save new file)
+  ':w!' = attempt to force the file to save(useful for read-only files)
+  ':wa' = save all files
+  ':q' = quit
+  ':q!' = quit force - quit without saving changes
+  'qa' = quit all open files
+  'Z' = quit(can be used without colon or command line mode)
+
+
 Switching Tabs(useful for VS code extension/vimium for chromium/neovim and vim)
   'g' + 't' = move forward 1 tab
   'g' + 'T' = move backwards 1 tab

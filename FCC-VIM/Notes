@@ -152,8 +152,8 @@ Examples:
 Examples: 
   '10' + 'h' = move 10 characters left
   '25' + 'j' = move down 25 lines
-
-
+'.' (while in a github repo) = will open a Github.dev editor, a similar experience to VSCode without a terminal, install Vim extension to get vim motions in github
+2:29: 20 - GoTo Motions :
 
 
 

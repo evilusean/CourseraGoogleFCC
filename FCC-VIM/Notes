@@ -55,7 +55,7 @@ Tut - Spent 20 minutes installing vi, why do none of these dudes know how to edi
   Get AI code assistant in VIM :
   https://github.com/madox2/vim-ai
 2:07:00 - What is NeoVim? : 2014 A clone of VIM rewritten from the ground up to be hyperextensible (not by bram, for by bram, about bram) - works in LUA
-2:13:10 - Vimium : Chrome Extension, that allows you to have VIM-like commands to control chrome web-browser
+2:13:10 - Vimium : Chrome Extension, that allows you to have VIM-like commands to control chrome web-browser (doesn't work on github/youtube)
   https://github.com/philc/vimium
   https://chromewebstore.google.com/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en
   ?       show the help dialog for a list of all available keys
@@ -127,12 +127,31 @@ The Command line bar will tell you what mode you are in
   ':q!' = quit force - quit without saving changes
   'qa' = quit all open files
   'Z' = quit(can be used without colon or command line mode)
-2:22:15 - Motion Commands :
-
-
-
-
-
+2:22:15 - Motion Commands : Are shortcuts triggered in Normal mode that allow you to quickly move around your document with preceision
+  '<#>g' = go to line number <#>
+  'w' = go to start of next word
+  'b' = move backward a word
+Operator Commands: can be used with motion commands:
+  'c' = change
+  'd' = delete
+  'y' = yank (copy)
+  '~' = swap case (only if 'tildeop' is set
+  'g~' = swap case
+  'gu' = make lowercase
+  'gq' = text formatting
+  '>' = shift right
+  '<' = shift left
+Examples:
+  'd' + 'w' = delete the current word
+  'c' + '3" + 'w' = change three words
+2:24:30 - Directional Motions: 
+  'h' = right
+  'j' = down 
+  'k' = up
+  'l' = right
+Examples: 
+  '10' + 'h' = move 10 characters left
+  '25' + 'j' = move down 25 lines
 
 
 

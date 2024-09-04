@@ -54,7 +54,8 @@ Tut - Spent 20 minutes installing vi, why do none of these dudes know how to edi
     Follow the instructions from repo above and edit the 'vimrc' file, specify which plugins you want, then run ':PlugInstall()' in vim
   Get AI code assistant in VIM :
   https://github.com/madox2/vim-ai
-2:07:00 - What is NeoVim? :
+2:07:00 - What is NeoVim? : 2014 A clone of VIM rewritten from the ground up to be hyperextensible (not by bram, for by bram, about bram) - works in LUA
+2:13:10 - Vimium :
 
 
 

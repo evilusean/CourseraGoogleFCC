@@ -37,7 +37,13 @@ Tut - Spent 20 minutes installing vi, why do none of these dudes know how to edi
   Vim has a built in tutorial for beginners called 'vimtutor' which is usually installed along with vim, but is a seperate executable, can be run with a shell command
 1:13:45 - VimTutor Vim Help : Read through it, tells you how to use vim, lots of reading
   ':help' easier way to learn vim commands - the docs 
-1:22:35 - VimScript :
+1:22:35 - VimScript : A scripting language, Used to write vim configuration files, plugins and input when in command mode (Neovim uses LUA)
+1:23:30 - Vim Configuration Files : Vim has 2 config files, both stored on '/home' directory called '.vimrc' and 'gvimrc'
+  '.vimrc' = used for configuring vim
+  '.gvimrc' = used for configuring graphical version of GVim or MacVim
+  'i' = insert mode when in vim, 
+  'esc' ':' + w + q = write and quit
+1:33:25 - Vim Plugin Managers : 
 
 
 

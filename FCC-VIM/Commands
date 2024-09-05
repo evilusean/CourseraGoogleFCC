@@ -49,6 +49,14 @@ Undo and Redo Commands :
   'u' = will undo a text change
   'U' = undo an entire line,
   'Ctrl' + 'r' = Redo - will redo something
+Change Command : A way of selecting and then deleting an amount of text based on word motions, will put you in insert mode after deleting
+  'c' = change
+  'C' = change to end of line (COL), will remove everything from where you are to end of line and put you in insert mode
+  'c' + 'w" = change to end of word
+  'c' + 'e' = change to end of last word
+  'C' + 'gg' = change from here to the first line
+  'c' + '2' + 'e' = c2e - will change the next 2 words, will remove everything from where you are and next 2 words and put you in insert mode
+  'c' + '5' + 'j" = c5j - will change the next 5 lines from where you are, remove everything and put you in insert mode
 
 Vim Modes : 
   Normal Mode = Default Mode, you can always return to default mode by pressing 'esc', 

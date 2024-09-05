@@ -192,10 +192,14 @@ Examples:
   5 + 'dd' = delete five lines
   'x' = delete currently selected character
   4 + 'x' = delete next 4 characters
-2:52:50 - Yank and Paste Commands :
-
-
-
+2:52:50 - Yank and Paste Commands : 
+  'y' = Will Copy text into the unnamed register(different than 'Ctrl' + 'Shift' + 'V'
+  'yw' = yank current word
+  'yy' = yank a line
+  'Y' = yank current line
+  'p' = Paste before(below)
+  'P' = Paste after(above)
+2:56:00 - Insert and Append Commands :
 
 
 

@@ -67,6 +67,13 @@ Delete Command : Whatever you delete will be placed into the clipboard(unnamed r
   'x' = delete currently selected character
   4 + 'x' = delete next 4 characters
   'Shift' + P = Paste what is in clipboard(different than control+shift+V)
+Yank and Paste Commands : 
+  'y' = Will Copy text into the unnamed register(different than 'Ctrl' + 'Shift' + 'V'
+  'yw' = yank current word
+  'yy' = yank a line
+  'Y' = yank current line
+  'p' = Paste before(below)
+  'P' = Paste after(above)
 
 Vim Modes : 
   Normal Mode = Default Mode, you can always return to default mode by pressing 'esc', 

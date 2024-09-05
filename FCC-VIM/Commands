@@ -24,6 +24,14 @@ Examples:
   '10' + 'h' = move 10 characters left
   '25' + 'j' = move down 25 lines
 
+GoTo Motions : Will go to a specific line
+  'gg' = go to first line
+  'G' = go to the last line
+  '22' + 'gg' = go to the 22nd line from the top
+  '22' + 'G' = same as above, will go to line 22, using shift 'G' instead of 'gg'
+  'gt' = go one tab up
+  'gT' = go down one tab
+
 Vim Modes : 
   Normal Mode = Default Mode, you can always return to default mode by pressing 'esc', 
   Command Line Mode : 

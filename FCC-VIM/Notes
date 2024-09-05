@@ -200,8 +200,11 @@ Examples:
   'p' = Paste before(below)
   'P' = Paste after(above)
 2:56:00 - Insert and Append Commands :
-
-
+  'i' = will enter insert mode, to the left of the cursor box, allowing you to add text to the document
+  'I' = will enter Insert mode, at the start of the line
+  'a' = append, will enter insert mode to the right of the cursor
+  'A' = Append, at the end of the line, will enter insert mode at end of line
+2:59:25 - Line Insert Command :
 
 
 

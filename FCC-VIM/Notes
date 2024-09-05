@@ -165,8 +165,10 @@ Examples:
 2:35:15 - Join Lines: 
   'J' = will join the bottom line with the current line
   '10' + 'J' = Will join the bottom ten lines with the current line
-2:36:45 - Start or End of Line :
-
+2:36:45 - Start or End of Line : (Similar to RegEx with '$' and '^')
+  '$' = go to end of line, will remain on the end of line when moving with 'hjkl' movement - sticky positioning
+  '^' = go to start of line , will remain on the start of line when moving with 'hjkl' movement - default positioning
+2:39:05 - Replace Command :
 
 
 

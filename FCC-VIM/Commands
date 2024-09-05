@@ -79,6 +79,9 @@ Insert and Append Commands :
   'I' = will enter Insert mode, at the start of the line
   'a' = append, will enter insert mode to the right of the cursor
   'A' = Append, at the end of the line, will enter insert mode at end of line
+Line Insert Command : Allows you to quickly create a new line above or below the current line and enter insert mode
+  'o' = create the new line below and enter insert mode
+  'O' = create the new line above and enter insert mode 
 
 Vim Modes : 
   Normal Mode = Default Mode, you can always return to default mode by pressing 'esc', 
@@ -128,7 +131,7 @@ Switching Tabs(useful for VS code extension/vimium for chromium/neovim and vim)
     For example, you would press :tabn 3 to switch to the third tab.
   ':tabmove' = Another way to switch tabs in Vim is to use the :tabmove command. This command allows you to move a tab to a different position in the tab list. 
     For example, to move the current tab to the third position, you would press :tabmove 3.
-
+  'Ctrl' + 'e' = in VSCode, this will allow you to search files in your project directory, very quick if you know what to look for (or 'ctrl' + 'p' OR 'ctrl' + 'shift' + F) 
 
 Vimium : Chrome Extension, that allows you to have VIM-like commands to control chrome web-browser
   ?       show the help dialog for a list of all available keys

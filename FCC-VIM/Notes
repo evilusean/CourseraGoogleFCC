@@ -183,10 +183,16 @@ Examples:
   'C' + 'gg' = change from here to the first line
   'c' + '2' + 'e' = c2e - will change the next 2 words, will remove everything from where you are and next 2 words and put you in insert mode
   'c' + '5' + 'j" = c5j - will change the next 5 lines from where you are, remove everything and put you in insert mode
-2:49:99 - Delete Command :
-
-
-
+2:49:00 - Delete Command : Whatever you delete will be placed into the clipboard(unnamed register), so whenever you paste, it will paste what was deleted
+  'd' + 'w' = delete from the current cursor to the start of the next word
+  'd' + 5 + 'w' = delete the next 5 words
+  2 + 'd' + 'w' = delete from the current cursor to start of the next word
+  'dd' = delete the current line
+  'D' = Delete to end of line (EOL)
+  5 + 'dd' = delete five lines
+  'x' = delete currently selected character
+  4 + 'x' = delete next 4 characters
+2:52:50 - Yank and Paste Commands :
 
 
 

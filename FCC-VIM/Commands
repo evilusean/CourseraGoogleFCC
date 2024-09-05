@@ -32,6 +32,14 @@ GoTo Motions : Will go to a specific line
   'gt' = go one tab up
   'gT' = go down one tab
 
+Word Motions : 
+  'w' = move to the start of the next word
+  'e' = move to the end of the word (will next if already there)
+  'b' = moves to the start of the last word
+Join Lines: 
+  'J' = will join the bottom line with the current line
+  '10' + 'J' = Will join the bottom ten lines with the current line
+
 Vim Modes : 
   Normal Mode = Default Mode, you can always return to default mode by pressing 'esc', 
   Command Line Mode : 

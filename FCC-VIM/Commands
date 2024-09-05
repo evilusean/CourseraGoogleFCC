@@ -42,6 +42,13 @@ Join Lines:
 Start or End of Line : (Similar to RegEx with '$' and '^')
   '$' = go to end of line, will remain on the end of line when moving with 'hjkl' movement - sticky positioning
   '^' = go to start of line , will remain on the start of line when moving with 'hjkl' movement - default positioning
+Replace Command : Allows you to write overtop of existing characters
+  'r' = replace a single character
+  'R' = enter Replace Mode, everything typed will replace current text
+Undo and Redo Commands : 
+  'u' = will undo a text change
+  'U' = undo an entire line,
+  'Ctrl' + 'r' = Redo - will redo something
 
 Vim Modes : 
   Normal Mode = Default Mode, you can always return to default mode by pressing 'esc', 

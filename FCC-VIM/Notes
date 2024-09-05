@@ -168,9 +168,14 @@ Examples:
 2:36:45 - Start or End of Line : (Similar to RegEx with '$' and '^')
   '$' = go to end of line, will remain on the end of line when moving with 'hjkl' movement - sticky positioning
   '^' = go to start of line , will remain on the start of line when moving with 'hjkl' movement - default positioning
-2:39:05 - Replace Command :
-
-
+2:39:05 - Replace Command : Allows you to write overtop of existing characters
+  'r' = replace a single character
+  'R' = enter Replace Mode, everything typed will replace current text
+2:41:10 - Undo and Redo Commands : 
+  'u' = will undo a text change
+  'U' = undo an entire line,
+  'Ctrl' + 'r' = Redo - will redo something
+2:44:55 - Change Command :
 
 
 

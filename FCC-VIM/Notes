@@ -153,7 +153,12 @@ Examples:
   '10' + 'h' = move 10 characters left
   '25' + 'j' = move down 25 lines
 '.' (while in a github repo) = will open a Github.dev editor, a similar experience to VSCode without a terminal, install Vim extension to get vim motions in github
-2:29: 20 - GoTo Motions :
+2:29: 20 - GoTo Motions : Will go to a specific line
+  'gg' = go to first line
+  'G' = go to the last line
+  '22' + 'gg' = go to the 22nd line from the top
+  '22' + 'G' = same as above, will go to line 22, using shift 'G' instead of 'gg'
+2:32:20 - Word Motions :
 
 
 

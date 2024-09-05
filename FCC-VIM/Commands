@@ -39,6 +39,9 @@ Word Motions :
 Join Lines: 
   'J' = will join the bottom line with the current line
   '10' + 'J' = Will join the bottom ten lines with the current line
+Start or End of Line : (Similar to RegEx with '$' and '^')
+  '$' = go to end of line, will remain on the end of line when moving with 'hjkl' movement - sticky positioning
+  '^' = go to start of line , will remain on the start of line when moving with 'hjkl' movement - default positioning
 
 Vim Modes : 
   Normal Mode = Default Mode, you can always return to default mode by pressing 'esc', 

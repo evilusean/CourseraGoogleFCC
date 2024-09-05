@@ -204,8 +204,10 @@ Examples:
   'I' = will enter Insert mode, at the start of the line
   'a' = append, will enter insert mode to the right of the cursor
   'A' = Append, at the end of the line, will enter insert mode at end of line
-2:59:25 - Line Insert Command :
-
+2:59:25 - Line Insert Command : Allows you to quickly create a new line above or below the current line and enter insert mode
+  'o' = enter the new line below and enter insert mode
+  'O' = enter the new line above and enter insert mode 
+3:01:00 - Find Command :
 
 
 

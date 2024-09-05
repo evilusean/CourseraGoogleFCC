@@ -57,6 +57,16 @@ Change Command : A way of selecting and then deleting an amount of text based on
   'C' + 'gg' = change from here to the first line
   'c' + '2' + 'e' = c2e - will change the next 2 words, will remove everything from where you are and next 2 words and put you in insert mode
   'c' + '5' + 'j" = c5j - will change the next 5 lines from where you are, remove everything and put you in insert mode
+Delete Command : Whatever you delete will be placed into the clipboard(unnamed register), so whenever you paste, it will paste what was deleted
+  'd' + 'w' = delete from the current cursor to the start of the next word
+  'd' + 5 + 'w' = delete the next 5 words
+  2 + 'd' + 'w' = delete from the current cursor to start of the next word
+  'dd' = delete the current line
+  'D' = Delete to end of line (EOL)
+  5 + 'dd' = delete five lines
+  'x' = delete currently selected character
+  4 + 'x' = delete next 4 characters
+  'Shift' + P = Paste what is in clipboard(different than control+shift+V)
 
 Vim Modes : 
   Normal Mode = Default Mode, you can always return to default mode by pressing 'esc', 

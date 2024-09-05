@@ -158,10 +158,14 @@ Examples:
   'G' = go to the last line
   '22' + 'gg' = go to the 22nd line from the top
   '22' + 'G' = same as above, will go to line 22, using shift 'G' instead of 'gg'
-2:32:20 - Word Motions :
-
-
-
+2:32:20 - Word Motions : 
+  'w' = move to the start of the next word
+  'e' = move to the end of the next word
+  'b' = moves to the start of the last word
+2:35:15 - Join Lines: 
+  'J' = will join the bottom line with the current line
+  '10' + 'J' = Will join the bottom ten lines with the current line
+2:36:45 - Start or End of Line :
 
 
 

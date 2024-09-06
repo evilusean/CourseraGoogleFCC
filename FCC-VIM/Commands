@@ -82,7 +82,7 @@ Insert and Append Commands :
 Line Insert Command : Allows you to quickly create a new line above or below the current line and enter insert mode
   'o' = create the new line below and enter insert mode
   'O' = create the new line above and enter insert mode 
-Find Command : lets you quickly find and move to a search result
+Find Command : lets you quickly find and move to a search result (regular expressions work)
   '/' = '/hello' would search forward for the first instance of the word 'hello' in your code
   '?' = '?hello' search backward from the current posiition for word 'hello'
   'n' = next match
@@ -91,6 +91,12 @@ Find Command : lets you quickly find and move to a search result
   '/hello/e' = places cursor at end of match
   '/hello/e+4' = places cursor at four characters after end of match 
   '/hello/+3' = offsets by 3 lines
+Substitute Command : lets you replace text in a file using a regular expression 
+  ':.s/hello/world/' = '.' is for current line, will tell you to find all instances of 'hello' and 's' subistitute/replace it with 'world'
+  ':2s/hello/world/i' = '2' on line 2 replace all instances of 'hello' and substitute it for 'world' 'i' and ignore casing
+  ':2,5s/hello/world/g' = '2,5' for lines 2 to 5, reokace all occurences of 'hello' for 'world' 'g' global means all
+  ':1,$s/hello/world/g' = '1,$' from line 1 to the end of document, substitute all instances of the word hello for world 'g' globally all occurences
+  '%s/hello/world/g' = short cut for above 
 
 Vim Modes : 
   Normal Mode = Default Mode, you can always return to default mode by pressing 'esc', 

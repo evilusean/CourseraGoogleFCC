@@ -222,8 +222,10 @@ Examples:
   ':2,5s/hello/world/g' = '2,5' for lines 2 to 5, reokace all occurences of 'hello' for 'world' 'g' global means all
   ':1,$s/hello/world/g' = '1,$' from line 1 to the end of document, substitute all instances of the word hello for world 'g' globally all occurences
   '%s/hello/world/g' = short cut for above 
-3:11:00 - Leader Key :
-
+3:11:00 - '\' Leader Key : default is '\', used for triggering user or plugin defined shortcuts
+  '\cc' = NerdCommenter Plugin, used for commenting out currently selected line(depends on what plugins/scripts you have installed)
+  'nnoremap <Leader>b :buffers<CR>:buffer<Space>' = change the 'vimrc' file to remap leader key(or any) 
+3:14:50 - Visual Mode - 
 
 
 

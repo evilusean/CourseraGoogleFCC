@@ -82,6 +82,15 @@ Insert and Append Commands :
 Line Insert Command : Allows you to quickly create a new line above or below the current line and enter insert mode
   'o' = create the new line below and enter insert mode
   'O' = create the new line above and enter insert mode 
+Find Command : lets you quickly find and move to a search result
+  '/' = '/hello' would search forward for the first instance of the word 'hello' in your code
+  '?' = '?hello' search backward from the current posiition for word 'hello'
+  'n' = next match
+  'N' = previous match
+  '/hello/s-2' = places the cursor 2 characters before the start of match
+  '/hello/e' = places cursor at end of match
+  '/hello/e+4' = places cursor at four characters after end of match 
+  '/hello/+3' = offsets by 3 lines
 
 Vim Modes : 
   Normal Mode = Default Mode, you can always return to default mode by pressing 'esc', 

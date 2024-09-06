@@ -100,6 +100,13 @@ Substitute Command : lets you replace text in a file using a regular expression
 '\' Leader Key : default is '\', used for triggering user or plugin defined shortcuts
   '\cc' = NerdCommenter Plugin, used for commenting out currently selected line(depends on what plugins/scripts you have installed)
   'nnoremap <Leader>b :buffers<CR>:buffer<Space>' = change the 'vimrc' file to remap leader key(or any), in this example to space
+Visual Mode - Allows you to select text through either yanking, deleting, or manipulation
+  'v' = visual mode will allow you to select multiple characters - press 'v' and then any motion afterwards to select from where your cursor was
+  'V' = visual Line Mode =  allows you to select whole line at a time - just move up or down
+  'CtrL' + 'v' = visual block mode - allows you to select vertically and by line - press 'c' ('a'/'i' doesnt work) after selecting - so you can add multi line comments or delete multi line
+  'c' = c to change(delete currently selected then go to insert mode)
+  'y' = yank to unnamed register 
+  'p' = to paste from unnamed register
 
 Vim Modes : 
   Normal Mode = Default Mode, you can always return to default mode by pressing 'esc', 

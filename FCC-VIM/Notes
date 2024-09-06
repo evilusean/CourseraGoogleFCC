@@ -222,7 +222,7 @@ Examples:
   ':2,5s/hello/world/g' = '2,5' for lines 2 to 5, reokace all occurences of 'hello' for 'world' 'g' global means all
   ':1,$s/hello/world/g' = '1,$' from line 1 to the end of document, substitute all instances of the word hello for world 'g' globally all occurences
   '%s/hello/world/g' = short cut for above 
-
+3:11:00 - Leader Key :
 
 
 

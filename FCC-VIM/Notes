@@ -207,10 +207,16 @@ Examples:
 2:59:25 - Line Insert Command : Allows you to quickly create a new line above or below the current line and enter insert mode
   'o' = enter the new line below and enter insert mode
   'O' = enter the new line above and enter insert mode 
-3:01:00 - Find Command :
-
-
-
+3:01:00 - Find Command : lets you quickly find and move to a search result
+  '/' = '/hello' would search forward for the first instance of the word 'hello' in your code
+  '?' = '?hello' search backward from the current posiition for word 'hello'
+  'n' = next match
+  'N' = previous match
+  '/hello/s-2' = places the cursor 2 characters before the start of match
+  '/hello/e' = places cursor at end of match
+  '/hello/e+4' = places cursor at four characters after end of match 
+  '/hello/+3' = offsets by 3 lines
+  
 
 
 

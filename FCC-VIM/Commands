@@ -107,6 +107,11 @@ Visual Mode - Allows you to select text through either yanking, deleting, or man
   'c' = c to change(delete currently selected then go to insert mode)
   'y' = yank to unnamed register 
   'p' = to paste from unnamed register
+  'gv' = grab last visual mode(if you missclick or lose your last visual mode - will allow you to undo)
+Indentation Command : The Leading Whitespace can be adjusted based on tab size(indentation)
+  '>' = indent line outward(to the right)
+  '<' = indent line inward (to the left)
+    You can use count modified for number of indents - Useful to use visual mode to select your line
 
 Vim Modes : 
   Normal Mode = Default Mode, you can always return to default mode by pressing 'esc', 

@@ -1,6 +1,6 @@
 # FreeCodeCamp - Mastering VIM :
 Start: 01September2024</br>
-End: </br>
+End: 06September2024 </br>
 
 [Tutorial:](https://www.freecodecamp.org/news/mastering-vim-your-guide-to-efficient-text-editing/) [https://www.freecodecamp.org/news/mastering-vim-your-guide-to-efficient-text-editing/](https://www.freecodecamp.org/news/mastering-vim-your-guide-to-efficient-text-editing/)
 

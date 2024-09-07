@@ -1,5 +1,5 @@
 Start : 01September2024
-End : 07September2024
+End : 06September2024
 
 Why to use VIM? : Greater Output and Focus / Less Movement to accomplish task - every time you move the mouse, you lose focus and time / On every linux machine by default /
   Some programs like the 'man' command will use vi-style commands for navigation - sometimes you need to use vim - knowing the basic commands is useful for future sean
@@ -259,8 +259,11 @@ Window Splitting : allows you to have multiple windows open on the screen at onc
   Named Registers = Registers where you have provided a name identifier 
   Read-Only Registers = "0" = Last yanked text / "1-9" = Deleted text(most recent first / "%" current file name / "*" "+" = System clipboard
   Special Registers = "." Last inserted text / "/" last search pattern / ":" last executed command
-
-
+3:37:05 - Recomended Cheat Sheet : https://hamwaves.com/vim.tutorial/en/index.html
+Mark : 
+  'm' + <letter> = Mark a spot
+  ''' + <letter> = single quotation mark + <letter> will jump to the same line
+  '~' + <letter> = Will jump to the exact marked letter/character 
 
 
 

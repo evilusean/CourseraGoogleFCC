@@ -112,6 +112,12 @@ Indentation Command : The Leading Whitespace can be adjusted based on tab size(i
   '>' = indent line outward(to the right)
   '<' = indent line inward (to the left)
     You can use count modified for number of indents - Useful to use visual mode to select your line
+Window Splitting : allows you to have multiple windows open on the screen at once 
+  'Ctrl' + 'ws' = split horizontally
+  'Ctrl' + 'wv' = split vertically
+  'Ctrl' + 'wc' = close window
+  ':close' = close window
+  'Ctrl' + 'w' + <direction> = ('Ctrl' + 'w' + 'h'/'j'/'k'/'l') move to the open buffer window 
 
 Vim Modes : 
   Normal Mode = Default Mode, you can always return to default mode by pressing 'esc', 

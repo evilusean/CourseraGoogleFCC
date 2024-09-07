@@ -243,8 +243,15 @@ Window Splitting : allows you to have multiple windows open on the screen at onc
   'Ctrl' + 'wc' = close window
   ':close' = close window
   'Ctrl' + 'w' + <direction> = ('Ctrl' + 'w' + 'h'/'j'/'k'/'l') move to the open buffer window 
-
-
+3:30:00 - Buffers : in the context of vim, it is a temporary memory being utilized for an open file 'buffer stack' only deallocated when you completely close vim
+  ':ls' = see a list of all buffers
+  ':buffers' = see a list of all buffers
+  'buffer <#>' = make the buffer at the designated number(or specifying the filename) the active buffer
+  ':bnext' = get next buffer
+  ':bprev' = get previous buffer
+  ':bfirst' = get first buffer
+  ':blast' = get last buffer
+  'bufdo %s/hello/goodbye/g | update' = run command for all buffers - will substitute 'hello' for 'goodbye' in every file in the buffer stack
 
 
 

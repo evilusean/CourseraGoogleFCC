@@ -1,3 +1,4 @@
+Recomended Cheat Sheet : https://hamwaves.com/vim.tutorial/en/index.html
 Motion Commands : Are shortcuts triggered in Normal mode that allow you to quickly move around your document with preceision
   '<#>g' = go to line number <#>
   'w' = go to start of next word
@@ -127,6 +128,10 @@ Buffers : in the context of vim, it is a temporary memory being utilized for an 
   ':bfirst' = get first buffer
   ':blast' = get last buffer
   'bufdo %s/hello/goodbye/g | update' = run command for all buffers - will substitute 'hello' for 'goodbye' in every file in the buffer stack
+Mark : 
+  'm' + <letter> = Mark a spot
+  ''' + <letter> = single quotation mark + <letter> will jump to the same line
+  '~' + <letter> = Will jump to the exact marked letter/character 
 
 Vim Modes : 
   Normal Mode = Default Mode, you can always return to default mode by pressing 'esc', 

@@ -1,4 +1,5 @@
-Start: 01September2024
+Start : 01September2024
+End : 07September2024
 
 Why to use VIM? : Greater Output and Focus / Less Movement to accomplish task - every time you move the mouse, you lose focus and time / On every linux machine by default /
   Some programs like the 'man' command will use vi-style commands for navigation - sometimes you need to use vim - knowing the basic commands is useful for future sean
@@ -252,6 +253,12 @@ Window Splitting : allows you to have multiple windows open on the screen at onc
   ':bfirst' = get first buffer
   ':blast' = get last buffer
   'bufdo %s/hello/goodbye/g | update' = run command for all buffers - will substitute 'hello' for 'goodbye' in every file in the buffer stack
+3:33:15 - Registers : in Vim are memory allocated for a block of text, think of registers where your clipboard or undo history is stored
+  Unnamed Register(clipboard) = default register vim uses for yank, delete, and put operations
+  Numbered Registers = vim automatically stores yanked and delted text in registers that are numerically numbered
+  Named Registers = Registers where you have provided a name identifier 
+  Read-Only Registers = "0" = Last yanked text / "1-9" = Deleted text(most recent first / "%" current file name / "*" "+" = System clipboard
+  Special Registers = "." Last inserted text / "/" last search pattern / ":" last executed command
 
 
 

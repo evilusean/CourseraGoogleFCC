@@ -1,0 +1,40 @@
+Part 1: Introduction
+Intro & demo express app
+Custom Images with Dockerfile
+Docker image layers & caching
+Docker networking opening ports
+Dockerignore file
+Syncing source code with bind mounts
+Anonymous Volumes hack
+Read-Only Bind Mounts
+Environment variables
+loading environment variables from file
+Deleting stale volumes
+Docker Compose
+Development vs Production configs
+
+Part 2: Working with multiple containers
+Adding a MongoDB Container
+Communicating between containers
+Express Config file
+Container bootup order
+Building a CRUD application
+Sign up and Login
+Authentication with sessions & Redis
+Architecture Review
+Nginx for Load balancing to multiple node containers
+Express CORS
+
+Part 3: Moving to Prod
+Installing docker on Ubuntu(Digital Ocean)
+Setup Git
+Environment Variables on Ubuntu
+Deploying app to production server
+Pushing changes the hard way
+Rebuilding Containers
+Dev to Prod workflow review
+Improved Dockerhub workflow
+Automating with watchtower
+Why we need an orchestrator
+Docker Swarm
+Pushing changes to Swarm stack

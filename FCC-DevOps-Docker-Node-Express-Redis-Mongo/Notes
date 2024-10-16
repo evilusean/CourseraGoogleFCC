@@ -4,11 +4,11 @@ Tut will have us set up a NodeJS and Express App inside a docker container with 
 npm init -y #will create a 'package.json' in your cwd
 npm install express #will install express, add it to 'package.json' 'package-lock.json'
 create a 'index.js'
-const express = require("express") #imports express
-const app = express() 
-const port = process.env.PORT || 3000; #will set the port to the environment variable, or default to 3000
-app.listen(port, () => console.log(`listening on port${port}`)) #when appconnects to a port will print out which port it is on
+const express = require("express"); #imports express
+const app = express();
 app.get("/", (req, res) => {res.send("<h1>Test Success</h2>");}); #quick route for testing purposes, "/" from route path, will send back the response as an h2 element 'Test Success'
+const port = process.env.PORT || 3000; #will set the port to the environment variable, or default to 3000
+app.listen(port, () => console.log(`listening on port${port}`)); #when appconnects to a port will print out which port it is on
 #above is the simplest express app you can build
 node index.js #in the terminal, will run the above script on 'localhost:3000'
 

@@ -8,5 +8,35 @@ const express = require("express") #imports express
 const app = express() 
 const port = process.env.PORT || 3000; #will set the port to the environment variable, or default to 3000
 app.listen(port, () => console.log(`listening on port${port}`)) #when appconnects to a port will print out which port it is on
-app.get("/", (req, res) => {res.send("<h2>Test Success</h2>"}) #quick route for testing purposes, "/" from route path, will send back the response as an h2 element 'Test Success'
+app.get("/", (req, res) => {res.send("<h1>Test Success</h2>");}); #quick route for testing purposes, "/" from route path, will send back the response as an h2 element 'Test Success'
 #above is the simplest express app you can build
+node index.js #in the terminal, will run the above script on 'localhost:3000'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

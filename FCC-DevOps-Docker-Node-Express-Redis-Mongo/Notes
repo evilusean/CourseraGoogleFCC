@@ -22,7 +22,7 @@ https://hub.docker.com/_/node #official node docker image, a lightweight img wit
 The image above doesn't have everything we want, the idea(l) of an image is that it has everything in it for your application to work, so you will need:
 Source code(Application)/Dependancies/etc
 So we are going to create our own custom image based on that node image, I need to fix my '.gitignore' file so I'm not uploading the docker image to github
-
+Take that node image, copy our source code into that node image, then install all dependancies, then build that final image that has everything we need to run the app
 
 
 

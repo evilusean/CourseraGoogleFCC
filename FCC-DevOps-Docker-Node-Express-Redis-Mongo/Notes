@@ -12,9 +12,11 @@ app.listen(port, () => console.log(`listening on port${port}`)); #when appconnec
 #above is the simplest express app you can build
 'node index.js' #in the terminal, will run the above script on 'localhost:3000'
 
-Docker: Need to install
-
-
+Docker: 
+Install Docker on Arch Linux: 
+https://docs.docker.com/desktop/install/linux/archlinux/
+https://wiki.archlinux.org/title/Docker
+-Couldn't install docker-desktop, did a 'sudo pacman -Syu' and going to reboot
 
 
 

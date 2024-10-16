@@ -16,3 +16,37 @@ build
 # Other files to ignore
 .DS_Store
 Thumbs.db
+
+# Ignore Docker image files
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.img
+*.iso
+
+# Ignore Docker container files
+docker-compose.override.yml
+docker-compose.yml
+docker-compose.*.yml
+
+# Ignore Docker build files
+Dockerfile
+Dockerfile.*
+.dockerignore
+
+# Ignore Docker volumes
+volumes/
+**/volumes/
+
+# Ignore Docker logs
+*.log
+
+# Ignore local environment files
+.env
+.env.local
+.env.*.local
+
+# Ignore other temporary files
+.DS_Store
+Thumbs.db

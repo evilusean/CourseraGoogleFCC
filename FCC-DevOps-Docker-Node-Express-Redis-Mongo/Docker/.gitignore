@@ -31,8 +31,7 @@ docker-compose.yml
 docker-compose.*.yml
 
 # Ignore Docker build files
-Dockerfile
-Dockerfile.*
+
 .dockerignore
 
 # Ignore Docker volumes

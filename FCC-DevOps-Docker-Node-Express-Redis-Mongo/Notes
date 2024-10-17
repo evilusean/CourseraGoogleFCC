@@ -38,10 +38,13 @@ Each command we ran above creates another layer, since docker is efficient, it w
 'CMD ["node", "index.js"]' #will run 'node index.js' from terminal after being deployed in container at runtime
 
 'docker build .' #from the terminal '.' is context for current working directory, which we are already in, we have named our 'Dockerfile' and it worked, even with old node version(15, current is 24?) cool
-
-
-
-
+1/5: Grabs image from docker hub - 2/5 Sets working dir - 3/5 Copies package.json - 4/5 runs npm install - 5/5 copies remaining files - caches each result, so next time you run will be quicker
+'docker image ls' #we forgot to name our image above, so it is labeled <NONE>, but still has an IMAGE ID
+'docker image rm <IMAGE ID>' #will remove the docker image with the ID 
+'docker build -t node-app-image .' #will create a new image with the '-t' flag will allow us to name it, '.' is context for current working directory 
+'docker run node-app-image' #will run our newly created image
+'docker run -d --name node-app node-app-image' #will run custom image, but with '-d' flag which is detached mode(will allow you to use CLI), and '--name' flag which will name it 'node-app'
+'docker ps' will list all containers currently running at the moment
 
 
 

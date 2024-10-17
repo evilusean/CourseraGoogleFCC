@@ -72,7 +72,7 @@ root@3e210f2ccaf4:/app #above command drops us into the terminal of the '/app' f
 'ls' # lists all files in directory 'Dockerfile  index.js  node_modules  package-lock.json  package.json'
 You don't actually need the docker file to run the docker container, it is just used to build the app 'COPY . ./' copies everything, often times this is bad practice(like .env.local files)
   also the 'node_modules' folder was copied, we do a 'COPY package.json .' and 'RUN npm install' command earlier, so there is no reason why we should currently have that in our container
-
+'.dockerignore' #similar to '.gitignore' tells docker which files to ignore, simply type in whichever files you don't want copied over 'node_modules Dockerfile .dockerignore .git .gitignore' ignored
 
 
 

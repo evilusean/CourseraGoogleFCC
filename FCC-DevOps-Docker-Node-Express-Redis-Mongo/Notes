@@ -64,6 +64,7 @@ CONTAINER ID   IMAGE            COMMAND                  CREATED          STATUS
 3e210f2ccaf4   node-app-image   "docker-entrypoint.s…"   11 seconds ago   Up 10 seconds   0.0.0.0:3000->3000/tcp   node-app
 Above is the response from 'docker ps' which shows all running containers, we sent the command with '3000:3000' notice the 'PORTS' - 
   it will take any traffic sent/received from port 3000 and forward it to containers port 3000, here was the command : 'docker run -p 3000:3000 -d --name node-app node-app-image'
+just tested, now everything works, we need to pass the '-p' flag in order to use it for express the 'EXPOSE' in the dockerfile is meant to tell others what ports to open for the app
 
 
 

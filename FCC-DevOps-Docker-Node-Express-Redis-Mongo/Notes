@@ -45,7 +45,7 @@ Each command we ran above creates another layer, since docker is efficient, it w
 'docker run node-app-image' #will run our newly created image
 'docker run -d --name node-app node-app-image' #will run custom image, but with '-d' flag which is detached mode(will allow you to use CLI), and '--name' flag which will name it 'node-app'
 'docker ps' will list all containers currently running at the moment
-
+Container is running, but page won't load, to fix this you need to :
 
 
 

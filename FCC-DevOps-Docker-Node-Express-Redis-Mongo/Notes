@@ -46,8 +46,32 @@ Each command we ran above creates another layer, since docker is efficient, it w
 'docker run -d --name node-app node-app-image' #will run custom image, but with '-d' flag which is detached mode(will allow you to use CLI), and '--name' flag which will name it 'node-app'
 'docker ps' will list all containers currently running at the moment
 
+Container is running, but page won't load, to fix this you need to :
+'EXPOSE 3000' #port is exposed, allegedly, this doesn't work though, it's a comment for the dockerfile to let other people know that the image expects others to open port 3000 to work, it doesn't actually do it
+by default, as a security feature, docker does not allow anything from outside to communicate with it, it can communicate to the outside but no outside in
+to change this, you need to tell the host machine if you receive traffic from a specific port - you want to forward that traffic to the docker container
+'docker rm node-app -f' #will remove the current running container we just created, '-f' flag like other programs is force, normally you need to stop a container before you delete it, it won't delete image
+'docker run -p 3000:3000 -d --name node-app node-app-image' #same command as above, but this time '-p' flag '3000:3000' 
+  left:right- right number on the right is where traffic is sent on container(app is listening to 3000)
+  left: represents traffic coming in from outside, so if another device on network/localhost is sending traffic to localhost:3000, it will send it to port 3000 on container
+  For clarity, these 2 numbers are currently the same, but they don't have to be the same, 
+  '4000:3000' if anyone sends anything to our localhost on port '4000', it will be forwarded the containers port 3000 - if that makes sense for future sean 
+  right:left - right side is from outside to in, left side is from in to in (from locahost machine to the container) - if that makes sense 
+  the left will also take traffic sent from localhost port '4000' in example above and redirect it to port '3000' on the container - so any traffic sent or received from port 4000 will go to the container
+    which it will then receive on the left port(3000)
 
+CONTAINER ID   IMAGE            COMMAND                  CREATED          STATUS          PORTS                    NAMES
+3e210f2ccaf4   node-app-image   "docker-entrypoint.s…"   11 seconds ago   Up 10 seconds   0.0.0.0:3000->3000/tcp   node-app
+Above is the response from 'docker ps' which shows all running containers, we sent the command with '3000:3000' notice the 'PORTS' - 
+  it will take any traffic sent/received from port 3000 and forward it to containers port 3000, here was the command : 'docker run -p 3000:3000 -d --name node-app node-app-image'
+just tested, now everything works, we need to pass the '-p' flag in order to use it for express the 'EXPOSE' in the dockerfile is meant to tell others what ports to open for the app
 
+'docker exec -it node-app bash' #will allow us to inspect with the '-it' flag (interactive mode) 'bash' will replace the 'index.js' and allow us to take a look at the app filesystem
+root@3e210f2ccaf4:/app #above command drops us into the terminal of the '/app' folder because that is where the working directory was set
+'exit' #type to exit out of the docker terminal
+'ls' # lists all files in directory 'Dockerfile  index.js  node_modules  package-lock.json  package.json'
+You don't actually need the docker file to run the docker container, it is just used to build the app 'COPY . ./' copies everything, often times this is bad practice(like .env.local files)
+  also the 'node_modules' folder was copied, we do a 'COPY package.json .' and 'RUN npm install' command earlier, so there is no reason why we should currently have that in our container
 
 
 

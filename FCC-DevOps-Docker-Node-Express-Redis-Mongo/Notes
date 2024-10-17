@@ -66,7 +66,12 @@ Above is the response from 'docker ps' which shows all running containers, we se
   it will take any traffic sent/received from port 3000 and forward it to containers port 3000, here was the command : 'docker run -p 3000:3000 -d --name node-app node-app-image'
 just tested, now everything works, we need to pass the '-p' flag in order to use it for express the 'EXPOSE' in the dockerfile is meant to tell others what ports to open for the app
 
-
+'docker exec -it node-app bash' #will allow us to inspect with the '-it' flag (interactive mode) 'bash' will replace the 'index.js' and allow us to take a look at the app filesystem
+root@3e210f2ccaf4:/app #above command drops us into the terminal of the '/app' folder because that is where the working directory was set
+'exit' #type to exit out of the docker terminal
+'ls' # lists all files in directory 'Dockerfile  index.js  node_modules  package-lock.json  package.json'
+You don't actually need the docker file to run the docker container, it is just used to build the app 'COPY . ./' copies everything, often times this is bad practice(like .env.local files)
+  also the 'node_modules' folder was copied, we do a 'COPY package.json .' and 'RUN npm install' command earlier, so there is no reason why we should currently have that in our container
 
 
 

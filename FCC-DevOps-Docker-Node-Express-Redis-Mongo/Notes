@@ -29,8 +29,11 @@ The first command you will always have to do is specify a base image, it can be 
 'FROM node:15' #will take the 'node' image from docker hub the ':15' specifies the version number (15 here) default is ':latest'
 'WORKDIR /app' #notice how all commands are in caps, this will set the working directory to be the '/app' directory within the container
   After setting the work directory, any time you run a command, it's going to run that command from that directory, so put all the application code in /app, then run 'index.js' on '/app' and it will run
-
-
+COPY package.json . #'package.json' contains all dependancies, will copy it into the '.' is a relative directory it means our current directory which we set above with 'WORKDIR'(/app)
+RUN npm install #will run a command from the working directory, since we copied the 'package.json' it will install all dependancies
+COPY . ./ #will copy all remaining files from folder into the working directory, optimization technique, to add this after the package.json - has to do with layering and builds, wrote about it below
+Each command we ran above creates another layer, since docker is efficient, it will know that nothing has changed, and will rebuild only the layers that have changes when you 'docker build'
+  so you won't need to run 'npm install' after each docker build because you seperated the layers above with the 2 COPY statements, if you change your code you will just rebuild the fifth layer'COPY . ./'
 
 
 

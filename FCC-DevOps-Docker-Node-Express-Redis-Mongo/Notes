@@ -50,7 +50,10 @@ Container is running, but page won't load, to fix this you need to :
 'EXPOSE 3000' #port is exposed, allegedly, this doesn't work though, it's a comment for the dockerfile to let other people know that the image expects others to open port 3000 to work, it doesn't actually do it
 by default, as a security feature, docker does not allow anything from outside to communicate with it, it can communicate to the outside but no outside in
 to change this, you need to tell the host machine if you receive traffic from a specific port - you want to forward that traffic to the docker container
-'docker rm node-app -f' #will remove the current running container we just created, '-f' flag like other programs is force, normally you need to stop a container before you delete it
+'docker rm node-app -f' #will remove the current running container we just created, '-f' flag like other programs is force, normally you need to stop a container before you delete it, it won't delete image
+'docker run -p 3000:3000 -d --name node-app node-app-image' #same command as above, but this time '-p' flag '3000:3000' 
+  left:right- right number on the right is where traffic is sent on container(app is listening to 3000)
+  left: represents traffic coming in from outside, so if another device on network/localhost is sending traffic to localhost:3000, it will send it to port 3000 on container
 
 
 

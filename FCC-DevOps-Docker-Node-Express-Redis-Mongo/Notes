@@ -60,7 +60,10 @@ to change this, you need to tell the host machine if you receive traffic from a 
   the left will also take traffic sent from localhost port '4000' in example above and redirect it to port '3000' on the container - so any traffic sent or received from port 4000 will go to the container
     which it will then receive on the left port(3000)
 
-
+CONTAINER ID   IMAGE            COMMAND                  CREATED          STATUS          PORTS                    NAMES
+3e210f2ccaf4   node-app-image   "docker-entrypoint.s…"   11 seconds ago   Up 10 seconds   0.0.0.0:3000->3000/tcp   node-app
+Above is the response from 'docker ps' which shows all running containers, we sent the command with '3000:3000' notice the 'PORTS' - 
+  it will take any traffic sent/received from port 3000 and forward it to containers port 3000, here was the command : 'docker run -p 3000:3000 -d --name node-app node-app-image'
 
 
 

@@ -54,6 +54,11 @@ to change this, you need to tell the host machine if you receive traffic from a 
 'docker run -p 3000:3000 -d --name node-app node-app-image' #same command as above, but this time '-p' flag '3000:3000' 
   left:right- right number on the right is where traffic is sent on container(app is listening to 3000)
   left: represents traffic coming in from outside, so if another device on network/localhost is sending traffic to localhost:3000, it will send it to port 3000 on container
+  For clarity, these 2 numbers are currently the same, but they don't have to be the same, 
+  '4000:3000' if anyone sends anything to our localhost on port '4000', it will be forwarded the containers port 3000 - if that makes sense for future sean 
+  right:left - right side is from outside to in, left side is from in to in (from locahost machine to the container) - if that makes sense 
+  the left will also take traffic sent from localhost port '4000' in example above and redirect it to port '3000' on the container - so any traffic sent or received from port 4000 will go to the container
+    which it will then receive on the left port(3000)
 
 
 

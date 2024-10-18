@@ -93,8 +93,14 @@ The path /mnt/sdb4/Code/CourseraGoogleFCC/FCC-DevOps-Docker-Node-Express-Redis-M
 You can configure shared paths from Docker -> Preferences... -> Resources -> File Sharing.
 See https://docs.docker.com/ for more info.
 - Attempted, to do this, would be more convenient if I am using docker for developing, but I need to give permissions to docker somehow, gonna just move on for now, can fix if I need to: future sean problem
+FIX(did you try turning it on and off again?):
+https://github.com/portainer/portainer/issues/1732
+'sudo systemctl restart docker' #will restart docker
+From Docker Desktop -> Right Click the icon on bottom left of screen -> Settings -> Resources -> File Sharing -> add the directory
 
-
-
+Finally fixed it, now 'docker run -v $(pwd):/app -p 3000:3000 -d --name node-app node-app-image' works, changed 'index.js' and 
+'docker exec -it node-app bash' 'cat index.js' #will allow you to check the 'index.js', changed it on localhost machine, but 'localhost:3000' isn't working, the problem is:
+  you need to start the node process again, or use 'nodemon' 
+'nodemon' will look at your code, and if any changes take place it will restart the node process automatically so the changes are updated in real time 
 
 

@@ -79,9 +79,20 @@ EVERY time you change the code, you will NEED to rebuild for the changes to affe
 volumes = allow you to have persitant data in your containers, but 
 Bind Mount = a specific type of volume that will allow you to sync a folder in localhost machine with a folder in the docker container(symlink?)
   So every time you change the code, it will automatically sync the new changes to the docker container, so you don't need to rebuild before every run
+'docker run -v <PathToFolderOnLocalMachine>:<PathToFolderOnContainer> -p 3000:3000 -d --name node-app node-app-image' #here we pass the '-v' flag which stands for volume,
+  it will allow us to symlink a folder from our local machine <Path>: to a folder on the container <Path>, which will be the /app working directory which we set earlier
+'docker run -v /mnt/sdb4/Code/CourseraGoogleFCC/FCC-DevOps-Docker-Node-Express-Redis-Mongo/Docker:/app -p 3000:3000 -d --name node-app node-app-image' #without placeholder variables
+In VSCODE/Cursor - You can 'Right Click' the File in the 'File Explorer' and go to 'Copy Path' and it will copy the path without having to type out a 100+ character string OR do below(for mac or linux) :
+'docker run -v $(pwd):/app -p 3000:3000 -d --name node-app node-app-image' #from the terminal when you are in the correct directory '$(pwd)
 
-
-
+ERROR: 
+docker run -v /mnt/sdb4/Code/CourseraGoogleFCC/FCC-DevOps-Docker-Node-Express-Redis-Mongo/Docker:/app -p 3000:3000 -d --name node-app node-app-image
+466c31fdfe50204cda30632b662d4a9705816bc1f5743c2349165c9d3b7051b2
+docker: Error response from daemon: Mounts denied: 
+The path /mnt/sdb4/Code/CourseraGoogleFCC/FCC-DevOps-Docker-Node-Express-Redis-Mongo/Docker is not shared from the host and is not known to Docker.
+You can configure shared paths from Docker -> Preferences... -> Resources -> File Sharing.
+See https://docs.docker.com/ for more info.
+- Attempted, to do this, would be more convenient if I am using docker for developing, but I need to give permissions to docker somehow, gonna just move on for now, can fix if I need to: future sean problem
 
 
 

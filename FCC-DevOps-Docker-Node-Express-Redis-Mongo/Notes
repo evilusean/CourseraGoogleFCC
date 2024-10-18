@@ -103,7 +103,11 @@ Finally fixed it, now 'docker run -v $(pwd):/app -p 3000:3000 -d --name node-app
   you need to start the node process again, or use 'nodemon' 
 'nodemon' will look at your code, and if any changes take place it will restart the node process automatically so the changes are updated in real time 
 'npm install nodemon --save-dev' #will install nodemon as a dev dependancy to get it into the 'package.json', and we don't need it to run when it gets to actual production
-
+  "scripts": {   "start":"node index.js",   "dev":"nodemon index.js"  }, #added this script to the 'package.json', which will only run 'nodemon' in dev mode, and revert back to 'index.js' for production
+'docker build -t node-app-image .' #since you changed the 'package.json', you will need to rebuild image before changes take effect, since it changed it will rerun 'npm install'(step 3)
+  we will also need to change the 'Dockerfile' since we won't be running 'CMD ["node", "index.js"]' it will now be 'CMD ["npm", "run", "dev"]'
+'docker run -v $(pwd):/app -p 3000:3000 -d --name node-app node-app-image' #now run the newly built container, and test the changes
+Just tested, now we can change the code on the fly, without having to rebuild every single time, pretty cool
 
 
 

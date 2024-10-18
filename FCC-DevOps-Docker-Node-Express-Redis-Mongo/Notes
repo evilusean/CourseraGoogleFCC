@@ -73,8 +73,12 @@ root@3e210f2ccaf4:/app #above command drops us into the terminal of the '/app' f
 You don't actually need the docker file to run the docker container, it is just used to build the app 'COPY . ./' copies everything, often times this is bad practice(like .env.local files)
   also the 'node_modules' folder was copied, we do a 'COPY package.json .' and 'RUN npm install' command earlier, so there is no reason why we should currently have that in our container
 '.dockerignore' #similar to '.gitignore' tells docker which files to ignore, simply type in whichever files you don't want copied over 'node_modules Dockerfile .dockerignore .git .gitignore' ignored
+after rebuilding and reruning command, .dockerignore works, the node_modules is still there, but that is from the 'npm install'
+EVERY time you change the code, you will NEED to rebuild for the changes to affect the container, stale code
 
-
+volumes = allow you to have persitant data in your containers, but 
+Bind Mount = a specific type of volume that will allow you to sync a folder in localhost machine with a folder in the docker container(symlink?)
+  So every time you change the code, it will automatically sync the new changes to the docker container, so you don't need to rebuild before every run
 
 
 

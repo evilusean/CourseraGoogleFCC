@@ -102,5 +102,29 @@ Finally fixed it, now 'docker run -v $(pwd):/app -p 3000:3000 -d --name node-app
 'docker exec -it node-app bash' 'cat index.js' #will allow you to check the 'index.js', changed it on localhost machine, but 'localhost:3000' isn't working, the problem is:
   you need to start the node process again, or use 'nodemon' 
 'nodemon' will look at your code, and if any changes take place it will restart the node process automatically so the changes are updated in real time 
+'npm install nodemon --save-dev' #will install nodemon as a dev dependancy to get it into the 'package.json', and we don't need it to run when it gets to actual production
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

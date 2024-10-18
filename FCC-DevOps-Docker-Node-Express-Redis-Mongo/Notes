@@ -93,6 +93,8 @@ The path /mnt/sdb4/Code/CourseraGoogleFCC/FCC-DevOps-Docker-Node-Express-Redis-M
 You can configure shared paths from Docker -> Preferences... -> Resources -> File Sharing.
 See https://docs.docker.com/ for more info.
 - Attempted, to do this, would be more convenient if I am using docker for developing, but I need to give permissions to docker somehow, gonna just move on for now, can fix if I need to: future sean problem
+FIX(did you try turning it on and off again?):
+https://github.com/portainer/portainer/issues/1732
 
 
 

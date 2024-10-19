@@ -108,7 +108,11 @@ Finally fixed it, now 'docker run -v $(pwd):/app -p 3000:3000 -d --name node-app
   we will also need to change the 'Dockerfile' since we won't be running 'CMD ["node", "index.js"]' it will now be 'CMD ["npm", "run", "dev"]'
 'docker run -v $(pwd):/app -p 3000:3000 -d --name node-app node-app-image' #now run the newly built container, and test the changes
 Just tested, now we can change the code on the fly, without having to rebuild every single time, pretty cool
-
+'docker ps -a' #will show all containers, '-a' flag all (started or stopped) will show with date time started or stopped
+'docker logs node-app' #will give you all logs for docker container 'node-app'
+When you 'COPY . ./' which copies everything in the current directory you are in from the terminal, to the working directory of the container, it will override everything like the 'node_modules' folder
+  so when you delete 'nodemon' or 'node_modules' from your local machine, it will also delete it from your container, You can get around this by creating another volume 
+'Anonymous Volume' = will allow you to preserve the '/app/node_modules' with specificity, you can ensure that the bind mount doesn't override the folder within the '/app' directory
 
 
 

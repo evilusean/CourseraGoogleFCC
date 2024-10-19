@@ -120,8 +120,15 @@ When you 'COPY . ./' which copies everything in the current directory you are in
   'Read Only BindMount' = so changes in the container won't affect the local host, because that is a security issue
 'docker run -v $(pwd):/app:ro -v /app/node_modules -p 3000:3000 -d --name node-app node-app-image' #notice the 'ro' after the first '/app' this will make it a 'ReadOnly BindMount'
 
-
-
+How to use '.env' variables within a docker container:
+'ENV PORT 3000' #sets the default value for port, in the 'Dockerfile'
+'EXPOSE $PORT' #you can reference the above port variable, that will update the 'EXPOSE' if the 'ENV PORT 3000' get's changed
+'docker build -t node-app-image .' #since we made a change to the 'Dockerfile' you need to rebuild
+When you actually deploy the container, you can specify what 'ENV' variable you want to be set, the 'ENV PORT 3000' is just the default value, we can override it
+'--env' or '-e' #you can use either of these for syntax to set an environment variable for the 'docker run ...' command
+'docker run -v $(pwd):/app -v /app/node_modules --env PORT=4000 -p 3000:4000 -d --name node-app node-app-image' #will change the environment variable and container listening port to 'PORT=4000'
+'docker exec -it node-app bash' #to check env variables, see if they were overwritten
+  'printenv' #will allow us to check docker environment variables of our docker container in bash
 
 
 

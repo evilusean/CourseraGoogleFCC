@@ -115,6 +115,13 @@ When you 'COPY . ./' which copies everything in the current directory you are in
 'Anonymous Volume' = will allow you to preserve the '/app/node_modules' with specificity, you can ensure that the bind mount doesn't override the folder within the '/app' directory
 'docker run -v $(pwd):/app -v /app/node_modules -p 3000:3000 -d --name node-app node-app-image' #notice how there are 2 '-v' tags, it will now ignore the '/app/node_modules' overrides bind mount
   so now we can delete our 'node_modules' on the local machine, because it will be in the container, and save space, and won't be deleted by the 'COPY . ./' because of the new '-v' flag
+'docker exec -it node-app bash' #to check the container, with the new bind mount, and the symlink updates -
+  it works both ways, if you create a file in container it will update localhost, if you update localhost, it will update the container, to change this, make it a 
+  'Read Only BindMount' = so changes in the container won't affect the local host, because that is a security issue
+'docker run -v $(pwd):/app:ro -v /app/node_modules -p 3000:3000 -d --name node-app node-app-image' #notice the 'ro' after the first '/app' this will make it a 'ReadOnly BindMount'
+
+
+
 
 
 

@@ -113,6 +113,8 @@ Just tested, now we can change the code on the fly, without having to rebuild ev
 When you 'COPY . ./' which copies everything in the current directory you are in from the terminal, to the working directory of the container, it will override everything like the 'node_modules' folder
   so when you delete 'nodemon' or 'node_modules' from your local machine, it will also delete it from your container, You can get around this by creating another volume 
 'Anonymous Volume' = will allow you to preserve the '/app/node_modules' with specificity, you can ensure that the bind mount doesn't override the folder within the '/app' directory
+'docker run -v $(pwd):/app -v /app/node_modules -p 3000:3000 -d --name node-app node-app-image' #notice how there are 2 '-v' tags, it will now ignore the '/app/node_modules' overrides bind mount
+  so now we can delete our 'node_modules' on the local machine, because it will be in the container, and save space, and won't be deleted by the 'COPY . ./' because of the new '-v' flag
 
 
 

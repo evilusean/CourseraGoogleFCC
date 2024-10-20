@@ -157,8 +157,10 @@ services:
       - PORT=3000
     #env_file:
     #  - ./.env
-
-
+'docker-compose up -d' #will run everything in the compose file 'up' will bring up everything in the compose file, '-d' is the same as 'docker run' and is detached mode, so you can still use terminal
+ERROR: 
+docker-compose up -d         
+zsh: command not found: docker-compose
 
 
 

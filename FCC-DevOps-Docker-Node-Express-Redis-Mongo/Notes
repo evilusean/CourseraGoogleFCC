@@ -137,6 +137,9 @@ Create a new file for environment variables '.env' add 'PORT=4000' - to load the
 'docker volume prune' #will remove all unneccsasry volumes
 'docker rm node-app -fv' #'-f' flag = force, notice the '-v' flag = volume, will also delete the volume that is associated with that container so they don't build up
 
+The container we have currently is set up for good workflow for developing a Node/Express App, but we have a super long command to run it correctly, and for development/production we sometimes need multiple
+  docker containers, all with their own very long command strings to run each one, to fix this we :
+Docker Compose = A feature that will allow us to create a file that has all the steps and configuration settings for each docker container, with one command :
 
 
 

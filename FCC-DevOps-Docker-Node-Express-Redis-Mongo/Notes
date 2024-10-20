@@ -181,7 +181,7 @@ docker-compose: /usr/lib/docker/cli-plugins/docker-compose exists in filesystem 
 Errors occurred, no packages were upgraded.
  -> error installing repo packages
 Tried to install with yay, still won't work, just going to continue without it, if I need it, I'll need to learn how to do it in docker desktop, not a big deal, would of been nice to have a new one-liner
-
+Fix #2 : they changed the spelling it's 'docker compose' not 'docker-compose', so 'docker compose up -d' #works, tut is 3 years old, this is to be expected, no big deal
 
 
 

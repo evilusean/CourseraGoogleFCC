@@ -140,9 +140,23 @@ Create a new file for environment variables '.env' add 'PORT=4000' - to load the
 The container we have currently is set up for good workflow for developing a Node/Express App, but we have a super long command to run it correctly, and for development/production we sometimes need multiple
   docker containers, all with their own very long command strings to run each one, to fix this we :
 Docker Compose = A feature that will allow us to create a file that has all the steps and configuration settings for each docker container, with one command :
-
-
-
+'docker-compose.yml' #the first thing you need to do, is specify the version you are going to use, '.yml' files a *SPACE SENSITIVE*
+'services:' #within the docker compose file, each container is referred to as a 'service' 
+'-' in '.yml' files signify a list, I will paste below the one I created below as an example :
+version: "3"
+services:
+  node-app:
+    build: .
+    ports:
+      - "3000:3000"
+      - "4000:4000"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - PORT=3000
+    #env_file:
+    #  - ./.env
 
 
 

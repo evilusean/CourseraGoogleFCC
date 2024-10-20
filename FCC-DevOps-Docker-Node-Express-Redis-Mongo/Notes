@@ -161,6 +161,8 @@ services:
 ERROR: 
 docker-compose up -d         
 zsh: command not found: docker-compose
+Ok, I found the problem, I can't install it with 'pacman -S docker-compose' because it clashes with docker desktop, There is a walkthrough in docker desktop called 'Multi Container Applications'
+  so I can just use that if I ever need to use multiple containers for an app/project, right now I'm just going to continue without it, I know it's bad practice to overwrite existing dependancies
 
 
 

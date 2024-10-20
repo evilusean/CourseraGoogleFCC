@@ -158,12 +158,29 @@ services:
     #env_file:
     #  - ./.env
 'docker-compose up -d' #will run everything in the compose file 'up' will bring up everything in the compose file, '-d' is the same as 'docker run' and is detached mode, so you can still use terminal
+
 ERROR: 
 docker-compose up -d         
 zsh: command not found: docker-compose
 Ok, I found the problem, I can't install it with 'pacman -S docker-compose' because it clashes with docker desktop, There is a walkthrough in docker desktop called 'Multi Container Applications'
   so I can just use that if I ever need to use multiple containers for an app/project, right now I'm just going to continue without it, I know it's bad practice to overwrite existing dependancies
-
+yay -S docker-compose
+Sync Explicit (1): docker-compose-2.29.7-1
+[sudo] password for ArchSean: 
+resolving dependencies...
+looking for conflicting packages...
+Packages (1) docker-compose-2.29.7-1
+Total Installed Size:  53.95 MiB
+:: Proceed with installation? [Y/n] y
+(1/1) checking keys in keyring                                                                                   [####################################################################] 100%
+(1/1) checking package integrity                                                                                 [####################################################################] 100%
+(1/1) loading package files                                                                                      [####################################################################] 100%
+(1/1) checking for file conflicts                                                                                [####################################################################] 100%
+error: failed to commit transaction (conflicting files)
+docker-compose: /usr/lib/docker/cli-plugins/docker-compose exists in filesystem (owned by docker-desktop)
+Errors occurred, no packages were upgraded.
+ -> error installing repo packages
+Tried to install with yay, still won't work, just going to continue without it, if I need it, I'll need to learn how to do it in docker desktop, not a big deal, would of been nice to have a new one-liner
 
 
 

@@ -131,8 +131,11 @@ When you actually deploy the container, you can specify what 'ENV' variable you 
   'printenv' #will allow us to check docker environment variables of our docker container in bash
 Create a new file for environment variables '.env' add 'PORT=4000' - to load the environment variables, 
 'docker run -v $(pwd):/app -v /app/node_modules --env-file ./.env -p 3000:4000 -d --name node-app node-app-image' #notice the '--env-file ./.env' which will set the environment variables from the file for container
-
-
+'docker volume ls' #will show you all the volumes you've created, if you keep creating containers, they will get saved, every command like above that you run which is different, creates a new volume
+  every time you delete your container, it will preserve the node_modules, etc folder, the entire idea of a volume is it's persistent data you want to preserve(like a postgres DB/etc)
+  'docker volume rm <VOLUME NAME>' You can always go in and manually delete the volumes 
+'docker volume prune' #will remove all unneccsasry volumes
+'docker rm node-app -fv' #'-f' flag = force, notice the '-v' flag = volume, will also delete the volume that is associated with that container so they don't build up
 
 
 

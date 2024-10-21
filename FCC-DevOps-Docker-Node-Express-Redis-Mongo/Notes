@@ -188,6 +188,10 @@ Fix #2 : they changed the spelling it's 'docker compose' not 'docker-compose', s
 when you run docker compose as well, it creates a brand new network, I was wondering why that was happening, trying to close them down, now you know 
 the next time you run a 'docker compose' it does not need to build the image, it spins up much quicker
 'docker compose up -d --build' #will force a brand new rebuild, 'docker compose' doesn't know if you make changes to a file, it will need to be told sometimes
+'CMD ["npm", "run", "dev"]' #in 'Dockerfile' is used for development - change this before you do a production release to either : 'CMD ["npm", "start"]' or 'CMD ["node" "index.js"] for production
+you can create multiple different 'Dockerfile's, and multiple different 'docker-compose.yml' for development/production or consolidate them to one file with a custom bash script
+
+
 
 
 

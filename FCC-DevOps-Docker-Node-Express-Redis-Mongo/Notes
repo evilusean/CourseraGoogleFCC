@@ -192,7 +192,16 @@ the next time you run a 'docker compose' it does not need to build the image, it
 you can create multiple different 'Dockerfile's, and multiple different 'docker-compose.yml' for development/production or consolidate them to one file with a custom bash script
 I created 3 new files 'docker-compose.yml' 'docker-compose.dev.yml' and 'docker-compose.prod.yml' - they will all have similar layouts, put all the SHARED configs between both environments in 'docker-compose.yml'
 'Dockerfile' has 'CMD ["npm", "run", "dev"]' we can change this to 'CMD ["node", "index.js"]' and override it in the 'docker-compose.dev.yml' file with 'command: npm run dev' compose overrides the Dockerfile
-
+'docker-compose.dev.yml' #for some reason it isn't uploading to github, I checked both .ignores, it should, but isn't, idk, just leaving a copy here for future sean to see the override
+version: "3"
+services: 
+  node-app:
+  volumes:
+    - ./:/app
+    - /app/node_modules
+  environment:
+    - NODE_ENV=development
+  command: npm run dev
 
 
 

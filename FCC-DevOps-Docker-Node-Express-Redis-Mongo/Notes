@@ -191,6 +191,7 @@ the next time you run a 'docker compose' it does not need to build the image, it
 'CMD ["npm", "run", "dev"]' #in 'Dockerfile' is used for development - change this before you do a production release to either : 'CMD ["npm", "start"]' or 'CMD ["node" "index.js"] for production
 you can create multiple different 'Dockerfile's, and multiple different 'docker-compose.yml' for development/production or consolidate them to one file with a custom bash script
 I created 3 new files 'docker-compose.yml' 'docker-compose.dev.yml' and 'docker-compose.prod.yml' - they will all have similar layouts, put all the SHARED configs between both environments in 'docker-compose.yml'
+'Dockerfile' has 'CMD ["npm", "run", "dev"]' we can change this to 'CMD ["node", "index.js"]' and override it in the 'docker-compose.dev.yml' file with 'command: npm run dev' compose overrides the Dockerfile
 
 
 

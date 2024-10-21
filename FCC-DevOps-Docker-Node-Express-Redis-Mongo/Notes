@@ -184,6 +184,34 @@ Tried to install with yay, still won't work, just going to continue without it, 
 Fix #2 : they changed the spelling it's 'docker compose' not 'docker-compose', so 'docker compose up -d' #works, tut is 3 years old, this is to be expected, no big deal
 
 'docker image ls' #will list all images, the naming convention for 'docker compose' is it will take the directory the compose file was, and then add the service name you gave 'docker-node-app' (in docker folder)
+'docker compose down -v' #SHUTS IT DOWN, '-v' flag to remove the unneccasary volumes as well
+when you run docker compose as well, it creates a brand new network, I was wondering why that was happening, trying to close them down, now you know 
+the next time you run a 'docker compose' it does not need to build the image, it spins up much quicker
+'docker compose up -d --build' #will force a brand new rebuild, 'docker compose' doesn't know if you make changes to a file, it will need to be told sometimes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

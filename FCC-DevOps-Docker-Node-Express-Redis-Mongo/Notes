@@ -208,9 +208,9 @@ services:
 I also forgot when I took a break I also checked my SDD - each image takes up over a 1.5 gigs, I have 40gigs, and 13 are on the cache, I have ~5 gigs left, I need to change where docker saves images. 
   The plan was to containerize the TTS and STT models, have them running in the background, anytime I want to translate a sentence, simply run a one liner command with the audio or text file, 
   and have the translaSean, without having to spin up the VM, currently I need to open VScode, open the languages folder, cd like 4 times, boot up the VM, it's like 10 minutes for a sentence, tedious
-  each model for speach was around ~5gigs, so I need to clean up at least 10 gigs, or else future sean gonna have a problem
-
-
+  each model for speech was around ~5gigs, so I need to clean up at least 10 gigs, or else future sean gonna have a problem
+  https://forums.docker.com/t/how-do-i-change-the-docker-image-installation-directory/1169
+-From Docker Desktop to change image location = Settings(top right) -> Resources -> Disk Image Location -> Change
 
 
 

@@ -204,6 +204,7 @@ services:
   command: npm run dev
 'docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d'#the order matters here '-f' flag is for file, notice it's there twice, the first one is for the base file, the second is the dev
 'docker compose -f docker-compose.yml -f docker-compose.dev.yml down -v'#same command will bring it down, just replace '-d' with '-v' and 'up' with 'down'
+1:32:00 = Current Time, Closed Project down to work on languages for a few days, lost place in tut- finally getting back into it, like ~3 days behind
 
 
 

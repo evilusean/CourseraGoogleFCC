@@ -205,7 +205,10 @@ services:
 'docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d'#the order matters here '-f' flag is for file, notice it's there twice, the first one is for the base file, the second is the dev
 'docker compose -f docker-compose.yml -f docker-compose.dev.yml down -v'#same command will bring it down, just replace '-d' with '-v' and 'up' with 'down'
 1:32:00 = Current Time, Closed Project down to work on languages for a few days, lost place in tut- finally getting back into it, like ~3 days behind
-
+I also forgot when I took a break I also checked my SDD - each image takes up over a 1.5 gigs, I have 40gigs, and 13 are on the cache, I have ~5 gigs left, I need to change where docker saves images. 
+  The plan was to containerize the TTS and STT models, have them running in the background, anytime I want to translate a sentence, simply run a one liner command with the audio or text file, 
+  and have the translaSean, without having to spin up the VM, currently I need to open VScode, open the languages folder, cd like 4 times, boot up the VM, it's like 10 minutes for a sentence, tedious
+  each model for speach was around ~5gigs, so I need to clean up at least 10 gigs, or else future sean gonna have a problem
 
 
 

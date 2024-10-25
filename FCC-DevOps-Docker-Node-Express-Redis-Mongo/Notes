@@ -211,7 +211,7 @@ I also forgot when I took a break I also checked my SDD - each image takes up ov
   each model for speech was around ~5gigs, so I need to clean up at least 10 gigs, or else future sean gonna have a problem
   https://forums.docker.com/t/how-do-i-change-the-docker-image-installation-directory/1169
 -From Docker Desktop to change image location = Settings(top right) -> Resources -> Disk Image Location -> Change
-
+'docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d' #testing out the production version notice how '.dev' changed to '.prod'
 
 
 

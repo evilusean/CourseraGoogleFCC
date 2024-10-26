@@ -222,10 +222,10 @@ RUN if [ "$NODE_ENV" = "development" ]; \
         else npm install --only=production; \
         fi
 #above is the new bash script embedded into the 'Dockerfile' spaces are very critical here notice how '[ "$NODE_ENV" = "development" ];' has a space at start, future sean
-'[ "$NODE_ENV" = "development" ];' #what is the "$NODE_ENV"? it is set by our 'ARG NODE_ENV' which is set by our individual 'docker-compose' files
-Just tested, everything works, pretty cool
+'[ "$NODE_ENV" = "development" ];' #what is the "$NODE_ENV"? it is set by our 'ARG NODE_ENV' which is set by our individual 'docker-compose' files, view them in the 'Docker' directory  
+'docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build' #testing production, everything works too
 
-
+1:45:00 = Adding a second container to 'docker-composer.yml'=========================================================================================================================================================
 
 
 

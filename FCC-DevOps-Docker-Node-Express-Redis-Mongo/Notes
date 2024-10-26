@@ -215,6 +215,10 @@ I also forgot when I took a break I also checked my SDD - each image takes up ov
   #on the production version, there is no bind mount, so every change we make to the index.js should not affect the code until we rebuild it - and there isn't
   so anytime you make changes, you have to rebuild the image, which is the command below :
 'docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build' #notice the '--build' flag at the end, this will force a rebuild, to see if the changes took place, changes.. changed, test success
+In production we don't want to run 'nodemon' so in the 'Dockerfile' we would add '--only=production' flag to the 'RUN npm install --only=production' command, which will prevent any dev dependancies installed
+Now we need to set up our 'Dockerfile' to be intelligent enough to know whether we are in dev mode or prod mode and which 'RUN npm install' to run, to do this add an embedded bash script (if statement)
+
+
 
 
 

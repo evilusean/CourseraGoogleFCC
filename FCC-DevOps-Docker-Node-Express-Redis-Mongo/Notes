@@ -212,7 +212,9 @@ I also forgot when I took a break I also checked my SDD - each image takes up ov
   https://forums.docker.com/t/how-do-i-change-the-docker-image-installation-directory/1169
 -From Docker Desktop to change image location = Settings(top right) -> Resources -> Disk Image Location -> Change
 'docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d' #testing out the production version notice how '.dev' changed to '.prod'
-
+  #on the production version, there is no bind mount, so every change we make to the index.js should not affect the code until we rebuild it - and there isn't
+  so anytime you make changes, you have to rebuild the image, which is the command below :
+'docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build' #notice the '--build' flag at the end, this will force a rebuild, to see if the changes took place, changes.. changed, test success
 
 
 

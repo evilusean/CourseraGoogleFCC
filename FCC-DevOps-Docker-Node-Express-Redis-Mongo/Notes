@@ -229,8 +229,16 @@ RUN if [ "$NODE_ENV" = "development" ]; \
 To add in a mongodb to our 'docker-compose.yml' services:  mongo:     image: mongo     environment:      - MONGO_INITDB_ROOT_USERNAME=seanjeev       - MONGO_INITDB_ROOT_PASSWORD=mypassword
 after adding 'mongodb' to our docker-compose the 'image:mongo' automatically pulled the latest mongodb from docker hub
 'docker exec -it node-docker_mongo_1 bash' #will allow you to enter the mongo container you just created
-'mongo -u "username" -p "password" #how you can enter the mongodb username and password from the terminal - which will allow you to log in to your mongo instance, where data will persist
-
+  'mongo -u "username" -p "password" #how you can enter the mongodb username and password from the terminal - which will allow you to log in to your mongo instance, where data will persist
+  'db' #ill show you what db you are connected to
+  'use <newDB>' #will create a new database with the name <newDB>
+  'show dbs' #will show all dbs - you will only be able to see the dbs if there are entries in it
+  'db.books.insert({"name":"harry potter"})' #will insert data into the db in the 'books' collection
+In order to get the database to persist - you can't use the 'down -v' flag when taking down the docker containers
+You can also use volumes to allow the data to persist 'named volume': volumes:      - mongo-db:/data/db #notice that unlike the 'bind volume' there is a ':' that labels it as 'mongo-db'
+  when you name a volume, it can be used by multiple services, so you need to provide a list of all your volumes at the bottom of the 'docker-compose' volumes:   mongo-db:
+the data should now persist as long as you don't take down the services with a '-v' flag, also you can have the containers running when you 'docker prune' 
+'docker prune' will not remove the volumes if they are services currently running in containers
 
 
 

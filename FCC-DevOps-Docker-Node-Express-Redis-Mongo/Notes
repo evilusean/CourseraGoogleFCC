@@ -217,11 +217,19 @@ I also forgot when I took a break I also checked my SDD - each image takes up ov
 'docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build' #notice the '--build' flag at the end, this will force a rebuild, to see if the changes took place, changes.. changed, test success
 In production we don't want to run 'nodemon' so in the 'Dockerfile' we would add '--only=production' flag to the 'RUN npm install --only=production' command, which will prevent any dev dependancies installed
 Now we need to set up our 'Dockerfile' to be intelligent enough to know whether we are in dev mode or prod mode and which 'RUN npm install' to run, to do this add an embedded bash script (if statement)
+RUN if [ "$NODE_ENV" = "development" ]; \
+        then npm install; \
+        else npm install --only=production; \
+        fi
+#above is the new bash script embedded into the 'Dockerfile' spaces are very critical here notice how '[ "$NODE_ENV" = "development" ];' has a space at start, future sean
+'[ "$NODE_ENV" = "development" ];' #what is the "$NODE_ENV"? it is set by our 'ARG NODE_ENV' which is set by our individual 'docker-compose' files, view them in the 'Docker' directory  
+'docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build' #testing production, everything works too
 
-
-
-
-
+1:45:00 = Adding a second container to 'docker-composer.yml' - Adding a mongodb to the app - =====================================================================================================================
+To add in a mongodb to our 'docker-compose.yml' services:  mongo:     image: mongo     environment:      - MONGO_INITDB_ROOT_USERNAME=seanjeev       - MONGO_INITDB_ROOT_PASSWORD=mypassword
+after adding 'mongodb' to our docker-compose the 'image:mongo' automatically pulled the latest mongodb from docker hub
+'docker exec -it node-docker_mongo_1 bash' #will allow you to enter the mongo container you just created
+'mongo -u "username" -p "password" #how you can enter the mongodb username and password from the terminal - which will allow you to log in to your mongo instance, where data will persist
 
 
 

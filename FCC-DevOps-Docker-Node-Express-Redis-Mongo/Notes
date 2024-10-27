@@ -251,7 +251,9 @@ the problem with using 'docker inspect' to get IP address of the container, is t
 'docker network ls' #will show all current docker networks
 if you want to refer to the container from the network in another container look at the 'docker-compose.yml' 'services' and refer to it as the name you gave, for us it would be 'mongo' instead of the IP
 'mongoose.connect("mongodb://seanjeev:mypassword@mongo:27017/?authSource=admin")' #changed the ip address to be dynamic based off the docker network service contair for the DB, using DNS
+'docker network inspect docker_default' #will show us all containers attached to the network
 
+2:12:00 = Environment Variables ================================================================================================================================================================================
 
 
 

@@ -241,9 +241,11 @@ the data should now persist as long as you don't take down the services with a '
 'docker prune' will not remove the volumes if they are services currently running in containers
 'npm install mongoose' #to allow your express app to connect to mongodb 'mongoose' will help with this, 
 'docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build' #after installing a new package, you need to take everything down and force a rebuild
-
-
-
+'const mongoose = require("mongoose");' #add to express 'index.js'
+'mongoose.connect("mongodb://seanjeev:mypassword@<ip-address>")' #Will allow you to connect to the DB on your docker container, to get the IP address use below
+'docker inspect docker-mongo-1' #will allow you to inspect the mongo db container and get the IP address under 'Network Settings' 'Networks'
+  Networks = in docker, this is a concept for security that will allow them only to talk to other containers on the same network
+'mongoose.connect("mongodb://seanjeev:mypassword@172.18.0.2:27017/?authSource=admin")' #here is the fixed mongoose.connect with IP address, and default port '27107' and 
 
 
 

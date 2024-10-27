@@ -239,8 +239,8 @@ You can also use volumes to allow the data to persist 'named volume': volumes:  
   when you name a volume, it can be used by multiple services, so you need to provide a list of all your volumes at the bottom of the 'docker-compose' volumes:   mongo-db:
 the data should now persist as long as you don't take down the services with a '-v' flag, also you can have the containers running when you 'docker prune' 
 'docker prune' will not remove the volumes if they are services currently running in containers
-
-
+'npm install mongoose' #to allow your express app to connect to mongodb 'mongoose' will help with this, 
+'docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build' #after installing a new package, you need to take everything down and force a rebuild
 
 
 

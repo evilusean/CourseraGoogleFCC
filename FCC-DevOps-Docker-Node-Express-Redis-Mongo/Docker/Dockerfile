@@ -1,4 +1,4 @@
-FROM node:15
+FROM node:latest
 WORKDIR /app
 COPY package.json /app
 ARG NODE_ENV

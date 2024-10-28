@@ -25,6 +25,8 @@ const connectWithRetry = () => {
     });
 }
 
+connectWithRetry()
+
 app.get("/", (req, res) => {
     res.send("<h1>Test success!!</h2>");
 });

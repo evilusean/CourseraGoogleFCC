@@ -279,7 +279,7 @@ connectWithRetry() #will attempt to reconnect after 5 seconds
 'docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d node-app' #at the end we added 'node-app' which is the service name, docker can spin up only the requested service(name at end of command)
   if you have a 'depends_on' in the docker-compose, it will also spin up any other service that was required (so the db would automatically be spun up with the node-app, even if we just wanted node-app)
 '--no-deps' #you can alter the above conditional, where it will always start 'depends_on' with the '--no-deps' flag, and will start only what you want
-
+ERROR FIX: Updated node from version 15 to 20 something, when I installed mongoose, it broke it, FINALLY got it running, the old version of node and new version mongoose clashed - fixed now, everything works
 
 
 

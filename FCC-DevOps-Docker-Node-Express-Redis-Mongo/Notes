@@ -282,6 +282,7 @@ connectWithRetry() #will attempt to reconnect after 5 seconds
 ERROR FIX: Updated node from version 15 to 20 something, when I installed mongoose, it broke it, FINALLY got it running, the old version of node and new version mongoose clashed - fixed now, everything works
 
 2:32:00 = Starting to build the CRUD Blog App ====================================================================================================================================================================
+start by creating some folders 'models' for mongoose schemas, 'controllers' and 'routes'
 
 
 

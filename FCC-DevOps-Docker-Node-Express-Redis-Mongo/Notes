@@ -281,7 +281,7 @@ connectWithRetry() #will attempt to reconnect after 5 seconds
 '--no-deps' #you can alter the above conditional, where it will always start 'depends_on' with the '--no-deps' flag, and will start only what you want
 ERROR FIX: Updated node from version 15 to 20 something, when I installed mongoose, it broke it, FINALLY got it running, the old version of node and new version mongoose clashed - fixed now, everything works
 
-
+2:32:00 = Starting to build the CRUD Blog App ====================================================================================================================================================================
 
 
 

@@ -258,6 +258,9 @@ you never want to hard code the url into your application, best practice is to u
 module.exports = {    MONGO_IP: process.env.MONGO_IP || "mongo"} #new 'config.js' file, will export environment variables, will look for Mongo IP using DNS, if can't find will default('||') to 'mongo'
 const { MONGO_IP, MONGO_PORT, MONGO_USER, MONGO_PASSWORD } = require("./config/config.js"); #import all newly created variables from the 'config.js' file
 mongoose.connect("mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authSource=admin") #uses the newly created dynamic variables instead of hardcoded(IP will likely change)
+He started using the shared 'docker-compose.yml' and removed the mongo service so both the dev and prod versions can be different, since we changed the environment variables, 
+  after copying and removing the 'image: mongo' part, he added the '- MONGO_USER=seanjeev' and '- MONGO_PASSWORD=mypassword' to the 'node-app' 'environment' in the 'docker-compose.dev.yml' NOT the 'mongo' one
+since we changed the environment variables, we need to bring it down and back up - something broke - now app isn't loading - 
 
 
 

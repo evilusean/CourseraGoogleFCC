@@ -256,7 +256,8 @@ if you want to refer to the container from the network in another container look
 2:12:00 = Environment Variables ================================================================================================================================================================================
 you never want to hard code the url into your application, best practice is to use an environment variable
 module.exports = {    MONGO_IP: process.env.MONGO_IP || "mongo"} #new 'config.js' file, will export environment variables, will look for Mongo IP using DNS, if can't find will default('||') to 'mongo'
-
+const { MONGO_IP, MONGO_PORT, MONGO_USER, MONGO_PASSWORD } = require("./config/config.js"); #import all newly created variables from the 'config.js' file
+mongoose.connect("mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authSource=admin") #uses the newly created dynamic variables instead of hardcoded(IP will likely change)
 
 
 

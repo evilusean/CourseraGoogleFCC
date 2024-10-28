@@ -261,10 +261,24 @@ mongoose.connect("mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_
 He started using the shared 'docker-compose.yml' and removed the mongo service so both the dev and prod versions can be different, since we changed the environment variables, 
   after copying and removing the 'image: mongo' part, he added the '- MONGO_USER=seanjeev' and '- MONGO_PASSWORD=mypassword' to the 'node-app' 'environment' in the 'docker-compose.dev.yml' NOT the 'mongo' one
 since we changed the environment variables, we need to bring it down and back up - something broke - now app isn't loading - 
-
-
-
-
+#docker compose has a 'depend_on' feature that allows you to load something AFTER something else loaded before it (no website without DB instance)
+you should add logic into your code, like a reconnect function so that your application is smart enough to attempt a reconnect or whatever, and doesn't depend on docker/mongodb/orchestrator 
+const connectWithRetry = () => {
+    mongoose.connect(mongoURL, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useFindAndModify: false
+    })
+    .then(() => console.log("Connected to MongoDB"))
+    .catch((err) => {
+        console.log(err);
+        setTimeout(connectWithRetry, 5000);
+    });
+} 
+connectWithRetry() #will attempt to reconnect after 5 seconds
+'docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d node-app' #at the end we added 'node-app' which is the service name, docker can spin up only the requested service(name at end of command)
+  if you have a 'depends_on' in the docker-compose, it will also spin up any other service that was required (so the db would automatically be spun up with the node-app, even if we just wanted node-app)
+'--no-deps' #you can alter the above conditional, where it will always start 'depends_on' with the '--no-deps' flag, and will start only what you want
 
 
 

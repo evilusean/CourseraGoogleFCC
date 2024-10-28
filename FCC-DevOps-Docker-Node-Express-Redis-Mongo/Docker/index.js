@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const { MONGO_IP, MONGO_PORT, MONGO_USER, MONGO_PASSWORD } = require("./config");
+const { MONGO_IP, MONGO_PORT, MONGO_USER, MONGO_PASSWORD } = require("./config/config.js");
 
 
 const app = express();

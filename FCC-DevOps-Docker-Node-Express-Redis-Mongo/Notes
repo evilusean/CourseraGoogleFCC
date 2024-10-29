@@ -299,5 +299,5 @@ he used postman to test and add posts, to actually create a post, you need middl
 app.use(express.json()); #will ensure the body get's attached to the request object
 I downloaded, and installed postman, but it's not working for me, when I create a 'Body' raw JSON object and 'POST' {"status": "fail"}
   {"status": "fail","message": "Operation `posts.insertOne()` buffering timed out after 10000ms"} #added error logging, something is wrong with mongoDB, been at this for a while now, taking a break
-
+Future Sean(tommorrow) - it might be the credentials for mongoDB, I used fake ones, I thought since it ran locally, it wouldn't be an issue, but maybe that's it, idk, I can't post, so I have no blogs to read
 

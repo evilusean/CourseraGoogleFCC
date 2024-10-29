@@ -294,7 +294,10 @@ start by creating some folders 'models' for mongoose schemas, 'controllers' and 
   const postRouter = require("./routes/postRoutes"); #imports our newly created routes
   app.use("/posts", postRouter); #if someone sends a request to 'localhost:3000/posts' it will send them to the posts router and then refer them to either 'localhost:3000/' or 'localhost:3000/:id'
 'app.use("/api/v1/posts", postRouter)' #this is better express practice, so if you updated the version 'v1' it won't mess up the older versions, api for the frontend and backend on same domain
-he used postman to test and add posts
+he used postman to test and add posts, to actually create a post, you need middleware, which wasn't built yet : https://www.postman.com/ 
+  web version doesn't work for testing on localhost : https://web.postman.co/ 
+app.use(express.json()); #will ensure the body get's attached to the request object
+I downloaded, and installed postman, but it's not working for me, when I create a 'Body' raw JSON object and 'POST' {"status": "fail"}
 
 
 

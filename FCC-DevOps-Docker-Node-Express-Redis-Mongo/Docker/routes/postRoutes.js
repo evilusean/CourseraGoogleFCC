@@ -1,10 +1,19 @@
-const express = require("express")
+const express = require("express");
 
-const postController = require("../controllers/postController")
+const postController = require("../controllers/postController");
 
-const router = express.Router()
+const router = express.Router();
 
-router.route("/").get(postController.getAllPosts).post(postController.createPost)
-router.route("/:id").get(postController.getOnePost).patch(postController.updatePost).delete(postController.deletePost)
+//localhost:3000/:id
+router
+  .route("/")
+  .get(postController.getAllPosts)
+  .post(postController.createPost);
+
+router
+  .route("/:id")
+  .get(postController.getOnePost)
+  .patch(postController.updatePost)
+  .delete(postController.deletePost);
 
 module.exports = router;

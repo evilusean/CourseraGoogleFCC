@@ -17,16 +17,22 @@ const connectWithRetry = () => {
     mongoose.connect(mongoURL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        useFindAndModify: false
+        useFindAndModify: false,
+        serverSelectionTimeoutMS: 20000, // Increase timeout to 20 seconds
     })
-    .then(() => console.log("Connected to MongoDB"))
+    .then(() => {
+        console.log("Connected to MongoDB");
+    })
     .catch((err) => {
-        console.log(err);
+        console.error("MongoDB connection error:", err); // Log connection errors
         setTimeout(connectWithRetry, 5000);
     });
 }
 
 connectWithRetry()
+
+app.use(express.json());
+
 
 app.get("/", (req, res) => {
     res.send("<h1>Test success!!</h2>");

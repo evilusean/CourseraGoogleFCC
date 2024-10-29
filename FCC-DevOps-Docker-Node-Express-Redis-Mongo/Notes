@@ -287,10 +287,14 @@ start by creating some folders 'models' for mongoose schemas, 'controllers' and 
   added create post 'exports.createPost = async (req, res, next)' #request, response, next middleware
   'const post = await Post.findByIdAndUpdate(req.params.id, req.body);' #will search for the post by the request id, and take the request body, and update it 'runValidators: true,' will check the schema
   ' const post = await Post.findByIdAndDelete(req.params.id)' #for deleteing posts, will search by id and delete them, and with that, all CRUD methods are done.
-
-
-
-
+'postRoutes.js' #'router.route("/").get().post()' this will allow us to use the router for URLs 'localhost:3000/'
+  router.route("/").get(postController.getAllPosts).post(postController.createPost) #for getting posts or creating
+  router.route("/:id").get(postController.getOnePost).patch(postController.updatePost).delete(postController.deletePost) #for 'localhost:3000/:id' for either updating or a delete or getting a single post
+'index.js' #wire up the router to our app
+  const postRouter = require("./routes/postRoutes"); #imports our newly created routes
+  app.use("/posts", postRouter); #if someone sends a request to 'localhost:3000/posts' it will send them to the posts router and then refer them to either 'localhost:3000/' or 'localhost:3000/:id'
+'app.use("/api/v1/posts", postRouter)' #this is better express practice, so if you updated the version 'v1' it won't mess up the older versions, api for the frontend and backend on same domain
+he used postman to test and add posts
 
 
 

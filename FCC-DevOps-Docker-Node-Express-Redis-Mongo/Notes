@@ -284,6 +284,9 @@ ERROR FIX: Updated node from version 15 to 20 something, when I installed mongoo
 2:32:00 = Starting to build the CRUD Blog App ====================================================================================================================================================================
 start by creating some folders 'models' for mongoose schemas, 'controllers' and 'routes'
 'postsController.js' #added in 2 ways for retrieving posts, all and by id(1), placed in a try catch block, 200 status for success, and by id would pull up the post 5 if url was 'localhost:3000/post/5'
+  added create post 'exports.createPost = async (req, res, next)' #request, response, next middleware
+  'const post = await Post.findByIdAndUpdate(req.params.id, req.body);' #will search for the post by the request id, and take the request body, and update it 'runValidators: true,' will check the schema
+  ' const post = await Post.findByIdAndDelete(req.params.id)' #for deleteing posts, will search by id and delete them, and with that, all CRUD methods are done.
 
 
 

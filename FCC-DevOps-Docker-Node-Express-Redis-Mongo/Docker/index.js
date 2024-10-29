@@ -32,9 +32,7 @@ app.get("/", (req, res) => {
     res.send("<h1>Test success!!</h2>");
 });
 
-
 app.use("/api/v1/posts", postRouter);
-
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`listening on port${port}`));

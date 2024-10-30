@@ -320,9 +320,9 @@ just brought docker containers down and back up, that was it! finally fixed, and
 after hours of debugging, I finally have a working crud applicASean - pretty cool - Taking a break, next sectSean @
 
 2:51:30 = Implementing user signup and login ===================================================================================================================================================================
-
-
-
+'Redis' = for authentication, to do auth, you need to implement the signup and login - Adding one more container to the app 
+'userModel.js' #set up a mongoose schema, 'unique: true' = only one valid username
+  'const User = mongoose.model("User", userSchema)' #creates the 'User' that is exported from the userSchema we just created(requires username and password)
 
 
 

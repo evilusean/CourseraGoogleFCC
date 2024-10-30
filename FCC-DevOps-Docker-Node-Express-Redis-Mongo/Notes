@@ -324,7 +324,7 @@ after hours of debugging, I finally have a working crud applicASean - pretty coo
 'userModel.js' #set up a mongoose schema, 'unique: true' = only one valid username
   'const User = mongoose.model("User", userSchema)' #creates the 'User' from the userSchema(requires username and password) that is exported to our app
 'authController.js' 'try  {res.status(201).json({           status: "success",            data: {                user: newUser,            }, #try catch block, will return user if succesful
-
+'userRoutes.js' #used for user routes 
 
 
 

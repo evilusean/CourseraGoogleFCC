@@ -301,7 +301,7 @@ I downloaded, and installed postman, but it's not working for me, when I create 
   {"status": "fail","message": "Operation `posts.insertOne()` buffering timed out after 10000ms"} #added error logging, something is wrong with mongoDB, been at this for a while now, taking a break
 Future Sean(tommorrow) - it might be the credentials for mongoDB, I used fake ones, I thought since it ran locally, it wouldn't be an issue, but maybe that's it, idk, I can't post, so I have no blogs to read
   -just tried to fix it without credentials, still can't post, ran it through 2 different AI's, no problems, idk what's wrong, I forced a rebuild, and I'm still getting timed out, removed the password/username
-Tut @ 1:45:00 starts working with mongodb - this is where app broke, maybe I missed a step
+Tut @ 1:45:00 starts working with mongodb - this is where app broke, maybe I missed a step - rewatched and 
 '   docker exec -it docker-mongo-1 mongosh -u seanjeev -p mypassword --authenticationDatabase admin'
 '   db.myCollection.insert({ name: "Sample Document", content: "This is a test." })' #tested insert from docker CLI in mongodb, it worked. 
 'show dbs'
@@ -309,3 +309,25 @@ admin   100.00 KiB
 config   60.00 KiB
 local    76.00 KiB
 test      8.00 KiB
+'docker logs docker-node-app-1' #gave me a bunch of errors, '// useFindAndModify: false,' apparently deprecated, tut is 3 years old, commented out
+just brought docker containers down and back up, that was it! finally fixed, and can move forward. Postman works!
+{    "status": "success",    "data": {        "post": {            "title": "test 1 title",            "body": "test 1 body",            "_id": "6721b9b22de090ee2e5fd3de",            "__v": 0        }    }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -322,7 +322,8 @@ after hours of debugging, I finally have a working crud applicASean - pretty coo
 2:51:30 = Implementing user signup and login ===================================================================================================================================================================
 'Redis' = for authentication, to do auth, you need to implement the signup and login - Adding one more container to the app 
 'userModel.js' #set up a mongoose schema, 'unique: true' = only one valid username
-  'const User = mongoose.model("User", userSchema)' #creates the 'User' that is exported from the userSchema we just created(requires username and password)
+  'const User = mongoose.model("User", userSchema)' #creates the 'User' from the userSchema(requires username and password) that is exported to our app
+'authController.js' 'try  {res.status(201).json({           status: "success",            data: {                user: newUser,            }, #try catch block, will return user if succesful
 
 
 

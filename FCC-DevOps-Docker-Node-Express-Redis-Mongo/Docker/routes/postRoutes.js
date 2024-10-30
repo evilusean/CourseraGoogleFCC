@@ -1,14 +1,13 @@
 const express = require("express");
-
 const postController = require("../controllers/postController");
 
 const router = express.Router();
 
-//localhost:3000/:id
+// Define the routes for posts
 router
   .route("/")
   .get(postController.getAllPosts)
-  .post(postController.createPost);
+  .post(postController.createPost); // Ensure this line is present
 
 router
   .route("/:id")

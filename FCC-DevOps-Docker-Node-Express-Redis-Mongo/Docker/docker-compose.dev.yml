@@ -1,20 +1,24 @@
 version: "3"
-services: 
+services:
   node-app:
-    build: 
-      context: .
-      args:
-        NODE_ENV: development
-    volumes:
-      - ./:/app
-      - /app/node_modules
+    build: .
+    ports:
+      - "3000:3000"
     environment:
-      - NODE_ENV=development
       - MONGO_USER=seanjeev
       - MONGO_PASSWORD=mypassword
+      - MONGO_IP=mongo
+      - MONGO_PORT=27017
+    depends_on:
+      - mongo
 
-    command: npm run dev
   mongo:
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=seanjeev
-      - MONGO_INITDB_ROOT_PASSWORD=mypassword
+    image: mongo
+    #environment:
+    #  - MONGO_INITDB_ROOT_USERNAME=seanjeev
+    #  - MONGO_INITDB_ROOT_PASSWORD=mypassword
+    volumes:
+      - mongo-db:/data/db
+
+volumes:
+  mongo-db:

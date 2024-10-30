@@ -6,7 +6,7 @@ const postRouter = require("./routes/postRoutes");
 
 const app = express();
 
-/*
+
 const mongoURL = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authSource=admin`;
 const connectWithRetry = () => {
     mongoose.connect(mongoURL, {
@@ -23,13 +23,14 @@ const connectWithRetry = () => {
         setTimeout(connectWithRetry, 5000);
     });
 }
-*/
+
 
 
 /* Old hardcoded method:
 mongoose.connect("mongodb://seanjeev:mypassword@mongo:27017/?authSource=admin").then(() => {
 New method with dynamic variables that reference the 'config.js'
 */
+/*
 const connectWithRetry = () => {
     mongoose.connect("mongodb://seanjeev:mypassword@mongo:27017/?authSource=admin", {
         useNewUrlParser: true,
@@ -45,17 +46,15 @@ const connectWithRetry = () => {
         setTimeout(connectWithRetry, 5000);
     });
 }
-
+*/
 
 connectWithRetry()
-
-app.use(express.json());
-
 
 app.get("/", (req, res) => {
     res.send("<h1>Test success!!</h2>");
 });
 
+app.use(express.json());
 app.use("/api/v1/posts", postRouter);
 
 const port = process.env.PORT || 3000;

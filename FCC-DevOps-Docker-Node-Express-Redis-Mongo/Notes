@@ -292,11 +292,11 @@ start by creating some folders 'models' for mongoose schemas, 'controllers' and 
   router.route("/:id").get(postController.getOnePost).patch(postController.updatePost).delete(postController.deletePost) #for 'localhost:3000/:id' for either updating or a delete or getting a single post
 'index.js' #wire up the router to our app
   const postRouter = require("./routes/postRoutes"); #imports our newly created routes
-  app.use("/posts", postRouter); #if someone sends a request to 'localhost:3000/posts' it will send them to the posts router and then refer them to either 'localhost:3000/' or 'localhost:3000/:id'
+  'app.use("/posts", postRouter);' #if someone sends a request to 'localhost:3000/posts' it will send them to the posts router and then refer them to either 'localhost:3000/' or 'localhost:3000/:id'
 'app.use("/api/v1/posts", postRouter)' #this is better express practice, so if you updated the version 'v1' it won't mess up the older versions, api for the frontend and backend on same domain
 he used postman to test and add posts, to actually create a post, you need middleware, which wasn't built yet : https://www.postman.com/ 
   web version doesn't work for testing on localhost : https://web.postman.co/ 
-app.use(express.json()); #will ensure the body get's attached to the request object
+app.use(express.json()); #will ensure the body get's attached to the request object, the middleware
 I downloaded, and installed postman, but it's not working for me, when I create a 'Body' raw JSON object and 'POST' {"status": "fail"}
   {"status": "fail","message": "Operation `posts.insertOne()` buffering timed out after 10000ms"} #added error logging, something is wrong with mongoDB, been at this for a while now, taking a break
 Future Sean(tommorrow) - it might be the credentials for mongoDB, I used fake ones, I thought since it ran locally, it wouldn't be an issue, but maybe that's it, idk, I can't post, so I have no blogs to read
@@ -312,9 +312,14 @@ test      8.00 KiB
 'docker logs docker-node-app-1' #gave me a bunch of errors, '// useFindAndModify: false,' apparently deprecated, tut is 3 years old, commented out
 just brought docker containers down and back up, that was it! finally fixed, and can move forward. Postman works!
 {    "status": "success",    "data": {        "post": {            "title": "test 1 title",            "body": "test 1 body",            "_id": "6721b9b22de090ee2e5fd3de",            "__v": 0        }    }}
+2:48:00 = Where he starts using Postman - if any problems again, just rewatched an hour, but problem is fixed, so, worth.
+'http://localhost:3000/api/v1/posts/6721b9b22de090ee2e5fd3de' #the id of the first created post, to test update change 'POST' to 'PATCH' on postman to update, notice how the id is part of the url, it works
+  #with the ID in URL, send a 'GET' request in postman to get an individual post, also works, very nice
+  #change to 'DELETE' keeping the URL with ID, to test delete, response : {    "status": "succes"}, also works
+  #test 'GET' again, receive nothing, also works - very cool
+after hours of debugging, I finally have a working crud applicASean - pretty cool - Taking a break, next sectSean @
 
-
-
+2:51:30 = Implementing user signup and login -
 
 
 

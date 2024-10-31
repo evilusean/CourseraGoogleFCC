@@ -332,8 +332,9 @@ docker compose down, up, and rebuild for the new library, everything works and r
 'authController.js' 'const bcrypt = require("bcryptjs")' 'const {username, password} = req.body' 'const hashpassword = await bcrypt.hash(password, 12)' 
   'const newUser = await User.create({username,password: hashpassword});
 I got it to work, but hash still isn't working
+added a new login function that will search for user, then will compare the hashed passwords and store the result in 'const isCorrect await bcrypt.compare(password, user.password)'
 
-
+3:07:00 Express Sessions for Login ===============================================================================================================================================================================
 
 
 

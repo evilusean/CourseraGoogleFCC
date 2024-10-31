@@ -326,7 +326,7 @@ after hours of debugging, I finally have a working crud applicASean - pretty coo
 'authController.js' 'try  {res.status(201).json({           status: "success",            data: {                user: newUser,            }, #try catch block, will return user if succesful
 'userRoutes.js' #used for user routes 
 Tested new user with postman, didn't work - need to debug, again - containers were running for 32 hours, 'zombie containers' brought down, forced a rebuild, and attempting user POST again, worked
-
+{    "status": "success",    "data": {        "user": {            "username": "seanjeev",            "password": "password",            "_id": "672379da4640f8b04b7dc290",            "__v": 0        }    }}
 
 
 

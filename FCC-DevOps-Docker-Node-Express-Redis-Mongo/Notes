@@ -327,10 +327,11 @@ after hours of debugging, I finally have a working crud applicASean - pretty coo
 'userRoutes.js' #used for user routes 
 Tested new user with postman, didn't work - need to debug, again - containers were running for 32 hours, 'zombie containers' brought down, forced a rebuild, and attempting user POST again, worked
 {    "status": "success",    "data": {        "user": {            "username": "seanjeev",            "password": "password",            "_id": "672379da4640f8b04b7dc290",            "__v": 0        }    }}
-
-
-
-
+'npm install bcrypt'  #the password is being stored in plaintext, which is a big no-no, so we need to install a new library 'BCryptJS' for password hashing 
+docker compose down, up, and rebuild for the new library, everything works and running, go back to the 
+'authController.js' 'const bcrypt = require("bcryptjs")' 'const {username, password} = req.body' 'const hashpassword = await bcrypt.hash(password, 12)' 
+  'const newUser = await User.create({username,password: hashpassword});
+I got it to work, but hash still isn't working
 
 
 

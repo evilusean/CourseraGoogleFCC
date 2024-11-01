@@ -335,7 +335,36 @@ I got it to work, but hash still isn't working
 added a new login function that will search for user, then will compare the hashed passwords and store the result in 'const isCorrect await bcrypt.compare(password, user.password)'
 
 3:07:00 Express Sessions for Login ===============================================================================================================================================================================
-https://www.npmjs.com/package/express-session
+'https://www.npmjs.com/package/express-session' #you can use 'express-session' for authentication, you can also use JSON web tokens
+When the user logs in, how do you store that state within the APP? with 'express-session' so the user can retrive/edit posts if they are the correct authenticated user
+we are also going to use 'Redis' database with 'express-session' to store sessions, wiring them together is very simple, you can also store it in the DB - mongo/postgre/whatever
+'https://www.npmjs.com/package/connect-redis' # will allow you to wire up 'express-session' with redis DB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

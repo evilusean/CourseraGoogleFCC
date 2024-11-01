@@ -339,6 +339,8 @@ added a new login function that will search for user, then will compare the hash
 When the user logs in, how do you store that state within the APP? with 'express-session' so the user can retrive/edit posts if they are the correct authenticated user
 we are also going to use 'Redis' database with 'express-session' to store sessions, wiring them together is very simple, you can also store it in the DB - mongo/postgre/whatever
 'https://www.npmjs.com/package/connect-redis' # will allow you to wire up 'express-session' with redis DB
+'https://hub.docker.com/_/redis' #redis container from docker hub, what the project will be using for authentication
+first go to 'docker-compose.yml' #in the shared file, because both production and development will need a redis DB
 
 
 

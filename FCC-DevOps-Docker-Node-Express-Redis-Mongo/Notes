@@ -341,8 +341,12 @@ we are also going to use 'Redis' database with 'express-session' to store sessio
 'https://www.npmjs.com/package/connect-redis' # will allow you to wire up 'express-session' with redis DB
 'https://hub.docker.com/_/redis' #redis container from docker hub, what the project will be using for authentication
 first go to 'docker-compose.yml' #in the shared file, because both production and development will need a redis DB 'image: redis'
-'npm install redis connect-redis express-session' #install dependancies, bring down containers, rebuild and back up
-
+'npm install redis connect-redis express-session' #install dependancies, bring down containers, rebuild and back up, import all into 'index.js'
+let RedisStore = require("connect-redis")(session); #import 
+'REDIS_URL: process.env.REDIS_URL || "redis"' 'REDIS_PORT: process.env.REDIS_PORT || 6379'#added to 'config.js', it's not a URL, remember we are using DNS, so it will give us the correct IP if we just do 'redis'
+let redisClient = redis.createClient({    host: "REDIS_URL",    port: "REDIS_PORT",}); #redis client in 'index.js'
+app.use(session({    store: new RedisStore({ client: redisClient }),    secret: SESSION_SECRET,    cookie: {        secure: false,resave: false,saveUninitialized: false,httpOnly: true,maxAge: 60000,    },}))
+  #session, that will let us authenticate a user with cookies
 
 
 

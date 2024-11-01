@@ -335,7 +335,7 @@ I got it to work, but hash still isn't working
 added a new login function that will search for user, then will compare the hashed passwords and store the result in 'const isCorrect await bcrypt.compare(password, user.password)'
 
 3:07:00 Express Sessions for Login ===============================================================================================================================================================================
-
+https://www.npmjs.com/package/express-session
 
 
 

@@ -1,6 +1,22 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const { MONGO_IP, MONGO_PORT, MONGO_USER, MONGO_PASSWORD } = require("./config/config");
+const session = require("express-session");
+const redis = require("redis");
+let RedisStore = require("connect-redis")(session);
+let redisClient = redis.createClient({
+    host: "REDIS_URL",
+    port: "REDIS_PORT",
+});
+
+const {
+    MONGO_USER,
+    MONGO_PASSWORD,
+    MONGO_IP,
+    MONGO_PORT,
+    REDIS_URL,
+    SESSION_SECRET,
+    REDIS_PORT,
+  } = require("./config/config");
 
 const postRouter = require("./routes/postRoutes.js");
 const userRouter = require("./routes/userRoutes.js")
@@ -62,6 +78,18 @@ app.get("/test-mongo", async (req, res) => {
         res.status(500).send("Failed to connect to MongoDB: " + error.message);
     }
 });
+
+app.use(session({
+    store: new RedisStore({ client: redisClient }),
+    secret: SESSION_SECRET,
+    cookie: {
+        secure: false,
+        resave: false,
+        saveUninitialized: false,
+        httpOnly: true,
+        maxAge: 60000,
+    },
+}))
 
 app.use(express.json());
 app.use("/api/v1/posts", postRouter);

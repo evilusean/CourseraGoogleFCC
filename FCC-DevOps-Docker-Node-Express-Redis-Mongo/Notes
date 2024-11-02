@@ -347,7 +347,7 @@ let RedisStore = require("connect-redis")(session); #import
 let redisClient = redis.createClient({    host: "REDIS_URL",    port: "REDIS_PORT",}); #redis client in 'index.js'
 app.use(session({    store: new RedisStore({ client: redisClient }),    secret: SESSION_SECRET,    cookie: {        secure: false,resave: false,saveUninitialized: false,httpOnly: true,maxAge: 60000,    },}))
   #session, that will let us authenticate a user with cookies
-
+After comparing his 'docker-compose.dev.yml' to mine, I realized I had a bunch of extra stuff in mine, hopefully nothing broke, because I removed alot, like ports.
 
 
 

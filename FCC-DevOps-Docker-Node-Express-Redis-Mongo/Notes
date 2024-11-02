@@ -360,9 +360,13 @@ Middleware = nothing more than a function that runs before your controller
   #will check if there is a user '(!user)' and return an error unauthorized message, if there ia a user will 'next()' and allow the user access
 'postRoutes.js' 'const protect = require("../middleware/authMiddleware");' #import, then 
   '.post(protect, postController.createPost);' #will check if user is logged on first, using 'protect' middleware, if they are, will then run rest of the logic to create the post
+you can now use the same middleware accross your app, and decide which routes you want to protect with user authentication, 
+Best practice, is to not allow the mongodb container to be accessable to the outside world - make it so only the express app/express container can talk to the mongodb for more security
+if you have 50 apps running, you will need to open 50 different ports, each app would need it's own DB and it's own ports - this isn't scalable 
+Load Balancer = Nginx 
+NGINX can be used as a docker container, to send traffic to various different other docker containers using the same port, instead one port will be published(80 is default port for http, 443 for https)
 
-
-
+3:40:50 = NGINX Container ======================================================================================================================================================================================
 
 
 

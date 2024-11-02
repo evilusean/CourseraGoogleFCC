@@ -348,6 +348,16 @@ let redisClient = redis.createClient({    host: "REDIS_URL",    port: "REDIS_POR
 app.use(session({    store: new RedisStore({ client: redisClient }),    secret: SESSION_SECRET,    cookie: {        secure: false,resave: false,saveUninitialized: false,httpOnly: true,maxAge: 60000,    },}))
   #session, that will let us authenticate a user with cookies
 After comparing his 'docker-compose.dev.yml' to mine, I realized I had a bunch of extra stuff in mine, hopefully nothing broke, because I removed alot, like ports.
+Postman to log in, works, 
+'docker exec -it docker_redis_1 bash' #go into redis container in bash
+'redis-cli' #will allow you to use CLI in redis DB
+'KEYS *' #will show entries in your redis DB, each session cookie only lasts 30 seconds
+'GET <key>' #will get info about the session cookie like username logged in, anything you set it up for
+the key can store any info on the users session, user will never receive the session, 
+'req.session.user = newUser;' #whenever a new user signsup, will sign them in 
+Middleware = nothing more than a function that runs before your controller
+'middleware/authMiddleware.js' const protect = (req,res,next) => {const {user} = req.session if(!user) {return res.status(401).json({status: "fail",message: "unauthorized",})    }    next()    }
+  #will check if there is a user '(!user)' and return an error unauthorized message, if there ia a user will 'next()' and allow the user access
 
 
 

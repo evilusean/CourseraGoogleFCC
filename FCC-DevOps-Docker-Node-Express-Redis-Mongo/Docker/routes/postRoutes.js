@@ -9,13 +9,13 @@ const router = express.Router();
 // Define the routes for posts
 router
   .route("/")
-  .get(postController.getAllPosts)
-  .post(postController.createPost); // Ensure this line is present
+  .get(protect, postController.getAllPosts)
+  .post(protect, postController.createPost); 
 
 router
   .route("/:id")
-  .get(postController.getOnePost)
-  .patch(postController.updatePost)
-  .delete(postController.deletePost);
+  .get(protect, postController.getOnePost)
+  .patch(protect, postController.updatePost)
+  .delete(protect, postController.deletePost);
 
 module.exports = router;

@@ -367,9 +367,15 @@ Load Balancer = Nginx
 NGINX can be used as a docker container, to send traffic to various different other docker containers using the same port, instead one port will be published(80 is default port for http, 443 for https)
 
 3:40:50 = NGINX Container ======================================================================================================================================================================================
+https://hub.docker.com/_/nginx
+'nginx/default.conf' #only one file for nginx, will have listening port, and how to redirect traffic to node containers 'location' 
+  'proxy_pass http://node-app:3000;' = where you want to send the traffic(node app containers) and port 3000 through the DNS
+  'proxy_set_header X-Real-IP $remote_adder' #will save the IP addresses that connect
+Next we are going to scale up our app by adding a second node instance, take everything down and add the '=2'
+'docker copose -f docker-compose.yml -f docker-compose.dev.yml up -d --scale node-app=2' #will launch 2 instances of the node app with the '--scale' flag
+'cors' #a library that allows you to have different domains
 
-
-
+3:58:00 = Deploying App to Production =============================================================================================================================================================================
 
 
 

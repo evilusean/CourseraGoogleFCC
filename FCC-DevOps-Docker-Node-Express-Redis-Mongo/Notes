@@ -399,6 +399,10 @@ Environment variables will be needed, from node_app 'MONGO_USER' 'MONGO_PASSWORD
 in order to have it persist through a reboot, create an environment file, you should store this seperately from the application, so future sean doesn't pull a rookie move
 'vi .env' # from CLI will create the '.env' file, add all the environment variables here, 
 in '/root' of VM, 'ls la' go to '.profile' file, open it, add a config 'set -o allexport; source /root/.env; set -o allexport' #will loop through .env file and export each line and set them on the VM
+'cd app/' 'git clone <GITHUB REPO URL' #will clone the app into the VM, 
+'docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d' #will spin up the docker node app with all containers
+'docker ps' #check containers
+
 
 
 

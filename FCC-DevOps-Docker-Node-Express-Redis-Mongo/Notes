@@ -389,12 +389,31 @@ Log in to github -> New Repo -> cd to directory -> First create a git ignore(nod
   'git remote add origin <REPO>' -> 'git push -u origin main' #too commit the project through CLI instead of using github desktop
 
 4:05:30 = Docker configs for production to be deployed on a production server =====================================================================================================================================
-
-
-
-
-
-
+Environment variables will be needed, from node_app 'MONGO_USER' 'MONGO_PASSWORD' 'SESSION_SECRET' and from mongo 'MONGO_INITDB_ROOT_USERNAME' 'MONO_INITDB_ROOT_PASSWORD'
+  you shouldn't hard code your secrets, so you don't accidently push configs or passwords into github, get all the environment variables from the machine(VM) that docker is running on
+  docker will pull all the environment variables from the host ubuntu machine - passwords should never be stored publicly, rookie mistake
+'docker-compose.prod.yml' '- MONGO_USER=${MONGO_USER}''- MONGO_PASSWORD=${MONGO_PASSWORD}' #notice the '$' dollar sign, this lets our file know the env variable to pull the value from the VM env file
+'export SESSION_SECRET="secret"' #to set an environment variable on a linux machine, <secret> is arbitrary, it will now be pushed to the docker-compose file asking for 'SESSION_SECRET=${SESSION_SECRET}'
+  be careful, some using export might not save on reboot
+'printenv' #will print out all environment variables on the VM
+in order to have it persist through a reboot, create an environment file, you should store this seperately from the application, so future sean doesn't pull a rookie move
+'vi .env' # from CLI will create the '.env' file, add all the environment variables here, 
+in '/root' of VM, 'ls la' go to '.profile' file, open it, add a config 'set -o allexport; source /root/.env; set -o allexport' #will loop through .env file and export each line and set them on the VM
+'cd app/' 'git clone <GITHUB REPO URL' #will clone the app into the VM, 
+'docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d' #will spin up the docker node app with all containers
+'docker ps' #check containers
+to push changes from dev to production environment, push to github (add, commit, push) -> production server pull (cd to app, git pull) -> no nodemon, so rebuild image use 'docker compose up --build'
+'docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build --no-deps node-app' #specify service name to tell docker compose to only rebuild node app and not touch other containers
+  our 'node-app' is dependant on 'mongo' in the docker-compose.yml file so, use the '--no-deps' flag to ignore the 'depends on' from the .yml file
+  you generally don't want to be rebuilding your database so if 'node-app' 'depends on' 'mongo' use the '--no-deps' flag to avoid rebuilding the DB
+'--force-recreate'  #will force recreate the containers even if their configs or images havent changed
+you should never build image on production server - building an image takes resources, instead, better workflow is :
+build image on dev server -> push built node image (docker hub) -> pull node image to production server -> docker compose up -> rebuild node container
+docker hub gives you one limited private repository and unlimited public repositorys
+'docker push <OPTIONS> <NAME><TAG>' #will allow you to push an image to docker hub, if you have an account
+'docker image ls' #list all images
+'docker login' #to sign in so you can push the image
+'image: seans/node-app' #in the 'docker-compose.yml' file, requires a very specific naming convention, it needs to have the '<sean-username>' then image name to upload it properly
 
 
 

@@ -414,9 +414,9 @@ docker hub gives you one limited private repository and unlimited public reposit
 'docker image ls' #list all images
 'docker login' #to sign in so you can push the image
 'image: seans/node-app' #in the 'docker-compose.yml' file, requires a very specific naming convention, it needs to have the '<sean-username>' then image name to upload it properly
-
-
-
+'docker image tag <IMAGE> <IMAGE RENAME>' #to rename the image
+push image to dockerhub, take the pushed image, and pull the image to production server, make sure to change 'docker-compose.yml' 'image: seans/node-app' <USERNAME>/<IMAGENAME>
+'docker compose -f docker-compose.yml -f docker-compose.prod.yml push' #will push image to dockerhub
 
 
 

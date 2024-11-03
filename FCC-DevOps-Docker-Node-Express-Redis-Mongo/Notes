@@ -389,10 +389,16 @@ Log in to github -> New Repo -> cd to directory -> First create a git ignore(nod
   'git remote add origin <REPO>' -> 'git push -u origin main' #too commit the project through CLI instead of using github desktop
 
 4:05:30 = Docker configs for production to be deployed on a production server =====================================================================================================================================
-
-
-
-
+Environment variables will be needed, from node_app 'MONGO_USER' 'MONGO_PASSWORD' 'SESSION_SECRET' and from mongo 'MONGO_INITDB_ROOT_USERNAME' 'MONO_INITDB_ROOT_PASSWORD'
+  you shouldn't hard code your secrets, so you don't accidently push configs or passwords into github, get all the environment variables from the machine(VM) that docker is running on
+  docker will pull all the environment variables from the host ubuntu machine - passwords should never be stored publicly, rookie mistake
+'docker-compose.prod.yml' '- MONGO_USER=${MONGO_USER}''- MONGO_PASSWORD=${MONGO_PASSWORD}' #notice the '$' dollar sign, this lets our file know the env variable to pull the value from the VM env file
+'export SESSION_SECRET="secret"' #to set an environment variable on a linux machine, <secret> is arbitrary, it will now be pushed to the docker-compose file asking for 'SESSION_SECRET=${SESSION_SECRET}'
+  be careful, some using export might not save on reboot
+'printenv' #will print out all environment variables on the VM
+in order to have it persist through a reboot, create an environment file, you should store this seperately from the application, so future sean doesn't pull a rookie move
+'vi .env' # from CLI will create the '.env' file, add all the environment variables here, 
+in '/root' of VM, 'ls la' go to '.profile' file, open it, add a config 'set -o allexport; source /root/.env; set -o allexport' #will loop through .env file and export each line and set them on the VM
 
 
 

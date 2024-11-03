@@ -402,8 +402,9 @@ in '/root' of VM, 'ls la' go to '.profile' file, open it, add a config 'set -o a
 'cd app/' 'git clone <GITHUB REPO URL' #will clone the app into the VM, 
 'docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d' #will spin up the docker node app with all containers
 'docker ps' #check containers
-
-
+to push changes from dev to production environment, push to github (add, commit, push) -> production server pull (cd to app, git pull) -> no nodemon, so rebuild image use 'docker compose up --build'
+'docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build --no-deps node-app' #specify service name to tell docker compose to only rebuild node app and not touch other containers
+  our 'node-app' is dependant on 'mongo' in the docker-compose.yml file so, use the '--no-deps' flag to ignore the 'depends on' from the .yml file
 
 
 

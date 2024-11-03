@@ -405,7 +405,15 @@ in '/root' of VM, 'ls la' go to '.profile' file, open it, add a config 'set -o a
 to push changes from dev to production environment, push to github (add, commit, push) -> production server pull (cd to app, git pull) -> no nodemon, so rebuild image use 'docker compose up --build'
 'docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build --no-deps node-app' #specify service name to tell docker compose to only rebuild node app and not touch other containers
   our 'node-app' is dependant on 'mongo' in the docker-compose.yml file so, use the '--no-deps' flag to ignore the 'depends on' from the .yml file
-
+  you generally don't want to be rebuilding your database so if 'node-app' 'depends on' 'mongo' use the '--no-deps' flag to avoid rebuilding the DB
+'--force-recreate'  #will force recreate the containers even if their configs or images havent changed
+you should never build image on production server - building an image takes resources, instead, better workflow is :
+build image on dev server -> push built node image (docker hub) -> pull node image to production server -> docker compose up -> rebuild node container
+docker hub gives you one limited private repository and unlimited public repositorys
+'docker push <OPTIONS> <NAME><TAG>' #will allow you to push an image to docker hub, if you have an account
+'docker image ls' #list all images
+'docker login' #to sign in so you can push the image
+'image: seans/node-app' #in the 'docker-compose.yml' file, requires a very specific naming convention, it needs to have the '<sean-username>' then image name to upload it properly
 
 
 

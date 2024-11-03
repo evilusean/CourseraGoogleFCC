@@ -375,7 +375,7 @@ Next we are going to scale up our app by adding a second node instance, take eve
 'docker copose -f docker-compose.yml -f docker-compose.dev.yml up -d --scale node-app=2' #will launch 2 instances of the node app with the '--scale' flag
 'cors' #a library that allows you to have different domains
 
-3:58:00 = Deploying App to Production =============================================================================================================================================================================
+3:59:00 = Deploying App to Production =============================================================================================================================================================================
 
 
 

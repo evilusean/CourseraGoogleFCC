@@ -375,12 +375,20 @@ Next we are going to scale up our app by adding a second node instance, take eve
 'docker copose -f docker-compose.yml -f docker-compose.dev.yml up -d --scale node-app=2' #will launch 2 instances of the node app with the '--scale' flag
 'cors' #a library that allows you to have different domains
 
-3:58:00 = Deploying App to Production =============================================================================================================================================================================
+3:59:00 = Deploying App to Production =============================================================================================================================================================================
+Not gonna do the rest step by step, just gonna take notes, I don't want to set up an AWS/digital ocean/azure or whatever VM service to do the next part
+'Ubuntu Server' Digital Ocean - 20.04 - install 'Docker' on production app or 'Docker Engine on Ubuntu'
+https://docs.docker.com/engine/install/ubuntu/
+https://get.docker.com/ 
+'curl -fsSL https://get.docker.com -o install-docker.sh' #above has a oneliner command to To install the latest stable versions of Docker CLI, Docker Engine, and their dependencies
+https://docs.docker.com/compose/install/
+docker compose will not be installed with the one liner, must be seperate 
 
+4:03:15 = Setting up a Git Repo for the application to store it in ================================================================================================================================================
+Log in to github -> New Repo -> cd to directory -> First create a git ignore(node modules, don't push) -> 'git init' -> 'git add --all' -> 'git commit -m "first commit"' -> 'git branch -M main' ->
+  'git remote add origin <REPO>' -> 'git push -u origin main' #too commit the project through CLI instead of using github desktop
 
-
-
-
+4:05:30 = Docker configs for production to be deployed on a production server =====================================================================================================================================
 
 
 

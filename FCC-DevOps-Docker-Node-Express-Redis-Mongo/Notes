@@ -417,6 +417,7 @@ docker hub gives you one limited private repository and unlimited public reposit
 'docker image tag <IMAGE> <IMAGE RENAME>' #to rename the image
 push image to dockerhub, take the pushed image, and pull the image to production server, make sure to change 'docker-compose.yml' 'image: seans/node-app' <USERNAME>/<IMAGENAME>
 'docker compose -f docker-compose.yml -f docker-compose.prod.yml push' #will push image to dockerhub
+workflow = changes -> build image -> push new image to docker hub -> go to production server and pull new image -> select what you want to rebuild / up on production (don't accidently rebuild a DB - rookie)
 
 
 

@@ -445,7 +445,9 @@ you can place all of your configs into a docker-compose file for using swarm or 
 'restart policy' #how to restart each service, if you should, when to, etc
   node-app:    deploy:      replicas: 8      restart_policy:        condition: any      update_config:        parallelism: 2        delay: 15s #'node-app' setting in 'docker-compose.prod.yml'
 'paralelism' # will update the amount of containers at a time
-
+'delay 15s' #
+'docker stack deploy -c docker-compose.yml docker-compose.prod.yml <APPNAME>' #will deploy your docker compose files as a stack, its a swarm command, so it will deploy many containers that you specified
+  #notice how '-c' is used instead of '-f'
 
 
 

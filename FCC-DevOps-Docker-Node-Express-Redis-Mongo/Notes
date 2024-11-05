@@ -420,8 +420,11 @@ push image to dockerhub, take the pushed image, and pull the image to production
 workflow = changes -> build image -> push new image to docker hub -> go to production server and pull new image -> select what you want to rebuild / up on production (don't accidently rebuild a DB - rookie)
 
 4:46:30 = Automatically detect a pushed image and pull it to production ===========================================================================================================================================
-
-
+'Docker WatchTower' = Will automatically check docker hub for a new image, and if found, will pull it and restart production server container - 
+  https://github.com/containrrr/watchtower
+  it's ran as a container, a container that handles the automation of your other containers - Yo, I heard you like containers
+'docker run -d --name watchtower -e WATCHTOWER_TRACE=true -e WATCHTOWER_DEBUG=true -e WATCHTOWER_POLL_INTERVAL=50 -v /var/run/docker.sock:/var/run/docker.sock containerrr/watchtower' 
+  #will launch the watchtower container
 
 
 

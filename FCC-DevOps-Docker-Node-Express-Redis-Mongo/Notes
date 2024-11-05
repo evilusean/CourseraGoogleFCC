@@ -419,7 +419,7 @@ push image to dockerhub, take the pushed image, and pull the image to production
 'docker compose -f docker-compose.yml -f docker-compose.prod.yml push' #will push image to dockerhub
 workflow = changes -> build image -> push new image to docker hub -> go to production server and pull new image -> select what you want to rebuild / up on production (don't accidently rebuild a DB - rookie)
 
-
+4:46:30 = Automatically detect a pushed image and pull it to production ===========================================================================================================================================
 
 
 

@@ -429,7 +429,15 @@ workflow = changes -> build image -> push new image to docker hub -> go to produ
   #will only ensure that 'app_node-app-1' is pulled and updated if there is a new image from docker hub automatically
 'docker rm watchtower -f' #to remove watchtower container
 
-4:58:30 = Kubernetes ===============================================================================================================================================================================================
+4:58:30 = Docker Swarm - Similar to kubernetes =====================================================================================================================================================================
+'Docker Swarm' = Container Orchestrator - Will help acheive lossless upgrades/rolling updates (CI/CD)
+Docker Compose = one server(network) vs Docker Swarm = multiple servers, redundancy, distribution - has manager nodes and worker nodes - each server is referred to as a node
+manager nodes push tasks - worker nodes carry out tasks
+manager nodes can be both a manager and worker node
+Docker Swarm gets shipped with Docker, should already be installed, but is disabled by default
+'docker info' #check if swarm is enabled or disabled
+'docker swarm init' #will enable docker swarm - you need to select an IP address
+
 
 
 

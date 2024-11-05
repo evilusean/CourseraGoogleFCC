@@ -437,6 +437,14 @@ manager nodes can be both a manager and worker node
 Docker Swarm gets shipped with Docker, should already be installed, but is disabled by default
 'docker info' #check if swarm is enabled or disabled
 'docker swarm init' #will enable docker swarm - you need to select an IP address
+'docker swarm join ....' #will allow you to add a new manager/worker node to swarm
+instead of working with containers, docker swarm works with services very similar to a container
+'docker service --help' #shows all commands for docker swarm
+you can place all of your configs into a docker-compose file for using swarm or use the docker compse files you already have
+'replicas' defines how many instances of a service you want to run, if you set it to 6, will give 6 containers, if demand increases, increase the number of replicas
+'restart policy' #how to restart each service, if you should, when to, etc
+  node-app:    deploy:      replicas: 8      restart_policy:        condition: any      update_config:        parallelism: 2        delay: 15s #'node-app' setting in 'docker-compose.prod.yml'
+'paralelism' # will update the amount of containers at a time
 
 
 

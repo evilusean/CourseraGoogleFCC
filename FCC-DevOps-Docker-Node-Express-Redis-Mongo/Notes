@@ -427,7 +427,9 @@ workflow = changes -> build image -> push new image to docker hub -> go to produ
   #will launch the watchtower container
 'docker run -d --name watchtower -e WATCHTOWER_TRACE=true -e WATCHTOWER_DEBUG=true -e WATCHTOWER_POLL_INTERVAL=50 -v /var/run/docker.sock:/var/run/docker.sock containerrr/watchtower app_node-app-1'
   #will only ensure that 'app_node-app-1' is pulled and updated if there is a new image from docker hub automatically
+'docker rm watchtower -f' #to remove watchtower container
 
+4:58:30 = Kubernetes ===============================================================================================================================================================================================
 
 
 

@@ -1,1 +1,19 @@
 Start: 21November2024
+
+IntelliJ Idea IDE for Java (Arch Linux):
+https://archlinux.org/packages/extra/x86_64/intellij-idea-community-edition/
+https://www.jetbrains.com/help/idea/installation-guide.html
+
+$ sudo pacman -Syyu #Update system
+   sudo pacman -S libseccomp #missing dependancies
+   export PKG_CONFIG_PATH=/usr/lib/pkgconfig:$PKG_CONFIG_PATH #had to install, after this, makepkg worked
+sudo pacman -S snapd #install snapd, didn't work, had to do the 'makepkg' below
+git clone https://aur.archlinux.org/snapd.git
+cd snapd
+makepkg -si
+sudo systemctl enable --now snapd.socket 
+sudo systemctl enable --now snapd.apparmor.service
+sudo ln -s /var/lib/snapd/snap /snap
+sudo snap install intellij-idea-community --classic #will install the new intelliJ IDE on Arch
+
+Has code highlighting, showing realtime errors, and suggestions, realtime compile, 

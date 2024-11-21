@@ -1,3 +1,9 @@
+# FreeCodeCamp - Basics of Java Programming :
+Start: 21November2024</br>
+End: </br>
+
+[Tutorial](https://www.youtube.com/watch?v=GdzRzWymT4c&ab_channel=freeCodeCamp.org) : [https://www.freecodecamp.org/news/learn-the-basics-of-java-programming/](https://www.freecodecamp.org/news/learn-the-basics-of-java-programming/)
+
 # FreeCodeCamp - Devops - Learn Docker by Building a Node / Express / MongoDB / Redis App:
 Start: 16October2024</br>
 End: 03November2024</br>

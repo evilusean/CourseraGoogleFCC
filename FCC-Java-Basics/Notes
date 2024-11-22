@@ -19,3 +19,6 @@ sudo snap install intellij-idea-community --classic #will install the new intell
  
 When creating a project, you will select a 'JDK' or java development kit,
 Select Version '17' (current is 23.0.1) - since '17' is the one with long term support
+Next is the vendor, the company which provides the SDK 'Amazon Coretto 17.0.13' and 'Location'
+
+7:16 Starting Project ================================================================================================================================================

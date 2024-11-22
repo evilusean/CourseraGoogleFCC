@@ -3,6 +3,7 @@ Start: 21November2024
 IntelliJ Idea IDE for Java (Arch Linux):
 https://archlinux.org/packages/extra/x86_64/intellij-idea-community-edition/
 https://www.jetbrains.com/help/idea/installation-guide.html
+Has code highlighting, showing realtime errors, and suggestions, realtime compile,
 
 $ sudo pacman -Syyu #Update system
    sudo pacman -S libseccomp #missing dependancies
@@ -15,5 +16,6 @@ sudo systemctl enable --now snapd.socket
 sudo systemctl enable --now snapd.apparmor.service
 sudo ln -s /var/lib/snapd/snap /snap
 sudo snap install intellij-idea-community --classic #will install the new intelliJ IDE on Arch
-
-Has code highlighting, showing realtime errors, and suggestions, realtime compile, 
+ 
+When creating a project, you will select a 'JDK' or java development kit,
+Select Version '17' (current is 23.0.1) - since '17' is the one with long term support

@@ -23,3 +23,71 @@ Next is the vendor, the company which provides the SDK 'Amazon Coretto 17.0.13' 
 
 7:16 = Starting Project ================================================================================================================================================
 Name = 'Pascal Case' Every word should start with a capital letter 
+Left hand side - 'Project Pane' - After creating a project you will see 'src' 'main' this is a class, double click to open, 
+'System.out.println("i = " + i);' #will have the system print line 'println' of the current count
+'System.out.println("Hello World");' #hello world, semi colons are important in Java, not optional - will open console and output text, also you need '"' double quotation marks for text, not single
+IntelliJ has pretty good code completion out the box, tab to complete
+'Ctrl' + 'Shift' + 'F10' = To run our code, 2 ways, right click the class/code 'Run "Main.main()"' or click the arrow on top right hand side of IDE
+Function = collection of code together to do a specific task
+
+13:30 = Keywords Expalained =============================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

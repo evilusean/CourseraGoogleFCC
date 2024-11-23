@@ -38,9 +38,9 @@ All code created in Java must be part of a class, most of the code you are going
 Parameters are what inputs will be taken
 
 20:15 = Variables ========================================================================================================================================================
-
-
-
+Variables = used to store data
+String name = "Sean"; #has type safety, will only be able to save a string in the "" double quotation marks for the variable 'name'
+int age = 33; #'int' integer, for the variable 'age'
 
 
 

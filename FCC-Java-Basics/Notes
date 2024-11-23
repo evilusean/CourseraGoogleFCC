@@ -31,12 +31,13 @@ IntelliJ has pretty good code completion out the box, tab to complete
 Function = collection of code together to do a specific task
 
 13:30 = Keywords Expalained =============================================================================================================================================
+public class Main { #'public' is a keyword that is an 'access modifier' which will be publicly accessible - 'class' every function you use in Java must be part of a class - 'Main' the class '{' block of code
+    public static void main(String[] args) { #'void' signifies the return type of the function (void returns nothing), 'main' is the name of the function(entry point of app)'(String[] args)' #these are the parameters
+      System.out.println("Hello World"); #simple statement, the code that gets executed from the 'main' function
+All code created in Java must be part of a class, most of the code you are going to write is going to come from the 'main' function
+Parameters are what inputs will be taken
 
-
-
-
-
-
+20:15 = Variables ========================================================================================================================================================
 
 
 

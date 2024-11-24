@@ -68,6 +68,7 @@ double maxDouble = Double.MAX_VALUE; #The maximum double value is 1.797693134862
 double minDouble = Double.MIN_VALUE; #The minimum double value is 4.9E-324
 double myDouble = 12.12; #this is weird, it doesn't need the 'D'(heh) to follow the number, it just works.
 
+50:40 = Boolean and Char ===============================================================================================================================================================================
 
 
 

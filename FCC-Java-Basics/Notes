@@ -40,15 +40,18 @@ Parameters are what inputs will be taken
 20:15 = Variables ========================================================================================================================================================
 Variables = used to store data
 String name = "Sean"; #has type safety, will only be able to save a string in the "" double quotation marks for the variable 'name'
-int age = 33; #'int' integer, for the variable 'age'
+int age = 33; #'int' integer, for the variable 'age', whole numbers
 
 29:00 = Variables: int, byte, and long ================================================================================================================================================================
-
-
-
-
-
-
+Datatypes = Different datatypes that can be stored in variables
+`int max = Integer.MAX_VALUE;` #will allow you to store the largest integer datatype - The Maximum Value is 2147483647
+'int min = Integer.MIN_VALUE;' #minimum integer value - The minimum value is -2147483648
+if you try to put a value above the min and max integers, the code will break, overflow
+'Ctrl' + 'D' = Will copy selected code
+byte maxByteValue = Byte.MAX_VALUE; #The minimum byte value is -128
+byte minByteValue = Byte.MIN_VALUE; #The maximum byte value is 127
+long maxLongValue = Long.MAX_VALUE; #The maximum long value is 9223372036854775807
+long minLongValue = Long.MIN_VALUE; #The minimum long value is -9223372036854775808
 
 
 

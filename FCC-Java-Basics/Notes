@@ -58,7 +58,7 @@ long myNumber = 2147483648L; #notice the 'l' at the end, it will default be cons
 short maxShort = Short.MAX_VALUE; #The maximum short value is 32767
 short minShort = Short.MIN_VALUE; #The minimum short value is -32768
 
-
+44:20 = Floats and Doubles =============================================================================================================================================================================
 
 
 

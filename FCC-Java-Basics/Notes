@@ -54,8 +54,9 @@ long maxLongValue = Long.MAX_VALUE; #The maximum long value is 92233720368547758
 long minLongValue = Long.MIN_VALUE; #The minimum long value is -9223372036854775808
 long myNumber = 2147483648L; #notice the 'l' at the end, it will default be considred an integer even with the 'long' prefix before the name 'myNumber' - you need to add 'l' for variables to long (uppercase works too)
 
-
-
+41:55 = Datatype: Short ================================================================================================================================================================================
+short maxShort = Short.MAX_VALUE; #The maximum short value is 32767
+short minShort = Short.MIN_VALUE; #The minimum short value is -32768
 
 
 

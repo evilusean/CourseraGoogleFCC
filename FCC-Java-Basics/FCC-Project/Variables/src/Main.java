@@ -18,6 +18,9 @@ public class Main {
         double maxDouble = Double.MAX_VALUE;
         double minDouble = Double.MIN_VALUE;
         double myDouble = 12.12;
+        char myChar = 'A';
+        boolean isActive = true;
+        
 
         System.out.println("Hello " + name + ". Your age is " + age);
         System.out.println("The Maximum Value is " + max);

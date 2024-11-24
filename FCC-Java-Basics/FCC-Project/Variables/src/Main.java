@@ -10,6 +10,9 @@ public class Main {
         long minLongValue = Long.MIN_VALUE;
         long myNumber = 2147483648L;
         // notice the 'L' at the end, you will default be considred an integer even with the 'long' prefix before the name 'myNumber' - you need to add 'l'
+        short maxShort = Short.MAX_VALUE;
+        short minShort = Short.MIN_VALUE;
+
         System.out.println("Hello " + name + ". Your age is " + age);
         System.out.println("The Maximum Value is " + max);
         System.out.println("The minimum value is " + min);
@@ -17,5 +20,9 @@ public class Main {
         System.out.println("The maximum byte value is " + maxByteValue);
         System.out.println("The minimum long value is " + minLongValue);
         System.out.println("The maximum long value is " + maxLongValue);
+        System.out.println("The maximum short value is " + maxShort);
+        System.out.println("The minimum short value is " + minShort);
+
+
     }
 }

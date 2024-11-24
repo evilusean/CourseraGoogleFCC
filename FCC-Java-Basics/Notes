@@ -58,11 +58,15 @@ long myNumber = 2147483648L; #notice the 'l' at the end, it will default be cons
 short maxShort = Short.MAX_VALUE; #The maximum short value is 32767
 short minShort = Short.MIN_VALUE; #The minimum short value is -32768
 
-
-
-
-
-
+44:20 = Floats and Doubles =============================================================================================================================================================================
+Float has a size of 32 bits
+Double has a size of 64 bits - more precise
+float maxFloat = Float.MAX_VALUE; #The maximum float value is 3.4028235E38
+float minFloat = Float.MIN_VALUE; #The minimum float value is 1.4E-45
+float myFloat = 3.14F; #same as a Long, notice the 'F' at the end of the number, even though you explicitly declare it with 'float' as the variable, you will need to add 'F' after the number 
+double maxDouble = Double.MAX_VALUE; #The maximum double value is 1.7976931348623157E308
+double minDouble = Double.MIN_VALUE; #The minimum double value is 4.9E-324
+double myDouble = 12.12; #this is weird, it doesn't need the 'D'(heh) to follow the number, it just works.
 
 
 

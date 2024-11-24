@@ -73,11 +73,14 @@ char myChar = 'A'; #char = character, you can only use one element/character - a
 boolean myBoolean = true; #true or false
 if something is 'greyed out' in IntelliJ, it means it isn't being used else where in the code, didn't bother to use print statements
 
-
-
-
-
-
+54:50 = Operators and Operations =======================================================================================================================================================================
+operators = perform the operation '+' add '-' subtract '*' multiply '/' division(will default as integer, variable will need to be declared as float) '%' modulus(remainder)
+operands = are the ones on which the operation is performed 'num1' 'num2' 
+System.out.println(num1 + num2 * 6); #order of operations means multiplication before addition, you can change order of operations by adding (parenthesis) PEMDAS
+Abbreviations = 'myNumber+=1;' #adds 1 to the number, '+=' '-=' '*=' '/=' '%=' #just a shorthand way of writing an operation 
+myNumber++; #shorthand way to add one 
+System.out.println(myNumber++); // prints and increments (will print number then increment)
+System.out.println(++myNumber); //increments and prints (will increment then print number) - subtle
 
 
 

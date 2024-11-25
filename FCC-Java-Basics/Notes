@@ -90,6 +90,39 @@ The flow of Java code is linear - it is executed line by line - with an 'If Stat
 if (<condition>) {<run code inside these curly braces>} #same as every other if statement
 } else { <run this code if no conditions are met> }
 
+1:23:20 = Else if and Logical NOT Operator ===============================================================================================================================================================
+if (<condition>) {<run this code>} else if(<check another condition>) {<run this code>} else {<run this code if no conditions are met>}
+you can have multiple else ifs chained after another, same as every other programming language, the 'else' statement at the end is the default code that will run if no other conditions are met
+'!=' = not equals operator, can use in the if statement that IF the statement or condition isn't true, then activate that code block
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

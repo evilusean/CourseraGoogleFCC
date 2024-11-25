@@ -82,7 +82,7 @@ myNumber++; #shorthand way to add one
 System.out.println(myNumber++); // prints and increments (will print number then increment)
 System.out.println(++myNumber); //increments and prints (will increment then print number) - subtle
 
-
+1:12:45 = If Statement ==================================================================================================================================================================================
 
 
 

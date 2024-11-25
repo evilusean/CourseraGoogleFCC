@@ -94,9 +94,10 @@ if (<condition>) {<run code inside these curly braces>} #same as every other if 
 if (<condition>) {<run this code>} else if(<check another condition>) {<run this code>} else {<run this code if no conditions are met>}
 you can have multiple else ifs chained after another, same as every other programming language, the 'else' statement at the end is the default code that will run if no other conditions are met
 '!=' = not equals operator, can use in the if statement that IF the statement or condition isn't true, then activate that code block
+boolean isActive = true; if (isActive) {} #notice that you don't need '==' to say if the boolean == true, it is implicit, you don't need to explicitly say it
+if (!isActive) {} #'!' exclamation point is the 'not' operator, 
 
-
-
+1:34:10 = Nested If statements ==========================================================================================================================================================================
 
 
 

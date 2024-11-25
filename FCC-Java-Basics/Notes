@@ -83,9 +83,12 @@ System.out.println(myNumber++); // prints and increments (will print number then
 System.out.println(++myNumber); //increments and prints (will increment then print number) - subtle
 
 1:12:45 = If Statement ==================================================================================================================================================================================
-
-
-
+The flow of Java code is linear - it is executed line by line - with an 'If Statement' you can break the flow of a program which is linear to only execute if a condition is true, otherwise skip
+'=' # assignment operator, used to assign data to variables
+'==' #'equal to' operator, used to deduce if one value is equal to another, checks if they are the same
+'sout' #shortcut to type System.out.println();
+if (<condition>) {<run code inside these curly braces>} #same as every other if statement
+} else { <run this code if no conditions are met> }
 
 
 

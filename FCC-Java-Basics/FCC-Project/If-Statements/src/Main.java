@@ -20,5 +20,12 @@ public class Main {
         } else {
             System.out.println("All conditions failed");
         }
+        //Boolean if statement
+        boolean isActive = true;
+        if (isActive) {
+            System.out.println("The user is active.");
+        } else {
+            System.out.println("The user is not active");
+        }
     }
 }

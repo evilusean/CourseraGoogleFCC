@@ -33,5 +33,13 @@ public class Main {
         } else {
             System.out.println("so called representative democracy is a sham");
         }
+        // '||' OR operator
+        boolean VOOOOOOTE = false;
+        boolean brainwashed_public = true;
+        if (VOOOOOOTE == true || brainwashed_public == true) {
+            System.out.println("Even if voting mattered(it doesn't). \nThe majority are brainwashed and beleive whatever garbage they are fed, without question.");
+        } else {
+            System.out.println("Lol, Lmao");
+        }
     }
 }

@@ -122,7 +122,10 @@ You can add a 'default' that will run if none of the 'cases' are met
 'public static Scanner scanner = new Scanner(System.in); #will allow you to input into the console
 
 1:55:20 = Enhanced SWITCH statement =======================================================================================================================================================================
+'enhanced switch statement' just changes the code formatting, instead of being easy to read like above it turns into below example :
+case 10 -> System.out.println("The time is " + time + "\nTime for a change."); #this same pattern repeated for each different case, notice the '->' instead of ':' followed by executed code
 
+1:57:20 = FOR loop =======================================================================================================================================================================================
 
 
 

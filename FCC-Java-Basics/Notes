@@ -101,12 +101,12 @@ if (!isActive) {} #'!' exclamation point is the 'not' operator,
 Nest an if inside an if statement or an else statement
 
 1:36:30 = logical AND operator ==========================================================================================================================================================================
-'&&' = logical and operator, can be used to add 2 
+'&&' = logical AND operator, can be used to add 2 conditions, returns true if both conditions are true
 
 1:41:10 = Logical OR operator ===========================================================================================================================================================================
+'||' = logical OR operator, Returns true if one condition is true
 
-
-
+1:45:00 = SWITCH statement ==============================================================================================================================================================================
 
 
 

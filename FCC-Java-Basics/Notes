@@ -98,9 +98,9 @@ boolean isActive = true; if (isActive) {} #notice that you don't need '==' to sa
 if (!isActive) {} #'!' exclamation point is the 'not' operator, 
 
 1:34:10 = Nested If statements ==========================================================================================================================================================================
+Nest an if inside an if statement or an else statement
 
-
-
+1:36:30 = logical AND operator ==========================================================================================================================================================================
 
 
 

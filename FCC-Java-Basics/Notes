@@ -107,10 +107,21 @@ Nest an if inside an if statement or an else statement
 '||' = logical OR operator, Returns true if one condition is true
 
 1:45:00 = SWITCH statement ==============================================================================================================================================================================
+Will test a variable and whatever 'CASE' is met(if statement) it will then activate that part of the code, example below:
+        switch (time) {
+            case 10:
+                System.out.println("The time is " + time + "\nTime for a change.");
+                break;
+            case 12:
+                System.out.println("The time is " + time + "\nTime for some hope(cope)");
+                break;
+            default:
+                System.out.println("50% are dependant on a corrupt system.");
+        } #make sure to 'break' out of the code, or the code will execute all the branches sequentially, linearly, top to bottom
+You can add a 'default' that will run if none of the 'cases' are met
+'public static Scanner scanner = new Scanner(System.in); #will allow you to input into the console
 
-
-
-
+1:55:20 = Enhanced SWITCH statement =======================================================================================================================================================================
 
 
 

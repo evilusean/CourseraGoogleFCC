@@ -41,5 +41,18 @@ public class Main {
         } else {
             System.out.println("Lol, Lmao");
         }
+        // SWITCH statement
+        int time = 12;
+        switch (time) {
+            case 10:
+                System.out.println("The time is " + time + "\nTime for a change.(more of the same)");
+                break;
+            case 12:
+                System.out.println("The time is " + time + "\nTime for some hope(cope)");
+                break;
+            default:
+                System.out.println("Time to : Step 1) Escape");
+                break;
+        }
     }
 }

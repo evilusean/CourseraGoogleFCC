@@ -132,9 +132,12 @@ if (i >= 30 && i <= 50;) {continue} 'continue' #like break, keyword, but will sk
 'continue' will skip while the conditions are met, 'break' will stop the for loop entirely
 
 2:04:50 = While Loop and Do While Loop ===================================================================================================================================================================
+'while loop' = Used in situations where you don't know how many times you want to loop, but you want to loop until a specific condition is true(display a dialogue while user is inputting)
+'while (condition) {do this}' #basic whileloop setup in Java
+'do while loop' = used to execute a section of code, even though the condition is false, it will execute the code at least once
+'do { <code> } while (condition);' #will execute the code in do, at least once, even if the 'while(condition)' is false
 
-
-
+2:13:20 = Functions ======================================================================================================================================================================================
 
 
 

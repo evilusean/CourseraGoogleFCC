@@ -126,8 +126,10 @@ You can add a 'default' that will run if none of the 'cases' are met
 case 10 -> System.out.println("The time is " + time + "\nTime for a change."); #this same pattern repeated for each different case, notice the '->' instead of ':' followed by executed code
 
 1:57:20 = FOR loop =======================================================================================================================================================================================
-
-
+for (int i = 0; i <= 10; i++) {} #basic for loop layout, declares an integer 'i' sets it to '0' then while i is <= 10, it will activate the code in the '{}' curly braces 10 times
+if (i == 50) {break;} #will stop the loop if the count reaches 50, will break out of the loop
+if (i >= 30 && i <= 50;) {continue} 'continue' #like break, keyword, but will skip the code which comes after continue, while the conditions are met for 'continue' , won't activate code aferwords(skips)
+'continue' will skip while the conditions are met, 'break' will stop the for loop entirely
 
 
 

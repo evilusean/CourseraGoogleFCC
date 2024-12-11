@@ -138,6 +138,12 @@ if (i >= 30 && i <= 50;) {continue} 'continue' #like break, keyword, but will sk
 'do { <code> } while (condition);' #will execute the code in do, at least once, even if the 'while(condition)' is false
 
 2:13:20 = Functions ======================================================================================================================================================================================
+The 'public class Main' function is ran by default every time the Java compiler tries to run your code, this is found in the 'src/Main' 
+in order to create our own functions, create them outside of the 'main' function {} curly braces - NOTE : It must still be inside the 'public class Main' function (not the 'public static void main' small m)
+'public static void sayHello()' #'public' is an access modifier,'void' is the return type of the function (nothing), 'sayHello' is the fucntion name '()' are the parameters (what goes into your function)
+functions are reusable, DRY
+
+
 
 
 

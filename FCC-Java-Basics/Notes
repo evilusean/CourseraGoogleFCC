@@ -131,7 +131,7 @@ if (i == 50) {break;} #will stop the loop if the count reaches 50, will break ou
 if (i >= 30 && i <= 50;) {continue} 'continue' #like break, keyword, but will skip the code which comes after continue, while the conditions are met for 'continue' , won't activate code aferwords(skips)
 'continue' will skip while the conditions are met, 'break' will stop the for loop entirely
 
-
+2:04:50 = While Loop and Do While Loop ===================================================================================================================================================================
 
 
 

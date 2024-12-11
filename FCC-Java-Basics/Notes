@@ -137,7 +137,7 @@ if (i >= 30 && i <= 50;) {continue} 'continue' #like break, keyword, but will sk
 'do while loop' = used to execute a section of code, even though the condition is false, it will execute the code at least once
 'do { <code> } while (condition);' #will execute the code in do, at least once, even if the 'while(condition)' is false
 
-
+2:13:20 = Functions ======================================================================================================================================================================================
 
 
 

@@ -161,7 +161,8 @@ numbers2[0] = 12; //manually input numbers into the array, it will only allow yo
    # above method can also be used to replace values in an array, once you create an array, it has a fixed size, you can't add numbers into an array after it is created
 
 2:46:00 = Arrays Challenge ===============================================================================================================================================================================
-
+create a function that receives an array as a parameter, the function should return the biggest number from the array of numbers.
+public static int getMax(int[] numbers3) {} #retuns an integer, and takes in an array of integers
 
 
 

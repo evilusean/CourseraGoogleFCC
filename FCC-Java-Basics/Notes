@@ -164,7 +164,7 @@ numbers2[0] = 12; //manually input numbers into the array, it will only allow yo
 create a function that receives an array as a parameter, the function should return the biggest number from the array of numbers.
 public static int getMax(int[] numbers3) {} #retuns an integer, and takes in an array of integers
 
-
+2:51:10 = OOP(Object Oriented Programming) ===============================================================================================================================================================
 
 
 

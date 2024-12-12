@@ -144,9 +144,10 @@ in order to create our own functions, create them outside of the 'main' function
 functions are reusable, DRY
 
 2:24:30 = Functions Return ===============================================================================================================================================================================
-
-
-
+to return something in a Java function you need to declare what you want to return 'public static <DATATYPE THAT YOU WANT TO RETURN> () {}'
+'void' means return nothing
+'public static int getMax(int num1, int num2) {}' #takes in 2 integers and returns an integer
+ 'return' when you return from a function, the function breaks/stops out of the rest of the function, 'unreachable code' 
 
 
 

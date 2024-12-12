@@ -149,11 +149,18 @@ to return something in a Java function you need to declare what you want to retu
 'public static int getMax(int num1, int num2) {}' #takes in 2 integers and returns an integer
  'return' when you return from a function, the function breaks/stops out of the rest of the function, 'unreachable code' 
 
+2:31:00 = Arrays =========================================================================================================================================================================================
+Arrays = allow you to store multiple values in a variable without declaring seperate variables for each values
+int[] numbers = {1, 2}; #delcare the type in the array 'int' declare it as an array with '[]' array name 'numbers' and the values of the array seperated by commas '{1,2}' in curly braces
+for (int number: numbers) {System.out.println(number);} # for every 'number' in 'numbers' that is an integet, print 'number' = to print values in console from an array use a 'for each'
+Java uses '0' based index, so it starts at [0] f
+'fori' intellij shortcut = type 'fori' for integer < numbers.length 
+for (int i = 0; i < numbers.length; i++) {System.out.println(numbers[i]);} #same as above, a different way to print out each number in an array
+int[] numbers2 = new int[3]; //allows you to define a new array with set number of elements
+numbers2[0] = 12; //manually input numbers into the array, it will only allow you to add array elements '[0][1][2]' because we declared '[3]' above, and don't forget it's 0 bound(the declaration doesnt stat at 0)
+   # above method can also be used to replace values in an array, once you create an array, it has a fixed size, you can't add numbers into an array after it is created
 
-
-
-
-
+2:46:00 = Arrays Challenge ===============================================================================================================================================================================
 
 
 

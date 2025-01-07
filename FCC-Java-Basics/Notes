@@ -181,5 +181,20 @@ to create an object, you will call the constructor, with the field values in the
 'instantiation' = the process of creating new instances
 
 3:04:00 = Classes Getters and Setters =======================================================================================================================================================================
+Getters = used to get values from an objects fields
+Setters = used to set values of an objects fields
+Use Getters and setters so the fields can not be accessed from outside
+'Code' (top dropdown) -> 'Generate' (Alt+Insert) # IntelliJ let's us create Getters fairly easily, you will have options for 'Constructor' 'Getter' 'Setter' and more
+   Select all fields you want to create getters and setters for, it will create them where your cursor currently is, 
+after creating a car object, and getters/setters, it will be private, so to invoke it, autocomplete won't work, you need to use 'Dot Notation' :
+car.getColor() #this will return the color for the 'car' object,
+System.out.println(car2.getName()); #will get the name for 'car2' object and print it
+
+
+
+
+
+
+
 
 

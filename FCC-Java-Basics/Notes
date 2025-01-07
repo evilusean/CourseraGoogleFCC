@@ -196,7 +196,9 @@ Rules of encapsulation = use setters to change values, and getters to get values
 you can add checks in the setters, that if a name has a specific string of characters or starts with a certain character or whatever to not accept it.
 
 3:11:25 = OOP Constructors =====================================================================================================================================================================================
-
+    public Car(String name, String model, String color, int doors) {        this.name = name;        this.model = model;        this.color = color;        this.doors = doors;    }
+We already had a constructor, above. Below is what it looks like with default values, notice that it has nothing in the first set of ()parenethesis
+    public Car() {        this("Name", "Model", "Color", 0)    } #the default values are found in the 'this(...)' 
 
 
 

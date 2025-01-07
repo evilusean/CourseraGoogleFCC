@@ -17,11 +17,11 @@ public class Car {
         System.out.println("The car " + this.name + " has stopped.");
     }
 
-    public String getName() {
+    public String getName() { //getter
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name) { //setter
         this.name = name;
     }
 

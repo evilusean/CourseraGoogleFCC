@@ -207,3 +207,5 @@ Inheritance = creating a class with another class, and it 'inherits' all the pre
 '@Override' = You can override an inherited function or use 'super' where it inherits the function from another class, so it will do it's own function instead of the original if you override
 
 3:32:30 = Static Keyword =========================================================================================================================================================================================
+Will allow you to call the function without an instance, so you can call it by calling the class without an instance of the class.. if the makes sense, it belongs to the class, and not an object created with the class
+Car.DisplayData() # what I mean by calling the class instead of an instance, the instances we created before were all lowercase

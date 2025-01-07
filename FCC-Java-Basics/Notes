@@ -195,7 +195,7 @@ car.setName("tesla"); #after creating a setter, this will set the new name for t
 Rules of encapsulation = use setters to change values, and getters to get values redundantly, don't change the values directly, don't let code be accessed from outside
 you can add checks in the setters, that if a name has a specific string of characters or starts with a certain character or whatever to not accept it.
 
-
+3:11:25 = OOP Constructors =====================================================================================================================================================================================
 
 
 

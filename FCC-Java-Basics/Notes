@@ -206,3 +206,4 @@ Inheritance = creating a class with another class, and it 'inherits' all the pre
 'extends' # use this keyword in the 'public Plane extends Car (String name, String model, String color, int doors, int engines) { this.engines = engines } #only engines is new, it inherits the rest from 'Car' class
 '@Override' = You can override an inherited function or use 'super' where it inherits the function from another class, so it will do it's own function instead of the original if you override
 
+3:32:30 = Static Keyword =========================================================================================================================================================================================

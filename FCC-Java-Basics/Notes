@@ -199,7 +199,9 @@ you can add checks in the setters, that if a name has a specific string of chara
     public Car(String name, String model, String color, int doors) {        this.name = name;        this.model = model;        this.color = color;        this.doors = doors;    }
 We already had a constructor, above. Below is what it looks like with default values, notice that it has nothing in the first set of ()parenethesis
     public Car() {        this("Name", "Model", "Color", 0)    } #the default values are found in the 'this(...)' 
+public Car(String name) {        this(name, "Model", "Color", 0); //will provide default values except for name    } #will provide default values for everything but name
 
+3:20:00 = OOP Inheritance =======================================================================================================================================================================================
 
 
 

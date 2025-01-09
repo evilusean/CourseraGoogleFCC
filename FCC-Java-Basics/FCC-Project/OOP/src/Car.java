@@ -64,5 +64,3 @@ public class Car { //each car object has 4 values
         this.doors = doors;
     }
 }
-
-

@@ -1,0 +1,28 @@
+# Ignore build outputs
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore Rider project files
+.idea/
+
+# Ignore Visual Studio Code workspace settings
+.vscode/
+
+# Ignore NuGet packages
+*.nupkg
+*.snupkg
+packages/
+
+# Ignore logs
+*.log
+
+# Ignore temporary files
+*.tmp
+*.temp

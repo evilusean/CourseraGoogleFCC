@@ -1,3 +1,9 @@
+# FreeCodeCamp - Learn C# Programming – Full Course with Mini-Projects :
+Start: 2025January11</br>
+End: </br>
+
+[Tutorial](https://www.youtube.com/watch?v=YrtFtdTTfv0) : [https://www.freecodecamp.org/news/learn-c-sharp-programming-1/](https://www.freecodecamp.org/news/learn-c-sharp-programming-1/)
+
 # FreeCodeCamp - Basics of Java Programming :
 Start: 21November2024</br>
 End: 28November2024</br>

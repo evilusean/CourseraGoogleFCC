@@ -30,8 +30,18 @@ int convertedAge = Convert.ToInt32(textAge); #will convert a number that is text
 If there is a letter inside, it will create a runtime error when compiling, create a try pass block to escape these errors
 
 Boolean DataType = 24:30 ======================================================================================================================================================================================
+bool isTrue = true; #boolean
 
-
+Operators = 25:40 =============================================================================================================================================================================================
+currentYear++; #will add 1 to variable 'currentYear'
+currentYear--; #will subtract one
+age = age + 1;
+age += 1;
+when dividing, it will default go to an integer, so decimal places will be truncated - if you add or divide multiply or whatever 2 integers it will return an integer, at least one value must be a float for decimals
+name += " is brogramming"; #you can concatonate strings(add together), but can't subtract
+when you add 2 chars together, it will add the unicode values as integer variables
+'i++' #will use the value, then increment
+'++i' #will increment, then use the value
 
 
 

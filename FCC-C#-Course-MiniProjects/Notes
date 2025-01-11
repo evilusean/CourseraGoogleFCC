@@ -29,7 +29,7 @@ int convertedAge = Convert.ToInt32(textAge); #will convert a number that is text
 'Convert.ToInt64(textAge);' 'Convert.ToDouble()' 'Convert.ToSingle()' 'Convert.ToDecimal()' #same as above, any numeric datatype
 If there is a letter inside, it will create a runtime error when compiling, create a try pass block to escape these errors
 
-
+Boolean DataType = 24:30 ======================================================================================================================================================================================
 
 
 

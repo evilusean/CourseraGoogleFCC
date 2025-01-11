@@ -11,3 +11,58 @@ System.Console.WriteLine("Hello World!"); #if you delete the 'using System' at t
 'Console.ReadLine();' #will wait for an input from the user, if put before the end of a function, will wait till enter is pressed before closing
 
 Numeric Data Types = 11:00 ===================================================================================================================================================================================
+int age = 23; #integer, 'initializing and declaring in the same line' or just initialize first then declare later like 'int age;' 'age = 23' 
+declare = creating the variable, initialize = first time assigning value to a variable, assignment = second+ time when you give a value to a variable
+Console.WriteLine(age); #prints variable 'age' to console, nothing groundbreaking here
+long bigNumber = 1234567890123456789L; #saves as int 32(4 bytes), notice the capital 'L' at the end, this tells the compiler to read it as a long number (int 64 = 8 bytes), same as Java
+float negative = -123.456F; #float: Single-precision floating-point. It typically has 7 decimal digits of precision., notice the 'F' at end of number, this declares it as a float Size: 4 bytes (32 bits)
+double negative = -123.456; #double: Double-precision floating-point. It typically has 15-16 decimal digits of precision. Size: 8 bytes (64 bits)
+decimal money = 3.50M; //decimal Precision: 28-29 significant digits Size: 16 bytes (128 bits), Notice the 'M' at the end, this makes it explicit for the compiler
+int x, y, z; #will allow you to declare multiple variable integers at once instead of each taking up a line, you can declare them the same way as well 'int x=10, y=20, z=30;' will work
+
+Text Based Data Types = 18:00 =================================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

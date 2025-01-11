@@ -40,11 +40,31 @@ namespace DataTypes
             Console.Write("My name is ");
             Console.Write(name);
             Console.WriteLine(letter);
+            name += " is brogramming"; //concatenate strings
+            Console.WriteLine(name);
 
-            //Convert text to a string 
+            //Convert text to a string, can be done with any number datatype
             string textAge = "33"; //string number
             int convertedAge = Convert.ToInt32(textAge); //convert string to int
             Console.WriteLine(convertedAge);
+
+            int currentYear = 2024;
+            currentYear++; //increment by 1 (++)
+            age = age + 1; //increment by 1
+            age += 1; //increment by 1
+            currentYear--; //decrement by 1 (--)
+            Console.WriteLine(currentYear);
+
+            //int * int = int, float * int = float, int / int = int, float / int = float
+            float floatNumber = 10.5F; 
+            floatNumber *= 3; //multiply by 3
+            Console.WriteLine(floatNumber); //will return 31.5
+            int intNumber = 23;
+            intNumber /= 10;
+            Console.WriteLine(intNumber); //this will return '2' instead of 2.3
+
+
+            bool isTrue = true; //boolean
 
             Console.ReadLine();
         }

@@ -1,1 +1,11 @@
 Start : 2025-1-11
+
+Install Visual Studio + C# SDK
+'dotnet new console -n <My New Project>' #used to create a new C# project
+'dotnet build' #will build current app
+'dotnet run' #will run app
+C# is case sensitive
+namespace HelloWorld {class Program {Static void Main(string[] args){console.WriteLine("Hello World!"}} } #same as in Java, except 'string' isn't capitlized 'Main' must be capitalized, required for .NET
+using System; # declare dependancies with 'using' keyword 'using System' unused dependancies will be greyed out
+System.Console.WriteLine("Hello World!"); #if you delete the 'using System' at the top, you can still call it by adding a 'System.', you don't have to define that you are using 'System' can just be used
+'Console.ReadLine();' #will wait for an input from the user, if put before the end of a function, will wait till enter is pressed before closing

@@ -35,10 +35,16 @@ namespace DataTypes
             Console.WriteLine(decimal.MaxValue); //print max value of decimal
             Console.WriteLine(decimal.MinValue); //print min value of decimal
 
+            string name = "Sean"; //string - use double quotes for strings
+            char letter = 'Z'; //char - use single quotes for characters
+            Console.Write("My name is ");
+            Console.Write(name);
+            Console.WriteLine(letter);
 
-
-
-
+            //Convert text to a string 
+            string textAge = "33"; //string number
+            int convertedAge = Convert.ToInt32(textAge); //convert string to int
+            Console.WriteLine(convertedAge);
 
             Console.ReadLine();
         }

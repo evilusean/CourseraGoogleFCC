@@ -11,3 +11,54 @@ System.Console.WriteLine("Hello World!"); #if you delete the 'using System' at t
 'Console.ReadLine();' #will wait for an input from the user, if put before the end of a function, will wait till enter is pressed before closing
 
 Numeric Data Types = 11:00 ===================================================================================================================================================================================
+int age = 23; #integer, 'initializing and declaring in the same line' or just initialize first then declare later like 'int age;' 'age = 23'
+Console.WriteLine(age); #prints variable 'age' to console, nothing groundbreaking here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

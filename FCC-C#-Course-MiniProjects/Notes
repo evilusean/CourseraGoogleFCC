@@ -24,8 +24,10 @@ Text Based Data Types = 18:00 ==================================================
 string name = "Sean"; //it's a string.. I've Sean this so many times before, only thing to note is it must be in '"' quotaSean marks (the double kind) 
 char letter = 'Z'; #char - use single quotes for characters ''', you also can't store an empty char like ''
 
-Converting Strings to Numbers = 20:00 =========================================================================================================================================================================
-
+Converting Strings to Numbers = 20:30 =========================================================================================================================================================================
+int convertedAge = Convert.ToInt32(textAge); #will convert a number that is text to an Int32 "33", can be done for any number datatype
+'Convert.ToInt64(textAge);' 'Convert.ToDouble()' 'Convert.ToSingle()' 'Convert.ToDecimal()' #same as above, any numeric datatype
+If there is a letter inside, it will create a runtime error when compiling, create a try pass block to escape these errors
 
 
 

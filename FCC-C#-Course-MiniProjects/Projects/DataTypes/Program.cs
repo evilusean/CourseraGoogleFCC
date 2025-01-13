@@ -69,8 +69,13 @@ namespace DataTypes
 
             bool isTrue = true; //boolean
 
-            //remainder operator
+            //remainder operator %
+            int firstNum = 10;
+            int secondNum = 3;
+            console.WriteLine(firstNum % secondNum); //will return the remainder
+            console.WriteLine(firstNum % 2); //will return 0 if firstNum is even
 
+            //Var keyword
 
             Console.ReadLine();
         }

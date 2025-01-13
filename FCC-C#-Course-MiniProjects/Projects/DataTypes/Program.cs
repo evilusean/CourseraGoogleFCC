@@ -85,6 +85,18 @@ namespace DataTypes
             //Const Keyword = constant value that cannot be changed
             const int myConst = 10;
 
+            //Console Input/Output
+            System.Console.Write("Enter your name: "); 
+            string userName = Console.ReadLine(); //use this to write on same line
+            Console.WriteLine("Hello " + userName);
+            System.Console.WriteLine(); //adds a new line space/break
+            System.Console.WriteLine("Enter your age: ");
+            string ageInput = Console.ReadLine(); //will be read in as a string
+            System.Console.WriteLine(); //adds a new line space/break
+            //store variables correctly, to store a string to int, convert the string
+            int userAge = Convert.ToInt32(ageInput);
+            Console.WriteLine("You are " + userAge + " years old.");
+            //blank Console.Readline to pause the code, so it doesn't run and close
             Console.ReadLine();
         }
     }

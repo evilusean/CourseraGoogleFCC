@@ -75,7 +75,13 @@ namespace DataTypes
             console.WriteLine(firstNum % secondNum); //will return the remainder
             console.WriteLine(firstNum % 2); //will return 0 if firstNum is even
 
-            //Var keyword
+            //Var keyword 
+            //compiler will figure out what type it is based on the value initialized with it
+            var myName = "Sean";
+            var myAge = 33;
+            var bigNumber = 123456789L; //notice the 'L' this explicit tells compiler it is a long
+            var myFloat = 3.14F; //notice the 'F' this explicit tells compiler it is a float
+
 
             Console.ReadLine();
         }

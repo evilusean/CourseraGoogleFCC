@@ -63,9 +63,13 @@ Exercise1: Storing User Data = 43:15 ===========================================
 if an int starts with '0' it won't print out, '0123450' would return '123450' - if you want to store leading zeros, store it as a string
 
 Exercise2: Odd/Even Checker = 45:00 ===============================================================================================================================================================================
+Fizzbuzz did it better - if 'checkEm' is 0, it's even, if 1 odd,
 
-
-
+Console Input/Output = 47:00 ======================================================================================================================================================================================
+System.Console.WriteLine(); #to output
+string userName = Console.ReadLine(); #will take the users input 'Readline()' and stores it as a string variable
+Console.WriteLine("Hello " + userName); #will print newly saved variable
+System.Console.Write("Enter your name: "); #allows user to enter input after the ':' colon and not on a new line. give them your colon, the right line to write.
 
 
 

@@ -55,6 +55,9 @@ var = 123; #compiler will figure out what type it is based on the value initiali
 for numbers it will default to int32, explicitly pick a larger type like int64 'long' by adding an 'L' at the end like 'var bigNumber = 999L', you might need to explicitly define each type using characters
 
 Cont keyword = 39:15 =============================================================================================================================================================================================
+const int myConst = 10; #Const Keyword = constant value that cannot be changed, if you want to disable the ability for something to change a variable, use const
+'cw' + <TAB> + <TAB> = Console.WriteLine() #hotkey in VScode, instead of typing out
+all instances of a 'const' in your code will be a simple find and replace, every time the compiler sees a const, will take the value and replace the variable with it
 
 
 

@@ -44,8 +44,10 @@ when you add 2 chars together, it will add the unicode values as integer variabl
 '++i' #will increment, then use the value
 
 %Modulo/Remainder = 31:35 =======================================================================================================================================================================================
-
-
+If you were to divide 10/3 = it would return 3 (.333333 gets truncated because of the integer) 
+console.WriteLine(firstNum % secondNum); //will return the remainder of 'firstNum' divided by 'secondNum' 10/3 = 9 (remainder of 1), will return 1
+console.WriteLine(firstNum % 2); //will return 0 if firstNum is even
+The best way to determine if a number is odd or even is to divide it by 2, fizzbuzz, if the value returned by 'firstNum % 2' is 0, it means it is an even number
 
 
 

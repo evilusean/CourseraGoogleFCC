@@ -49,7 +49,7 @@ console.WriteLine(firstNum % secondNum); //will return the remainder of 'firstNu
 console.WriteLine(firstNum % 2); //will return 0 if firstNum is even
 The best way to determine if a number is odd or even is to divide it by 2, fizzbuzz, if the value returned by 'firstNum % 2' is 0, it means it is an even number
 
-
+Var Keyword = 35:10 ==============================================================================================================================================================================================
 
 
 

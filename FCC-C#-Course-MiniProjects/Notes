@@ -59,10 +59,10 @@ const int myConst = 10; #Const Keyword = constant value that cannot be changed, 
 'cw' + <TAB> + <TAB> = Console.WriteLine() #hotkey in VScode, instead of typing out
 all instances of a 'const' in your code will be a simple find and replace, every time the compiler sees a const, will take the value and replace the variable with it
 
-Exercise: Storing User Data = 43:15 ===============================================================================================================================================================================
+Exercise1: Storing User Data = 43:15 ===============================================================================================================================================================================
 if an int starts with '0' it won't print out, '0123450' would return '123450' - if you want to store leading zeros, store it as a string
 
-
+Exercise2: Odd/Even Checker = 45:00 ===============================================================================================================================================================================
 
 
 

@@ -35,6 +35,7 @@ namespace DataTypes
             Console.WriteLine(decimal.MaxValue); //print max value of decimal
             Console.WriteLine(decimal.MinValue); //print min value of decimal
 
+            //string and char
             string name = "Sean"; //string - use double quotes for strings
             char letter = 'Z'; //char - use single quotes for characters
             Console.Write("My name is ");
@@ -43,11 +44,12 @@ namespace DataTypes
             name += " is brogramming"; //concatenate strings
             Console.WriteLine(name);
 
-            //Convert text to a string, can be done with any number datatype
+            //Convert text to a number, can be done with any number datatype
             string textAge = "33"; //string number
             int convertedAge = Convert.ToInt32(textAge); //convert string to int
             Console.WriteLine(convertedAge);
 
+            //Basic Operators :
             int currentYear = 2024;
             currentYear++; //increment by 1 (++)
             age = age + 1; //increment by 1
@@ -55,6 +57,7 @@ namespace DataTypes
             currentYear--; //decrement by 1 (--)
             Console.WriteLine(currentYear);
 
+            //Float Operators :
             //int * int = int, float * int = float, int / int = int, float / int = float
             float floatNumber = 10.5F; 
             floatNumber *= 3; //multiply by 3
@@ -65,6 +68,9 @@ namespace DataTypes
 
 
             bool isTrue = true; //boolean
+
+            //remainder operator
+
 
             Console.ReadLine();
         }

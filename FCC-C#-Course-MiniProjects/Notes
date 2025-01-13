@@ -54,7 +54,7 @@ define a variable by specifying type followed by name with value 'int numberName
 var = 123; #compiler will figure out what type it is based on the value initialized with it
 for numbers it will default to int32, explicitly pick a larger type like int64 'long' by adding an 'L' at the end like 'var bigNumber = 999L', you might need to explicitly define each type using characters
 
-
+Cont keyword = 39:15 =============================================================================================================================================================================================
 
 
 

@@ -50,6 +50,10 @@ console.WriteLine(firstNum % 2); //will return 0 if firstNum is even
 The best way to determine if a number is odd or even is to divide it by 2, fizzbuzz, if the value returned by 'firstNum % 2' is 0, it means it is an even number
 
 Var Keyword = 35:10 ==============================================================================================================================================================================================
+define a variable by specifying type followed by name with value 'int numberName = 123;'
+var = 123; #compiler will figure out what type it is based on the value initialized with it
+for numbers it will default to int32, explicitly pick a larger type like int64 'long' by adding an 'L' at the end like 'var bigNumber = 999L', you might need to explicitly define each type using characters
+
 
 
 

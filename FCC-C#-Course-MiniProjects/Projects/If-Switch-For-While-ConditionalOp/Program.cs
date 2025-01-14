@@ -14,7 +14,28 @@ namespace CourseraGoogleFCC
         // Boilerplate for if statements
         static void IfStatementExample()
         {
-            // Add your if statement code here
+            System.Console.Write("Enter your age: ");
+            string ageInput = Console.ReadLine(); //will be read in as a string
+            //store variables correctly, to store a string to int, convert the string
+            int userAge = Convert.ToInt32(ageInput);
+            Console.WriteLine("You are " + userAge + " years old.");
+
+            if (userAge <= 0 || userAge > 120) {
+                Console.WriteLine("Invalid age.");
+            }
+            else 
+            {
+            if (userAge >= 65) {
+                Console.WriteLine("You are a senior citizen.");
+            }
+            else if (userAge >= 18) {
+                Console.WriteLine("You are an adult.");
+            } else if (userAge >= 13 && userAge <= 17) {
+                Console.WriteLine("You are a teenager.");
+            } else {
+                Console.WriteLine("You are a child.");
+            }
+            }
         }
 
         // Boilerplate for switch statements

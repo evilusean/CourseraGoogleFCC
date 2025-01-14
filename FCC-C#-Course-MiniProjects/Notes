@@ -72,6 +72,7 @@ Console.WriteLine("Hello " + userName); #will print newly saved variable
 System.Console.Write("Enter your name: "); #allows user to enter input after the ':' colon and not on a new line. give them your colon, the right line to write.
 Try to combine everything with concatonation on the same line, instead of writing multiple lines of code for each string
 
+If Statements = 55:30 ==============================================================================================================================================================================================
 
 
 

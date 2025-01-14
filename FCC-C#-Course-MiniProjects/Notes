@@ -113,8 +113,8 @@ for (int i = 0; i < 5; i++) {} #same as every other programming language
 for (int i = 0; i < loop; i++) {} #you don't need to use '.length' like in python, if it is an integer, it will just know
 
 While Loops = 1:22:30 =============================================================================================================================================================================================
-
-
+also iterates through code, while loops will do something while a condition is true
+while (condition) {do} #basic syntax
 
 
 

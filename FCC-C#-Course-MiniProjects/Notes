@@ -100,9 +100,14 @@ Above you can see that the initial age check, else check the age nested if state
 'int numberA = Convert.ToInt32(Console.ReadLine());' #one liner for getting a string number from user and converting to an int and saving to a variable 'numberA'
 
 Switch Statements = 1:09:15 =======================================================================================================================================================================================
+Another method to decide different paths in your code 
+switch (day)            {                case 1: Console.WriteLine("Monday");                    break;                case 2: Console.WriteLine("Tuesday");                    break;}
+#basic switch statement, 'day' is whatever variable you are creating if statements for 'case 1'(if the number is 1, print Monday.... etc. main keywords are 'switch(variable)' 'case #' 'break'
+break #will break out of the loop, if you don't put in will get a syntax error
+if you don't use a 'break' you can stack cases like : 'case 2 case 3: <action>' and then if either case 2 or 3 happen the <action> will be taken for either, similar to '||' or operator
+'default: <action> break;' #will perform a default action if none of the cases are met, similar to 'else' statement
 
-
-
+For Loops = 1:14:30 ===============================================================================================================================================================================================
 
 
 

@@ -73,9 +73,31 @@ System.Console.Write("Enter your name: "); #allows user to enter input after the
 Try to combine everything with concatonation on the same line, instead of writing multiple lines of code for each string
 
 If Statements = 55:30 ==============================================================================================================================================================================================
-
-
-
+string ageInput = Console.ReadLine(); //will be read in as a string
+int userAge = Convert.ToInt32(ageInput); //store variables correctly, to store a string to int, convert the string
+You should always save the values in the appropriate variable datatype, it will be taken in as a string, and converted into an int32
+if (true) {do this} #if statements are same as any other coding language, 
+Operators are '>=' = greater than equal to, '<' = less than, '<=' less than equal to, and 
+  '==' = equals to
+  '!=' = not equal to
+  '||' = or operator
+  '&&' = and operator
+            if (userAge <= 0 || userAge > 120) {
+                Console.WriteLine("Invalid age.");
+            }
+            else 
+            {
+            if (userAge >= 65) {
+                Console.WriteLine("You are a senior citizen.");
+            }
+            else if (userAge >= 18) {
+                Console.WriteLine("You are an adult.");
+            } else if (userAge >= 13 && userAge <= 17) {
+                Console.WriteLine("You are a teenager.");
+            } else {
+                Console.WriteLine("You are a child.");}}
+Above you can see that the initial age check, else check the age nested if statement, 
+'int numberA = Convert.ToInt32(Console.ReadLine());' #one liner for getting a string number from user and converting to an int and saving to a variable 'numberA'
 
 
 

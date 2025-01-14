@@ -114,7 +114,9 @@ for (int i = 0; i < loop; i++) {} #you don't need to use '.length' like in pytho
 
 While Loops = 1:22:30 =============================================================================================================================================================================================
 also iterates through code, while loops will do something while a condition is true
-while (condition) {do} #basic syntax
+while (condition) {do} #basic syntax for a while loop
+'do while loop' is similar to a 'while loop' but except the while only happens if the condition turns true, the 'do while' will always activate at least once and check the condition at the end
+do {<will always do once>} while (condition) {<will run if condition is true>} #basic syntax for 'do while loop'
 
 
 

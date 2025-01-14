@@ -112,9 +112,11 @@ iteration in code is the ability to loop and do a certain task, for loops will l
 for (int i = 0; i < 5; i++) {} #same as every other programming language
 for (int i = 0; i < loop; i++) {} #you don't need to use '.length' like in python, if it is an integer, it will just know
 
-
-
-
+While Loops = 1:22:30 =============================================================================================================================================================================================
+also iterates through code, while loops will do something while a condition is true
+while (condition) {do} #basic syntax for a while loop
+'do while loop' is similar to a 'while loop' but except the while only happens if the condition turns true, the 'do while' will always activate at least once and check the condition at the end
+do {<will always do once>} while (condition) {<will run if condition is true>} #basic syntax for 'do while loop'
 
 
 

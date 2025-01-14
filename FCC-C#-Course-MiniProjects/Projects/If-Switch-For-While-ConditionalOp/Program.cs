@@ -73,12 +73,26 @@
             }
         }
 
-        // Boilerplate for for loops
+        // Boilerplate for 4 for loops
         static void ForLoopExample()
         {
             for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine(i);
+            }
+            //for loop with a different increment
+            Console.Write("How many times do you want to loop?");
+            int loop = Convert.ToInt32(Console.ReadLine());
+            if (loop <= 0)
+            {
+                Console.WriteLine("Invalid number.");
+                return;
+            }
+            else {
+            for (int i = 0; i < loop; i++)
+            {
+                Console.WriteLine(i);
+            }
             }
         }
 

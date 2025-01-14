@@ -99,7 +99,7 @@ Operators are '>=' = greater than equal to, '<' = less than, '<=' less than equa
 Above you can see that the initial age check, else check the age nested if statement, 
 'int numberA = Convert.ToInt32(Console.ReadLine());' #one liner for getting a string number from user and converting to an int and saving to a variable 'numberA'
 
-
+Switch Statements = 1:09:15 =======================================================================================================================================================================================
 
 
 

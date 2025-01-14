@@ -107,7 +107,7 @@ break #will break out of the loop, if you don't put in will get a syntax error
 if you don't use a 'break' you can stack cases like : 'case 2 case 3: <action>' and then if either case 2 or 3 happen the <action> will be taken for either, similar to '||' or operator
 'default: <action> break;' #will perform a default action if none of the cases are met, similar to 'else' statement
 
-
+For Loops = 1:14:30 ===============================================================================================================================================================================================
 
 
 

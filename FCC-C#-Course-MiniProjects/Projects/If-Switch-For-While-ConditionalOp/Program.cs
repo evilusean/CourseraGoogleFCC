@@ -9,7 +9,8 @@
         {
             //IfStatementExample();
             //SwitchStatementExample();
-            ForLoopExample();
+            //ForLoopExample();
+            WhileLoopExample();
         }
 
         // Boilerplate for if statements
@@ -99,7 +100,13 @@
         // Boilerplate for while loops
         static void WhileLoopExample()
         {
-            // Add your while loop code here
+            int i = 0;
+            while (i<10)
+            {
+                Console.WriteLine(i);
+                i++;
+            }
+            
         }
 
         // Boilerplate for conditional operators

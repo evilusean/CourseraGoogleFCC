@@ -1,5 +1,4 @@
-﻿// Boilerplate for for loops
-namespace CourseraGoogleFCC
+﻿namespace CourseraGoogleFCC
 {
     class Program
     {
@@ -9,7 +8,8 @@ namespace CourseraGoogleFCC
         static void Main(string[] args)
         {
             //IfStatementExample();
-            SwitchStatementExample();
+            //SwitchStatementExample();
+            ForLoopExample();
         }
 
         // Boilerplate for if statements
@@ -76,7 +76,10 @@ namespace CourseraGoogleFCC
         // Boilerplate for for loops
         static void ForLoopExample()
         {
-            // Add your for loop code here
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(i);
+            }
         }
 
         // Boilerplate for while loops

@@ -108,8 +108,9 @@ if you don't use a 'break' you can stack cases like : 'case 2 case 3: <action>' 
 'default: <action> break;' #will perform a default action if none of the cases are met, similar to 'else' statement
 
 For Loops = 1:14:30 ===============================================================================================================================================================================================
-
-
+iteration in code is the ability to loop and do a certain task, for loops will loop for a certain amount of times given the parameters
+for (int i = 0; i < 5; i++) {} #same as every other programming language
+for (int i = 0; i < loop; i++) {} #you don't need to use '.length' like in python, if it is an integer, it will just know
 
 
 

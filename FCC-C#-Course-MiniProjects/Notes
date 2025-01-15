@@ -136,4 +136,4 @@ Console.WriteLine(money.ToString("C")); //will display a currency string format,
 the program will check UTC data(timecode) and add the correct currency symbol, to display a different currency, if you are running this code on a cloud computer, it will use their localized time
 Console.WriteLine(money.ToString("C", new System.Globalization.CultureInfo("en-GB"))); #will display the currency in british pounds, or whatever you want
 
-
+TryParse Function = 1:49:35 ========================================================================================================================================================================================

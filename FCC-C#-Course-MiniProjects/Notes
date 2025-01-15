@@ -137,3 +137,32 @@ the program will check UTC data(timecode) and add the correct currency symbol, t
 Console.WriteLine(money.ToString("C", new System.Globalization.CultureInfo("en-GB"))); #will display the currency in british pounds, or whatever you want
 
 TryParse Function = 1:49:35 ========================================================================================================================================================================================
+As soon as your program hits an exception error/fatal error(typo or whatever) it will close the program, to fix this, use a 'Try Parse function', even if the parse fails, the program won't
+int.TryParse(<string>, out <Integer>) #will convert a string to it's 32 bit integer equivalent, and return an integer
+#you can wrap a TryParse in a while loop, so while the boolean 'success' is false(no valid number' it will ask again, and won't create a fatal exception closing the program, losing all data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

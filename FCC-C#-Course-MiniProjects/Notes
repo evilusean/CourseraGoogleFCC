@@ -124,6 +124,6 @@ Conditional Operator = Ternary Operator = if you have 'if statements' that are p
 Console.WriteLine(ageTest >= 0 ? "Valid age" : "Invalid age"); #if 'ageTest' variable is lesss than 0 will return 'Invalid' and if over 0  will return 'valid'
 
 Numeric Formatting = 1:36:20 ======================================================================================================================================================================================
-
-
+If you only want a certain number of decimals(close enough), use numeric formatting patterns to acheive this.
+double value = 1000D / 12.34D; # returns '81.0372771474878' 
 

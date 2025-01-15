@@ -119,9 +119,11 @@ while (condition) {do} #basic syntax for a while loop
 do {<will always do once>} while (condition) {<will run if condition is true>} #basic syntax for 'do while loop'
 
 Conditional Operator = 1:32:55 ====================================================================================================================================================================================
+Conditional Operator = Ternary Operator = if you have 'if statements' that are pretty basic, you can use a conditional operator instead - one liner
+'condition ? true : false' #basic syntax for a conditional operator 'condition' is the condition '?' is the ternary operator 'true' is what happens if it returns true and 'false' is what happens if it is false
+Console.WriteLine(ageTest >= 0 ? "Valid age" : "Invalid age"); #if 'ageTest' variable is lesss than 0 will return 'Invalid' and if over 0  will return 'valid'
 
-
-
+Numeric Formatting = 1:36:20 ======================================================================================================================================================================================
 
 
 

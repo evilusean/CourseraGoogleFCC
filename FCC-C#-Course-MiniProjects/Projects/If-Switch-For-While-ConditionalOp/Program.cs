@@ -10,7 +10,8 @@
             //IfStatementExample();
             //SwitchStatementExample();
             //ForLoopExample();
-            WhileLoopExample();
+            //WhileLoopExample();
+            ConditionalOperatorsExample();
         }
 
         // Boilerplate for if statements
@@ -106,13 +107,16 @@
                 Console.WriteLine(i);
                 i++;
             }
-            
+
         }
 
         // Boilerplate for conditional operators
         static void ConditionalOperatorsExample()
         {
-            // Add your conditional operators code here
+            int ageTest = -1;
+            //string result = ageTest >= 0 ? "Valid age" : "Invalid age";
+            //Console.WriteLine(result);
+            Console.WriteLine(ageTest >= 0 ? "Valid age" : "Invalid age");
         }
     }
 }

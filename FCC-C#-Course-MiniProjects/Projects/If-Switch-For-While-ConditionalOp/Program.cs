@@ -12,7 +12,8 @@
             //ForLoopExample();
             //WhileLoopExample();
             //ConditionalOperatorsExample();
-            NumericFormatting();
+            //NumericFormatting();
+            TryParseExample();
         }
 
         // Boilerplate for if statements
@@ -133,6 +134,8 @@
     }
         static void TryParseExample()
         {
+            /*
+            //this will throw an exception if the input is not a number
             Console.Write("Enter a number: ");
             string input = Console.ReadLine();
             int number;
@@ -143,6 +146,24 @@
             else
             {
                 Console.WriteLine("Invalid number.");
+        }*/
+        //same as above, but will keep asking until a valid number is entered
+bool success = false;
+while (!success)
+{
+    Console.Write("Enter a number: ");
+    string input = Console.ReadLine();
+    int number;
+    if (int.TryParse(input, out number))
+    {
+        Console.WriteLine("You entered " + number);
+        success = true;
+    }
+    else
+    {
+        Console.WriteLine("Invalid number. Please try again.");
+    }
+}
         }
     }
 }

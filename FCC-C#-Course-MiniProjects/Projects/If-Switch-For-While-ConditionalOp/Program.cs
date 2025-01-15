@@ -118,5 +118,14 @@
             //Console.WriteLine(result);
             Console.WriteLine(ageTest >= 0 ? "Valid age" : "Invalid age");
         }
+        
+        static void NumericFormatting();
+        {
+
+        }
+        static void TryParseExample();
+        {
+
+        }
     }
 }

@@ -133,7 +133,16 @@
     }
         static void TryParseExample()
         {
-            //TryParse is a method that tries to convert a string to a number
+            Console.Write("Enter a number: ");
+            string input = Console.ReadLine();
+            int number;
+            if (int.TryParse(input, out number))
+            {
+                Console.WriteLine("You entered " + number);
+            }
+            else
+            {
+                Console.WriteLine("Invalid number.");
         }
     }
 }

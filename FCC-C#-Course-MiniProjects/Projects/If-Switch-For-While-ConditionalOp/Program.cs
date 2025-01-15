@@ -156,8 +156,8 @@ while (!success)
     int number;
     if (int.TryParse(input, out number))
     {
-        Console.WriteLine("You entered " + number);
         success = true;
+        Console.WriteLine("You entered " + number);
     }
     else
     {

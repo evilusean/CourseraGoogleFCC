@@ -126,4 +126,4 @@ Console.WriteLine(ageTest >= 0 ? "Valid age" : "Invalid age"); #if 'ageTest' var
 Numeric Formatting = 1:36:20 ======================================================================================================================================================================================
 If you only want a certain number of decimals(close enough), use numeric formatting patterns to acheive this.
 double value = 1000D / 12.34D; # returns '81.0372771474878' 
-
+Console.WriteLine(string.Format("{0:0.00}", value)); # returns '81.04' the first '0' in '{0:0.00}' tells it to start from the first number from the left, and the '0.00' tells it to take the 2 decimal places

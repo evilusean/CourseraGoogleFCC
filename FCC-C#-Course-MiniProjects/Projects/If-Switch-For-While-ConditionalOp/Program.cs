@@ -125,6 +125,11 @@
             double value = 1000D / 12.34D;
             Console.WriteLine(value);
             Console.WriteLine(string.Format("{0:0.00}", value));
+
+            double money = -10D / 3D;
+            Console.WriteLine(money.ToString("C")); //will display a currency string format
+            Console.WriteLine(money.ToString("C2")); //will display a currency string format with 2 decimal places
+            Console.WriteLine(money.ToString("C", new System.Globalization.CultureInfo("en-GB")));
     }
         static void TryParseExample()
         {

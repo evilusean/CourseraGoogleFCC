@@ -118,7 +118,7 @@ while (condition) {do} #basic syntax for a while loop
 'do while loop' is similar to a 'while loop' but except the while only happens if the condition turns true, the 'do while' will always activate at least once and check the condition at the end
 do {<will always do once>} while (condition) {<will run if condition is true>} #basic syntax for 'do while loop'
 
-
+Conditional Operator = 1:32:55 ====================================================================================================================================================================================
 
 
 

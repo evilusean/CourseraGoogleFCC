@@ -11,7 +11,8 @@
             //SwitchStatementExample();
             //ForLoopExample();
             //WhileLoopExample();
-            ConditionalOperatorsExample();
+            //ConditionalOperatorsExample();
+            NumericFormatting();
         }
 
         // Boilerplate for if statements
@@ -119,13 +120,15 @@
             Console.WriteLine(ageTest >= 0 ? "Valid age" : "Invalid age");
         }
         
-        static void NumericFormatting();
+        static void NumericFormatting()
         {
-
-        }
-        static void TryParseExample();
+            double value = 1000D / 12.34D;
+            Console.WriteLine(value);
+            Console.WriteLine(string.Format("{0:0.00}", value));
+    }
+        static void TryParseExample()
         {
-
+            //TryParse is a method that tries to convert a string to a number
         }
     }
 }

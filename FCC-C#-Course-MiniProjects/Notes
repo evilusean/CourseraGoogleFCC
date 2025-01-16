@@ -142,6 +142,7 @@ int.TryParse(<string>, out <Integer>) #will convert a string to it's 32 bit inte
 #you can wrap a TryParse in a while loop, so while the boolean 'success' is false(no valid number' it will ask again, and won't create a fatal exception closing the program, losing all data
 
 Exercise : Times Table = 1:59:45 ===================================================================================================================================================================================
+for (int i = 1; i <= 10; i++){Console.WriteLine($"{number} x {i} = {number * i}");} #will loo through, take each 'number' user input and multiply it by 'i' the iteration, and print in an easy to read format
 
 
 

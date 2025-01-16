@@ -145,6 +145,13 @@ Exercise : Times Table = 1:59:45 ===============================================
 for (int i = 1; i <= 10; i++){Console.WriteLine($"{number} x {i} = {number * i}");} #will loo through, take each 'number' user input and multiply it by 'i' the iteration, and print in an easy to read format
 
 Exercise : FizzBuzz = 2:03:10 ======================================================================================================================================================================================
+function fizzbuzz(n) {
+for i=1..n:
+if (i % 3 == 0 && i % 5 == 0) print "fizzbuzz"
+else if (i % 3 == 0) print "fizz"
+else if (i % 5 == 0) print "buzz"
+else print i
+}
 
 
 

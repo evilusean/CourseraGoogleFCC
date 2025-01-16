@@ -152,56 +152,35 @@ else if (i % 3 == 0) print "fizz"
 else if (i % 5 == 0) print "buzz"
 else print i
 } #this is in JS, not C#,
-for (int i = 1; i <= 15; i++)
-            {
-                if (i % 3 == 0 && i % 5 == 0)
-                {
-                    System.Console.WriteLine("FizzBuzz");
-                }
-                else if (i % 3 == 0)
-                {
-                    System.Console.WriteLine("Fizz");
-                }
-                else if (i % 5 == 0)
-                {
-                    System.Console.WriteLine("Buzz");
-                }
-                else
-                {
-                    System.Console.WriteLine(i);
-                }
+for (int i = 1; i <= 15; i++)            {
+                if (i % 3 == 0 && i % 5 == 0)                {
+                    System.Console.WriteLine("FizzBuzz");                }
+                else if (i % 3 == 0)                {
+                    System.Console.WriteLine("Fizz");                }
+                else if (i % 5 == 0)                {
+                    System.Console.WriteLine("Buzz");                }
+                else                {
+                    System.Console.WriteLine(i);                }
 #saved a more memory efficient way by using stored boolean variables
-class Program
-{
-    static void Main(string[] args)
-    {
-        for (int i = 1; i <= 15; i++)
-        {
+class Program{
+    static void Main(string[] args)    {
+        for (int i = 1; i <= 15; i++)        {
             bool threeDiv = i % 3 == 0;
             bool fiveDiv = i % 5 == 0;
-            if (threeDiv && fiveDiv)
-            {
-                Console.WriteLine("FizzBuzz");
-            }
-            else if (threeDiv)
-            {
-                Console.WriteLine("Fizz");
-            }
-            else if (fiveDiv)
-            {
-                Console.WriteLine("Buzz");
-            }
-            else
-            {
-                Console.WriteLine(i);
-            }
-        }
-    }
-}
+            if (threeDiv && fiveDiv)            {
+                Console.WriteLine("FizzBuzz");            }
+            else if (threeDiv)            {
+                Console.WriteLine("Fizz");            }
+            else if (fiveDiv)            {
+                Console.WriteLine("Buzz");            }            
+            else            {
+                Console.WriteLine(i);            }        }    }}
 
 Verbatim String Literal (@) = 2:08:25 =========================================================================================================================================================================
-
-
+in C#, when you are constructing strings with '/' backslashes, you will need to use '//' double backslashes - first backslash is used for an escape character followed by the character you want to display
+Other Escape Characters: \t #tab, \n #new line, \" #quote marks
+@"" = Verbatim identifier, whatever you see is whatever happens, no need for escape characters, will negate all '/' escape characters, '/n' new lines won't work for formatting 
+  @"""doubles""" = '"' quotation marks can still be used if you double up, '""' use ""double""" speech marks
 
 
 

@@ -141,6 +141,7 @@ As soon as your program hits an exception error/fatal error(typo or whatever) it
 int.TryParse(<string>, out <Integer>) #will convert a string to it's 32 bit integer equivalent, and return an integer
 #you can wrap a TryParse in a while loop, so while the boolean 'success' is false(no valid number' it will ask again, and won't create a fatal exception closing the program, losing all data
 
+Exercise : Times Table = 1:59:45 ===================================================================================================================================================================================
 
 
 

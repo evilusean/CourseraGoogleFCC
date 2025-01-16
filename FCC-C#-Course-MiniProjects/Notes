@@ -182,7 +182,7 @@ Other Escape Characters: \t #tab, \n #new line, \" #quote marks
 @"" = Verbatim identifier, whatever you see is whatever happens, no need for escape characters, will negate all '/' escape characters, '/n' new lines won't work for formatting 
   @"""doubles""" = '"' quotation marks can still be used if you double up, '""' use ""double""" speech marks
 
-
+String Formatting ({0}) = 2:17:00 =============================================================================================================================================================================
 
 
 

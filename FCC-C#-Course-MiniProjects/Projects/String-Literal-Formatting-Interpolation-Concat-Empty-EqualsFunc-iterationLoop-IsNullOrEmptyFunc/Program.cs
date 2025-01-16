@@ -5,7 +5,8 @@
 
         static void Main(string[] args)
         {
-            VerbatimStringLiteral();
+            //VerbatimStringLiteral();
+            StringFormatting();
         }
 
         static void VerbatimStringLiteral() {
@@ -15,6 +16,9 @@
             // Verbatim string literal, use '@' to ignore escape characters
             string path2 = @"C:\Program Files\Microhard";
             Console.WriteLine(path2);
+        }
+        static void StringFormatting() {
+            
         }
     }
 }

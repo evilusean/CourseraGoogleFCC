@@ -151,10 +151,53 @@ if (i % 3 == 0 && i % 5 == 0) print "fizzbuzz"
 else if (i % 3 == 0) print "fizz"
 else if (i % 5 == 0) print "buzz"
 else print i
+} #this is in JS, not C#,
+for (int i = 1; i <= 15; i++)
+            {
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    System.Console.WriteLine("FizzBuzz");
+                }
+                else if (i % 3 == 0)
+                {
+                    System.Console.WriteLine("Fizz");
+                }
+                else if (i % 5 == 0)
+                {
+                    System.Console.WriteLine("Buzz");
+                }
+                else
+                {
+                    System.Console.WriteLine(i);
+                }
+#saved a more memory efficient way by using stored boolean variables
+class Program
+{
+    static void Main(string[] args)
+    {
+        for (int i = 1; i <= 15; i++)
+        {
+            bool threeDiv = i % 3 == 0;
+            bool fiveDiv = i % 5 == 0;
+            if (threeDiv && fiveDiv)
+            {
+                Console.WriteLine("FizzBuzz");
+            }
+            else if (threeDiv)
+            {
+                Console.WriteLine("Fizz");
+            }
+            else if (fiveDiv)
+            {
+                Console.WriteLine("Buzz");
+            }
+            else
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
 }
-
-
-
 
 
 

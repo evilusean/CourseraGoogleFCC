@@ -197,7 +197,7 @@ string test = string.Concat("Hello, my name is ", firstName, "."); #another way 
 You can also use an array instead of arguments for 'string.Concat' method
 How many ways can you concat a cat? 
 
-
+Empty String = 2:30:40 ========================================================================================================================================================================================
 
 
 

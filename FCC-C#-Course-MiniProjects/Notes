@@ -198,6 +198,10 @@ You can also use an array instead of arguments for 'string.Concat' method
 How many ways can you concat a cat? 
 
 Empty String = 2:30:40 ========================================================================================================================================================================================
+When you create a string you might want to jjust initialize the value with '""' empty quotes 'string name = "";' or 'string name = string.Empty;'
+string name = ""; //initialize with an empty string
+string name2 = string.Empty; //initialize with an empty string
+# both do the same thing, bottom is just more readable for future sean
 
 
 

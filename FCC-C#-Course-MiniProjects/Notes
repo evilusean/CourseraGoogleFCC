@@ -210,7 +210,7 @@ if (name != "") #empty string check using '!=' not equals to empty string
 if (!name4.Equals("")) #empty string check, new function
 Best Practice : using '.Equals' because it checks the reference in the memory, will check the values comparison
 
-
+String Iteration (looping) = 2:38:00 ===========================================================================================================================================================================
 
 
 

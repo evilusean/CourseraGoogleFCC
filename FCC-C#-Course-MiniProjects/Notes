@@ -204,7 +204,11 @@ string name2 = string.Empty; //initialize with an empty string
 # both do the same thing, bottom is just more readable for future sean
 
 String Equals Function = 2:33:00 ==============================================================================================================================================================================
-
+Console.WriteLine(name == name2); //'==' comparison easy way to compare strings, true
+Console.WriteLine(name.Equals(name2)); //'.Equals()' new function to compare strings for equlas, true
+if (name != "") #empty string check using '!=' not equals to empty string 
+if (!name4.Equals("")) #empty string check, new function
+Best Practice : using '.Equals' because it checks the reference in the memory, will check the values comparison
 
 
 

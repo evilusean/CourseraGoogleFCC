@@ -191,7 +191,7 @@ String Interpolation ($) = 2:22:35 =============================================
 '$' = uses a dollar sign as a reference, wrapping variables in {curly braces} :
 Console.WriteLine($"Hello, my name is {name} and I am {age} years old.");
 
-
+String Concationation (+) = 2:26:00 ===========================================================================================================================================================================
 
 
 

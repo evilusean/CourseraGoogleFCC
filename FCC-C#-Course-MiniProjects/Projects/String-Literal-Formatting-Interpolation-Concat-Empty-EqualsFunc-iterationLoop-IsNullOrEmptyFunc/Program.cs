@@ -7,7 +7,8 @@
         {
             //VerbatimStringLiteral();
             //StringFormatting();
-            StringInterpolation();
+            //StringInterpolation();
+            StringConcatenation();
         }
 
         static void VerbatimStringLiteral() {
@@ -34,6 +35,13 @@
             int age = 30;
             // String interpolation
             Console.WriteLine($"Hello, my name is {name} and I am {age} years old.");
+        }
+        static void StringConcatenation() {
+            string firstName = "Sean";
+            int age = 33;
+            //yet another way to concatenate strings with ',' instead of '+'
+            string test = string.Concat("Hello, my name is ", firstName, " and I am ", age, " years old.");
+            Console.WriteLine(test);
         }
     }
 }

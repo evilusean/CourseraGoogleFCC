@@ -9,7 +9,8 @@
             //StringFormatting();
             //StringInterpolation();
             //StringConcatenation();
-            StringEmpty();
+            //StringEmpty();
+            EqualsFunc();
         }
 
         static void VerbatimStringLiteral()
@@ -59,11 +60,33 @@
             string input = Console.ReadLine();
 
             //if (input != "") { //if string is empty, return false'!=' not equal, run code
-            if (input != string.Empty) {// easier to read/understand same as above
+            if (input != string.Empty) { // easier to read/understand same as above
                 Console.WriteLine($"Hello, {input}!");
         } else {
                 Console.WriteLine("You did not enter a name.");
             }
-}
+        }
+
+        static void EqualsFunc()
+        {
+            string name = "Sean";
+            string name2 = "Sean";
+            string name3 = "Bob";
+            Console.WriteLine(name == name2); //'==' comparison easy way to compare strings, true
+            Console.WriteLine(name == name3); //false
+            Console.WriteLine(name.Equals(name2)); //'.Equals()' new function to compare strings for equlas, true
+            Console.WriteLine(name.Equals(name3)); //false
+
+            Console.Write("Enter your name: ");
+            string name4 = Console.ReadLine();
+            
+            //if (name != "")
+            if (!name4.Equals("")) { //same as above commented out '!' = not operator compares to empty string ""
+                Console.WriteLine($"Hello, {name4}!");
+            }
+            else {
+                Console.WriteLine("You did not enter a name.");
+            }
+        }
     }
 }

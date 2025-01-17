@@ -1,4 +1,5 @@
-﻿namespace Strings
+﻿using System.Threading;
+namespace Strings
 {
     class Program
     {
@@ -10,7 +11,8 @@
             //StringInterpolation();
             //StringConcatenation();
             //StringEmpty();
-            EqualsFunc();
+            //EqualsFunc();
+            StringIteration();
         }
 
         static void VerbatimStringLiteral()
@@ -88,5 +90,12 @@
                 Console.WriteLine("You did not enter a name.");
             }
         }
+        static void StringIteration() {
+            string message = "C#? More like SEAn SHARP!";
+            for (int i = 0; i < message.Length; i++) {
+                Console.Write(message[i]); //Will write out each letter in the string
+                Thread.Sleep(100); //typewriter aeffect, 1000MS = 1 second, 100MS=0.1 second
+        }
+    }
     }
 }

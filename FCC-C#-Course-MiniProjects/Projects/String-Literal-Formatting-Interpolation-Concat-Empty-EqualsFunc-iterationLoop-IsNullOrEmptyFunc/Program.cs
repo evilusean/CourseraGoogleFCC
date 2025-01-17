@@ -12,7 +12,8 @@ namespace Strings
             //StringConcatenation();
             //StringEmpty();
             //EqualsFunc();
-            StringIteration();
+            //StringIteration();
+            StringIsNullOrEmpty();
         }
 
         static void VerbatimStringLiteral()
@@ -95,7 +96,36 @@ namespace Strings
             for (int i = 0; i < message.Length; i++) {
                 Console.Write(message[i]); //Will write out each letter in the string
                 Thread.Sleep(100); //typewriter aeffect, 1000MS = 1 second, 100MS=0.1 second
+            }
         }
-    }
+        static void StringIsNullOrEmpty() { //used to check if a string is valid before processing
+            string name = "Sean";
+            string name2 = "";
+            string name3 = null;
+            Console.WriteLine(string.IsNullOrEmpty(name)); //false
+            Console.WriteLine(string.IsNullOrEmpty(name2)); //true
+            Console.WriteLine(string.IsNullOrEmpty(name3)); //true
+
+            if (!string.IsNullOrEmpty(name)) { //if name is not empty, run code
+                Console.WriteLine($"Hello, {name}!");
+            }
+            else {
+                Console.WriteLine("You did not enter a name.");
+            }
+
+            if (!string.IsNullOrEmpty(name2)) { //if name is not empty, run code
+                Console.WriteLine($"Hello, {name}!");
+            }
+            else {
+                Console.WriteLine("You did not enter a name.");
+            }
+
+            if (!string.IsNullOrEmpty(name3)) { //if name is not empty, run code
+                Console.WriteLine($"Hello, {name}!");
+            }
+            else {
+                Console.WriteLine("You did not enter a name.");
+            }
+        }
     }
 }

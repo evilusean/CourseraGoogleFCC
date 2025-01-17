@@ -222,6 +222,8 @@ string name = null; null is not empty = it literally means there is no value, at
   Your code will crash if it is ran on something with a null variable, it is best to use 2 nested if statements to run this check like this : 'if (!string.IsNullOrEmpty(name)) { if ...}}' to improve stability
 
 Exercise : Print String in Reverse = 2:53:05 ===================================================================================================================================================================
+for (int i = message.Length - 1; i >= 0; i--){Console.Write(message[i]);} # since C# is [0] bound indexing, you need to subtract 1, then 'i--' to go backwards till '0', that's the trick for this one
+  similar to python, sort of, where you can just do [-1], but you need to do '.Length -1'
 
 
 

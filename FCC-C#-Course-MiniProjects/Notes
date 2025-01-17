@@ -185,13 +185,45 @@ Other Escape Characters: \t #tab, \n #new line, \" #quote marks
 String Formatting ({0}) = 2:17:00 =============================================================================================================================================================================
 This is the most common for outputting values to the console is using this format, type something in as a static string and add a variable to it
 Console.WriteLine($"Hello, my name is {name} and I am {age} years old."); #notice the '$' dollar sign, lets the compiler know to swap out the '{variables}'
-Console.WriteLine("Hello, my name is {0} and I am {1} years old.", name, age); //same way as above, but with a format string, name replaces {0}, age replaces {1}
+Console.WriteLine("Hello, my name is {0} and I am {1} years old.", name, age); // Composite Formatting = same way as above, but with a format string, name replaces {0}, age replaces {1} 
 
 String Interpolation ($) = 2:22:35 ============================================================================================================================================================================
 '$' = uses a dollar sign as a reference, wrapping variables in {curly braces} :
 Console.WriteLine($"Hello, my name is {name} and I am {age} years old.");
+String interpolation, probably the easiest method to work with for humans, because you can see the spaces in the strings, easier readability
 
 String Concationation (+) = 2:26:00 ===========================================================================================================================================================================
+string test = string.Concat("Hello, my name is ", firstName, "."); #another way to add words and variables together 'string.Concat' using ',' instead of '+'
+You can also use an array instead of arguments for 'string.Concat' method
+How many ways can you concat a cat? 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

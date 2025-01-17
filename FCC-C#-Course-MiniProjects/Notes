@@ -210,11 +210,10 @@ if (name != "") #empty string check using '!=' not equals to empty string
 if (!name4.Equals("")) #empty string check, new function
 Best Practice : using '.Equals' because it checks the reference in the memory, will check the values comparison
 
-
-
-
-
-
+String Iteration (looping) = 2:38:00 ===========================================================================================================================================================================
+If you want to return only a subsection of a string or an element, use '[]' square bracket indexing to pull out the part you want, you can grab a char from a string from indexing 
+for (int i = 0; i < message.Length; i++) {                Console.WriteLine(message[i]);} #similar to JS, you have access to '.length' for writing a for loop
+Thread.Sleep(100); //typewriter aeffect, 1000MS = 1 second, 100MS=0.1 second #'.Sleep' adds a delay for each cycle of the loop
 
 
 

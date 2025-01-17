@@ -219,8 +219,9 @@ String IsNullOrEmpty function = 2:47:55 ========================================
 string.IsNullOrEmpty(name) #used to check if string 'name' is null or empty/valid before performing any actions on it
 !string.IsNullOrEmpty(name) #use the '!' not operator to check if there is something inside, when used in an 'if' statement 
 string name = null; null is not empty = it literally means there is no value, at all. empty would be "" an empty string or blank. null is null
-  Your code will crash if it is ran on something with a null variable, it is best to use 2 nested if statements to run this check like this : 'if (!string.IsNullOrEmpty(name)) { if ...}}'
+  Your code will crash if it is ran on something with a null variable, it is best to use 2 nested if statements to run this check like this : 'if (!string.IsNullOrEmpty(name)) { if ...}}' to improve stability
 
+Exercise : Print String in Reverse = 2:53:05 ===================================================================================================================================================================
 
 
 

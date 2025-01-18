@@ -225,7 +225,7 @@ Exercise : Print String in Reverse = 2:53:05 ===================================
 for (int i = message.Length - 1; i >= 0; i--){Console.Write(message[i]);} # since C# is [0] bound indexing, you need to subtract 1, then 'i--' to go backwards till '0', that's the trick for this one
   similar to python, sort of, where you can just do [-1], but you need to do '.Length -1'
 
-
+Exercise: Password Checker = 3:01:45 ===========================================================================================================================================================================
 
 
 

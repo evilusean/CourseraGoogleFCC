@@ -13,8 +13,27 @@
         */
         static void Main(string[] args)
         {
-            PasswordChecker passwordChecker = new PasswordChecker();
-            passwordChecker.Run();
+            string password1 = "";
+            string password2 = "";
+
+            System.Console.WriteLine("Enter a password:");
+            password1 = System.Console.ReadLine();
+
+            System.Console.WriteLine("Enter the password again:");
+            password2 = System.Console.ReadLine();
+
+            if (password1 == "" || password2 == "")
+            {
+                System.Console.WriteLine("Please enter a password");
+            }
+            else if (password1 == password2)
+            {
+                System.Console.WriteLine("Passwords match");
+            }
+            else
+            {
+                System.Console.WriteLine("Passwords do not match");
+            }
         }
     }
 }

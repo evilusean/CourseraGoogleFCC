@@ -22,13 +22,20 @@
             System.Console.WriteLine("Enter the password again:");
             password2 = System.Console.ReadLine();
 
-            if (password1 == "" || password2 == "")
+            if (string.IsNullOrEmpty(password1) || string.IsNullOrEmpty(password2))
             {
                 System.Console.WriteLine("Please enter a password");
             }
             else if (password1 == password2)
             {
-                System.Console.WriteLine("Passwords match");
+                if (password1.Length >= 6)
+                {
+                    System.Console.WriteLine("Passwords match and are of sufficient length");
+                }
+                else
+                {
+                    System.Console.WriteLine("Passwords match but are too short. >6 characters");
+                }
             }
             else
             {

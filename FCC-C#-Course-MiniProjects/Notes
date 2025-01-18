@@ -229,9 +229,10 @@ Exercise: Password Checker = 3:01:45 ===========================================
 just a rehash of what I just learned
 
 Arrays [] = 3:11:00 ============================================================================================================================================================================================
-
-
-
+Arrays = Arrays are a collection of elements of the same type, Arrays are fixed in size, Arrays are zero-based, Arrays are reference types
+int[] numbers = new int[3]; #basic syntax, declare the type 'int' declare an array '[]' array name 'numbers', 'new int[3]' = new instance of integers with 3 positions - instantiate = new class
+Arrays start at [0] so 'new int[3]' is really new int '[2]'
+type[] name = new type[size]; #basic syntax
 
 
 

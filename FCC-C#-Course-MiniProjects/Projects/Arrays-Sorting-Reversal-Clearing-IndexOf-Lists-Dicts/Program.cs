@@ -6,7 +6,8 @@ namespace Arrays
     {
         static void Main(string[] args)
         {
-            ArraysExample();
+            //ArraysExample();
+            TriAngles();
         }
 
         static void ArraysExample()
@@ -47,10 +48,42 @@ namespace Arrays
             {
                 Console.WriteLine(numbers[i]);
             }
-            
+
             foreach (int number in numbers) //foreach loop to print an array line by line
             {
                 Console.WriteLine(number);
+            }
+        }
+        static void TriAngles()
+        {
+            // TriAngles
+            // A triangle is a polygon with three edges and three vertices
+            // The three angles of a triangle always add up to 180 degrees
+            // The sum of the lengths of any two sides of a triangle is always greater than the length of the third side
+
+            // Below syntax: type[] name = new type[size];
+            const int angleCount = 3; //use a variable to set the size of the array
+            int[] angles = new int[angleCount]; //array of 3 angles
+
+            for (int i = 0; i < angles.Length; i++)
+            {
+                Console.WriteLine($"Enter angle {i + 1}: ");
+                angles[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            int sum = 0;
+            foreach (int angle in angles)
+            {
+                sum += angle;
+            }
+
+            if (sum == 180)
+            {
+                Console.WriteLine("The angles form a triangle.");
+            }
+            else
+            {
+                Console.WriteLine("The angles do not form a triangle.");
             }
         }
     }

@@ -233,8 +233,9 @@ Arrays = Arrays are a collection of elements of the same type, Arrays are fixed 
 int[] numbers = new int[3]; #basic syntax, declare the type 'int' declare an array '[]' array name 'numbers', 'new int[3]' = new instance of integers with 3 positions - instantiate = new class
 Arrays start at [0] so 'new int[3]' is really new int '[2]'
 type[] name = new type[size]; #basic syntax
-
-
+for (int i = 0; i < numbers.Length; i++) {Console.WriteLine("Enter a number: ");numbers[i] = Convert.ToInt32(Console.ReadLine());} 
+//just change the size of the array at top of code to adjust how many inputs are needed
+//dynamic loop, will adjust to whatever size the array is, and ask for correct amount of inputs
 
 
 

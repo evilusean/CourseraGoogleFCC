@@ -236,7 +236,9 @@ type[] name = new type[size]; #basic syntax
 for (int i = 0; i < numbers.Length; i++) {Console.WriteLine("Enter a number: ");numbers[i] = Convert.ToInt32(Console.ReadLine());} 
 //just change the size of the array at top of code to adjust how many inputs are needed
 //dynamic loop, will adjust to whatever size the array is, and ask for correct amount of inputs
+triangle sums up three angles to see if it adds up to 180 degrees
 
+Array Sorting = 3:33:00 =========================================================================================================================================================================================
 
 
 

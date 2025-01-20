@@ -239,6 +239,9 @@ for (int i = 0; i < numbers.Length; i++) {Console.WriteLine("Enter a number: ");
 triangle sums up three angles to see if it adds up to 180 degrees
 
 Array Sorting = 3:33:00 =========================================================================================================================================================================================
+int[] numbers = new int[]{1, 5, 3, 7, 2, 9, 8, 4, 6 }; #notice here how you didn't have to declare how many ints there are, if you give it the list in '{}' it can count on compile
+test.Replace(" ", ""); #new keyword/method/function(idk what to call it) '.Replace' does what it says, will replace the first " " space with "" empty(remove the spaces)
+Array.Sort(numbers); # Will sort an array in ascending(smallest first) order on the array 'numbers' - notice we didn't have to save this to a variable then print, it affects it straight away, then can be used
 
 
 

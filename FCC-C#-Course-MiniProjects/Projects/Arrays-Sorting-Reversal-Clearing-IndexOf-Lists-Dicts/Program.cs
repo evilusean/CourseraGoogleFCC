@@ -7,7 +7,8 @@ namespace Arrays
         static void Main(string[] args)
         {
             //ArraysExample();
-            TriAngles();
+            //TriAngles();
+            ArraySorting();
         }
 
         static void ArraysExample()
@@ -84,6 +85,16 @@ namespace Arrays
             else
             {
                 Console.WriteLine("The angles do not form a triangle.");
+            }
+        }
+        static void ArraySorting() {
+            int[] numbers = new int[]
+            {
+                1, 5, 3, 7, 2, 9, 8, 4, 6
+            };
+            foreach (int num in numbers)
+            {
+                Console.Write($"{num} ");
             }
         }
     }

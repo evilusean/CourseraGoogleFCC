@@ -243,7 +243,7 @@ int[] numbers = new int[]{1, 5, 3, 7, 2, 9, 8, 4, 6 }; #notice here how you didn
 test.Replace(" ", ""); #new keyword/method/function(idk what to call it) '.Replace' does what it says, will replace the first " " space with "" empty(remove the spaces)
 Array.Sort(numbers); # Will sort an array in ascending(smallest first) order on the array 'numbers' - notice we didn't have to save this to a variable then print, it affects it straight away, then can be used
 
-
+Array Reversal = 3:35:50 ========================================================================================================================================================================================
 
 
 

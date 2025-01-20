@@ -88,14 +88,21 @@ namespace Arrays
             }
         }
         static void ArraySorting() {
-            int[] numbers = new int[]
+            int[] numbers = new int[] //new array, no size given, will adjust to size of values
             {
                 1, 5, 3, 7, 2, 9, 8, 4, 6
-            };
+            }; //don't need to declare size of array, can just initialize it with values
+
+            string test= ""; //initialize an empty string
+            test.Replace(" ", ""); //removes all spaces from a string
+
+            Array.Sort(numbers); //sorts the array in ascending order - not saved to a variable
+
             foreach (int num in numbers)
             {
-                Console.Write($"{num} ");
+                Console.Write($"{num} "); // add a space
             }
+            
         }
     }
 }

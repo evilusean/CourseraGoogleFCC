@@ -104,5 +104,20 @@ namespace Arrays
             }
             
         }
+
+        public void ArrayReversal() {
+            // Array Reversal = Sort an array in descending order
+            int[] numbers = new int[] //new array, no size given, will adjust to size of values
+            {
+                1, 5, 3, 7, 2, 9, 8, 4, 6
+            }; //don't need to declare size of array, can just initialize it with values
+
+            Array.Reverse(numbers); //reverses the array - not saved to a variable
+
+            foreach (int num in numbers)
+            {
+                Console.Write($"{num} "); // add a space
+            }
+        }
     }
 }

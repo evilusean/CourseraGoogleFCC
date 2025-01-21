@@ -190,7 +190,61 @@ namespace Arrays
         }
     }
     static void ListsExample() {
-        
-    }
+        // Lists
+        // Lists are a collection of elements of the same type
+        // Lists are dynamic in size
+        // Lists are zero-based
+        // Lists are reference types
+
+        // Below syntax: List<type> name = new List<type>();
+        List<int> numbers = new List<int>() //new list, no size given, will adjust to size of values
+        {
+            1, 2, 3, 4 //don't need to declare size of list, can just initialize it with values
+        };
+
+        numbers.Add(5); //add a value to the list manually, can add as many as you want
+        numbers.Add(10);
+        numbers.Add(15);
+
+        foreach (int number in numbers) //print the list
+        {
+            Console.WriteLine(number);
+        }
+
+        Console.WriteLine("Enter a number: ");
+        numbers.Add(Convert.ToInt32(Console.ReadLine())); //add a user input value to the list
+
+        foreach (int number in numbers) //print the list
+        {
+            Console.WriteLine(number);
+        }
+
+        Console.WriteLine("Enter a number to remove: ");
+        numbers.Remove(Convert.ToInt32(Console.ReadLine())); //remove a user input value from the list
+        // .RemoveAll() removes all instances of a value
+
+        foreach (int number in numbers) //print the list
+        {
+            Console.WriteLine(number);
+        }
+
+        Console.WriteLine("Enter a number to search: ");
+        int search = Convert.ToInt32(Console.ReadLine()); //user input to search for a value in the list
+        int position = numbers.IndexOf(search); //finds the index of the value in the list
+
+        if (position > -1) //if the value is found, -1 is returned if the value is not found
+        {
+            Console.WriteLine($"The number {search} is found at position {position + 1}.");
+        } // +1 to make it human readable not [0] based
+        else //if the value is not found
+        {
+            Console.WriteLine($"The number {search} is not found.");
+        }
+
+        foreach (int number in numbers) //print the list
+    {
+        Console.Write($"{number} ");
+}
+    }   
 }
 }

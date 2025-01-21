@@ -255,6 +255,44 @@ Array.Clear(numbers, 5, 5); #will replace the 5th position, and count 5 forward,
 Arrays can not be added or changed after they have been created, 'Array.Clear' will modify/reset back to 0 
 
 Array IndexOf = 3:45:40 ==========================================================================================================================================================================================
+If you are trying to search for a number, use index of to find the [index] of it, it will return the first one found, so if there are 2 values of the same, it will return the first
+Array.IndexOf(numbers, 7); #'Array.IndexOf' the function being called, 'numbers' the array to be searched, '7' the number searched for
+index = Array.IndexOf(numbers, 10); #will search 'numbers' for '10' and save it to the variable 'index'
+Console.Write("Enter a number to search: ");
+            int search = Convert.ToInt32(Console.ReadLine()); //user input to search for a value in the array
+            int position = Array.IndexOf(numbers, search); //finds the index of the value in the array
+            if (position > -1) //if the value is found, -1 is returned if the value is not found            
+            {Console.WriteLine($"The number {search} is found at position {position + 1}.");} // +1 to make it human readable not [0] based
+            else //if the value is not found{Console.WriteLine($"The number {search} is not found.");}
+# pasted all that for future sean to know that if the number is not found, it will be '-1' default, if it has any position in the [index], it found a number that matches
+you can also search strings, if it's sorted, you can search only for names that start with 'a' (or whatever) and only search a specific range making it quicker by defining the correct parameters
+
+Lists <> = 3:55:00 ================================================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

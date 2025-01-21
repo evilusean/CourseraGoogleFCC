@@ -121,6 +121,22 @@ namespace Arrays
                 Console.Write($"{num} "); // add a space
             }
             Console.WriteLine();
+
+            //will store new reversed array in a new array, I heard you liked reversed arrays
+            int[] sortedNumbers = new int[numbers.Length]; //new array to save the reversed array
+            int x = 0; // initialize a variable to save the reversed array
+
+            for (int i = numbers.Length - 1; i >= 0 ; i--) //manually reverse the array
+            {
+                sortedNumbers[x] = numbers[i]; //saves the variables to int x
+                x++; 
+            }
+            Console.WriteLine();
+            foreach (int num in sortedNumbers)
+            {
+                Console.Write($"{num} "); // add a space
+            }
+            
         }
     }
 }

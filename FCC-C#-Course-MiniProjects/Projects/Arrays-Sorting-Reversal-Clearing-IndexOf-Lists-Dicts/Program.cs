@@ -162,8 +162,31 @@ namespace Arrays
             }
         }
 
-        static void ArrayIndexOf(); {
-            
+        static void ArrayIndexOf()
+     {
+            int[] numbers = new int[] //new array, no size given, will adjust to size of values
+            {
+                1, 5, 3, 7, 2, 9, 8, 4, 6
+            }; //don't need to declare size of array, can just initialize it with values
+
+            int index = Array.IndexOf(numbers, 7); //finds the index of the value 7 in the array
+            Console.WriteLine(index); //prints the index of the value 7
+
+            index = Array.IndexOf(numbers, 9); //finds the index of the value 10 in the array
+            Console.WriteLine(index); //prints the index of the value 10
+
+            Console.Write("Enter a number to search: ");
+            int search = Convert.ToInt32(Console.ReadLine()); //user input to search for a value in the array
+            int position = Array.IndexOf(numbers, search); //finds the index of the value in the array
+
+            if (position > -1) //if the value is found, -1 is returned if the value is not found
+            {
+                Console.WriteLine($"The number {search} is found at position {position + 1}.");
+            } // +1 to make it human readable not [0] based
+            else //if the value is not found
+            {
+                Console.WriteLine($"The number {search} is not found.");
         }
     }
+}
 }

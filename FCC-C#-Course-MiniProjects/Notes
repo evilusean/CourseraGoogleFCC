@@ -268,11 +268,15 @@ Console.Write("Enter a number to search: ");
 you can also search strings, if it's sorted, you can search only for names that start with 'a' (or whatever) and only search a specific range making it quicker by defining the correct parameters
 
 Lists <> = 3:55:00 ================================================================================================================================================================================================
-
-
-
-
-
+Lists are a collection of elements of the same type, Lists are dynamic in size, Lists are zero-based , Lists are reference types
+All Arrays are stacked data = when initialized with a certain length, can not be increased or decreased, only modify the data inside - this saves memory
+  It is possible to add a length by copying over an old array to a new one and then adding a new value at the end, this is tedious though
+Lists are good for registers, when you don't know the size you will need, Lists are dynamic, use Arrays when you know exactly what you are working with like a tic tac toe array
+List<type> name = new List<type>(); #basic syntax 'List' keyword 'type' 
+List<int> numbers = new List<int>(); //new list, no size given, will adjust to size of values - basic syntax
+numbers.Add(5); //add a value to the list manually
+numbers.Remove(5) // Remove a number from the list manually  // .RemoveAll() removes all instances of a value, or a specific positon with .RemoveAt()
+Can Reverse/Sort/IndexOf, same as arrays, 
 
 
 

@@ -249,9 +249,10 @@ Allows you to flip the order, instead of requesting the DB to flip the order aro
 Flipping the data locally is best practice, as it uses less resources than a DB backend request, when you can, use these functions/methods locally instead of sending another DB request
 
 Array Clearing = 3:39:20 ========================================================================================================================================================================================
-
-
-
+Array.Clear(numbers, 0, numbers.Length); # 'Array.Clear' call the function, 'numbers' array variable, '0' where you start(0 based index=first), and 'numbers.Length' is clear the entire array
+Clearing just replaces all the values of the elements in the array to '0'
+Array.Clear(numbers, 5, 5); #will replace the 5th position, and count 5 forward, 
+Arrays can not be added or changed after they have been created, 'Array.Clear' will modify/reset back to 0 
 
 
 

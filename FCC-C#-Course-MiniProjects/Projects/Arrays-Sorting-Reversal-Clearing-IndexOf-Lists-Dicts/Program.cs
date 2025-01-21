@@ -10,7 +10,8 @@ namespace Arrays
             //TriAngles();
             //ArraySorting();
             //ArrayReversal();
-            ArrayClearing();
+            //ArrayClearing();
+            ArrayIndexOf();
         }
 
         static void ArraysExample()
@@ -159,6 +160,10 @@ namespace Arrays
             {
                 Console.Write($"{num} "); // add a space
             }
+        }
+
+        static void ArrayIndexOf(); {
+            
         }
     }
 }

@@ -8,7 +8,8 @@ namespace Arrays
         {
             //ArraysExample();
             //TriAngles();
-            ArraySorting();
+            //ArraySorting();
+            ArrayReversal();
         }
 
         static void ArraysExample()
@@ -105,7 +106,8 @@ namespace Arrays
             
         }
 
-        public void ArrayReversal() {
+        static void ArrayReversal() 
+        {
             // Array Reversal = Sort an array in descending order
             int[] numbers = new int[] //new array, no size given, will adjust to size of values
             {
@@ -118,6 +120,7 @@ namespace Arrays
             {
                 Console.Write($"{num} "); // add a space
             }
+            Console.WriteLine();
         }
     }
 }

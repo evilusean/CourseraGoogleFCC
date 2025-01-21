@@ -267,7 +267,7 @@ Console.Write("Enter a number to search: ");
 # pasted all that for future sean to know that if the number is not found, it will be '-1' default, if it has any position in the [index], it found a number that matches
 you can also search strings, if it's sorted, you can search only for names that start with 'a' (or whatever) and only search a specific range making it quicker by defining the correct parameters
 
-Lists = 3:55:00 ===================================================================================================================================================================================================
+Lists <> = 3:55:00 ================================================================================================================================================================================================
 
 
 

@@ -245,7 +245,8 @@ Array.Sort(numbers); # Will sort an array in ascending(smallest first) order on 
 
 Array Reversal = 3:35:50 ========================================================================================================================================================================================
 Array.Reverse(numbers); # will sort array in descending order on the array 'numbers
-
+Allows you to flip the order, instead of requesting the DB to flip the order around and send the data, it's better to reverse the list, you can price by(or whatever) ascending or descending just change the method
+Flipping the data locally is best practice, as it uses less resources than a DB backend request, when you can, use these functions/methods locally instead of sending another DB request
 
 
 

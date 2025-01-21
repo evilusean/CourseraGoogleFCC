@@ -254,7 +254,7 @@ Clearing just replaces all the values of the elements in the array to '0'
 Array.Clear(numbers, 5, 5); #will replace the 5th position, and count 5 forward, 
 Arrays can not be added or changed after they have been created, 'Array.Clear' will modify/reset back to 0 
 
-
+Array IndexOf = 3:45:40 ==========================================================================================================================================================================================
 
 
 

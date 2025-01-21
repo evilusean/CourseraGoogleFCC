@@ -9,7 +9,8 @@ namespace Arrays
             //ArraysExample();
             //TriAngles();
             //ArraySorting();
-            ArrayReversal();
+            //ArrayReversal();
+            ArrayClearing();
         }
 
         static void ArraysExample()
@@ -136,7 +137,28 @@ namespace Arrays
             {
                 Console.Write($"{num} "); // add a space
             }
-            
+        }
+        static void ArrayClearing() {
+            int[] numbers = new int[] //new array, no size given, will adjust to size of values
+            {
+                1, 5, 3, 7, 2, 9, 8, 4, 6
+            }; //don't need to declare size of array, can just initialize it with values
+
+            //clear a part
+            Array.Clear(numbers, 3, 5); //clears the array from index [3] for 5 - not saved to a variable
+            foreach (int num in numbers) //prints the cleared array
+            {
+                Console.Write($"{num} "); // add a space
+            }
+
+            Console.WriteLine();
+
+            //clear the whole array
+            Array.Clear(numbers, 0, numbers.Length); //clears the array [0]- not saved to a variable
+            foreach (int num in numbers) //prints the cleared array
+            {
+                Console.Write($"{num} "); // add a space
+            }
         }
     }
 }

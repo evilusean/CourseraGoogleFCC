@@ -11,7 +11,8 @@ namespace Arrays
             //ArraySorting();
             //ArrayReversal();
             //ArrayClearing();
-            ArrayIndexOf();
+            //ArrayIndexOf();
+            ListsExample();
         }
 
         static void ArraysExample()
@@ -187,6 +188,9 @@ namespace Arrays
             {
                 Console.WriteLine($"The number {search} is not found.");
         }
+    }
+    static void ListsExample() {
+        
     }
 }
 }

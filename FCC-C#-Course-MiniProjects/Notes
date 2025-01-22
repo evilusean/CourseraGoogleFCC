@@ -282,13 +282,19 @@ Dictionary = 4:04:00 ===========================================================
 Dictionaries = Dictionaries are a collection of *key-value pairs*, Dictionaries are dynamic in size, Dictionaries are zero-based, Dictionaries are reference types
 Key and value can be any type you want 
 'using System.Collections.Generic;' #specify this at the top, or you will need to include it every time you want to add a dictionary
-Dictionary<int, string> names; = new Dictionary<int, string>(); 
+Dictionary<int, string> names; = new Dictionary<int, string>
   # Basic syntax for creating a new dictionary, 'int' will be the datatype for the keys, and 'string' will be the datatype for the value - 'names' is the dictionary variable
 'names.Add(1, "Sean");' // how to add a key-value pair to a dictionary, same as a list
 {            { 1, "Sean" }, // how to add a key-value pair to a dictionary            { 2, "Shawn" },            { 3, "Shaun" }        } #wrap it in curly braces, and place after the declaraSean
-
-
-
+*KEYS MUST BE UNIQUE* will cause a runtime error if there are duplicates, values can be the same, but keys MUST be unique
+Dictionaries are dynamic, like lists 
+Dictionaries are not like an [index]
+for (int i = 1; i <= names.Count; i++) {Console.WriteLine(names[i]);} #this will print out each item, but only because they are labeled '1' '2' etc, not because of index [0] [1] etc
+for (int i = 0; i < names.Count; i++){KeyValuePair<int, string> pair = names.ElementAt(i); Console.WriteLine($"{pair.Key} = {pair.Value}") // how to access a value in a dictionary}
+  #how to write it so it goes through the [INDEX] Not the KEY in a for loop new keywords 'KeyValuePair' declares a new variable 'pair' 'names' old variable '.ElementAt' goes through each item in dict
+  #{pair.Key} is how you call the key, and '{pair.Value}' how you call the value, also new keywords/methods/functions
+foreach (var item in names)        {            Console.WriteLine($"{item.Key} = {item.Value}");         }
+  # you can also use 'var' and accomplish the same in a 'foreach' loop, does the same as above in less code 'item' instead of 'pair' 
 
 
 

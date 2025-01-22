@@ -279,6 +279,13 @@ numbers.Remove(5) // Remove a number from the list manually  // .RemoveAll() rem
 Can Reverse/Sort/IndexOf, same as arrays, 
 
 Dictionary = 4:04:00 ==============================================================================================================================================================================================
+Dictionaries = Dictionaries are a collection of *key-value pairs*, Dictionaries are dynamic in size, Dictionaries are zero-based, Dictionaries are reference types
+Key and value can be any type you want 
+'using System.Collections.Generic;' #specify this at the top, or you will need to include it every time you want to add a dictionary
+Dictionary<int, string> names; = new Dictionary<int, string>(); 
+  # Basic syntax for creating a new dictionary, 'int' will be the datatype for the keys, and 'string' will be the datatype for the value - 'names' is the dictionary variable
+'names.Add(1, "Sean");' // how to add a key-value pair to a dictionary, same as a list
+{            { 1, "Sean" }, // how to add a key-value pair to a dictionary            { 2, "Shawn" },            { 3, "Shaun" }        } #wrap it in curly braces, and place after the declaraSean
 
 
 

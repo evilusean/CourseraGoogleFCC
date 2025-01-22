@@ -1,5 +1,7 @@
 ﻿using System;
 
+using System.Collections.Generic;
+
 namespace Arrays
 {
     class Program
@@ -254,6 +256,16 @@ namespace Arrays
         // Dictionaries are zero-based
         // Dictionaries are reference types
 
+        Dictionary<int, string> names = new Dictionary<int, string>(); // how to create a new dictionary
+        {
+            { 1, "Sean" }, // how to add a key-value pair to a dictionary
+            { 2, "Shawn" },
+            { 3, "Shaun" }
+        }
+        names.Add(1, "Sean"); // how to add a key-value pair to a dictionary
+        names.Add(2, "Shawn");
+        names.Add(3, "Shaun");
 
 }
+    }
 }

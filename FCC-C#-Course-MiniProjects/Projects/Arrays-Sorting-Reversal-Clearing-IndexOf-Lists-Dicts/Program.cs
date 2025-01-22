@@ -256,15 +256,29 @@ namespace Arrays
         // Dictionaries are zero-based
         // Dictionaries are reference types
 
-        Dictionary<int, string> names = new Dictionary<int, string>(); // how to create a new dictionary
+        Dictionary<int, string> names = new Dictionary<int, string> // how to create a new dictionary
         {
             { 1, "Sean" }, // how to add a key-value pair to a dictionary
             { 2, "Shawn" },
             { 3, "Shaun" }
+        };
+        names.Add(4, "Sean"); // how to add a key-value pair to a dictionary manually
+        names.Add(5, "Shawn");
+        names.Add(6, "Shaun");
+
+        //will loop through each key-value pair in the dictionary based on KEY not [index]
+        for (int i = 1; i <= names.Count; i++) // how to loop through a dictionary
+        {
+            Console.WriteLine(names[i]); // how to access a value in a dictionary
         }
-        names.Add(1, "Sean"); // how to add a key-value pair to a dictionary
-        names.Add(2, "Shawn");
-        names.Add(3, "Shaun");
+
+        //will loop through each key-value pair based on [INDEX] not key
+        for (int i = 0; i < names.Count; i++) // how to loop through a dictionary
+        {
+            KeyValuePair<int, string> pair = names.ElementAt(i); // how to access a key-value pair in a dictionary
+            Console.WriteLine($"{pair.Key} = {pair.Value}"); // how to access a value in a dictionary
+        }
+
 
 }
     }

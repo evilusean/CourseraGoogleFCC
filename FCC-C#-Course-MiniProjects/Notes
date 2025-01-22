@@ -293,8 +293,8 @@ for (int i = 1; i <= names.Count; i++) {Console.WriteLine(names[i]);} #this will
 for (int i = 0; i < names.Count; i++){KeyValuePair<int, string> pair = names.ElementAt(i); Console.WriteLine($"{pair.Key} = {pair.Value}") // how to access a value in a dictionary}
   #how to write it so it goes through the [INDEX] Not the KEY in a for loop new keywords 'KeyValuePair' declares a new variable 'pair' 'names' old variable '.ElementAt' goes through each item in dict
   #{pair.Key} is how you call the key, and '{pair.Value}' how you call the value, also new keywords/methods/functions
-
-
+foreach (var item in names)        {            Console.WriteLine($"{item.Key} = {item.Value}");         }
+  # you can also use 'var' and accomplish the same in a 'foreach' loop, does the same as above in less code 'item' instead of 'pair' 
 
 
 

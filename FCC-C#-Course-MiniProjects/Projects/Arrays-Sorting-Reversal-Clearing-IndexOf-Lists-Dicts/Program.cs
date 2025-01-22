@@ -279,6 +279,10 @@ namespace Arrays
             Console.WriteLine($"{pair.Key} = {pair.Value}"); // how to access a value in a dictionary
         }
 
+        foreach (var item in names) // how to loop through a dictionary
+        {
+            Console.WriteLine($"{item.Key} = {item.Value}"); // how to access a value in a dictionary
+        }
 
 }
     }

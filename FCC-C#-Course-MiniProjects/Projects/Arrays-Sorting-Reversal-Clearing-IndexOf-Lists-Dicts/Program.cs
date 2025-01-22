@@ -12,7 +12,8 @@ namespace Arrays
             //ArrayReversal();
             //ArrayClearing();
             //ArrayIndexOf();
-            ListsExample();
+            //ListsExample();
+            DictionaryExample();
         }
 
         static void ArraysExample()
@@ -221,7 +222,7 @@ namespace Arrays
 
         Console.WriteLine("Enter a number to remove: ");
         numbers.Remove(Convert.ToInt32(Console.ReadLine())); //remove a user input value from the list
-        // .RemoveAll() removes all instances of a value
+        // .RemoveAll() removes all instances of a value, or a specific positon with .RemoveAt()
 
         foreach (int number in numbers) //print the list
         {
@@ -245,6 +246,14 @@ namespace Arrays
     {
         Console.Write($"{number} ");
 }
-    }   
+    }
+    static void DictionaryExample() {
+        // Dictionaries
+        // Dictionaries are a collection of key-value pairs
+        // Dictionaries are dynamic in size
+        // Dictionaries are zero-based
+        // Dictionaries are reference types
+
+
 }
 }

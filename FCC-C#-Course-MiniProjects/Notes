@@ -278,7 +278,7 @@ numbers.Add(5); //add a value to the list manually
 numbers.Remove(5) // Remove a number from the list manually  // .RemoveAll() removes all instances of a value, or a specific positon with .RemoveAt()
 Can Reverse/Sort/IndexOf, same as arrays, 
 
-
+Dictionary = 4:04:00 ==============================================================================================================================================================================================
 
 
 

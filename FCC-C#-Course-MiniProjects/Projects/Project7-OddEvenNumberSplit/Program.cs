@@ -9,6 +9,25 @@
     print the odd list
     */
     static void Main(string[] args) {
+        List<int> evenList = new List<int>();
+        List<int> oddList = new List<int>();
+        for (int i = 0; i <= 20; i++) {
+            if (i % 2 == 0) {
+                evenList.Add(i);
+            } else {
+                oddList.Add(i);
+            }
+        }
+        Console.WriteLine("Even List:");
+        foreach (int even in evenList) {
+            Console.Write($"{even} ");
+        }
+        Console.WriteLine();
+        Console.WriteLine("Odd List:");
+        foreach (int odd in oddList) {
+            Console.Write($"{odd} ");
+        }
         Console.ReadLine();
+        
     }
 }

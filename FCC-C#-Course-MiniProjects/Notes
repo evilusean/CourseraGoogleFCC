@@ -295,6 +295,13 @@ for (int i = 0; i < names.Count; i++){KeyValuePair<int, string> pair = names.Ele
   #{pair.Key} is how you call the key, and '{pair.Value}' how you call the value, also new keywords/methods/functions
 foreach (var item in names)        {            Console.WriteLine($"{item.Key} = {item.Value}");         }
   # you can also use 'var' and accomplish the same in a 'foreach' loop, does the same as above in less code 'item' instead of 'pair' 
+Console.WriteLine(teachers["Math"]); #How to search for a key and retrieve the value, will search the dictionary 'teachers' for the key 'Math' and print the value attached to it
+If a key is not found, it will throw an exception = runtime error = crash = No typos - you can fix this with a 'int.TryParse' before so it won't crash the code
+if (teachers.TryGetValue("Math", out string teacher)) #'teachers' is the dictionary, 'Math' is the key, and 'out string teacher' is the second parameter which gets output, takes the value and place it in 'teacher'
+teachers["Math"] = "The Count"; # will change the value for key 'Math', use below method for safer code
+if (teachers.ContainsKey("Math")) {teachers.Remove("Math");} else {Console.Writeline("Math not found")} #safer way to remove the key/value for 'Math' without crashing if you typo
+
+Exercise : Odd/Even number split = 4:16:30 ========================================================================================================================================================================
 
 
 

@@ -9,17 +9,17 @@
     print the odd list
     */
     static void Main(string[] args) {
-        List<int> evenList = new List<int>();
-        List<int> oddList = new List<int>();
-        for (int i = 0; i <= 20; i++) {
-            if (i % 2 == 0) {
-                evenList.Add(i);
-            } else {
-                oddList.Add(i);
+        List<int> evenList = new List<int>(); // Create a list to store even numbers
+        List<int> oddList = new List<int>(); // Create a list to store odd numbers
+        for (int i = 0; i <= 20; i++) { // Loop from 0 to 20
+            if (i % 2 == 0) { // Check if the number is even
+                evenList.Add(i);  // Add the number to the even list
+            } else { // If the number is not even, it is odd
+                oddList.Add(i); // Add the number to the odd list
             }
         }
         Console.WriteLine("Even List:");
-        foreach (int even in evenList) {
+        foreach (int even in evenList) { // Loop through the even list
             Console.Write($"{even} ");
         }
         Console.WriteLine();

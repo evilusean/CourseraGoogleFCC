@@ -279,9 +279,17 @@ namespace Arrays
             Console.WriteLine($"{pair.Key} = {pair.Value}"); // how to access a value in a dictionary
         }
 
-        foreach (var item in names) // how to loop through a dictionary
+        foreach (var item in names)
         {
-            Console.WriteLine($"{item.Key} = {item.Value}"); // how to access a value in a dictionary
+            Console.WriteLine($"{item.Key} = {item.Value}"); 
+        }
+
+        //New Example for dictionaries :
+        Dictionary<string, string> teachers = new Dictionary<string, string> 
+        {
+            { "Math", "Mr. Smith" },
+            { "Science", "Mrs. Johnson" },
+            { "History", "Mr. Brown" }
         }
 
 }

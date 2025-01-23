@@ -290,8 +290,27 @@ namespace Arrays
             { "Math", "Mr. Smith" },
             { "Science", "Mrs. Johnson" },
             { "History", "Mr. Brown" }
+        };
+        //Console.WriteLine(teachers["Math"]); //prints the value of the key "Math"
+        
+        //Check to see if a key exists in the dictionary, or code will runtime error
+        if (teachers.TryGetValue("Math", out string teacher)) //checks if the key "Math" exists in the dictionary
+        {
+            Console.WriteLine(teacher); //prints the value of the key "Math"
+            teachers["Math"] = "The Count"; //changes the value of the key "Math"
+        }
+        else
+        {
+            Console.WriteLine("Key not found.");
+        }
+        
+        //print out all values in the dictionary with foreach loop
+        foreach (var item in teachers)
+        {
+            Console.WriteLine($"{item.Key} = {item.Value}");
         }
 
+        teachers.Remove("Science"); //removes the key "Science" from the dictionary
 }
     }
 }

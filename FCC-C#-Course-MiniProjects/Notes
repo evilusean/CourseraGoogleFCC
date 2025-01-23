@@ -301,6 +301,7 @@ if (teachers.TryGetValue("Math", out string teacher)) #'teachers' is the diction
 teachers["Math"] = "The Count"; # will change the value for key 'Math', use below method for safer code
 if (teachers.ContainsKey("Math")) {teachers.Remove("Math");} else {Console.Writeline("Math not found")} #safer way to remove the key/value for 'Math' without crashing if you typo
 
+Exercise : Odd/Even number split = 4:16:30 ========================================================================================================================================================================
 
 
 

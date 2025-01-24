@@ -318,7 +318,10 @@ static void Main(string[] args) #every program requires the 'static void Main' t
     if it is not 'static' you need to reference it like this '<class name><variable name> = new <class name>();' to instantiate and use any code in that classes code block by '<variable name>.<function name>'
 
 Void Functions = 4:35:40 ==========================================================================================================================================================================================
-
+'void' specify what return type you want to have, void = nothing, not just for angsty teenagers and Nietzsche enjoyers *stares back at you*
+since you are running code in a function (like 'Console.Write') and it is being used within it's own codeblock, you aren't actually using it within your 'Main' function, so it is still a void
+void just does the contents of the function, reaches the bottom, and that's it.
+'int.TryParse' returns something back, a boolean, if it returns 'true' you can then do something with that code, if it fails, it just won't crash
 
 
 

@@ -317,7 +317,7 @@ static void Main(string[] args) #every program requires the 'static void Main' t
     You can access something outside of it's class by doing '<class name>.<function name>' where class name is the name of the class that holds the functionm if you don't want it usable everywhere remove 'static'
     if it is not 'static' you need to reference it like this '<class name><variable name> = new <class name>();' to instantiate and use any code in that classes code block by '<variable name>.<function name>'
 
-  
+Void Functions = 4:35:40 ==========================================================================================================================================================================================
 
 
 

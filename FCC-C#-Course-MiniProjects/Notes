@@ -309,7 +309,7 @@ The trick here is not to start the loop at '0' since you are doing multiples, wh
 int[] result = new int[length];            for (int i = 0; i < length; i++) {result[i] = num * (i + 1);}  #you can see how the loop works, and it takes the size of array from 'length', avoiding the [0] multiple
 for (int i = 0; i < length; i++, counter++) #also of note, you aren't stuck only using 3 arguments here, you can add more that will activate everytime the loop is run, note the 'counter++'
 
-
+Functions = 4:30:00 ===============================================================================================================================================================================================
 
 
 

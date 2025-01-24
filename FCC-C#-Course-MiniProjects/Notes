@@ -323,6 +323,7 @@ since you are running code in a function (like 'Console.Write') and it is being 
 void just does the contents of the function, reaches the bottom, and that's it.
 'int.TryParse' returns something back, a boolean, if it returns 'true' you can then do something with that code, if it fails, it just won't crash
 
+Return Type Functions = 4:41:30 ===================================================================================================================================================================================
 
 
 

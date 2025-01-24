@@ -310,10 +310,20 @@ int[] result = new int[length];            for (int i = 0; i < length; i++) {res
 for (int i = 0; i < length; i++, counter++) #also of note, you aren't stuck only using 3 arguments here, you can add more that will activate everytime the loop is run, note the 'counter++'
 
 Functions = 4:30:00 ===============================================================================================================================================================================================
+Functions can also be called methods (used interchangably)
+DRY = Dont Repeat Yourself
+static void Main(string[] args) #every program requires the 'static void Main' the parameters '(..)' can be cut, as they aren't neccesary, this function must be capital 'M' Main
+  'static' = means you can access it anywhere and everywhere - no need to create a 'new' instance of the class in order to access it
+    You can access something outside of it's class by doing '<class name>.<function name>' where class name is the name of the class that holds the functionm if you don't want it usable everywhere remove 'static'
+    if it is not 'static' you need to reference it like this '<class name><variable name> = new <class name>();' to instantiate and use any code in that classes code block by '<variable name>.<function name>'
 
+Void Functions = 4:35:40 ==========================================================================================================================================================================================
+'void' specify what return type you want to have, void = nothing, not just for angsty teenagers and Nietzsche enjoyers *stares back at you*
+since you are running code in a function (like 'Console.Write') and it is being used within it's own codeblock, you aren't actually using it within your 'Main' function, so it is still a void
+void just does the contents of the function, reaches the bottom, and that's it.
+'int.TryParse' returns something back, a boolean, if it returns 'true' you can then do something with that code, if it fails, it just won't crash
 
-
-
+Return Type Functions = 4:41:30 ===================================================================================================================================================================================
 
 
 

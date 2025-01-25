@@ -324,10 +324,17 @@ void just does the contents of the function, reaches the bottom, and that's it.
 'int.TryParse' returns something back, a boolean, if it returns 'true' you can then do something with that code, if it fails, it just won't crash
 
 Return Type Functions = 4:41:30 ===================================================================================================================================================================================
+'Console.Title = "Sean";' #lets you change the tab title of your console programs
+Global scope variables should be avoided(if you can)
+static string returnName ();{return "Sean";} //this is a return function, it returns a string
+'Console.Title = ReturnName();' #instead of using a global variable, this will take the string from the return funcSean above, you can store 'ReturnName();' as a shorter variable to use it instead
+return new int[] { 0, 1, 2 }; #simple way to return an array, in one line, instead of creating an array, assiging values to that variable, then returning the variable 
+Functions ideally should only perform one function, if they can be broken up into 2 functions, best practice would dictate that you do - KISS -keep it short, keep it simple
+  Also, if you convert and calculate in one function but later on only want to convert, then you can't do it, so if you seperate your functions, future sean will be thankful
+Name the functions correctly for future sean so they make sense and explain what they do instead of 'func a return b' or whatever
+'Ctrl' + 'Left Click' on a function in VScode and it will jump to it - I've been using VSCode for years and didn't know this, suuppperr useful
 
-
-
-
+Function Parameters = 4:59:50 =====================================================================================================================================================================================
 
 
 

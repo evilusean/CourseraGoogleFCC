@@ -335,6 +335,38 @@ Name the functions correctly for future sean so they make sense and explain what
 'Ctrl' + 'Left Click' on a function in VScode and it will jump to it - I've been using VSCode for years and didn't know this, suuppperr useful
 
 Function Parameters = 4:59:50 =====================================================================================================================================================================================
+static int Add(int a, int b)         {            return a + b;        }// this is a function that takes two int parameters and returns the int sum of them
+Local Variables = only exist in a function, as soon as the function is done, they are removed from memory(deleted), aka they won't be saved, so you can't access int a or int b afterwards
+static int ReadInt(string message){Console.WriteLine($"{message} : "); return Convert.ToInt32(Console.ReadLine());} #this will take in a 'string message' as parameters and return an int32
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

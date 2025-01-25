@@ -339,7 +339,7 @@ static int Add(int a, int b)         {            return a + b;        }// this 
 Local Variables = only exist in a function, as soon as the function is done, they are removed from memory(deleted), aka they won't be saved, so you can't access int a or int b afterwards
 static int ReadInt(string message){Console.WriteLine($"{message} : "); return Convert.ToInt32(Console.ReadLine());} #this will take in a 'string message' as parameters and return an int32
 
-
+Optional Parameters = 5:12:25 =====================================================================================================================================================================================
 
 
 

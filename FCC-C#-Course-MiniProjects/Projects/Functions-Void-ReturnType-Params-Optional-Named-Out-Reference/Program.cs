@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace Functions
 {
@@ -109,10 +110,15 @@ namespace Functions
             Console.WriteLine($"{message} : "); // will get the message as parameters from the ParametersExample function
             return Console.ReadLine(); //returns the string from the user input string
         }
-
-        static int Add(int a, int b) // this is a function that takes two int parameters and returns the int sum of them
+        // this is a function that takes two int parameters and returns the int sum of them
+        static int Add(int a, int b = 10) // 'b = 10' is the default value for the second parameter
         {
             return a + b;
+        }
+        // this is a function that takes two int parameters and returns the int product of them
+        static int Multiply(int a, [Optional] int b) // 'Optional' is used to make the second parameter optional
+        {
+            return a * b;
         }
         static string UserDetails (string name, int age) //this is a function that takes a string and an int and returns a string
         {
@@ -121,7 +127,8 @@ namespace Functions
 
         static void optionalParamsExample() 
         {
-
+            int result = Add(5);
+            Console.WriteLine(result);
         }
         
     }

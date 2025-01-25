@@ -334,7 +334,7 @@ Functions ideally should only perform one function, if they can be broken up int
 Name the functions correctly for future sean so they make sense and explain what they do instead of 'func a return b' or whatever
 'Ctrl' + 'Left Click' on a function in VScode and it will jump to it - I've been using VSCode for years and didn't know this, suuppperr useful
 
-
+Function Parameters = 4:59:50 =====================================================================================================================================================================================
 
 
 

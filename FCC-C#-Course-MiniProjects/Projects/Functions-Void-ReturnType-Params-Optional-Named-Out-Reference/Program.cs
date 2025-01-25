@@ -46,11 +46,14 @@ namespace Functions
 
         static int[] CreateArray() // creates an array without asking for user input that gets returned
         {
-            int[] numbers = new int[] // initialize the array with values
+            /*int[] numbers = new int[] // initialize the array with values
             {
                 0, 1, 2
             };
-            return numbers; // return the array of 3 numbers
+            return numbers; // return the array of 3 numbers */
+            
+            //turn ALL of the above into one liner
+            return new int[] { 0, 1, 2 }; // will return an array of 3 numbers
         }
 
         // combining the two return functions into a single function

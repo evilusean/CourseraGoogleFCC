@@ -340,8 +340,10 @@ Local Variables = only exist in a function, as soon as the function is done, the
 static int ReadInt(string message){Console.WriteLine($"{message} : "); return Convert.ToInt32(Console.ReadLine());} #this will take in a 'string message' as parameters and return an int32
 
 Optional Parameters = 5:12:25 =====================================================================================================================================================================================
-
-
+Default values = if you have a function that takes 2 parameters, or you only input 1 (or none) it will automatically place in the default values instead
+static int Add(int a, int b = 10) {return a + b;} #notice the second 'int b = 10' will allow it to default to '10' if only one parameter is entered
+static int Add(int a, int b = default) #you can also use the 'default' keyword(which is 0), it will give the default based on datatype, so you don't need to remember if it's an int or a string or whatever
+static int Multiply(int a, [Optional] int b){return a * b;} #'[Optional]' will give you the 'default' value based on the datatype
 
 
 

@@ -89,20 +89,33 @@ namespace Functions
         static void ParametersExample() 
         {
             Console.WriteLine("Enter two numbers: ");
-            int a = ReadInt(); //user input for the first number
-            int b = ReadInt(); //user input for the second number
+            int a = ReadInt("Enter First Number"); //user input for the first number
+            int b = ReadInt("Enter Second Number"); //user input for the second number
             //will call the Add function below and display the sum of the two numbers, notice the 'Add(a, b)
             Console.WriteLine("The sum of " + a + " and " + b + " is " + Add(a, b));
+            string name = ReadString("Enter your name"); //will get the user input for the name
+            int age = ReadInt("Enter your age"); //will get the user input for the age
+            Console.WriteLine(UserDetails(name, age)); //will display the name and age
             Console.ReadLine();
         }
-        static int ReadInt() //will get the user input for the numbers
+        static int ReadInt(string message) //will get the user input for the numbers
         {
-            return Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"{message} : "); // will get the message as parameters from the ParametersExample function
+            return Convert.ToInt32(Console.ReadLine()); //returns the int from the user input string
+        }
+        static string ReadString(string message) //will get the user input for the strings
+        {
+            Console.WriteLine($"{message} : "); // will get the message as parameters from the ParametersExample function
+            return Console.ReadLine(); //returns the string from the user input string
         }
 
         static int Add(int a, int b) // this is a function that takes two int parameters and returns the int sum of them
         {
             return a + b;
+        }
+        static string UserDetails (string name, int age) //this is a function that takes a string and an int and returns a string
+        {
+            return "Hello, my name is " + name + ". I am " + age + " years old.";
         }
         
     }

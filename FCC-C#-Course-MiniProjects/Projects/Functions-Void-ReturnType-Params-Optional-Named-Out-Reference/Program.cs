@@ -9,7 +9,8 @@ namespace Functions
         {
             //FunctionExample();
             //VoidExample();
-            ReturnExample();
+            //ReturnExample();
+            ParametersExample();
         }
         static void FunctionExample()
         {
@@ -38,7 +39,7 @@ namespace Functions
             return 25;
         }
 
-        static int ReadNumberFromConsole()
+        static int ReadNumberFromConsole() //will get numbers from the user and return them
         {
             Console.WriteLine("Enter a number: ");
             return Convert.ToInt32(Console.ReadLine());
@@ -57,7 +58,7 @@ namespace Functions
         }
 
         // combining the two return functions into a single function
-        static void ReturnExample()
+        static void ReturnExample() //the Main return function for examples, will call the other return functions
         {
             string name = returnName();
             int age = returnAge();
@@ -83,6 +84,10 @@ namespace Functions
             {
                 Console.WriteLine(number);
             }
+        }
+        static void ParametersExample() 
+        {
+            Console.WriteLine();
         }
     }
 }

@@ -10,7 +10,8 @@ namespace Functions
             //FunctionExample();
             //VoidExample();
             //ReturnExample();
-            ParametersExample();
+            //ParametersExample();
+            optionalParamsExample();
         }
         static void FunctionExample()
         {
@@ -116,6 +117,11 @@ namespace Functions
         static string UserDetails (string name, int age) //this is a function that takes a string and an int and returns a string
         {
             return "Hello, my name is " + name + ". I am " + age + " years old.";
+        }
+
+        static void optionalParamsExample() 
+        {
+
         }
         
     }

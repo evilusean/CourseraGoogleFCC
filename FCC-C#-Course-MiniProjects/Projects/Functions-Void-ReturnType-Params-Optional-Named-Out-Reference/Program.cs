@@ -85,9 +85,25 @@ namespace Functions
                 Console.WriteLine(number);
             }
         }
+        //Main Parameters Return Example
         static void ParametersExample() 
         {
-            Console.WriteLine();
+            Console.WriteLine("Enter two numbers: ");
+            int a = ReadInt(); //user input for the first number
+            int b = ReadInt(); //user input for the second number
+            //will call the Add function below and display the sum of the two numbers, notice the 'Add(a, b)
+            Console.WriteLine("The sum of " + a + " and " + b + " is " + Add(a, b));
+            Console.ReadLine();
         }
+        static int ReadInt() //will get the user input for the numbers
+        {
+            return Convert.ToInt32(Console.ReadLine());
+        }
+
+        static int Add(int a, int b) // this is a function that takes two int parameters and returns the int sum of them
+        {
+            return a + b;
+        }
+        
     }
 }

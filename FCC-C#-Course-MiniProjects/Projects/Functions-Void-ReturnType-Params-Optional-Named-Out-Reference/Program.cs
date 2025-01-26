@@ -14,8 +14,9 @@ namespace Functions
             //VoidExample();
             //ReturnExample();
             //ParametersExample();
-            //optionalParamsExample();
-            namedParamsExample();
+            //OptionalParamsExample();
+            //NamedParamsExample();
+            OutParamsExample();
         }
         static void FunctionExample()
         {
@@ -128,13 +129,13 @@ namespace Functions
             return "Hello, my name is " + name + ". I am " + age + " years old.";
         }
 
-        static void optionalParamsExample() 
+        static void OptionalParamsExample() 
         {
             int result = Add(5);
             Console.WriteLine(result);
         }
         
-        static void namedParamsExample()
+        static void NamedParamsExample()
         {
             string nameInput = "Sean";
             int ageInput = 25;
@@ -150,6 +151,10 @@ namespace Functions
             Console.WriteLine("Name: " + name);
             Console.WriteLine("Age: " + age);
             Console.WriteLine("Address: " + address);
+        }
+
+        static void OutParamsExample () {
+
         }
         
     }

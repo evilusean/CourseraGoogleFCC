@@ -346,9 +346,11 @@ static int Add(int a, int b = default) #you can also use the 'default' keyword(w
 static int Multiply(int a, [Optional] int b){return a * b;} #'[Optional]' will give you the 'default' value based on the datatype
 
 Named Parameters = 5:17:20 ========================================================================================================================================================================================
-
-
-
+static void namedParamsExample()        {            string nameInput = "Sean";            int ageInput = 25;            string addressInput = "Sorry, eh, CA"        }
+static void PrintDetails (string name, int age, string address){Console.WriteLine("Name: " + name);Console.WriteLine("Age: " + age);Console.WriteLine("Address: " + address);}
+above, you give the parameters to the next function that prints them, notice how it asks for a string, int, string - if you give them the parameters out of order, it breaks the code
+  unless you give the parameters names, then you don't have to stick to the order, like below
+PrintDetails(address: addressInput, name: nameInput, age: ageInput); #notice how they are out of order, but still work, this is the power of named parameters
 
 
 

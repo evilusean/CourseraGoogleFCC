@@ -352,7 +352,7 @@ above, you give the parameters to the next function that prints them, notice how
   unless you give the parameters names, then you don't have to stick to the order, like below
 PrintDetails(address: addressInput, name: nameInput, age: ageInput); #notice how they are out of order, but still work, this is the power of named parameters
 
-
+Out Parameters = 5:19:50 ==========================================================================================================================================================================================
 
 
 

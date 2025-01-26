@@ -154,7 +154,15 @@ namespace Functions
         }
 
         static void OutParamsExample () {
-
+            int num = 0; //initialize num with 0
+            bool success = ScopeTest(out num); //will run it through the function below and change it to 5, new keyword 'out' is used to change the value of num
+            Console.WriteLine(num); //will print the new num
+            Console.WriteLine(success); //will print the success boolean
+        }
+        static bool ScopeTest(out int num) //the out keyword will return 2 values, a boolean and change an int
+        {
+            num = 5; //will change the value of num to 5
+            return true; // will return true,
         }
         
     }

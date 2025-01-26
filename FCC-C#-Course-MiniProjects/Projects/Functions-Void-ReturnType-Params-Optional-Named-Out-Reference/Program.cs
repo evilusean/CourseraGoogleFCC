@@ -12,7 +12,8 @@ namespace Functions
             //VoidExample();
             //ReturnExample();
             //ParametersExample();
-            optionalParamsExample();
+            //optionalParamsExample();
+            namedParamsExample();
         }
         static void FunctionExample()
         {
@@ -116,7 +117,7 @@ namespace Functions
             return a + b;
         }
         // this is a function that takes two int parameters and returns the int product of them
-        static int Multiply(int a, [Optional] int b) // 'Optional' is used to make the second parameter optional
+        static int Multiply(int a, [Optional] int b) // 'Optional' is used to make the second parameter optional(default value)
         {
             return a * b;
         }
@@ -129,6 +130,11 @@ namespace Functions
         {
             int result = Add(5);
             Console.WriteLine(result);
+        }
+        
+        static void namedParamsExample()
+        {
+            
         }
         
     }

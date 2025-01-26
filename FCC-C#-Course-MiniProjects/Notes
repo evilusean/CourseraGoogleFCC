@@ -356,7 +356,9 @@ Out Parameters = 5:19:50 =======================================================
 'TryParse' = actually returns 2 variables, the int from the string, and a boolean if it converted correctly
 'out' keyword =  allows a method to return multiple values by passing arguments by reference, ensuring that the called method can modify the value of the argument and return it to the caller.
 static bool ScopeTest(out int num)         {            num = 5;             return true;         }//the out keyword will return 2 values, a boolean and change an int - you can return more than one datatype
-
+'bool found = index > -1' #if the index variable finds a value in a list, it will return true, since this is a condition, it can be used as true or false, and then used for below :
+'Console.WriteLine(found ? "Found" : "Not Found"); # first 'Found' is true, second 'Not Found' is false - ternary operator
+Wrote a bunch of code, commented it well, check out the project future sean
 
 
 

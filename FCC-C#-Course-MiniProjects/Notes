@@ -353,7 +353,9 @@ above, you give the parameters to the next function that prints them, notice how
 PrintDetails(address: addressInput, name: nameInput, age: ageInput); #notice how they are out of order, but still work, this is the power of named parameters
 
 Out Parameters = 5:19:50 ==========================================================================================================================================================================================
-
+'TryParse' = actually returns 2 variables, the int from the string, and a boolean if it converted correctly
+'out' keyword =  allows a method to return multiple values by passing arguments by reference, ensuring that the called method can modify the value of the argument and return it to the caller.
+static bool ScopeTest(out int num)         {            num = 5;             return true;         }//the out keyword will return 2 values, a boolean and change an int - you can return more than one datatype
 
 
 

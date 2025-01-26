@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Functions
 {
@@ -134,7 +136,20 @@ namespace Functions
         
         static void namedParamsExample()
         {
-            
+            string nameInput = "Sean";
+            int ageInput = 25;
+            string addressInput = "Sorry, eh, CA";
+            //notice how the parameters are named and out of order but still work, this is the power of named parameters
+            PrintDetails(address: addressInput,
+                        name: nameInput, 
+                         age: ageInput);
+        }
+        //this is a function that takes three named parameters out of order and prints them
+        static void PrintDetails (string name, int age, string address)
+        {
+            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Age: " + age);
+            Console.WriteLine("Address: " + address);
         }
         
     }

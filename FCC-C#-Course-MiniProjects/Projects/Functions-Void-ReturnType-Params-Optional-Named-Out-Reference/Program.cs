@@ -158,11 +158,42 @@ namespace Functions
             bool success = ScopeTest(out num); //will run it through the function below and change it to 5, new keyword 'out' is used to change the value of num
             Console.WriteLine(num); //will print the new num
             Console.WriteLine(success); //will print the success boolean
+
+            Console.WriteLine("Enter a name: "); //will ask the user for a name
+            string search = Console.ReadLine(); //will get the user input, use it for search
+            List<string> names = new List<string> { "Sean", "John", "Doe" }; //initialize a list of names
+            int index = -1; //initialize the index with -1
+            Console.WriteLine(names.IndexOf("John")); //will print the index of the string in the list, built in method
+            bool found = FindInList(search, names, out index); //will run search names list through the function below and find the index of the string
+            Console.WriteLine(found ? "Found" : "Not Found"); //will print if the string is found(true) or not(false)
+            Console.WriteLine(index); //will print the index of the string, if found
+            if (found) //if the string is found
+            {
+                Console.WriteLine($"Found {search} at index: {index}"); //will print the index of the string
+            }
+            else //if the string is not found
+            {
+                Console.WriteLine($"{search} Not Found"); //will print that the string is not found
+            }
         }
         static bool ScopeTest(out int num) //the out keyword will return 2 values, a boolean and change an int
         {
             num = 5; //will change the value of num to 5
             return true; // will return true,
+        }
+        
+        static bool FindInList(string s, List<string> list, out int index) //will find a string in a list and return a boolean and the index of the string
+        {
+            index = -1; //will find the index of the string in the list
+            for (int i = 0; i < list.Count; i++) //will loop through the list
+            {
+                if (list[i].ToLower().Equals(s.ToLower())) //will check if the string is in the list
+                {
+                    index = i; //will return the index of the string
+                    break; //will break the loop
+                }
+            }
+            return index > -1; // will be true if the index is greater than -1(found something)
         }
         
     }

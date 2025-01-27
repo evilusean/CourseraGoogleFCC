@@ -16,7 +16,8 @@ namespace Functions
             //ParametersExample();
             //OptionalParamsExample();
             //NamedParamsExample();
-            OutParamsExample();
+            //OutParamsExample();
+            ReferenceParamsExample();
         }
         static void FunctionExample()
         {
@@ -194,6 +195,10 @@ namespace Functions
                 }
             }
             return index > -1; // will be true if the index is greater than -1(found something)
+        }
+
+        static void ReferenceParamsExample() {
+
         }
         
     }

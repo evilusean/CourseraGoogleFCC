@@ -361,8 +361,10 @@ static bool ScopeTest(out int num)         {            num = 5;             ret
 Wrote a bunch of code, commented it well, check out the project future sean
 
 Reference Parameters = 5:37:30 =====================================================================================================================================================================================
-
-
+static void Assign(ref int num) {num = 20;} # new keyword 'ref' passing by reference/value - create an entire new variable Vs link numbers(pointers)
+when you pass by reference, you are getting the memory address location instead of copying the value
+static void Assign(ref int num, ref string name){num = 20;name = "Shawn";} // pass by reference, will change the value of num and name by reference// you can output multiple values using the 'ref' keyword
+Assign(ref num, ref name); #how to run the function, you need to reference the ref reference, (add ref before variables that are being referenced)
 
 
 

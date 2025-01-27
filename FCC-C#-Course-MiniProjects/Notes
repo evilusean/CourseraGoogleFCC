@@ -360,7 +360,7 @@ static bool ScopeTest(out int num)         {            num = 5;             ret
 'Console.WriteLine(found ? "Found" : "Not Found"); # first 'Found' is true, second 'Not Found' is false - ternary operator
 Wrote a bunch of code, commented it well, check out the project future sean
 
-
+Reference Parameters = 5:37:30 =====================================================================================================================================================================================
 
 
 

@@ -368,6 +368,7 @@ Assign(ref num, ref name); #how to run the function, you need to reference the r
 when you assign by reference you actually have to make the variable before you pass it in, 
 ref uses the memory reference/pointer and you only have to save one value
 
+Exercise: Area of a Triangle = 5:46:15 =============================================================================================================================================================================
 
 
 

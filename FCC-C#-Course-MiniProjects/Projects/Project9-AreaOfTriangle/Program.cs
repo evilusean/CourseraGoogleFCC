@@ -9,7 +9,19 @@
         */
         static void Main(string[] args)
         {
-            Console.ReadLine();
+            int width = ReadInt("Enter a Width :");
+            Console.WriteLine();
+
+            int height = ReadInt("Enter a Height: ");
+            //area = Multiply(width, height) / 2;
+
+        }
+        static int ReadInt(string message) {
+            Console.Write(message);
+            return Convert.ToInt32(Console.ReadLine());
+        }
+        static int Multiply (int height, int width) {
+            return height * width;
         }
     }
 }

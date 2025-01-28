@@ -365,7 +365,8 @@ static void Assign(ref int num) {num = 20;} # new keyword 'ref' passing by refer
 when you pass by reference, you are getting the memory address location instead of copying the value
 static void Assign(ref int num, ref string name){num = 20;name = "Shawn";} // pass by reference, will change the value of num and name by reference// you can output multiple values using the 'ref' keyword
 Assign(ref num, ref name); #how to run the function, you need to reference the ref reference, (add ref before variables that are being referenced)
-
+when you assign by reference you actually have to make the variable before you pass it in, 
+ref uses the memory reference/pointer and you only have to save one value
 
 
 

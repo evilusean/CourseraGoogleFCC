@@ -372,7 +372,7 @@ Exercise: Area of a Triangle = 5:46:15 =========================================
 static int CalcArea (int width, int height) {            return (width * height) / 2; } #just return an int, you can use PEMDAS OOO(order of operations) in C# OOP
 
 Exercise: Sum of Int Array = 5:50:15 ===============================================================================================================================================================================
-
+static bool SumOfNumbers(int[] numbers, out int sum{sum = 0;if (numbers.Length > 0){foreach (var item in numbers){sum += item;}return true;}return false;} #returns a bool and an int sum
 
 
 

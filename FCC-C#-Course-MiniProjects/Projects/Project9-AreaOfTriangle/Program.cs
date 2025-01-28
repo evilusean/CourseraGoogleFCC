@@ -14,7 +14,7 @@
 
             int height = ReadInt("Enter a Height: ");
             int result = CalcArea(width, height);
-            Console.WriteLine($"The Area is: {result}")
+            Console.WriteLine($"The Area is: {result}");
 
         }
         static int ReadInt(string message) {

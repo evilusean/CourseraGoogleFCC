@@ -13,15 +13,16 @@
             Console.WriteLine();
 
             int height = ReadInt("Enter a Height: ");
-            //area = Multiply(width, height) / 2;
+            int result = CalcArea(width, height);
+            Console.WriteLine($"The Area is: {result}")
 
         }
         static int ReadInt(string message) {
             Console.Write(message);
             return Convert.ToInt32(Console.ReadLine());
         }
-        static int Multiply (int height, int width) {
-            return height * width;
+        static int CalcArea (int width, int height) {
+            return (width * height) / 2;
         }
     }
 }

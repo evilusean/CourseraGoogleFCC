@@ -204,20 +204,32 @@ namespace Functions
             Console.WriteLine(num);
             Console.WriteLine(name);
 
-            
+            //update the reference 'name' with user input
             Console.Write("Enter your new name: ");
             string newName = Console.ReadLine();
-            ChangeName(ref name, newName);
-            Console.WriteLine($"Your new name is {name}");
+            
+            if (ChangeName(ref name, newName)) 
+            {
+                Console.WriteLine($"Your new name is {name}");
+            }
+            else
+            {
+                Console.WriteLine("New Name can not be empty or null. ");
+            }
         }
         static void Assign(ref int num, ref string name) // you can output multiple values using the 'ref' keyword
         { // pass by reference, will change the value of num and name by reference
             num = 20;
             name = "Shawn";
         }
-        static void ChangeName(ref string name, string newName)
+        static bool ChangeName(ref string name, string newName)
         {
-            name = newName;
+            if (!string.IsNullOrEmpty(newName))
+            {
+                name = newName;
+                return true;
+            }
+            return false;
         }
     }
 }

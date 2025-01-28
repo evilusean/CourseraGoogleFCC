@@ -200,14 +200,24 @@ namespace Functions
         static void ReferenceParamsExample() {
             int num = 10;
             string name = "Sean";
-            Assign(ref num, ref name);
+            Assign(ref num, ref name); // will update with 'ref' function below = by reference
             Console.WriteLine(num);
             Console.WriteLine(name);
+
+            
+            Console.Write("Enter your new name: ");
+            string newName = Console.ReadLine();
+            ChangeName(ref name, newName);
+            Console.WriteLine($"Your new name is {name}");
         }
         static void Assign(ref int num, ref string name) // you can output multiple values using the 'ref' keyword
         { // pass by reference, will change the value of num and name by reference
             num = 20;
             name = "Shawn";
+        }
+        static void ChangeName(ref string name, string newName)
+        {
+            name = newName;
         }
     }
 }

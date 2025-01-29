@@ -16,7 +16,7 @@ namespace Project10_SumOfIntArray
             {
                 Console.WriteLine("Array is Empty");
             }
-            /*
+            /* Old Check :
             int result = SumOfNumbers(numbers);
             if (result > -1)
             {

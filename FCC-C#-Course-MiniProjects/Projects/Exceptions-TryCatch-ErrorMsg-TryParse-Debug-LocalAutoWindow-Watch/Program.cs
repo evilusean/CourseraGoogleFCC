@@ -1,2 +1,15 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace Exceptions
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            ExceptionsExample();
+        }
+        static void ExceptionsExample()
+        {
+
+        }
+    }
+}

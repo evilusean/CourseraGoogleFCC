@@ -374,7 +374,7 @@ static int CalcArea (int width, int height) {            return (width * height)
 Exercise: Sum of Int Array = 5:50:15 ===============================================================================================================================================================================
 static bool SumOfNumbers(int[] numbers, out int sum{sum = 0;if (numbers.Length > 0){foreach (var item in numbers){sum += item;}return true;}return false;} #returns a bool and an int sum
 
-
+Exception Handling = 6:01:10 =======================================================================================================================================================================================
 
 
 

@@ -380,7 +380,7 @@ Exceptions are used to prevent code from crashing and program shutting down,
 'Format Exception' = Enterted in the wrong format/datatype
 'Overflow Exception' = Number/String/whatever too large. Like trying to put an int64 into an int32
 
-
+TryCatch = 6:03:30 ================================================================================================================================================================================================
 
 
 

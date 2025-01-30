@@ -7,7 +7,8 @@
         {
             //ExceptionsExample();
             //TryCatchExample();
-            PrintErrorExample();
+            //PrintErrorExample();
+            CustomTryParse();
         }
         static void ExceptionsExample()
         {
@@ -59,5 +60,50 @@
                 }
             }
         }
-    }
+        static void CustomTryParse()
+        {
+            /*
+            Create an int and try convert any string to an int
+            notice the error, write a Try... catch handler around it
+            Catch the error and output the erro message
+            */
+            /* first method
+            bool success = false;
+            try 
+            {
+                Console.Write("Enter a number: ");
+                int num = Convert.ToInt32(Console.ReadLine());
+                success = true;
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            Console.WriteLine(success ? "Success." : "You Fail.") */
+            Console.Write("Enter a number: ");
+            string input = Console.ReadLine();
+            if (CustomTryParse(input, out int result))
+            {
+                Console.WriteLine($"Success. Parsed number: {result}");
+            }
+            else
+            {
+                Console.WriteLine("Failed.");
+            }
+        }
+        static bool CustomTryParse(string input, out int result)
+        {
+            result = -1;
+            try
+            {
+                result = Convert.ToInt32(input); //if it can convert it, it will
+                return true;
+            }
+            catch (Exception) //if it raises exception, return false
+            {
+                result = -1;
+                return false;
+            }
+        }
+    }   
 }

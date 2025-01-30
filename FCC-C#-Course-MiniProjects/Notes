@@ -400,7 +400,22 @@ how to output different messages to catch block
 catch (Exception e) {Console.WriteLine($"Error: {e.Message}");} #will display what the error message is to the console, so the generic 'Exception' catch can display different message depending on exception
 
 Exercise: Custom TryParse = 6:17:30 ===============================================================================================================================================================================
+ static bool CustomTryParse(string input, out int result)
+        {
+            result = -1;
+            try
+            {
+                result = Convert.ToInt32(input); //if it can convert it, it will
+                return true;
+            }
+            catch (Exception) //if it raises exception, return false
+            {
+                result = -1;
+                return false;
+            }
+        } #attempts to convert int 32, if it can't or raiases an exception, returns false.
 
+Debugging = 6:26:00 ================================================================================================================================================================================================
 
 
 

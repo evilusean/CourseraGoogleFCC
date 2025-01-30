@@ -380,6 +380,9 @@ Exceptions are used to prevent code from crashing and program shutting down,
 'Format Exception' = Enterted in the wrong format/datatype
 'Overflow Exception' = Number/String/whatever too large. Like trying to put an int64 into an int32
 
+TryCatch = 6:03:30 ================================================================================================================================================================================================
+Try...Catch = Tries to do something, and lets you know if something went wrong, similar to the int 'TryParse' that we have experience with, the 'Catch' catches the exceptions that happen instead of unhandled
+try { } catch (Exception) {throw;} #basic syntax, '(Exception)' decide what you want to catch in these parameters and '{throw;}' what you want to do with it
 
 
 

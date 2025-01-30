@@ -383,7 +383,18 @@ Exceptions are used to prevent code from crashing and program shutting down,
 TryCatch = 6:03:30 ================================================================================================================================================================================================
 Try...Catch = Tries to do something, and lets you know if something went wrong, similar to the int 'TryParse' that we have experience with, the 'Catch' catches the exceptions that happen instead of unhandled
 try { } catch (Exception) {throw;} #basic syntax, '(Exception)' decide what you want to catch in these parameters and '{throw;}' what you want to do with it
+After you wrap the code in a TryCatch, it won't crash if something goes wrong,
+You can specify each exception and what to do with it with multiple catches like 'catch (FormatException)' or 'catch (OverflowException)' and chain them together
+  they will go from top to bottom so put the general 'catch (Exception)' at the end, and the specific ones at the top
+  Imagine it as an if statement, with 'if' followed by 'elseif' 'elseif' and ending at the general 'else' statement
+catch (FormatException) {                Console.WriteLine("Please only enter numbers!");            } //will throw an exception if input data is the wrong format
+anything in a try catch block will only be in that scope, so declare variables outside and set to '0' or whatever, then change the value in the try catch - this is actually bad practice
+good practice is to wrap it in a while loop, and keep looping until the user has entered a correct number
+while (looping) {try{Console.Write("Enter a number :"); int num = Convert.ToInt32(Console.ReadLine());Console.WriteLine(num);looping = false;}
+  catch (OverflowException){Console.WriteLine("Please enter a number less than 2 billion.");} 
+  #this will loop over until a correct num is input 'Console.WriteLine' won't activate until there are no exceptions, once it succesfully runs, at the end is a 'bool looping = false' that will end the loop
 
+Printing Error Messages = 6:12:45 =================================================================================================================================================================================
 
 
 

@@ -14,15 +14,28 @@
             int num = Convert.ToInt32(Console.ReadLine());
         }
         static void TryCatchExample()
-        {
-            try 
-            {
-                Console.Write("Enter a number :"); 
-                int num = Convert.ToInt32(Console.ReadLine());
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Something has went wrong!"); // no matter what exception, will always print, all exceptions
+        { // wrapping your code in a try catch block will allow it to continue, even if an exception is raised
+            bool looping = true; // best practice for scope is to wrap it in a while loop, until user entered a correct num
+            while (looping) {//while looping is true, keep asking for a number
+                try 
+                {
+                    Console.Write("Enter a number :"); 
+                    int num = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine(num);
+                }
+                catch (OverflowException) 
+                {
+                    Console.WriteLine("Please enter a number less than 2 billion.");
+                }
+                catch (FormatException) //will throw an exception if input data is the wrong format
+                {
+                    Console.WriteLine("Please only enter numbers!");
+                }
+                catch (Exception) //this is a general exception, will be thrown if the last 2 aren't
+                {
+                    Console.WriteLine("Something has went wrong!"); 
+                    // no matter what exception, will always print, all exceptions, with no exception
+                }
             }
         }
     }

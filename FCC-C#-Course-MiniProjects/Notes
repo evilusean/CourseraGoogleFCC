@@ -375,6 +375,10 @@ Exercise: Sum of Int Array = 5:50:15 ===========================================
 static bool SumOfNumbers(int[] numbers, out int sum{sum = 0;if (numbers.Length > 0){foreach (var item in numbers){sum += item;}return true;}return false;} #returns a bool and an int sum
 
 Exception Handling = 6:01:10 =======================================================================================================================================================================================
+Exceptions are used to prevent code from crashing and program shutting down, 
+'Exception Unhandled' = when an error occurs, you haven't written any code to manage the error/exception, causing it to close
+'Format Exception' = Enterted in the wrong format/datatype
+'Overflow Exception' = Number/String/whatever too large. Like trying to put an int64 into an int32
 
 
 

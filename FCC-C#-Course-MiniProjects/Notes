@@ -395,7 +395,9 @@ while (looping) {try{Console.Write("Enter a number :"); int num = Convert.ToInt3
   #this will loop over until a correct num is input 'Console.WriteLine' won't activate until there are no exceptions, once it succesfully runs, at the end is a 'bool looping = false' that will end the loop
 
 Printing Error Messages = 6:12:45 =================================================================================================================================================================================
-
+how to output different messages to catch block
+'catch (Exception e)' #will allow you to do things with 'e.'(use autocomplete to see all options that can be done when you add a variable to the parameters) - 'e.Message' below :
+catch (Exception e) {Console.WriteLine($"Error: {e.Message}");} #will display what the error message is to the console, so the generic 'Exception' catch can display different message depending on exception
 
 
 

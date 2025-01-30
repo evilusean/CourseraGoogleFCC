@@ -399,7 +399,7 @@ how to output different messages to catch block
 'catch (Exception e)' #will allow you to do things with 'e.'(use autocomplete to see all options that can be done when you add a variable to the parameters) - 'e.Message' below :
 catch (Exception e) {Console.WriteLine($"Error: {e.Message}");} #will display what the error message is to the console, so the generic 'Exception' catch can display different message depending on exception
 
-
+Exercise: Custom TryParse = 6:17:30 ===============================================================================================================================================================================
 
 
 

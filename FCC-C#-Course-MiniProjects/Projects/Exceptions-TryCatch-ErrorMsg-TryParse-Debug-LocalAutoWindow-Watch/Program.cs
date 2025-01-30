@@ -9,7 +9,12 @@
         }
         static void ExceptionsExample()
         {
-
+            Console.Write("Enter a number :");
+            int num = Convert.ToInt32(Console.ReadLine());
+        }
+        static void TryCatchExample()
+        {
+            
         }
     }
 }

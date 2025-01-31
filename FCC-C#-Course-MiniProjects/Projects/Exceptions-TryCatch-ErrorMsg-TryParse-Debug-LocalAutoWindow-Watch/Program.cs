@@ -105,5 +105,9 @@
                 return false;
             }
         }
+        static void DebuggingExample()
+        {
+            
+        }
     }   
 }

@@ -11,7 +11,8 @@
             //CustomTryParse();
             //DebuggingExample();
             //LocalAutoWindowExample();
-            WatchWindowExample();
+            //WatchWindowExample();
+            FixLogicError();
         }
         static void ExceptionsExample()
         {
@@ -133,6 +134,10 @@
             //(F5) Debug mode -> doubleclick + right click an item -> 'Add Watch'
             //after you are in the window, you can just type it into the watch window(the variable to watch or conditions)
             //watchlists aren't just for glowies
+        }
+        static void FixLogicError()
+        {
+            //yet another walkthrough of debugging - goes through intentionally bad code to fix errors
         }
     }   
 }

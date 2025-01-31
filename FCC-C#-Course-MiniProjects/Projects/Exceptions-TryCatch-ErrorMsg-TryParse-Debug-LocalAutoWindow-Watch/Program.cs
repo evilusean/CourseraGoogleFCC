@@ -10,7 +10,8 @@
             //PrintErrorExample();
             //CustomTryParse();
             //DebuggingExample();
-            LocalAutoWindowExample();
+            //LocalAutoWindowExample();
+            WatchWindowExample();
         }
         static void ExceptionsExample()
         {
@@ -122,7 +123,16 @@
         }
         static void LocalAutoWindowExample()
         {
-            
+            //more debugging 'F5' to start debugging, 'locals' are your local variables and their values
+            //'autos' are the functions/parameters you need to be displayed, based on the section code you are currently on
+            //basically just displayed variables in debugging mode, which I can't demonstrate here, since it's a mode
+        }
+        static void WatchWindowExample()
+        {
+            //you can add an item to watch, if you have a lot of variables in your code, you can look at a specific one 
+            //(F5) Debug mode -> doubleclick + right click an item -> 'Add Watch'
+            //after you are in the window, you can just type it into the watch window(the variable to watch or conditions)
+            //watchlists aren't just for glowies
         }
     }   
 }

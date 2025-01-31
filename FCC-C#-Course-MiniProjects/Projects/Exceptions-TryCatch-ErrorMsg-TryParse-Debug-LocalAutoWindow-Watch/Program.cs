@@ -8,7 +8,8 @@
             //ExceptionsExample();
             //TryCatchExample();
             //PrintErrorExample();
-            CustomTryParse();
+            //CustomTryParse();
+            DebuggingExample();
         }
         static void ExceptionsExample()
         {
@@ -107,7 +108,15 @@
         }
         static void DebuggingExample()
         {
-            
+            int age = 35;
+            if (age > 18)
+            {
+                Console.WriteLine("18+");
+            }
+            else if (age > 30)
+            {
+                Console.WriteLine("30+");
+            }
         }
     }   
 }

@@ -436,7 +436,8 @@ Another good debugging technique is the watch window, you can add an item to wat
 //after you are in the window, you can just type it into the watch window(the variable to watch or conditions)
 
 Exercise : Fix Logic Error = 6:46:40 ================================================================================================================================================================================
-
+start at the highest number instead of lowest (because if its bigger than the lowest age, it will also trigger the low age and the higher age code won't get run) or use else if with '&&' statement for ranges
+Debugging walkthrough, not much new here
 
 
 

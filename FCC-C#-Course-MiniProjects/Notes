@@ -416,12 +416,15 @@ Exercise: Custom TryParse = 6:17:30 ============================================
         } #attempts to convert int 32, if it can't or raiases an exception, returns false.
 
 Debugging = 6:26:00 ================================================================================================================================================================================================
+In order to debug, you shouldn't just execute the code, it goes too fast that you can't see what is going on in order to debug it
+on the left hand side by the code line #'s you can add 'breakpoints' red circles that will slow the code down, you can enable or disable them at the top dropdown 'Debug' -> 'Disable All Breakpoints'
+Debug Mode(F5): 
+  'step into'(F11) = goes inside a function
+  'step out' (SHIFT+F11)= steps out of a function that you stepped into
+  'step over'(F10) = goes over a line(next line of code)
+Normally I'd just put in print statements, this is a more advanced way, it prints all the variables out line by line and their values, investigate/change values while debugging
 
-
-
-
-
-
+Local/Auto Window = 6:37:55 =========================================================================================================================================================================================
 
 
 

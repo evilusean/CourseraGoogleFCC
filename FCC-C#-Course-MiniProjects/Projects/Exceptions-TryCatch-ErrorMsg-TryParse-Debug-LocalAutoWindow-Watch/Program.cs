@@ -108,12 +108,13 @@
         }
         static void DebuggingExample()
         {
+            // this code is intentionally buggy so you can debug it, add breakpoints and go over line by line
             int age = 35;
-            if (age > 18)
+            if (age > 18) //this is true, so it will automatically end the code, first hit skips rest of code
             {
-                Console.WriteLine("18+");
+                Console.WriteLine("18+"); 
             }
-            else if (age > 30)
+            else if (age > 30) //this is also true, but the code already ended on >18
             {
                 Console.WriteLine("30+");
             }

@@ -9,7 +9,8 @@
             //TryCatchExample();
             //PrintErrorExample();
             //CustomTryParse();
-            DebuggingExample();
+            //DebuggingExample();
+            LocalAutoWindowExample();
         }
         static void ExceptionsExample()
         {
@@ -118,6 +119,10 @@
             {
                 Console.WriteLine("30+");
             }
+        }
+        static void LocalAutoWindowExample()
+        {
+            
         }
     }   
 }

@@ -430,8 +430,10 @@ more debugging 'F5' to start debugging, 'locals' are your local variables and th
 basically just displayed variables in debugging mode, which I can't demonstrate here
 
 Watch Window = 6:41:35 ==============================================================================================================================================================================================
-
-
+Another good debugging technique is the watch window, you can add an item to watch, 
+//you can add an item to watch, if you have a lot of variables in your code, you can look at a specific one 
+//(F5) Debug mode -> doubleclick + right click an item -> 'Add Watch'
+//after you are in the window, you can just type it into the watch window(the variable to watch or conditions)
 
 
 

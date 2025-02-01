@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace Classes {
+    class Program 
+    {
+        static void main(strings[] args)
+        {
+            StructuresExample();
+        }
+        static void StructuresExample()
+        {
+            
+        }
+    }
+}

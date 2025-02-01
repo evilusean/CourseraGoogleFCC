@@ -444,10 +444,42 @@ Structures = allow you to store different datatypes inside one datatype, a group
 struct Person {public string name; public int age;} #basic syntax for creating a structure 
 Access Modifiers = Private Vs Public, set it to public so you can access the new structure in your code
 'Person person;' #to invoke the new structure, and create a new named variable 'person' from the structure 'Person'
+static Person ReturnPerson() // return a person structure
+        {
+            Console.Write("Enter your name: ");//get user inputs
+            string name2 = Console.ReadLine();
 
+            Console.Write("Enter your age: ");
+            int age2 = Convert.ToInt32(Console.ReadLine());
 
+            Console.Write("Enter your birthmonth #: ");
+            int birthmonth2 = Convert.ToInt32(Console.ReadLine());
 
+            Person person2; //create the new structure
+            person2.name = name2; //update with user inputs into the newly created structure
+            person2.age = age2;
+            person2.birthmonth = birthmonth2;
+            return person2;
+        } #return a 'Person' structure from user inputs
+#how to invoke above, same as a function assigned to a new variable/structure name
+Person person2 = ReturnPerson(); //use below function to 
+Console.WriteLine($"{person2.name} - {person2.age} - {person2.birthmonth}");
+Constructor = Instead of assigning each value, one by one, you can use a contstructor - all variables in a constructor are local to that constructor, local variables always take precedence over global
+        struct Person
+        {
+            public string name; // new keyword = public = access modifier, so we can use below
+            public int age;
+            public int birthmonth;
 
+            //Constructor - all parameters are local(only to constructor, use 'this.' to go to current scope of struct)
+            public Person(string name, int age, int birthMonth, int number)
+            {
+                this.name = name;
+                this.age = age;
+                this.birthmonth = birthmonth;
+            }
+        } #clean syntax for a structure, with a constructor
+return new Person(name2, age2, birthmonth2); #new way to return while using a constructor requires the 'new' keyword
 
 
 

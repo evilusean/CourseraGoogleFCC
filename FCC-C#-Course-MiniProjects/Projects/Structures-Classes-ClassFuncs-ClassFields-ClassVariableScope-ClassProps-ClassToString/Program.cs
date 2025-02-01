@@ -52,12 +52,13 @@ namespace StructuresExample
             Console.Write("Enter your birthmonth #: ");
             int birthmonth2 = Convert.ToInt32(Console.ReadLine());
 
+            /* old method of manual inputting each line, used constructor method instead
             Person person2; //create the new structure
             person2.name = name2; //update with user inputs into the newly created structure
             person2.age = age2;
             person2.birthmonth = birthmonth2;
             //will return the manual inputs person - commented out, can only return one
-            //return person2; 
+            return person2; */
 
             return new Person(name2, age2, birthmonth2); //will use the constructor to return values 'new' keyword
         }

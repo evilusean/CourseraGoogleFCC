@@ -440,9 +440,10 @@ start at the highest number instead of lowest (because if its bigger than the lo
 Debugging walkthrough, not much new here
 
 Structures = 6:50:15 ================================================================================================================================================================================================
-
-
-
+Structures = allow you to store different datatypes inside one datatype, a group of datatypes, when creating a new structure, you don't want to give it default variables
+struct Person {public string name; public int age;} #basic syntax for creating a structure 
+Access Modifiers = Private Vs Public, set it to public so you can access the new structure in your code
+'Person person;' #to invoke the new structure, and create a new named variable 'person' from the structure 'Person'
 
 
 

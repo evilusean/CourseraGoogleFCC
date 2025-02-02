@@ -79,13 +79,25 @@ namespace StructuresExample
             {
                 this.name = name;
             }
+            public string ReturnName()
+            {
+                return $"Name : {name}";
+            }
         }
         static void ClassesExample()
         {
-            PersonClass person = new PersonClass("Sean", 23, 4);//create a new class syntax
+            PersonClass person = new PersonClass("Sean", 23, 4);//create a new class syntax, using first constructor
             Console.WriteLine(person.name);
             Console.WriteLine(person.age);
             Console.WriteLine(person.birthmonth);
+            PersonClass personNameOnly = new PersonClass("Shawn"); //create a new class instance with second constructor
+            Console.WriteLine(personNameOnly.name);
+            Console.WriteLine(ReturnDetails(person)); //will return our first person class as a function
+            Console.WriteLine(personNameOnly.ReturnName());
+        }
+        static string ReturnDetails(PersonClass person) //new function to return details of instantiated class
+        {
+            return $"Name: {person.name} \nAge : {person.age}";//formats to make return pretty
         }
     }
 }

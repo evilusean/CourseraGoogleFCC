@@ -63,22 +63,26 @@ namespace StructuresExample
 
             return new Person(name2, age2, birthmonth2); //will use the constructor to return values 'new' keyword
         }
-        class PersonClass 
+        class PersonClass //basic syntax for a constructor
         {
             public string name;
             public int age;
             public int birthmonth;
-            
-            public PersonClass(string name, int age, int birthmonth)
+            //you can create multiple constructors in a class
+            public PersonClass(string name, int age, int birthmonth) // all 3 values
             {
                 this.name = name;
                 this.age = age;
                 this.birthmonth = birthmonth;
             }
+            public PersonClass(string name) //only name constructor
+            {
+                this.name = name;
+            }
         }
         static void ClassesExample()
         {
-            PersonClass person = new PersonClass("Sean", 23, 4);
+            PersonClass person = new PersonClass("Sean", 23, 4);//create a new class syntax
             Console.WriteLine(person.name);
             Console.WriteLine(person.age);
             Console.WriteLine(person.birthmonth);

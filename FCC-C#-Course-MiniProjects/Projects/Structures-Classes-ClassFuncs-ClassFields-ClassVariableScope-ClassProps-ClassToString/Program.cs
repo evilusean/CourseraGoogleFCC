@@ -22,7 +22,7 @@ namespace StructuresExample
             public int birthmonth;
 
             //Constructor - all parameters are local(only to constructor, use 'this.' to go to current scope of struct)
-            public Person(string name, int age, int birthMonth)
+            public Person(string name, int age, int birthmonth)
             {
                 this.name = name;
                 this.age = age;
@@ -63,9 +63,25 @@ namespace StructuresExample
 
             return new Person(name2, age2, birthmonth2); //will use the constructor to return values 'new' keyword
         }
+        class PersonClass 
+        {
+            public string name;
+            public int age;
+            public int birthmonth;
+            
+            public PersonClass(string name, int age, int birthmonth)
+            {
+                this.name = name;
+                this.age = age;
+                this.birthmonth = birthmonth;
+            }
+        }
         static void ClassesExample()
         {
-            
+            PersonClass person = new PersonClass("Sean", 23, 4);
+            Console.WriteLine(person.name);
+            Console.WriteLine(person.age);
+            Console.WriteLine(person.birthmonth);
         }
     }
 }

@@ -481,6 +481,7 @@ Constructor = Instead of assigning each value, one by one, you can use a contstr
         } #clean syntax for a structure, with a constructor
 return new Person(name2, age2, birthmonth2); #new way to return while using a constructor requires the 'new' keyword
 
+Classes = 7:06:55 =================================================================================================================================================================================================
 
 
 

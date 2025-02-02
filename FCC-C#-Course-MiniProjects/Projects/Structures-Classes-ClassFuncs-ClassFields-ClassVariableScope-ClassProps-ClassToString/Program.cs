@@ -93,6 +93,8 @@ namespace StructuresExample
 
             public void SetName(string name)//setter
             {
+                this.name = !string.IsNullOrEmpty(name) ? name : "Invalid Name";
+                /*can be done in one line
                 if (!string.IsNullOrEmpty(name)) //if the string isnt null or empty
                 { //'!' = logical NOT operator (inverts a statement)
                     this.name = name;
@@ -101,10 +103,12 @@ namespace StructuresExample
                 { //if the string is null or empty, return this instead
                     //this.name = string.Empty; 
                     this.name = "Invalid Name";
-                }
+                }*/
             }
             public void SetAge(int age)//age setter
             {
+                this.age = age >= 0 && age <= 150 ? age : -1;
+                /*Can be done in a one liner, above, ternary operator
                 if (age >= 0 && age <= 150) //set an age range
                 {
                     this.age = age;
@@ -113,6 +117,7 @@ namespace StructuresExample
                 {
                     this.age = -1; //if a bad value, set to -1
                 }
+                */
             }
             public string GetName() //getter for just name
             {

@@ -64,45 +64,60 @@ namespace StructuresExample
 
             return new Person(name2, age2, birthmonth2); //will use the constructor to return values 'new' keyword
         }
-        class PersonClass //basic syntax for a constructor
+        // Class example with multiple constructors and methods
+        class PersonClass
         {
             public string name;
             public int age;
             public int birthmonth;
-            //you can create multiple constructors in a class
+
+            // You can create multiple constructors in a class
             public PersonClass(string name, int age, int birthmonth) // all 3 values
             {
                 this.name = name;
                 this.age = age;
                 this.birthmonth = birthmonth;
             }
-            public PersonClass(string name) //only name constructor
+
+            public PersonClass(string name) // only name constructor
             {
                 this.name = name;
+                this.age = 0; // default value
+                this.birthmonth = 0; // default value
             }
+
             public string ReturnName()
             {
                 return $"Name : {name}";
             }
+
+            public void SetName(string name)
+            {
+                this.name = name;
+            }
         }
-        static void ClassesExample()
+
+        static void ClassExample()
         {
-            PersonClass person = new PersonClass("Sean", 23, 4);//create a new class syntax, using first constructor
-            Console.WriteLine(person.name);
-            Console.WriteLine(person.age);
-            Console.WriteLine(person.birthmonth);
-            PersonClass personNameOnly = new PersonClass("Shawn"); //create a new class instance with second constructor
+            PersonClass person = new PersonClass("Sean", 33, 5);
+            Console.WriteLine(person.ReturnName());
+            person.SetName("John");
+            Console.WriteLine(person.ReturnName());
+
+            PersonClass personNameOnly = new PersonClass("Shawn"); // create a new class instance with second constructor
             Console.WriteLine(personNameOnly.name);
-            Console.WriteLine(ReturnDetails(person)); //will return our first person class as a function
-            Console.WriteLine(personNameOnly.ReturnName());
+            Console.WriteLine(ReturnDetails(person)); // will return our first person class as a function below
+            Console.WriteLine(personNameOnly.ReturnName()); // will get name from class function above
         }
-        static string ReturnDetails(PersonClass person) //new function to return details of instantiated class
+
+        static string ReturnDetails(PersonClass person) // new function to return details of instantiated class
         {
-            return $"Name: {person.name} \nAge : {person.age}";//formats to make return pretty
+            return $"Name: {person.name} \nAge : {person.age}"; // formats to make return pretty
         }
         static void ClassFieldsExample()
         {
-
+            PersonClass person = new PersonClass("Sean", 24, 4);
+            Console.WriteLine(ReturnDetails(person));
         }
     }
 }

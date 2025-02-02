@@ -123,10 +123,12 @@ namespace StructuresExample
             {
                 return name;
             }
+            /*can be done as an arrow function
             public int GetAge()
             {
                 return age;
-            }
+            }*/
+            public int GetAge() => age; //arrow function returns age
         }
 
         static void ClassExample()

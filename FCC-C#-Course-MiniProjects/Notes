@@ -441,7 +441,7 @@ Debugging walkthrough, not much new here
 
 Structures = 6:50:15 ================================================================================================================================================================================================
 Structures = allow you to store different datatypes inside one datatype, a group of datatypes, when creating a new structure, you don't want to give it default variables
-struct Person {public string name; public int age;} #basic syntax for creating a structure 
+struct Person {public string name; public int age;} #basic syntax for creating a structure 'struct' = new keyword
 Access Modifiers = Private Vs Public, set it to public so you can access the new structure in your code
 'Person person;' #to invoke the new structure, and create a new named variable 'person' from the structure 'Person'
 static Person ReturnPerson() // return a person structure
@@ -480,8 +480,61 @@ Constructor = Instead of assigning each value, one by one, you can use a contstr
             }
         } #clean syntax for a structure, with a constructor
 return new Person(name2, age2, birthmonth2); #new way to return while using a constructor requires the 'new' keyword
+the constructor will still need the data passed in the right order
+Person person = new Person("Sean", 23, 4); #pass in all the values(declare) with initializing in a one liner
+structures are meant to be used as an extension to a datatype, if you want to store multiple datatypes and only return one thing in a function, structures are perfect
+struct Position { int x; int y; int z;} #basic structure that would be used for a game example
 
 Classes = 7:06:55 =================================================================================================================================================================================================
+class PersonClass 
+        {
+            public string name;
+            public int age;
+            public int birthmonth;
+            
+            public PersonClass(string name, int age, int birthmonth) //constructor
+            {
+                this.name = name;
+                this.age = age;
+                this.birthmonth = birthmonth;
+            }
+            public string ReturnName() //will return a string with the name if invoked like 'Console.WriteLine(person.ReturnName)'
+            {
+                return $"Name : {name}"
+            }
+        } #basic syntax for a Class, keyword 'class', almost exact same layout as a structure, 
+PersonClass person = new PersonClass("Sean", 23, 4); #syntax to invoke a new PersonClass named 'person', again almost exact same as structures
+the main difference between structures and classes, is you don't have to give a default values for classes, structures must have each value filled, 
+classes can have multiple types of constructors that only fill in some of the fields (with age, with name, with both, etc) and also add default values for each different constructor
+compared to structures, use classes for more complicated procedures
+Console.WriteLine(ReturnDetails(person)); #you can return an entire 'person' that was initially instantiated as a new class, the 'ReturnDetails' is part of the function below 
+ static string ReturnDetails(PersonClass person) //new function to return details of instantiated class   {return $"Name: {person.name} \nAge : {person.age}";//formats to make return pretty        }
+#you can also add that string return function above to the class itself, generally it is best practice to keep all functions related to that class within the class itself, for future Seans
+'Console.WriteLine(person.ReturnName())' #will allow you to use a function within a class, call whatever instance with the 'className.function' syntax instead of 'function(className)' as parameters
+
+Class Fields = 7:22:05 ============================================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

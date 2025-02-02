@@ -99,8 +99,28 @@ namespace StructuresExample
                 }
                 else
                 { //if the string is null or empty, return this instead
-                    this.name = string.Empty;
+                    //this.name = string.Empty; 
+                    this.name = "Invalid Name";
                 }
+            }
+            public void SetAge(int age)//age setter
+            {
+                if (age >= 0 && age <= 150) //set an age range
+                {
+                    this.age = age;
+                }
+                else
+                {
+                    this.age = -1; //if a bad value, set to -1
+                }
+            }
+            public string GetName() //getter for just name
+            {
+                return name;
+            }
+            public int GetAge()
+            {
+                return age;
             }
         }
 
@@ -127,7 +147,8 @@ namespace StructuresExample
             Console.WriteLine(ReturnDetails(person));
             person.SetName("Shawn"); //setter
             Console.WriteLine(ReturnDetails(person));//getter funcSean
-
+            Console.WriteLine($"Your name is {person.GetName()}");
+            Console.WriteLine($"Your age is {person.GetAge()}");
         }
     }
 }

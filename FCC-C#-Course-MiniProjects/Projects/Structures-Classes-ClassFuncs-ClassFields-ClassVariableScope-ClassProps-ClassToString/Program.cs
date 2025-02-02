@@ -11,7 +11,8 @@ namespace StructuresExample
         static void Main(string[] args)
         {
             //StructuresExample();
-            ClassesExample();
+            //ClassesExample();
+            ClassFieldsExample();
         }
 
         // Structures allow you to store different datatypes inside one datatype, a group of datatypes
@@ -98,6 +99,10 @@ namespace StructuresExample
         static string ReturnDetails(PersonClass person) //new function to return details of instantiated class
         {
             return $"Name: {person.name} \nAge : {person.age}";//formats to make return pretty
+        }
+        static void ClassFieldsExample()
+        {
+
         }
     }
 }

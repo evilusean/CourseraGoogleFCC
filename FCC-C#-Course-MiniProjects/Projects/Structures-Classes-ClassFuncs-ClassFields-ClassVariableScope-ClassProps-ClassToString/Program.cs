@@ -86,14 +86,21 @@ namespace StructuresExample
                 this.birthmonth = 0; // default value
             }
 
-            public string ReturnName()
+            public string ReturnName()//getter
             {
                 return $"Name : {name}";
             }
 
-            public void SetName(string name)
+            public void SetName(string name)//setter
             {
-                this.name = name;
+                if (!string.IsNullOrEmpty(name)) //if the string isnt null or empty
+                { //'!' = logical NOT operator (inverts a statement)
+                    this.name = name;
+                }
+                else
+                { //if the string is null or empty, return this instead
+                    this.name = string.Empty;
+                }
             }
         }
 
@@ -118,6 +125,9 @@ namespace StructuresExample
         {
             PersonClass person = new PersonClass("Sean", 24, 4);
             Console.WriteLine(ReturnDetails(person));
+            person.SetName("Shawn"); //setter
+            Console.WriteLine(ReturnDetails(person));//getter funcSean
+
         }
     }
 }

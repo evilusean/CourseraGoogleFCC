@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-//using System.Ling;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,7 +10,8 @@ namespace StructuresExample
     {
         static void Main(string[] args)
         {
-            StructuresExample();
+            //StructuresExample();
+            ClassesExample();
         }
 
         // Structures allow you to store different datatypes inside one datatype, a group of datatypes
@@ -61,6 +62,10 @@ namespace StructuresExample
             return person2; */
 
             return new Person(name2, age2, birthmonth2); //will use the constructor to return values 'new' keyword
+        }
+        static void ClassesExample()
+        {
+            
         }
     }
 }

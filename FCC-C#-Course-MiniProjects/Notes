@@ -532,7 +532,7 @@ if you expose the public, everyone that uses classes can change the name to what
 public int GetAge() => age; //arrow function returns age, similar to JS arrow functions, don't have to type out 'return' can be one line
 tertiary operator and arrow functions can significantly reduce the size of your code, no '{}' and multiple lines
 
-
+Class Variable/Function Scope = 7:37:25 ============================================================================================================================================================================
 
 
 

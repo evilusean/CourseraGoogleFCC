@@ -12,7 +12,8 @@ namespace StructuresExample
         {
             //StructuresExample();
             //ClassesExample();
-            ClassFieldsExample();
+            //ClassFieldsExample();
+            ClassVariableFunctionScope();
         }
 
         // Structures allow you to store different datatypes inside one datatype, a group of datatypes
@@ -156,6 +157,10 @@ namespace StructuresExample
             Console.WriteLine(ReturnDetails(person));//getter funcSean
             Console.WriteLine($"Your name is {person.GetName()}");
             Console.WriteLine($"Your age is {person.GetAge()}");
+        }
+        static void ClassVariableFunctionScope()
+        {
+
         }
     }
 }

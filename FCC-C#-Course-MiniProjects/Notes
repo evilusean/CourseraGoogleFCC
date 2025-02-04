@@ -533,7 +533,7 @@ public int GetAge() => age; //arrow function returns age, similar to JS arrow fu
 tertiary operator and arrow functions can significantly reduce the size of your code, no '{}' and multiple lines
 
 Class Variable/Function Scope = 7:37:25 ============================================================================================================================================================================
-ERROR : Restarted PC, tried to do a 'dotnet run' and something broke, just fixed it :
+ERROR : 'pacman -Syu' update/Restarted PC, tried to do a 'dotnet run' and something broke, just fixed it, hopefully it doesn't remove the SDK every time I update :
 https://aka.ms/dotnet-core-applaunch?framework=Microsoft.NETCore.App&framework_version=8.0.0&arch=x64&rid=arch-x64&os=arch
 yay -S dotnet-sdk-8.0
 yay -S dotnet-runtime-8.0

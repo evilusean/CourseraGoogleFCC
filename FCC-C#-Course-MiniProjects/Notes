@@ -537,6 +537,14 @@ ERROR : 'pacman -Syu' update/Restarted PC, tried to do a 'dotnet run' and someth
 https://aka.ms/dotnet-core-applaunch?framework=Microsoft.NETCore.App&framework_version=8.0.0&arch=x64&rid=arch-x64&os=arch
 yay -S dotnet-sdk-8.0
 yay -S dotnet-runtime-8.0
+Scope of local bariables = everything within the curly braces of a function, generally stays within that function and can't be accessed by other functions unless you add is as a paramater below:
+'static void something(Person person) {}' #will allow you to access the 'person' variable from the 'Person' Class, becase it was passed as a parameter
+you can define a variable outside of a local function so it can be used by other functions(one level up), 
+in 'Classes' if you want the variable to be available within that class scope, declare it at the top of the class with your other class variables 
+if you declare the same variable twice (local vs global) the local will always be prioritized by the compiler, precedence - unless you use 'this.' keyword ,which will use the top class declared variable(global)
+even if you make a variable in a class 'public' it doesn't neccesarily mean that every function will have access to it, class variables will only be available through an instance of that class ex :'person.name'
+
+
 
 
 

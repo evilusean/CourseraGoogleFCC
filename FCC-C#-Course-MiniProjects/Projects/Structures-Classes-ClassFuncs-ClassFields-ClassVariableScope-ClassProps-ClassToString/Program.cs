@@ -152,7 +152,14 @@ namespace StructuresExample
                 //one liners for above :
                 //public string Name { get => name; set => name = value; }
                 //
-        }
+            }
+            public int Age
+            {
+            // one liners:
+                get => return age;
+                set => this.age = age >= 0 && age <= 150? age : -1; //returns '-1' if age isn't within the range, or updates 'age'
+
+            }
     */
         static void ClassExample()
         {

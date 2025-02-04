@@ -544,7 +544,7 @@ in 'Classes' if you want the variable to be available within that class scope, d
 if you declare the same variable twice (local vs global) the local will always be prioritized by the compiler, precedence - unless you use 'this.' keyword ,which will use the top class declared variable(global)
 even if you make a variable in a class 'public' it doesn't neccesarily mean that every function will have access to it, class variables will only be available through an instance of that class ex :'person.name'
 
-
+Class Properties = 7:41:30 ==========================================================================================================================================================================================
 
 
 

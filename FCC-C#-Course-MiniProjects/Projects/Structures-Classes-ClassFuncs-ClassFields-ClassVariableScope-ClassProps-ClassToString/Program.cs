@@ -14,7 +14,7 @@ namespace StructuresExample
             //ClassesExample();
             //ClassFieldsExample();
             //ClassVariableFunctionScope();
-            ClassPropertiresExample();
+            ClassPropertiesExample();
         }
 
         // Structures allow you to store different datatypes inside one datatype, a group of datatypes
@@ -176,7 +176,7 @@ namespace StructuresExample
         {
             test = 10; //will change the variable above without being passed as parameters, as it isn't localized scope
         }
-        static void ClassPropertiresExample()
+        static void ClassPropertiesExample()
         {
 
         }

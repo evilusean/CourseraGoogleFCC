@@ -164,7 +164,7 @@ namespace StructuresExample
             Console.WriteLine(ReturnDetails(person));
 
         }
-        static int test = 5;
+        static int test = 5; //placing a variable here will be considered 'global scope' and can be used in other functions
         static void LocalScope(PersonClass person) //will allow you to access the 'person' variable from 'PersonClass' above
         {
             test = 10; //will change the variable above without being passed as parameters, as it isn't localized scope

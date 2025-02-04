@@ -545,7 +545,8 @@ if you declare the same variable twice (local vs global) the local will always b
 even if you make a variable in a class 'public' it doesn't neccesarily mean that every function will have access to it, class variables will only be available through an instance of that class ex :'person.name'
 
 Class Properties = 7:41:30 ==========================================================================================================================================================================================
-
+Private = requires setters and getts to work with that field / Public doesn't need setters/getters
+Properties = Make it easier to use Fields/Getters/Setters in a class
 
 
 

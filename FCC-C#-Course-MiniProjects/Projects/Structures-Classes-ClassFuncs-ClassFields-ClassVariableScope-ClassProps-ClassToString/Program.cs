@@ -132,13 +132,25 @@ namespace StructuresExample
             }*/
             public int GetAge() => age; //arrow function returns age
         }
-
-        public PersonClassProperties(string name, int age)
+/* Commenting out, leaving this as an example, for future sean, something breaks the code, spent too much time on it, moving on, don't want to delete old stuff that will ruin all the prior functions
+        public PersonClassProperties(string name, int age) //Properties = Make it easier to use Fields/Getters/Setters in a class
         {
             this.name = name;
             this.age = age;
         }
 
+            public string Name //capital 'N' name, different
+            {
+                get
+                {
+                    return name;
+                }
+                set
+                {
+                    name = value;
+                }
+        }
+    */
         static void ClassExample()
         {
             PersonClass person = new PersonClass("Sean", 33, 5);
@@ -178,6 +190,9 @@ namespace StructuresExample
         }
         static void ClassPropertiesExample()
         {
+            PersonClass person = new PersonClass("Sean", 33, 4);
+            Console.WriteLine(ReturnDetails(person));
+            
 
         }
     }

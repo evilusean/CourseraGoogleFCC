@@ -160,6 +160,8 @@ namespace StructuresExample
         }
         static void ClassVariableFunctionScope()
         {
+            PersonClass person = new PersonClass("Sean", 33, 4);
+            Console.WriteLine(ReturnDetails(person));
 
         }
     }

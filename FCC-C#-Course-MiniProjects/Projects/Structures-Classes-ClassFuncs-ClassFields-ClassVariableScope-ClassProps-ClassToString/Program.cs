@@ -137,6 +137,9 @@ namespace StructuresExample
         {
             this.name = name;
             this.age = age;
+            //the above should be deleted, code broke around here, just saving as an example - too many functions using same class, fixing one breaks the others
+            public string Name { get:set; } //even shorter syntax, for private getter/setter even though it says public 'a-auto property'
+            public int Age { get:set } //'Auto Implemented Properties' = You can use these if there is no additional logic, like below
         }
 
             public string Name //capital 'N' name, different

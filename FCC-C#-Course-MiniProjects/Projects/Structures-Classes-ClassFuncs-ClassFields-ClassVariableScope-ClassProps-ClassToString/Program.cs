@@ -13,7 +13,8 @@ namespace StructuresExample
             //StructuresExample();
             //ClassesExample();
             //ClassFieldsExample();
-            ClassVariableFunctionScope();
+            //ClassVariableFunctionScope();
+            ClassPropertiresExample();
         }
 
         // Structures allow you to store different datatypes inside one datatype, a group of datatypes
@@ -132,6 +133,12 @@ namespace StructuresExample
             public int GetAge() => age; //arrow function returns age
         }
 
+        public PersonClassProperties(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+
         static void ClassExample()
         {
             PersonClass person = new PersonClass("Sean", 33, 5);
@@ -168,6 +175,10 @@ namespace StructuresExample
         static void LocalScope(PersonClass person) //will allow you to access the 'person' variable from 'PersonClass' above
         {
             test = 10; //will change the variable above without being passed as parameters, as it isn't localized scope
+        }
+        static void ClassPropertiresExample()
+        {
+
         }
     }
 }

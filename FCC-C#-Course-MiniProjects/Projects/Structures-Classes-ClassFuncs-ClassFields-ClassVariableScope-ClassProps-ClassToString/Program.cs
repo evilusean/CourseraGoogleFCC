@@ -147,8 +147,11 @@ namespace StructuresExample
                 }
                 set
                 {
-                    name = value;
+                    this.name = !string.IsNullOrEmpty(name) ? name : "Invalid Name"; //ternary operator, if name isn't null or empty update 'name'
                 }
+                //one liners for above :
+                //public string Name { get => name; set => name = value; }
+                //
         }
     */
         static void ClassExample()

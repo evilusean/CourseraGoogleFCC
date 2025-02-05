@@ -14,7 +14,8 @@ namespace StructuresExample
             //ClassesExample();
             //ClassFieldsExample();
             //ClassVariableFunctionScope();
-            ClassPropertiesExample();
+            //ClassPropertiesExample();
+            ClassToStringFunctionOverride();
         }
 
         // Structures allow you to store different datatypes inside one datatype, a group of datatypes
@@ -205,7 +206,11 @@ namespace StructuresExample
         {
             PersonClass person = new PersonClass("Sean", 33, 4);
             Console.WriteLine(ReturnDetails(person));
-            
+            // code started to break, too many functions using same class, to fix one broke others
+            // this code is found commented out 'PersonClassProperties' for future sean
+        }
+        static void ClassToStringFunctionOverride()
+        {
 
         }
     }

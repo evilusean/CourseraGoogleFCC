@@ -561,6 +561,10 @@ Console.WriteLine(person); #how you want to access them, without any work this w
   #you can actually override the 'tostring' method 
 public override string ToString(){return base.ToString();} #basic syntax to override a string method, returns a string
  public override string ToString(){return $"Name: {Name} \nAge : {Age}";} #changes the default behaviour of 'ToString' so when it gets called it will return the new string here
+Console.WriteLine(person); // after fixing above, will return the PersonDetails instead of a 'stringOverride.Person' error
+everything in C# is an object eventually, dig deep enough, and you will find an object
+public override bool Equals(object obj){Person person = obj as Person; return Name.Equals(person.Name) && Age == person.Age;}
+//this is casting, converts it into a 'Person' instead of an object, then compares 'Name' and returns bool //return true if equal to eachother
 
 
 

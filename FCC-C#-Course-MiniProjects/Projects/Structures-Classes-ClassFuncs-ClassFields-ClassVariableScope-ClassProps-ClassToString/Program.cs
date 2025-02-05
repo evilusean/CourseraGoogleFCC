@@ -213,6 +213,8 @@ namespace StructuresExample
         {
             PersonClass person = new PersonClass("Sean", 33, 4);
             Console.WriteLine(ReturnDetails(person));
+            Console.WriteLine($"Name: {person.name} - Age: {person.age}");
+
         }
     }
 }

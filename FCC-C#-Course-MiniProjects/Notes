@@ -556,9 +556,11 @@ public string Name { get:set; } //even shorter syntax, for private getter/setter
   'Auto Implemented Properties' = You can use these if there is no additional logic, will be private, even if it is public
 
 Class ToString Function OverRide = 8:01:10 ==========================================================================================================================================================================
-
-
-
+Console.WriteLine($"Name: {person.name} - Age: {person.age}"); #how to access the details of the 'person' instance 
+Console.WriteLine(person); #how you want to access them, without any work this will return an error 'stringOverride.Person' has the same namespace as a class, prints an object
+  #you can actually override the 'tostring' method 
+public override string ToString(){return base.ToString();} #basic syntax to override a string method, returns a string
+ public override string ToString(){return $"Name: {Name} \nAge : {Age}";} #changes the default behaviour of 'ToString' so when it gets called it will return the new string here
 
 
 

@@ -182,6 +182,11 @@ namespace StructuresExample
         {
             return $"Name: {person.name} \nAge : {person.age}"; // formats to make return pretty
         }
+        public override string ToString() //overrides the 'ToString' function which is the default
+        {
+            //return ReturnDetails; //will return the 'ReturnDetails' function above
+            return $"Name: {person.name} \nAge : {person.age}" //same as above, not dependant on the function
+        }
         static void ClassFieldsExample()
         {
             PersonClass person = new PersonClass("Sean", 24, 4);
@@ -213,7 +218,9 @@ namespace StructuresExample
         {
             PersonClass person = new PersonClass("Sean", 33, 4);
             Console.WriteLine(ReturnDetails(person));
-            Console.WriteLine($"Name: {person.name} - Age: {person.age}");
+            Console.WriteLine($"Name: {person.name} - Age: {person.age}"); //how to return individual details of 'person'
+            //Console.WriteLine(person); //will return a 'stringOverride.Person' error and try to return a 'Person' object
+
 
         }
     }

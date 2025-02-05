@@ -211,7 +211,8 @@ namespace StructuresExample
         }
         static void ClassToStringFunctionOverride()
         {
-
+            PersonClass person = new PersonClass("Sean", 33, 4);
+            Console.WriteLine(ReturnDetails(person));
         }
     }
 }

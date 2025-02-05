@@ -555,7 +555,7 @@ public string Name { get => name; set => name = value; } #one liner for 'get' 's
 public string Name { get:set; } //even shorter syntax, for private getter/setter even though it says public 'a-auto property' - creates an anonymous property behind the scenes 
   'Auto Implemented Properties' = You can use these if there is no additional logic, will be private, even if it is public
 
-
+Class ToString Function OverRide = 8:01:10 ==========================================================================================================================================================================
 
 
 

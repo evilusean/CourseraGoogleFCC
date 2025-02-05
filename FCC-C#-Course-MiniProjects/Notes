@@ -1,4 +1,5 @@
 Start : 2025-1-11
+End : 2025-2-5
 
 Install Visual Studio + C# SDK
 'dotnet new console -n <My New Project>' #used to create a new C# project

@@ -188,6 +188,15 @@ namespace StructuresExample
             //return ReturnDetails; //will return the 'ReturnDetails' function above
             return $"Name: {Name} \nAge : {Age}"; //same as above, not dependant on the function
         }
+        public override bool Equals(object obj)
+        {
+        if (obj is Person) //wrap it in a 'Person' check
+            {
+            Person person = obj as Person; //this is casting, converts it into a 'Person' instead of an object
+            return Name.Equals(person.Name) && Age == person.Age; //return true if equal to eachother
+            }
+        return false
+        }
         */
         static void ClassFieldsExample()
         {
@@ -222,7 +231,15 @@ namespace StructuresExample
             Console.WriteLine(ReturnDetails(person));
             Console.WriteLine($"Name: {person.name} - Age: {person.age}"); //how to return individual details of 'person'
             //Console.WriteLine(person); //will return a 'stringOverride.Person' error and try to return a 'Person' object
-
+            PersonClass test = new PersonClass("Shawn", 23, 4);
+            if (person.Equals(test)) //compare the 2 objects
+            {
+                Console.WriteLine("Same");
+            }
+            else 
+            {
+                Console.WriteLine("Not Same");
+            }
 
         }
     }

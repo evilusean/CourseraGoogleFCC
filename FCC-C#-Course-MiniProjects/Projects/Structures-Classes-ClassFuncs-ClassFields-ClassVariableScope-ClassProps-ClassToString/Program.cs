@@ -182,11 +182,13 @@ namespace StructuresExample
         {
             return $"Name: {person.name} \nAge : {person.age}"; // formats to make return pretty
         }
+        /* code still broken, in order to fix this, I break every other old function, just leaving commented out
         public override string ToString() //overrides the 'ToString' function which is the default
         {
             //return ReturnDetails; //will return the 'ReturnDetails' function above
-            return $"Name: {person.name} \nAge : {person.age}" //same as above, not dependant on the function
+            return $"Name: {Name} \nAge : {Age}"; //same as above, not dependant on the function
         }
+        */
         static void ClassFieldsExample()
         {
             PersonClass person = new PersonClass("Sean", 24, 4);

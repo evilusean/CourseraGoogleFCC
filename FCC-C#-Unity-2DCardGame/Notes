@@ -7,3 +7,8 @@ I need to learn basically everything, I didn't even know how to add anything whe
 
 1 - How to Create a 2D Card Game in Unity - Part 1 (Setup and Basic Game Architecture) : =======================================================================================================================
 https://www.youtube.com/watch?v=0-dUB52eEMk
+There are 2 views 'scene' and 'game' - he immediately switches to 'scene'
+'Game Object Menu' (top dropdown) -> 'UI' -> 'Canvas' #he creates a canvas, it just adds a small circle to the scene, and adds it to the left hand side 'Hierarchy' menu which can be viewed in the inspector
+'Right Click' + Drag = Move Around Canvas
+'Mouse Wheel Up/Down' = Scroll In/Out
+'Play' (top middle below dropdowns) = Will automatically take you to the game tab

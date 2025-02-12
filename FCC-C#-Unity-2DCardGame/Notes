@@ -11,4 +11,54 @@ There are 2 views 'scene' and 'game' - he immediately switches to 'scene'
 'Game Object Menu' (top dropdown) -> 'UI' -> 'Canvas' #he creates a canvas, it just adds a small circle to the scene, and adds it to the left hand side 'Hierarchy' menu which can be viewed in the inspector
 'Right Click' + Drag = Move Around Canvas
 'Mouse Wheel Up/Down' = Scroll In/Out
-'Play' (top middle below dropdowns) = Will automatically take you to the game tab
+'Play' (top middle below dropdowns) = Will automatically take you to the game tab -
+the UI is hilariously similar to a Reaper DAW - moreso than blender and gimp - where instead of audio files it has game assets, objects instead of tracks
+- First create the background that looks like a table top = 
+  'Game Object Menu' (top dropdown) -> 'UI' -> 'Image' #will create an image, and automatically nests it as a child of our newly created canvas in the hierarchy
+  'Right Click' in the hierarchy the new image to rename it to 'Background'
+  'Inspector' (right hand side) -> 'Color' will give you pallette
+For some reason when I clicked 'Play' the background was staying the default dark blue, I had a workaround for this by going to 'Main Camera' in hierarchy and changing the background to black there instead
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

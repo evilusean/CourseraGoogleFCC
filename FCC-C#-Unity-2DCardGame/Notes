@@ -19,8 +19,10 @@ the UI is hilariously similar to a Reaper DAW - moreso than blender and gimp - w
   'Right Click' in the hierarchy the new image to rename it to 'Background'
   'Inspector' (right hand side) -> 'Color' will give you pallette
 For some reason when I clicked 'Play' the background was staying the default dark blue, I had a workaround for this by going to 'Main Camera' in hierarchy and changing the background to black there instead
+I think I figured out why this broke yesterday, the default square I was using for the size of the original image was so small it was like a pixel, just swapped view from 'game' to 'simulator'(ipad?) and I see it
 
-
+Creating Player and Opponent Areas : 
+After setting the background, you now want to create 2 areas one for yourself - I messed up somewhere, the space I'm working in is wayyyy too small, It's like 1 pixel in size
 
 
 

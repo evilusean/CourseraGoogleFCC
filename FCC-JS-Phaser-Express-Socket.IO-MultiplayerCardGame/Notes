@@ -5,7 +5,7 @@ cd multiplayer-card-project
 git clone https://github.com/photonstorm/phaser3-project-template.git
 npm install 
 npm start #this didn't work
-
+npm run dev #this worked
 
 
 

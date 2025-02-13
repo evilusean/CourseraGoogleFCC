@@ -6,7 +6,10 @@ git clone https://github.com/photonstorm/phaser3-project-template.git
 npm install 
 npm start #this didn't work
 npm run dev #this worked
-https://github.com/sominator/multiplayer-card-project/tree/master/client/src/assets
+https://github.com/sominator/multiplayer-card-project/tree/master/client/src/assets #remove defaults, add to 'public/assets'
+In the '/client/src' directory, add a folder called "scenes" and another called "helpers."
+In '/client/src/scenes', add an empty file called "game.js".
+In '/client/src/helpers', add three empty files: "card.js", "dealer.js", and "zone.js".
 
 
 

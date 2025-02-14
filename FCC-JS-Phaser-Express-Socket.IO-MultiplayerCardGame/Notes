@@ -17,6 +17,8 @@ We've created a new class that accepts a scene as a parameter, and features a re
   Now, we can call this function from elsewhere and pass it the necessary parameters to create cards.
 Phaser has built-in dropzones that allow us to dictate where game objects can be dropped, and we've set up one here and provided it with an outline.
   We've also added a tiny bit of data called "cards" to the dropzone that we'll use later.
+installed nodemon/express to autoupdate on change
+http://localhost:3000 or localhost:8080
 
 
 

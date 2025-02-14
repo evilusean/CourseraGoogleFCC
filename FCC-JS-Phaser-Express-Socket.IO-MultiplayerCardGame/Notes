@@ -11,7 +11,8 @@ In the '/client/src' directory, add a folder called "scenes" and another called 
 In '/client/src/scenes', add an empty file called "game.js".
 In '/client/src/helpers', add three empty files: "card.js", "dealer.js", and "zone.js".
 '/src/index.js', which is the main entry point to our front end app. #this doesn't work, syntax changed, use 'main.js'
-
+utilize Phaser's "scene" system so that we can separate our game scenes rather than try to cram everything in one file. 
+  Scenes can be useful if you're creating multiple game worlds, building things like instruction screens, or generally trying to keep things tidy.
 
 
 

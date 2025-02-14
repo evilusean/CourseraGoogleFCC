@@ -1,3 +1,4 @@
+import Card from '../helpers/card';
 export default class Game extends Phaser.Scene {
     constructor() {
         super({
@@ -16,11 +17,11 @@ preload() {
         this.dealText = this.add.text(75, 350, ['DEAL CARDS']).setFontSize(18).setFontFamily('Trebuchet MS').setColor('#00ffff').setInteractive();
         let self = this;
 
-        this.card = this.add.image(300, 300, 'cyanCardFront').setScale(0.3, 0.3).setInteractive();
-        this.input.setDraggable(this.card);
-
         this.dealCards = () => {
-
+            for (let i = 0; i < 5; i++) {
+                let playerCard = new Card(this);
+                playerCard.render(475 + (i * 100), 650, 'cyanCardFront');
+            }
         }
 
         this.dealText.on('pointerdown', function () {

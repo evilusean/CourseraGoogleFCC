@@ -102,6 +102,7 @@ preload() {
             gameObject.x = (dropZone.x - 350) + (dropZone.data.values.cards * 50);
             gameObject.y = dropZone.y;
             gameObject.disableInteractive();
+            self.socket.emit('cardPlayed', gameObject, self.isPlayerA);
         })
     }
 

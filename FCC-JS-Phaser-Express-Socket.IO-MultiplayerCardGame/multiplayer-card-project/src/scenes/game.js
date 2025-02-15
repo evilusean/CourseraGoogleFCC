@@ -18,6 +18,11 @@ preload() {
     create() {
         this.isPlayerA = false;
         this.opponentCards = [];
+       
+        this.socket.on('dealCards', function () {
+            self.dealer.dealCards();
+            self.dealText.disableInteractive();
+        })
 
         const server = require('express')();
         const http = require('http').createServer(server);
@@ -64,7 +69,7 @@ preload() {
         }
 
         this.dealText.on('pointerdown', function () {
-            self.dealCards();
+            self.socket.emit("dealCards");
         })
 
         this.dealText.on('pointerover', function () {

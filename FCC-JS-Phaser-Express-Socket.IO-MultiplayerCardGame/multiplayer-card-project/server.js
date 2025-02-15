@@ -1,15 +1,43 @@
-const server = require('express')();
-const http = require('http').createServer(server);
-const io = require('socket.io')(http);
+const express = require('express');
+const app = express();
+const server = require('http').createServer(app);
+const io = require('socket.io')(server, {
+    cors: {
+        origin: "*",
+        methods: ["GET", "POST"]
+    }
+});
 
-io.on('connection', function (socket) {
+let players = [];
+
+app.get('/', (req, res) => {
+    res.send('Server is running');
+});
+
+io.on('connection', (socket) => {
     console.log('A user connected: ' + socket.id);
 
-    socket.on('disconnect', function () {
+    players.push(socket.id);
+
+    if (players.length === 1) {
+        io.emit('isPlayerA');
+    }
+
+    socket.on('dealCards', () => {
+        io.emit('dealCards');
+    });
+
+    socket.on('cardPlayed', (gameObject, isPlayerA) => {
+        io.emit('cardPlayed', gameObject, isPlayerA);
+    });
+
+    socket.on('disconnect', () => {
         console.log('A user disconnected: ' + socket.id);
+        players = players.filter(player => player !== socket.id);
     });
 });
 
-http.listen(3000, function () {
-    console.log('Server started!');
+const PORT = 3000;
+server.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });

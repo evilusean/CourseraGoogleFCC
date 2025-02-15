@@ -19,8 +19,7 @@ Phaser has built-in dropzones that allow us to dictate where game objects can be
   We've also added a tiny bit of data called "cards" to the dropzone that we'll use later.
 installed nodemon/express to autoupdate on change
 http://localhost:3000 or localhost:8080
-
-
+        this.socket.on('isPlayerA', function () {            self.isPlayerA = true;        }) #checks for which player, if player a, will give them the correct socket
 
 
 

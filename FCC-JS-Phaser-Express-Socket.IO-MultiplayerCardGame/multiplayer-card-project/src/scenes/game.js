@@ -26,9 +26,6 @@ preload() {
         
         io.on('connection', function (socket) {
             console.log('A user connected: ' + socket.id);
-            this.socket.on('isPlayerA', function () {
-                self.isPlayerA = true;
-            })
         
             players.push(socket.id);
         

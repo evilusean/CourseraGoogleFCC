@@ -18,7 +18,7 @@ preload() {
     create() {
         this.isPlayerA = false;
         this.opponentCards = [];
-        
+
         const server = require('express')();
         const http = require('http').createServer(server);
         const io = require('socket.io')(http);
@@ -26,6 +26,9 @@ preload() {
         
         io.on('connection', function (socket) {
             console.log('A user connected: ' + socket.id);
+            this.socket.on('isPlayerA', function () {
+                self.isPlayerA = true;
+            })
         
             players.push(socket.id);
         

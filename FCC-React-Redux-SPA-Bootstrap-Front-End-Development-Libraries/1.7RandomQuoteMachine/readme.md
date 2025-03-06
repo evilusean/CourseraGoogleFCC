@@ -14,3 +14,4 @@ We will accept and try to fix all issue reports that use the suggested technolog
 Link:</br>
 https://random-quote-machine.freecodecamp.rocks/.</br>
 https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-random-quote-machine</br>
+https://codepen.io/Sean-Teams/pen/PwomRzK

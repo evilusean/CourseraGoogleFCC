@@ -49,6 +49,7 @@ const checkCashRegister = (price, cash, cid) => {
         }
     }
 
+    // Check if we could not provide the exact change
     if (change > 0) {
         output.status = "INSUFFICIENT_FUNDS";
         output.change = [];
@@ -68,7 +69,12 @@ purchaseBtn.addEventListener('click', () => {
         changeDue.innerText = 'No change due - customer paid with exact cash';
     } else {
         const result = checkCashRegister(price, cash, cid);
-        changeDue.innerText = `Status: ${result.status} ${result.change.map(item => `${item[0]}: $${item[1].toFixed(2)}`).join(', ')}`;
+        // Format the output for the change due
+        if (result.status === "CLOSED") {
+            changeDue.innerText = `Status: ${result.status} ${result.change.map(item => `${item[0]}: $${item[1].toFixed(2)}`).join(', ')}`;
+        } else {
+            changeDue.innerText = `Status: ${result.status} ${result.change.map(item => `${item[0]}: $${item[1].toFixed(2)}`).join(', ')}`;
+        }
     }
     cashInput.value = ''; // Clear the input field
 });

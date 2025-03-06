@@ -121,6 +121,8 @@ https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/
 
 Certificate:
 
+https://www.freecodecamp.org/certification/Evilusean/javascript-algorithms-and-data-structures-v8
+
 Start: 07 Dec 2023
 
 End: ~03 January 2024 </br>

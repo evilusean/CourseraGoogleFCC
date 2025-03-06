@@ -78,10 +78,15 @@ purchaseBtn.addEventListener('click', () => {
         // Format the output
         let outputText = `Status: ${result.status}`;
         
-        if (result.change.length > 0) {
-            result.change.forEach(item => {
-                outputText += ` ${item[0]}: $${item[1]}`;
-            });
+        if (result.status === "CLOSED") {
+            // For CLOSED status, we need to include all denominations
+            for (let i = 0; i < result.change.length; i++) {
+                outputText += ` ${result.change[i][0]}: $${result.change[i][1]}`;
+            }
+        } else if (result.change.length > 0) {
+            for (let i = 0; i < result.change.length; i++) {
+                outputText += ` ${result.change[i][0]}: $${result.change[i][1]}`;
+            }
         }
         
         changeDue.innerText = outputText;

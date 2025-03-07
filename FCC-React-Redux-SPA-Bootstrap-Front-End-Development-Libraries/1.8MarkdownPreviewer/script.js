@@ -54,15 +54,25 @@ marked.setOptions({
 
 // Create Editor component
 const Editor = ({ markdown, onChange }) => {
+  // The Editor component is a functional component that takes in two props:
+  // 1. markdown: This is the current markdown text that will be displayed in the textarea.
+  // 2. onChange: This is a function that will be called whenever the content of the textarea changes.
+
   return (
     <div className="editor-container">
+      {/* This div serves as a container for the editor section, styled with CSS */}
       <div className="editor-header">
+        {/* This div is the header for the editor, styled with a background color and text color */}
         <span>Editor</span>
+        {/* The header contains a title for the editor */}
       </div>
       <textarea 
         id="editor" 
         value={markdown} 
         onChange={onChange}
+        // The textarea element where users can input their markdown text.
+        // The value of the textarea is controlled by the markdown prop.
+        // The onChange prop is an event handler that updates the state in the parent component.
       ></textarea>
     </div>
   );

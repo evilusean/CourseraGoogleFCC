@@ -4,6 +4,15 @@ function playSound(id) {
     audio.currentTime = 0; // Rewind to the start
     audio.play();
     document.getElementById('display').innerText = id.replace('-', ' '); // Update display text
+
+    // Add a class to create a visual effect
+    const drumPad = document.getElementById(id);
+    drumPad.classList.add('active');
+    
+    // Remove the class after a short delay
+    setTimeout(() => {
+        drumPad.classList.remove('active');
+    }, 100); // Adjust the duration as needed
 }
 
 // Event listener for keyboard presses

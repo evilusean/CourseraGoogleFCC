@@ -41,3 +41,9 @@ body {
 .drum-pad:hover {
     background-color: #3a8bbf;
 }
+
+.drum-pad.active {
+    background-color: #3a8bbf;
+    transform: scale(0.95);
+    transition: transform 0.1s;
+}

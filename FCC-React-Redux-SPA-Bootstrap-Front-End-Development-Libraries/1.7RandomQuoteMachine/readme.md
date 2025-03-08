@@ -1,4 +1,5 @@
 Build a Random Quote Machine :</br>
+https://codepen.io/Sean-Teams/pen/PwomRzK</br>
 Note: React 18 has known incompatibilities with the tests for this project ([see issue](https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-random-quote-machine))
 
 Objective: Build an app that is functionally similar to this: https://random-quote-machine.freecodecamp.rocks/.</br>

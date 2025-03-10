@@ -71,8 +71,15 @@ function handleOperator(nextOperator) {
         state.previousValue = inputValue;
     }
     
+    // Handle consecutive operators
+    if (nextOperator === '-' && operator === null) {
+        // Allow negative numbers
+        state.currentValue = '-' + currentValue;
+    } else {
+        state.operator = nextOperator;
+    }
+    
     state.waitingForOperand = true;
-    state.operator = nextOperator;
 }
 
 // Perform calculation

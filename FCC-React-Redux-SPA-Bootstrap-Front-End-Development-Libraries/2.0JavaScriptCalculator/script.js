@@ -60,32 +60,34 @@ function inputDecimal() {
 // Handle operators
 function handleOperator(nextOperator) {
     const { currentValue, previousValue, operator, waitingForOperand } = state;
-    const inputValue = parseFloat(currentValue);
     
-    // Special case for negative numbers after an operator
-    if (nextOperator === '-' && waitingForOperand && operator && operator !== '-') {
+    // Case 1: If we get a minus after an operator, treat it as a negative sign
+    if (nextOperator === '-' && waitingForOperand && operator) {
         state.currentValue = '-';
         state.waitingForOperand = false;
-        state.decimalAdded = false;
         return;
     }
     
-    // If we already have an operator and get another one (except negative after multiply/divide)
-    if (operator && waitingForOperand) {
-        // If current value is a negative sign and we get another operator,
-        // replace both the negative sign and the previous operator
+    // Case 2: If we already have a negative sign and get another operator,
+    // or if we have any operator and get another one (except for Case 1)
+    if (waitingForOperand) {
+        // If we have a negative sign and get another operator, replace both the previous operator and the negative sign
         if (currentValue === '-') {
+            // This is the key fix for "5 * - + 5" - we replace both * and - with +
             state.operator = nextOperator;
+            state.currentValue = '0';  // Reset current value
             return;
         }
-        // If we're waiting for an operand but get another operator,
-        // just replace the previous operator
+        
+        // If we're just replacing one operator with another
         state.operator = nextOperator;
         return;
     }
     
-    // If there's a pending operation, perform it
-    if (operator && !waitingForOperand) {
+    // Normal case: perform calculation with existing operator if there is one
+    const inputValue = parseFloat(currentValue);
+    
+    if (operator) {
         const result = calculate(previousValue, inputValue, operator);
         state.currentValue = String(result);
         state.previousValue = result;

@@ -1,0 +1,88 @@
+:root {
+    --primary: #FF0000;
+    --secondary: #8c38ff;
+    --dark: #131a26;
+    --light: #eee;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Sans", sans-serif;
+  }
+  
+  body {
+    background-color: var(--light);
+  }
+  .App {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .calculator {
+    width: 100%;
+    width: 36%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 2px 64px rgba(0, 0, 0, 0.2);
+  }
+  
+  .display {
+    padding: 16px;
+    text-align: right;
+    background-color: var(--dark);
+    color: var(--light);
+    font-size: 24px;
+    font-weight: 300;
+  }
+  .display span {
+    font-size: 14px;
+    color: #888;
+  }
+  button {
+    appearance: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 16px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  .operators {
+    display: flex;
+  }
+  
+  .operators button {
+    flex: 1 1 auto;
+    background-color: var(--primary);
+    font-weight: 500;
+  }
+  
+  .digits {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .digits button {
+    flex: 1 1 33.33%;
+    max-width: 33.333%;
+    background-color: var(--dark);
+  }
+  
+  @media screen and (min-width: 320px) and (max-width: 682px) {
+    .calculator {
+      width: 60%;
+    }
+    button {
+      padding: 16px 0px;
+    }
+  }
+  

@@ -71,8 +71,15 @@ function handleOperator(nextOperator) {
     }
     
     // If we already have an operator and get another one (except negative after multiply/divide)
-    if (operator && waitingForOperand && currentValue === '-') {
-        // Replace the previous operator with the new one
+    if (operator && waitingForOperand) {
+        // If current value is a negative sign and we get another operator,
+        // replace both the negative sign and the previous operator
+        if (currentValue === '-') {
+            state.operator = nextOperator;
+            return;
+        }
+        // If we're waiting for an operand but get another operator,
+        // just replace the previous operator
         state.operator = nextOperator;
         return;
     }

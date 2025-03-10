@@ -59,11 +59,26 @@ function inputDecimal() {
 
 // Handle operators
 function handleOperator(nextOperator) {
-    const { currentValue, previousValue, operator } = state;
+    const { currentValue, previousValue, operator, waitingForOperand } = state;
     const inputValue = parseFloat(currentValue);
     
+    // Special case for negative numbers after an operator
+    if (nextOperator === '-' && waitingForOperand && operator && operator !== '-') {
+        state.currentValue = '-';
+        state.waitingForOperand = false;
+        state.decimalAdded = false;
+        return;
+    }
+    
+    // If we already have an operator and get another one (except negative after multiply/divide)
+    if (operator && waitingForOperand && currentValue === '-') {
+        // Replace the previous operator with the new one
+        state.operator = nextOperator;
+        return;
+    }
+    
     // If there's a pending operation, perform it
-    if (operator && !state.waitingForOperand) {
+    if (operator && !waitingForOperand) {
         const result = calculate(previousValue, inputValue, operator);
         state.currentValue = String(result);
         state.previousValue = result;
@@ -71,15 +86,8 @@ function handleOperator(nextOperator) {
         state.previousValue = inputValue;
     }
     
-    // Handle consecutive operators
-    if (nextOperator === '-' && operator === null) {
-        // Allow negative numbers
-        state.currentValue = '-' + currentValue;
-    } else {
-        state.operator = nextOperator;
-    }
-    
     state.waitingForOperand = true;
+    state.operator = nextOperator;
 }
 
 // Perform calculation

@@ -111,6 +111,8 @@ https://www.freecodecamp.org/learn/front-end-development-libraries/
 
 Certificate:
 
+https://www.freecodecamp.org/certification/Evilusean/javascript-algorithms-and-data-structures-v8
+
 Start: 05 January 2024
 
 End: ~02 February 2024</br>

@@ -41,7 +41,7 @@ function startStopTimer() {
                 state.timeLeft--;
                 updateDisplay();
             } else {
-                beep.play();
+                beep.play(); // Ensure this line is executed
                 state.isBreak = !state.isBreak;
                 state.timeLeft = state.isBreak ? state.breakLength * 60 : state.sessionLength * 60;
                 updateDisplay();

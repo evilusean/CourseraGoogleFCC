@@ -13,7 +13,7 @@ const breakLengthDisplay = document.getElementById('break-length');
 const sessionLengthDisplay = document.getElementById('session-length');
 const timeLeftDisplay = document.getElementById('time-left');
 const timerLabel = document.getElementById('timer-label');
-const beep = document.getElementById('beep');
+const beep = document.getElementById('beep'); // Reference to the audio element
 
 // Update display
 function updateDisplay() {
@@ -41,7 +41,7 @@ function startStopTimer() {
                 state.timeLeft--;
                 updateDisplay();
             } else {
-                beep.play(); // Ensure this line is executed
+                beep.play(); // Play the beep sound when the timer reaches zero
                 state.isBreak = !state.isBreak;
                 state.timeLeft = state.isBreak ? state.breakLength * 60 : state.sessionLength * 60;
                 updateDisplay();
@@ -59,6 +59,8 @@ function resetTimer() {
     state.sessionLength = 25;
     state.timeLeft = 1500;
     state.isBreak = false;
+    beep.pause(); // Pause the beep sound
+    beep.currentTime = 0; // Reset the beep sound to the beginning
     updateDisplay();
 }
 

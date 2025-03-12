@@ -1,3 +1,37 @@
 Start : 12March2025
 
 Each project is it's own DB to work with, going to seperate the notes into each one - then centralize here
+
+12March2025 - Learn Bash by Building a Boilerplate ===========================================================================================================================================
+The terminal allows you to send text commands to your computer that can manipulate the file system, run programs, automate tasks, and much more.
+In this 170-lesson course, you will learn terminal commands by creating a website boilerplate using only the command line.
+https://gitpod.io/workspaces # log in with github account
+https://freecodecam-learnbashby-hx2fxtvj2i1.ws-us118.gitpod.io/
+# after installing a few extensions in VS code, you can now run the gitpod project in VSCode on linux via SSH shell, 
+had a bunch of files to start tutorial with in source control, commited them(super slow), still commiting, added 'TUTORIAL.md' since that seems to be the main file
+It's telling me to find a 'package.json' and a 'node_modules' file that doesn't exist, also still commiting.. seems broke, but idk, new tool
+-Clicking the "hamburger" menu near the top left of the VSCode window,
+-Going to the "View" menu,
+-Clicking on the "Command Palette" option,
+-and running the "CodeRoad: Start" command
+#figured it out, needed to run 'CodeRoad: Start' at the top, not commit, the commmit was broken because it was waiting for a message - that took an embarassing long time to figure out
+`pwd` stands for "print working directory".
+`ls` stands for "list"
+  'ls -l' #you can add the '-l' long flag to show more details, like time created, and privileges
+  'ls -a' # 'ls --all' shows all files, including hidden ones
+`cd` stands for "change directory" 
+'more <filename>' = You can see what's in a file with more <filename>. Use it to view what's in the package.json
+'clear' = clear terminal
+'cd ../..' = You can go back two folders with cd ../.. Each set of dots represents another folder level. 
+'mkdir' = make directory
+'touch <filename>' = create a new file
+'cp <file> <destination>' = copies a (or multiple) files to <destination>
+  'cp -r <file> <destination>' = will copy recursively, so you can copy folders instead of just files
+'rm <filename>' = removes file
+  'rm -r' = 'r' is recursive flag, be careful you can destroy your OS doing this
+'mv <filename> <new_filename>' = mv stands for "move", it can rename or move something.
+'find' = to find things or view a file tree. Enter find to view the file tree of the website folder to see all the files and folders within it.
+'find <folder_name>' = to display the tree of a different folder.
+'find -name <filename>' = search for a filename
+'rmdir' = remove directory
+'echo <text> >> <filename>' You can print to a file instead of the terminal with '>>'

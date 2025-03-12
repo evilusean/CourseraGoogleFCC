@@ -14,12 +14,42 @@ It's telling me to find a 'package.json' and a 'node_modules' file that doesn't 
 `pwd` stands for "print working directory".
 `ls` stands for "list"
   'ls -l' #you can add the '-l' long flag to show more details, like time created, and privileges
+  'ls -a' # 'ls --all' shows all files, including hidden ones
 `cd` stands for "change directory" 
 'more <filename>' = You can see what's in a file with more <filename>. Use it to view what's in the package.json
 'clear' = clear terminal
 'cd ../..' = You can go back two folders with cd ../.. Each set of dots represents another folder level. 
 'mkdir' = make directory
 'touch <filename>' = create a new file
+'cp <file> <destination>' = copies a (or multiple) files to <destination>
+'rm <filename>' = removes file
+'mv <filename> <new_filename>' = mv stands for "move", it can rename or move something.
+'find' = to find things or view a file tree. Enter find to view the file tree of the website folder to see all the files and folders within it.
+'find <folder_name>' = to display the tree of a different folder.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

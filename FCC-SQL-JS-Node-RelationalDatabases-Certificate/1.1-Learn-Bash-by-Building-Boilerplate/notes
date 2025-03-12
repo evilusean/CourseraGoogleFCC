@@ -22,13 +22,15 @@ It's telling me to find a 'package.json' and a 'node_modules' file that doesn't 
 'mkdir' = make directory
 'touch <filename>' = create a new file
 'cp <file> <destination>' = copies a (or multiple) files to <destination>
+  'cp -r <file> <destination>' = will copy recursively, so you can copy folders instead of just files
 'rm <filename>' = removes file
+  'rm -r' = 'r' is recursive flag, be careful you can destroy your OS doing this
 'mv <filename> <new_filename>' = mv stands for "move", it can rename or move something.
 'find' = to find things or view a file tree. Enter find to view the file tree of the website folder to see all the files and folders within it.
 'find <folder_name>' = to display the tree of a different folder.
-
-
-
+'find -name <filename>' = search for a filename
+'rmdir' = remove directory
+'echo <text> >> <filename>' You can print to a file instead of the terminal with '>>'
 
 
 

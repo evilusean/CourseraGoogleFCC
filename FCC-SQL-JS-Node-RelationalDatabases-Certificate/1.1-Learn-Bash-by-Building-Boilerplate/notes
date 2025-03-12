@@ -4,5 +4,5 @@ In this 170-lesson course, you will learn terminal commands by creating a websit
 https://gitpod.io/workspaces # log in with github account
 https://freecodecam-learnbashby-hx2fxtvj2i1.ws-us118.gitpod.io/
 # after installing a few extensions in VS code, you can now run the gitpod project in VSCode on linux via SSH shell, 
-had a bunch of files to start tutorial with in source control, commited them(super slow)
+had a bunch of files to start tutorial with in source control, commited them(super slow), still commiting, added 'TUTORIAL.md' since that seems to be the main file
 

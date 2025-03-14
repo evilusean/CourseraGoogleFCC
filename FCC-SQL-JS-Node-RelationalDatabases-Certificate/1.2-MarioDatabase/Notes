@@ -29,7 +29,11 @@ Adding rows one at a time is quite tedious. Here's an example of how you could h
   VALUES('Mario', 'Mushroom Kingdom', 'Red'),
   ('Luigi', 'Mushroom Kingdom', 'Green'),
   ('Peach', 'Mushroom Kingdom', 'Pink');
-
+UPDATE table_name SET column_name=new_value WHERE condition; # You can change a value like this
+SELECT columns FROM table_name ORDER BY column_name; #order columns by 
+SELECT * FROM characters ORDER BY character_id; #will order all colums from characters by ascending character_id
+ALTER TABLE table_name ADD PRIMARY KEY(column_name); #  add a primary key. It's a column that uniquely identifies each row in the table. Here's an example of how to set a PRIMARY KEY
+  You should set a primary key on every table and there can only be one per table.
 
 
 

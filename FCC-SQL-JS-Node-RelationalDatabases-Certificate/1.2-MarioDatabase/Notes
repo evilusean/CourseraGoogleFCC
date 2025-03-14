@@ -46,14 +46,17 @@ ALTER TABLE table_name ADD UNIQUE(column_name); #There's your foreign key at the
   One row in the characters table will be related to exactly one row in more_info and vice versa. Enforce that by adding the UNIQUE constraint to your foreign key. Here's an example
 ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL; #The column should also be NOT NULL since you don't want to have a row that is for nobody.
 ALTER TABLE more_info ALTER COLUMN character_id SET NOT NULL; 
-
-
-
-
-
-
-
-
+ALTER TABLE sounds ADD COLUMN filename VARCHAR(40) NOT NULL UNIQUE; #adding 2 constraints, 'not null' and 'unique'
+ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name);
+ALTER TABLE sounds ADD COLUMN character_id INT NOT NULL REFERENCES characters(character_id);
+  # You want to use character_id as a foreign key again. 
+  This will be a "one-to-many" relationship because one character will have many sounds, but no sound will have more than one character. Here's the example again:
+INSERT INTO sounds(filename, character_id) VALUES('yay.wav', 3), ('woo-hoo.wav', 3); #inputting multiple audios at once
+"Many-to-many" relationships usually use a junction table to link two tables together, forming two "one-to-many" relationships.
+  Your characters and actions table will be linked using a junction table. Create a new table called character_actions. It will describe what actions each character can perform.
+ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);
+  #The foreign keys you set before were added when you created the column. You can set an existing column as a foreign key like this:
+ALTER TABLE character_actions ADD FOREIGN KEY(character_id) REFERENCES characters(character_id);
 
 
 

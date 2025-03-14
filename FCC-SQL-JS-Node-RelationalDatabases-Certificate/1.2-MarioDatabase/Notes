@@ -8,6 +8,9 @@ CREATE DATABASE database_name; #a way to create a new database - The capitalized
   If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon.
 \c database_name #You can connect to a database by entering \c database_name. You need to connect to add information. , the prompt will change to 'database_name'
 \d #display the tables of the currently connected to DB
+  \d table_name #You can view more details about a table by adding the table name after the display command like this: \d table_name
+CREATE TABLE table_name(); #similar to creating a database, Note that the parenthesis are needed for this one. It will create the table in the database you are connected to
+ALTER TABLE table_name ADD COLUMN column_name DATATYPE; #Tables need columns to describe the data in them, yours doesn't have any yet. Here's an example of how to add one
 
 
 

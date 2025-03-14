@@ -1,7 +1,15 @@
 Start : 14March2025
 
 View -> Command Pallet -> Start with 'CoadRoad : Start' 
-'psql --username=freecodecamp --dbname=postgres' #login credentials for tutorial
+'psql --username=freecodecamp --dbname=postgres' #login credentials for tutorial, after signing in, gives you a new prompt 'postgres=>' 
+\l # list, while signed into the new postgreSQL db, by using the credentials above, will show a list of all databases
+CREATE DATABASE database_name; #a way to create a new database - The capitalized words are keywords telling PostgreSQL what to do. The name of the database is the lowercase word. 
+  Note that all commands need a semi-colon at the end. - the keywords are also CAP SENSITIVE, need to be capitalized 
+  If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon.
+\c database_name #You can connect to a database by entering \c database_name. You need to connect to add information. , the prompt will change to 'database_name'
+\d #display the tables of the currently connected to DB
+
+
 
 
 

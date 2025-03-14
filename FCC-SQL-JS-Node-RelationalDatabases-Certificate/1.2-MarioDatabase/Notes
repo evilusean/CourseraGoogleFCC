@@ -19,6 +19,10 @@ SELECT columns FROM table_name;  #You can view the data in a table by querying i
 SELECT * from table_name; #view all data from table_name, '*' = all
 DELETE FROM table_name WHERE condition; #Here's an example of how to delete a row
 DELETE FROM second_table WHERE username='Luigi'; #deletes from the 'second_table' the row where username='Luigi', all data on the row where username='Luigi' will be deleted, not just username
+DROP TABLE table_name; #will drop(delete) a table from your database
+ALTER DATABASE database_name RENAME TO new_database_name; #You can rename a database like this:
+ALTER TABLE characters ADD COLUMN character_id SERIAL; #The SERIAL type will make your column an INT with a NOT NULL constraint, and automatically increment the integer when a new row is added.
+
 
 
 

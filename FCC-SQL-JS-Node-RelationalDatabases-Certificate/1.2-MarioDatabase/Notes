@@ -55,14 +55,21 @@ INSERT INTO sounds(filename, character_id) VALUES('yay.wav', 3), ('woo-hoo.wav',
 "Many-to-many" relationships usually use a junction table to link two tables together, forming two "one-to-many" relationships.
   Your characters and actions table will be linked using a junction table. Create a new table called character_actions. It will describe what actions each character can perform.
 ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);
-  #The foreign keys you set before were added when you created the column. You can set an existing column as a foreign key like this:
 ALTER TABLE character_actions ADD FOREIGN KEY(character_id) REFERENCES characters(character_id);
-
-
-
-
-
-
+  #The foreign keys you set before were added when you created the column. You can set an existing column as a foreign key like this:
+ALTER TABLE table_name ADD PRIMARY KEY(column1, column2);  #Every table should have a primary key. 
+  #Your previous tables had a single column as a primary key. This one will be different. You can create a primary key from two columns, known as a composite primary key.
+ALTER TABLE character_actions ADD PRIMARY KEY(character_id, action_id);
+SELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;
+  You can see the character_id there so you just need to find the matching id in the characters table to find out who it's for. Enter a join command to see all the info from both tables
+  Or... You added that as a foreign key, that means you can get all the data from both tables with a JOIN command: 
+SELECT * FROM characters FULL JOIN more_info ON characters.character_id = more_info.character_id;
+SELECT * FROM character_actions FULL JOIN characters ON character_actions.character_id = characters.character_id FULL JOIN actions ON character_actions.action_id = actions.action_id;
+  SELECT columns FROM junction_table
+  FULL JOIN table_1 ON junction_table.foreign_key_column = table_1.primary_key_column
+  FULL JOIN table_2 ON junction_table.foreign_key_column = table_2.primary_key_column;
+    #This shows the "one-to-many" relationship. You can see that some of the characters have more than one row because they have many sounds.
+    How can you see all the info from the characters, actions, and character_actions tables? Here's an example that joins three tables:
 
 
 

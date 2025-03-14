@@ -42,9 +42,10 @@ ALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_tab
   Here's an example that creates a column as a foreign key:
 ALTER TABLE more_info ADD COLUMN character_id INT REFERENCES characters(character_id); 
   #creates a new column named 'character_id' that references our unique identifier PRIMARY KEY on the 'characters' table from the column 'character_id' as a FOREIGN KEY on 'more_info' table
-
-
-
+ALTER TABLE table_name ADD UNIQUE(column_name); #There's your foreign key at the bottom. These tables have a "one-to-one" relationship. 
+  One row in the characters table will be related to exactly one row in more_info and vice versa. Enforce that by adding the UNIQUE constraint to your foreign key. Here's an example
+ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL; #The column should also be NOT NULL since you don't want to have a row that is for nobody.
+ALTER TABLE more_info ALTER COLUMN character_id SET NOT NULL; 
 
 
 

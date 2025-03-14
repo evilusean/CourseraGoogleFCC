@@ -22,8 +22,13 @@ DELETE FROM second_table WHERE username='Luigi'; #deletes from the 'second_table
 DROP TABLE table_name; #will drop(delete) a table from your database
 ALTER DATABASE database_name RENAME TO new_database_name; #You can rename a database like this:
 ALTER TABLE characters ADD COLUMN character_id SERIAL; #The SERIAL type will make your column an INT with a NOT NULL constraint, and automatically increment the integer when a new row is added.
-
-
+ALTER TABLE characters ADD COLUMN name VARCHAR(30)NOT NULL; 
+  #Add a column to characters called name. Give it a data type of VARCHAR(30), and a constraint of NOT NULL. Add a constraint by putting it right after the data type.
+Adding rows one at a time is quite tedious. Here's an example of how you could have added the previous three rows at once:
+  INSERT INTO characters(name, homeland, favorite_color)
+  VALUES('Mario', 'Mushroom Kingdom', 'Red'),
+  ('Luigi', 'Mushroom Kingdom', 'Green'),
+  ('Peach', 'Mushroom Kingdom', 'Pink');
 
 
 

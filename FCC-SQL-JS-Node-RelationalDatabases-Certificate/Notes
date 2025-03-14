@@ -35,3 +35,131 @@ It's telling me to find a 'package.json' and a 'node_modules' file that doesn't 
 'find -name <filename>' = search for a filename
 'rmdir' = remove directory
 'echo <text> >> <filename>' You can print to a file instead of the terminal with '>>'
+
+14March2025 - Learn Relational Databases by Building a Mario Database ========================================================================================================================
+https://www.freecodecamp.org/learn/relational-database/learn-relational-databases-by-building-a-mario-database/build-a-mario-database
+View -> Command Pallet -> Start with 'CoadRoad : Start' 
+'psql --username=freecodecamp --dbname=postgres' #login credentials for tutorial, after signing in, gives you a new prompt 'postgres=>' 
+\l # list, while signed into the new postgreSQL db, by using the credentials above, will show a list of all databases
+CREATE DATABASE database_name; #a way to create a new database - The capitalized words are keywords telling PostgreSQL what to do. The name of the database is the lowercase word. 
+  Note that all commands need a semi-colon at the end. - the keywords are also CAP SENSITIVE, need to be capitalized 
+  If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon.
+\c database_name #You can connect to a database by entering \c database_name. You need to connect to add information. , the prompt will change to 'database_name'
+\d #display the tables of the currently connected to DB
+  \d table_name #You can view more details about a table by adding the table name after the display command like this: \d table_name
+CREATE TABLE table_name(); #similar to creating a database, Note that the parenthesis are needed for this one. It will create the table in the database you are connected to
+ALTER TABLE table_name ADD COLUMN column_name DATATYPE; #Tables need columns to describe the data in them, yours doesn't have any yet. Here's an example of how to add one
+ALTER TABLE table_name DROP COLUMN column_name; #will drop a column (delete it)
+VARCHAR = A common data type is VARCHAR. It's a short string of characters. You need to give it a maximum length when using it like this: VARCHAR(30).
+ALTER TABLE table_name RENAME COLUMN column_name TO new_name; # Here's how you can rename a column
+INSERT INTO table_name(column_1, column_2) VALUES(value1, value2); # Rows are the actual data in the table. You can add one like this, strings must be in ' single quotes
+SELECT columns FROM table_name;  #You can view the data in a table by querying it with the SELECT statement
+SELECT * from table_name; #view all data from table_name, '*' = all
+DELETE FROM table_name WHERE condition; #Here's an example of how to delete a row
+DELETE FROM second_table WHERE username='Luigi'; #deletes from the 'second_table' the row where username='Luigi', all data on the row where username='Luigi' will be deleted, not just username
+DROP TABLE table_name; #will drop(delete) a table from your database
+ALTER DATABASE database_name RENAME TO new_database_name; #You can rename a database like this:
+ALTER TABLE characters ADD COLUMN character_id SERIAL; #The SERIAL type will make your column an INT with a NOT NULL constraint, and automatically increment the integer when a new row is added.
+ALTER TABLE characters ADD COLUMN name VARCHAR(30)NOT NULL; 
+  #Add a column to characters called name. Give it a data type of VARCHAR(30), and a constraint of NOT NULL. Add a constraint by putting it right after the data type.
+Adding rows one at a time is quite tedious. Here's an example of how you could have added the previous three rows at once:
+  INSERT INTO characters(name, homeland, favorite_color)
+  VALUES('Mario', 'Mushroom Kingdom', 'Red'),
+  ('Luigi', 'Mushroom Kingdom', 'Green'),
+  ('Peach', 'Mushroom Kingdom', 'Pink');
+UPDATE table_name SET column_name=new_value WHERE condition; # You can change a value like this
+SELECT columns FROM table_name ORDER BY column_name; #order columns by 
+SELECT * FROM characters ORDER BY character_id; #will order all colums from characters by ascending character_id
+ALTER TABLE table_name ADD PRIMARY KEY(column_name); #  add a primary key. It's a column that uniquely identifies each row in the table. Here's an example of how to set a PRIMARY KEY
+  You should set a primary key on every table and there can only be one per table.
+ALTER TABLE table_name DROP CONSTRAINT constraint_name; # It would have been better to use character_id for the primary key. Here's an example of how to drop a constraint:
+ALTER TABLE more_info ADD COLUMN weight NUMERIC(4,1); # 
+  Add a weight column. Give it a type of NUMERIC(4, 1). That data type is for decimals. NUMERIC(4, 1) has up to four digits and one of them has to be to the right of the decimal.
+ALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_table_name(referenced_column_name); #
+  To know what row is for a character, you need to set a foreign key so you can relate rows from this table to rows from your characters table. 
+  Here's an example that creates a column as a foreign key:
+ALTER TABLE more_info ADD COLUMN character_id INT REFERENCES characters(character_id); 
+  #creates a new column named 'character_id' that references our unique identifier PRIMARY KEY on the 'characters' table from the column 'character_id' as a FOREIGN KEY on 'more_info' table
+ALTER TABLE table_name ADD UNIQUE(column_name); #There's your foreign key at the bottom. These tables have a "one-to-one" relationship. 
+  One row in the characters table will be related to exactly one row in more_info and vice versa. Enforce that by adding the UNIQUE constraint to your foreign key. Here's an example
+ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL; #The column should also be NOT NULL since you don't want to have a row that is for nobody.
+ALTER TABLE more_info ALTER COLUMN character_id SET NOT NULL; 
+ALTER TABLE sounds ADD COLUMN filename VARCHAR(40) NOT NULL UNIQUE; #adding 2 constraints, 'not null' and 'unique'
+ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name);
+ALTER TABLE sounds ADD COLUMN character_id INT NOT NULL REFERENCES characters(character_id);
+  # You want to use character_id as a foreign key again. 
+  This will be a "one-to-many" relationship because one character will have many sounds, but no sound will have more than one character. Here's the example again:
+INSERT INTO sounds(filename, character_id) VALUES('yay.wav', 3), ('woo-hoo.wav', 3); #inputting multiple audios at once
+"Many-to-many" relationships usually use a junction table to link two tables together, forming two "one-to-many" relationships.
+  Your characters and actions table will be linked using a junction table. Create a new table called character_actions. It will describe what actions each character can perform.
+ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);
+ALTER TABLE character_actions ADD FOREIGN KEY(character_id) REFERENCES characters(character_id);
+  #The foreign keys you set before were added when you created the column. You can set an existing column as a foreign key like this:
+ALTER TABLE table_name ADD PRIMARY KEY(column1, column2);  #Every table should have a primary key. 
+  #Your previous tables had a single column as a primary key. This one will be different. You can create a primary key from two columns, known as a composite primary key.
+ALTER TABLE character_actions ADD PRIMARY KEY(character_id, action_id);
+SELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;
+  You can see the character_id there so you just need to find the matching id in the characters table to find out who it's for. Enter a join command to see all the info from both tables
+  Or... You added that as a foreign key, that means you can get all the data from both tables with a JOIN command: 
+SELECT * FROM characters FULL JOIN more_info ON characters.character_id = more_info.character_id;
+SELECT * FROM character_actions FULL JOIN characters ON character_actions.character_id = characters.character_id FULL JOIN actions ON character_actions.action_id = actions.action_id;
+  SELECT columns FROM junction_table
+  FULL JOIN table_1 ON junction_table.foreign_key_column = table_1.primary_key_column
+  FULL JOIN table_2 ON junction_table.foreign_key_column = table_2.primary_key_column;
+    #This shows the "one-to-many" relationship. You can see that some of the characters have more than one row because they have many sounds.
+    How can you see all the info from the characters, actions, and character_actions tables? Here's an example that joins three tables:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

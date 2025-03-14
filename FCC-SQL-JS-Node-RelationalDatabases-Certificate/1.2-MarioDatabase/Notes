@@ -11,6 +11,14 @@ CREATE DATABASE database_name; #a way to create a new database - The capitalized
   \d table_name #You can view more details about a table by adding the table name after the display command like this: \d table_name
 CREATE TABLE table_name(); #similar to creating a database, Note that the parenthesis are needed for this one. It will create the table in the database you are connected to
 ALTER TABLE table_name ADD COLUMN column_name DATATYPE; #Tables need columns to describe the data in them, yours doesn't have any yet. Here's an example of how to add one
+ALTER TABLE table_name DROP COLUMN column_name; #will drop a column (delete it)
+VARCHAR = A common data type is VARCHAR. It's a short string of characters. You need to give it a maximum length when using it like this: VARCHAR(30).
+ALTER TABLE table_name RENAME COLUMN column_name TO new_name; # Here's how you can rename a column
+INSERT INTO table_name(column_1, column_2) VALUES(value1, value2); # Rows are the actual data in the table. You can add one like this, strings must be in ' single quotes
+SELECT columns FROM table_name;  #You can view the data in a table by querying it with the SELECT statement
+SELECT * from table_name; #view all data from table_name, '*' = all
+DELETE FROM table_name WHERE condition; #Here's an example of how to delete a row
+DELETE FROM second_table WHERE username='Luigi'; #deletes from the 'second_table' the row where username='Luigi', all data on the row where username='Luigi' will be deleted, not just username
 
 
 

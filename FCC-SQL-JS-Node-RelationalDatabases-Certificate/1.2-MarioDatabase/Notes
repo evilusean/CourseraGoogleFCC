@@ -1,6 +1,7 @@
 Start : 14March2025
 
-
+View -> Command Pallet -> Start with 'CoadRoad : Start' 
+'psql --username=freecodecamp --dbname=postgres' #login credentials for tutorial
 
 
 

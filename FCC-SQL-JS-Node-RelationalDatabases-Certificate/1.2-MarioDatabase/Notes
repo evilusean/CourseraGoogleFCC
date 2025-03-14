@@ -34,9 +34,13 @@ SELECT columns FROM table_name ORDER BY column_name; #order columns by
 SELECT * FROM characters ORDER BY character_id; #will order all colums from characters by ascending character_id
 ALTER TABLE table_name ADD PRIMARY KEY(column_name); #  add a primary key. It's a column that uniquely identifies each row in the table. Here's an example of how to set a PRIMARY KEY
   You should set a primary key on every table and there can only be one per table.
-
-
-
+ALTER TABLE table_name DROP CONSTRAINT constraint_name; # It would have been better to use character_id for the primary key. Here's an example of how to drop a constraint:
+ALTER TABLE more_info ADD COLUMN weight NUMERIC(4,1); # 
+  Add a weight column. Give it a type of NUMERIC(4, 1). That data type is for decimals. NUMERIC(4, 1) has up to four digits and one of them has to be to the right of the decimal.
+ALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_table_name(referenced_column_name); #
+  To know what row is for a character, you need to set a foreign key so you can relate rows from this table to rows from your characters table. 
+  Here's an example that creates a column as a foreign key:
+ALTER TABLE more_info ADD COLUMN character_id INT REFERENCES characters(character_id); 
 
 
 

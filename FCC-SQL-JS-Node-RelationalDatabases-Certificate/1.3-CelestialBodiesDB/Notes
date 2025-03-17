@@ -102,7 +102,22 @@ Each table should have at least three rows
       ('Whirlpool', 0.4, 60000, 1000, TRUE, FALSE),
       ('Sombrero', 13.25, 50000, 1000, FALSE, TRUE);
 The galaxy and star tables should each have at least six rows
-
+INSERT INTO galaxy (name, age_in_billions_of_years, diameter_in_light_years, number_of_stars, is_spiral, has_black_hole)
+VALUES 
+    ('Milky Way 2', 13.6, 100000, 4000, TRUE, TRUE),
+    ('Andromeda Galaxy', 10.1, 220000, 1000, TRUE, TRUE),
+    ('Triangulum Galaxy', 10.0, 60000, 400, TRUE, FALSE),
+    ('Centaurus A Galaxy', 13.3, 60000, 100, FALSE, TRUE),
+    ('Whirlpool Galaxy', 0.4, 60000, 1000, TRUE, FALSE),
+    ('Sombrero Galaxy', 13.25, 50000, 100, FALSE, TRUE);
+INSERT INTO star (name, galaxy_id, temperature_in_kelvin, mass_solar_units, is_binary, has_planets, spectral_type)
+VALUES 
+    ('Sun', 1, 5778, 1.00, FALSE, TRUE, 'G2V'),
+    ('Proxima Centauri', 1, 3042, 0.12, TRUE, TRUE, 'M5.5Ve'),
+    ('Betelgeuse', 1, 3500, 11.60, FALSE, FALSE, 'M1-2Ia-Iab'),
+    ('Sirius', 1, 9940, 2.02, TRUE, FALSE, 'A0mA1Va'),
+    ('Alpha Centauri A', 1, 5790, 1.10, TRUE, TRUE, 'G2V'),
+    ('Vega', 1, 9602, 2.10, FALSE, TRUE, 'A0Va');
 The planet table should have at least 12 rows
 
 The moon table should have at least 20 rows

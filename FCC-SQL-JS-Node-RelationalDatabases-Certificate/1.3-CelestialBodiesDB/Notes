@@ -157,7 +157,11 @@ VALUES
     ('Oberon', 7, 1523, 583500, TRUE, TRUE, 'Heavily cratered surface'),
     ('Triton', 8, 2707, 354759, TRUE, TRUE, 'Retrograde orbit with nitrogen geysers');
 Each table should have at least three columns
-
+  INSERT INTO asteroid (name, diameter_in_km, is_potentially_hazardous, orbit_crosses_earth, composition, discovery_year)
+  VALUES 
+      ('Ceres', 939, FALSE, FALSE, 'Rocky with water ice', 1801),
+      ('Vesta', 525, FALSE, FALSE, 'Basaltic surface', 1807),
+      ('Apophis', 370, TRUE, TRUE, 'Silicate rock', 2004);
 The galaxy, star, planet, and moon tables should each have at least five columns
 
 At least two columns per table should not accept NULL values

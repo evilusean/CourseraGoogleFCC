@@ -33,19 +33,21 @@ You should create a database named universe
 Be sure to connect to your database with \c universe. Then, you should add tables named galaxy, star, planet, and moon
   \c universe
 Each table should have a primary key
-
 Each primary key should automatically increment
-
 Each table should have a name column
-
 You should use the INT data type for at least two columns that are not a primary or foreign key
-
 You should use the NUMERIC data type at least once
-
 You should use the TEXT data type at least once
-
 You should use the BOOLEAN data type on at least two columns
-
+  CREATE TABLE galaxy (
+      galaxy_id SERIAL PRIMARY KEY,
+      name VARCHAR(50) UNIQUE NOT NULL,
+      age_in_billions_of_years NUMERIC(5,1),
+      diameter_in_light_years INT NOT NULL,
+      number_of_stars INT,
+      is_spiral BOOLEAN NOT NULL,
+      has_black_hole BOOLEAN
+  );
 Each "star" should have a foreign key that references one of the rows in galaxy
 
 Each "planet" should have a foreign key that references one of the rows in star

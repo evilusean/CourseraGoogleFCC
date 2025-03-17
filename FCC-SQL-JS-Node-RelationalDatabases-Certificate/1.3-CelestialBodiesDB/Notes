@@ -119,7 +119,20 @@ VALUES
     ('Alpha Centauri A', 1, 5790, 1.10, TRUE, TRUE, 'G2V'),
     ('Vega', 1, 9602, 2.10, FALSE, TRUE, 'A0Va');
 The planet table should have at least 12 rows
-
+INSERT INTO planet (name, star_id, orbital_period_in_days, diameter_in_km, has_atmosphere, is_habitable, description, distance_from_star_in_au)
+VALUES 
+    ('Earth', 1, 365, 12742, TRUE, TRUE, 'Blue planet with diverse ecosystems', 1.00),
+    ('Mars', 1, 687, 6779, TRUE, FALSE, 'Red planet with thin atmosphere', 1.52),
+    ('Venus', 1, 225, 12104, TRUE, FALSE, 'Hot planet with thick atmosphere', 0.72),
+    ('Mercury', 1, 88, 4879, FALSE, FALSE, 'Small rocky planet closest to the Sun', 0.39),
+    ('Jupiter', 1, 4333, 139820, TRUE, FALSE, 'Largest gas giant in our solar system', 5.20),
+    ('Saturn', 1, 10759, 116460, TRUE, FALSE, 'Gas giant with prominent ring system', 9.58),
+    ('Uranus', 1, 30687, 50724, TRUE, FALSE, 'Ice giant with tilted axis', 19.22),
+    ('Neptune', 1, 60190, 49244, TRUE, FALSE, 'Blue ice giant with strong winds', 30.05),
+    ('Proxima b', 2, 11, 12000, TRUE, TRUE, 'Potentially habitable exoplanet', 0.05),
+    ('Kepler-186f', 6, 130, 11000, TRUE, TRUE, 'Earth-sized exoplanet in habitable zone', 0.40),
+    ('HD 209458 b', 6, 3.5, 94000, TRUE, FALSE, 'Hot Jupiter exoplanet', 0.05),
+    ('TRAPPIST-1e', 5, 6, 9200, TRUE, TRUE, 'Rocky exoplanet in habitable zone', 0.03);
 The moon table should have at least 20 rows
 
 Each table should have at least three columns

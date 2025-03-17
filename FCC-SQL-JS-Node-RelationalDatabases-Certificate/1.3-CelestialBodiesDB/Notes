@@ -49,7 +49,16 @@ You should use the BOOLEAN data type on at least two columns
       has_black_hole BOOLEAN
   );
 Each "star" should have a foreign key that references one of the rows in galaxy
-
+  CREATE TABLE star (
+      star_id SERIAL PRIMARY KEY,
+      name VARCHAR(50) UNIQUE NOT NULL,
+      galaxy_id INT REFERENCES galaxy(galaxy_id) NOT NULL,
+      temperature_in_kelvin INT,
+      mass_solar_units NUMERIC(8,2) NOT NULL,
+      is_binary BOOLEAN,
+      has_planets BOOLEAN NOT NULL,
+      spectral_type TEXT
+  );
 Each "planet" should have a foreign key that references one of the rows in star
 
 Each "moon" should have a foreign key that references one of the rows in planet

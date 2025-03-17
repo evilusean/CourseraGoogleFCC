@@ -72,17 +72,16 @@ Each "planet" should have a foreign key that references one of the rows in star
       distance_from_star_in_au NUMERIC(10,2)
   );
 Each "moon" should have a foreign key that references one of the rows in planet
-  CREATE TABLE planet (
-      planet_id SERIAL PRIMARY KEY,
-      name VARCHAR(50) UNIQUE NOT NULL,
-      star_id INT REFERENCES star(star_id) NOT NULL,
-      orbital_period_in_days INT,
-      diameter_in_km INT NOT NULL,
-      has_atmosphere BOOLEAN,
-      is_habitable BOOLEAN NOT NULL,
-      description TEXT,
-      distance_from_star_in_au NUMERIC(10,2)
-  );
+CREATE TABLE moon (
+    moon_id SERIAL PRIMARY KEY,
+    name VARCHAR(50) UNIQUE NOT NULL,
+    planet_id INT REFERENCES planet(planet_id) NOT NULL,
+    diameter_in_km INT,
+    distance_from_planet_in_km INT NOT NULL,
+    is_spherical BOOLEAN,
+    has_water BOOLEAN NOT NULL,
+    surface_description TEXT
+);
 Your database should have at least five tables
 
 Each table should have at least three rows

@@ -14,3 +14,4 @@ Clicking on the "Command Palette" option,
 and running the "CodeRoad: Start" command
 Follow the instructions in CodeRoad to complete the course
 psql --username=freecodecamp --dbname=postgres #login 
+pg_dump -cC --inserts -U freecodecamp universe > universe.sql #instead of finishing it in one multi hour session, how to 'dump eet' and save

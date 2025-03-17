@@ -134,7 +134,28 @@ VALUES
     ('HD 209458 b', 6, 3.5, 94000, TRUE, FALSE, 'Hot Jupiter exoplanet', 0.05),
     ('TRAPPIST-1e', 5, 6, 9200, TRUE, TRUE, 'Rocky exoplanet in habitable zone', 0.03);
 The moon table should have at least 20 rows
-
+INSERT INTO moon (name, planet_id, diameter_in_km, distance_from_planet_in_km, is_spherical, has_water, surface_description)
+VALUES 
+    ('Luna', 1, 3474, 384400, TRUE, TRUE, 'Cratered surface with maria'),
+    ('Phobos', 2, 22, 9376, FALSE, FALSE, 'Irregular potato-shaped moon'),
+    ('Deimos', 2, 12, 23463, FALSE, FALSE, 'Small irregular moon'),
+    ('Io', 5, 3643, 421700, TRUE, FALSE, 'Volcanic active surface'),
+    ('Europa', 5, 3122, 671034, TRUE, TRUE, 'Icy surface with subsurface ocean'),
+    ('Ganymede', 5, 5268, 1070412, TRUE, TRUE, 'Largest moon in solar system'),
+    ('Callisto', 5, 4821, 1882709, TRUE, TRUE, 'Heavily cratered surface'),
+    ('Titan', 6, 5150, 1221870, TRUE, TRUE, 'Thick atmosphere and liquid methane'),
+    ('Enceladus', 6, 504, 238020, TRUE, TRUE, 'Icy moon with water geysers'),
+    ('Mimas', 6, 396, 185539, TRUE, FALSE, 'Death Star-like crater'),
+    ('Tethys', 6, 1062, 294619, TRUE, TRUE, 'Large impact crater'),
+    ('Dione', 6, 1123, 377396, TRUE, TRUE, 'Bright icy moon'),
+    ('Rhea', 6, 1527, 527108, TRUE, TRUE, 'Second largest moon of Saturn'),
+    ('Iapetus', 6, 1469, 3560820, TRUE, FALSE, 'Two-toned coloration'),
+    ('Miranda', 7, 472, 129390, TRUE, FALSE, 'Varied and extreme surface features'),
+    ('Ariel', 7, 1158, 190900, TRUE, TRUE, 'Bright surface with few craters'),
+    ('Umbriel', 7, 1169, 266000, TRUE, FALSE, 'Dark surface with many craters'),
+    ('Titania', 7, 1578, 436300, TRUE, TRUE, 'Largest moon of Uranus'),
+    ('Oberon', 7, 1523, 583500, TRUE, TRUE, 'Heavily cratered surface'),
+    ('Triton', 8, 2707, 354759, TRUE, TRUE, 'Retrograde orbit with nitrogen geysers');
 Each table should have at least three columns
 
 The galaxy, star, planet, and moon tables should each have at least five columns

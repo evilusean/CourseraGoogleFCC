@@ -83,7 +83,15 @@ Each "moon" should have a foreign key that references one of the rows in planet
       surface_description TEXT
   );
 Your database should have at least five tables
-
+  CREATE TABLE asteroid (
+      asteroid_id SERIAL PRIMARY KEY,
+      name VARCHAR(50) UNIQUE NOT NULL,
+      diameter_in_km INT NOT NULL,
+      is_potentially_hazardous BOOLEAN,
+      orbit_crosses_earth BOOLEAN NOT NULL,
+      composition TEXT,
+      discovery_year INT
+  );
 Each table should have at least three rows
 
 The galaxy and star tables should each have at least six rows

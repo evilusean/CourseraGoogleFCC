@@ -93,7 +93,14 @@ Your database should have at least five tables
       discovery_year INT
   );
 Each table should have at least three rows
-
+  INSERT INTO galaxy (name, age_in_billions_of_years, diameter_in_light_years, number_of_stars, is_spiral, has_black_hole)
+  VALUES 
+      ('Milky Way', 13.6, 100000, 400000000000, TRUE, TRUE),
+      ('Andromeda', 10.1, 220000, 1000000000000, TRUE, TRUE),
+      ('Triangulum', 10.0, 60000, 40000000000, TRUE, FALSE),
+      ('Centaurus A', 13.3, 60000, 100000000000, FALSE, TRUE),
+      ('Whirlpool', 0.4, 60000, 100000000000, TRUE, FALSE),
+      ('Sombrero', 13.25, 50000, 100000000000, FALSE, TRUE);
 The galaxy and star tables should each have at least six rows
 
 The planet table should have at least 12 rows

@@ -14,3 +14,5 @@ Going to the "View" menu,
 Clicking on the "Command Palette" option,
 and running the "CodeRoad: Start" command
 Follow the instructions in CodeRoad to complete the course
+
+psql --username=freecodecamp --dbname=postgres #login 

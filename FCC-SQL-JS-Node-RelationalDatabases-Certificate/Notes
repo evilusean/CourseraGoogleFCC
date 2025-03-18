@@ -109,6 +109,175 @@ SELECT * FROM character_actions FULL JOIN characters ON character_actions.charac
     #This shows the "one-to-many" relationship. You can see that some of the characters have more than one row because they have many sounds.
     How can you see all the info from the characters, actions, and character_actions tables? Here's an example that joins three tables:
 
+ : 17March2025 - Building A Celestial Bodies PostgreSQL Database ========================================================================================================================
+https://www.freecodecamp.org/learn/relational-database/build-a-celestial-bodies-database-project/build-a-celestial-bodies-database
+Step 1: Complete the project
+The project runs in a virtual machine, complete the user stories described in there and get all the tests to pass to finish step 1.
+Important: After you pass all the project tests, save a dump of your database into a universe.sql file so you can complete step 
+2. There will be instructions how to do that within the virtual machine.
+Login to Gitpod with your GitHub account if you aren't already
+Once the virtual Linux machine is finished loading, start the CodeRoad extension by:
+Clicking the "hamburger" menu near the top left of the VSCode window,
+Going to the "View" menu,
+Clicking on the "Command Palette" option,
+and running the "CodeRoad: Start" command
+Follow the instructions in CodeRoad to complete the course
+psql --username=freecodecamp --dbname=postgres #login 
+pg_dump -cC --inserts -U freecodecamp universe > universe.sql #instead of finishing it in one multi hour session, how to 'dump eet' and save
+InstructSeans :
+Instructions
+For this project, you need to log in to PostgreSQL with psql to create your database. Do that by entering psql --username=freecodecamp --dbname=postgres in the terminal. 
+  Make all the tests below pass to complete the project. Be sure to get creative, and have fun!
+Don't forget to connect to your database after you create it 😄
+Here's some ideas for other column and table names: description, has_life, is_spherical, age_in_millions_of_years, planet_types, galaxy_types, distance_from_earth.
+Notes:
+If you leave your virtual machine, your database may not be saved. You can make a dump of it by entering pg_dump -cC --inserts -U freecodecamp universe > universe.sql in a bash terminal 
+  (not the psql one). It will save the commands to rebuild your database in universe.sql. The file will be located where the command was entered. 
+  If it's anything inside the project folder, the file will be saved in the VM. You can rebuild the database by entering psql -U postgres < universe.sql in a terminal where the .sql file is.
+If you are saving your progress on freeCodeCamp.org, after getting all the tests to pass, follow the instructions above to save a dump of your database. 
+  Save the universe.sql file in a public repository and submit the URL to it on freeCodeCamp.org.
+Complete the tasks below : 
+You should create a database named universe
+  CREATE DATABASE universe;
+Be sure to connect to your database with \c universe. Then, you should add tables named galaxy, star, planet, and moon
+  \c universe
+Each table should have a primary key
+Each primary key should automatically increment
+Each table should have a name column
+You should use the INT data type for at least two columns that are not a primary or foreign key
+You should use the NUMERIC data type at least once
+You should use the TEXT data type at least once
+You should use the BOOLEAN data type on at least two columns
+  CREATE TABLE galaxy (
+      galaxy_id SERIAL PRIMARY KEY,
+      name VARCHAR(50) UNIQUE NOT NULL,
+      age_in_billions_of_years NUMERIC(5,1),
+      diameter_in_light_years INT NOT NULL,
+      number_of_stars INT,
+      is_spiral BOOLEAN NOT NULL,
+      has_black_hole BOOLEAN
+  );
+Each "star" should have a foreign key that references one of the rows in galaxy
+  CREATE TABLE star (
+      star_id SERIAL PRIMARY KEY,
+      name VARCHAR(50) UNIQUE NOT NULL,
+      galaxy_id INT REFERENCES galaxy(galaxy_id) NOT NULL,
+      temperature_in_kelvin INT,
+      mass_solar_units NUMERIC(8,2) NOT NULL,
+      is_binary BOOLEAN,
+      has_planets BOOLEAN NOT NULL,
+      spectral_type TEXT
+  );
+Each "planet" should have a foreign key that references one of the rows in star
+  CREATE TABLE planet (
+      planet_id SERIAL PRIMARY KEY,
+      name VARCHAR(50) UNIQUE NOT NULL,
+      star_id INT REFERENCES star(star_id) NOT NULL,
+      orbital_period_in_days INT,
+      diameter_in_km INT NOT NULL,
+      has_atmosphere BOOLEAN,
+      is_habitable BOOLEAN NOT NULL,
+      description TEXT,
+      distance_from_star_in_au NUMERIC(10,2)
+  );
+Each "moon" should have a foreign key that references one of the rows in planet
+  CREATE TABLE moon (
+      moon_id SERIAL PRIMARY KEY,
+      name VARCHAR(50) UNIQUE NOT NULL,
+      planet_id INT REFERENCES planet(planet_id) NOT NULL,
+      diameter_in_km INT,
+      distance_from_planet_in_km INT NOT NULL,
+      is_spherical BOOLEAN,
+      has_water BOOLEAN NOT NULL,
+      surface_description TEXT
+  );
+Your database should have at least five tables
+  CREATE TABLE asteroid (
+      asteroid_id SERIAL PRIMARY KEY,
+      name VARCHAR(50) UNIQUE NOT NULL,
+      diameter_in_km INT NOT NULL,
+      is_potentially_hazardous BOOLEAN,
+      orbit_crosses_earth BOOLEAN NOT NULL,
+      composition TEXT,
+      discovery_year INT
+  );
+Each table should have at least three rows
+  INSERT INTO galaxy (name, age_in_billions_of_years, diameter_in_light_years, number_of_stars, is_spiral, has_black_hole)
+  VALUES 
+      ('Milky Way', 13.6, 100000, 4000, TRUE, TRUE),
+      ('Andromeda', 10.1, 220000, 1000, TRUE, TRUE),
+      ('Triangulum', 10.0, 60000, 4000, TRUE, FALSE),
+      ('Centaurus A', 13.3, 60000, 1000, FALSE, TRUE),
+      ('Whirlpool', 0.4, 60000, 1000, TRUE, FALSE),
+      ('Sombrero', 13.25, 50000, 1000, FALSE, TRUE);
+The galaxy and star tables should each have at least six rows
+  INSERT INTO galaxy (name, age_in_billions_of_years, diameter_in_light_years, number_of_stars, is_spiral, has_black_hole)
+  VALUES 
+      ('Milky Way 2', 13.6, 100000, 4000, TRUE, TRUE),
+      ('Andromeda Galaxy', 10.1, 220000, 1000, TRUE, TRUE),
+      ('Triangulum Galaxy', 10.0, 60000, 400, TRUE, FALSE),
+      ('Centaurus A Galaxy', 13.3, 60000, 100, FALSE, TRUE),
+      ('Whirlpool Galaxy', 0.4, 60000, 1000, TRUE, FALSE),
+      ('Sombrero Galaxy', 13.25, 50000, 100, FALSE, TRUE);
+  INSERT INTO star (name, galaxy_id, temperature_in_kelvin, mass_solar_units, is_binary, has_planets, spectral_type)
+  VALUES 
+      ('Sun', 1, 5778, 1.00, FALSE, TRUE, 'G2V'),
+      ('Proxima Centauri', 1, 3042, 0.12, TRUE, TRUE, 'M5.5Ve'),
+      ('Betelgeuse', 1, 3500, 11.60, FALSE, FALSE, 'M1-2Ia-Iab'),
+      ('Sirius', 1, 9940, 2.02, TRUE, FALSE, 'A0mA1Va'),
+      ('Alpha Centauri A', 1, 5790, 1.10, TRUE, TRUE, 'G2V'),
+      ('Vega', 1, 9602, 2.10, FALSE, TRUE, 'A0Va');
+The planet table should have at least 12 rows
+  INSERT INTO planet (name, star_id, orbital_period_in_days, diameter_in_km, has_atmosphere, is_habitable, description, distance_from_star_in_au)
+  VALUES 
+      ('Earth', 1, 365, 12742, TRUE, TRUE, 'Blue planet with diverse ecosystems', 1.00),
+      ('Mars', 1, 687, 6779, TRUE, FALSE, 'Red planet with thin atmosphere', 1.52),
+      ('Venus', 1, 225, 12104, TRUE, FALSE, 'Hot planet with thick atmosphere', 0.72),
+      ('Mercury', 1, 88, 4879, FALSE, FALSE, 'Small rocky planet closest to the Sun', 0.39),
+      ('Jupiter', 1, 4333, 139820, TRUE, FALSE, 'Largest gas giant in our solar system', 5.20),
+      ('Saturn', 1, 10759, 116460, TRUE, FALSE, 'Gas giant with prominent ring system', 9.58),
+      ('Uranus', 1, 30687, 50724, TRUE, FALSE, 'Ice giant with tilted axis', 19.22),
+      ('Neptune', 1, 60190, 49244, TRUE, FALSE, 'Blue ice giant with strong winds', 30.05),
+      ('Proxima b', 2, 11, 12000, TRUE, TRUE, 'Potentially habitable exoplanet', 0.05),
+      ('Kepler-186f', 6, 130, 11000, TRUE, TRUE, 'Earth-sized exoplanet in habitable zone', 0.40),
+      ('HD 209458 b', 6, 3.5, 94000, TRUE, FALSE, 'Hot Jupiter exoplanet', 0.05),
+      ('TRAPPIST-1e', 5, 6, 9200, TRUE, TRUE, 'Rocky exoplanet in habitable zone', 0.03);
+The moon table should have at least 20 rows
+  INSERT INTO moon (name, planet_id, diameter_in_km, distance_from_planet_in_km, is_spherical, has_water, surface_description)
+  VALUES 
+      ('Luna', 1, 3474, 384400, TRUE, TRUE, 'Cratered surface with maria'),
+      ('Phobos', 2, 22, 9376, FALSE, FALSE, 'Irregular potato-shaped moon'),
+      ('Deimos', 2, 12, 23463, FALSE, FALSE, 'Small irregular moon'),
+      ('Io', 5, 3643, 421700, TRUE, FALSE, 'Volcanic active surface'),
+      ('Europa', 5, 3122, 671034, TRUE, TRUE, 'Icy surface with subsurface ocean'),
+      ('Ganymede', 5, 5268, 1070412, TRUE, TRUE, 'Largest moon in solar system'),
+      ('Callisto', 5, 4821, 1882709, TRUE, TRUE, 'Heavily cratered surface'),
+      ('Titan', 6, 5150, 1221870, TRUE, TRUE, 'Thick atmosphere and liquid methane'),
+      ('Enceladus', 6, 504, 238020, TRUE, TRUE, 'Icy moon with water geysers'),
+      ('Mimas', 6, 396, 185539, TRUE, FALSE, 'Death Star-like crater'),
+      ('Tethys', 6, 1062, 294619, TRUE, TRUE, 'Large impact crater'),
+      ('Dione', 6, 1123, 377396, TRUE, TRUE, 'Bright icy moon'),
+      ('Rhea', 6, 1527, 527108, TRUE, TRUE, 'Second largest moon of Saturn'),
+      ('Iapetus', 6, 1469, 3560820, TRUE, FALSE, 'Two-toned coloration'),
+      ('Miranda', 7, 472, 129390, TRUE, FALSE, 'Varied and extreme surface features'),
+      ('Ariel', 7, 1158, 190900, TRUE, TRUE, 'Bright surface with few craters'),
+      ('Umbriel', 7, 1169, 266000, TRUE, FALSE, 'Dark surface with many craters'),
+      ('Titania', 7, 1578, 436300, TRUE, TRUE, 'Largest moon of Uranus'),
+      ('Oberon', 7, 1523, 583500, TRUE, TRUE, 'Heavily cratered surface'),
+      ('Triton', 8, 2707, 354759, TRUE, TRUE, 'Retrograde orbit with nitrogen geysers');
+Each table should have at least three columns
+  INSERT INTO asteroid (name, diameter_in_km, is_potentially_hazardous, orbit_crosses_earth, composition, discovery_year)
+  VALUES 
+      ('Ceres', 939, FALSE, FALSE, 'Rocky with water ice', 1801),
+      ('Vesta', 525, FALSE, FALSE, 'Basaltic surface', 1807),
+      ('Apophis', 370, TRUE, TRUE, 'Silicate rock', 2004);
+The galaxy, star, planet, and moon tables should each have at least five columns
+At least two columns per table should not accept NULL values
+At least one column from each table should be required to be UNIQUE
+All columns named name should be of type VARCHAR
+Each primary key column should follow the naming convention table_name_id. For example, the moon table should have a primary key column named moon_id
+Each foreign key column should have the same name as the column it is referencing
+'\q' to quit PostgreSQL terminal then type 'pg_dump -cC --inserts -U freecodecamp universe > universe.sql' to save the commands for tutorial
 
 
 

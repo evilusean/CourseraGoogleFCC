@@ -1,4 +1,4 @@
-Start : 19March2025 
+eStart : 19March2025 
 
 'sh questionnaire.sh' # you need a prefix with 'sh' similar to './' to run a shell script 'sh' stands for shell
 'bash questionnaire.sh' # to run it in 'bash' born again shell
@@ -15,8 +15,8 @@ Start : 19March2025
 'read VARIABLE_NAME' #you want to be able to accept input from a user. You can do that with 'read' like this: 
 'echo Hello $NAME.' #to print the name, notice how theres no quote marks or escape characters, I guess you can do it raw in bash
 'man echo' #use 'manual' pages to get info about the command 'echo' since 'echo --help' doesn't work
-'echo -e \n~~ Questionnaire ~~\n' # '-e' flag enables escape characters like '\n' escape character for new line
-
+'echo -e "\n~~ Questionnaire ~~\n"' # '-e' flag enables escape characters like '\n' escape character for new line
+'touch countdown.sh' #create a new file with touch
 
 
 

@@ -79,9 +79,20 @@ Else If Statements Syntax :
   then
     STATEMENTS
   fi
-
-
-
+ARR=("a" "b" "c") #syntax for creating an array
+echo ${ARR[1]} #how to access that array and print value [1], index is 0 based, so that would be "b", notice it's '{' curly braces not '(' parenthesis
+echo ${ARR[*]} #to print every item in the array, 'echo ${ARR[@]}' also works
+Function Syntax : 
+  FUNCTION_NAME() {
+    STATEMENTS
+  }
+Until Loop Syntax (until loop is very similar to the while loop you used. It will execute the loop until a condition is met.) :
+  until [[ CONDITION ]]
+  do
+    STATEMENTS
+  done
+'[[ hello =~ el ]]; echo $?' # '=~' equals tilda returns true if there is a partial match, allows pattern matching - this will return '0' for 'true' 
+'[[ "hello world" =~ ^h ]]; echo $?' #regex, check if "hello world" starts with h
 
 
 

@@ -17,9 +17,25 @@ eStart : 19March2025
 'man echo' #use 'manual' pages to get info about the command 'echo' since 'echo --help' doesn't work
 'echo -e "\n~~ Questionnaire ~~\n"' # '-e' flag enables escape characters like '\n' escape character for new line
 'touch countdown.sh' #create a new file with touch
-
-
-
+'echo $*' #will print whatever the arguments are when running the script for example './countdown.sh arg1 arg2 arg3' will print 'arg1 arg2 arg3'
+'echo $1' #will print out the first argument given(there is no variable named '1')
+'help' #type JUST 'help' in the bash shell and it will show you ALL available commands
+'if' statements syntax (notice the fi at the end? fwhy?) :
+  if [[ CONDITION ]]
+  then
+    STATEMENTS
+  else
+    STATEMENTS
+  fi
+Your program is expecting an integer to count down from as its argument. You can compare integers inside the brackets ([[ ... ]]) of your if with 
+-eq (equal), -ne (not equal), -lt (less than), -le (less than or equal), -gt (greater than), -ge (greater than or equal).
+Change your if condition to check if your first argument is less than 5.
+  if [[ $1 -lt 5 ]]
+  then
+    echo true
+  else
+    echo false
+  fi
 
 
 

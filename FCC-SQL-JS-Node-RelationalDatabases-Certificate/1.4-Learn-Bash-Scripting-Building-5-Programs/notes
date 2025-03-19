@@ -1,4 +1,4 @@
-eStart : 19March2025 
+Start : 19March2025 
 
 'sh questionnaire.sh' # you need a prefix with 'sh' similar to './' to run a shell script 'sh' stands for shell
 'bash questionnaire.sh' # to run it in 'bash' born again shell

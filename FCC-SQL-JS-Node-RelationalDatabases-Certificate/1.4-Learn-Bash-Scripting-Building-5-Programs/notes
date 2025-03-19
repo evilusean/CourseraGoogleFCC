@@ -64,9 +64,21 @@ While loop syntax :
     (( I-- ))
     sleep 1
   done
-
-
-
+'printenv' #print environment
+'echo $LANG' #prints environment language variable
+'echo $RANDOM' #prints a random number - The RANDOM variable will generate a random number between 0 and 32767 - 
+  You can use the modulus operator to make it in the range you want. In your script, change the NUMBER variable to '$RANDOM%75'
+echo $(( J * 5 + 25 )) #how to run a mathematical equation on the variable J, and print out the answer
+'declare' #new keyword to declare a variable 'declare -p J' will declare the variable J
+'echo $(( RANDOM % 75 + 1 ))' #will run random command and give a result from 1-75
+Else If Statements Syntax :
+  if (( CONDITION ))
+  then
+    STATEMENTS
+  elif [[ CONDITION ]]
+  then
+    STATEMENTS
+  fi
 
 
 

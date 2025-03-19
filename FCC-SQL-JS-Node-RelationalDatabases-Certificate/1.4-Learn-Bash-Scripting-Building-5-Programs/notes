@@ -5,7 +5,10 @@ Start : 19March2025
 'which bash' # '/usr/bin/bash' where bash lives, 'which' shows where a program is 
 '#!<path_to_interpreter>' # shebang shebang oh baby she move she move I go crazy, she rook like a butterfly but sting like a bee -
 '#!/bin/bash' #tell the computer to run from this path -  tell your computer which interpreter to use - add it to the top of your script
-
+'./questionnaire.sh' #this is what I've been using for years to run my shell scripts
+'ls -l <file name>' #will list all privileges for the file 
+-rw-r--r--. All but the first character (-) describe permissions different users have with the file. r means read, w means write, x means execute
+'chmod +x questionnaire.sh' # in the terminal to give everyone executable permissions.
 
 
 

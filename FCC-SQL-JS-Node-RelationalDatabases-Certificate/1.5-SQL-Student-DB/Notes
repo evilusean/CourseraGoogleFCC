@@ -26,9 +26,13 @@ INSERT INTO students(first_name, last_name, major_id, gpa) VALUES('Rhea', 'Kelle
   do
     <STATEMENTS>
   done
-
-
-
+'declare -p IFS' #the MAJOR variable is only being set to the first word. There's a default IFS variable in bash. IFS stands for "Internal Field Separator".
+  #This variable is used to determine word boundaries. It defaults to spaces, tabs, and new lines. This is why the MAJOR variable was set to only the first word on each line from the data. 
+'IFS=","' #Between the while and read commands, set the IFS to a comma like this: 
+  cat courses.csv | while IFS="," read MAJOR COURSE
+  do
+    echo $MAJOR
+  done
 
 
 

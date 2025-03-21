@@ -10,8 +10,13 @@ CREATE TABLE <table_name>(); #don't forget the ';' or '()' for the create table 
 ALTER TABLE <table_name> ADD COLUMN <column_name> <TYPE> <CONSTRAINTS>; #to add a column to a table, I just did this 2 days ago and already forgot
 ALTER TABLE <table_name> ADD FOREIGN KEY(<column_name>) REFERENCES <referenced_table_name>(<referenced_column_name>); #set a foreign key
 ALTER TABLE students ADD FOREIGN KEY(major_id) REFERENCES majors(major_id); # will set the foreign key in the 'students' table that will reference the 'majors' table with column 'majors_id'
-
-
+ALTER TABLE majors_courses ADD FOREIGN KEY(course_id) REFERENCES courses(course_id); #will use the conjunction table add the foreign key from 'courses' table primary key 'course_id'
+  before adding a foreign key to another table, it MUST exist as a primary or unique key in another table - you can combine 2 foreign keys to create a unique key -
+  There's one thing missing. This table doesn't have a primary key. The data from courses.csv will go in this table. A single major will be in it multiple times, and same with a course. 
+  So neither of them can be a primary key. But there will never be a row with the same two values as another row. So the two columns together, are unique. 
+  You can create a composite primary key that uses more than one column as a unique pair like this: ALTER TABLE <table_name> ADD PRIMARY KEY(<column_name>, <column_name>); 
+  Add a composite primary key to the table using the two columns.
+ALTER TABLE majors_courses ADD PRIMARY KEY(major_id, course_id); #will create a unique key by combing 2 foreign keys in a conjunction table
 
 
 

@@ -40,7 +40,10 @@ It helps to plan out what you want to happen. For each loop, you will want to ad
 You used the psql command to log in and interact with the database. You can use it to just run a single command and exit. Above your loop, add a PSQL variable that looks like this: 
 'PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"' #This will allow you to query your database from your script. 
   The important parts are the username, dbname, and the -c flag that is for running a single command and exiting. The rest of the flags are for formatting.
-
+'MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")' #read below
+  Now, you can query your database using the PSQL variable like this: $($PSQL "<query_here>"). The code in the parenthesis will run in a subshell, which is a separate bash process.
+  Below the get major_id comment in your loop, create a MAJOR_ID variable. Set it equal to the result of a query that gets the major_id of the current MAJOR in the loop.
+  Make sure to put your MAJOR variable in single quotes.
 
 
 

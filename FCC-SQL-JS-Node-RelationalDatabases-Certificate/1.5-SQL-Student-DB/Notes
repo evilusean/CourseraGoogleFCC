@@ -44,10 +44,16 @@ You used the psql command to log in and interact with the database. You can use 
   Now, you can query your database using the PSQL variable like this: $($PSQL "<query_here>"). The code in the parenthesis will run in a subshell, which is a separate bash process.
   Below the get major_id comment in your loop, create a MAJOR_ID variable. Set it equal to the result of a query that gets the major_id of the current MAJOR in the loop.
   Make sure to put your MAJOR variable in single quotes.
-
-
-
-
+Below will run if there is major found, and will insert it '-z' flag checks if the string is empty, if it is, it creates a new value in the 'majors' table :
+  if [[ -z $MAJOR_ID ]]
+  then
+    # insert major
+    INSERT_MAJOR_RESULT=$($PSQL "INSERT INTO majors(major) VALUES('$MAJOR')")
+  fi
+'TRUNCATE majors;' #You can use TRUNCATE to delete all data from a table. In the psql prompt, delete all the data in the majors table - in the rare chance you make a mistake
+  It says you "cannot truncate a table referenced in a foreign key constraint." The students and majors_courses tables use the major_id from majors as a foreign key. 
+  So if you want to delete the data from majors, you need to delete the data from those two tables at the same time. Use TRUNCATE to delete the data from those three tables. 
+'TRUNCATE majors, students, majors_courses;' #if you want to DELETE data in one table and it is used as a foreign key in another, you have to delete ALL at ONCE
 
 
 

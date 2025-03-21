@@ -19,8 +19,13 @@ ALTER TABLE majors_courses ADD FOREIGN KEY(course_id) REFERENCES courses(course_
 ALTER TABLE majors_courses ADD PRIMARY KEY(major_id, course_id); #will create a unique key by combing 2 foreign keys in a conjunction table
 INSERT INTO majors(major) VALUES('Database Administration'); #how to insert into a created table 'majors' in the column 'major' add the VALUES, this was just one column
 INSERT INTO students(first_name, last_name, major_id, gpa) VALUES('Rhea', 'Kellems', 1, 2.5); #how to insert multiple columns at a time 
-
-
+'insert_data.sh' #creating a script to insert data instead of typing it out like above for each student
+'cat courses.csv >> insert_data.sh' #will take all the data from 'courses.csv' and add it to 'insert_data.sh'
+#Instead of printing the content, you can pipe that output into a while loop so you can go through the rows one at a time. It looks like this:
+  cat courses.csv | while read MAJOR COURSE
+  do
+    <STATEMENTS>
+  done
 
 
 

@@ -54,9 +54,11 @@ Below will run if there is major found, and will insert it '-z' flag checks if t
   It says you "cannot truncate a table referenced in a foreign key constraint." The students and majors_courses tables use the major_id from majors as a foreign key. 
   So if you want to delete the data from majors, you need to delete the data from those two tables at the same time. Use TRUNCATE to delete the data from those three tables. 
 'TRUNCATE majors, students, majors_courses;' #if you want to DELETE data in one table and it is used as a foreign key in another, you have to delete ALL at ONCE
-
-
-
+'if [[ $MAJOR != major ]]' #added to the bash shell script to avoid the initial column, this seems pretty tedious to simply avoid the title rows, but it is bash
+'MAJOR_ID=$($PSQL "<query_here>")' # Here's an example of how to query the database
+MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'") # set the MAJOR_ID variable to a query that gets the new major_id from the database.
+'echo $($PSQL "TRUNCATE students, majors, courses, majors_courses")' #instead of manually TRUNCATING(deleteing) each time I want to test the script, add this to the top
+INSERT_STUDENT_RESULT=$($PSQL "INSERT INTO students(first_name, last_name, major_id, gpa) VALUES('$FIRST', '$LAST', $MAJOR_ID, $GPA)") #will go through students.csv and insert all values
 
 
 

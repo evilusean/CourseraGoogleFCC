@@ -59,7 +59,7 @@ Below will run if there is major found, and will insert it '-z' flag checks if t
 MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'") # set the MAJOR_ID variable to a query that gets the new major_id from the database.
 'echo $($PSQL "TRUNCATE students, majors, courses, majors_courses")' #instead of manually TRUNCATING(deleteing) each time I want to test the script, add this to the top
 INSERT_STUDENT_RESULT=$($PSQL "INSERT INTO students(first_name, last_name, major_id, gpa) VALUES('$FIRST', '$LAST', $MAJOR_ID, $GPA)") #will go through students.csv and insert all values
-
+'pg_dump --clean --create --inserts --username=freecodecamp students > students.sql' #get the sql file 
 
 
 

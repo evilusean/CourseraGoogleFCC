@@ -1,6 +1,10 @@
 Start : 21March2025
 
-
+Once the virtual Linux machine is finished loading, start the CodeRoad extension by:
+Clicking the "hamburger" menu near the top left of the VSCode window,
+Going to the "View" menu,
+Clicking on the "Command Palette" option,
+and running the "CodeRoad: Start" command
 
 
 

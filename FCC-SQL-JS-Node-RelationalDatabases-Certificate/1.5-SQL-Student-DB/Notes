@@ -17,7 +17,8 @@ ALTER TABLE majors_courses ADD FOREIGN KEY(course_id) REFERENCES courses(course_
   You can create a composite primary key that uses more than one column as a unique pair like this: ALTER TABLE <table_name> ADD PRIMARY KEY(<column_name>, <column_name>); 
   Add a composite primary key to the table using the two columns.
 ALTER TABLE majors_courses ADD PRIMARY KEY(major_id, course_id); #will create a unique key by combing 2 foreign keys in a conjunction table
-
+INSERT INTO majors(major) VALUES('Database Administration'); #how to insert into a created table 'majors' in the column 'major' add the VALUES, this was just one column
+INSERT INTO students(first_name, last_name, major_id, gpa) VALUES('Rhea', 'Kellems', 1, 2.5); #how to insert multiple columns at a time 
 
 
 

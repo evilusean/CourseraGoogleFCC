@@ -1,6 +1,6 @@
 Start : 22March2025
 
-
+'psql --username=freecodecamp --dbname=postgres' #login credentials
 
 
 

@@ -11,6 +11,14 @@ Start : 22March2025
   You can return only rows you want by adding WHERE <condition> to your query. A condition can consist of a column, an operator, and a value. 
 SQL has the operators '<' less than, '>' greater than, '>='greater than equal to, '=' equal to, '!=' not equal
 'SELECT * FROM students WHERE last_name < 'M' AND gpa = 3.9;' #you can use the 'AND' keyword to add 2 'WHERE' constraints
+'SELECT * FROM students WHERE last_name < 'M' AND gpa = 3.9 OR gpa < 2.3;' #you can also use the 'OR' keyword
+'SELECT * FROM courses WHERE course LIKE '_lgorithms';' #you can use '_' for pattern matching regex, it will only match one character
+'SELECT * FROM courses WHERE course LIKE '%lgorithms';' #using '%' will match ALL patterns(like a phrase, or a letter, whatever)
+'SELECT * FROM courses WHERE course LIKE 'Web%';' #will match anything with 'Web' and anything following it
+'SELECT * FROM courses WHERE course LIKE '% %';' #will find any pattern with a space in the name
+'SELECT * FROM courses WHERE course NOT LIKE '% %';' #new keyword 'NOT LIKE' where it will find everything that DOESN'T match the pattern, this finds all without a space
+'SELECT * FROM courses WHERE course ILIKE '<pattern>';' #another new keyword 'ILIKE' will ignore capitalization
+'SELECT * FROM courses WHERE course NOT ILIKE '%A%';' # combining 'NOT' and 'ILIKE' will find any pattern without an A regardless of capitalize
 
 
 

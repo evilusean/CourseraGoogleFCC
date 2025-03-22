@@ -10,7 +10,7 @@ Start : 22March2025
 'SELECT first_name, last_name, gpa FROM students WHERE gpa < 2.5;' #Use one of these to view the same columns as before but only rows WHERE gpa < 2.5
   You can return only rows you want by adding WHERE <condition> to your query. A condition can consist of a column, an operator, and a value. 
 SQL has the operators '<' less than, '>' greater than, '>='greater than equal to, '=' equal to, '!=' not equal
-
+'SELECT * FROM students WHERE last_name < 'M' AND gpa = 3.9;' #you can use the 'AND' keyword to add 2 'WHERE' constraints
 
 
 

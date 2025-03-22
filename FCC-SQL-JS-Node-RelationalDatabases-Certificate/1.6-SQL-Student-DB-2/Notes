@@ -2,7 +2,14 @@ Start : 22March2025
 
 'psql --username=freecodecamp --dbname=postgres' #login credentials
 'psql -U postgres < students.sql' #split the terminal, and import the old DB from the last lesson, created from the dump command
-
+'student_info.sh' #create a new bash script 
+'echo -e "\n~~ My Computer Science Students ~~\n"' #use '-e' flag to add escape characters
+'PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"' #how to query in a bashscript to the postgreSQL DB
+'SELECT first_name FROM students;' #to only query one column instead of '*' all 
+'SELECT first_name, last_name, gpa FROM students;' #select multiple columns 
+'SELECT first_name, last_name, gpa FROM students WHERE gpa < 2.5;' #Use one of these to view the same columns as before but only rows WHERE gpa < 2.5
+  You can return only rows you want by adding WHERE <condition> to your query. A condition can consist of a column, an operator, and a value. 
+SQL has the operators '<' less than, '>' greater than, '>='greater than equal to, '=' equal to, '!=' not equal
 
 
 

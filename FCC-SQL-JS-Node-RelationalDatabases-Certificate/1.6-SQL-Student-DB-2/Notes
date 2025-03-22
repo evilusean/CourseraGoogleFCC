@@ -19,7 +19,9 @@ SQL has the operators '<' less than, '>' greater than, '>='greater than equal to
 'SELECT * FROM courses WHERE course NOT LIKE '% %';' #new keyword 'NOT LIKE' where it will find everything that DOESN'T match the pattern, this finds all without a space
 'SELECT * FROM courses WHERE course ILIKE '<pattern>';' #another new keyword 'ILIKE' will ignore capitalization
 'SELECT * FROM courses WHERE course NOT ILIKE '%A%';' # combining 'NOT' and 'ILIKE' will find any pattern without an A regardless of capitalize
-
+'SELECT * FROM courses WHERE course NOT ILIKE '<pattern>' AND course LIKE <pattern> ;' #you can actually combine 2 matching patterns for 'NOT LIKE' and 'LIKE' with 'AND' keyword
+'SELECT * FROM students WHERE gpa IS NULL;' #searching for 'IS NULL' 
+'SELECT * FROM students WHERE gpa IS NOT NULL;' # searching for 'IS NOT NULL' (all caps)
 
 
 

@@ -22,8 +22,15 @@ SQL has the operators '<' less than, '>' greater than, '>='greater than equal to
 'SELECT * FROM courses WHERE course NOT ILIKE '<pattern>' AND course LIKE <pattern> ;' #you can actually combine 2 matching patterns for 'NOT LIKE' and 'LIKE' with 'AND' keyword
 'SELECT * FROM students WHERE gpa IS NULL;' #searching for 'IS NULL' 
 'SELECT * FROM students WHERE gpa IS NOT NULL;' # searching for 'IS NOT NULL' (all caps)
-
-
+'SELECT * FROM students ORDER BY gpa;' #'ORDER BY' keyword, will order the results by GPA Ascending(smallest at top)
+'SELECT * FROM students ORDER BY gpa DESC, first_name;' #will order by gpa 'DESC' descending, any matching columns with same gpa will then be ordered by name 
+'SELECT * FROM students ORDER BY gpa DESC, first_name LIMIT 10;' # 'LIMIT' keyword, will only give you 10 results
+'SELECT * FROM students WHERE gpa IS NOT NULL ORDER BY gpa DESC, first_name LIMIT 10;' #finds all students with a gpa that is 'NOT NULL' and ordered by 'DESC'ending, then first name with 'LIMIT'
+'SELECT MIN(gpa) FROM students;' # 'MIN' keyword, will find the smallest gpa that isn't NULL
+'SELECT MAX(gpa) FROM students;' # 'MAX' keyword, will find the max gpa
+'SELECT SUM(major_id) FROM students;' #sum adds all 'major_id's together from the 'students' tables
+'SELECT AVG(major_id) FROM students;' # 'AVG' average keyword 
+'SELECT CEIL(AVG(major_id)) FROM students;' #round decimals up or down to the nearest whole number with CEIL and FLOOR Use CEIL to round the average major_id up to the nearest whole number.
 
 
 

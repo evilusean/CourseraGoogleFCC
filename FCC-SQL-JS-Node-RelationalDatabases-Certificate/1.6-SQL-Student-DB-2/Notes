@@ -31,15 +31,33 @@ SQL has the operators '<' less than, '>' greater than, '>='greater than equal to
 'SELECT SUM(major_id) FROM students;' #sum adds all 'major_id's together from the 'students' tables
 'SELECT AVG(major_id) FROM students;' # 'AVG' average keyword 
 'SELECT CEIL(AVG(major_id)) FROM students;' #round decimals up or down to the nearest whole number with CEIL and FLOOR Use CEIL to round the average major_id up to the nearest whole number.
-
-
-
-
-
-
-
-
-
+'SELECT COUNT(*) FROM majors;' #Another function is COUNT. You can use it like this: COUNT(<column>). It will tell you how many entries are in a table for the column.
+'SELECT <column> FROM <table> GROUP BY <column>' # 'GROUP BY' keyword - output same as DISTINCT, but with GROUP BY you can add any of the aggregate functions (MIN, MAX, COUNT, etc) to it
+'SELECT major_id FROM students GROUP BY major_id;' # Use this method to view the unique major_id values in the students table again.
+'SELECT major_id, MIN(gpa) FROM students GROUP BY major_id;' #finds the lowest gpa for each major_id
+'SELECT <column> FROM <table> GROUP BY <column> HAVING <condition>' # 'HAVING' keyword -The condition must be an aggregate function with a test. An example to might be to use HAVING COUNT(*) > 0
+'SELECT major_id, MIN(gpa), MAX(gpa) FROM students GROUP BY major_id HAVING MAX(gpa) = 4.0;' #. Use HAVING to only show rows from the last query that have a maximum GPA of 4.0.
+'SELECT * FROM students FULL JOIN majors ON students.major_id = majors.major_id;' # 'FULL JOIN' will combine the majors table with the students table and join on the the 'majors_id' column
+  The FULL JOIN you used will include all rows from both tables, whether or not they have a row using that foreign key in the other.
+'SELECT * FROM students LEFT JOIN majors ON students.major_id = majors.major_id;' #'LEFT JOIN' will join on the 'major_id' for each table
+  n the LEFT JOIN you used, the students table was the left table since it was on the left side of the JOIN. majors was the right table.
+  A LEFT JOIN gets all rows from the left table, but only rows from the right table that are linked to from the left one. 
+  Looking at the data, you can see that every student was returned, but the majors without any students were not
+'SELECT * FROM students RIGHT JOIN majors ON students.major_id = majors.major_id;' #'RIGHT JOIN' 
+  The right join showed all the rows from the right table (majors), but only rows from the left table (students) if they have a major. 
+'SELECT * FROM students INNER JOIN majors ON students.major_id = majors.major_id;' #'INNER JOIN' The INNER JOIN only returned students if they have a major and majors that have a student. 
+  In other words, it only returned rows if they have a value in the foreign key column (major_id) of the opposite table.
+'SELECT * FROM majors INNER JOIN students ON majors.major_id = students.major_id;' #show only students that are enrolled in a major, and only majors that have a student enrolled in it.
+'SELECT * FROM majors RIGHT JOIN students ON majors.major_id = students.major_id;' #'RIGHT JOIN' will show ALL students, since they are on the right side of the join
+'SELECT * FROM majors FULL JOIN students ON majors.major_id = students.major_id;' #'FULL JOIN' show all rows in both tables whether they have a value in the foreign key column or not
+'SELECT DISTINCT(major) FROM students INNER JOIN majors ON students.major_id = majors.major_id;' #'DISTINCT' Keyword = no duplicates
+'SELECT * FROM students RIGHT JOIN majors ON students.major_id = majors.major_id WHERE student_id IS NULL;' #show majors where they don't have any students
+'SELECT * FROM students LEFT JOIN majors ON students.major_id = majors.major_id WHERE major='Data Science' OR gpa >= 3.8;' #'LEFT JOIN' with multiple 'WHERE' conditions 'OR'
+'SELECT students.major_id FROM students FULL JOIN majors AS m ON students.major_id = m.major_id;' # 'AS' keyword, allows you to alias(rename) things
+'SELECT s.major_id FROM students AS s FULL JOIN majors AS m ON s.major_id = m.major_id;' # 2 'AS' renames with a 'FULL JOIN'
+'SELECT * FROM <table_1> FULL JOIN <table_2> USING(<column>) FULL JOIN <table_3> USING(<column>)' #  You can add a third table to a join like this:
+'SELECT * FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses USING(major_id);' # 2 'FULL JOIN's (3 tables)? What do I bring to the table? I am the table. 3 tables.
+'SELECT COUNT(course), COURSE FROM students INNER JOIN majors USING(major_id) INNER JOIN majors_courses USING(major_id) INNER JOIN courses USING(course_id) GROUP BY course;' # 3 'INNER JOIN'
 
 
 

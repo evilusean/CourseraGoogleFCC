@@ -1,6 +1,7 @@
 Start : 22March2025
 
 'psql --username=freecodecamp --dbname=postgres' #login credentials
+'psql -U postgres < students.sql' #split the terminal, and import the old DB from the last lesson, created from the dump command
 
 
 

@@ -375,7 +375,67 @@ Until Loop Syntax (until loop is very similar to the while loop you used. It wil
 '[[ hello =~ el ]]; echo $?' # '=~' equals tilda returns true if there is a partial match, allows pattern matching - this will return '0' for 'true' 
 '[[ "hello world" =~ ^h ]]; echo $?' #regex, check if "hello world" starts with h
 
-
+Start : 21March2025 - Learn SQL by Building a Student Database: Part 1 ========================================================================================================================
+Once the virtual Linux machine is finished loading, start the CodeRoad extension by:
+Clicking the "hamburger" menu near the top left of the VSCode window,
+Going to the "View" menu,
+Clicking on the "Command Palette" option,
+and running the "CodeRoad: Start" command
+'psql --username=freecodecamp --dbname=postgres' #login info
+CREATE TABLE <table_name>(); #don't forget the ';' or '()' for the create table statement
+ALTER TABLE <table_name> ADD COLUMN <column_name> <TYPE> <CONSTRAINTS>; #to add a column to a table, I just did this 2 days ago and already forgot
+ALTER TABLE <table_name> ADD FOREIGN KEY(<column_name>) REFERENCES <referenced_table_name>(<referenced_column_name>); #set a foreign key
+ALTER TABLE students ADD FOREIGN KEY(major_id) REFERENCES majors(major_id); # will set the foreign key in the 'students' table that will reference the 'majors' table with column 'majors_id'
+ALTER TABLE majors_courses ADD FOREIGN KEY(course_id) REFERENCES courses(course_id); #will use the conjunction table add the foreign key from 'courses' table primary key 'course_id'
+  before adding a foreign key to another table, it MUST exist as a primary or unique key in another table - you can combine 2 foreign keys to create a unique key -
+  There's one thing missing. This table doesn't have a primary key. The data from courses.csv will go in this table. A single major will be in it multiple times, and same with a course. 
+  So neither of them can be a primary key. But there will never be a row with the same two values as another row. So the two columns together, are unique. 
+  You can create a composite primary key that uses more than one column as a unique pair like this: ALTER TABLE <table_name> ADD PRIMARY KEY(<column_name>, <column_name>); 
+  Add a composite primary key to the table using the two columns.
+ALTER TABLE majors_courses ADD PRIMARY KEY(major_id, course_id); #will create a unique key by combing 2 foreign keys in a conjunction table
+INSERT INTO majors(major) VALUES('Database Administration'); #how to insert into a created table 'majors' in the column 'major' add the VALUES, this was just one column
+INSERT INTO students(first_name, last_name, major_id, gpa) VALUES('Rhea', 'Kellems', 1, 2.5); #how to insert multiple columns at a time 
+'insert_data.sh' #creating a script to insert data instead of typing it out like above for each student
+'cat courses.csv >> insert_data.sh' #will take all the data from 'courses.csv' and add it to 'insert_data.sh'
+#Instead of printing the content, you can pipe that output into a while loop so you can go through the rows one at a time. It looks like this:
+  cat courses.csv | while read MAJOR COURSE
+  do
+    <STATEMENTS>
+  done
+'declare -p IFS' #the MAJOR variable is only being set to the first word. There's a default IFS variable in bash. IFS stands for "Internal Field Separator".
+  #This variable is used to determine word boundaries. It defaults to spaces, tabs, and new lines. This is why the MAJOR variable was set to only the first word on each line from the data. 
+'IFS=","' #Between the while and read commands, set the IFS to a comma like this:  Now, it should use the comma in the data to separate words instead of spaces. 
+cat courses.csv | while IFS="," read MAJOR COURSE
+do
+  echo $MAJOR $COURSE
+done
+#also added courses to the same line 
+It helps to plan out what you want to happen. For each loop, you will want to add the major to the database if it isn't in there yet. 
+  Same for the course. Then add a row to the majors_courses table. Add these single line comments in your loop in this order: 
+  get major_id, if not found, insert major, get new major_id, get course_id, if not found, insert course, get new course_id, insert into majors_courses.
+You used the psql command to log in and interact with the database. You can use it to just run a single command and exit. Above your loop, add a PSQL variable that looks like this: 
+'PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"' #This will allow you to query your database from your script. 
+  The important parts are the username, dbname, and the -c flag that is for running a single command and exiting. The rest of the flags are for formatting.
+'MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")' #read below
+  Now, you can query your database using the PSQL variable like this: $($PSQL "<query_here>"). The code in the parenthesis will run in a subshell, which is a separate bash process.
+  Below the get major_id comment in your loop, create a MAJOR_ID variable. Set it equal to the result of a query that gets the major_id of the current MAJOR in the loop.
+  Make sure to put your MAJOR variable in single quotes.
+Below will run if there is major found, and will insert it '-z' flag checks if the string is empty, if it is, it creates a new value in the 'majors' table :
+  if [[ -z $MAJOR_ID ]]
+  then
+    # insert major
+    INSERT_MAJOR_RESULT=$($PSQL "INSERT INTO majors(major) VALUES('$MAJOR')")
+  fi
+'TRUNCATE majors;' #You can use TRUNCATE to delete all data from a table. In the psql prompt, delete all the data in the majors table - in the rare chance you make a mistake
+  It says you "cannot truncate a table referenced in a foreign key constraint." The students and majors_courses tables use the major_id from majors as a foreign key. 
+  So if you want to delete the data from majors, you need to delete the data from those two tables at the same time. Use TRUNCATE to delete the data from those three tables. 
+'TRUNCATE majors, students, majors_courses;' #if you want to DELETE data in one table and it is used as a foreign key in another, you have to delete ALL at ONCE
+'if [[ $MAJOR != major ]]' #added to the bash shell script to avoid the initial column, this seems pretty tedious to simply avoid the title rows, but it is bash
+'MAJOR_ID=$($PSQL "<query_here>")' # Here's an example of how to query the database
+MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'") # set the MAJOR_ID variable to a query that gets the new major_id from the database.
+'echo $($PSQL "TRUNCATE students, majors, courses, majors_courses")' #instead of manually TRUNCATING(deleteing) each time I want to test the script, add this to the top
+INSERT_STUDENT_RESULT=$($PSQL "INSERT INTO students(first_name, last_name, major_id, gpa) VALUES('$FIRST', '$LAST', $MAJOR_ID, $GPA)") #will go through students.csv and insert all values
+'pg_dump --clean --create --inserts --username=freecodecamp students > students.sql' #get the sql file 
 
 
 

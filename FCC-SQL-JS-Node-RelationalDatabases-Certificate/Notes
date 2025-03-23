@@ -437,7 +437,66 @@ MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'") # set the M
 INSERT_STUDENT_RESULT=$($PSQL "INSERT INTO students(first_name, last_name, major_id, gpa) VALUES('$FIRST', '$LAST', $MAJOR_ID, $GPA)") #will go through students.csv and insert all values
 'pg_dump --clean --create --inserts --username=freecodecamp students > students.sql' #get the sql file 
 
-
+Start : 22March2025 - Build a Student Database: Part 2 =======================================================================================================================================
+https://www.freecodecamp.org/learn/relational-database/learn-sql-by-building-a-student-database-part-2/build-a-student-database-part-2
+'psql --username=freecodecamp --dbname=postgres' #login credentials
+'psql -U postgres < students.sql' #split the terminal, and import the old DB from the last lesson, created from the dump command
+'student_info.sh' #create a new bash script 
+'echo -e "\n~~ My Computer Science Students ~~\n"' #use '-e' flag to add escape characters
+'PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"' #how to query in a bashscript to the postgreSQL DB
+'SELECT first_name FROM students;' #to only query one column instead of '*' all 
+'SELECT first_name, last_name, gpa FROM students;' #select multiple columns 
+'SELECT first_name, last_name, gpa FROM students WHERE gpa < 2.5;' #Use one of these to view the same columns as before but only rows WHERE gpa < 2.5
+  You can return only rows you want by adding WHERE <condition> to your query. A condition can consist of a column, an operator, and a value. 
+SQL has the operators '<' less than, '>' greater than, '>='greater than equal to, '=' equal to, '!=' not equal
+'SELECT * FROM students WHERE last_name < 'M' AND gpa = 3.9;' #you can use the 'AND' keyword to add 2 'WHERE' constraints
+'SELECT * FROM students WHERE last_name < 'M' AND gpa = 3.9 OR gpa < 2.3;' #you can also use the 'OR' keyword
+'SELECT * FROM courses WHERE course LIKE '_lgorithms';' #you can use '_' for pattern matching regex, it will only match one character
+'SELECT * FROM courses WHERE course LIKE '%lgorithms';' #using '%' will match ALL patterns(like a phrase, or a letter, whatever)
+'SELECT * FROM courses WHERE course LIKE 'Web%';' #will match anything with 'Web' and anything following it
+'SELECT * FROM courses WHERE course LIKE '% %';' #will find any pattern with a space in the name
+'SELECT * FROM courses WHERE course NOT LIKE '% %';' #new keyword 'NOT LIKE' where it will find everything that DOESN'T match the pattern, this finds all without a space
+'SELECT * FROM courses WHERE course ILIKE '<pattern>';' #another new keyword 'ILIKE' will ignore capitalization
+'SELECT * FROM courses WHERE course NOT ILIKE '%A%';' # combining 'NOT' and 'ILIKE' will find any pattern without an A regardless of capitalize
+'SELECT * FROM courses WHERE course NOT ILIKE '<pattern>' AND course LIKE <pattern> ;' #you can actually combine 2 matching patterns for 'NOT LIKE' and 'LIKE' with 'AND' keyword
+'SELECT * FROM students WHERE gpa IS NULL;' #searching for 'IS NULL' 
+'SELECT * FROM students WHERE gpa IS NOT NULL;' # searching for 'IS NOT NULL' (all caps)
+'SELECT * FROM students ORDER BY gpa;' #'ORDER BY' keyword, will order the results by GPA Ascending(smallest at top)
+'SELECT * FROM students ORDER BY gpa DESC, first_name;' #will order by gpa 'DESC' descending, any matching columns with same gpa will then be ordered by name 
+'SELECT * FROM students ORDER BY gpa DESC, first_name LIMIT 10;' # 'LIMIT' keyword, will only give you 10 results
+'SELECT * FROM students WHERE gpa IS NOT NULL ORDER BY gpa DESC, first_name LIMIT 10;' #finds all students with a gpa that is 'NOT NULL' and ordered by 'DESC'ending, then first name with 'LIMIT'
+'SELECT MIN(gpa) FROM students;' # 'MIN' keyword, will find the smallest gpa that isn't NULL
+'SELECT MAX(gpa) FROM students;' # 'MAX' keyword, will find the max gpa
+'SELECT SUM(major_id) FROM students;' #sum adds all 'major_id's together from the 'students' tables
+'SELECT AVG(major_id) FROM students;' # 'AVG' average keyword 
+'SELECT CEIL(AVG(major_id)) FROM students;' #round decimals up or down to the nearest whole number with CEIL and FLOOR Use CEIL to round the average major_id up to the nearest whole number.
+'SELECT COUNT(*) FROM majors;' #Another function is COUNT. You can use it like this: COUNT(<column>). It will tell you how many entries are in a table for the column.
+'SELECT <column> FROM <table> GROUP BY <column>' # 'GROUP BY' keyword - output same as DISTINCT, but with GROUP BY you can add any of the aggregate functions (MIN, MAX, COUNT, etc) to it
+'SELECT major_id FROM students GROUP BY major_id;' # Use this method to view the unique major_id values in the students table again.
+'SELECT major_id, MIN(gpa) FROM students GROUP BY major_id;' #finds the lowest gpa for each major_id
+'SELECT <column> FROM <table> GROUP BY <column> HAVING <condition>' # 'HAVING' keyword -The condition must be an aggregate function with a test. An example to might be to use HAVING COUNT(*) > 0
+'SELECT major_id, MIN(gpa), MAX(gpa) FROM students GROUP BY major_id HAVING MAX(gpa) = 4.0;' #. Use HAVING to only show rows from the last query that have a maximum GPA of 4.0.
+'SELECT * FROM students FULL JOIN majors ON students.major_id = majors.major_id;' # 'FULL JOIN' will combine the majors table with the students table and join on the the 'majors_id' column
+  The FULL JOIN you used will include all rows from both tables, whether or not they have a row using that foreign key in the other.
+'SELECT * FROM students LEFT JOIN majors ON students.major_id = majors.major_id;' #'LEFT JOIN' will join on the 'major_id' for each table
+  n the LEFT JOIN you used, the students table was the left table since it was on the left side of the JOIN. majors was the right table.
+  A LEFT JOIN gets all rows from the left table, but only rows from the right table that are linked to from the left one. 
+  Looking at the data, you can see that every student was returned, but the majors without any students were not
+'SELECT * FROM students RIGHT JOIN majors ON students.major_id = majors.major_id;' #'RIGHT JOIN' 
+  The right join showed all the rows from the right table (majors), but only rows from the left table (students) if they have a major. 
+'SELECT * FROM students INNER JOIN majors ON students.major_id = majors.major_id;' #'INNER JOIN' The INNER JOIN only returned students if they have a major and majors that have a student. 
+  In other words, it only returned rows if they have a value in the foreign key column (major_id) of the opposite table.
+'SELECT * FROM majors INNER JOIN students ON majors.major_id = students.major_id;' #show only students that are enrolled in a major, and only majors that have a student enrolled in it.
+'SELECT * FROM majors RIGHT JOIN students ON majors.major_id = students.major_id;' #'RIGHT JOIN' will show ALL students, since they are on the right side of the join
+'SELECT * FROM majors FULL JOIN students ON majors.major_id = students.major_id;' #'FULL JOIN' show all rows in both tables whether they have a value in the foreign key column or not
+'SELECT DISTINCT(major) FROM students INNER JOIN majors ON students.major_id = majors.major_id;' #'DISTINCT' Keyword = no duplicates
+'SELECT * FROM students RIGHT JOIN majors ON students.major_id = majors.major_id WHERE student_id IS NULL;' #show majors where they don't have any students
+'SELECT * FROM students LEFT JOIN majors ON students.major_id = majors.major_id WHERE major='Data Science' OR gpa >= 3.8;' #'LEFT JOIN' with multiple 'WHERE' conditions 'OR'
+'SELECT students.major_id FROM students FULL JOIN majors AS m ON students.major_id = m.major_id;' # 'AS' keyword, allows you to alias(rename) things
+'SELECT s.major_id FROM students AS s FULL JOIN majors AS m ON s.major_id = m.major_id;' # 2 'AS' renames with a 'FULL JOIN'
+'SELECT * FROM <table_1> FULL JOIN <table_2> USING(<column>) FULL JOIN <table_3> USING(<column>)' #  You can add a third table to a join like this:
+'SELECT * FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses USING(major_id);' # 2 'FULL JOIN's (3 tables)? What do I bring to the table? I am the table. 3 tables.
+'SELECT COUNT(course), COURSE FROM students INNER JOIN majors USING(major_id) INNER JOIN majors_courses USING(major_id) INNER JOIN courses USING(course_id) GROUP BY course;' # 3 'INNER JOIN'
 
 
 

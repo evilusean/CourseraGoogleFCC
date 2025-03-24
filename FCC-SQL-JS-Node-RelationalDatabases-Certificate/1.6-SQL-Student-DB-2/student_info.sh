@@ -1,5 +1,6 @@
 #!/bin/bash
 #Info about my computer science students from students database
+#To use the script, use the CSV's from : https://github.com/evilusean/CourseraGoogleFCC/tree/main/FCC-SQL-JS-Node-RelationalDatabases-Certificate/1.5-SQL-Student-DB
 echo -e "\n~~ My Computer Science Students ~~\n"
 PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"
 echo -e "\nFirst name, last name, and GPA of students with a 4.0 GPA:"

@@ -85,6 +85,8 @@ do
 done
 You should correctly complete the queries in the queries.sh file. Fill in each empty echo command to get the output of what is suggested with the command above it. 
   Only use a single line like the first query. The output should match what is in the expected_output.txt file exactly, take note of the number of decimal places in some of the query results
+echo -e "\nTotal number of goals in all games from winning teams:"
+echo "$($PSQL "SELECT SUM(winner_goals) FROM games")"
 echo -e "\nTotal number of goals in all games from both teams combined:"
 echo "$($PSQL "SELECT SUM(winner_goals + opponent_goals) FROM games")"
 echo -e "\nAverage number of goals in all games from the winning teams:"

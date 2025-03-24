@@ -85,3 +85,25 @@ do
 done
 You should correctly complete the queries in the queries.sh file. Fill in each empty echo command to get the output of what is suggested with the command above it. 
   Only use a single line like the first query. The output should match what is in the expected_output.txt file exactly, take note of the number of decimal places in some of the query results
+echo -e "\nTotal number of goals in all games from both teams combined:"
+echo
+echo -e "\nAverage number of goals in all games from the winning teams:"
+echo
+echo -e "\nAverage number of goals in all games from the winning teams rounded to two decimal places:"
+echo
+echo -e "\nAverage number of goals in all games from both teams:"
+echo
+echo -e "\nMost goals scored in a single game by one team:"
+echo
+echo -e "\nNumber of games where the winning team scored more than two goals:"
+echo
+echo -e "\nWinner of the 2018 tournament team name:"
+echo
+echo -e "\nList of teams who played in the 2014 'Eighth-Final' round:"
+echo
+echo -e "\nList of unique winning team names in the whole data set:"
+echo
+echo -e "\nYear and team name of all the champions:"
+echo
+echo -e "\nList of teams that start with 'Co':"
+echo

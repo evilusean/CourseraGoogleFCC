@@ -15,13 +15,18 @@ Your teams table should have a team_id column that is a type of SERIAL and is th
        name VARCHAR(255) UNIQUE NOT NULL
    );
 Your games table should have a game_id column that is a type of SERIAL and is the primary key, a year column of type INT, and a round column of type VARCHAR
-
 Your games table should have winner_id and opponent_id foreign key columns that each reference team_id from the teams table
-
 Your games table should have winner_goals and opponent_goals columns that are type INT
-
 All of your columns should have the NOT NULL constraint
-
+   CREATE TABLE games (
+       game_id SERIAL PRIMARY KEY,
+       year INT NOT NULL,
+       round VARCHAR(255) NOT NULL,
+       winner_id INT NOT NULL REFERENCES teams(team_id),
+       opponent_id INT NOT NULL REFERENCES teams(team_id),
+       winner_goals INT NOT NULL,
+       opponent_goals INT NOT NULL
+   );
 Your two script (.sh) files should have executable permissions. Other tests involving these two files will fail until permissions are correct. 
   When these permissions are enabled, the tests will take significantly longer to run
 

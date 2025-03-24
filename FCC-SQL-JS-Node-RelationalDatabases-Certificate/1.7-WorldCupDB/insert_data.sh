@@ -9,13 +9,6 @@ fi
 
 # Do not change code above this line. Use the PSQL variable above to query your database.
 
-#!/bin/bash
-
-# Do not change code above this line
-# This script should only be run AFTER the database and tables are created
-
-PSQL="psql --username=freecodecamp --dbname=worldcup -t --no-align -c"
-
 # Empty the tables
 echo $($PSQL "TRUNCATE TABLE games, teams")
 

@@ -6,7 +6,7 @@ and running the "CodeRoad: Start" command
 'psql --username=freecodecamp --dbname=postgres' #login credentials
 InstructSeans :
 You should create a database named worldcup
-
+  CREATE DATABASE worldcup;
 You should connect to your worldcup database and then create teams and games tables
 
 Your teams table should have a team_id column that is a type of SERIAL and is the primary key, and a name column that has to be UNIQUE

@@ -18,8 +18,8 @@ If you give a bad command to be output to a file, it will not run or be added to
 '<command_1> | <command_2>' #'|' = pipe command, It will use the output from one command as input for another. This will take the stdout from command_1 and use it as the stdin for command_2
 'echo Sean | read NAME' # will take 'Sean' and add it to the variable of '$NAME', this command will be run as a subprocess, and will not save to the your current terminal variable of '$NAME'
 'cat name.txt' #reads the name.txt file in the terminal
-
-
+'echo Sean | ./script.sh 2> stderr.txt' #will use 'Sean' for an input into './script.sh' and any error will be sent to 'stderr.txt' with '2>'
+'echo Sean | ./script.sh 2> stderr.txt > stdout.txt' #will input 'Sean' into script and redirect both errors and output to different text files, pretty cool
 
 
 

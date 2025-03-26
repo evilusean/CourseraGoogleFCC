@@ -20,6 +20,7 @@ If you give a bad command to be output to a file, it will not run or be added to
 'cat name.txt' #reads the name.txt file in the terminal
 'echo Sean | ./script.sh 2> stderr.txt' #will use 'Sean' for an input into './script.sh' and any error will be sent to 'stderr.txt' with '2>'
 'echo Sean | ./script.sh 2> stderr.txt > stdout.txt' #will input 'Sean' into script and redirect both errors and output to different text files, pretty cool
+'./script.sh < name.txt 2> stderr.txt > stdout.txt' #will use the 'name.txt' as input and send the errors to 'stderr.txt' and the output to 'stdout.txt' - input, output and error in 1 line
 
 
 

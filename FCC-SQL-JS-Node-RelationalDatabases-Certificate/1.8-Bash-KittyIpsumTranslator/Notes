@@ -4,7 +4,7 @@ Clicking the "hamburger" menu near the top left of the VSCode window,
 Going to the "View" menu,
 Clicking on the "Command Palette" option,
 and running the "CodeRoad: Start" command
-'<command> > <filename>' #how to pipe to a file, with '>' will take the output from a command and send it to a file, if no file exists, it will create it
+'<command> > <filename>' #how to add to a file, with '>' will take the output from a command and send it to a file, if no file exists, it will create it
 'echo hello bash > stdout.txt' # will create a new file if none existed, be careful because this will overwrite everything in that file, 'echo' will not be put in the file
 '<command> >> <filename>' # '>>' to APPEND to a file, will add it to the end if a file exists and not overwrite
 '> stdout.txt' #to redirect nothing into the file, which will empty it
@@ -15,6 +15,10 @@ If you give a bad command to be output to a file, it will not run or be added to
 'stdin' = stdout and stderr are for output. 'stdin' (standard in) is the third thing commands can use and is for getting input. The default is the keyboard
 'command> < <filename_for_stdin>' #Just like you can redirect output, you can redirect stdin as well. Here's an example with '<'
 'read NAME < name.txt' #Use the read command to assign the NAME variable to the contents of name.txt by redirecting the stdin. - the '$NAME' variable will be changed to the text in 'name.txt'
+'<command_1> | <command_2>' #'|' = pipe command, It will use the output from one command as input for another. This will take the stdout from command_1 and use it as the stdin for command_2
+'echo Sean | read NAME' # will take 'Sean' and add it to the variable of '$NAME', this command will be run as a subprocess, and will not save to the your current terminal variable of '$NAME'
+'cat name.txt' #reads the name.txt file in the terminal
+
 
 
 

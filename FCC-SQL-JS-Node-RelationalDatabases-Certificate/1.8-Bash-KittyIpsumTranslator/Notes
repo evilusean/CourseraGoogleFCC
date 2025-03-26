@@ -8,7 +8,9 @@ and running the "CodeRoad: Start" command
 'echo hello bash > stdout.txt' # will create a new file if none existed, be careful because this will overwrite everything in that file, 'echo' will not be put in the file
 '<command> >> <filename>' # '>>' to APPEND to a file, will add it to the end if a file exists and not overwrite
 '> stdout.txt' #to redirect nothing into the file, which will empty it
-
+There’s two types of output, 'stdout' (standard out) for when a command is successful, and 'stderr' (standard error) for when it’s not. 
+If you give a bad command to be output to a file, it will not run or be added to the file
+'bad_command 2> stderr.txt' #You can redirect stderr with '2>'. Enter the same bad command but redirect stderr to stderr.txt 'bash: bad_command: command not found'
 
 
 

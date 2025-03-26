@@ -11,8 +11,10 @@ and running the "CodeRoad: Start" command
 There’s two types of output, 'stdout' (standard out) for when a command is successful, and 'stderr' (standard error) for when it’s not. 
 If you give a bad command to be output to a file, it will not run or be added to the file
 'bad_command 2> stderr.txt' #You can redirect stderr with '2>'. Enter the same bad command but redirect stderr to stderr.txt 'bash: bad_command: command not found'
-
-
+'echo hello bash 1> stdout.txt' #Similarily, you can use '1>' to redirect stdout
+'stdin' = stdout and stderr are for output. 'stdin' (standard in) is the third thing commands can use and is for getting input. The default is the keyboard
+'command> < <filename_for_stdin>' #Just like you can redirect output, you can redirect stdin as well. Here's an example with '<'
+'read NAME < name.txt' #Use the read command to assign the NAME variable to the contents of name.txt by redirecting the stdin. - the '$NAME' variable will be changed to the text in 'name.txt'
 
 
 

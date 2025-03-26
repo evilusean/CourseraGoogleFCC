@@ -29,8 +29,10 @@ If you give a bad command to be output to a file, it will not run or be added to
 'grep --color -n 'meow' kitty_ipsum_1.txt' # '-n' flag for 'numbers' will add line numbers for each line with 'meow' and color
 'grep --color -n 'meow[a-z]*' kitty_ipsum_1.txt' # shows all the words that start with 'meow' using a regular expression 'meow[a-z]*' 
 'grep -c 'meow[a-z]*' kitty_ipsum_1.txt' # '-c' flag for count, will show how many times it appears
-
-
+'sed 's/<pattern_to_replace>/<text_to_replace_it_with>/' <filename>' #'sed' = 'stream editor' is used to replace words/patterns in a file
+'sed 's/r/2/' name.tx' #this will replace 'r' with '2' 
+'sed 's/freecodecamp/f233C0d3C@mp/i' name.txt' #'i' flag, notice how it's after the '/i' instead of '-i', this is the 'ignore' flag and will ignore case for matching(like capitalized)
+  '/g' flag is global, and would do the same thing
 
 
 

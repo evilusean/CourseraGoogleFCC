@@ -21,10 +21,14 @@ If you give a bad command to be output to a file, it will not run or be added to
 'echo Sean | ./script.sh 2> stderr.txt' #will use 'Sean' for an input into './script.sh' and any error will be sent to 'stderr.txt' with '2>'
 'echo Sean | ./script.sh 2> stderr.txt > stdout.txt' #will input 'Sean' into script and redirect both errors and output to different text files, pretty cool
 './script.sh < name.txt 2> stderr.txt > stdout.txt' #will use the 'name.txt' as input and send the errors to 'stderr.txt' and the output to 'stdout.txt' - input, output and error in 1 line
-
-
-
-
+'wc' = Word Count, new keyword gives info about the file... like how many words, and bytes, lines 'wc -l' = lines, to display how many lines 'wc -w' for how many words, '-m', '-c' characters
+'cat kitty_ipsum_1.txt | wc' #will pipe the contents of 'kitty_ipsum_1.txt' into 'wc' wordcount to get more info on the file
+'wc < kitty_ipsum_1.txt' #using input instead of output for above command
+'grep 'meow' kitty_ipsum_1.txt' #will show all the lines with 'meow' in them, not just words
+'grep --color 'meow' kitty_ipsum_1.txt' #will add color to the returned results 'meow' now in red
+'grep --color -n 'meow' kitty_ipsum_1.txt' # '-n' flag for 'numbers' will add line numbers for each line with 'meow' and color
+'grep --color -n 'meow[a-z]*' kitty_ipsum_1.txt' # shows all the words that start with 'meow' using a regular expression 'meow[a-z]*' 
+'grep -c 'meow[a-z]*' kitty_ipsum_1.txt' # '-c' flag for count, will show how many times it appears
 
 
 

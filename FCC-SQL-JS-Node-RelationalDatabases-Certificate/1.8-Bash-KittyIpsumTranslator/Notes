@@ -33,7 +33,7 @@ If you give a bad command to be output to a file, it will not run or be added to
 'sed 's/r/2/' name.tx' #this will replace 'r' with '2' 
 'sed 's/freecodecamp/f233C0d3C@mp/i' name.txt' #'i' flag, notice how it's after the '/i' instead of '-i', this is the 'ignore' flag and will ignore case for matching(like capitalized)
   '/g' flag is global, and would do the same thing
-
+'./translate.sh kitty_ipsum_1.txt' #use a txt file as an input argument for a script, without '<' or piping
 
 
 

@@ -498,7 +498,114 @@ SQL has the operators '<' less than, '>' greater than, '>='greater than equal to
 'SELECT * FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses USING(major_id);' # 2 'FULL JOIN's (3 tables)? What do I bring to the table? I am the table. 3 tables.
 'SELECT COUNT(course), COURSE FROM students INNER JOIN majors USING(major_id) INNER JOIN majors_courses USING(major_id) INNER JOIN courses USING(course_id) GROUP BY course;' # 3 'INNER JOIN'
 
-
+Start : 24March2025 - World Cup Database ========================================================================================================================================================
+https://www.freecodecamp.org/learn/relational-database/build-a-world-cup-database-project/build-a-world-cup-database
+Clicking the "hamburger" menu near the top left of the VSCode window,
+Going to the "View" menu,
+Clicking on the "Command Palette" option,
+and running the "CodeRoad: Start" command
+'psql --username=freecodecamp --dbname=postgres' #login credentials
+InstructSeans :
+You should create a database named worldcup
+  CREATE DATABASE worldcup;
+You should connect to your worldcup database and then create teams and games tables
+     \c worldcup;
+Your teams table should have a team_id column that is a type of SERIAL and is the primary key, and a name column that has to be UNIQUE
+   CREATE TABLE teams (
+       team_id SERIAL PRIMARY KEY,
+       name VARCHAR(255) UNIQUE NOT NULL
+   );
+Your games table should have a game_id column that is a type of SERIAL and is the primary key, a year column of type INT, and a round column of type VARCHAR
+Your games table should have winner_id and opponent_id foreign key columns that each reference team_id from the teams table
+Your games table should have winner_goals and opponent_goals columns that are type INT
+All of your columns should have the NOT NULL constraint
+   CREATE TABLE games (
+       game_id SERIAL PRIMARY KEY,
+       year INT NOT NULL,
+       round VARCHAR(255) NOT NULL,
+       winner_id INT NOT NULL REFERENCES teams(team_id),
+       opponent_id INT NOT NULL REFERENCES teams(team_id),
+       winner_goals INT NOT NULL,
+       opponent_goals INT NOT NULL
+   );
+Your two script (.sh) files should have executable permissions. Other tests involving these two files will fail until permissions are correct. 
+  When these permissions are enabled, the tests will take significantly longer to run
+    'chmod +x insert_data.sh'
+    'chmod +x queries.sh'
+When you run your insert_data.sh script, it should add each unique team to the teams table. There should be 24 rows
+When you run your insert_data.sh script, it should insert a row for each line in the games.csv file (other than the top line of the file).
+  There should be 32 rows. Each row should have every column filled in with the appropriate info. Make sure to add the correct ID's from the teams table (you cannot hard-code the values)
+    #!/bin/bash
+    # Do not change code above this line
+    # This script should only be run AFTER the database and tables are created
+    PSQL="psql --username=freecodecamp --dbname=worldcup -t --no-align -c"
+    # Empty the tables
+    echo $($PSQL "TRUNCATE TABLE games, teams")
+    # Read from games.csv and insert data
+    cat games.csv | while IFS="," read YEAR ROUND WINNER OPPONENT WINNER_GOALS OPPONENT_GOALS
+    do
+      # Skip the header row
+      if [[ $YEAR != "year" ]]
+      then
+        # Insert teams if they don't exist
+        # Insert winner
+        WINNER_ID=$($PSQL "SELECT team_id FROM teams WHERE name='$WINNER'")
+        if [[ -z $WINNER_ID ]]
+        then
+          INSERT_WINNER_RESULT=$($PSQL "INSERT INTO teams(name) VALUES('$WINNER')")
+          if [[ $INSERT_WINNER_RESULT == "INSERT 0 1" ]]
+          then
+            echo Inserted into teams, $WINNER
+          fi
+          WINNER_ID=$($PSQL "SELECT team_id FROM teams WHERE name='$WINNER'")
+        fi
+        # Insert opponent
+        OPPONENT_ID=$($PSQL "SELECT team_id FROM teams WHERE name='$OPPONENT'")
+        if [[ -z $OPPONENT_ID ]]
+        then
+          INSERT_OPPONENT_RESULT=$($PSQL "INSERT INTO teams(name) VALUES('$OPPONENT')")
+          if [[ $INSERT_OPPONENT_RESULT == "INSERT 0 1" ]]
+          then
+            echo Inserted into teams, $OPPONENT
+          fi
+          OPPONENT_ID=$($PSQL "SELECT team_id FROM teams WHERE name='$OPPONENT'")
+        fi
+    
+        # Insert game
+        INSERT_GAME_RESULT=$($PSQL "INSERT INTO games(year, round, winner_id, opponent_id, winner_goals, opponent_goals) VALUES($YEAR, '$ROUND', $WINNER_ID, $OPPONENT_ID, $WINNER_GOALS, $OPPONENT_GOALS)")
+        if [[ $INSERT_GAME_RESULT == "INSERT 0 1" ]]
+        then
+          echo Inserted into games, $YEAR $ROUND: $WINNER vs $OPPONENT
+        fi
+      fi
+    done
+You should correctly complete the queries in the queries.sh file. Fill in each empty echo command to get the output of what is suggested with the command above it. 
+  Only use a single line like the first query. The output should match what is in the expected_output.txt file exactly, take note of the number of decimal places in some of the query results
+    echo -e "\nTotal number of goals in all games from winning teams:"
+    echo "$($PSQL "SELECT SUM(winner_goals) FROM games")"
+    echo -e "\nTotal number of goals in all games from both teams combined:"
+    echo "$($PSQL "SELECT SUM(winner_goals + opponent_goals) FROM games")"
+    echo -e "\nAverage number of goals in all games from the winning teams:"
+    echo "$($PSQL "SELECT AVG(winner_goals) FROM games")"
+    echo -e "\nAverage number of goals in all games from the winning teams rounded to two decimal places:"
+    echo "$($PSQL "SELECT ROUND(AVG(winner_goals), 2) FROM games")"
+    echo -e "\nAverage number of goals in all games from both teams:"
+    echo "$($PSQL "SELECT AVG(winner_goals + opponent_goals) FROM games")"
+    echo -e "\nMost goals scored in a single game by one team:"
+    echo "$($PSQL "SELECT MAX(GREATEST(winner_goals, opponent_goals)) FROM games")"
+    echo -e "\nNumber of games where the winning team scored more than two goals:"
+    echo "$($PSQL "SELECT COUNT(*) FROM games WHERE winner_goals > 2")"
+    echo -e "\nWinner of the 2018 tournament team name:"
+    echo "$($PSQL "SELECT name FROM teams INNER JOIN games ON teams.team_id = games.winner_id WHERE year = 2018 AND round = 'Final'")"
+    echo -e "\nList of teams who played in the 2014 'Eighth-Final' round:"
+    echo "$($PSQL "SELECT DISTINCT name FROM teams INNER JOIN games ON teams.team_id = games.winner_id OR teams.team_id = games.opponent_id WHERE year = 2014 AND round = 'Eighth-Final' ORDER BY name")"
+    echo -e "\nList of unique winning team names in the whole data set:"
+    echo "$($PSQL "SELECT DISTINCT name FROM teams INNER JOIN games ON teams.team_id = games.winner_id ORDER BY name")"
+    echo -e "\nYear and team name of all the champions:"
+    echo "$($PSQL "SELECT year, name FROM teams INNER JOIN games ON teams.team_id = games.winner_id WHERE round = 'Final' ORDER BY year")"
+    echo -e "\nList of teams that start with 'Co':"
+    echo "$($PSQL "SELECT name FROM teams WHERE name LIKE 'Co%' ORDER BY name")"
+'pg_dump -cC --inserts -U freecodecamp worldcup > worldcup.sql' #dump the sql file
 
 
 

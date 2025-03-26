@@ -34,8 +34,9 @@ If you give a bad command to be output to a file, it will not run or be added to
 'sed 's/freecodecamp/f233C0d3C@mp/i' name.txt' #'i' flag, notice how it's after the '/i' instead of '-i', this is the 'ignore' flag and will ignore case for matching(like capitalized)
   '/g' flag is global, and would do the same thing
 './translate.sh kitty_ipsum_1.txt' #use a txt file as an input argument for a script, without '<' or piping
-
-
+'diff kitty_ipsum_1.txt doggy_ipsum_1.txt' # 'diff' keyword/command, will compare 2 files and show you which lines they are different, line by line
+'diff --color kitty_ipsum_1.txt doggy_ipsum_1.txt'  #add color to the different lines
+'./translate.sh kitty_ipsum_2.txt > doggy_ipsum_2.txt' # take a txt file as input and run it through a script and put output into a new textfile
 
 
 

@@ -4,3 +4,61 @@ Clicking the "hamburger" menu near the top left of the VSCode window,
 Going to the "View" menu,
 Clicking on the "Command Palette" option,
 and running the "CodeRoad: Start" command
+'<command> > <filename>' #how to pipe to a file, with '>' will take the output from a command and send it to a file, if no file exists, it will create it
+'echo hello bash > stdout.txt' # will create a new file if none existed, be careful because this will overwrite everything in that file, 'echo' will not be put in the file
+'<command> >> <filename>' # '>>' to APPEND to a file, will add it to the end if a file exists and not overwrite
+'> stdout.txt' #to redirect nothing into the file, which will empty it
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

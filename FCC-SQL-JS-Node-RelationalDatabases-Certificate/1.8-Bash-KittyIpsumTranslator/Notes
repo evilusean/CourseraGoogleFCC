@@ -1,1 +1,6 @@
-Start : 26March2025 </br>
+Start : 26March2025 
+
+Clicking the "hamburger" menu near the top left of the VSCode window,
+Going to the "View" menu,
+Clicking on the "Command Palette" option,
+and running the "CodeRoad: Start" command

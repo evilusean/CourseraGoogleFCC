@@ -607,7 +607,7 @@ You should correctly complete the queries in the queries.sh file. Fill in each e
     echo "$($PSQL "SELECT name FROM teams WHERE name LIKE 'Co%' ORDER BY name")"
 'pg_dump -cC --inserts -U freecodecamp worldcup > worldcup.sql' #dump the sql file
 
-Start : 26March2025 
+Start : 26March2025 - Learn Advanced Bash by Building a Kitty Ipsum Translator ================================================================================================================
 Clicking the "hamburger" menu near the top left of the VSCode window,
 Going to the "View" menu,
 Clicking on the "Command Palette" option,

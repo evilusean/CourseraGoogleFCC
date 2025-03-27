@@ -607,7 +607,44 @@ You should correctly complete the queries in the queries.sh file. Fill in each e
     echo "$($PSQL "SELECT name FROM teams WHERE name LIKE 'Co%' ORDER BY name")"
 'pg_dump -cC --inserts -U freecodecamp worldcup > worldcup.sql' #dump the sql file
 
-
+Start : 26March2025 
+Clicking the "hamburger" menu near the top left of the VSCode window,
+Going to the "View" menu,
+Clicking on the "Command Palette" option,
+and running the "CodeRoad: Start" command
+'<command> > <filename>' #how to add to a file, with '>' will take the output from a command and send it to a file, if no file exists, it will create it
+'echo hello bash > stdout.txt' # will create a new file if none existed, be careful because this will overwrite everything in that file, 'echo' will not be put in the file
+'<command> >> <filename>' # '>>' to APPEND to a file, will add it to the end if a file exists and not overwrite
+'> stdout.txt' #to redirect nothing into the file, which will empty it
+There’s two types of output, 'stdout' (standard out) for when a command is successful, and 'stderr' (standard error) for when it’s not. 
+If you give a bad command to be output to a file, it will not run or be added to the file
+'bad_command 2> stderr.txt' #You can redirect stderr with '2>'. Enter the same bad command but redirect stderr to stderr.txt 'bash: bad_command: command not found'
+'echo hello bash 1> stdout.txt' #Similarily, you can use '1>' to redirect stdout
+'stdin' = stdout and stderr are for output. 'stdin' (standard in) is the third thing commands can use and is for getting input. The default is the keyboard
+'command> < <filename_for_stdin>' #Just like you can redirect output, you can redirect stdin as well. Here's an example with '<'
+'read NAME < name.txt' #Use the read command to assign the NAME variable to the contents of name.txt by redirecting the stdin. - the '$NAME' variable will be changed to the text in 'name.txt'
+'<command_1> | <command_2>' #'|' = pipe command, It will use the output from one command as input for another. This will take the stdout from command_1 and use it as the stdin for command_2
+'echo Sean | read NAME' # will take 'Sean' and add it to the variable of '$NAME', this command will be run as a subprocess, and will not save to the your current terminal variable of '$NAME'
+'cat name.txt' #reads the name.txt file in the terminal
+'echo Sean | ./script.sh 2> stderr.txt' #will use 'Sean' for an input into './script.sh' and any error will be sent to 'stderr.txt' with '2>'
+'echo Sean | ./script.sh 2> stderr.txt > stdout.txt' #will input 'Sean' into script and redirect both errors and output to different text files, pretty cool
+'./script.sh < name.txt 2> stderr.txt > stdout.txt' #will use the 'name.txt' as input and send the errors to 'stderr.txt' and the output to 'stdout.txt' - input, output and error in 1 line
+'wc' = Word Count, new keyword gives info about the file... like how many words, and bytes, lines 'wc -l' = lines, to display how many lines 'wc -w' for how many words, '-m', '-c' characters
+'cat kitty_ipsum_1.txt | wc' #will pipe the contents of 'kitty_ipsum_1.txt' into 'wc' wordcount to get more info on the file
+'wc < kitty_ipsum_1.txt' #using input instead of output for above command
+'grep 'meow' kitty_ipsum_1.txt' #will show all the lines with 'meow' in them, not just words
+'grep --color 'meow' kitty_ipsum_1.txt' #will add color to the returned results 'meow' now in red
+'grep --color -n 'meow' kitty_ipsum_1.txt' # '-n' flag for 'numbers' will add line numbers for each line with 'meow' and color
+'grep --color -n 'meow[a-z]*' kitty_ipsum_1.txt' # shows all the words that start with 'meow' using a regular expression 'meow[a-z]*' 
+'grep -c 'meow[a-z]*' kitty_ipsum_1.txt' # '-c' flag for count, will show how many times it appears
+'sed 's/<pattern_to_replace>/<text_to_replace_it_with>/' <filename>' #'sed' = 'stream editor' is used to replace words/patterns in a file
+'sed 's/r/2/' name.tx' #this will replace 'r' with '2' 
+'sed 's/freecodecamp/f233C0d3C@mp/i' name.txt' #'i' flag, notice how it's after the '/i' instead of '-i', this is the 'ignore' flag and will ignore case for matching(like capitalized)
+  '/g' flag is global, and would do the same thing
+'./translate.sh kitty_ipsum_1.txt' #use a txt file as an input argument for a script, without '<' or piping
+'diff kitty_ipsum_1.txt doggy_ipsum_1.txt' # 'diff' keyword/command, will compare 2 files and show you which lines they are different, line by line
+'diff --color kitty_ipsum_1.txt doggy_ipsum_1.txt'  #add color to the different lines
+'./translate.sh kitty_ipsum_2.txt > doggy_ipsum_2.txt' # take a txt file as input and run it through a script and put output into a new textfile
 
 
 

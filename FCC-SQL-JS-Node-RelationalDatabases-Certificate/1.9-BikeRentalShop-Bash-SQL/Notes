@@ -21,8 +21,13 @@ Case Statements (IF statements) Syntax for bash :
     PATTERN) STATEMENTS ;;
     *) STATEMENTS ;;
   esac
-
-
+If 'PATTERN' '1' is pressed it will return the function 'RENT_MENU'... etc - each '#)' represents a key input :
+    case $MAIN_MENU_SELECTION in
+      1) RENT_MENU ;;
+      2) RETURN_MENU ;;
+      3) EXIT ;;
+      *) MAIN_MENU ;;
+    esac
 
 
 

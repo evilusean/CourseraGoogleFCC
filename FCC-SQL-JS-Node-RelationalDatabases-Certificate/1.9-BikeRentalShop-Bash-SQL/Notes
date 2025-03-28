@@ -37,7 +37,8 @@ Use this to query a DB using select statements, prerequisite for sign in to use 
   PSQL="psql -X --username=freecodecamp --dbname=bikes --tuples-only -c"
 Example Query using above info :
   AVAILABLE_BIKES=$($PSQL "SELECT bike_id, type, size FROM bikes WHERE available = true ORDER BY bike_id")
-
+Query the DB in postgreSQL looking for available bikes :
+  UPDATE bikes SET available = false WHERE available = true;
 
 
 

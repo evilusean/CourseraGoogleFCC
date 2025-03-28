@@ -33,6 +33,8 @@ IF statement Syntax :
   then
     <STATEMENTS>
   fi
+Use this to query a DB using select statements, prerequisite for sign in to use SELECT statements :
+  PSQL="psql -X --username=freecodecamp --dbname=bikes --tuples-only -c"
 
 
 

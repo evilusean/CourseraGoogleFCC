@@ -5,3 +5,35 @@ Going to the "View" menu,
 Clicking on the "Command Palette" option,
 and running the "CodeRoad: Start" command
 'psql --username=freecodecamp --dbname=postgres' #login credentials
+CREATE TABLE bikes(); #don't forget the '()' 
+ALTER TABLE bikes ADD COLUMN available BOOLEAN NOT NULL DEFAULT TRUE; # will set the default value of the boolean to true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,7 +8,9 @@ and running the "CodeRoad: Start" command
 CREATE TABLE bikes(); #don't forget the '()' 
 ALTER TABLE bikes ADD COLUMN available BOOLEAN NOT NULL DEFAULT TRUE; # will set the default value of the boolean to true
 ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column); #adding a foreign key with referenced table
-
+Make sure that you create the table before you reference it as a foreign key, like below, create the column first and THEN reference it with the foreign ID :
+  ALTER TABLE rentals ADD COLUMN bike_id INT NOT NULL;
+  ALTER TABLE rentals ADD FOREIGN KEY(bike_id) REFERENCES bikes(bike_id);
 
 
 

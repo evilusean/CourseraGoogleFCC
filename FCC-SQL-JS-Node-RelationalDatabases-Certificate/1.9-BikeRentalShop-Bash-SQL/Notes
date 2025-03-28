@@ -28,7 +28,11 @@ If 'PATTERN' '1' is pressed it will return the function 'RENT_MENU'... etc - eac
       3) EXIT ;;
       *) MAIN_MENU ;;
     esac
-
+IF statement Syntax :
+  if [[ <CONDITION> ]]
+  then
+    <STATEMENTS>
+  fi
 
 
 

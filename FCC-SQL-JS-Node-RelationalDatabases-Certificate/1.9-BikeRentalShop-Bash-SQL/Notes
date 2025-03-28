@@ -13,7 +13,14 @@ Make sure that you create the table before you reference it as a foreign key, li
   ALTER TABLE rentals ADD FOREIGN KEY(bike_id) REFERENCES bikes(bike_id);
 ALTER TABLE rentals ADD COLUMN date_rented DATE NOT NULL DEFAULT NOW(); #this will create a 'DATE' data(date-A)type that has a default time of 'NOW' - pretty useful
 INSERT INTO table_name(column_name, column_name) VALUES(value, value); #add data manually syntax
-
+FUNCTION() { <CODE TO RUN> } #basic syntax for a bash function
+Case Statements (IF statements) Syntax for bash :
+  case EXPRESSION in
+    PATTERN) STATEMENTS ;;
+    PATTERN) STATEMENTS ;;
+    PATTERN) STATEMENTS ;;
+    *) STATEMENTS ;;
+  esac
 
 
 

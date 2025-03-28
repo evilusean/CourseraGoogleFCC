@@ -35,7 +35,8 @@ IF statement Syntax :
   fi
 Use this to query a DB using select statements, prerequisite for sign in to use SELECT statements :
   PSQL="psql -X --username=freecodecamp --dbname=bikes --tuples-only -c"
-
+Example Query using above info :
+  AVAILABLE_BIKES=$($PSQL "SELECT bike_id, type, size FROM bikes WHERE available = true ORDER BY bike_id")
 
 
 

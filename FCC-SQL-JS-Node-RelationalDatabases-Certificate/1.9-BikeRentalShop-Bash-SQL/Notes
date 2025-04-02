@@ -53,7 +53,7 @@ Instead of directly printing the list, pipe the output into a while loop that re
   #It will read the first line of your AVAILABLE_BIKES variable into the five variables. Each variable being the next word in the line.
     Read each line into variables, BIKE_ID BAR TYPE BAR SIZE. In the <STATEMENTS> area, use echo to print the BIKE_ID, TYPE, and SIZE variables, in that order.
 - ERROR - I took a break, and lost all progress - broke around 40% - need to start over - Took a few days to get caught up on Japanese, starting over on 02April2025
-
+'[[ a =~ [0-9] ]]; echo $?' #use this to see if a user input a number, a regular expression to number check instead of a function
 
 
 

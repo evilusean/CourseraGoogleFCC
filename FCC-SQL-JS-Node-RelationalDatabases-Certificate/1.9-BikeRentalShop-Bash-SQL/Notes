@@ -56,10 +56,15 @@ Instead of directly printing the list, pipe the output into a while loop that re
 '[[ a =~ [0-9] ]]; echo $?' #use this to see if a user input a number, a regular expression to number check instead of a function, will check the letter 'a' and return a '1' for false
 'if [[ ! $BIKE_ID_TO_RENT =~ ^[0-9]+$ ]]then MAIN_MENU "That is not a valid bike number."' #if the user types something that isnt a number to the variable '$BIKE_ID_TO_RENT' returns to MAIN_MENU
 'UPDATE bikes SET available = true WHERE available = false;' #used to UPDATE all bikes that are currently unavailable and set ALL bikes to TRUE through a postgreSQL UPDATE command
-
-
-
-
+'if [[ -z $CUSTOMER_NAME ]]
+        then
+          # get new customer name
+          echo -e "\nWhat's your name?"
+          read CUSTOMER_NAME
+          # insert new customer
+          INSERT_CUSTOMER_RESULT=$($PSQL "INSERT INTO customers(name, phone) VALUES('$CUSTOMER_NAME', '$PHONE_NUMBER')") 
+        fi'
+  # if '-z' (none exist) with the $CUSTOMER_NAME, it will ask the name, and INSERT it into the database with the given name and phone number typed in
 
 
 

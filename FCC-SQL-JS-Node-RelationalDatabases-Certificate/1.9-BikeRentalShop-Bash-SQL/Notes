@@ -65,7 +65,7 @@ Instead of directly printing the list, pipe the output into a while loop that re
           INSERT_CUSTOMER_RESULT=$($PSQL "INSERT INTO customers(name, phone) VALUES('$CUSTOMER_NAME', '$PHONE_NUMBER')") 
         fi'
   # if '-z' (none exist) with the $CUSTOMER_NAME, it will ask the name, and INSERT it into the database with the given name and phone number typed in
-
+'sed s/<regex_pattern_to_replace>/<characters_to_replace_with>/<regex_flags>' #sed command can be used to replace characters and patterns in text 
 
 
 

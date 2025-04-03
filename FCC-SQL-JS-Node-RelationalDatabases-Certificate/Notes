@@ -647,6 +647,7 @@ If you give a bad command to be output to a file, it will not run or be added to
 './translate.sh kitty_ipsum_2.txt > doggy_ipsum_2.txt' # take a txt file as input and run it through a script and put output into a new textfile
 
 Start : 28March2025 - End : 02April2025 - Learn Bash and SQL by Building a Bike Rental Shop ==================================================================================================
+https://www.freecodecamp.org/learn/relational-database/learn-bash-and-sql-by-building-a-bike-rental-shop/build-a-bike-rental-shop
 Clicking the "hamburger" menu near the top left of the VSCode window,
 Going to the "View" menu,
 Clicking on the "Command Palette" option,

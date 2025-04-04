@@ -120,3 +120,4 @@ You can create another row in the appointments table by running your script and 
 After an appointment is successfully added, you should output the message I have put you down for a <service> at <time>, <name>. For example, if the user chooses cut as the service,
   10:30 is entered for the time, and their name is Fabio in the database the output would be I have put you down for a cut at 10:30, Fabio. Make sure your script finishes running after
   completing any of the tasks above, or else the tests won't pass
+'pg_dump -cC --inserts -U freecodecamp salon > salon.sql' #dump the SQL file

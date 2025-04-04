@@ -70,9 +70,12 @@ Your script file should have a “shebang” that uses bash when the file is exe
 Your script file should have executable permissions
   chmod +x salon.sh
 You should not use the clear command in your script
-
 You should display a numbered list of the services you offer before the first prompt for input, each with the format #) <service>. For example, 1) cut, where 1 is the service_id
-
+  SERVICES=$($PSQL "SELECT service_id, name FROM services ORDER BY service_id")
+  echo "$SERVICES" | while read SERVICE_ID BAR NAME
+  do
+    echo "$SERVICE_ID) $NAME"
+  done
 If you pick a service that doesn't exist, you should be shown the same list of services again
 
 Your script should prompt users to enter a service_id, phone number, a name if they aren’t already a customer, and a time. 

@@ -77,7 +77,17 @@ You should display a numbered list of the services you offer before the first pr
     echo "$SERVICE_ID) $NAME"
   done
 If you pick a service that doesn't exist, you should be shown the same list of services again
-
+  if [[ ! $SERVICE_ID_SELECTED =~ ^[0-9]+$ ]]
+  then
+    MAIN_MENU "That is not a valid service number."
+  else
+    # check if service exists
+    SERVICE_NAME=$($PSQL "SELECT name FROM services WHERE service_id = $SERVICE_ID_SELECTED")
+    
+    # if service doesn't exist
+    if [[ -z $SERVICE_NAME ]]
+    then
+      MAIN_MENU "I could not find that service. What would you like today?"
 Your script should prompt users to enter a service_id, phone number, a name if they aren’t already a customer, and a time. 
   You should use read to read these inputs into variables named SERVICE_ID_SELECTED, CUSTOMER_PHONE, CUSTOMER_NAME, and SERVICE_TIME
 

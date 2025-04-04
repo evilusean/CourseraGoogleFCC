@@ -90,9 +90,29 @@ If you pick a service that doesn't exist, you should be shown the same list of s
       MAIN_MENU "I could not find that service. What would you like today?"
 Your script should prompt users to enter a service_id, phone number, a name if they aren’t already a customer, and a time. 
   You should use read to read these inputs into variables named SERVICE_ID_SELECTED, CUSTOMER_PHONE, CUSTOMER_NAME, and SERVICE_TIME
-
 If a phone number entered doesn’t exist, you should get the customers name and enter it, and the phone number, into the customers table
-
+      echo -e "\nWhat's your phone number?"
+      read CUSTOMER_PHONE
+      # check if customer exists
+      CUSTOMER_NAME=$($PSQL "SELECT name FROM customers WHERE phone = '$CUSTOMER_PHONE'")
+      # if customer doesn't exist
+      if [[ -z $CUSTOMER_NAME ]]
+      then
+        # get new customer name
+        echo -e "\nI don't have a record for that phone number, what's your name?"
+        read CUSTOMER_NAME
+        # insert new customer
+        INSERT_CUSTOMER_RESULT=$($PSQL "INSERT INTO customers(name, phone) VALUES('$CUSTOMER_NAME', '$CUSTOMER_PHONE')")
+      fi
+      # get customer_id
+      CUSTOMER_ID=$($PSQL "SELECT customer_id FROM customers WHERE phone = '$CUSTOMER_PHONE'")
+      # get service time
+      echo -e "\nWhat time would you like your $(echo $SERVICE_NAME | sed -E 's/^ *| *$//g'), $(echo $CUSTOMER_NAME | sed -E 's/^ *| *$//g')?"
+      read SERVICE_TIME
+      # insert appointment
+      INSERT_APPOINTMENT_RESULT=$($PSQL "INSERT INTO appointments(customer_id, service_id, time) VALUES($CUSTOMER_ID, $SERVICE_ID_SELECTED, '$SERVICE_TIME')")
+      # confirm appointment
+      echo -e "\n
 You can create a row in the appointments table by running your script and entering 1, 555-555-5555, Fabio, 10:30 at each request for input if that phone number isn’t in the customers table.
   The row should have the customer_id for that customer, and the service_id for the service entered
 

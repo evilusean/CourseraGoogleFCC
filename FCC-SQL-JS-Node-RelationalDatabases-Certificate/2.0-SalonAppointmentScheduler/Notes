@@ -1,3 +1,10 @@
 Start : 04April2025
 
 Salon Appointment Scheduler - you need to complete these projects on the VM in one sitting, because if you go away for too long, you lose all your work and have to restart
+Click the start button below
+Login to Gitpod with your GitHub account if you aren't already
+Once the virtual Linux machine is finished loading, start the CodeRoad extension by:
+Clicking the "hamburger" menu near the top left of the VSCode window,
+Going to the "View" menu,
+Clicking on the "Command Palette" option,
+and running the "CodeRoad: Start" command

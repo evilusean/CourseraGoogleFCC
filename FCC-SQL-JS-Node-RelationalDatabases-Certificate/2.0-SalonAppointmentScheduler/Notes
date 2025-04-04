@@ -45,7 +45,14 @@ Each primary key column should follow the naming convention, table_name_id. For 
     phone VARCHAR(15) UNIQUE NOT NULL
   );
 Your appointments table should have a customer_id foreign key that references the customer_id column from the customers table
-
+  CREATE TABLE appointments (
+    appointment_id SERIAL PRIMARY KEY,
+    customer_id INT NOT NULL,
+    service_id INT NOT NULL,
+    time VARCHAR(50) NOT NULL,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+    FOREIGN KEY (service_id) REFERENCES services(service_id)
+  );
 Your appointments table should have a service_id foreign key that references the service_id column from the services table
 
 Your customers table should have phone that is a VARCHAR and must be unique

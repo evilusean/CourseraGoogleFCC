@@ -64,7 +64,7 @@ You should have at least three rows in your services table for the different ser
   INSERT INTO services (name) VALUES ('style');
   INSERT INTO services (name) VALUES ('trim');
 You should create a script file named salon.sh in the project folder
-
+  'touch salon.sh'
 Your script file should have a “shebang” that uses bash when the file is executed (use #! /bin/bash)
 
 Your script file should have executable permissions

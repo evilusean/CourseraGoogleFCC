@@ -34,7 +34,10 @@ You should create a database named salon
 You should connect to your database, then create tables named customers, appointments, and services
   '\c salon'
 Each table should have a primary key column that automatically increments
-
+  CREATE TABLE services (
+    service_id SERIAL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL
+  );
 Each primary key column should follow the naming convention, table_name_id. For example, the customers table should have a customer_id key. Note that there’s no s at the end of customer
 
 Your appointments table should have a customer_id foreign key that references the customer_id column from the customers table

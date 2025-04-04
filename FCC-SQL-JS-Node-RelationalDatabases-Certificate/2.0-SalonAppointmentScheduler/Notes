@@ -30,7 +30,7 @@ If you are saving your progress on freeCodeCamp.org, after getting all the tests
   Save the salon.sql file, as well as the final version of your salon.sh file, in a public repository and submit the URL to it on freeCodeCamp.org.
 Complete the tasks below : 
 You should create a database named salon
-
+  'CREATE DATABASE salon;'
 You should connect to your database, then create tables named customers, appointments, and services
 
 Each table should have a primary key column that automatically increments

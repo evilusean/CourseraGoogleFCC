@@ -39,6 +39,8 @@ Each table should have a primary key column that automatically increments
     name VARCHAR(50) NOT NULL
   );
 Each primary key column should follow the naming convention, table_name_id. For example, the customers table should have a customer_id key. Note that there’s no s at the end of customer
+Your customers table should have phone that is a VARCHAR and must be unique
+Your customers and services tables should have a name column
   CREATE TABLE customers (
     customer_id SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
@@ -46,6 +48,7 @@ Each primary key column should follow the naming convention, table_name_id. For 
   );
 Your appointments table should have a customer_id foreign key that references the customer_id column from the customers table
 Your appointments table should have a service_id foreign key that references the service_id column from the services table
+Your appointments table should have a time column that is a VARCHAR
   CREATE TABLE appointments (
     appointment_id SERIAL PRIMARY KEY,
     customer_id INT NOT NULL,
@@ -54,11 +57,6 @@ Your appointments table should have a service_id foreign key that references the
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
     FOREIGN KEY (service_id) REFERENCES services(service_id)
   );
-Your customers table should have phone that is a VARCHAR and must be unique
-
-Your customers and services tables should have a name column
-
-Your appointments table should have a time column that is a VARCHAR
 
 You should have at least three rows in your services table for the different services you offer, one with a service_id of 1
 

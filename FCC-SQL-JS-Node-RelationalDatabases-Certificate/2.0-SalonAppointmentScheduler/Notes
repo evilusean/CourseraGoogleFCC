@@ -32,7 +32,7 @@ Complete the tasks below :
 You should create a database named salon
   'CREATE DATABASE salon;'
 You should connect to your database, then create tables named customers, appointments, and services
-
+  '\c salon'
 Each table should have a primary key column that automatically increments
 
 Each primary key column should follow the naming convention, table_name_id. For example, the customers table should have a customer_id key. Note that there’s no s at the end of customer

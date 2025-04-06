@@ -839,7 +839,15 @@ After an appointment is successfully added, you should output the message I have
   completing any of the tasks above, or else the tests won't pass
 'pg_dump -cC --inserts -U freecodecamp salon > salon.sql' #dump the SQL file
 
-
+Start : 05April2025 - Learn Nano by Building a Castle ==========================================================================================================================================
+https://www.freecodecamp.org/learn/relational-database/learn-nano-by-building-a-castle/build-a-castle
+Clicking the "hamburger" menu near the top left of the VSCode window,
+Going to the "View" menu,
+Clicking on the "Command Palette" option,
+and running the "CodeRoad: Start" command
+'Ctrl' + O = Save
+'Ctrl' + X = eXit
+'Ctrl' + K = Cut
 
 
 

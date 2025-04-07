@@ -17,6 +17,7 @@ and running the "CodeRoad: Start" command
   you often don't want to make commits directly to the main branch of a repo. This branch will be for some new changes. 
   What you will do is make the changes and commits here, then merge them into the main branch when they are ready. 
 'git branch branch_name' #branches often start with fix/ or feat/, among others, like commit messages, but they use a forward slash and can't contain spaces.
+  Remember that, when you create a branch, it will be a clone of whatever branch you are on when you create it. That's why you switched to main first.
 'git branch feat/add-create-table-reference' #Create a new branch named feat/add-create-table-reference
 'git checkout branch_name' #syntax to switch branches with git
 'git log --oneline' #will show a shortened git commit history, much shorter, each commit takes up a single line
@@ -24,12 +25,14 @@ and running the "CodeRoad: Start" command
 'git merge feat/add-create-table-reference' #You created the feat/add-create-table-reference branch, made a commit, and now it's ready to be added to the main branch.
 'git branch -d branch_name' #You can delete a branch with git branch -d branch_name. -d stands for "delete". Since your changes were added, you can safely delete your feature branch. 
 'git add .' #Add your changes to staging. Here's a tip: you can use git add . to add all files to staging.
-'git rebase main' #ou created this branch and made a commit. Since then, a commit for a bug fix was added to main. This is common with many people working on a codebase simultaneously. 
+'git rebase main' #You created this branch and made a commit. Since then, a commit for a bug fix was added to main. This is common with many people working on a codebase simultaneously. 
   You need to update this branch so it has the same commits from main, but you can't just merge that branch into this one. 
   You need that bug fix commit to be in the same order here as it is on main, right after the "drop table" commit. 
-  You need to rebase this branch against main to do that. Enter git rebase main to rebase this branch.
-
-
+  You need to rebase this branch against main to do that. Enter 'git rebase main' to rebase this branch.
+When you have a file conflict, the file in conflict will add '>', '<', and '=', you need to remove them before it will work again - by either 'accepting incoming changes' 'current changes' 'both'
+'git rebase --continue' #You fixed the conflicts that arose from trying to add this commit and added them to staging. It says all conflicts fixed: Run the suggested command to continue the rebase
+'git stash' # You can put your changes aside with git stash. Stash your changes so you can add them to a different branch.
+'git stash list' #Your working tree is clean and there's no changes git recognizes. The changes you made are stashed. View the things you have stashed with git stash list
 
 
 

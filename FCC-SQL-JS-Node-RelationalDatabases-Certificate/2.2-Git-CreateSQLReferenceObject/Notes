@@ -57,32 +57,5 @@ The message was reworded, but there's a problem. Look at the commit hash for you
   so git sees them as different commits. If you were to try and merge this into main, it wouldn't work because they don't share the same history anymore. 
   For this reason, you don't want to do an interactive rebase where you go back passed commits unique to the branch you are on. Fortunately, you can fix this.
   Enter git rebase main to realign the history of the two branches.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Squashing commits means that you will take a bunch of commits and turn them into one. This is helpful to keep your commit history clean and something you want try to do.
+  Replace 'pick' with an 's' next to all your commits except the one with the message feat: add column references

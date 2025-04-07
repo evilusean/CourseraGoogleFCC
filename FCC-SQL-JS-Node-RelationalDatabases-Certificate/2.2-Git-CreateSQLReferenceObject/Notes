@@ -40,7 +40,9 @@ When you have a file conflict, the file in conflict will add '>', '<', and '=', 
   The most recent stash is the one at the top, stash@{0}. View the condensed changes of the oldest stash with the git stash show command by putting the name of the stash after it.
 'git stash apply' #You can add the latest stash while keeping it in the list with git stash apply. Apply your stash with this method.
 'git stash drop <stash_name>' #how to selectively drop a stash
-
+I'm going to show you a few ways to remove or undo a commit. : 
+'git reset' # The first is to simply "travel back in time". You can use the git reset command to travel to any point in your commit history.
+'git reset HEAD~1' # Your current HEAD is a reference to the last commit you just made. Use git reset HEAD~1 to go back one before HEAD
 
 
 

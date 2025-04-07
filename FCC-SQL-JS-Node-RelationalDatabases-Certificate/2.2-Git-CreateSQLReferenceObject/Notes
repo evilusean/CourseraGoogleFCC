@@ -4,3 +4,50 @@ Clicking the "hamburger" menu near the top left of the VSCode window,
 Going to the "View" menu,
 Clicking on the "Command Palette" option,
 and running the "CodeRoad: Start" command
+'git init' #create a git repository in whatever directory you are currently in from the terminal, it will create a '.git' file in that directory
+'git status' # to see the status of where you are. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

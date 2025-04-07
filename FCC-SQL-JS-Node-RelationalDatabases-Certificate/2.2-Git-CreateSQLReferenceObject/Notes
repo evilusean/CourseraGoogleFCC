@@ -42,8 +42,13 @@ When you have a file conflict, the file in conflict will add '>', '<', and '=', 
 'git stash drop <stash_name>' #how to selectively drop a stash
 I'm going to show you a few ways to remove or undo a commit. : 
 'git reset' # The first is to simply "travel back in time". You can use the git reset command to travel to any point in your commit history.
-'git reset HEAD~1' # Your current HEAD is a reference to the last commit you just made. Use git reset HEAD~1 to go back one before HEAD
-
+'git reset HEAD~1' # Your current HEAD is a reference to the last commit you just made. Use git reset HEAD~1 to go back one before HEAD, - future sean, note it's '~' TILDA not '-' dash
+And the changes from the reset are back in the working tree. So when you reset to one commit before HEAD, it removed the most recent commit, and put all the changes in the working tree. 
+  '--hard' flag with the reset, the changes would have not been added to the working tree
+  '--soft' flag the changes would have been added to the working tree and to staging.
+'git rebase --interactive HEAD~2' #If you look at the bottom of those two messages, it shows the diff. The diff of the revert commit is the exact opposite of the one before it.
+  Effectively, undoing the changes. You've used rebase to update this branch, but you can enter an "interactive" mode to manipulate commits. 
+  Type git rebase --interactive HEAD~2 into the terminal to enter this mode. The HEAD~2 means you will have a chance to change the last two commits.
 
 
 

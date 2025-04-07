@@ -18,8 +18,10 @@ and running the "CodeRoad: Start" command
 'git branch branch_name' #branches often start with fix/ or feat/, among others, like commit messages, but they use a forward slash and can't contain spaces.
 'git branch feat/add-create-table-reference' #Create a new branch named feat/add-create-table-reference
 'git checkout branch_name' #syntax to switch branches with git
-
-
+'git log --oneline' #will show a shortened git commit history, much shorter, each commit takes up a single line
+'git merge <branchname>' #You can use git merge branch_name to bring changes from a branch into the branch you are currently on. Merge the changes from your feature branch into the main branch.
+'git merge feat/add-create-table-reference' #You created the feat/add-create-table-reference branch, made a commit, and now it's ready to be added to the main branch.
+  
 
 
 

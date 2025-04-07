@@ -1,2 +1,6 @@
 Start : 07April2025
 https://www.freecodecamp.org/learn/relational-database/learn-git-by-building-an-sql-reference-object/build-an-sql-reference-object
+Clicking the "hamburger" menu near the top left of the VSCode window,
+Going to the "View" menu,
+Clicking on the "Command Palette" option,
+and running the "CodeRoad: Start" command

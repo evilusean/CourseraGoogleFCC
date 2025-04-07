@@ -59,3 +59,4 @@ The message was reworded, but there's a problem. Look at the commit hash for you
   Enter git rebase main to realign the history of the two branches.
 Squashing commits means that you will take a bunch of commits and turn them into one. This is helpful to keep your commit history clean and something you want try to do.
   Replace 'pick' with an 's' next to all your commits except the one with the message feat: add column references
+'.gitignore' #create a .gitignore file to tell git what files to ignore with secret information or keys

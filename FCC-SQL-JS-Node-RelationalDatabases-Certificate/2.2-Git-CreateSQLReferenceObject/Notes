@@ -21,8 +21,8 @@ and running the "CodeRoad: Start" command
 'git log --oneline' #will show a shortened git commit history, much shorter, each commit takes up a single line
 'git merge <branchname>' #You can use git merge branch_name to bring changes from a branch into the branch you are currently on. Merge the changes from your feature branch into the main branch.
 'git merge feat/add-create-table-reference' #You created the feat/add-create-table-reference branch, made a commit, and now it's ready to be added to the main branch.
-  
-
+'git branch -d branch_name' #You can delete a branch with git branch -d branch_name. -d stands for "delete". Since your changes were added, you can safely delete your feature branch. 
+'git add .' #Add your changes to staging. Here's a tip: you can use git add . to add all files to staging.
 
 
 

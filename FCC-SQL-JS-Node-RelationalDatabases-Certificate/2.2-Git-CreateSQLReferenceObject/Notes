@@ -5,11 +5,12 @@ Going to the "View" menu,
 Clicking on the "Command Palette" option,
 and running the "CodeRoad: Start" command
 'git init' #create a git repository in whatever directory you are currently in from the terminal, it will create a '.git' file in that directory
-'git status' # to see the status of where you are. 
+'git status' # to see the status of where you are. - if anything hasn't been added, git will know the file changes, you first 'add' then 'commit' 
 'git checkout -b <new_branch>' #You can create and go to a new branch. The '-b' stands for "branch". Use that command to switch to a new branch named 'new_branch'
 'git add <file_name>' #will add the new file before the git commit, First you need to add it to the staging area like this, will be a tracked file before the commit
 'git commit -m "Initial commit"' #To commit them, you can use this to commit. The '-m' stands for "message". Often times, the first commit of a repo will have the message "Initial commit".
-
+'git log' #view commit history 
+'git diff' #take a look at any unsaved changes 'q' to quit (will be alot, if you have a small terminal 'enter' to scroll down)
 
 
 

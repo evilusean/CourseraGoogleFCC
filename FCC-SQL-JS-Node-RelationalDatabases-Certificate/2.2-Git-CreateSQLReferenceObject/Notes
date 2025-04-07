@@ -52,7 +52,11 @@ And the changes from the reset are back in the working tree. So when you reset t
 'git rebase --interactive --root' # 
   Both, the commit to add the unique command and the one to revert it, were dropped. Enter another --interactive rebase that goes back to the --root instead of HEAD~2. 
   I am going to show you how to change a commit message. '--root' means that the rebase will go back to your very first commit.
-
+The message was reworded, but there's a problem. Look at the commit hash for your Initial commit from the last two times you viewed the log, it's that string left of the log. 
+  They aren't the same anymore since you rebased back to the root. Same goes for the rest of the commits. When you rebase interactively it changes all those hashes, 
+  so git sees them as different commits. If you were to try and merge this into main, it wouldn't work because they don't share the same history anymore. 
+  For this reason, you don't want to do an interactive rebase where you go back passed commits unique to the branch you are on. Fortunately, you can fix this.
+  Enter git rebase main to realign the history of the two branches.
 
 
 

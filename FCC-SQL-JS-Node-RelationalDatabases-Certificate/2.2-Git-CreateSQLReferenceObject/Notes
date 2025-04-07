@@ -35,7 +35,8 @@ When you have a file conflict, the file in conflict will add '>', '<', and '=', 
 'git stash list' #Your working tree is clean and there's no changes git recognizes. The changes you made are stashed. View the things you have stashed with git stash list
 'git stash pop' #You can see one item there. Bring the changes back with git stash pop - Popping a stash like that will remove the most recent stash and apply it to your working tree
 'git stash show' #View a condensed version of the changes in the latest stash with git stash show
-
+'git stash show -p' #You can see what file was changed and how many lines were added - View the full changes of the latest stash with git stash show -p. '-p' stands for "patch".
+'git stash apply' #You can add the latest stash while keeping it in the list with git stash apply. Apply your stash with this method.
 
 
 

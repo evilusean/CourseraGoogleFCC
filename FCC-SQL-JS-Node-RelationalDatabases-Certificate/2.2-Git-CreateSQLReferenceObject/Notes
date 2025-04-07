@@ -49,7 +49,9 @@ And the changes from the reset are back in the working tree. So when you reset t
 'git rebase --interactive HEAD~2' #If you look at the bottom of those two messages, it shows the diff. The diff of the revert commit is the exact opposite of the one before it.
   Effectively, undoing the changes. You've used rebase to update this branch, but you can enter an "interactive" mode to manipulate commits. 
   Type git rebase --interactive HEAD~2 into the terminal to enter this mode. The HEAD~2 means you will have a chance to change the last two commits.
-
+'git rebase --interactive --root' # 
+  Both, the commit to add the unique command and the one to revert it, were dropped. Enter another --interactive rebase that goes back to the --root instead of HEAD~2. 
+  I am going to show you how to change a commit message. '--root' means that the rebase will go back to your very first commit.
 
 
 

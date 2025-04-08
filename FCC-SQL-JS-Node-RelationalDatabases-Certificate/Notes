@@ -849,7 +849,68 @@ and running the "CodeRoad: Start" command
 'Ctrl' + X = eXit
 'Ctrl' + K = Cut
 
-
+Start : 07April2025 - Learn Git by Building an SQL Reference Object =============================================================================================================================
+https://www.freecodecamp.org/learn/relational-database/learn-git-by-building-an-sql-reference-object/build-an-sql-reference-object
+Clicking the "hamburger" menu near the top left of the VSCode window,
+Going to the "View" menu,
+Clicking on the "Command Palette" option,
+and running the "CodeRoad: Start" command
+'git init' #create a git repository in whatever directory you are currently in from the terminal, it will create a '.git' file in that directory
+'git status' # to see the status of where you are. - if anything hasn't been added, git will know the file changes, you first 'add' then 'commit' 
+'git checkout -b <new_branch>' #You can create and go to a new branch. The '-b' stands for "branch". Use that command to switch to a new branch named 'new_branch' after creating it
+  Remember that, when you create a branch, it will be a clone of whatever branch you are on when you create it. That's why you switched to main first.
+'git add <file_name>' #will add the new file before the git commit, First you need to add it to the staging area like this, will be a tracked file before the commit
+'git commit -m "Initial commit"' #To commit them, you can use this to commit. The '-m' stands for "message". Often times, the first commit of a repo will have the message "Initial commit".
+  Commit messages often start with 'fix:' or 'feat:', among others, to help people understand what your commit was for
+'git log' #view commit history 
+'git diff' #take a look at any unsaved changes 'q' to quit (will be alot, if you have a small terminal 'enter' to scroll down)
+'git branch' #to see the current branches in your repo, you should try to avoid making changes to the 'main' branch of your repo, best practice
+  you often don't want to make commits directly to the main branch of a repo. This branch will be for some new changes. 
+  What you will do is make the changes and commits here, then merge them into the main branch when they are ready. 
+'git branch branch_name' #branches often start with fix/ or feat/, among others, like commit messages, but they use a forward slash and can't contain spaces.
+  Remember that, when you create a branch, it will be a clone of whatever branch you are on when you create it. That's why you switched to main first.
+'git branch feat/add-create-table-reference' #Create a new branch named feat/add-create-table-reference
+'git checkout branch_name' #syntax to switch branches with git
+'git log --oneline' #will show a shortened git commit history, much shorter, each commit takes up a single line
+'git merge <branchname>' #You can use git merge branch_name to bring changes from a branch into the branch you are currently on. Merge the changes from your feature branch into the main branch.
+'git merge feat/add-create-table-reference' #You created the feat/add-create-table-reference branch, made a commit, and now it's ready to be added to the main branch.
+'git branch -d branch_name' #You can delete a branch with git branch -d branch_name. -d stands for "delete". Since your changes were added, you can safely delete your feature branch. 
+'git add .' #Add your changes to staging. Here's a tip: you can use git add . to add all files to staging.
+'git rebase main' #You created this branch and made a commit. Since then, a commit for a bug fix was added to main. This is common with many people working on a codebase simultaneously. 
+  You need to update this branch so it has the same commits from main, but you can't just merge that branch into this one. 
+  You need that bug fix commit to be in the same order here as it is on main, right after the "drop table" commit. 
+  You need to rebase this branch against main to do that. Enter 'git rebase main' to rebase this branch.
+When you have a file conflict, the file in conflict will add '>', '<', and '=', you need to remove them before it will work again - by either 'accepting incoming changes''current changes''both'
+'git rebase --continue' #You fixed the conflicts that arose from trying to add this commit and added them to staging. It says all conflicts fixed: Run the suggested command to continue rebase
+'git stash' # You can put your changes aside with git stash. Stash your changes so you can add them to a different branch.
+'git stash list' #Your working tree is clean and there's no changes git recognizes. The changes you made are stashed. View the things you have stashed with git stash list
+'git stash pop' #You can see one item there. Bring the changes back with git stash pop - Popping a stash like that will remove the most recent stash and apply it to your working tree
+'git stash show' #View a condensed version of the changes in the latest stash with git stash show
+'git stash show -p' #You can see what file was changed and how many lines were added - View the full changes of the latest stash with git stash show -p. '-p' stands for "patch".
+'git stash show stash@{1}' #there's two things stashed. You can use the name at the front of each stash (stash@{#}) with many of the stash commands to select one other than the latest one.
+  The most recent stash is the one at the top, stash@{0}. View the condensed changes of the oldest stash with the git stash show command by putting the name of the stash after it.
+'git stash apply' #You can add the latest stash while keeping it in the list with git stash apply. Apply your stash with this method.
+'git stash drop <stash_name>' #how to selectively drop a stash
+I'm going to show you a few ways to remove or undo a commit. : 
+'git reset' # The first is to simply "travel back in time". You can use the git reset command to travel to any point in your commit history.
+'git reset HEAD~1' # Your current HEAD is a reference to the last commit you just made. Use git reset HEAD~1 to go back one before HEAD, - future sean, note it's '~' TILDA not '-' dash
+And the changes from the reset are back in the working tree. So when you reset to one commit before HEAD, it removed the most recent commit, and put all the changes in the working tree. 
+  '--hard' flag with the reset, the changes would have not been added to the working tree
+  '--soft' flag the changes would have been added to the working tree and to staging.
+'git rebase --interactive HEAD~2' #If you look at the bottom of those two messages, it shows the diff. The diff of the revert commit is the exact opposite of the one before it.
+  Effectively, undoing the changes. You've used rebase to update this branch, but you can enter an "interactive" mode to manipulate commits. 
+  Type git rebase --interactive HEAD~2 into the terminal to enter this mode. The HEAD~2 means you will have a chance to change the last two commits.
+'git rebase --interactive --root' # 
+  Both, the commit to add the unique command and the one to revert it, were dropped. Enter another --interactive rebase that goes back to the --root instead of HEAD~2. 
+  I am going to show you how to change a commit message. '--root' means that the rebase will go back to your very first commit.
+The message was reworded, but there's a problem. Look at the commit hash for your Initial commit from the last two times you viewed the log, it's that string left of the log. 
+  They aren't the same anymore since you rebased back to the root. Same goes for the rest of the commits. When you rebase interactively it changes all those hashes, 
+  so git sees them as different commits. If you were to try and merge this into main, it wouldn't work because they don't share the same history anymore. 
+  For this reason, you don't want to do an interactive rebase where you go back passed commits unique to the branch you are on. Fortunately, you can fix this.
+  Enter git rebase main to realign the history of the two branches.
+Squashing commits means that you will take a bunch of commits and turn them into one. This is helpful to keep your commit history clean and something you want try to do.
+  Replace 'pick' with an 's' next to all your commits except the one with the message feat: add column references
+'.gitignore' #create a .gitignore file to tell git what files to ignore with secret information or keys
 
 
 

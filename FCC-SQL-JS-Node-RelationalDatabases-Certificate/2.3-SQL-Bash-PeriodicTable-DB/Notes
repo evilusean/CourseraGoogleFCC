@@ -25,7 +25,7 @@ If you are saving your progress on freeCodeCamp.org, after getting all the tests
 Save the periodic_table.sql file, as well as the final version of your element.sh file, in a public repository and submit the URL to it on freeCodeCamp.org.
 Complete the tasks below :
 You should rename the weight column to atomic_mass
-
+  'ALTER TABLE properties RENAME COLUMN weight TO atomic_mass;' 
 You should rename the melting_point column to melting_point_celsius and the boiling_point column to boiling_point_celsius
 
 Your melting_point_celsius and boiling_point_celsius columns should not accept null values

@@ -31,9 +31,11 @@ You should rename the melting_point column to melting_point_celsius and the boil
 Your melting_point_celsius and boiling_point_celsius columns should not accept null values
   'ALTER TABLE properties RENAME COLUMN boiling_point TO boiling_point_celsius;'
 You should add the UNIQUE constraint to the symbol and name columns from the elements table
-
 Your symbol and name columns should have the NOT NULL constraint
-
+  ALTER TABLE elements ADD CONSTRAINT unique_symbol UNIQUE (symbol);
+  ALTER TABLE elements ADD CONSTRAINT unique_name UNIQUE (name);
+  ALTER TABLE elements ALTER COLUMN symbol SET NOT NULL;
+  ALTER TABLE elements ALTER COLUMN name SET NOT NULL;
 You should set the atomic_number column from the properties table as a foreign key that references the column of the same name in the elements table
 
 You should create a types table that will store the three types of elements

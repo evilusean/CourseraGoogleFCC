@@ -25,7 +25,6 @@ Complete the tasks below :
 Create a number_guessing_game folder in the project folder for your program
   mkdir -p number_guessing_game
   cd number_guessing_game
-  git init
 Create number_guess.sh in your number_guessing_game folder and give it executable permissions
   touch number_guess.sh
   chmod +x number_guess.sh
@@ -34,9 +33,8 @@ Create number_guess.sh in your number_guessing_game folder and give it executabl
 Your script should have a shebang at the top of the file that uses #!/bin/bash
   #!/bin/bash
 Turn the number_guessing_game folder into a git repository
-
+  git init
 Your git repository should have at least five commits
-
 Your script should randomly generate a number that users have to guess
 
 When you run your script, you should prompt the user for a username with Enter your username:, and take a username as input. Your database should allow usernames that are 22 characters

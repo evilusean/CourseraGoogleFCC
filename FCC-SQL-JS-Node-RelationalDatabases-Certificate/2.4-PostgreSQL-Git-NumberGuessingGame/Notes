@@ -78,7 +78,21 @@ When the secret number is guessed, your script should print You guessed it in <n
 The message for the first commit should be Initial commit
   git commit -m "Initial commit"
 The rest of the commit messages should start with fix:, feat:, refactor:, chore:, or test:
-
+  # After creating the script structure
+  git add number_guess.sh
+  git commit -m "feat: add basic script structure"
+  # After adding database interaction
+  git add number_guess.sh
+  git commit -m "feat: add database functionality"
+  # After adding game logic
+  git add number_guess.sh
+  git commit -m "feat: implement number guessing game"
+  # After adding user statistics
+  git add number_guess.sh
+  git commit -m "feat: add user statistics tracking"
+  # Final cleanup and testing
+  git add number_guess.sh
+  git commit -m "fix: ensure exact output formatting"
 You should finish your project while on the main branch, your working tree should be clean, and you should not have any uncommitted changes
 
 

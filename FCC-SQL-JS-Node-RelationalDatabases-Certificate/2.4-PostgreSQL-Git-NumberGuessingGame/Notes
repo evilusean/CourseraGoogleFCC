@@ -27,7 +27,10 @@ Create a number_guessing_game folder in the project folder for your program
   cd number_guessing_game
   git init
 Create number_guess.sh in your number_guessing_game folder and give it executable permissions
-
+  touch number_guess.sh
+  chmod +x number_guess.sh
+  git add .
+  git commit -m "Initial commit"
 Your script should have a shebang at the top of the file that uses #!/bin/bash
 
 Turn the number_guessing_game folder into a git repository

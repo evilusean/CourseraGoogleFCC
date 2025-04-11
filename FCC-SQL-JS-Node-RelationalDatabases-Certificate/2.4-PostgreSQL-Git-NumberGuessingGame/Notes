@@ -76,7 +76,7 @@ When the secret number is guessed, your script should print You guessed it in <n
   then
     echo "You guessed it in $GUESSES tries. The secret number was $SECRET_NUMBER. Nice job!"
 The message for the first commit should be Initial commit
-
+  git commit -m "Initial commit"
 The rest of the commit messages should start with fix:, feat:, refactor:, chore:, or test:
 
 You should finish your project while on the main branch, your working tree should be clean, and you should not have any uncommitted changes

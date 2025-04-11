@@ -32,7 +32,7 @@ Create number_guess.sh in your number_guessing_game folder and give it executabl
   git add .
   git commit -m "Initial commit"
 Your script should have a shebang at the top of the file that uses #!/bin/bash
-
+  #!/bin/bash
 Turn the number_guessing_game folder into a git repository
 
 Your git repository should have at least five commits

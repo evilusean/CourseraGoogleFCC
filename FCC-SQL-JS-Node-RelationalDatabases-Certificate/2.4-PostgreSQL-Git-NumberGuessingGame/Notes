@@ -45,9 +45,19 @@ When you run your script, you should prompt the user for a username with Enter y
 If that username has been used before, it should print Welcome back, <username>! You have played <games_played> games, and your best game took <best_game> guesses.,
   with <username> being a users name from the database, <games_played> being the total number of games that user has played, and <best_game> being the fewest number of guesses it
   took that user to win the game
-
 If the username has not been used before, you should print Welcome, <username>! It looks like this is your first time here.
-
+    if [[ -z $USER_INFO ]]
+    then
+      # If user doesn't exist, insert new user
+      INSERT_USER=$($PSQL "INSERT INTO users(username, games_played) VALUES('$USERNAME', 0)")
+      echo "Welcome, $USERNAME! It looks like this is your first time here."
+    else
+      # If user exists, get their info
+      echo "$USER_INFO" | while IFS="|" read GAMES_PLAYED BEST_GAME
+      do
+        echo "Welcome back, $USERNAME! You have played $GAMES_PLAYED games, and your best game took $BEST_GAME guesses."
+      done
+    fi
 The next line printed should be Guess the secret number between 1 and 1000: and input from the user should be read
 
 Until they guess the secret number, it should print It's lower than that, guess again: if the previous input was higher than the secret number, and It's higher than that,

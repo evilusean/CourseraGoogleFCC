@@ -94,7 +94,7 @@ The rest of the commit messages should start with fix:, feat:, refactor:, chore:
   git add number_guess.sh
   git commit -m "fix: ensure exact output formatting"
 You should finish your project while on the main branch, your working tree should be clean, and you should not have any uncommitted changes
-
+  git checkout -b main
 
 
 

@@ -1,4 +1,4 @@
-# FreeCodeCamp-SQL-JS-Node-RelationalDatabases-Certificate :
+# FreeCodeCamp-PostGreSQL-Bash-Git-RelationalDatabases-Certificate :
 
 Start : 12March2025 </br>
 End : 11April2025 </br>

@@ -2,6 +2,7 @@
 Start : 14April2025 </br>
 End : </br>
 
+[Tutorial :](https://www.youtube.com/watch?v=SpfIwlAYaKk) https://www.freecodecamp.org/news/posgresql-course-for-beginners/
 
 # [FreeCodeCamp-PostGreSQL-Bash-Git-RelationalDatabases-Certificate :](https://github.com/evilusean/CourseraGoogleFCC/tree/main/FCC-SQL-JS-Node-RelationalDatabases-Certificate)
 

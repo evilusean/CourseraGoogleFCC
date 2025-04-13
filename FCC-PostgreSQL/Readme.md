@@ -1,6 +1,8 @@
 Start : 14April2025 </br>
 End : </br>
 
+[Tutorial :](https://www.youtube.com/watch?v=SpfIwlAYaKk) https://www.freecodecamp.org/news/posgresql-course-for-beginners/
+
 PostgreSQL, an open-source relational database, has increasingly become the go-to choice for developers worldwide.</br>
 
 ⭐️ Contents ⭐️ </br>

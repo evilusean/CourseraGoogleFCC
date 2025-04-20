@@ -16,6 +16,8 @@ Install pgAdmin on Arch Linux (uses pip for below link, can also use yay) :
 https://www.atlantic.net/dedicated-server-hosting/how-to-install-pgadmin-on-arch-linux/
 'yay -S pgadmin4-py' #install pgadmin with yay package manager
 
+Docker Compose .yml file for PostgreSQL DB Management :
+https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/
 
 
 

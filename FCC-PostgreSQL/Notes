@@ -66,6 +66,7 @@ Step 2) Install pgAdmin : https://www.pgadmin.org/
     \q
 #That fix, took me like 3 hours to get. Basically, create a venv with python, and run it from there :
 Start pgAdmin4: 'pgadmin4-web' #afterwards, enter the email/password you initialized, start the web app from the script
+#so, for some reason, it won't run from terminal, you need to create a venv in python, download it there, and then run it from there, you initialize with an email/pw and use that for login
 Step 3) Download 'dvdrental.tar'
 
 

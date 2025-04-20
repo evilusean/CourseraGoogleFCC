@@ -1,0 +1,57 @@
+# Install PostgreSQL and Setup Commands :
+https://dev.to/codingashish_dev/step-by-step-guide-to-installing-postgresql-on-arch-linux-3ked
+'sudo pacman -S postgresql' #Installs postgreSQL on Arch Linux
+'sudo -iu postgres
+initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data'' 
+    #initialize the DB cluster : --locale $LANG: Sets the language settings for the database.
+    -E UTF8: Makes sure the database uses UTF-8 encoding.
+    -D '/var/lib/postgres/data': Chooses where the data will be stored.
+'sudo systemctl start postgresql' #starts postgreSQL 
+'sudo systemctl enable postgresql' #enables on startup
+'sudo -iu postgres' #manage databases and users, switch to the PostgreSQL user
+'createuser --interactive'  #command to create a user
+'createdb <your-database-name>' #create a DB
+'psql' #To start working with your databases, access the PostgreSQL command-line interface (CLI) with
+'psql <mydatabase>' #connect to a specific database
+'\q' #exit postgreSQL shell
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

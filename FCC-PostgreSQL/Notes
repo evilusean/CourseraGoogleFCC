@@ -19,7 +19,7 @@ Step 1) Download and Install PostgreSQL (Escape canada)
   # Start and enable PostgreSQL
   sudo systemctl enable postgresql
   sudo systemctl start postgresql
-
+Step 2) Install pgAdmin : https://www.pgadmin.org/
 
 
 

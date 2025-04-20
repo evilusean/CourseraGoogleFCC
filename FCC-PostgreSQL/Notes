@@ -8,7 +8,17 @@ pgAdmin = A free open source administration and development platform for managin
   Allows you to : DB Manage(create tables/views/indexs), Query, Edit data, monitor DB activity, manage server settings 
   Allows you to visually design database schemas, write and execute SQL queries -
 
-
+4:30 - Installing PostgreSQL and pgAdmin Steps : =============================================================================================================================================
+Step 1) Download and Install PostgreSQL (Escape canada) 
+  # Install PostgreSQL
+  sudo pacman -S postgresql
+  # Initialize the database cluster
+  sudo mkdir -p /var/lib/postgres/data
+  sudo chown -R postgres:postgres /var/lib/postgres/
+  sudo -u postgres initdb -D /var/lib/postgres/data
+  # Start and enable PostgreSQL
+  sudo systemctl enable postgresql
+  sudo systemctl start postgresql
 
 
 

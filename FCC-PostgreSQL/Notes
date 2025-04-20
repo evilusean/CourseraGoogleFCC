@@ -1,6 +1,12 @@
 Start : 20April2025
 0:30 - Introduction to PostgreSQL ============================================================================================================================================================
-PostGreSQL = Open sourced relational DB systems, robust, advanced 
+PostGreSQL = Open sourced relational DB systems, robust, advanced, versatile, reliable, extensibile, scalable.
+RDBMS = Relational DataBase Management System 
+ACID = Atomicity, Consistency, Isolation, Durability - Compliance
+pgAdmin = A free open source administration and development platform for managing PostgreSQL Databases.
+  It provides a GUI(Graphical User Interface) - that allows the user to intecat with the databases and perform various administrative tasks. Works on Multiple OS's
+  Allows you to : DB Manage(create tables/views/indexs), Query, Edit data, monitor DB activity, manage server settings 
+  Allows you to visually design database schemas, write and execute SQL queries -
 
 
 

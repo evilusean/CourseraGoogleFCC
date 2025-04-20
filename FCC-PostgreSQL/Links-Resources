@@ -9,6 +9,7 @@ PostgreSQL Official Docs :
 https://www.postgresql.org/docs/
 
 Installing PostgreSQL on Arch Linux :
+https://wiki.archlinux.org/title/PostgreSQL
 https://dev.to/codingashish_dev/step-by-step-guide-to-installing-postgresql-on-arch-linux-3ked
 'sudo pacman -S postgresql' #Installs postgreSQL on Arch Linux
 

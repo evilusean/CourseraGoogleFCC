@@ -20,7 +20,7 @@ Step 1) Download and Install PostgreSQL (Escape canada)
   sudo systemctl enable postgresql
   sudo systemctl start postgresql
 Step 2) Install pgAdmin : https://www.pgadmin.org/
-
+Step 3) Download 'dvdrental.tar'
 
 
 

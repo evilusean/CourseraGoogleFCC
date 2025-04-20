@@ -19,7 +19,53 @@ Step 1) Download and Install PostgreSQL (Escape canada)
   # Start and enable PostgreSQL
   sudo systemctl enable postgresql
   sudo systemctl start postgresql
-Step 2) Install pgAdmin : https://www.pgadmin.org/
+Step 2) Install pgAdmin : https://www.pgadmin.org/ 
+  #Let's clear out PostgreSQL and pgAdmin4 sessions and set up a fresh installation. Here's the step-by-step process:
+  #Remove existing sessions and configurations:
+    # Remove pgAdmin4 configurations
+    rm -rf ~/.config/pgadmin4
+    rm -rf ~/.pgadmin
+    # Remove PostgreSQL session data
+    sudo rm -rf /var/lib/postgres/data/*
+  #Create required directories for pgAdmin4:
+    sudo mkdir -p /var/lib/pgadmin
+    sudo mkdir -p /var/log/pgadmin
+    sudo chown $USER /var/lib/pgadmin
+    sudo chown $USER /var/log/pgadmin
+  # Initialize PostgreSQL
+    sudo -u postgres initdb -D /var/lib/postgres/data
+  # Start PostgreSQL service
+    sudo systemctl enable postgresql
+    sudo systemctl start postgresql
+  # Set up Python virtual environment for pgAdmin4: 
+    # Create and navigate to venv directory
+      mkdir ~/pgadmin4-venv
+      cd ~/pgadmin4-venv
+  # Create virtual environment
+    python -m venv pgadmin4env
+  # Activate virtual environment
+    source pgadmin4env/bin/activate
+  # Install pgAdmin4
+    pip install pgadmin4 gevent
+  # Create a Startup Script :
+    #!/bin/bash
+    cd ~/pgadmin4-venv
+    source pgadmin4env/bin/activate
+    pgadmin4
+  # Make it executable and add an alias: 
+    # Make executable
+    chmod +x ~/pgadmin4-venv/start-pgadmin.sh
+    # Add alias to shell config
+    echo 'alias pgadmin4-web="~/pgadmin4-venv/start-pgadmin.sh"' >> ~/.zshrc
+    source ~/.zshrc
+  # Switch to postgres user
+    sudo -u postgres psql
+    # In PostgreSQL shell:
+    CREATE USER archsean WITH PASSWORD 'yourpassword' SUPERUSER;
+    CREATE DATABASE archseandb OWNER archsean;
+    \q
+#That fix, took me like 3 hours to get. Basically, create a venv with python, and run it from there :
+Start pgAdmin4: 'pgadmin4-web' #afterwards, enter the email/password you initialized, start the web app from the script
 Step 3) Download 'dvdrental.tar'
 
 

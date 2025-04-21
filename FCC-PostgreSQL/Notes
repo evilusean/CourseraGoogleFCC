@@ -70,7 +70,11 @@ Start pgAdmin4: 'pgadmin4-web' #afterwards, enter the email/password you initial
   Saved the entire process here for future Sean, in case I need to do it again, there is also a docker image you can download, some pRedditors said it was better for running a postgreSQL.yaml
 Step 3) Download 'dvdrental.tar' - It's a .tar file, a compressed version of a database, DO NOT OPEN, added a .gitignore so it won't get auto uploaded to github when I PUSH ON SAVE
   https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip
-
+Step 4) Reset Computer - 
+Step 5) Restore The Database (Ignore Failed Exit Code if it appears)
+Step 6) Uninstall pgAdmin4 (It's installed Twice)
+Step 7) Run the Second install of pgAdmin4 as administrator(sudo)
+  Create a Master PW (This is where it broke for me last time, I have never had to do this again, just initialize an email)
 
 
 

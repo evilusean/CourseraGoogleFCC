@@ -68,7 +68,7 @@ Step 2) Install pgAdmin : https://www.pgadmin.org/
 Start pgAdmin4: 'pgadmin4-web' #afterwards, enter the email/password you initialized, start the web app from the script
 #so, for some reason, it won't run from terminal, you need to create a venv in python, download it there, and then run it from there, you initialize with an email/pw and use that for login
   Saved the entire process here for future Sean, in case I need to do it again, there is also a docker image you can download, some pRedditors said it was better for running a postgreSQL.yaml
-Step 3) Download 'dvdrental.tar'
+Step 3) Download 'dvdrental.tar' - It's a .tar file, a compressed version of a database, DO NOT OPEN, added a .gitignore so it won't get auto uploaded to github when I PUSH ON SAVE
   https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip
 
 

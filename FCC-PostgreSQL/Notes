@@ -76,7 +76,7 @@ Step 6) Uninstall pgAdmin4 (It's installed Twice)
 Step 7) Run the Second install of pgAdmin4 as administrator(sudo)
   Create a Master PW (This is where it broke for me last time, I have never had to do this again, just initialize an email)
 
-
+14:30 - Connect to pgAdmin Server -> Create/build new DB =======================================================================================================================================
 
 
 

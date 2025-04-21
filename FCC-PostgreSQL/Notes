@@ -101,6 +101,7 @@ Select Statement = used to retireve data from one or more DB tables. It allows y
 'SELECT <column_name> FROM <table_name>' #basic SELECT statement syntax
 'SELECT <column1>, <column2> FROM <table_name> #syntax for selecting multiple columns
 'SELECT * FROM <table_name>' #syntax for retrieving all columns in a table
+  Best practice is to avoid using the asterisk, because it pulls alot of data, causing a slow DB
 
 
 

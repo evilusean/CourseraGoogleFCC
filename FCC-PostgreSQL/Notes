@@ -97,7 +97,10 @@ After establishing a connection, you can now create a new PostgreSQL DB :
   'SELECT * FROM film' #basic query to test DB
 
 17:13 - SELECT statement =======================================================================================================================================================================
-
+Select Statement = used to retireve data from one or more DB tables. It allows you to specify the columns you want to retrieve, the tables to retrieve and any conditions to be met
+'SELECT <column_name> FROM <table_name>' #basic SELECT statement syntax
+'SELECT <column1>, <column2> FROM <table_name> #syntax for selecting multiple columns
+'SELECT * FROM <table_name>' #syntax for retrieving all columns in a table
 
 
 

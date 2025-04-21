@@ -77,7 +77,17 @@ Step 7) Run the Second install of pgAdmin4 as administrator(sudo)
   Create a Master PW (This is where it broke for me last time, I have never had to do this again, just initialize an email)
 
 14:30 - Connect to pgAdmin Server -> Create/build new DB =======================================================================================================================================
-
+To create a new database in pgAdmin4, you first need to establish a connection to a PostgreSQL server. Here's what you need to do:
+- In pgAdmin4, right-click on "Servers" in the browser tree
+- Select "Register" → "Server"
+- In the dialog that appears:
+- On the "General" tab:
+- Give your server a name (e.g., "LocalPostgres")
+- On the "Connection" tab:
+- Host: localhost (if running locally)
+- Port: 5432 (default PostgreSQL port)
+- Username: your PostgreSQL username (default is often postgres)
+- Password: your PostgreSQL password
 
 
 

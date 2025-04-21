@@ -69,7 +69,7 @@ Start pgAdmin4: 'pgadmin4-web' #afterwards, enter the email/password you initial
 #so, for some reason, it won't run from terminal, you need to create a venv in python, download it there, and then run it from there, you initialize with an email/pw and use that for login
   Saved the entire process here for future Sean, in case I need to do it again, there is also a docker image you can download, some pRedditors said it was better for running a postgreSQL.yaml
 Step 3) Download 'dvdrental.tar'
-
+  https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip
 
 
 

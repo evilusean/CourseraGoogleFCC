@@ -88,9 +88,13 @@ To create a new database in pgAdmin4, you first need to establish a connection t
 - Port: 5432 (default PostgreSQL port)
 - Username: your PostgreSQL username (default is often postgres)
 - Password: your PostgreSQL password
-
-
-
+After establishing a connection, you can now create a new PostgreSQL DB :
+- Right Click on the connected Server -> Create -> Database (name the new DB 'dvd-rental')
+- Right Click 'dvd-rental' DB -> 'Restore' -> Reference the 'dvdrental.tar' file downloaded previously
+  I couldn't find it, I guess it is only on the venv, thankfully, you can upload it, just do that, 
+- Right Click on 'dvdrental' DB -> 'Refresh'
+- Right Click DB -> 'Query Tool' #Allows you to Query and Test DB
+  'SELECT * FROM film' #basic query to test DB
 
 
 

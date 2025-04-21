@@ -13,11 +13,11 @@ https://wiki.archlinux.org/title/PostgreSQL
 https://dev.to/codingashish_dev/step-by-step-guide-to-installing-postgresql-on-arch-linux-3ked
 'sudo pacman -S postgresql' #Installs postgreSQL on Arch Linux
 
-Install pgAdmin on Arch Linux (uses pip for below link, can also use yay) : 
+Install pgAdmin on Arch Linux (idk why, but you might need to set up a VENV using python, or just use a dockerfile.yaml with it already set up, doesn't work globally for whatever reason) : 
 https://www.pgadmin.org/
 https://www.atlantic.net/dedicated-server-hosting/how-to-install-pgadmin-on-arch-linux/
 'yay -S pgadmin4-py' #install pgadmin with yay package manager
-'yay -S pgadmin4-desktop --needed'  #this one worked, first one didn't - I installed and created a bunch of passwords then it broke
+'yay -S pgadmin4-desktop --needed'  #this one worked, first one didn't - I installed and created a bunch of passwords then it broke, it still didn't work, requires a VENV
 https://aur.archlinux.org/packages/pgadmin4-desktop
 
 Docker Compose .yml file for PostgreSQL DB Management :

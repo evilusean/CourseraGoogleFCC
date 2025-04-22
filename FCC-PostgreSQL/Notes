@@ -112,6 +112,10 @@ Business Situation : See the date of existing customers - Use a SELECT statement
 SQL returns the data in the most efficient way, you need to use an ORDER BY statement to sort it
 
 31:15 - SELECT DISTINCT ========================================================================================================================================================================
+'DISTINCT' = In SQL, the DISTINCT statement is used to filter the result set of a query and retrieve only unique rows from the specified column or combination of columns 
+  - removes duplicates from query results, only the FIRST occurence of each unique combination of values is returned in the result set
+'SELECT DISTINCT <column> FROM <table_name>;' #syntax for basic SELECT DISTINCT STATEMENT
+'SELECT DISTINCT (<column>) FROM <table_name>;' #You can use parenthesis to clarify which column DISTINCT is being applied to
 
 
 

@@ -127,7 +127,9 @@ Situation : Identify all unique first names across all customers in the database
    find the number of rows that meet specific criteria - 
   Use the count function : if you need to determine the number of rows a table contains, count occurrences of a specfic values in a column, to get summary statistics about the data
 'COUNT DISTINCT' # combine the 2 keywords to eliminate duplicate rows from the result set and find the number of unique values in a specific column
-
+'SELECT COUNT(DISTINCT depertment) FROM employees' #finds the number of distinct/unique departments in the employees table
+'SELECT COUNT(column_name) FROM <table_name>;' #basic syntax, will count the number of non-NULL values, ignores NULL values in the row that you put in the (parenthesis)
+'SELECT COUNT(*) FROM <table_name>;' #basic syntax for counting ALL rows in table_name, use '*' asterisk when you want to count all rows, even with NULL values 
 
 
 

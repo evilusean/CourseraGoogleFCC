@@ -122,6 +122,12 @@ Situation : Identify all unique first names across all customers in the database
 'SELECT DISTINCT first_name FROM customer;' #that's it, that's the answer
 
 41:10 - COUNT ==================================================================================================================================================================================
+'COUNT' = An aggregate function that allows you to count the number of rows that match a specified condition within a table or a result set, 
+  it returns a single value representing the count of rows that meet the criteria - helps you obtain statistical information about your data -
+   find the number of rows that meet specific criteria - 
+  Use the count function : if you need to determine the number of rows a table contains, count occurrences of a specfic values in a column, to get summary statistics about the data
+'COUNT DISTINCT' # combine the 2 keywords to eliminate duplicate rows from the result set and find the number of unique values in a specific column
+
 
 
 

@@ -111,7 +111,7 @@ Business Situation : See the date of existing customers - Use a SELECT statement
 'SELECT customer_id, amount, payment_date from payment;' # query that completes the above criteria
 SQL returns the data in the most efficient way, you need to use an ORDER BY statement to sort it
 
-
+31:15 - SELECT DISTINCT ========================================================================================================================================================================
 
 
 

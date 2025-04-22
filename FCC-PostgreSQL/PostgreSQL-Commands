@@ -27,7 +27,8 @@ COUNT ==========================================================================
 'SELECT COUNT(column_name) FROM <table_name>;' #basic syntax, will count the number of non-NULL values, ignores NULL values in the row that you put in the (parenthesis)
 'SELECT COUNT(*) FROM <table_name>;' #basic syntax for counting ALL rows in table_name, use '*' asterisk when you want to count all rows, even with NULL values 
 
-
+WHERE ===============================================================================================================================================================================
+'SELECT <column 1>, <column 2> FROM <table_name> WHERE <condition>;' # basic syntax for a WHERE statement/query
 
 
 

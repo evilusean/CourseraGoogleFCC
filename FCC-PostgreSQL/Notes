@@ -133,7 +133,7 @@ Situation : Identify all unique first names across all customers in the database
 'SELECT COUNT(*) FROM payment;' #shows all rows from the payment table (14596)
 'SELECT COUNT(DISTINCT amount) FROM payment;' #notice the DISTINCT keyword is inside the parenethesis, returns all unique payments(19)
 
-
+54:05 - WHERE ==================================================================================================================================================================================
 
 
 

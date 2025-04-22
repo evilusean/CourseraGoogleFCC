@@ -19,7 +19,8 @@ SELECT STATEMENT ===============================================================
 'SELECT <column_name> FROM <table_name>' #basic SELECT statement syntax
 'SELECT <column1>, <column2> FROM <table_name> #syntax for selecting multiple columns
 'SELECT * FROM <table_name>' #syntax for retrieving all columns in a table
-
+'SELECT DISTINCT <column> FROM <table_name>;' #syntax for basic SELECT DISTINCT STATEMENT
+'SELECT DISTINCT (<column>) FROM <table_name>;' #You can use (parenthesis) to clarify which column DISTINCT is being applied to
 
 
 

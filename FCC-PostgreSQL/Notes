@@ -121,7 +121,7 @@ SQL returns the data in the most efficient way, you need to use an ORDER BY stat
 Situation : Identify all unique first names across all customers in the database - Write a SQL query to retrieve all distinct first names of customers from the 'customor' table
 'SELECT DISTINCT first_name FROM customer;' #that's it, that's the answer
 
-
+41:10 - COUNT ==================================================================================================================================================================================
 
 
 

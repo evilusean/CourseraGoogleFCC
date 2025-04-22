@@ -28,12 +28,22 @@ COUNT ==========================================================================
 'SELECT COUNT(*) FROM <table_name>;' #basic syntax for counting ALL rows in table_name, use '*' asterisk when you want to count all rows, even with NULL values 
 
 WHERE ===============================================================================================================================================================================
+A 'condition' is a logical expression that evalutes to true or false, here are some logical operators that can be used in where statements :
+  '=' = equals
+  '!=' or '<>' = not equals
+  '<' '>' = less than/greater than
+  '<=' '>=' = less than equals, greater than equals
+  'BETWEEN' = between a range of values
+  'LIKE' = pattern matching using wildcards (often used with '%'(represents 0, 1 or multiple characters) and '_'(represents a single character))
+  'IN' = matches a value in a list
+  'IS NULL' = Checks for NULL values
+  'AND' 'OR' 'NOT' = Logical operators for combining multiple conditions
 'SELECT <column 1>, <column 2> FROM <table_name> WHERE <condition>;' # basic syntax for a WHERE statement/query
-
-
-
-
-
+'SELECT * FROM employees WHERE first_name LIKE 'J%';' #will grab all the employees whose name starts with 'J'
+'SELECT * FROM employees WHERE age BETWEEN 25 AND 40;' # gets a range of all employees from 25-40
+'SELECT * FROM employees WHERE department IN ('HR', 'Finance', 'Admin', 'IT'); # selects all employees from the departments listed here 
+'SELECT * FROM employees WHERE phone_number IS NULL;' #gets all employees who don't have a phone number
+'SELECT * FROM employees WHERE department = 'HR' AND age >= 30;' # using the 'AND' clause to combine multiple operators to filter results
 
 
 

@@ -134,6 +134,10 @@ Situation : Identify all unique first names across all customers in the database
 'SELECT COUNT(DISTINCT amount) FROM payment;' #notice the DISTINCT keyword is inside the parenethesis, returns all unique payments(19)
 
 54:05 - WHERE ==================================================================================================================================================================================
+'WHERE' = a crucial part of querying and filtering data in a DB, allows you to retrieve specific rows from a table that match certain conditions
+  - Typically used in combination with a SELECT statement to filter rows based on conditions, only rows that meet the WHERE condition will be included in the results
+'SELECT <column 1>, <column 2> FROM <table_name> WHERE <condition>;' # basic syntax for a WHERE statement/query
+
 
 
 

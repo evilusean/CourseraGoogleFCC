@@ -118,6 +118,8 @@ SQL returns the data in the most efficient way, you need to use an ORDER BY stat
 'SELECT DISTINCT (<column>) FROM <table_name>;' #You can use (parenthesis) to clarify which column DISTINCT is being applied to
 
 39:15 - SELECT DISTINCT Challenge ==============================================================================================================================================================
+Situation : Identify all unique first names across all customers in the database - Write a SQL query to retrieve all distinct first names of customers from the 'customor' table
+'SELECT DISTINCT first_name FROM customer;' #that's it, that's the answer
 
 
 

@@ -137,6 +137,16 @@ Situation : Identify all unique first names across all customers in the database
 'WHERE' = a crucial part of querying and filtering data in a DB, allows you to retrieve specific rows from a table that match certain conditions
   - Typically used in combination with a SELECT statement to filter rows based on conditions, only rows that meet the WHERE condition will be included in the results
 'SELECT <column 1>, <column 2> FROM <table_name> WHERE <condition>;' # basic syntax for a WHERE statement/query
+A 'condition' is a logical expression that evalutes to true or false, here are some logical operators that can be used in where statements :
+  '=' = equals
+  '!=' or '<>' = not equals
+  '<' '>' = less than/greater than
+  '<=' '>=' = less than equals, greater than equals
+  'BETWEEN' = between a range of values
+  'LIKE' = pattern matching using wildcards (often used with % and _)
+  'IN' = matches a value in a list
+  'IS NULL' = Checks for NULL values
+  'AND' 'OR' 'NOT' = Logical operators for combining multiple conditions
 
 
 

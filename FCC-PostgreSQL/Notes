@@ -102,9 +102,11 @@ Select Statement = used to retireve data from one or more DB tables. It allows y
 'SELECT <column1>, <column2> FROM <table_name> #syntax for selecting multiple columns
 'SELECT * FROM <table_name>' #syntax for retrieving all columns in a table
   Best practice is to avoid using the asterisk, because it pulls alot of data, causing a slow DB
+'DB' -> 'Schemas' -> 'Tables' to view the layout of your DB
+Right Clink on DB you want to Query -> 'Query Tool' = How to write all queries using pgAdmin4
+apparently the 'SELECT' and 'FROM' SQL query keywords aren't case sensitive, and can be upper/lower case, I've been using SQL for years and didn't know that, it is convention though. 
 
-
-
+26:25 - SELECT challenge tasks =================================================================================================================================================================
 
 
 

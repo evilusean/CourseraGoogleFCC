@@ -107,7 +107,9 @@ Right Clink on DB you want to Query -> 'Query Tool' = How to write all queries u
 apparently the 'SELECT' and 'FROM' SQL query keywords aren't case sensitive, and can be upper/lower case, I've been using SQL for years and didn't know that, it is convention though. 
 
 26:25 - SELECT challenge tasks =================================================================================================================================================================
-
+Business Situation : See the date of existing customers - Use a SELECT statement to grab the customer id of every customer the payment date and the amount
+'SELECT customer_id, amount, payment_date from payment;' # query that completes the above criteria
+SQL returns the data in the most efficient way, you need to use an ORDER BY statement to sort it
 
 
 

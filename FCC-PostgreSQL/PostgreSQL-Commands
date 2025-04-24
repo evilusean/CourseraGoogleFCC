@@ -44,8 +44,8 @@ A 'condition' is a logical expression that evalutes to true or false, here are s
 'SELECT * FROM employees WHERE department IN ('HR', 'Finance', 'Admin', 'IT'); # selects all employees from the departments listed here 
 'SELECT * FROM employees WHERE phone_number IS NULL;' #gets all employees who don't have a phone number
 'SELECT * FROM employees WHERE department = 'HR' AND age >= 30;' # using the 'AND' clause to combine multiple operators to filter results
-
-
+'SELECT * FROM film WHERE rental_rate > 4 AND replacement_cost >= 19.99 AND rating = 'R';' #chaining together 'AND' operators
+'SELECT COUNT(*) FROM film WHERE rental_rate > 4 AND replacement_cost >= 19.99 AND rating = 'R';' #notice the 'COUNT(*)', this will return a number that match a set of conditions
 
 
 

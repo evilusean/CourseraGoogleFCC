@@ -146,7 +146,7 @@ A 'condition' is a logical expression that evalutes to true or false, here are s
   'LIKE' = pattern matching using wildcards (often used with '%'(represents 0, 1 or multiple characters) and '_'(represents a single character))
   'IN' = matches a value in a list
   'IS NULL' = Checks for NULL values
-  'AND' 'OR' 'NOT' = Logical operators for combining multiple conditions
+  'AND' 'OR' 'NOT' = Logical operators for combining multiple conditions - you can chain 'AND' conditions together, not grammaticaly correct, but syntactically correct
 'SELECT * FROM employees WHERE age BETWEEN 25 AND 40' # gets a range of all employees from 25-40
 'SELECT * FROM employees WHERE first_name LIKE 'J%';' #will grab all the employees whose name starts with 'J'
 'SELECT * FROM employees WHERE department IN ('HR', 'Finance', 'Admin', 'IT'); # selects all employees from the departments listed here 
@@ -156,7 +156,9 @@ A 'condition' is a logical expression that evalutes to true or false, here are s
 1:02:21 - WHERE Example =========================================================================================================================================================================
 SELECT * FROM customer WHERE first_name = 'Mary'; # search customer table for any first name of 'Mary' notice single quotation marks instead of double
 SELECT * FROM film WHERE rental_rate > 4; # select all films with a rental rate >4, that seems redundant
-
+SELECT * FROM film WHERE rental_rate > 4 AND replacement_cost >= 19.99; #And example
+SELECT * FROM film WHERE rental_rate > 4 AND replacement_cost >= 19.99 AND rating = 'R'; #chaining together 'AND' operators
+SELECT COUNT(*) FROM film WHERE rental_rate > 4 AND replacement_cost >= 19.99 AND rating = 'R'; #notice the 'COUNT(*)', this will return a number that match a set of conditions, 34
 
 
 

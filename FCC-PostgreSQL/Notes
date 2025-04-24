@@ -162,9 +162,12 @@ SELECT COUNT(*) FROM film WHERE rental_rate > 4 AND replacement_cost >= 19.99 AN
 SELECT * FROM film WHERE rating = 'R' OR rating = 'PG-13'; #OR example, 418
 
 1:11:20 - SELECT WHERE - Challenge Task =========================================================================================================================================================
-
-
-
+Situation - find the titles of films released in or after the year 2000 that have a rating of 'PG-13', you also need to know the replacement cost of these films
+SELECT title, replacement_cost FROM film WHERE release_year >= 2000 AND rating = 'PG-13';
+Situation 2 - you want to see the tiles of films with a rating of 'PG' and replacement cost of 10.99
+SELECT title FROM film WHERE replacement_cost >= 10.99 AND rating = 'PG'; 
+Situation 3 - titles of films released before the year 2000 or with a replacement cost less than 10$
+SELECT title FROM film WHERE replacement_cost < 10 OR release_year < 2000;
 
 
 

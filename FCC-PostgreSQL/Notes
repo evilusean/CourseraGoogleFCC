@@ -175,7 +175,7 @@ SELECT title FROM film WHERE replacement_cost < 10 OR release_year < 2000;
 'DISTINCT' = The DISTINCT keyword is used to eliminate duplicate rows from the result set - when used with count, will allow you to count the number of unique values in a specific column
  - didn't I already do this?
 
-
+1:27:50 - ORDER BY ============================================================================================================================================================================
 
 
 

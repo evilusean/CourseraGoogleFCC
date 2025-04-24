@@ -153,7 +153,7 @@ A 'condition' is a logical expression that evalutes to true or false, here are s
 'SELECT * FROM employees WHERE phone_number IS NULL;' #gets all employees who don't have a phone number
 'SELECT * FROM employees WHERE department = 'HR' AND age >= 30;' # using the 'AND' clause to combine multiple operators to filter results
 
-
+1:02:20 - WHERE Example =========================================================================================================================================================================
 
 
 

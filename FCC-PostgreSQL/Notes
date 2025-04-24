@@ -172,7 +172,8 @@ SELECT title FROM film WHERE replacement_cost < 10 OR release_year < 2000;
 1:15:00 - COUNT ===============================================================================================================================================================================
 'COUNT' = is an aggregate function that allows you to count the number of rows that match a specified condition within a table/result selt, returns a single value representing a count of rows
   It is valuable for various data analysis tasks
-
+'DISTINCT' = The DISTINCT keyword is used to eliminate duplicate rows from the result set - when used with count, will allow you to count the number of unique values in a specific column
+ - didn't I already do this?
 
 
 

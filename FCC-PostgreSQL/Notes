@@ -176,7 +176,8 @@ SELECT title FROM film WHERE replacement_cost < 10 OR release_year < 2000;
  - didn't I already do this?
 
 1:27:50 - ORDER BY ============================================================================================================================================================================
-
+'ORDER BY' = used to sort the result set of a query in a specified order, it is used when you want the queries output to be preseneted in a particular sequence based on one or more 
+  columns vause - used to make query results more meaningful and easier to interpret
 
 
 

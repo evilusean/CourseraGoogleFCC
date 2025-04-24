@@ -161,7 +161,7 @@ SELECT * FROM film WHERE rental_rate > 4 AND replacement_cost >= 19.99 AND ratin
 SELECT COUNT(*) FROM film WHERE rental_rate > 4 AND replacement_cost >= 19.99 AND rating = 'R'; #notice the 'COUNT(*)', this will return a number that match a set of conditions, 34
 SELECT * FROM film WHERE rating = 'R' OR rating = 'PG-13'; #OR example, 418
 
-
+1:11:20 - SELECT WHERE - Challenge Task =========================================================================================================================================================
 
 
 

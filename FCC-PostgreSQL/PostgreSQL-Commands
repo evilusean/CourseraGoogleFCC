@@ -47,7 +47,7 @@ A 'condition' is a logical expression that evalutes to true or false, here are s
 'SELECT * FROM film WHERE rental_rate > 4 AND replacement_cost >= 19.99 AND rating = 'R';' #chaining together 'AND' operators
 'SELECT COUNT(*) FROM film WHERE rental_rate > 4 AND replacement_cost >= 19.99 AND rating = 'R';' #notice the 'COUNT(*)', this will return a number that match a set of conditions
 'SELECT * FROM film WHERE rating = 'R' OR rating = 'PG-13';' #OR example
-
+'SELECT title, replacement_cost FROM film WHERE release_year >= 2000 AND rating = 'PG-13';' # example with selecting only 2 columns
 
 
 

@@ -169,7 +169,7 @@ SELECT title FROM film WHERE replacement_cost >= 10.99 AND rating = 'PG';
 Situation 3 - titles of films released before the year 2000 or with a replacement cost less than 10$
 SELECT title FROM film WHERE replacement_cost < 10 OR release_year < 2000;
 
-
+1:15:00 - COUNT ===============================================================================================================================================================================
 
 
 

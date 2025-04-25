@@ -183,7 +183,9 @@ SELECT title FROM film WHERE replacement_cost < 10 OR release_year < 2000;
 SELECT  * from customer ORDER BY first_name; #sorts ascending (starting from 'A' to 'Z')
 SELECT  * from customer ORDER BY first_name ASC; #defaults to ascending, explicitly declare it here
 SELECT  * from customer ORDER BY first_name DESC; #descending
+SELECT  * from customer ORDER BY store_id, first_name; # will sort by store_id first, and then by first name ascending
 
+ 
 
 
 

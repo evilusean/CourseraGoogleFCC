@@ -195,6 +195,14 @@ Pagination = A technique used in web applications and DB's to display and naviga
 'SELECT  * from payment ORDER BY payment_date ASC LIMIT 10;' #only returns the last 10 most recent payments, based on payment date
 
 1:42:05 - BETWEEN =============================================================================================================================================================================
+'BETWEEN' = used to filter data within a specified range of values, typically used in conjunction with the 'WHERE' clause to retrive certain rows 
+  - Both the specified start and end values will be included in the results set - can improve query performance by significantly reducing the amount of rows 
+'SELECT <column_names> FROM <table_name> WHERE <column_name> BETWEEN <value1> AND <value2>;' # Basic syntax for a 'BETWEEN' command
+'SELECT  * from payment WHERE amount BETWEEN 8 AND 9 LIMIT 10;' # finds all payments with an amount between and including 8-9
+'SELECT  * from payment WHERE amount NOT BETWEEN 8 AND 9 LIMIT 10;' # 'NOT' keyword, selects everything BUT the payments between 8-9
+'SELECT  COUNT(*) from payment WHERE amount NOT BETWEEN 8 AND 9;' # shows a count of all values 
+'SELECT * from payment WHERE payment_date BETWEEN '2007-02-01' AND '2007-02-15';' # using YMD to get 2 weeks of data
+
 
 
 

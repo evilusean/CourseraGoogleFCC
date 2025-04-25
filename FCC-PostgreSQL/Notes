@@ -194,7 +194,7 @@ Pagination = A technique used in web applications and DB's to display and naviga
 'SELECT <column> FROM <table_name> LIMIT <number_of_rows>;' #basic syntax for a limit query
 'SELECT  * from payment ORDER BY payment_date ASC LIMIT 10;' #only returns the last 10 most recent payments, based on payment date
 
-
+1:42:05 - BETWEEN =============================================================================================================================================================================
 
 
 

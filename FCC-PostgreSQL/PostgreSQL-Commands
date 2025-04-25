@@ -49,7 +49,11 @@ A 'condition' is a logical expression that evalutes to true or false, here are s
 'SELECT * FROM film WHERE rating = 'R' OR rating = 'PG-13';' #OR example
 'SELECT title, replacement_cost FROM film WHERE release_year >= 2000 AND rating = 'PG-13';' # example with selecting only 2 columns
 
-
+ORDER BY ================================================================================================================================================================================
+'SELECT <column1>, <column2> FROM <table_name> WHERE <conditions> ORDER BY <column1> [ASC | DESC], <column> [ASC | DESC]' #basic syntax of an ORDER BY query
+SELECT  * from customer ORDER BY first_name; #sorts ascending (starting from 'A' to 'Z')
+SELECT  * from customer ORDER BY first_name ASC; #defaults to ascending, explicitly declare it here
+SELECT  * from customer ORDER BY first_name DESC; #descending
 
 
 

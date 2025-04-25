@@ -180,6 +180,10 @@ SELECT title FROM film WHERE replacement_cost < 10 OR release_year < 2000;
   columns vause - used to make query results more meaningful and easier to interpret, presents data in a logical and readable order - Analysis  - Outliers - Pagination
   columns are sorted by ascending by default
 'SELECT <column1>, <column2> FROM <table_name> WHERE <conditions> ORDER BY <column1> [ASC | DESC], <column> [ASC | DESC]' #basic syntax of an ORDER BY query
+SELECT  * from customer ORDER BY first_name; #sorts ascending (starting from 'A' to 'Z')
+SELECT  * from customer ORDER BY first_name ASC; #defaults to ascending, explicitly declare it here
+SELECT  * from customer ORDER BY first_name DESC; #descending
+
 
 
 

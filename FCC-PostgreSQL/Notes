@@ -189,8 +189,10 @@ SELECT  * from customer ORDER BY store_id, first_name; # will sort by store_id f
 'LIMIT' = used to restrict the number of rows returned by a query - it allows you to specify a maximum number of rows - useful in large datasets
   - when querying large datasets, fetching all rows can consume significant resources and slow down your database.
   - Pagination : in web apps you often need to display data in chunks such as pages, by combining LIMIT with OFFSET clause, you can implement pagination easily. 
+Pagination = A technique used in web applications and DB's to display and navigate through large sets o data in smaller, manageable chunks or pages
 'OFFSET' = Used to speciy where to start fetching rows from
 'SELECT <column> FROM <table_name> LIMIT <number_of_rows>;' #basic syntax for a limit query
+'SELECT  * from payment ORDER BY payment_date ASC LIMIT 10;' #only returns the last 10 most recent payments, based on payment date
 
 
 

@@ -216,8 +216,16 @@ Pagination = A technique used in web applications and DB's to display and naviga
 1:54:20 - LIKE and ILIKE ======================================================================================================================================================================
 'LIKE' = Case-Sensitive Pattern matching, that allows you to use patternmatching and wildcard characters with text columns 
 'ILIKE' = case insensitive,that allows you to use patternmatching and wildcard characters with text columns
-'Select <column_name(s)> FROM <table_name> WHERE <column_name> LIKE <pattern>;' #Basic syntax for a LIKE query
-'Select <column_name(s)> FROM <table_name> WHERE <column_name> ILIKE <pattern>;' #Basic syntax for an ILIKE query
+-WildCard Characters :
+  '%' = represents ANY sequence of characters(including zero characters
+  '_' = Represents a single characeter
+  '[]' = represeents a character class, allowing you to match any single character with the specified set, used for alternate modes of spelling like OI MATE U GOT A L[O]ICENSE 4 DAT 'COL[u]OR' 
+'Select <column_name(s)> FROM <table_name> WHERE <column_name> LIKE <pattern>;' #Basic syntax for a LIKE query (case sensitive)
+'Select <column_name(s)> FROM <table_name> WHERE <column_name> ILIKE <pattern>;' #Basic syntax for an ILIKE query (case insensitive)
+'SELECT customer_name, contact_email FROM customers WHERE customer_name like 'J%';' #gets all the emails and names that start with customer name of 'J...'
+'SELECT product_name, category FROM products WHERE product_name like '%blue%';' # blues clues, gets all the products with 'blue' in the name
+'SELECT first_name, last_name FROM employees WHERE last_name ILIKE '%son';' # case insensitive 
+
 
 
 

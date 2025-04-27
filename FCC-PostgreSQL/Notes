@@ -205,8 +205,13 @@ Pagination = A technique used in web applications and DB's to display and naviga
 
 1:48:50 - IN ==================================================================================================================================================================================
 'IN' = used to filter data based on a specified list of value for a particular column. It allows you to retrieve rows where a specified column's value matches any of the values on the list.
+  - useful for when you want to filter rows based on a list of values, simplifies your query by allowing you to specify multiple acceptable values in a compact manner,
+  instead of writing multiple seperate 'OR' queries, you can just create one list and use that - also it is optimized and efficient, better than multiple 'OR's 
+  - flexibility : the IN command can be used with various data types, including numeric values, strings, and even subqueries
 'SELECT <column_name(s)> FROM <table_name> WHERE <column_name> IN (value1, value2, ...);' # Basic syntax for an IN query
-
+'SELECT * FROM payment WHERE amount IN ('0.99', '1.99', '1.98');' #retrieves all the payments for these amounts
+'SELECT * FROM payment WHERE amount NOT IN ('0.99', '1.99', '1.98');' #combine keywords 'NOT' and 'IN' to retrieve all the payments NOT IN these amounts
+'SELECT * FROM customer WHERE first_name IN ('John', 'Jake','Julia');' # searches for these names
 
 
 

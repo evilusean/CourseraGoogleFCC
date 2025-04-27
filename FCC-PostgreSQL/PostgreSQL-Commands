@@ -65,6 +65,9 @@ BETWEEN ========================================================================
 
 IN ============================================================================================================================================================================================
 'SELECT <column_name(s)> FROM <table_name> WHERE <column_name> IN (value1, value2, ...);' # Basic syntax for an IN query
+'SELECT * FROM payment WHERE amount IN ('0.99', '1.99', '1.98');' #retrieves all the payments for these amounts
+'SELECT * FROM payment WHERE amount NOT IN ('0.99', '1.99', '1.98');' #combine keywords 'NOT' and 'IN' to retrieve all the payments NOT IN these amounts
+'SELECT * FROM customer WHERE first_name IN ('John', 'Jake','Julia');' # searches for these names
 
 
 

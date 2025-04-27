@@ -76,6 +76,9 @@ IN =============================================================================
   '[]' = represeents a character class, allowing you to match any single character with the specified set
 'Select <column_name(s)> FROM <table_name> WHERE <column_name> LIKE <pattern>;' #Basic syntax for a LIKE query (case sensitive)
 'Select <column_name(s)> FROM <table_name> WHERE <column_name> ILIKE <pattern>;' #Basic syntax for an ILIKE query (case insensitive)
+'SELECT customer_name, contact_email FROM customers WHERE customer_name like 'J%';' #gets all the emails and names that start with customer name of 'J...'
+'SELECT product_name, category FROM products WHERE product_name like '%blue%';' # blues clues, gets all the products with 'blue' in the name
+'SELECT first_name, last_name FROM employees WHERE last_name ILIKE '%son';' # case insensitive 
 
 
 

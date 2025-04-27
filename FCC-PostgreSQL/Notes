@@ -213,7 +213,7 @@ Pagination = A technique used in web applications and DB's to display and naviga
 'SELECT * FROM payment WHERE amount NOT IN ('0.99', '1.99', '1.98');' #combine keywords 'NOT' and 'IN' to retrieve all the payments NOT IN these amounts
 'SELECT * FROM customer WHERE first_name IN ('John', 'Jake','Julia');' # searches for these names
 
-
+1:54:20 - LIKE and ILIKE ======================================================================================================================================================================
 
 
 

@@ -204,7 +204,8 @@ Pagination = A technique used in web applications and DB's to display and naviga
 'SELECT * from payment WHERE payment_date BETWEEN '2007-02-01' AND '2007-02-15';' # using YMD to get 2 weeks of data
 
 1:48:50 - IN ==================================================================================================================================================================================
-
+'IN' = used to filter data based on a specified list of value for a particular column. It allows you to retrieve rows where a specified column's value matches any of the values on the list.
+'SELECT <column_name(s)> FROM <table_name> WHERE <column_name> IN (value1, value2, ...);' # Basic syntax for an IN query
 
 
 

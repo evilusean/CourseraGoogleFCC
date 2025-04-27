@@ -203,7 +203,7 @@ Pagination = A technique used in web applications and DB's to display and naviga
 'SELECT  COUNT(*) from payment WHERE amount NOT BETWEEN 8 AND 9;' # shows a count of all values 
 'SELECT * from payment WHERE payment_date BETWEEN '2007-02-01' AND '2007-02-15';' # using YMD to get 2 weeks of data
 
-
+1:48:50 - IN ==================================================================================================================================================================================
 
 
 

@@ -69,7 +69,13 @@ IN =============================================================================
 'SELECT * FROM payment WHERE amount NOT IN ('0.99', '1.99', '1.98');' #combine keywords 'NOT' and 'IN' to retrieve all the payments NOT IN these amounts
 'SELECT * FROM customer WHERE first_name IN ('John', 'Jake','Julia');' # searches for these names
 
-
+1:54:20 - LIKE and ILIKE ======================================================================================================================================================================
+-WildCard Characters :
+  '%' = represents ANY sequence of characters(including zero characters
+  '_' = Represents a single characeter
+  '[]' = represeents a character class, allowing you to match any single character with the specified set
+'Select <column_name(s)> FROM <table_name> WHERE <column_name> LIKE <pattern>;' #Basic syntax for a LIKE query (case sensitive)
+'Select <column_name(s)> FROM <table_name> WHERE <column_name> ILIKE <pattern>;' #Basic syntax for an ILIKE query (case insensitive)
 
 
 

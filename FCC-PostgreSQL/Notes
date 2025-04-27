@@ -214,8 +214,10 @@ Pagination = A technique used in web applications and DB's to display and naviga
 'SELECT * FROM customer WHERE first_name IN ('John', 'Jake','Julia');' # searches for these names
 
 1:54:20 - LIKE and ILIKE ======================================================================================================================================================================
-
-
+'LIKE' = Case-Sensitive Pattern matching, that allows you to use patternmatching and wildcard characters with text columns 
+'ILIKE' = case insensitive,that allows you to use patternmatching and wildcard characters with text columns
+'Select <column_name(s)> FROM <table_name> WHERE <column_name> LIKE <pattern>;' #Basic syntax for a LIKE query
+'Select <column_name(s)> FROM <table_name> WHERE <column_name> ILIKE <pattern>;' #Basic syntax for an ILIKE query
 
 
 

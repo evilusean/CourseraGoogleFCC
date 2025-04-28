@@ -226,7 +226,7 @@ Pagination = A technique used in web applications and DB's to display and naviga
 'SELECT product_name, category FROM products WHERE product_name like '%blue%';' # blues clues, gets all the products with 'blue' in the name
 'SELECT first_name, last_name FROM employees WHERE last_name ILIKE '%son';' # case insensitive 
 
-
+2:10:50 - Retrieval Challenge ==================================================================================================================================================================
 
 
 

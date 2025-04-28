@@ -234,7 +234,7 @@ Pagination = A technique used in web applications and DB's to display and naviga
 'SELECT first_name, last_name, email FROM customers WHERE email LIKE '%gmail%';' #fifth
 'SELECT payment_id, customer_id, amount FROM payments WHERE amount BETWEEN 50 AND 100;' #sixth
 
-
+2:14:30 - AGGRATE ==============================================================================================================================================================================
 
 
 

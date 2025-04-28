@@ -227,6 +227,12 @@ Pagination = A technique used in web applications and DB's to display and naviga
 'SELECT first_name, last_name FROM employees WHERE last_name ILIKE '%son';' # case insensitive 
 
 2:10:50 - Retrieval Challenge ==================================================================================================================================================================
+'SELECT first_name, last_name, email FROM customer;' #answer to first challenge, it feels redundant typing out what each query does, when it's literally literally the query
+'SELECT payment_id, customer_id, amount FROM payment WHERE amount > 100;' #answer to second challenge
+'SELECT first_name, last_name, email FROM customer ORDER BY last_name ASC LIMIT 5;' #third
+'SELECT payment_id, customer_id, payment_date FROM payment WHERE EXTRACT(year FROM payment_date) = 2022;' #fourth
+'SELECT first_name, last_name, email FROM customers WHERE email LIKE '%gmail%';' #fifth
+'SELECT payment_id, customer_id, amount FROM payments WHERE amount BETWEEN 50 AND 100;' #sixth
 
 
 

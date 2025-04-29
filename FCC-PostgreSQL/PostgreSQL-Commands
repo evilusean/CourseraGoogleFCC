@@ -107,7 +107,10 @@ HAVING =========================================================================
 'SELECT store_id, COUNT(customer) FROM customer GROUP BY store_id;' # see total number of customers per store
 'SELECT store_id, COUNT(customer) FROM customer GROUP BY store_id HAVING COUNT(customer_id > 300);' # see total number of customers per store with an aggregate count of >300
 
-
+AS =====================================================================================================================================================================================
+'SELECT <original_name> AS <new_name> FROM <table_name>;' # Basic Syntax for an 'AS' query
+'SELECT customer_id, SUM(amount) AS total_spent FROM payment GROUP BY customer_id;' #will show you the amount that each customer has spent, renames 'SUM' to 'total_spent'
+'SELECT customer_id, SUM(amount) AS total_spent FROM payment GROUP BY customer_id HAVING SUM(amount) > 100;' # 'AS' with a 'HAVING' clause
 
 
 

@@ -234,10 +234,18 @@ Pagination = A technique used in web applications and DB's to display and naviga
 'SELECT first_name, last_name, email FROM customers WHERE email LIKE '%gmail%';' #fifth
 'SELECT payment_id, customer_id, amount FROM payments WHERE amount BETWEEN 50 AND 100;' #sixth
 
-2:14:30 - AGGRATE ==============================================================================================================================================================================
+2:14:30 - AGGREGATE ==============================================================================================================================================================================
 'AGGREGATE' = special functions that perform calculations on a set of values and return a single value as a result. commonly used to summarize or derive meaningful insights from large datasets
   Instead of operating on individual rows, aggregate functions work  on a group of rows and return a single value for each group.
   Used for tasks such as calculating averages, sums, counts, minimum, maximum values and more
+  - 'GROUP BY' - Aggregate functions are often used in conjunction with the GROUP BY clause, it divides the result set into groups based on one or more columns
+    The Aggregate function then operates on each group separately, producing a single result for each group
+Aggregate Functions :
+  'SUM' = Calculates the sum of a numeric column with a group
+  'AVG' = computes the average of a numeric column within a group
+  'COUNT' = counts the number of rows within a group
+  'MIN' = returns the minimum value from a column within a group
+  'MAX' = returns the maximum value from a column within a group
 
 
 

@@ -235,7 +235,9 @@ Pagination = A technique used in web applications and DB's to display and naviga
 'SELECT payment_id, customer_id, amount FROM payments WHERE amount BETWEEN 50 AND 100;' #sixth
 
 2:14:30 - AGGRATE ==============================================================================================================================================================================
-
+'AGGREGATE' = special functions that perform calculations on a set of values and return a single value as a result. commonly used to summarize or derive meaningful insights from large datasets
+  Instead of operating on individual rows, aggregate functions work  on a group of rows and return a single value for each group.
+  Used for tasks such as calculating averages, sums, counts, minimum, maximum values and more
 
 
 

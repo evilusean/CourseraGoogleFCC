@@ -101,9 +101,11 @@ GROUP BY =======================================================================
 'SELECT DATE(payment_date), SUM(amount) FROM payment GROUP BY DATE(payment_date) ORDER BY SUM(amount);' # using the 'DATE' keyword get's the y-m-d without hours, ordered by sum of each day
 'SELECT customer_id, COUNT(amount) FROM payment GROUP BY customer_id ORDER BY COUNT(amount);' #shows total amount of transacations for each customer ID
 
-
-
-
+HAVING ================================================================================================================================================================================
+'SELECT <column1>, aggregate_function(<column2>) FROM <table> GROUP BY <column1> HAVING <condition>;' # basic syntax for a HAVING query
+'SELECT customer_id, SUM(amount) FROM payment GROUP BY customer_id HAVING SUM(amount > 100);' #filters out customers with sum amount > 100 
+'SELECT store_id, COUNT(customer) FROM customer GROUP BY store_id;' # see total number of customers per store
+'SELECT store_id, COUNT(customer) FROM customer GROUP BY store_id HAVING COUNT(customer_id > 300);' # see total number of customers per store with an aggregate count of >300
 
 
 

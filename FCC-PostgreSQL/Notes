@@ -253,6 +253,6 @@ Aggregate Functions :
 'SELECT ROUND(AVG(replacement_cost), 3) FROM film;' # Rounded average, 'ROUND' keyword with (parenthesis) and the number of digits to round to
 'SELECT SUM(replacement_cost) FROM film;' # Sum
 
-
+2:20:00 - GROUP BY ===============================================================================================================================================================================
 
 

@@ -254,5 +254,27 @@ Aggregate Functions :
 'SELECT SUM(replacement_cost) FROM film;' # Sum
 
 2:20:00 - GROUP BY ==============================================================================================================================================================================
+'GROUP BY' = clause is used to group rows fromm a table based on one or more columns. This grouping enables the application of aggregate functions, such as :
+  'SUM', 'COUNT', 'AVG', 'MIN', 'MAX' on subsets of data sharing common values in the specified columns. 
+  Essentially, it transforms individual rows into summarized information, aiding in the anlysis of large datasets and revealing trends and insights that might not be immediately apparent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

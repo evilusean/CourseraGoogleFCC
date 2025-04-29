@@ -286,14 +286,8 @@ When using GROUP BY, you have several considerations when writing your query :
 'SELECT store_id, COUNT(customer) FROM customer GROUP BY store_id HAVING COUNT(customer_id > 300);' # see total number of customers per store with an aggregate count of >300
 
 2:48:10 - AS ====================================================================================================================================================================================
-
-
-
-
-
-
-
-
-
-
-
+'AS' = Alias - lets you give nicknames to tables, columns, or calculations in your queries. - significantly shorten/simplify queries with 'AS'
+  - If you want to use spaces in your new name, you most wrap the "New Name" in double quotes
+'SELECT <original_name> AS <new_name> FROM <table_name>;' # Basic Syntax for an 'AS' query
+'SELECT customer_id, SUM(amount) AS total_spent FROM payment GROUP BY customer_id;' #will show you the amount that each customer has spent, renames 'SUM' to 'total_spent'
+'SELECT customer_id, SUM(amount) AS total_spent FROM payment GROUP BY customer_id HAVING SUM(amount) > 100;' # 'AS' with a 'HAVING' clause

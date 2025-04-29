@@ -273,6 +273,10 @@ When using GROUP BY, you have several considerations when writing your query :
 'SELECT customer_id, COUNT(amount) FROM payment GROUP BY customer_id ORDER BY COUNT(amount);' #shows total amount of transacations for each customer ID
 
 2:37:15 - GROUP BY challenge ====================================================================================================================================================================
+'SELECT staff_id, SUM(amount) FROM payment GROUP BY staff_id;' 
+'SELECT payment_id, amount, payment_date FROM payment WHERE payment_date = 'YYYY-MM-DD';' #get's all payments from a specified date
+
+2:38:20 - HAVING ================================================================================================================================================================================
 
 
 

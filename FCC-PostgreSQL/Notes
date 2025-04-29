@@ -277,8 +277,15 @@ When using GROUP BY, you have several considerations when writing your query :
 'SELECT payment_id, amount, payment_date FROM payment WHERE payment_date = 'YYYY-MM-DD';' #get's all payments from a specified date
 
 2:38:20 - HAVING ================================================================================================================================================================================
+'HAVING' = is a command in postgre that is used in conjunction with the GROUP BY clause to filter results of a query based on the aggregated values of a column(s).
+  It allows you to apply conditions to the result set after grouping has been performed. In other words, while the WHERE clause filter individual rows, the HAVING clause filters groups of rows
+  use 'WHERE' for filtering single rows, use 'HAVING' for filtering aggregate functions
+'SELECT <column1>, aggregate_function(<column2>) FROM <table> GROUP BY <column1> HAVING <condition>;' # basic syntax for a HAVING query
+'SELECT customer_id, SUM(amount) FROM payment GROUP BY customer_id HAVING SUM(amount > 100);' #filters out customers with sum amount > 100 
+'SELECT store_id, COUNT(customer) FROM customer GROUP BY store_id;' # see total number of customers per store
+'SELECT store_id, COUNT(customer) FROM customer GROUP BY store_id HAVING COUNT(customer_id > 300);' # see total number of customers per store with an aggregate count of >300
 
-
+2:48:10 - AS ====================================================================================================================================================================================
 
 
 

@@ -266,10 +266,11 @@ When using GROUP BY, you have several considerations when writing your query :
   Filtering - Incorporate filtering criteria, often using HAVING clause, to focus on specific data subsets within groups
 
 2:26:00 - GROUP BY example ======================================================================================================================================================================
-
-
-
-
+'SELECT customer_id, SUM(amount) FROM payment GROUP BY customer_id;' # retrieves the total sum each customer has spent at the stores, and groups it to each customer_id
+'SELECT customer_id, SUM(amount) FROM payment GROUP BY customer_id ORDER BY SUM(amount);' # orders sum grouped by customer_id with sum sorted ascending (least amount spent first) 
+'SELECT staff_id, customer_id, SUM(amount) FROM payment GROUP BY customer_id, staff_id ORDER BY SUM(amount);' # total amount spent with customer_id and staff_id
+'SELECT DATE(payment_date), SUM(amount) FROM payment GROUP BY DATE(payment_date) ORDER BY SUM(amount);' # using the 'DATE' keyword get's the y-m-d without hours, ordered by sum of each day
+'SELECT customer_id, COUNT(amount) FROM payment GROUP BY customer_id ORDER BY COUNT(amount);' #shows total amount of transacations for each customer ID
 
 
 

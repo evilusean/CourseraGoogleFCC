@@ -234,7 +234,7 @@ Pagination = A technique used in web applications and DB's to display and naviga
 'SELECT first_name, last_name, email FROM customers WHERE email LIKE '%gmail%';' #fifth
 'SELECT payment_id, customer_id, amount FROM payments WHERE amount BETWEEN 50 AND 100;' #sixth
 
-2:14:30 - AGGREGATE ==============================================================================================================================================================================
+2:14:30 - AGGREGATE =============================================================================================================================================================================
 'AGGREGATE' = special functions that perform calculations on a set of values and return a single value as a result. commonly used to summarize or derive meaningful insights from large datasets
   Instead of operating on individual rows, aggregate functions work  on a group of rows and return a single value for each group.
   Used for tasks such as calculating averages, sums, counts, minimum, maximum values and more
@@ -253,6 +253,6 @@ Aggregate Functions :
 'SELECT ROUND(AVG(replacement_cost), 3) FROM film;' # Rounded average, 'ROUND' keyword with (parenthesis) and the number of digits to round to
 'SELECT SUM(replacement_cost) FROM film;' # Sum
 
-2:20:00 - GROUP BY ===============================================================================================================================================================================
+2:20:00 - GROUP BY ==============================================================================================================================================================================
 
 

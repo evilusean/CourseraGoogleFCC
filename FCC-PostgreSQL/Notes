@@ -272,7 +272,7 @@ When using GROUP BY, you have several considerations when writing your query :
 'SELECT DATE(payment_date), SUM(amount) FROM payment GROUP BY DATE(payment_date) ORDER BY SUM(amount);' # using the 'DATE' keyword get's the y-m-d without hours, ordered by sum of each day
 'SELECT customer_id, COUNT(amount) FROM payment GROUP BY customer_id ORDER BY COUNT(amount);' #shows total amount of transacations for each customer ID
 
-
+2:37:15 - GROUP BY challenge ====================================================================================================================================================================
 
 
 

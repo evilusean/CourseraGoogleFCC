@@ -94,8 +94,12 @@ Aggregate Functions :
 'SELECT ROUND(AVG(replacement_cost), 3) FROM film;' # Rounded average, 'ROUND' keyword with (parenthesis) and the number of digits to round to
 'SELECT SUM(replacement_cost) FROM film;' # Sum
 
-
-
+GROUP BY ==============================================================================================================================================================================
+'SELECT customer_id, SUM(amount) FROM payment GROUP BY customer_id;' # retrieves the total sum each customer has spent at the stores, and groups it to each customer_id
+'SELECT customer_id, SUM(amount) FROM payment GROUP BY customer_id ORDER BY SUM(amount);' # orders sum grouped by customer_id with sum sorted ascending (least amount spent first) 
+'SELECT staff_id, customer_id, SUM(amount) FROM payment GROUP BY customer_id, staff_id ORDER BY SUM(amount);' # total amount spent with customer_id and staff_id
+'SELECT DATE(payment_date), SUM(amount) FROM payment GROUP BY DATE(payment_date) ORDER BY SUM(amount);' # using the 'DATE' keyword get's the y-m-d without hours, ordered by sum of each day
+'SELECT customer_id, COUNT(amount) FROM payment GROUP BY customer_id ORDER BY COUNT(amount);' #shows total amount of transacations for each customer ID
 
 
 

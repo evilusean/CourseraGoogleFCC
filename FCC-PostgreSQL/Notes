@@ -265,7 +265,7 @@ When using GROUP BY, you have several considerations when writing your query :
   Sorting - If neccesary, specify the sorting order using the ORDER BY clause to arrange groups or results in a meaningful way
   Filtering - Incorporate filtering criteria, often using HAVING clause, to focus on specific data subsets within groups
 
-
+2:26:00 - GROUP BY example ======================================================================================================================================================================
 
 
 

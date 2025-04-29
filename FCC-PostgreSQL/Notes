@@ -257,6 +257,13 @@ Aggregate Functions :
 'GROUP BY' = clause is used to group rows fromm a table based on one or more columns. This grouping enables the application of aggregate functions, such as :
   'SUM', 'COUNT', 'AVG', 'MIN', 'MAX' on subsets of data sharing common values in the specified columns. 
   Essentially, it transforms individual rows into summarized information, aiding in the anlysis of large datasets and revealing trends and insights that might not be immediately apparent
+  For the GROUP BY clause to be effective, it is essential to select categorical or discrete columns. These columns contain discrete values, often representing categories, class, or labels.
+  Use the GROUP BY clause for aggregating data(summary statistics), segmentation(identifying trends), reporting - for generating reports and dashboards, simplifying complex data
+When using GROUP BY, you have several considerations when writing your query :
+  Column Select - choose categorical columns relevant to analysis, grouping too many columns can lead to excessive complexity and information overload
+  Aggregate Functions - Select appropriate aggragate functions based on the insights you seek. 
+  Sorting - If neccesary, specify the sorting order using the ORDER BY clause to arrange groups or results in a meaningful way
+  Filtering - Incorporate filtering criteria, often using HAVING clause, to focus on specific data subsets within groups
 
 
 

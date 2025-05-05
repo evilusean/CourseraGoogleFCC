@@ -1,7 +1,9 @@
 Start : 05May2025
 
 0:40 - Intro ===================================================================================================================================================================================
-
+Supabase = Powerful Free Open Source Alternative to Google's Firebase (It's PostgreSQL) - Can build modern, secure webapps with SupaBase - Realtime DB's, API's, Supabase Auth(SDK)
+  Create Tables(SQL, Policies, Row-Level Security), Notificiation System, Storage System, One Click BackEnd-As-A-Service(fast), Email Templates, User Management/Recover Password, 
+  Read/Insert/Delete, Subscriptions, Relations(DB), Functions, Schemas, Storage, Logs, Extensions, Realtime, Edge-Functions, Webhooks
 
 
 

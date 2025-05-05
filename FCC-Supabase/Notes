@@ -6,10 +6,12 @@ Supabase = Powerful Free Open Source Alternative to Google's Firebase (It's Post
   Read/Insert/Delete, Subscriptions, Relations(DB), Functions, Schemas, Storage, Logs, Extensions, Realtime, Edge-Functions, Webhooks
 
 4:15 - Create A Project ========================================================================================================================================================================
-
-
-
-
+https://supabase.com/
+Free Tier = Totally free to start (up to 500mb of DB & 1GB of file storage) - 2GB of bandwith - 0Auth Providers - 50,000 monthly users - up to 50MB file uploads - 500K edge function invokes
+PostgreSQL Edge Functions allow you to run an application on the backend 
+'Instant API' - The Supabase Documentation generates the code you need for the front end with an SDK/API for each function you might want to use
+Top Left Corner on Supabase.com -> Click 'Start Your Project'(or Sign In) -> Head to Dashboard -> Create an OrganizASean 
+Create Project (Max of 2 Projects on Free Tier) -> Select an OrganizASean -> Create a DB PW(a5-Can be Generated + Copy and Paste) -> Region -> Create
 
 
 

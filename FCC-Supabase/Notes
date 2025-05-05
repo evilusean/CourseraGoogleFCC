@@ -12,9 +12,18 @@ PostgreSQL Edge Functions allow you to run an application on the backend
 'Instant API' - The Supabase Documentation generates the code you need for the front end with an SDK/API for each function you might want to use
 Top Left Corner on Supabase.com -> Click 'Start Your Project'(or Sign In) -> Head to Dashboard -> Create an OrganizASean 
 Create Project (Max of 2 Projects on Free Tier) -> Select an OrganizASean -> Create a DB PW(a5-Can be Generated + Copy and Paste) -> Region -> Create
-
-
-
+Left Hand Side(after project is created) on Dashboard = Gives you a Table/SQL editor, DB, Auth, Storage, Edge Functions, Reports, Logs, API Docs, Settings
+https://supabase.com/docs
+SQL Editor = Scripts for 'Create Table'(in PostgreSQL) 'Add Column' and more, there are 'Quick Start' Scripts that will set up very difficult parts for you, like :
+  'Slack Clone'(with Row Level Security & all policies required), 'To Do App',  'User Management Starter'
+Authentication Providers = A supa long list(heh), with all the big names like google, github, email, apple, phone, linkedin*ptuh*, FB, twitter, twitch, etc, etc - this is supa useful(heh)
+  Famous Last Words : "I'll just roll my own Auth"
+Email Templates = For Signup, Invite, Magic Link, Change Email PW, Reset Password
+Storage = Assets (Images, Documents, Whatever)
+Edge Functions = Similar to Server Actions
+Reports = Backend Reports for your 5 daily users
+Logs = Not just for lumberjacks, saves all the stuff you need to run your API
+API Docs = Tells you how to run the API
 
 
 

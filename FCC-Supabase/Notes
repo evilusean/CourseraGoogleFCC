@@ -32,8 +32,12 @@ When you first open the 'Table Editor' on the left hand side there is a 'schema'
   Each table is just a row and columns, 'Columns'(id, primary key, datatypes, all that good stuff), and 'Foreign Keys'
 Best practice is to write in 'Snake Case' snake_case is a naming convention where words are separated by underscores and all letters are lowercase
 'import data via spreadsheet' option as well, if you already have a table format figured out, you can import it into supabase
+Create Table 'clients'
 He changes the 'id' from an 'int8' to a 'uuid' (universally unique identifier = random numbers)
-'created_at' is a 'timestamp' function 'now()' that will just take the datetime of when a client was created/added
+'created_at' is a 'timestamp' function 'now()' that will just take the datetime of when a client was created/added for the default value
+add a column 'email' Type 'text' - since you do not want a client without an email click the 'settings' next to the column and select 'Is Nullable' and uncheck it, 
+  check 'Is Unique' so you don't have different clients with the same email
+  
 
 
 

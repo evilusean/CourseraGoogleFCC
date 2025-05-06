@@ -26,7 +26,8 @@ Logs = Not just for lumberjacks, saves all the stuff you need to run your API
 API Docs = Tells you how to run the API
 
 15:55 - Tables ==================================================================================================================================================================================
-
+Supabase works with PostgreSQL - In PostgreSQL each DB has many tables - To work with tables in Supabase use the dashboard 'Table Editor' on the left hand side
+When you first open the 'Table Editor' on the left hand side there is a 'schema' dropdown : Auth, extensions, graphql, public, realtime, storage, vault
 
 
 

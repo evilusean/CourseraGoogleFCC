@@ -41,7 +41,7 @@ When you create a table, it isn't final, you can insert/add rows and columns aft
 You can 'Refresh' just a table, sort, filter, all using supabase instead of writing queries, you can use the GUI dashboard in your browser
 Create Table 'orders' with 'id' = 'uuid', 'generate_random' + 'created_at' = 'timestamp', 'now()' + 'client_id' = 'uuid', <foreign key>, not nullable + 'price' = 'numeric' + 'address' = 'text'
 
-
+30:40 - RLS(Row Level Security) =================================================================================================================================================================
 
 
 

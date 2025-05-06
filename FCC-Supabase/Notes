@@ -39,6 +39,7 @@ add a column 'email' Type 'text' - since you do not want a client without an ema
   check 'Is Unique' so you don't have different clients with the same email
 When you create a table, it isn't final, you can insert/add rows and columns after it is created
 You can 'Refresh' just a table, sort, filter, all using supabase instead of writing queries, you can use the GUI dashboard in your browser
+Create Table 'orders' with 'id' = 'uuid', 'generate_random' + 'created_at' = 'timestamp', 'now()' + 'client_id' = 'uuid', <foreign key>, not nullable + 'price' = 'numeric' + 'address' = 'text'
 
 
 

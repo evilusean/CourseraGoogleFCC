@@ -37,7 +37,8 @@ He changes the 'id' from an 'int8' to a 'uuid' (universally unique identifier = 
 'created_at' is a 'timestamp' function 'now()' that will just take the datetime of when a client was created/added for the default value
 add a column 'email' Type 'text' - since you do not want a client without an email click the 'settings' next to the column and select 'Is Nullable' and uncheck it, 
   check 'Is Unique' so you don't have different clients with the same email
-  
+When you create a table, it isn't final, you can insert/add rows and columns after it is created
+You can 'Refresh' just a table, sort, filter, all using supabase instead of writing queries, you can use the GUI dashboard in your browser
 
 
 

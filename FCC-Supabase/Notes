@@ -28,10 +28,12 @@ API Docs = Tells you how to run the API
 15:55 - Tables ==================================================================================================================================================================================
 Supabase works with PostgreSQL - In PostgreSQL each DB has many tables - To work with tables in Supabase use the dashboard 'Table Editor' on the left hand side
 When you first open the 'Table Editor' on the left hand side there is a 'schema' dropdown : Auth, extensions, graphql, public, realtime, storage, vault
-
-
-
-
+'New Table' -> Select a 'Name', RLS(Row Level Security) is enabled by default, 'Policies' (needed to query data if using RLS), 'RealTime', 
+  Each table is just a row and columns, 'Columns'(id, primary key, datatypes, all that good stuff), and 'Foreign Keys'
+Best practice is to write in 'Snake Case' snake_case is a naming convention where words are separated by underscores and all letters are lowercase
+'import data via spreadsheet' option as well, if you already have a table format figured out, you can import it into supabase
+He changes the 'id' from an 'int8' to a 'uuid' (universally unique identifier = random numbers)
+'created_at' is a 'timestamp' function 'now()' that will just take the datetime of when a client was created/added
 
 
 

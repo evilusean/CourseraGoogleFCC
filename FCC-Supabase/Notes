@@ -55,7 +55,7 @@ https://supabase.com/docs/guides/database/postgres/row-level-security
   #basic syntax for a policy that allows delete based on the users id, will require them to have a 'user_id'(named exactly that) as a column on the table
 *FUTURE SEAN* If you make a mistake, and mess up, your tables could be public, don't be '"that guy"'
 The templates, actually allow you to change the access(auth) and type(INSERT vs DELETE), but keep the format, so you can change a 'Enable delete for users based on user_id' into a SELECT
-
+RLS is used for securing your database and supabase instance 
 
 
 

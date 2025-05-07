@@ -57,7 +57,7 @@ https://supabase.com/docs/guides/database/postgres/row-level-security
 The templates, actually allow you to change the access(auth) and type(INSERT vs DELETE), but keep the format, so you can change a 'Enable delete for users based on user_id' into a SELECT
 RLS is used for securing your database and supabase instance 
 
-
+44:50 - Authentication =========================================================================================================================================================================
 
 
 

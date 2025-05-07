@@ -63,7 +63,7 @@ Helps to log in/log out to session and then access whatever tables you have been
 You can 'Invite' a user to join through email in the top right corner - this email will ask you to confirm on localhost:3000
 There is also an SQL script template called 'User Management'
 Providers = Email/Phone/Apple/Google/LinkedIn/Github/FB/etc - read the docs to connect them, for each one you need to go on their app/website, and create something then connect it to the DB
-
+-He had an app he built previously to test the login authentication, but didn't leave a link -
 
 
 

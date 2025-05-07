@@ -42,7 +42,7 @@ You can 'Refresh' just a table, sort, filter, all using supabase instead of writ
 Create Table 'orders' with 'id' = 'uuid', 'generate_random' + 'created_at' = 'timestamp', 'now()' + 'client_id' = 'uuid', <foreign key>, not nullable + 'price' = 'numeric' + 'address' = 'text'
 
 30:40 - RLS(Row Level Security) =================================================================================================================================================================
-
+RLS - Allows Usage of DB using policies, the user has to configure all the access by writing security policies to the tables, allows you to choose who writes and reads what rows on a table
 
 
 

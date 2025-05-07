@@ -44,7 +44,7 @@ Create Table 'orders' with 'id' = 'uuid', 'generate_random' + 'created_at' = 'ti
 30:40 - RLS(Row Level Security) =================================================================================================================================================================
 RLS - Allows Usage of DB using policies, the user has to configure all the access by writing security policies to the tables, allows you to choose who writes and reads what rows on a table
 To Create a new policy : 'Authentication' (left hand side) -> 'Policies'
-
+https://supabase.com/docs/guides/database/postgres/row-level-security
 
 
 

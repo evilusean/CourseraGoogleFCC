@@ -58,10 +58,10 @@ The templates, actually allow you to change the access(auth) and type(INSERT vs 
 RLS is used for securing your database and supabase instance 
 
 44:50 - Authentication =========================================================================================================================================================================
-
-
-
-
+Helps to log in/log out to session and then access whatever tables you have been given access to through security policies
+'Authentication' (left hand menus) 
+You can 'Invite' a user to join through email in the top right corner - this email will ask you to confirm on localhost:3000
+There is also an SQL script template called 'User Management'
 
 
 

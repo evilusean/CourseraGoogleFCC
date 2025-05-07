@@ -49,7 +49,7 @@ https://supabase.com/docs/guides/database/postgres/row-level-security
 'Target Roles' = Every user can have a role, like 'anon', 'authenticated', 'admin', etc - so you can restrict access and only give it to those who should have it
 'CREATE POLICY "policy_name" ON public.clients FOR SELECT USING ( true ); #basic syntax for creating a policy that allows ANY and EVERY user to enable read access for all users
 'create policy "policy_name" on "public"."clients" as PERMISSIVE for INSERT to authenticated with check (  true  ); #basic syntax for allowing only authenticated users to insert
-
+*FUTURE SEAN* If you make a mistake, and mess up, your tables could be public, don't be '"that guy"'
 
 
 

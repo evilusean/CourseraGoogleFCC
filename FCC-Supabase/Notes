@@ -71,6 +71,8 @@ Read the API docs for adding signup/login/whatever features to your app
 If you use the supabase SDK, you save a tonne of time, and don't need to work on the authentication system for your apps
 
 53:50 - User Management ========================================================================================================================================================================
+with supabase you have several ways to signup/login users - each user has a unique ID 'user_id', reference it anywhere in your DB - you can then use this 'user_id' to fetch data from tables
+You can also sign up with a phone/sms - or a third party OAuth
 
 
 

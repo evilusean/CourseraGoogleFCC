@@ -64,7 +64,8 @@ You can 'Invite' a user to join through email in the top right corner - this ema
 There is also an SQL script template called 'User Management'
 Providers = Email/Phone/Apple/Google/LinkedIn/Github/FB/etc - read the docs to connect them, for each one you need to go on their app/website, and create something then connect it to the DB
 -He had an app he built previously to test the login authentication, but didn't leave a link -
-
+'project settings' -> 'API' -> 'Project API Key' = gives you access to your DB's api key/secret so you can use it in projects
+if you log in with a 'Magic Link' you don't need any password, just send the email and click the URL, and you are connected to your DB
 
 
 

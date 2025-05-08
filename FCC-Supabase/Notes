@@ -70,7 +70,7 @@ Read the API docs for adding signup/login/whatever features to your app
 'import { supabase } from  "@/supabase"; #import into your app
 If you use the supabase SDK, you save a tonne of time, and don't need to work on the authentication system for your apps
 
-
+53:50 - User Management ========================================================================================================================================================================
 
 
 

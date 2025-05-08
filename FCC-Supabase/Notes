@@ -66,6 +66,9 @@ Providers = Email/Phone/Apple/Google/LinkedIn/Github/FB/etc - read the docs to c
 -He had an app he built previously to test the login authentication, but didn't leave a link -
 'project settings' -> 'API' -> 'Project API Key' = gives you access to your DB's api key/secret so you can use it in projects
 if you log in with a 'Magic Link' you don't need any password, just send the email and click the URL, and you are connected to your DB
+Read the API docs for adding signup/login/whatever features to your app
+'import { supabase } from  "@/supabase"; #import into your app
+If you use the supabase SDK, you save a tonne of time, and don't need to work on the authentication system for your apps
 
 
 

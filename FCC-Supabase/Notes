@@ -76,7 +76,7 @@ You can also sign up with a phone/sms - or a third party OAuth
 
 59:15 - Recover Password =======================================================================================================================================================================
 It's very common to forget your password, supabase has a method to help you to recover your password
-
+https://supabase.com/docs/reference/kotlin/auth-resetpasswordforemail
 
 
 

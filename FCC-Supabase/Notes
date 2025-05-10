@@ -75,7 +75,7 @@ with supabase you have several ways to signup/login users - each user has a uniq
 You can also sign up with a phone/sms - or a third party OAuth
 
 59:15 - Recover Password =======================================================================================================================================================================
-
+It's very common to forget your password, supabase has a method to help you to recover your password
 
 
 

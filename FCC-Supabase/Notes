@@ -98,7 +98,7 @@ When a user signs up through your frontend application, or gets invited to join,
 When in production you can't use 'localhost:3000', allows you to change the 'Site URL' 
 There is also 'Redirect URL's for post authentication, you can add a domain that will allow a list of domains to ineract with your authentication services for your project
 
-
+1:13:55 - Read, Insert or Delete ================================================================================================================================================================
 
 
 

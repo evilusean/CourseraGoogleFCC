@@ -85,7 +85,8 @@ It sends the user a log in link which then sends the user to a new password form
 the development url will be different from the production url (localhost:3000) - future sean will need to change these
 
 1:04:35 - E-mail Templates =====================================================================================================================================================================
-
+send emails for the user to confirm when they sign up, major changes, subscriptions - templates allow you to choose what gets sent out to the users for each event
+'Confirm Signup', 'Invite User', 'Magic Link', 'Change Email Address', 'Reset Password' are the 5 built in templates in supabase
 
 
 

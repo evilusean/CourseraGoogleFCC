@@ -77,8 +77,9 @@ You can also sign up with a phone/sms - or a third party OAuth
 59:15 - Recover Password =======================================================================================================================================================================
 It's very common to forget your password, supabase has a method to help you to recover your password - it will send them a link in their email and allow them to change it, and save the new PW
 https://supabase.com/docs/reference/kotlin/auth-resetpasswordforemail
-supabase.auth.resetPasswordForEmail(email = "example@email.com") # the code you need to reset an email, that's it, one line
-
+'supabase.auth.resetPasswordForEmail(email = "example@email.com")' # the code you need to reset an email, that's it, one line
+In your app, you will need to create a recover page, add that one line of code, it triggers supabase to send the email, you don't have to set any of that up, 
+It sends the user a log in link which then sends the user to a new password form and 'Update User' to save the new password to the DB
 
 
 

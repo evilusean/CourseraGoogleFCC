@@ -87,7 +87,7 @@ the development url will be different from the production url (localhost:3000) -
 1:04:35 - E-mail Templates =====================================================================================================================================================================
 send emails for the user to confirm when they sign up, major changes, subscriptions - templates allow you to choose what gets sent out to the users for each event
 'Confirm Signup', 'Invite User', 'Magic Link', 'Change Email Address', 'Reset Password' are the 5 built in templates in supabase
-
+You can insert your own html into the emails, also have a 'Message Variables' in the format of {{ .ConfirmationURL }} {{ .SiteURL }} {{ .Email }}, etc.
 
 
 

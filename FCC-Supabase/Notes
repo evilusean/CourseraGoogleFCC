@@ -88,8 +88,8 @@ the development url will be different from the production url (localhost:3000) -
 send emails for the user to confirm when they sign up, major changes, subscriptions - templates allow you to choose what gets sent out to the users for each event
 'Confirm Signup', 'Invite User', 'Magic Link', 'Change Email Address', 'Reset Password' are the 5 built in templates in supabase
 You can insert your own html into the emails, also have a 'Message Variables' in the format of {{ .ConfirmationURL }} {{ .SiteURL }} {{ .Email }}, etc.
-The defaults for each Template Email are all the same at the beginning, so change them up, run it through chatgpt for a standard email
-Yopmail = A desposible Email, a fake temporary/anonymous email inbox, you can use it for testing your apps, or signing up for miscellaneous garbage, deleted every 24 hours : https://yopmail.com/en/ 
+The defaults for each Template Email are all the same at the beginning, so change them up, run it through chatgpt for a standard email - it's done in html, so you can do inline styling(css)
+Yopmail = A disposible Email, a fake temporary/anonymous email inbox, you can use it for testing your apps, or signing up for miscellaneous garbage, deleted every 24 hours : https://yopmail.com/en/ 
 
 
 

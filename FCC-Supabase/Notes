@@ -75,8 +75,9 @@ with supabase you have several ways to signup/login users - each user has a uniq
 You can also sign up with a phone/sms - or a third party OAuth
 
 59:15 - Recover Password =======================================================================================================================================================================
-It's very common to forget your password, supabase has a method to help you to recover your password
+It's very common to forget your password, supabase has a method to help you to recover your password - it will send them a link in their email and allow them to change it, and save the new PW
 https://supabase.com/docs/reference/kotlin/auth-resetpasswordforemail
+supabase.auth.resetPasswordForEmail(email = "example@email.com") # the code you need to reset an email, that's it, one line
 
 
 

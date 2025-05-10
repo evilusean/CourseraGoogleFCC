@@ -79,7 +79,9 @@ It's very common to forget your password, supabase has a method to help you to r
 https://supabase.com/docs/reference/kotlin/auth-resetpasswordforemail
 'supabase.auth.resetPasswordForEmail(email = "example@email.com")' # the code you need to reset an email, that's it, one line
 In your app, you will need to create a recover page, add that one line of code, it triggers supabase to send the email, you don't have to set any of that up, 
-It sends the user a log in link which then sends the user to a new password form and 'Update User' to save the new password to the DB
+You should add a simple function/grep that checks if an email is in the correct format or not 
+It sends the user a log in link which then sends the user to a new password form and 'Update User' to save the new password to the DB - this should be a new route(/page) that changes the PW
+'Authentication' (left hand side bar) -> 'Email Templates' -> 'Reset Password' = Allows you to customize each email sent to users for a password reset, using the new route(/path/page/url)
 
 
 

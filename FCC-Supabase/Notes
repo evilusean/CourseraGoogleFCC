@@ -82,9 +82,9 @@ In your app, you will need to create a recover page, add that one line of code, 
 You should add a simple function/grep that checks if an email is in the correct format or not 
 It sends the user a log in link which then sends the user to a new password form and 'Update User' to save the new password to the DB - this should be a new route(/page) that changes the PW
 'Authentication' (left hand side bar) -> 'Email Templates' -> 'Reset Password' = Allows you to customize each email sent to users for a password reset, using the new route(/path/page/url)
+the development url will be different from the production url (localhost:3000) - future sean will need to change these
 
-
-
+1:04:35 - E-mail Templates =====================================================================================================================================================================
 
 
 

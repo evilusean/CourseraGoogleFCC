@@ -159,8 +159,12 @@ Update Matching Rows (the '.eq' equals the value you want to match and then repl
     .eq('some_column', 'someValue')
     .select()'
 Best practice seems to be to place all of these in 'try {} catch (error) {}' blocks
-Make sure you update your policies for each new action you need the backend to do, because of RLS(Row level security)
-
+Make sure you update your policies for each new action you need the backend to do, because of RLS(Row level security) in the 'Authentication' Tab under 'Policies'
+Delete matching rows (deletes a row that matches the '.eq' equals from the 'orders' table) :
+  'const { error } = await supabase
+    .from('orders')
+    .delete()
+    .eq('some_column', 'someValue')'
 
 
 

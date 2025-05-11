@@ -144,7 +144,14 @@ How to Insert A Row (also found in API Docs) :
       { some_column: 'someValue', other_column: 'otherValue' },
     ])
     .select()'
-
+Insert Many Rows :
+  const { data, error } = await supabase
+    .from('orders')
+    .insert([
+      { some_column: 'someValue' },
+      { some_column: 'otherValue' },
+    ])
+    .select()
 
 
 

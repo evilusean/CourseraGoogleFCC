@@ -110,7 +110,10 @@ To allow his app to read the new dummy data input to the DB, he had to add a new
   'let { data: orders, error } = await supabase
     .from('orders')
     .select('id')' #will select the 'id' from the 'orders' table 
-
+#Read all rows from the orders table
+  'let { data: orders, error } = await supabase
+    .from('orders')
+    .select('*')'
 
 
 

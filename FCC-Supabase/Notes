@@ -107,17 +107,17 @@ To allow his app to read the new dummy data input to the DB, he had to add a new
 'API Docs' = Will allow you to copy and paste code that will allow you to retrieve your data from your tables - There will be a section named 
 'API Docs' -> 'Tables and Views' -> 'orders'(or whatever your table is named) = Supabase autogenerates orders and will allow you to copy and paste snippets that will select based on the 
   column you want to grab for your app, for example to get data for ID : 
-  'let { data: orders, error } = await supabase
-    .from('orders')
-    .select('id')' #will select the 'id' from the 'orders' table 
-#Read all rows from the orders table
+  'let { data: orders, error } = await supabase #aync function
+    .from('orders') #from table 'orders'
+    .select('id')' #will select all the 'id' from the 'orders' table 
+#Read all rows from the orders table, and return all :
   'let { data: orders, error } = await supabase
     .from('orders')
     .select('*')'
-
-
-
-
+After you get the correct snippet from the API Docs, simply copy and paste it into your app, don't forget to 'import { supabase }'
+To only grab the columns replace the '.select('*')' star with the columns you want to grab like '.select('id, name')'
+If you scroll down on the API Docs, you can also implement pagination, so you aren't pulling ALL the rows, 
+'.range(0, 9)' # will only grab the orders '0' to '9' 
 
 
 

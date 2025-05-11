@@ -104,7 +104,12 @@ Supabase Core Feature - CRUD Elements inside your DB table -
 'SQL Editor' (Left hand side menu) -> 'Create New Query' ('Create New Snippet' Supabase updated their UI) -> 'Rename Query' (It will be under on the left hand side under 'Private')
 He just copied and pasted a list of fake orders - TLDR - I am not typing all that out
 To allow his app to read the new dummy data input to the DB, he had to add a new policy for authenticated users to view the orders
-
+'API Docs' = Will allow you to copy and paste code that will allow you to retrieve your data from your tables - There will be a section named 
+'API Docs' -> 'Tables and Views' -> 'orders'(or whatever your table is named) = Supabase autogenerates orders and will allow you to copy and paste snippets that will select based on the 
+  column you want to grab for your app, for example to get data for ID : 
+  'let { data: orders, error } = await supabase
+    .from('orders')
+    .select('id')' #will select the 'id' from the 'orders' table 
 
 
 

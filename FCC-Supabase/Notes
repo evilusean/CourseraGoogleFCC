@@ -101,7 +101,7 @@ There is also 'Redirect URL's for post authentication, you can add a domain that
 1:13:55 - Read, Insert or Delete ================================================================================================================================================================
 Supabase Core Feature - CRUD Elements inside your DB table -
 'SQL Editor' = Where you can insert orders into your table(we previously created this table a while ago) - Use a script to insert dummy data/orders - then you can fetch on your app
-
+'SQL Editor' (Left hand side menu) -> 'Create New Query' ('Create New Snippet' Supabase updated their UI) -> 'Rename Query' (It will be under on the left hand side under 'Private')
 
 
 

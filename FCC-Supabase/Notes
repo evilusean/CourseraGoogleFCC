@@ -102,8 +102,8 @@ There is also 'Redirect URL's for post authentication, you can add a domain that
 Supabase Core Feature - CRUD Elements inside your DB table -
 'SQL Editor' = Where you can insert orders into your table(we previously created this table a while ago) - Use a script to insert dummy data/orders - then you can fetch on your app
 'SQL Editor' (Left hand side menu) -> 'Create New Query' ('Create New Snippet' Supabase updated their UI) -> 'Rename Query' (It will be under on the left hand side under 'Private')
-
-
+He just copied and pasted a list of fake orders - TLDR - I am not typing all that out
+To allow his app to read the new dummy data input to the DB, he had to add a new policy for authenticated users to view the orders
 
 
 

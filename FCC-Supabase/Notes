@@ -136,7 +136,14 @@ How to filter your search results :
   // Logical operators
   .not('column', 'like', 'Negate filter')
   .or('some_column.eq.Some value, other_column.eq.Other value')
-
+'.eq('name', 'Sean')' #will only pull the orders for Sean by filtering results with '.eq' equals
+How to Insert A Row (also found in API Docs) : 
+  'const { data, error } = await supabase
+    .from('orders')
+    .insert([
+      { some_column: 'someValue', other_column: 'otherValue' },
+    ])
+    .select()'
 
 
 

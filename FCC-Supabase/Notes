@@ -152,9 +152,14 @@ Insert Many Rows :
       { some_column: 'otherValue' },
     ])
     .select()
-
-
-
+Update Matching Rows (the '.eq' equals the value you want to match and then replace/update, choose the column and value to update with '.update' :
+  'const { data, error } = await supabase
+    .from('orders')
+    .update({ other_column: 'otherValue' })
+    .eq('some_column', 'someValue')
+    .select()'
+Best practice seems to be to place all of these in 'try {} catch (error) {}' blocks
+Make sure you update your policies for each new action you need the backend to do, because of RLS(Row level security)
 
 
 

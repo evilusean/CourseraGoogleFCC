@@ -182,7 +182,8 @@ To Enable this feature, you need to enable 'Real Time'
 'Database' (left hand side menu) -> 'Replication' -> 'Supabase_realtime' -> Select what you want (Insert, Update, Delete, Truncate) + 'Source'
 
 1:40:15 - Relations ======================================================================================================================================================================
-
+'Database' (left hand side of dashboard) -> 'Tables' -> (Select table you want to create a relation/foreign key in) -> 'Edit'(click the column that you want to reference another table) -> 
+  'Add Foreign Key Relation' -> (select the table you want to reference) -> (Select the column you want to reference) 
 
 
 

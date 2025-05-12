@@ -181,7 +181,7 @@ Subscribe to all events(changes to the 'orders' table) :
 To Enable this feature, you need to enable 'Real Time' 
 'Database' (left hand side menu) -> 'Replication' -> 'Supabase_realtime' -> Select what you want (Insert, Update, Delete, Truncate) + 'Source'
 
-
+1:40:15 - Relations ======================================================================================================================================================================
 
 
 

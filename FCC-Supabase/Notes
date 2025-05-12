@@ -195,7 +195,7 @@ Read referenced tables (Foreign key) :
     `)' # fetch your 'orders' with another table 'clients' that references the foreign key, allows you to pull data from the 'clients' table and use it with your 'orders'
 Enable policies 'Read Access on Clients' for RLS so that you can read the foreign keys 
 
-
+1:45:15 - Functions ======================================================================================================================================================================
 
 
 

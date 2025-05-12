@@ -166,6 +166,42 @@ Delete matching rows (deletes a row that matches the '.eq' equals from the 'orde
     .delete()
     .eq('some_column', 'someValue')'
 
+1:32:00 - Subscribe to Events ============================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

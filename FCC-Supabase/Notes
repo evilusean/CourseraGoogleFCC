@@ -167,7 +167,7 @@ Delete matching rows (deletes a row that matches the '.eq' equals from the 'orde
     .eq('some_column', 'someValue')'
 
 1:32:00 - Subscribe to Events ============================================================================================================================================================
-In Supabase you can subscribe to the changes of a table
+In Supabase you can subscribe to the changes of a table - Why would you need to do that? for different apps - chat 'Subscribe' to the list of messages, return the new updated chats
 Subscribe to all events(changes to the 'orders' table) :
   'const orders = supabase.channel('custom-all-channel')
     .on(
@@ -178,6 +178,8 @@ Subscribe to all events(changes to the 'orders' table) :
       }
     )
     .subscribe()' 
+To Enable this feature, you need to enable 'Real Time' 
+'Database' (left hand side menu) -> 'Replication' -> 'Supabase_realtime' -> Select what you want (Insert, Update, Delete, Truncate) + 'Source'
 
 
 

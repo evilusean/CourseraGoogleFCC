@@ -184,8 +184,16 @@ To Enable this feature, you need to enable 'Real Time'
 1:40:15 - Relations ======================================================================================================================================================================
 'Database' (left hand side of dashboard) -> 'Tables' -> (Select table you want to create a relation/foreign key in) -> 'Edit'(click the column that you want to reference another table) -> 
   'Add Foreign Key Relation' -> (select the table you want to reference) -> (Select the column you want to reference) 
-
-
+Read referenced tables (Foreign key) : 
+  'let { data: orders, error } = await supabase
+    .from('orders')
+    .select(`
+      some_column,
+      other_table (
+        foreign_key
+      )
+    `)' # fetch your 'orders' with another table 'clients' that references the foreign key, allows you to pull data from the 'clients' table and use it with your 'orders'
+Enable policies 'Read Access on Clients' for RLS so that you can read the foreign keys 
 
 
 

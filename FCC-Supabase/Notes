@@ -167,9 +167,17 @@ Delete matching rows (deletes a row that matches the '.eq' equals from the 'orde
     .eq('some_column', 'someValue')'
 
 1:32:00 - Subscribe to Events ============================================================================================================================================================
-
-
-
+In Supabase you can subscribe to the changes of a table
+Subscribe to all events(changes to the 'orders' table) :
+  'const orders = supabase.channel('custom-all-channel')
+    .on(
+      'postgres_changes',
+      { event: '*', schema: 'public', table: 'orders' },  #for any event that is public on the table 'orders'
+      (payload) => {
+        console.log('Change received!', payload) '# return that to your front end app
+      }
+    )
+    .subscribe()' 
 
 
 

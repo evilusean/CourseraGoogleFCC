@@ -238,6 +238,10 @@ Storage Bucket names bust be lowercase
 'Create Folder' = You can organize your buckets - You can also sort by, view as
 How to create policies for storage buckets : 
 https://supabase.com/docs/guides/storage/security/access-control
+  'ALTER TABLE storage.objects ENABLE ROW LEVEL SECURITY;
+  CREATE POLICY objects_select_policy ON storage.objects FOR SELECT
+    USING (auth.role() = 'authenticated');' # how to create policies from the 'SQL EDITOR', will need one for each 'INSERT' 'DELETE' 'SELECT' 'UPDATE'
+
 
 
 

@@ -253,8 +253,10 @@ After adding the RLS, you can then use your buckets on your frontend to upload f
 You can choose which bucket you upload to, who can do it, and in one block of code connect your front end to your backend with RLS
 
 2:12:50 - Logs ============================================================================================================================================================================
-
-
+'Logs' = Tracks all events that happen on the backend, subscriptions, connections, uploads, whatever, with timestamps
+'Log' (Left hand side of dash) -> 'Logs Explorer' = Where you can query your logs
+With logs you can debug your app, see why it failed, 'FATAL' errors are highlighted in redm you can sort by when a user logs in as an admin user for security with timestamps/most recent
+You can also use logs for optimization, see which queries are taking the longest
 
 
 

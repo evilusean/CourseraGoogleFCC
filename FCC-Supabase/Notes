@@ -231,7 +231,7 @@ There will be a trigger for each schema, with a name, and table they act on - us
 Permissions : Each client can have their own schema to keep their data seperate and organized, to manage and secure yuor database
 'CREATE SCHEMA sales;' #basic syntax for creating a schema in supabase
 
-
+2:05:00 - Storage =========================================================================================================================================================================
 
 
 

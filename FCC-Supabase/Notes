@@ -203,7 +203,7 @@ In postgres you can create 'Functions' which can be triggered on 'Insert', 'Upda
 'PLPGSQL' = These functions are written in a new language called 'plpgsql'
 'const { data, error } = await supbase.rpc('increment', { row_id : '1 })....' # '.rpc' how to call a function in your app, will run the 'increment' function on the '1' row
 
-1:52:01 - Triggers =======================================================================================================================================================================
+1:52:00 - Triggers =======================================================================================================================================================================
 
 
 

@@ -232,7 +232,9 @@ Permissions : Each client can have their own schema to keep their data seperate 
 'CREATE SCHEMA sales;' #basic syntax for creating a schema in supabase
 
 2:05:00 - Storage =========================================================================================================================================================================
-
+'Storage' (left hand side of dashboard) -> 'New Bucket' = That's it, that's all you need to store documents/images/whatever
+Storage Bucket names bust be lowercase
+'Public Buckets' = Anyone can read any object without authentication
 
 
 

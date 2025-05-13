@@ -204,10 +204,24 @@ In postgres you can create 'Functions' which can be triggered on 'Insert', 'Upda
 'const { data, error } = await supbase.rpc('increment', { row_id : '1 })....' # '.rpc' how to call a function in your app, will run the 'increment' function on the '1' row
 
 1:52:00 - Triggers =======================================================================================================================================================================
-
-
-
-
+'Triggers' = Not just for perpetually unhappy '"liberals"' - Database callback functions, which are automatically performed/invoked when a specific DB event occurs
+'Database' (left hand side) -> ' Triggers'  -> 'Create a New Trigger' (name, conditions to fire trigger(insert, update, delete), table, events, trigger type,orientation, function) 
+There will be a trigger for each schema, with a name, and table they act on - use snake_case by default - uses plpgsql language
+-- Example: Update salary_log when salary is updated :
+  create function update_salary_log()
+  returns trigger
+  language plpgsql
+  as $$
+  begin
+    insert into salary_log(employee_id, old_salary, new_salary)
+    values (new.id, old.salary, new.salary);
+    return new;
+  end;
+  $$;
+  create trigger salary_update_trigger
+  after update on employees
+  for each row
+  execute function update_salary_log();
 
 
 

@@ -252,7 +252,7 @@ After adding the RLS, you can then use your buckets on your frontend to upload f
   imagUrl.value = URL.createObjectURL(file) #basic Syntax to upload a file using the supabase API/SDK on the frontend, avatar can be <changed>, just a placeholder
 You can choose which bucket you upload to, who can do it, and in one block of code connect your front end to your backend with RLS
 
-
+2:12:50 - Logs ============================================================================================================================================================================
 
 
 

@@ -264,7 +264,7 @@ You can download logs as a CSV file - Logs are only retained for a duration of 3
   Future sean could just write a script to download them, but again, that's a future sean problem, step 1) escape canada, step 2) get paid
 'Logs' -> 'Postgres' = Go here to debug, it will have your most recent logs, don't need to write a query
 
-
+2:19:10 - Extensions =======================================================================================================================================================================
 
 
 

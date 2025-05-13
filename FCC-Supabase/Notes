@@ -254,9 +254,15 @@ You can choose which bucket you upload to, who can do it, and in one block of co
 
 2:12:50 - Logs ============================================================================================================================================================================
 'Logs' = Tracks all events that happen on the backend, subscriptions, connections, uploads, whatever, with timestamps
-'Log' (Left hand side of dash) -> 'Logs Explorer' = Where you can query your logs
+'Log' (Left hand side of dash) -> 'Logs Explorer' = Where you can query your logs, save your queries for future sean, and templates 
 With logs you can debug your app, see why it failed, 'FATAL' errors are highlighted in redm you can sort by when a user logs in as an admin user for security with timestamps/most recent
-You can also use logs for optimization, see which queries are taking the longest
+You can also use logs for optimization, see which queries are taking the longest, most frequently used endpoints, most used features, 
+'Refresh' is in realtime and shows you how many new events have happened since you last refreshed
+Sort by Severity(only errors), 'No Errors', or Logs(all)
+Has a chart for visual representation
+You can download logs as a CSV file - Logs are only retained for a duration of 3 months depending on the plan that your project is on - Free(1 Day)/Pro(7 Days)/Enterprise(90Days)
+  Future sean could just write a script to download them, but again, that's a future sean problem, step 1) escape canada, step 2) get paid
+'Logs' -> 'Postgres' = Go here to debug, it will have your most recent logs, don't need to write a query
 
 
 

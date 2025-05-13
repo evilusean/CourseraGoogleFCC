@@ -241,7 +241,16 @@ https://supabase.com/docs/guides/storage/security/access-control
   'ALTER TABLE storage.objects ENABLE ROW LEVEL SECURITY;
   CREATE POLICY objects_select_policy ON storage.objects FOR SELECT
     USING (auth.role() = 'authenticated');' # how to create policies from the 'SQL EDITOR', will need one for each 'INSERT' 'DELETE' 'SELECT' 'UPDATE'
-
+After adding the RLS, you can then use your buckets on your frontend to upload files on your backend like below :
+  'const { data, error } = await supabase.storage.from('avatars').upload
+  (`avatar_${Date.now()}.png`, file)
+  showOverlay.value = false
+  if (error) {
+    console.log(error)
+    return
+    }
+  imagUrl.value = URL.createObjectURL(file) #basic Syntax to upload a file using the supabase API/SDK on the frontend, avatar can be <changed>, just a placeholder
+You can choose which bucket you upload to, who can do it, and in one block of code connect your front end to your backend with RLS
 
 
 

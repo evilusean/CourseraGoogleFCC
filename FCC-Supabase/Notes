@@ -234,8 +234,10 @@ Permissions : Each client can have their own schema to keep their data seperate 
 2:05:00 - Storage =========================================================================================================================================================================
 'Storage' (left hand side of dashboard) -> 'New Bucket' = That's it, that's all you need to store documents/images/whatever
 Storage Bucket names bust be lowercase
-'Public Buckets' = Anyone can read any object without authentication
-
+'Public Buckets' = Anyone can read any object without authentication - when you upload a file, it has a URL, anyone with access to it can use it - even though it's public still uses RLS
+'Create Folder' = You can organize your buckets - You can also sort by, view as
+How to create policies for storage buckets : 
+https://supabase.com/docs/guides/storage/security/access-control
 
 
 

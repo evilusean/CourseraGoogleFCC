@@ -196,9 +196,12 @@ Read referenced tables (Foreign key) :
 Enable policies 'Read Access on Clients' for RLS so that you can read the foreign keys 
 
 1:45:15 - Functions ======================================================================================================================================================================
-
-
-
+In postgres you can create 'Functions' which can be triggered on 'Insert', 'Update', 'Delete' and other steps on your application - 
+  A set of SQL and precedural commands, such as declarations, assignments, loops, flow-of-control stored on the database server and can be involved using the SQL interface
+'SQL Editor' (left hand side dash) -> 'Scripts' #write a custom script or use a template
+'Database' -> 'Functions' -> 'Create New Function' (requires a name, schema(public, auth, etc) and a Return Type(void, int, etc), can add an argument, and definition is the script) 
+'PLPGSQL' = These functions are written in a new language called 'plpgsql'
+'const { data, error } = await supbase.rpc('increment', { row_id : '1 })....' # '.rpc' how to call a function in your app, will run the 'increment' function on the '1' row
 
 
 

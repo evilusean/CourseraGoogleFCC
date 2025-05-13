@@ -228,7 +228,8 @@ There will be a trigger for each schema, with a name, and table they act on - us
 'Schema' = a name container for database objects such as tables, views, sequences, indexes, functions - a way to organize the seperations and DB objects 
   A name space that contains one or more objects - 'Public' is the default schema - you can organize/seperate parts of your app by schemas - also used for managing permissions
 'Table Editor' -> 'Schema' = Will allow you to select different schemas (Auth, public, etc) 
-
+Permissions : Each client can have their own schema to keep their data seperate and organized, to manage and secure yuor database
+'CREATE SCHEMA sales;' #basic syntax for creating a schema in supabase
 
 
 

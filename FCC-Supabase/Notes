@@ -224,7 +224,7 @@ There will be a trigger for each schema, with a name, and table they act on - us
   execute function update_salary_log();
 'Table Editor' -> (select a table) ->  'Schema' = you can see every schema attached to that table (like if you add auth to a table, it will have an auth schema, etc) 
 
-
+2:00:50 - Schemas =========================================================================================================================================================================
 
 
 

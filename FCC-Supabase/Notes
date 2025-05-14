@@ -265,7 +265,9 @@ You can download logs as a CSV file - Logs are only retained for a duration of 3
 'Logs' -> 'Postgres' = Go here to debug, it will have your most recent logs, don't need to write a query
 
 2:19:10 - Extensions =======================================================================================================================================================================
-
-
+One of the best advantages of postgresql is that it's extensible, the user can add aditional functionalities to it through extensions
+'Database' (left hand on dash) -> 'Extensions' = Where you can find the extensionsion, and enable them, contains GraphQL, JWT(json webtoken), PGCrypto(encryption), 
+  PG_NET (Async HTTP), PG_Cron(cron job scheduler), etc, etc - Theres alot of them, most of them are made by the community of supa based boyz
+https://supabase.com/docs/guides/database/extensions
 
 

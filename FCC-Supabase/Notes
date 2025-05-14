@@ -279,6 +279,10 @@ RLS = Don't forget to enable the RLS policies so it works
 2:30:05 - Edge Functions ===================================================================================================================================================================
 'Edge Functions' = Serverless Functions = server side Typescript functions, distributed globally at the edge - close to your users. 
   They can be used for listening to webhooks or integrating your Supabase project with third parties
+Say you want to do a payment with stripe on your frontend app, would need to create an API between your client and stripe to trigger the payment intent, 
+  normally to do this, you would create a node application to deploy somewhere, this is alot of work, you can get the same functionality out of an edge function
+You can also use this edge function to create a bot for discord/twitter/telegram - Serverless and help you deploy very quickly
+
 
 
 

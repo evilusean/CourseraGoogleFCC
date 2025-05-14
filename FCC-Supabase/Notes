@@ -283,14 +283,19 @@ Say you want to do a payment with stripe on your frontend app, would need to cre
   normally to do this, you would create a node application to deploy somewhere, this is alot of work, you can get the same functionality out of an edge function
 You can also use this edge function to create a bot for discord/twitter/telegram - Serverless and help you deploy very quickly
 'Edge Functions' (left hand of dash) -> (Copy and paste code from here to your app)
-'supabase functions new hello-world' #basic syntax to use in a terminal
 https://supabase.com/docs/guides/functions
 https://github.com/supabase/supabase/tree/master/examples/edge-functions/supabase/functions
 Notable Edge Functions : OpenAI - OpenGraph - HuggingFace - AI Image Generation - Stripe - ElevenLabs(STT-TTS) - Github - Location - Send Email (Resend/SMTP) - Telegram Bot -  Redis 
 Future Sean, projects on free tier will get auto-disabled if no use (I want to create 2 AI projects with supbase Edge functions) :  
   You can create a CRON job within each project that runs an arbitrary query once per week to prevent Supabase from pausing these projects
-
-
+'supabase functions new hello-world' #basic syntax to use in a terminal, will create a new supabase folder in your app, 'supabase/functions/hello-world'
+  inside this is an 'index.ts' with a deno server that is imported, and commented out a way to invoke your function, 
+After creating the edge function in your app, now you need to deploy it to your Supabase DB with :
+'supabase login' #first login, generate a token using your admin from dash on by clicking the link it gives you
+'supabase functions deploy helo-world --project-ref...' #will be copy and pasted from the Edge Function on your dash, run this to deploy your new Edge Function
+After doing all of the above, you can now see your new edge function in your dashboard on Supabase
+You will need to be authorized to use your function or disable this feature by changing the Edge Function Settings for your new function and disabling 'Enforce JWT Verification'(unsafe)
+You can also use an edge function to return / fetch all posts 
 
 
 

@@ -272,3 +272,41 @@ https://supabase.com/docs/guides/database/extensions
 You can search for extensions in the docs
 
 2:24:40 - Realtime =========================================================================================================================================================================
+'Realtime' = will allow you to get updates in real time on your app
+'Database' -> 'Tables' -> 'Edit' (select table you want to enable) -> 'Enable Realtime' = Broadcast changes on the table to authorized subscribers
+RLS = Don't forget to enable the RLS policies so it works
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

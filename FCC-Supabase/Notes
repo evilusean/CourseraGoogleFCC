@@ -301,7 +301,10 @@ You can also use an edge function to return / fetch all posts
 View edge functions as a deno server that you can call at any time to do a specific operation, this deno server can do anything a backend could do, stripe/api/call/async/etc
 
 2:44:15 - Webhooks =========================================================================================================================================================================
-
+'Webhooks' = a way for 2 API's to connect together and exchange some data to communicate everytime there is an event
+  can be used to trigger serverless fimctopms pr semd reqiests to an HTTP endpoint
+'Database' (left hand of dash) -> 'Webhooks' -> 'Enable Webhooks' -> 'Create Webhooks' 
+Create an endpoint with an API on your front end - you can also call a supabase edge function or use an http request for your webhook, will trigger on certain conditions you choose
 
 
 

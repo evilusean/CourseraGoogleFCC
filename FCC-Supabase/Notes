@@ -306,7 +306,7 @@ View edge functions as a deno server that you can call at any time to do a speci
 'Database' (left hand of dash) -> 'Webhooks' -> 'Enable Webhooks' -> 'Create Webhooks' 
 Create an endpoint with an API on your front end - you can also call a supabase edge function or use an http request for your webhook, will trigger on certain conditions you choose
 
-
+2:49:55 - Self-host or Local dev ===========================================================================================================================================================
 
 
 

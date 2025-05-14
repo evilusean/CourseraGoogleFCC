@@ -307,11 +307,17 @@ View edge functions as a deno server that you can call at any time to do a speci
 Create an endpoint with an API on your front end - you can also call a supabase edge function or use an http request for your webhook, will trigger on certain conditions you choose
 
 2:49:55 - Self-host or Local dev ===========================================================================================================================================================
-
-
-
-
-
+You can self host a supabase instance - you can run supabase locally,
+'brew install supabase/tap/supabase' # terminal command, will install supabase locally on any soydevs macbook 
+'supabase login' # terminal command, login with the generated token
+'mkdir <project>' # create a directory
+'supabase init' # terminal command, initialize the supabase instance
+'supabase start' # terminal command, will start supabase on your local machine, you will need docker 
+'studio url' (after typing 'supabase start' and starting your docker instance of supabase) -> Dashboard (same as the one one supabase.com)
+some things are missing, but most of the functionality is intact, this is pretty cool, future sean might want this after building a homelab that does not sleep 
+In order for your app backend to work, you will need to keep it running 24/7 - or else API/auth/etc will not work, it's almost easier to spend the 25$ for pro instead of self hosting
+After running a project on local, you can always migrate to the supabase cloud, check the docs for migrating a local
+https://supabase.com/docs/guides/deployment/database-migrations
 
 
 

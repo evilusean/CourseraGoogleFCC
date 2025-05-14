@@ -285,7 +285,7 @@ You can also use this edge function to create a bot for discord/twitter/telegram
 'Edge Functions' (left hand of dash) -> (Copy and paste code from here to your app)
 'supabase functions new hello-world' #basic syntax to use in a terminal
 https://supabase.com/docs/guides/functions
-
+https://github.com/supabase/supabase/tree/master/examples/edge-functions/supabase/functions
 
 
 

@@ -5,3 +5,8 @@ RLS :  https://supabase.com/docs/guides/database/postgres/row-level-security
 Tutorial : 
 https://www.freecodecamp.org/news/learn-supabase-open-source-firebase-alternative/
 https://www.youtube.com/watch?v=dU7GwCOgvNY
+
+Edge Functions :
+https://supabase.com/docs/guides/functions
+https://github.com/supabase/supabase/tree/master/examples/edge-functions/supabase/functions
+

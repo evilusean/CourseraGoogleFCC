@@ -269,5 +269,5 @@ One of the best advantages of postgresql is that it's extensible, the user can a
 'Database' (left hand on dash) -> 'Extensions' = Where you can find the extensionsion, and enable them, contains GraphQL, JWT(json webtoken), PGCrypto(encryption), 
   PG_NET (Async HTTP), PG_Cron(cron job scheduler), etc, etc - Theres alot of them, most of them are made by the community of supa based boyz
 https://supabase.com/docs/guides/database/extensions
-
+You can search for extensions in the docs
 

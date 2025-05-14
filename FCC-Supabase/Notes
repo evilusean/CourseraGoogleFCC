@@ -300,7 +300,7 @@ You can also use an edge function to return / fetch all posts
 'supabase secrets set --env_file ./supabase/functions/hello-world/.env' #  terminal command, Also create a '.env' file in your function folder to authenticate aswell
 View edge functions as a deno server that you can call at any time to do a specific operation, this deno server can do anything a backend could do, stripe/api/call/async/etc
 
-
+2:44:15 - Webhooks =========================================================================================================================================================================
 
 
 

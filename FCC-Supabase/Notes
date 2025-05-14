@@ -277,7 +277,8 @@ You can search for extensions in the docs
 RLS = Don't forget to enable the RLS policies so it works
 
 2:30:05 - Edge Functions ===================================================================================================================================================================
-
+'Edge Functions' = Serverless Functions = server side Typescript functions, distributed globally at the edge - close to your users. 
+  They can be used for listening to webhooks or integrating your Supabase project with third parties
 
 
 

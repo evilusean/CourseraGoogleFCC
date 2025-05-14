@@ -286,9 +286,9 @@ You can also use this edge function to create a bot for discord/twitter/telegram
 'supabase functions new hello-world' #basic syntax to use in a terminal
 https://supabase.com/docs/guides/functions
 https://github.com/supabase/supabase/tree/master/examples/edge-functions/supabase/functions
-
-
-
+Notable Edge Functions : OpenAI - OpenGraph - HuggingFace - AI Image Generation - Stripe - ElevenLabs(STT-TTS) - Github - Location - Send Email (Resend/SMTP) - Telegram Bot -  Redis 
+Future Sean, projects on free tier will get auto-disabled if no use (I want to create 2 AI projects with supbase Edge functions) :  
+  You can create a CRON job within each project that runs an arbitrary query once per week to prevent Supabase from pausing these projects
 
 
 

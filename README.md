@@ -1,3 +1,10 @@
+# FreeCodeCamp - NextJS-Supabase-Prisma-ShadCN AI-Note Taking App :
+
+Start : 05May2025 </br>
+End : 14May2025</br>
+
+Tutorial : https://www.freecodecamp.org/news/build-a-full-stack-ai-note-taking-app-with-nextjs-and-supabase/
+
 # [FreeCodeCamp - Supabase :](https://github.com/evilusean/CourseraGoogleFCC/tree/main/FCC-Supabase)
 
 Start : 05May2025 </br>

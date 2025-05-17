@@ -1,6 +1,8 @@
 Start : 17May2025
 
 2:45 - Intro/Install ============================================================================================================================================================================= 
+npx create-next-app@latest goat-notes # creates a next app with yes to these options : Typescript, Eslint, Tailwind, '/src', App Router, Turbopack - No to Import Alias customize
+
 
 
 

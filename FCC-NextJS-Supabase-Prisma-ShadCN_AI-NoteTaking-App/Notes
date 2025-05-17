@@ -5,6 +5,7 @@ npx create-next-app@latest goat-notes # creates a next app with yes to these opt
 cd goatnotes
 npm run dev 
 Start cleaning everything out of the 'layout.tsx' 'page.tsx', etc
+'rfce' # Install ES7+ React/Redux/React-Native snippets extension from dsznajder
 
 
 

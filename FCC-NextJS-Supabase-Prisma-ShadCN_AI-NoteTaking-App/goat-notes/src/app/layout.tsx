@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "sonner";
-
+import Header from "@/components/ui/header";
 
 export const metadata: Metadata = {
   title: "Goat Notes",
@@ -16,18 +16,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-
-      >
-            <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Toaster />
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Toaster />
+          <div className="flex flex-col w-full min-h-screen">
+            <Header />
+          </div>
+          <main className="flex flex-1 flex-col px-4 pt-10 xl:px-8">
             {children}
-          </ThemeProvider>
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );

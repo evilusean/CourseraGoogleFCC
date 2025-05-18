@@ -11,6 +11,9 @@ npm add -D prettier prettier-plugin-tailwindcss # autosorting for tailwind
 https://ui.shadcn.com/docs/installation/next
 npx shadcn@latest init #initialize shadcn to project
 npm install next-themes #add dark mode to project from shadcn
+npx shadcn@latest add toast #deprecated, used sonner instead
+npx shadcn@latest add sonner # added this, he said toast is going to be used, future sean just needs to remember to replace toast with sonner
+Had to install prettier, 'Ctrl' + 'Shift' + 'P' = to add prettier to user settings JSON config
 
 
 

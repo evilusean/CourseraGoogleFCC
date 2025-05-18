@@ -15,7 +15,7 @@ npx shadcn@latest add toast #deprecated, used sonner instead
 npx shadcn@latest add sonner # added this, he said toast is going to be used, future sean just needs to remember to replace toast with sonner
 Had to install prettier, 'Ctrl' + 'Shift' + 'P' = to add prettier to user settings JSON config
 
-
+9:00 - Build Header ==============================================================================================================================================================================
 
 
 

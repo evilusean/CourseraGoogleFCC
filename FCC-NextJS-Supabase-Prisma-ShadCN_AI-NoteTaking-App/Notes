@@ -6,8 +6,8 @@ cd goatnotes
 npm run dev 
 Start cleaning everything out of the 'layout.tsx' 'page.tsx', etc
 'rfce' # Install ES7+ React/Redux/React-Native snippets extension from dsznajder
-
-
+npm add -D prettier prettier-plugin-tailwindcss # autosorting for tailwind
+"react/no-unescaped-entities": "off", # will allow you to use commas / apostrophes 
 
 
 

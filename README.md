@@ -158,7 +158,7 @@ Start: 05 January 2024
 
 End: ~02 February 2024</br>
 
-# FreeCodeCamp : JavaScript Algorithms and Data Structures:
+# FreeCodeCamp : JavaScript Algorithms and Data Structures - JS-ES6-RegEx-Debugging-OOP:
 
 https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/
 

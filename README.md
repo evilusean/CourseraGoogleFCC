@@ -170,7 +170,7 @@ Start: 07 Dec 2023
 
 End: ~03 January 2024 </br>
 
-# FreeCodeCamp : Responsive Web Design - HTML/CSS/CSSGrid/Flexbox:
+# FreeCodeCamp : Responsive Web Design - HTML-CSS-CSSGrid-Flexbox:
 
 https://www.freecodecamp.org/learn/2022/responsive-web-design/
 

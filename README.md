@@ -1,3 +1,14 @@
+# FreeCodeCamp : :
+
+Start : 28May2025</br>
+End : </br>
+
+https://www.freecodecamp.org/learn/back-end-development-and-apis/
+
+Certificate:
+
+
+
 # [FreeCodeCamp - NextJS-Supabase-Prisma-ShadCN AI-Note Taking App](https://github.com/evilusean/CourseraGoogleFCC/tree/main/FCC-NextJS-Supabase-Prisma-ShadCN_AI-NoteTaking-App) :
 
 Start : 17May2025 </br>

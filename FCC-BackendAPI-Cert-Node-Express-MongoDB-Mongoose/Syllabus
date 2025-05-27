@@ -1,0 +1,116 @@
+Managing Packages with NPM
+npm (Node Package Manager), is a command line tool to install, create, and share packages of JavaScript code written for Node.js. There are many open source packages available on npm, so before starting a project, take some time to explore so you don't end up recreating the wheel for things like working with dates or fetching data from an API.
+
+In this course, you'll learn the basics of using npm, including how to work with the package.json and how to manage your installed dependencies.
+
+
+Collapse courseManaging Packages with NPM
+0/10
+, 0 of 10 challenges completed
+Not Passed
+How to Use package.json, the Core of Any Node.js Project or npm Package
+Not Passed
+Add a Description to Your package.json
+Not Passed
+Add Keywords to Your package.json
+Not Passed
+Add a License to Your package.json
+Not Passed
+Add a Version to Your package.json
+Not Passed
+Expand Your Project with External Packages from npm
+Not Passed
+Manage npm Dependencies By Understanding Semantic Versioning
+Not Passed
+Use the Tilde-Character to Always Use the Latest Patch Version of a Dependency
+Not Passed
+Use the Caret-Character to Use the Latest Minor Version of a Dependency
+Not Passed
+Remove a Package from Your Dependencies
+Basic Node and Express
+Node.js is a JavaScript runtime that allows developers to write backend (server-side) programs in JavaScript. Node.js comes with a handful of built-in modules — small, independent programs — that help with this. Some of the core modules include HTTP, which acts like a server, and File System, a module to read and modify files.
+
+In the last set of courses you learned to install and manage packages from npm, which are collections of smaller modules. These packages can help you build larger, more complex applications.
+
+Express is a lightweight web application framework, and is one of the most popular packages on npm. Express makes it much easier to create a server and handle routing for your application, which handles things like directing people to the correct page when they visit a certain endpoint like /blog.
+
+In this course, you'll learn the basics of Node and Express including how to create a server, serve different files, and handle different requests from the browser.
+
+
+Collapse courseBasic Node and Express
+0/12
+, 0 of 12 challenges completed
+Not Passed
+Meet the Node console
+Not Passed
+Start a Working Express Server
+Not Passed
+Serve an HTML File
+Not Passed
+Serve Static Assets
+Not Passed
+Serve JSON on a Specific Route
+Not Passed
+Use the .env File
+Not Passed
+Implement a Root-Level Request Logger Middleware
+Not Passed
+Chain Middleware to Create a Time Server
+Not Passed
+Get Route Parameter Input from the Client
+Not Passed
+Get Query Parameter Input from the Client
+Not Passed
+Use body-parser to Parse POST Requests
+Not Passed
+Get Data from POST Requests
+MongoDB and Mongoose
+MongoDB is a database application that stores JSON documents (or records) that you can use in your application. Unlike SQL, another type of database, MongoDB is a non-relational or "NoSQL" database. This means MongoDB stores all associated data within one record, instead of storing it across many preset tables as in a SQL database.
+
+Mongoose is a popular npm package for interacting with MongoDB. With Mongoose, you can use plain JavaScript objects instead of JSON, which makes it easier to work with MongoDB. Also, it allows you to create blueprints for your documents called schemas, so you don't accidentally save the wrong type of data and cause bugs later.
+
+In the MongoDB and Mongoose courses, you'll learn the fundamentals of working with persistent data including how to set up a model, and save, delete, and find documents in the database.
+
+
+Collapse courseMongoDB and Mongoose
+0/12
+, 0 of 12 challenges completed
+Not Passed
+Install and Set Up Mongoose
+Not Passed
+Create a Model
+Not Passed
+Create and Save a Record of a Model
+Not Passed
+Create Many Records with model.create()
+Not Passed
+Use model.find() to Search Your Database
+Not Passed
+Use model.findOne() to Return a Single Matching Document from Your Database
+Not Passed
+Use model.findById() to Search Your Database By _id
+Not Passed
+Perform Classic Updates by Running Find, Edit, then Save
+Not Passed
+Perform New Updates on a Document Using model.findOneAndUpdate()
+Not Passed
+Delete One Document Using model.findByIdAndRemove
+Not Passed
+Delete Many Documents with model.remove()
+Not Passed
+Chain Search Query Helpers to Narrow Search Results
+Back End Development and APIs Projects
+
+You've worked with APIs before, but now that you know npm, Node, Express, MongoDB, and Mongoose, it's time to build your own. Draw on everything you've learned up to this point to create 5 different microservices, which are smaller applications that are limited in scope.
+
+After creating these, you'll have 5 cool microservice APIs you can show off to friends, family, and potential employers. Oh, and you'll have a shiny new Back End Development and APIs Certification, too.
+
+Timestamp Microservice
+Not Passed
+Request Header Parser Microservice
+Not Passed
+URL Shortener Microservice
+Not Passed
+Exercise Tracker
+Not Passed
+File Metadata Microservice

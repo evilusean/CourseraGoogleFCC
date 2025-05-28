@@ -12,7 +12,7 @@ If you look at the file tree of your project, you will find the package.json fil
 One of the most common pieces of information in this file is the 'author' field. 
   It specifies who created the project, and can consist of a string or an object with contact or other details. 
   An object is recommended for bigger projects, but a simple string like the following example will do for this project.
-
+-- Error -- Tester isn't working, uploaded to github pages, still won't work, read the forums and they said making a glitch account might work
 
 
 

@@ -2,6 +2,12 @@
   "name": "fcc-learn-npm-package-json",
   "author": "Sean Doe",
   "description": "DescriptSean of the project",
+  "keywords": [
+    "freecodecamp",
+    "boilerplate",
+    "npm",
+    "package.json"
+  ],
   "dependencies": {
     "express": "^4.14.0"
   },

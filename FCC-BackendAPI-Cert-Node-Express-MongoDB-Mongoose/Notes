@@ -19,7 +19,8 @@ Hours Later, got it to pass. - At least I know it works, github pages doesn't wo
   If some day you plan to publish a package to npm, this is the string that should sell your idea to the user when they decide whether to install your package or not.
   However, that’s not the only use case for the description, it’s a great way to summarize what a project does. 
   It’s just as important in any Node.js project to help other developers, future maintainers or even your future self understand the project quickly.
-
+'keywords' field is where you can describe your project using related keywords. Here's an example:
+  "keywords": [ "descriptive", "related", "words" ],
 
 
 

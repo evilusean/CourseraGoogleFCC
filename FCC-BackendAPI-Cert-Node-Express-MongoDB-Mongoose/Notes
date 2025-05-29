@@ -53,7 +53,7 @@ To allow an npm dependency to update to the latest PATCH version, you can prefix
 '^' Use the Caret-Character to Use the Latest Minor Version of a Dependency
 Similar to how the tilde we learned about in the last challenge allows npm to install the latest PATCH for a dependency, the caret (^) allows npm to install future updates as well. 
   The difference is that the caret will allow both MINOR updates and PATCHes.
-
+Remove a Package from Your Dependencies = Simply remove it from your dependancies
 
 
 

@@ -1,6 +1,6 @@
 Start : 28May2025
 
-NPM ====================================================================================================================================================================================
+NPM - Managing Packages with NPM ==================================================================================================================================================
 First - Download/Clone boilerplate for course :
 https://github.com/freeCodeCamp/boilerplate-npm/
 The 'package.json' file is the center of any Node.js project or npm package. It stores information about your project.

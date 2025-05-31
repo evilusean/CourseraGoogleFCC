@@ -89,9 +89,13 @@ Behind the scenes, this method will set the appropriate headers to instruct your
 Send the '/views/index.html' file as a response to GET requests to the / path. 
   If you view your live app, you should see a big HTML heading (and a form that we will use later…), with no style applied.
     app.get("/", (req, res) => {
-      res.sendFile(path.join(__dirname, "views", "index.html"));
+      res.sendFile(path.join(__dirname, "views", "index.html")); #or this 'res.sendFile(path.join(__dirname, "views/index.html"));' you can use '/' slashes or ',' commas
     });
-
+An HTML server usually has one or more directories that are accessible by the user. You can place there the static assets needed by your application (stylesheets, scripts, images).
+'express.static(path)' #In Express, you can put in place this functionality using the middleware 'express.static(path)', 
+  where the 'path' parameter is the absolute path of the folder containing the assets.
+Middlewar = Basically, middleware are functions that intercept route handlers, adding some kind of information. A middleware needs to be mounted using the method :
+'app.use(path, middlewareFunction)' #The first path argument is optional. If you don’t pass it, the middleware will be executed for all requests.
 
 
 

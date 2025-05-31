@@ -98,7 +98,12 @@ Middlewar = Basically, middleware are functions that intercept route handlers, a
 'app.use(path, middlewareFunction)' #The first path argument is optional. If you don’t pass it, the middleware will be executed for all requests.
 Mount the 'express.static()' middleware to the path'/public' with 'app.use()'. The absolute path to the assets folder is '__dirname + /public'.
 'app.use("/public", express.static(__dirname + "/public"));' # will now load the assets in '/public' (css stylesheets for this instance)
-
+While an HTML server serves HTML, an API serves data. 
+REST(REpresentational State Transfer) API = allows data exchange in a simple way, without the need for clients to know any detail about the server. 
+  The client only needs to know where the resource is (the URL), and the action it wants to perform on it (the verb). 
+  The GET verb is used when you are fetching some information, without modifying anything. 
+  These days, the preferred data format for moving information around the web is JSON. 
+  Simply put, JSON is a convenient way to represent a JavaScript object as a string, so it can be easily transmitte
 
 
 

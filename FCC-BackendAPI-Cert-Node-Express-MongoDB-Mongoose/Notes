@@ -77,8 +77,11 @@ One fundamental method is 'app.listen(port)'. It tells your server to listen on 
 'app.METHOD(PATH, HANDLER)' #Let’s serve our first string! In Express, routes takes the following structure. 
   METHOD is an http method in lowercase. 
   PATH is a relative path on the server (it can be a string, or even a regular expression). 
-  HANDLER is a function that Express calls when the route is matched. Handlers take the form function(req, res) {...}, where req is the request object, and res is the response object.
-
+  HANDLER is a function that Express calls when the route is matched. 
+Handlers take the form 'function(req, res) {...}', where req is the request object, and res is the response object.
+  function(req, res) {
+    res.send('Response String');
+  }
 
 
 

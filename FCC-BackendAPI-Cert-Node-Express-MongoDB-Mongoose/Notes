@@ -96,8 +96,8 @@ An HTML server usually has one or more directories that are accessible by the us
   where the 'path' parameter is the absolute path of the folder containing the assets.
 Middlewar = Basically, middleware are functions that intercept route handlers, adding some kind of information. A middleware needs to be mounted using the method :
 'app.use(path, middlewareFunction)' #The first path argument is optional. If you don’t pass it, the middleware will be executed for all requests.
-
-
+Mount the 'express.static()' middleware to the path'/public' with 'app.use()'. The absolute path to the assets folder is '__dirname + /public'.
+'app.use("/public", express.static(__dirname + "/public"));' # will now load the assets in '/public' (css stylesheets for this instance)
 
 
 

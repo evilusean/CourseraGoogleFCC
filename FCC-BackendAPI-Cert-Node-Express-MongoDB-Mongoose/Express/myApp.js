@@ -1,3 +1,4 @@
+require("dotenv").config();
 let express = require("express");
 let path = require("path");
 let app = express();
@@ -10,7 +11,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/json", (req, res) => {
-  res.json({ message: "Hello json" });
+  let message = "Hello json";
+  if (process.env.MESSAGE_STYLE === "uppercase") {
+    message = message.toUpperCase();
+  }
+  res.json({ message });
 });
 
 module.exports = app;

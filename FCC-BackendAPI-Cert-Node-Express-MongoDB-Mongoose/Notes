@@ -177,8 +177,11 @@ When building an API, we have to allow users to communicate to us what they want
   One possible way to achieve this result is by using route parameters. Route parameters are named segments of the URL, delimited by slashes (/). 
   Each segment captures the value of the part of the URL which matches its position. The captured values can be found in the req.params object.
   'route_path: '/user/:userId/book/:bookId'' Vs  'actual_request_URL: '/user/546/book/6754'' Vs 'req.params: {userId: '546', bookId: '6754'}'
-
-
+Build an echo server, mounted at the route 'GET /:word/echo'. Respond with a JSON object, taking the structure '{echo: word}'. 
+  You can find the word to be repeated at 'req.params.word'. You can test your route from your browser's address bar, visiting some matching routes, e.g. 'your-app-rootpath/freecodecamp/echo'.
+  app.get("/:word/echo", (req, res) => {
+    res.json({ echo: req.params.word });
+  });
 
 
 

@@ -5,6 +5,12 @@ let app = express();
 
 app.use("/public", express.static(__dirname + "/public"));
 
+// Logger middleware
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.path} - ${req.ip}`);
+  next();
+});
+
 console.log("Hello World");
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "index.html"));

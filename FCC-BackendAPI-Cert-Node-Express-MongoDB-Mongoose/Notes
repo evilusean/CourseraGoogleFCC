@@ -148,7 +148,13 @@ app.use((req, res, next) => {
   console.log(`${req.method} ${req.path} - ${req.ip}`);
   next();
 });
-
+'app.METHOD(path, middlewareFunction)' #Middleware can be mounted at a specific route using app.METHOD(path, middlewareFunction). Middleware can also be chained within a route definition.
+  app.get('/user', function(req, res, next) {
+    req.user = getTheUserSync();  // Hypothetical synchronous operation
+    next();
+  }, function(req, res) {
+    res.send(req.user);
+  });
 
 
 

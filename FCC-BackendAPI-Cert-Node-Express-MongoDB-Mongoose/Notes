@@ -189,8 +189,17 @@ Another common way to get input from the client is by encoding the data after th
   Some characters, like the percent (%), cannot be in URLs and have to be encoded in a different format before you can send them. 
   If you use the API from JavaScript, you can use specific methods to encode/decode these characters.
   'route_path: '/library'' Vs 'actual_request_URL: '/library?userId=546&bookId=6754'' Vs 'req.query: {userId: '546', bookId: '6754'}'
-
-
+Build an API endpoint, mounted at 'GET /name'. Respond with a JSON document, taking the structure '{ name: 'firstname lastname'}'. 
+  The first and last name parameters should be encoded in a query string e.g. '?first=firstname&last=lastname'.
+Note: In the following exercise you are going to receive data from a POST request, at the same /name route path. 
+  If you want, you can use the method 'app.route(path).get(handler).post(handler)'. This syntax allows you to chain different verb handlers on the same path route. 
+  You can save a bit of typing, and have cleaner code.
+  app.route("/name")
+    .get((req, res) => {
+      let firstName = req.query.first;
+      let lastName = req.query.last;
+      res.json({ name: `${firstName} ${lastName}` });
+    });
 
 
 

@@ -41,4 +41,11 @@ app.get("/:word/echo", (req, res) => {
   res.json({ echo: req.params.word });
 });
 
+// API endpoint for GET /name with query string parameters
+app.route("/name").get((req, res) => {
+  let firstName = req.query.first;
+  let lastName = req.query.last;
+  res.json({ name: `${firstName} ${lastName}` });
+});
+
 module.exports = app;

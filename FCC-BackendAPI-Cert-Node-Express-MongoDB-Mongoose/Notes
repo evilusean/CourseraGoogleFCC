@@ -217,7 +217,11 @@ As you can see, the body is encoded like the query string. This is the default f
   This one is used to upload binary files. In this exercise, you will use a URL encoded body. 
   To parse the data coming from POST requests, you must use the body-parser package. 
   This package allows you to use a series of middleware, which can decode data in different formats.
-
+Get Data from POST Requests :
+Mount a POST handler at the path /name. It’s the same path as before. We have prepared a form in the html frontpage. 
+  It will submit the same data of exercise 10 (Query string). If the body-parser is configured correctly, you should find the parameters in the object req.body.
+  Have a look at the usual library example:
+    'route: POST '/library'' Vs 'urlencoded_body: userId=546&bookId=6754' Vs 'req.body: {userId: '546', bookId: '6754'}'
 
 
 

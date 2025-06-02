@@ -253,7 +253,7 @@ MongoDB and Mongoose ===========================================================
 'Mongoose' = is a popular npm package for interacting with MongoDB. With Mongoose, you can use plain JavaScript objects instead of JSON, which makes it easier to work with MongoDB. 
   Also, it allows you to create blueprints for your documents called schemas, so you don't accidentally save the wrong type of data and cause bugs later.
 https://github.com/freeCodeCamp/boilerplate-mongomongoose/
-
+https://www.freecodecamp.org/news/get-started-with-mongodb-atlas/
 
 
 

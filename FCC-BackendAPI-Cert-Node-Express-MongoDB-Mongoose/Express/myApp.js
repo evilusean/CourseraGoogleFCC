@@ -1,7 +1,10 @@
 require("dotenv").config();
 let express = require("express");
 let path = require("path");
+let bodyParser = require("body-parser"); // Require the body-parser package
 let app = express();
+
+app.use(bodyParser.urlencoded({ extended: false })); // Mount middleware to handle URL-encoded data
 
 app.use("/public", express.static(__dirname + "/public"));
 

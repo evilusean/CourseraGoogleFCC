@@ -44,11 +44,20 @@ app.get("/:word/echo", (req, res) => {
   res.json({ echo: req.params.word });
 });
 
-// API endpoint for GET /name with query string parameters
-app.route("/name").get((req, res) => {
-  let firstName = req.query.first;
-  let lastName = req.query.last;
-  res.json({ name: `${firstName} ${lastName}` });
-});
+// API endpoint for GET and POST requests to /name
+app
+  .route("/name")
+  .get((req, res) => {
+    // For GET requests, use query parameters
+    let firstName = req.query.first;
+    let lastName = req.query.last;
+    res.json({ name: `${firstName} ${lastName}` });
+  })
+  .post((req, res) => {
+    // For POST requests, use body-parser to access form data in req.body
+    let firstName = req.body.first;
+    let lastName = req.body.last;
+    res.json({ name: `${firstName} ${lastName}` });
+  });
 
 module.exports = app;

@@ -200,12 +200,52 @@ Note: In the following exercise you are going to receive data from a POST reques
       let lastName = req.query.last;
       res.json({ name: `${firstName} ${lastName}` });
     });
-
-
-
-
-
-
+Use body-parser to Parse POST Requests :
+Besides 'GET', there is another common HTTP verb, it is 'POST'. 'POST' is the default method used to send client data with HTML forms. 
+  In 'REST' convention, 'POST' is used to send data to create new items in the database (a new user, or a new blog post). 
+  You don’t have a database in this project, but you are going to learn how to handle POST requests anyway.
+In these kind of requests, the data doesn’t appear in the URL, it is hidden in the request body. The body is a part of the HTTP request, also called the payload.
+  Even though the data is not visible in the URL, this does not mean that it is private. To see why, look at the raw content of an HTTP POST request:
+  POST /path/subpath HTTP/1.0
+  From: john@example.com
+  User-Agent: someBrowser/1.0
+  Content-Type: application/x-www-form-urlencoded
+  Content-Length: 20
+  name=John+Doe&age=25
+As you can see, the body is encoded like the query string. This is the default format used by HTML forms. With Ajax,
+  you can also use JSON to handle data having a more complex structure. There is also another type of encoding: multipart/form-data. 
+  This one is used to upload binary files. In this exercise, you will use a URL encoded body. 
+  To parse the data coming from POST requests, you must use the body-parser package. 
+  This package allows you to use a series of middleware, which can decode data in different formats.
+Get Data from POST Requests :
+Mount a POST handler at the path /name. It’s the same path as before. We have prepared a form in the html frontpage. 
+  It will submit the same data of exercise 10 (Query string). If the body-parser is configured correctly, you should find the parameters in the object req.body.
+  Have a look at the usual library example:
+    'route: POST '/library'' Vs 'urlencoded_body: userId=546&bookId=6754' Vs 'req.body: {userId: '546', bookId: '6754'}'
+Tip: There are several other http methods other than GET and POST. And by convention there is a correspondence between the http verb,
+  and the operation you are going to execute on the server. The conventional mapping is:
+'POST' (sometimes PUT) - Create a new resource using the information sent with the request,
+'GET' - Read an existing resource without modifying it,
+'PUT' or 'PATCH' (sometimes POST) - Update a resource using the data sent,
+'DELETE' - Delete a resource.
+There are also a couple of other methods which are used to negotiate a connection with the server. 
+  Except for GET, all the other methods listed above can have a payload (i.e. the data into the request body). The body-parser middleware works with these methods as well.
+// API endpoint for GET and POST requests to /name
+app
+  .route("/name")
+  .get((req, res) => {
+    // For GET requests, use query parameters
+    let firstName = req.query.first;
+    let lastName = req.query.last;
+    res.json({ name: `${firstName} ${lastName}` });
+  })
+  .post((req, res) => {
+    // For POST requests, use body-parser to access form data in req.body
+    let firstName = req.body.first;
+    let lastName = req.body.last;
+    res.json({ name: `${firstName} ${lastName}` });
+  });
+Respond with the same JSON object as before: {name: 'firstname lastname'}. Test if your endpoint works using the html form we provided in the app frontpage.
 
 
 

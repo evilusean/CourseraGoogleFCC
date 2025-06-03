@@ -254,7 +254,11 @@ MongoDB and Mongoose ===========================================================
   Also, it allows you to create blueprints for your documents called schemas, so you don't accidentally save the wrong type of data and cause bugs later.
 https://github.com/freeCodeCamp/boilerplate-mongomongoose/
 https://www.freecodecamp.org/news/get-started-with-mongodb-atlas/
-
+mongoose@^5.11.15 has been added to your project’s package.json file. First, require mongoose as mongoose in myApp.js. Next, create a .env file and add a MONGO_URI variable to it. 
+Its value should be your MongoDB Atlas database URI. Be sure to surround the URI with single or double quotes, and remember that you can't use spaces around the = in environment variables. 
+For example, MONGO_URI='VALUE'.
+When you are done, connect to the database by calling the connect method within your myApp.js file by using the following syntax:
+'mongoose.connect(<Your URI>, { useNewUrlParser: true, useUnifiedTopology: true });'
 
 
 

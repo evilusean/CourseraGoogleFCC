@@ -11,6 +11,7 @@ MongoDB + Mongoose Boilerplate :
 https://github.com/freeCodeCamp/boilerplate-mongomongoose/
 MongoDB Atlas Setup Tutorial : 
 https://www.freecodecamp.org/news/get-started-with-mongodb-atlas/
+https://www.freecodecamp.org/news/introduction-to-mongoose-for-mongodb-d2a7aa593c57/
 
 NPM Glitch Site For Testing (hosting is being removed on July 25, thought I found a cool new way to host node apps, wrong) : 
 https://graceful-brass-cemetery.glitch.me

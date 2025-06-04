@@ -290,7 +290,9 @@ Sometimes you need to create many instances of your models, e.g. when seeding a 
 Use 'model.find()' to Search Your Database :
 In its simplest usage, 'Model.find()' accepts a query document (a JSON object) as the first argument, then a callback. 
   It returns an array of matches. It supports an extremely wide range of search options. Read more in the docs.
-
+Use 'model.findOne()' to Return a Single Matching Document from Your Database :
+'Model.findOne()' behaves like Model.find(), but it returns only one document (not an array), even if there are multiple items. 
+  It is especially useful when searching by properties that you have declared as unique.
 
 
 

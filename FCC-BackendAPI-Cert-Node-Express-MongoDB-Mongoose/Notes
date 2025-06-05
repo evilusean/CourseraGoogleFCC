@@ -312,7 +312,8 @@ Recent versions of Mongoose have methods to simplify documents updating.
 Delete One Document Using 'model.findByIdAndRemove' :
 'findByIdAndRemove' and 'findOneAndRemove' are like the previous update methods.
   They pass the removed document to the db. As usual, use the function argument 'personId' as the search key.
-
+Delete Many Documents with 'model.remove()' :
+  'Model.remove()' is useful to delete all the documents matching given criteria.
 
 
 

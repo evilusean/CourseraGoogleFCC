@@ -314,7 +314,11 @@ Delete One Document Using 'model.findByIdAndRemove' :
   They pass the removed document to the db. As usual, use the function argument 'personId' as the search key.
 Delete Many Documents with 'model.remove()' :
   'Model.remove()' is useful to delete all the documents matching given criteria.
-
+Chain Search Query Helpers to Narrow Search Results :
+If you don’t pass the callback as the last argument to 'Model.find()' (or to the other search methods), the query is not executed. 
+  You can store the query in a variable for later use. This kind of object enables you to build up a query using chaining syntax.
+  The actual db search is executed when you finally chain the method .exec(). You always need to pass your callback to this last method. 
+  There are many query helpers, here we'll use the most commonly used.
 
 
 

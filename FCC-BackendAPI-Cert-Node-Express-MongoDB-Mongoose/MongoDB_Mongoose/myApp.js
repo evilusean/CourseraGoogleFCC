@@ -61,8 +61,6 @@ const findEditThenSave = (personId, done) => {
   Person.findById(personId, (err, person) => {
     if (err) return done(err);
     person.favoriteFoods.push(foodToAdd);
-    // If favoriteFoods is of Mixed type, uncomment the next line:
-    // person.markModified('favoriteFoods');
     person.save((err, updatedPerson) => {
       if (err) return done(err);
       return done(null, updatedPerson);
@@ -73,7 +71,15 @@ const findEditThenSave = (personId, done) => {
 const findAndUpdate = (personName, done) => {
   const ageToSet = 20;
 
-  done(null /*, data*/);
+  Person.findOneAndUpdate(
+    { name: personName },
+    { age: ageToSet },
+    { new: true },
+    (err, updatedDoc) => {
+      if (err) return done(err);
+      return done(null, updatedDoc);
+    }
+  );
 };
 
 const removeById = (personId, done) => {

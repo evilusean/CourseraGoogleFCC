@@ -61,6 +61,8 @@ const findEditThenSave = (personId, done) => {
   Person.findById(personId, (err, person) => {
     if (err) return done(err);
     person.favoriteFoods.push(foodToAdd);
+    // If favoriteFoods is of Mixed type, uncomment the next line:
+    // person.markModified('favoriteFoods');
     person.save((err, updatedPerson) => {
       if (err) return done(err);
       return done(null, updatedPerson);

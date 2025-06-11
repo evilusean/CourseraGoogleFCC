@@ -24,14 +24,15 @@ app.get("/api/hello", function (req, res) {
 });
 
 // Timestamp Microservice endpoint
-app.get("/api/timestamp/:date_string?", (req, res) => {
+app.get("/api/:date_string?", (req, res) => {
   let dateString = req.params.date_string;
   let date;
 
+  // If no date_string is provided, use current time
   if (!dateString) {
     date = new Date();
   } else {
-    // if dateString contains only digits, treat it as a Unix timestamp in milliseconds
+    // If dateString contains only digits, treat it as a Unix timestamp in milliseconds
     if (/^\d+$/.test(dateString)) {
       date = new Date(parseInt(dateString));
     } else {
@@ -39,6 +40,7 @@ app.get("/api/timestamp/:date_string?", (req, res) => {
     }
   }
 
+  // Check if date is invalid
   if (date.toString() === "Invalid Date") {
     return res.json({ error: "Invalid Date" });
   }

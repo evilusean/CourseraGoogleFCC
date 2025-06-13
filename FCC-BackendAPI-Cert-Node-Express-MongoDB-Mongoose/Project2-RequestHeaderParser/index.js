@@ -31,16 +31,24 @@ app.get("/", (req, res) => {
 app.enable("trust proxy");
 
 // Return request header info on API call
-app.get("/api/whoami", (req, res) => {
-  // Simplify IP address handling
-  const ipaddress = (req.ip || req.headers["x-forwarded-for"])
+app.get("/api/whoami", function (req, res) {
+  // Get IP address - prioritize x-forwarded-for for proxied requests
+  const ipaddress = (
+    req.headers["x-forwarded-for"] ||
+    req.ip ||
+    req.connection.remoteAddress
+  )
     .split(",")[0]
     .trim();
 
-  return res.json({
-    ipaddress: ipaddress,
-    language: req.headers["accept-language"],
-    software: req.headers["user-agent"],
+  // Ensure we have all required fields
+  const language = req.headers["accept-language"] || "";
+  const software = req.headers["user-agent"] || "";
+
+  res.json({
+    ipaddress: ipaddress.replace(/^::ffff:/, ""), // Remove IPv6 prefix if present
+    language: language,
+    software: software,
   });
 });
 

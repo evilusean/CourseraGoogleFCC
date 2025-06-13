@@ -6,6 +6,9 @@ require("dotenv").config();
 var express = require("express");
 var app = express();
 
+// set to trust proxy headers
+app.set("trust proxy", true);
+
 // enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 // so that your API is remotely testable by FCC
 var cors = require("cors");
@@ -26,10 +29,9 @@ app.get("/api/hello", function (req, res) {
 
 // new endpoint to parse header information
 app.get("/api/whoami", function (req, res) {
-  const ipaddress =
-    req.headers["x-forwarded-for"] || req.connection.remoteAddress;
-  const language = req.headers["accept-language"];
-  const software = req.headers["user-agent"];
+  const ipaddress = req.ip;
+  const language = req.get("accept-language");
+  const software = req.get("user-agent");
   res.json({ ipaddress, language, software });
 });
 

@@ -29,7 +29,12 @@ app.get("/api/hello", function (req, res) {
 
 // new endpoint to parse header information
 app.get("/api/whoami", function (req, res) {
-  const ipaddress = req.ip;
+  // Try to use the x-forwarded-for header first; this is important for FCC's test runner
+  let ipaddress = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
+  // If there are multiple IPs, take the first one
+  if (ipaddress.indexOf(",") !== -1) {
+    ipaddress = ipaddress.split(",")[0];
+  }
   const language = req.get("accept-language");
   const software = req.get("user-agent");
   res.json({ ipaddress, language, software });

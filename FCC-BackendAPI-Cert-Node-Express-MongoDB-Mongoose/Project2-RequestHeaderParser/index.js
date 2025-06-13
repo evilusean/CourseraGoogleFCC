@@ -32,23 +32,16 @@ app.enable("trust proxy");
 
 // Return request header info on API call
 app.get("/api/whoami", function (req, res) {
-  // Get IP address - prioritize x-forwarded-for for proxied requests
-  const ipaddress = (
-    req.headers["x-forwarded-for"] ||
-    req.ip ||
-    req.connection.remoteAddress
-  )
-    .split(",")[0]
-    .trim();
-
-  // Ensure we have all required fields
-  const language = req.headers["accept-language"] || "";
-  const software = req.headers["user-agent"] || "";
+  // Simplify IP address handling
+  let ipaddress = req.ip;
+  if (ipaddress.includes("::ffff:")) {
+    ipaddress = ipaddress.split("::ffff:")[1];
+  }
 
   res.json({
-    ipaddress: ipaddress.replace(/^::ffff:/, ""), // Remove IPv6 prefix if present
-    language: language,
-    software: software,
+    ipaddress: ipaddress,
+    language: req.headers["accept-language"],
+    software: req.headers["user-agent"],
   });
 });
 

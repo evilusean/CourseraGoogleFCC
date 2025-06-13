@@ -33,26 +33,10 @@ var listener = app.listen(process.env.PORT || 3000, function () {
 app.set("trust proxy", true);
 
 // Request Header Parser Microservice endpoint
-app.get("/api/whoami", function (req, res) {
-  // Get IP address with fallbacks and cleanup
-  const ipaddress = (
-    req.headers["x-forwarded-for"] ||
-    req.ip ||
-    req.socket.remoteAddress ||
-    "127.0.0.1"
-  )
-    .split(",")[0]
-    .trim()
-    .replace(/^::ffff:/, "");
-
-  // Get language and software from headers
-  const language = req.headers["accept-language"];
-  const software = req.headers["user-agent"];
-
-  // Return JSON response
+app.get("/api/whoami", (req, res) => {
   res.json({
-    ipaddress: ipaddress,
-    language: language,
-    software: software,
+    ipaddress: req.ip, // Express's built-in IP getter
+    language: req.get("accept-language"), // Direct header access instead of acceptsLanguages()
+    software: req.get("user-agent"), // Using get() instead of header()
   });
 });

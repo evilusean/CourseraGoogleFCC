@@ -350,7 +350,7 @@ https://www.freecodecamp.org/learn/back-end-development-and-apis/back-end-develo
 https://request-header-parser-microservice.freecodecamp.rocks/
 https://github.com/freeCodeCamp/boilerplate-project-headerparser/
 https://gravel-substantial-flat.glitch.me
-curl -X GET https://gravel-substantial-flat.glitch.me/whoami
+curl -X GET https://gravel-substantial-flat.glitch.me/api/whoami
 
 
 

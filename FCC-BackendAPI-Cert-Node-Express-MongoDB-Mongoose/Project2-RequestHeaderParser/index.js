@@ -27,11 +27,19 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
 });
 
+// Enable trust proxy - important for getting correct IP when behind a proxy
+app.enable("trust proxy");
+
 // Return request header info on API call
 app.get("/api/whoami", (req, res) => {
-  req.headers;
+  const ipaddress =
+    req.headers["x-forwarded-for"] ||
+    req.connection.remoteAddress ||
+    req.socket.remoteAddress ||
+    req.ip;
+
   return res.json({
-    ipaddress: req.ip,
+    ipaddress: ipaddress.split(",")[0].trim(),
     language: req.headers["accept-language"],
     software: req.headers["user-agent"],
   });

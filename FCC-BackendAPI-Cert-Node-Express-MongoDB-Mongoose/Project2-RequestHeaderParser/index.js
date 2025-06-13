@@ -6,43 +6,38 @@ require("dotenv").config();
 var express = require("express");
 var app = express();
 
-// 1. Configure middleware first (order matters)
-// enable CORS
+// enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 var cors = require("cors");
-app.use(cors({ optionsSuccessStatus: 200 }));
+app.use(cors({ optionsSuccessStatus: 200 })); // some legacy browsers choke on 204
 
-// Configure express for proxy support - move this up!
+// Configure express for proxy support
 app.set("trust proxy", true);
 
 // Static files middleware
 app.use(express.static("public"));
 
-// 2. Define routes
 // Basic routing
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/views/index.html");
 });
 
+// First API endpoint
+app.get("/api/hello", function (req, res) {
+  res.json({ greeting: "hello API" });
+});
+
 // Request Header Parser endpoint
 app.get("/api/whoami", function (req, res) {
-  // Get client IP with fallbacks
-  let ipaddress =
-    req.headers["x-forwarded-for"] || req.ip || req.connection.remoteAddress;
-
-  // Clean up IP format
-  ipaddress = ipaddress ? ipaddress.split(",")[0].trim() : "127.0.0.1";
-  if (ipaddress.includes("::ffff:")) {
-    ipaddress = ipaddress.replace(/::ffff:/, "");
-  }
+  var input = req.headers;
 
   res.json({
-    ipaddress: ipaddress,
-    language: req.headers["accept-language"],
-    software: req.headers["user-agent"],
+    ipaddress: req.ip,
+    language: input["accept-language"],
+    software: input["user-agent"],
   });
 });
 
-// 3. Start server
+// Start server
 var listener = app.listen(process.env.PORT || 3000, function () {
   console.log("Your app is listening on port " + listener.address().port);
 });

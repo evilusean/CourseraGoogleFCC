@@ -32,14 +32,13 @@ app.enable("trust proxy");
 
 // Return request header info on API call
 app.get("/api/whoami", (req, res) => {
-  const ipaddress =
-    req.headers["x-forwarded-for"] ||
-    req.connection.remoteAddress ||
-    req.socket.remoteAddress ||
-    req.ip;
+  // Simplify IP address handling
+  const ipaddress = (req.ip || req.headers["x-forwarded-for"])
+    .split(",")[0]
+    .trim();
 
   return res.json({
-    ipaddress: ipaddress.split(",")[0].trim(),
+    ipaddress: ipaddress,
     language: req.headers["accept-language"],
     software: req.headers["user-agent"],
   });

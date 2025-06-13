@@ -26,40 +26,35 @@ app.get("/api/hello", function (req, res) {
   res.json({ greeting: "hello API" });
 });
 
-// listen for requests :)
-var listener = app.listen(process.env.PORT || 3000, function () {
-  console.log("Your app is listening on port " + listener.address().port);
-});
+//--------------------- Request Header Parser API ---------------------
 
-// Enable trust proxy to get correct IP behind reverse proxies
-app.enable("trust proxy");
+// Enable trust proxy before routes
+app.set("trust proxy", true);
 
 // Header parser endpoint
-app.get("/api/whoami", function (req, res) {
-  // Get IP address with fallbacks
-  let ipaddress =
+app.get("/api/whoami", (req, res) => {
+  // Get client IP with fallbacks
+  const ipaddress = (
     req.headers["x-forwarded-for"] ||
     req.ip ||
-    req.connection.remoteAddress ||
-    "127.0.0.1";
+    req.socket.remoteAddress ||
+    "127.0.0.1"
+  )
+    .split(",")[0]
+    .trim()
+    .replace(/^::ffff:/, "");
 
-  // Clean up IP address
-  if (ipaddress.includes(",")) {
-    ipaddress = ipaddress.split(",")[0];
-  }
-  if (ipaddress.includes("::ffff:")) {
-    ipaddress = ipaddress.split("::ffff:")[1];
-  }
-  if (ipaddress === "::1") {
-    ipaddress = "127.0.0.1";
-  }
-
-  // Create response object
+  // Create response with required headers
   const responseObj = {
-    ipaddress: ipaddress.trim(),
+    ipaddress: ipaddress,
     language: req.headers["accept-language"],
     software: req.headers["user-agent"],
   };
 
   res.json(responseObj);
+});
+
+// listen for requests :)
+var listener = app.listen(process.env.PORT || 3000, function () {
+  console.log("Your app is listening on port " + listener.address().port);
 });

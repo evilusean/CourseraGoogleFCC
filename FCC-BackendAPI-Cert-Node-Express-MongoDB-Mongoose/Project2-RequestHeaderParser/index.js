@@ -6,37 +6,43 @@ require("dotenv").config();
 var express = require("express");
 var app = express();
 
-// enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
-// so that your API is remotely testable by FCC
+// 1. Configure middleware first (order matters)
+// enable CORS
 var cors = require("cors");
-app.use(cors({ optionsSuccessStatus: 200 })); // some legacy browsers choke on 204
+app.use(cors({ optionsSuccessStatus: 200 }));
 
-// http://expressjs.com/en/starter/static-files.html
+// Configure express for proxy support - move this up!
+app.set("trust proxy", true);
+
+// Static files middleware
 app.use(express.static("public"));
 
-// http://expressjs.com/en/starter/basic-routing.html
+// 2. Define routes
+// Basic routing
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/views/index.html");
 });
 
-// your first API endpoint...
-app.get("/api/hello", function (req, res) {
-  res.json({ greeting: "hello API" });
+// Request Header Parser endpoint
+app.get("/api/whoami", function (req, res) {
+  // Get client IP with fallbacks
+  let ipaddress =
+    req.headers["x-forwarded-for"] || req.ip || req.connection.remoteAddress;
+
+  // Clean up IP format
+  ipaddress = ipaddress ? ipaddress.split(",")[0].trim() : "127.0.0.1";
+  if (ipaddress.includes("::ffff:")) {
+    ipaddress = ipaddress.replace(/::ffff:/, "");
+  }
+
+  res.json({
+    ipaddress: ipaddress,
+    language: req.headers["accept-language"],
+    software: req.headers["user-agent"],
+  });
 });
 
-// listen for requests :)
+// 3. Start server
 var listener = app.listen(process.env.PORT || 3000, function () {
   console.log("Your app is listening on port " + listener.address().port);
-});
-
-// Configure express for proxy support
-app.set("trust proxy", true);
-
-// Request Header Parser Microservice endpoint
-app.get("/api/whoami", (req, res) => {
-  res.json({
-    ipaddress: req.ip, // Express's built-in IP getter
-    language: req.get("accept-language"), // Direct header access instead of acceptsLanguages()
-    software: req.get("user-agent"), // Using get() instead of header()
-  });
 });

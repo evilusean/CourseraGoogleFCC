@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const dns = require('dns');
 const app = express();
 
 // Basic Configuration
@@ -42,13 +43,24 @@ app.post('/api/shorturl', (req, res) => {
   if (!isValidHttpUrl(original_url)) {
     return res.json({ error: 'invalid url' });
   }
-  // Check if URL already exists
-  let short_url = Object.keys(urlDatabase).find(key => urlDatabase[key] === original_url);
-  if (!short_url) {
-    short_url = urlCounter++;
-    urlDatabase[short_url] = original_url;
+  let hostname;
+  try {
+    hostname = new URL(original_url).hostname;
+  } catch (e) {
+    return res.json({ error: 'invalid url' });
   }
-  res.json({ original_url, short_url: Number(short_url) });
+  dns.lookup(hostname, (err) => {
+    if (err) {
+      return res.json({ error: 'invalid url' });
+    }
+    // Check if URL already exists
+    let short_url = Object.keys(urlDatabase).find(key => urlDatabase[key] === original_url);
+    if (!short_url) {
+      short_url = urlCounter++;
+      urlDatabase[short_url] = original_url;
+    }
+    res.json({ original_url, short_url: Number(short_url) });
+  });
 });
 
 // GET endpoint to redirect

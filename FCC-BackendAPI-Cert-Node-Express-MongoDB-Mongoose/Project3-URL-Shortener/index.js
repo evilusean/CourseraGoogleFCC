@@ -40,17 +40,21 @@ app.get('/api/hello', function(req, res) {
 // POST endpoint to shorten URL
 app.post('/api/shorturl', (req, res) => {
   const original_url = req.body.url;
+  console.log('POST /api/shorturl - Received URL:', original_url);
   if (!isValidHttpUrl(original_url)) {
+    console.log('Invalid URL format');
     return res.json({ error: 'invalid url' });
   }
   let hostname;
   try {
     hostname = new URL(original_url).hostname;
   } catch (e) {
+    console.log('URL parsing failed');
     return res.json({ error: 'invalid url' });
   }
   dns.lookup(hostname, (err) => {
     if (err) {
+      console.log('DNS lookup failed for:', hostname);
       return res.json({ error: 'invalid url' });
     }
     // Check if URL already exists
@@ -58,6 +62,9 @@ app.post('/api/shorturl', (req, res) => {
     if (!short_url) {
       short_url = urlCounter++;
       urlDatabase[short_url] = original_url;
+      console.log('New short_url assigned:', short_url);
+    } else {
+      console.log('Existing short_url found:', short_url);
     }
     res.json({ original_url, short_url: Number(short_url) });
   });
@@ -66,7 +73,8 @@ app.post('/api/shorturl', (req, res) => {
 // GET endpoint to redirect
 app.get('/api/shorturl/:short_url', (req, res) => {
   const short_url = req.params.short_url;
-  const original_url = urlDatabase[short_url];
+  const original_url = urlDatabase[short_url] || urlDatabase[Number(short_url)];
+  console.log('GET /api/shorturl/' + short_url, '->', original_url);
   if (original_url) {
     return res.redirect(original_url);
   } else {

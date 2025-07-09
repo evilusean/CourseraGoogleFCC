@@ -5,8 +5,8 @@ End : 30June2025 </br>
 
 https://www.freecodecamp.org/learn/back-end-development-and-apis/
 
-Certificate:
-
+Certificate:</br>
+https://www.freecodecamp.org/certification/Evilusean/back-end-development-and-apis
 
 
 # [FreeCodeCamp - NextJS-Supabase-Prisma-ShadCN AI-Note Taking App](https://github.com/evilusean/CourseraGoogleFCC/tree/main/FCC-NextJS-Supabase-Prisma-ShadCN_AI-NoteTaking-App) :

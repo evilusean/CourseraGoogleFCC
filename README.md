@@ -1,3 +1,8 @@
+# FreeCodeCamp - Testing and Quality Assurance - JavaScript-Chai-Node-Express-Socket.IO :
+
+Start : 11July2025</br>
+End :
+
 # [FreeCodeCamp - Back End Development and APIs - Node-Express-MongoDB-Mongoose :](https://github.com/evilusean/CourseraGoogleFCC/tree/main/FCC-BackendAPI-Cert-Node-Express-MongoDB-Mongoose)
 
 Start : 28May2025</br>

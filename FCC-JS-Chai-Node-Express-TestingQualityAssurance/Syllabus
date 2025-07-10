@@ -1,0 +1,138 @@
+Quality Assurance
+As your programs or web applications become more complex, you'll want to test them to make sure that new changes don't break their original functionality.
+
+In the Quality Assurance Certification, you'll learn how to write tests with Chai to ensure your applications work the way you expect them to.
+
+Then you'll build a chat application to learn advanced Node and Express concepts. You'll also use Pug as a template engine, Passport for authentication, and Socket.io for real-time communication between the server and connected clients.
+
+Courses
+Quality Assurance and Testing with Chai
+Chai is a JavaScript testing library that helps you confirm that your program still behaves the way you expect it to after you make changes to your code.
+
+Using Chai, you can write tests that describe your program's requirements and see if your program meets them.
+
+In this course, you'll learn about assertions, deep equality, truthiness, testing APIs, and other fundamentals for testing JavaScript applications.
+
+
+Collapse courseQuality Assurance and Testing with Chai
+0/25
+, 0 of 25 challenges completed
+Not Passed
+Learn How JavaScript Assertions Work
+Not Passed
+Test if a Variable or Function is Defined
+Not Passed
+Use Assert.isOK and Assert.isNotOK
+Not Passed
+Test for Truthiness
+Not Passed
+Use the Double Equals to Assert Equality
+Not Passed
+Use the Triple Equals to Assert Strict Equality
+Not Passed
+Assert Deep Equality with .deepEqual and .notDeepEqual
+Not Passed
+Compare the Properties of Two Elements
+Not Passed
+Test if One Value is Below or At Least as Large as Another
+Not Passed
+Test if a Value Falls within a Specific Range
+Not Passed
+Test if a Value is an Array
+Not Passed
+Test if an Array Contains an Item
+Not Passed
+Test if a Value is a String
+Not Passed
+Test if a String Contains a Substring
+Not Passed
+Use Regular Expressions to Test a String
+Not Passed
+Test if an Object has a Property
+Not Passed
+Test if a Value is of a Specific Data Structure Type
+Not Passed
+Test if an Object is an Instance of a Constructor
+Not Passed
+Run Functional Tests on API Endpoints using Chai-HTTP
+Not Passed
+Run Functional Tests on API Endpoints using Chai-HTTP II
+Not Passed
+Run Functional Tests on an API Response using Chai-HTTP III - PUT method
+Not Passed
+Run Functional Tests on an API Response using Chai-HTTP IV - PUT method
+Not Passed
+Simulate Actions Using a Headless Browser
+Not Passed
+Run Functional Tests Using a Headless Browser
+Not Passed
+Run Functional Tests Using a Headless Browser II
+Advanced Node and Express
+Now it's time to take a deep dive into Node.js and Express.js by building a chat application with a sign-in system.
+
+To implement the sign-in system safely, you'll need to learn about authentication. This is the act of verifying the identity of a person or process.
+
+In this course, you'll learn how to use Passport to manage authentication, Pug to create reusable templates for quickly building the front end, and web sockets for real-time communication between the clients and server.
+
+
+Collapse courseAdvanced Node and Express
+0/22
+, 0 of 22 challenges completed
+Not Passed
+Set up a Template Engine
+Not Passed
+Use a Template Engine's Powers
+Not Passed
+Set up Passport
+Not Passed
+Serialization of a User Object
+Not Passed
+Implement the Serialization of a Passport User
+Not Passed
+Authentication Strategies
+Not Passed
+How to Use Passport Strategies
+Not Passed
+Create New Middleware
+Not Passed
+How to Put a Profile Together
+Not Passed
+Logging a User Out
+Not Passed
+Registration of New Users
+Not Passed
+Hashing Your Passwords
+Not Passed
+Clean Up Your Project with Modules
+Not Passed
+Implementation of Social Authentication
+Not Passed
+Implementation of Social Authentication II
+Not Passed
+Implementation of Social Authentication III
+Not Passed
+Set up the Environment
+Not Passed
+Communicate by Emitting
+Not Passed
+Handle a Disconnect
+Not Passed
+Authentication with Socket.IO
+Not Passed
+Announce New Users
+Not Passed
+Send and Display Chat Messages
+Quality Assurance Projects
+Now that you're well versed in both the front end and back end, it's time to apply all the skills and concepts you've learned up to this point. You'll build 5 different web applications, and write tests for each one to make sure they're working and can handle different edge cases.
+
+After completing these Quality Assurance projects, you'll have 5 more projects under your belt, and a new certification to show off on your portfolio.
+
+Metric-Imperial Converter
+Not Passed
+Issue Tracker
+Not Passed
+Personal Library
+Not Passed
+Sudoku Solver
+Not Passed
+American British Translator

@@ -1,6 +1,6 @@
 # FreeCodeCamp - Testing and Quality Assurance - JavaScript-Chai-Node-Express-Socket.IO :
 
-Start : 23July2025</br>
+Start : 24July2025</br>
 End :
 
 Certificate : </br>

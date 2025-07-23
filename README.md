@@ -1,6 +1,6 @@
 # [FreeCodeCamp - Testing and Quality Assurance - JavaScript-Chai-Node-Express-Socket.IO :](https://github.com/evilusean/CourseraGoogleFCC/tree/main/FCC-JS-Chai-Node-Express-TestingQualityAssurance)
 
-Start : 21July2025</br>
+Start : 23July2025</br>
 End :
 
 https://www.freecodecamp.org/learn/quality-assurance/

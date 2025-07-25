@@ -20,18 +20,41 @@ Within tests/1_unit-tests.js under the test labeled #1 in the Basic Assertions s
 Test if a Variable or Function is Defined ==================================================================================================================================================
 Within tests/1_unit-tests.js under the test labeled #2 in the Basic Assertions suite, change each assert to either
 assert.isDefined() or assert.isUndefined() to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
+    test('#isDefined, #isUndefined', function () {
+      assert.isDefined(null, 'null is not undefined');
+      assert.isUndefined(undefined, 'undefined IS undefined');
+      assert.isDefined('hello', 'A string is not undefined');
+    });
 
+Use Assert.isOK and Assert.isNotOK =========================================================================================================================================================
+isOk() will test for a truthy value, and isNotOk() will test for a falsy value.
+To learn more about truthy and falsy values, try our Falsy Bouncer challenge.
+Within tests/1_unit-tests.js under the test labeled #3 in the Basic Assertions suite, change each assert to either assert.isOk() or assert.isNotOk()
+to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
+    test('#isOk, #isNotOk', function () {
+      assert.isNotOk(null, 'null is falsey');
+      assert.isOk("I'm truthy", 'A string is truthy');
+      assert.isOk(true, 'true is truthy');
+    });
 
+Test for Truthiness =========================================================================================================================================================================
+isTrue() will test for the boolean value true and isNotTrue() will pass when given anything but the boolean value of true.
+assert.isTrue(true, 'This will pass with the boolean value true');
+assert.isTrue('true', 'This will NOT pass with the string value "true"');
+assert.isTrue(1, 'This will NOT pass with the number value 1');
+isFalse() and isNotFalse() also exist, and behave similarly to their true counterparts except they look for the boolean value of false.
+Within tests/1_unit-tests.js under the test labeled #4 in the Basic Assertions suite, 
+  change each assert to either assert.isTrue or assert.isNotTrueto make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
+test('#isTrue, #isNotTrue', function () {
+      assert.isTrue(true, 'true is true');
+      assert.isTrue(!!'double negation', 'Double negation of a truthy value is true');
+      assert.isNotTrue({ value: 'truthy' }, 'Objects are truthy, but are not boolean values');
+    });
 
-
-
-
-
-
-
-
-
-
+Use the Double Equals to Assert Equality ====================================================================================================================================================
+equal() compares objects using ==.
+Within tests/1_unit-tests.js under the test labeled #5 in the Equality suite, change each assert to either assert.equal or assert.notEqual 
+  to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
 
 
 

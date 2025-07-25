@@ -12,7 +12,10 @@ https://github.com/freeCodeCamp/boilerplate-mochachai/
 Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
 Within tests/1_unit-tests.js under the test labeled #1 in the Basic Assertions suite, change each assert to either assert.isNull or assert.isNotNull 
   to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
-
+    'test('#isNull, #isNotNull', function () {
+      assert.isNull(null, 'This is an optional error description - e.g. null is null');
+      assert.isNotNull(1, '1 is not null');
+    });' # how to asset isNull and isNotNull
 
 
 

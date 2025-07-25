@@ -33,10 +33,10 @@ suite('Unit Tests', function () {
   suite('Equality', function () {
     // #5
     test('#equal, #notEqual', function () {
-      assert.isEqual(12, '12', 'Numbers are coerced into strings with ==');
-      assert.isNotEqual({ value: 1 }, { value: 1 }, '== compares object references');
-      assert.isEqual(6 * '2', '12');
-      assert.isEqual(6 + '2', '12');
+      assert.equal(12, '12', 'Numbers are coerced into strings with ==');
+      assert.notEqual({ value: 1 }, { value: 1 }, '== compares object references');
+      assert.equal(6 * '2', '12');
+      assert.notEqual(6 + '2', '12');
     });
     // #6
     test('#strictEqual, #notStrictEqual', function () {

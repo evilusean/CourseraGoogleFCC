@@ -51,7 +51,7 @@ test('#isTrue, #isNotTrue', function () {
       assert.isNotTrue({ value: 'truthy' }, 'Objects are truthy, but are not boolean values');
     });
 
-
+Use the Double Equals to Assert Equality ====================================================================================================================================================
 
 
 

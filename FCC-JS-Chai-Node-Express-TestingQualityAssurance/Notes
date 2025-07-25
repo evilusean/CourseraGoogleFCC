@@ -26,7 +26,7 @@ assert.isDefined() or assert.isUndefined() to make the test pass (should evaluat
       assert.isDefined('hello', 'A string is not undefined');
     });
 
-
+Use Assert.isOK and Assert.isNotOK =========================================================================================================================================================
 
 
 

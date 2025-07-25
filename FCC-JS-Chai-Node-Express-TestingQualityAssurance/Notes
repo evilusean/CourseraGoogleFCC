@@ -27,7 +27,10 @@ assert.isDefined() or assert.isUndefined() to make the test pass (should evaluat
     });
 
 Use Assert.isOK and Assert.isNotOK =========================================================================================================================================================
-
+isOk() will test for a truthy value, and isNotOk() will test for a falsy value.
+To learn more about truthy and falsy values, try our Falsy Bouncer challenge.
+Within tests/1_unit-tests.js under the test labeled #3 in the Basic Assertions suite, change each assert to either assert.isOk() or assert.isNotOk()
+to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
 
 
 

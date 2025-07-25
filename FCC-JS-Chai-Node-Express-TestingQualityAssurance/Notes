@@ -52,7 +52,9 @@ test('#isTrue, #isNotTrue', function () {
     });
 
 Use the Double Equals to Assert Equality ====================================================================================================================================================
-
+equal() compares objects using ==.
+Within tests/1_unit-tests.js under the test labeled #5 in the Equality suite, change each assert to either assert.equal or assert.notEqual 
+  to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
 
 
 

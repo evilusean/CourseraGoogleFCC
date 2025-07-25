@@ -47,8 +47,8 @@ Within tests/1_unit-tests.js under the test labeled #4 in the Basic Assertions s
   change each assert to either assert.isTrue or assert.isNotTrueto make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
 test('#isTrue, #isNotTrue', function () {
       assert.isTrue(true, 'true is true');
-      assert.isNotTrue(!!'double negation', 'Double negation of a truthy value is true');
-      assert.isTrue({ value: 'truthy' }, 'Objects are truthy, but are not boolean values');
+      assert.isTrue(!!'double negation', 'Double negation of a truthy value is true');
+      assert.isNotTrue({ value: 'truthy' }, 'Objects are truthy, but are not boolean values');
     });
 
 

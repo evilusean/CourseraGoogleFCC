@@ -103,7 +103,10 @@ Within tests/1_unit-tests.js under the test labelled #9 in the Comparisons suite
     });
 
 Test if a Value Falls within a Specific Range ================================================================================================================================================
-
+'.approximately(actual, expected, delta, [message])' #syntax for testing a range
+  Asserts that the actual is equal to expected, to within a +/- delta range.
+Within tests/1_unit-tests.js under the test labeled #10 in the Comparisons suite, change each assert to assert.approximately to make the test pass (should evaluate to true).
+Choose the minimum range (3rd parameter) to make the test always pass. It should be less than 1.
 
 
 

@@ -128,7 +128,7 @@ Within tests/1_unit-tests.js under the test labeled #12 in the Arrays suite,
       assert.include(backendLanguages, 'javascript', 'JS is a backend language');
     });
 
-
+Test if a Value is a String ===================================================================================================================================================================
 
 
 

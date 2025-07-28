@@ -168,7 +168,9 @@ Within tests/1_unit-tests.js under the test labeled #16 in the Objects suite, ch
     });
 
 Test if a Value is of a Specific Data Structure Type ============================================================================================================================================
-
+#typeOf asserts that value's type is the given string, as determined by Object.prototype.toString.
+Within tests/1_unit-tests.js under the test labeled #17 in the Objects suite, change each assert to 
+  either assert.typeOf or assert.notTypeOf to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
 
 
 

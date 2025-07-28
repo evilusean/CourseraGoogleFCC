@@ -179,7 +179,7 @@ Within tests/1_unit-tests.js under the test labeled #17 in the Objects suite, ch
       assert.typeOf(myCar.wheels, 'number');
     });
 
-
+Test if an Object is an Instance of a Constructor ===============================================================================================================================================
 
 
 

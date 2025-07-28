@@ -162,12 +162,22 @@ Test if an Object has a Property ===============================================
 Within tests/1_unit-tests.js under the test labeled #16 in the Objects suite, change each assert to either 
   assert.property or assert.notProperty to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
     test('#property, #notProperty', function () {
-      assert.NotProperty(myCar, 'wings', "Cars don't have wings");
+      assert.notProperty(myCar, 'wings', "Cars don't have wings");
       assert.property(airlinePlane, 'engines', 'Planes have engines');
       assert.property(myCar, 'wheels', 'Cars have wheels');
     });
 
-
+Test if a Value is of a Specific Data Structure Type ============================================================================================================================================
+#typeOf asserts that value's type is the given string, as determined by Object.prototype.toString.
+Within tests/1_unit-tests.js under the test labeled #17 in the Objects suite, change each assert to 
+  either assert.typeOf or assert.notTypeOf to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
+    test('#typeOf, #notTypeOf', function () {
+      assert.typeOf(myCar, 'object');
+      assert.typeOf(myCar.model, 'string');
+      assert.notTypeOf(airlinePlane.wings, 'string');
+      assert.typeOf(airlinePlane.engines, 'array');
+      assert.typeOf(myCar.wheels, 'number');
+    });
 
 
 

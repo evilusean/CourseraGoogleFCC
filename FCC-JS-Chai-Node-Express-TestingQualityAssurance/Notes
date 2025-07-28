@@ -180,6 +180,8 @@ Within tests/1_unit-tests.js under the test labeled #17 in the Objects suite, ch
     });
 
 Test if an Object is an Instance of a Constructor ===============================================================================================================================================
-
+#instanceOf asserts that an object is an instance of a constructor.
+Within tests/1_unit-tests.js under the test labeled #18 in the Objects suite, 
+  change each assert to either assert.instanceOf or assert.notInstanceOf to make the test pass (should evaluate to true). Do not alter the arguments passed to the asserts.
 
 

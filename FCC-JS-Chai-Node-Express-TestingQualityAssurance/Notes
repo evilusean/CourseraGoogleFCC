@@ -290,6 +290,46 @@ The type should be application/json
 The body.name should be Giovanni
 The body.surname should be da Verrazzano
 Follow the assertion order above - we rely on it. Also, be sure to remove assert.fail() once complete.
+    test('Send {surname: "da Verrazzano"}', function (done) {
+      chai
+        .request(server)
+        .keepOpen()
+        .put('/travellers')
+        .send({ surname: "da Verrazzano" })
+        .end(function (err, res) {
+          assert.equal(res.status, 200);
+          assert.equal(res.type, 'application/json');
+          assert.equal(res.body.name, 'Giovanni');
+          assert.equal(res.body.surname, 'da Verrazzano');
+          done();
+        });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

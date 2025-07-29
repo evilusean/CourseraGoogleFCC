@@ -277,7 +277,7 @@ Follow the assertion order above - we rely on it. Also, be sure to remove assert
         });
     });
 
-Run Functional Tests on an API Response using Chai-HTTP IV - PUT method =======================================================================================================================
+Run Functional Tests on an API Response using Chai-HTTP IV - PUT method =====================================================================================================================
 Now that you know how to test a PUT request, it's your turn to do it from scratch.
 Within tests/2_functional-tests.js, alter the 'Send {surname: "da Verrazzano"}' test (// #4) and use the put and send methods to test the '/travellers' endpoint.
 Send the following JSON object with your PUT request:

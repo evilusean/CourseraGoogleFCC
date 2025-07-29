@@ -217,7 +217,7 @@ Within tests/2_functional-tests.js, alter the 'Test GET /hello with no name' tes
   Do not alter the arguments passed to the asserts.
 There should be no URL query. Without a name URL query, the endpoint responds with hello Guest.
 
-
+Run Functional Tests on API Endpoints using Chai-HTTP II ======================================================================================================================================
 
 
 

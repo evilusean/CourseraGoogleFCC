@@ -391,7 +391,15 @@ Assert that the text inside the element span#name is 'Amerigo'
 Assert that the text inside the element span#surname is 'Vespucci'
 Assert that the element(s) span#dates exist and their count is 1
 Do not forget to remove the assert.fail() call.
-
+    test('Submit the surname "Vespucci" in the HTML form', function (done) {
+      browser.fill('surname', 'Vespucci').then(() => {
+        browser.pressButton('submit', function() {
+          browser.assert.success(); // Assert status is OK 200
+          browser.assert.text('span#name', 'Amerigo'); // Assert name
+          browser.assert.text('span#surname', 'Vespucci'); // Assert surname
+          browser.assert.elements('span#dates', 1); // Assert dates count
+          done();
+        });
 
 
 

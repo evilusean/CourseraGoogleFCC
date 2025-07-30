@@ -99,9 +99,15 @@ suite('Functional Tests with Zombie.js', function () {
     });
     // #6
     test('Submit the surname "Vespucci" in the HTML form', function (done) {
-      assert.fail();
-
-      done();
+      browser.fill('surname', 'Vespucci').then(() => {
+        browser.pressButton('submit', function() {
+          browser.assert.success(); // Assert status is OK 200
+          browser.assert.text('span#name', 'Amerigo'); // Assert name
+          browser.assert.text('span#surname', 'Vespucci'); // Assert surname
+          browser.assert.elements('span#dates', 1); // Assert dates count
+          done();
+        });
+      });
     });
   });
 });

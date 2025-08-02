@@ -12,6 +12,9 @@ app.set('view engine', 'pug');
 // Set views directory to ./views/pug
 app.set('views', __dirname + '/views/pug');
 
+// Add fccTesting for testing
+fccTesting(app);
+
 // Home page route
 app.get('/', (req, res) => {
   res.render('index');

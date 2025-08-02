@@ -6,12 +6,14 @@ const fccTesting = require('./freeCodeCamp/fcctesting.js');
 
 const app = express();
 
-fccTesting(app); //For FCC testing purposes
-app.use('/public', express.static(process.cwd() + '/public'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// Set Pug as the view engine
+app.set('view engine', 'pug');
 
-app.route('/').get((req, res) => {
+// Set views directory to ./views/pug
+app.set('views', __dirname + '/views/pug');
+
+// Home page route
+app.get('/', (req, res) => {
 
 });
 

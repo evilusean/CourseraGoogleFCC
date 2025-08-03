@@ -421,7 +421,8 @@ After that, add another set method that sets the views property of your app to p
 Finally, use res.render() in the route for your home page, passing index as the first argument. This will render the pug template.
 If all went as planned, your app home page will no longer be blank. Instead, it will display a message indicating you've successfully rendered the Pug template!
 https://a9d4db49-ded7-46e3-ac92-851bd7bc2c2f-00-1ew7ymkdcxghh.janeway.replit.dev/
-
+Just spent 2 hours uploading all my files to 'Replit' - It still doesn't pass any of the tests, this is the third day, I've been trying to do this..
+It runs locally, It runs on Replit, I see when the tester on freecodecamp tries to connect in the terminal, I'm using the exact code they gave us, yet, somehow, it's not working
 
 
 

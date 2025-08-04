@@ -12,6 +12,8 @@ const fccTesting = require('./freeCodeCamp/fcctesting.js');
 
 const app = express();
 
+const cors = require('cors');
+app.use(cors());
 app.set('view engine', 'pug');
 app.set('views', './views/pug');
 fccTesting(app); // For fCC testing purposes
@@ -19,8 +21,7 @@ app.use('/public', express.static(process.cwd() + '/public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.route('/').get((req, res) => {
-  // Change the response to render the Pug template
+app.get('/', (req, res) => {
   res.render('index');
 });
 

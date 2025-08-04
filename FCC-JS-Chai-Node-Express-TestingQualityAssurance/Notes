@@ -492,7 +492,7 @@ Be sure to add SESSION_SECRET to your .env file, and give it a random value. Thi
 After you do all that, tell your express app to use passport.initialize() and passport.session().
 # You had to create a new '.env' file and add a line with 'SESSION_SECRET=....'
 
-
+Serialization of a User Object ===============================================================================================================================================================
 
 
 

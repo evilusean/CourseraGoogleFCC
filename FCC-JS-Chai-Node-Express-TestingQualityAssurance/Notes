@@ -470,7 +470,9 @@ Pass those from your server to the Pug file by adding an object as a second argu
 It should look like :
 res.render('index', { title: 'Hello', message: 'Please log in' });
 Now refresh your page, and you should see those values rendered in your view in the correct spot as laid out in your index.pug file!
-
+app.route('/').get((req, res) => {
+  res.render('index', { title: 'Hello', message: 'Please log in' });
+});
 
 
 

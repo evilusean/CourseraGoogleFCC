@@ -7,11 +7,14 @@ const session = require('express-session');
 const passport = require('passport');
 const app = express();
 
+const cors = require('cors');
+app.use(cors());
+
 app.set('view engine', 'pug');
 app.set('views', './views/pug');
 
 app.use(session({
-  secret: process.env.SESSION_SECRET,
+  secret: process.sample.env.SESSION_SECRET,
   resave: true,
   saveUninitialized: true,
   cookie: { secure: false }

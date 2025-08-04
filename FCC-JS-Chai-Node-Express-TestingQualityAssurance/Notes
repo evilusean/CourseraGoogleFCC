@@ -433,8 +433,12 @@ Every other post on the forum for this problem is over 4 years old, and none of 
 Created a forum post, because I just want to move on, I need to finish this course and do another before the end of the month, on top of hundreds of Japanese flashcards a day
 Hopefully by the time I finish updating WaniKani vocab lists, I will have an answer and be able to move forward, here is the link to the forum post for future Sean :
 https://forum.freecodecamp.org/t/advanced-node-and-express-set-up-a-template-engine/757490
-
-
+FIX :
+'F11' to check console, run tests, found the errors, searched them up, and voila
+'npm install cors' 
+'const cors = require('cors');
+app.use(cors());' 
+That's it, 2 days of work to add 2 lines of code. Tests back, back on track. 
 
 
 

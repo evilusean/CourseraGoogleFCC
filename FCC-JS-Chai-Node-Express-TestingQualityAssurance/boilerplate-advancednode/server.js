@@ -5,6 +5,7 @@ const myDB = require('./connection');
 const fccTesting = require('./freeCodeCamp/fcctesting.js');
 const session = require('express-session');
 const passport = require('passport');
+
 const app = express();
 
 const cors = require('cors');
@@ -14,7 +15,7 @@ app.set('view engine', 'pug');
 app.set('views', './views/pug');
 
 app.use(session({
-  secret: process.sample.env.SESSION_SECRET,
+  secret: process.env.SESSION_SECRET,
   resave: true,
   saveUninitialized: true,
   cookie: { secure: false }
@@ -28,8 +29,8 @@ app.use('/public', express.static(process.cwd() + '/public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.route('/').get((req, res) => {
-  res.render('index', { title: 'Hello', message: 'Please log in' });
+app.get('/', (req, res) => {
+  res.render('index');
 });
 
 const PORT = process.env.PORT || 3000;

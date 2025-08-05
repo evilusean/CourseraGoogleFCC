@@ -518,7 +518,7 @@ const { ObjectID } = require('mongodb');
 The deserializeUser will throw an error until you set up the database connection. So, for now, comment out the myDatabase.findOne call, 
 and just call done(null, null) in the deserializeUser callback function.
 
-
+Implement the Serialization of a Passport User ==============================================================================================================================================
 
 
 

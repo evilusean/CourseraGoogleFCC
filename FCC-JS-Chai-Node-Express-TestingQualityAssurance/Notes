@@ -546,7 +546,7 @@ myDB(async client => {
 Be sure to uncomment the myDataBase code in deserializeUser, and edit your done(null, null) to include the doc.
 -Had to go to MongoDB, create a new account, DB/Cluster, and get a connection string, make sure .env is in .gitignore, and good to go
 
-
+Authentication Strategies ===================================================================================================================================================================
 
 
 

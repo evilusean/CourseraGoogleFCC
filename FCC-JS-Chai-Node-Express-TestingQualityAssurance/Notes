@@ -544,13 +544,43 @@ myDB(async client => {
 });
 // app.listen out here...
 Be sure to uncomment the myDataBase code in deserializeUser, and edit your done(null, null) to include the doc.
+-Had to go to MongoDB, create a new account, DB/Cluster, and get a connection string, make sure .env is in .gitignore, and good to go
 
+Authentication Strategies ===================================================================================================================================================================
+A strategy is a way of authenticating a user. You can use a strategy for allowing users to authenticate based on locally saved information 
+  (if you have them register first) or from a variety of providers such as Google or GitHub. For this project, we will use Passport middleware. 
+  Passport provides a comprehensive set of strategies that support authentication using a username and password, GitHub, Google, and more.
+passport-local@~1.0.0 has already been added as a dependency. Add it to your server as follows:
+const LocalStrategy = require('passport-local');
+Tell passport to use an instantiated LocalStrategy object with a few settings defined. Make sure this (as well as everything from this point on) is 
+  encapsulated in the database connection since it relies on it!:
+passport.use(new LocalStrategy((username, password, done) => {
+  myDataBase.findOne({ username: username }, (err, user) => {
+    console.log(`User ${username} attempted to log in.`);
+    if (err) return done(err);
+    if (!user) return done(null, false);
+    if (password !== user.password) return done(null, false);
+    return done(null, user);
+  });
+}));
+This is defining the process to use when you try to authenticate someone locally. First, it tries to find a user in your database with the username entered. 
+  Then, it checks for the password to match. Finally, if no errors have popped up that you checked for (e.g. an incorrect password), the user object is returned and they are authenticated.
+Many strategies are set up using different settings. Generally, it is easy to set it up based on the README in that strategy's repository. 
+  A good example of this is the GitHub strategy where you don't need to worry about a username or password because the user will be sent to GitHub's auth page to authenticate. 
+  As long as they are logged in and agree then GitHub returns their profile for you to use.
 
-
-
-
-
-
+How to Use Passport Strategies ===============================================================================================================================================================
+In the index.pug file supplied, there is a login form. It is hidden because of the inline JavaScript if showLogin with the form indented after it.
+In the res.render for that page, add a new variable to the object, showLogin: true. When you refresh your page, you should then see the form! 
+  This form is set up to POST on /login. So, this is where you should set up to accept the POST request and authenticate the user.
+For this challenge, you should add the route /login to accept a POST request. To authenticate on this route, you need to add a middleware to do so before then sending a response.
+  This is done by just passing another argument with the middleware before with your response. The middleware to use is passport.authenticate('local').
+passport.authenticate can also take some options as an argument such as { failureRedirect: '/' } which is incredibly useful, so be sure to add that in as well.
+  Add a response after using the middleware (which will only be called if the authentication middleware passes) that redirects the user to /profile. 
+  Add that route, as well, and make it render the view profile.pug.
+If the authentication was successful, the user object will be saved in req.user.
+At this point, if you enter a username and password in the form, it should redirect to the home page /, and the console of your server should display 
+  'User {USERNAME} attempted to log in.', since we currently cannot login a user who isn't registered.
 
 
 

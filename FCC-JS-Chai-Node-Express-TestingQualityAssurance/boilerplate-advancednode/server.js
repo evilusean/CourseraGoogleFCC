@@ -26,16 +26,6 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(session({
-  secret: process.env.SESSION_SECRET,
-  resave: true,
-  saveUninitialized: true,
-  cookie: { secure: false }
-}));
-
-app.use(passport.initialize());
-app.use(passport.session());
-
 fccTesting(app); // For fCC testing purposes
 app.use('/public', express.static(process.cwd() + '/public'));
 app.use(express.json());
@@ -44,12 +34,10 @@ app.use(express.urlencoded({ extended: true }));
 myDB(async client => {
   const myDataBase = await client.db('database').collection('users');
 
-  // Be sure to change the title
   app.route('/').get((req, res) => {
-    //Change the response to render the Pug template
     res.render('index', {
       title: 'Connected to Database',
-      message: 'Please login',
+      message: 'Please log in',
       showLogin: true
     });
   });
@@ -60,6 +48,17 @@ myDB(async client => {
 
   app.route('/profile').get(ensureAuthenticated, (req,res) => {
     res.render('profile', { username: req.user.username });
+  });
+
+  app.route('/logout').get((req, res) => {
+    req.logout();
+    res.redirect('/');
+  });
+
+  app.use((req, res, next) => {
+    res.status(404)
+      .type('text')
+      .send('Not Found');
   });
 
   passport.use(new LocalStrategy((username, password, done) => {

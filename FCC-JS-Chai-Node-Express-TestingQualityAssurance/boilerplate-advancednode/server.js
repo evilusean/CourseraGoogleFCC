@@ -11,15 +11,15 @@ const LocalStrategy = require('passport-local');
 const app = express();
 
 const cors = require('cors');
-app.use(cors());
+app.use(cors({ origin: true, credentials: true }));
 
 app.set('view engine', 'pug');
 app.set('views', './views/pug');
 
 app.use(session({
   secret: process.env.SESSION_SECRET,
-  resave: true,
-  saveUninitialized: true,
+  resave: false,
+  saveUninitialized: false,
   cookie: { secure: false }
 }));
 
@@ -52,12 +52,8 @@ myDB(async client => {
   });
 
   app.route('/logout').get((req, res) => {
-    req.logout((err) => {
-      if (err) {
-        return next(err);
-      }
-      res.redirect('/');
-    });
+    req.logout();
+    res.redirect('/');
   });
 
   app.route('/register')

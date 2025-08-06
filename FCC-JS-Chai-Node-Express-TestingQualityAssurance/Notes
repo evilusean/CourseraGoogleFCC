@@ -630,7 +630,7 @@ This creates an h2 element with the class center and id welcome containing the t
 Also, in profile.pug, add a link referring to the /logout route, which will host the logic to unauthenticate a user:
 a(href='/logout') Logout
 
-
+Logging a User Out ============================================================================================================================================================================
 
 
 

@@ -706,7 +706,7 @@ if (!bcrypt.compareSync(password, user.password)) {
 }
 That is all it takes to implement one of the most important security features when you have to store passwords.
 
-
+Clean Up Your Project with Modules ============================================================================================================================================================
 
 
 

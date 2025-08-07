@@ -733,6 +733,7 @@ Strategies with OAuth require you to have at least a Client ID and a Client Secr
 Follow these instructions to obtain your Client ID and Secret from GitHub. Set the homepage URL to your homepage (not the project code's URL), 
   and set the callback URL to the same homepage URL with /auth/github/callback appended to the end. Save the client ID and your client secret in your project's .env file as
   GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET.
+https://www.freecodecamp.org/news/how-to-set-up-a-github-oauth-application/
 In your routes.js file, add showSocialAuth: true to the homepage route, after showRegistration: true. Now, create 2 routes accepting GET requests: /auth/github and /auth/github/callback. 
   The first should only call passport to authenticate 'github'. The second should call passport to authenticate 'github' with a failure redirect to /, 
   and then if that is successful redirect to /profile (similar to your last project).

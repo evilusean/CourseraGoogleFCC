@@ -719,7 +719,7 @@ Keep adding them until no more errors exist, and your server file no longer has 
 Do the same thing in your auth.js file with all of the things related to authentication such as the serialization and the setting up of the local strategy and erase them
   from your server file. Be sure to add the dependencies in and call auth(app, myDataBase) in the server in the same spot.
 
-
+Implementation of Social Authentication ======================================================================================================================================================
 
 
 

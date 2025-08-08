@@ -805,7 +805,7 @@ findOneAndUpdate allows you to search for an object and update it. If the object
   Notice the use of default values. Sometimes a profile returned won't have all the information filled out or the user will keep it private. In this case, you handle it to prevent an error.
 You should be able to login to your app now. Try it!
 
-
+Set up the Environment ========================================================================================================================================================================
 
 
 

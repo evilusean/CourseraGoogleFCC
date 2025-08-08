@@ -1,3 +1,4 @@
+server.js
 'use strict';
 require('dotenv').config();
 const express = require('express');
@@ -9,6 +10,9 @@ const routes = require('./routes.js');
 const auth = require('./auth.js');
 
 const app = express();
+
+const http = require('http').createServer(app);
+const io = require('socket.io')(http);
 
 const cors = require('cors');
 app.use(cors({ origin: true, credentials: true }));

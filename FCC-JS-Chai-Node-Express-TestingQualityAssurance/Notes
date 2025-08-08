@@ -768,7 +768,7 @@ passport.use(new GitHubStrategy({
 ));
 Your authentication won't be successful yet, and it will actually throw an error without the database logic and callback, but it should log your GitHub profile to your console if you try it!
 
-
+Implementation of Social Authentication III ===================================================================================================================================================
 
 
 

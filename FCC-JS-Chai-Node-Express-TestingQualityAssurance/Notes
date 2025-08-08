@@ -826,7 +826,7 @@ The comment suppresses the error you would normally see since 'io' is not define
 Now try loading up your app and authenticate and you should see in your server console A user has connected.
 Note:io() works only when connecting to a socket hosted on the same url/server. For connecting to an external socket hosted elsewhere, you would use io.connect('URL');.
 
-
+Communicate by Emitting =======================================================================================================================================================================
 
 
 

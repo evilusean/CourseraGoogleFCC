@@ -896,7 +896,7 @@ The user object is now accessible on your socket object as socket.request.user. 
 console.log('user ' + socket.request.user.username + ' connected');
 It will log to the server console who has connected!
 
-
+Announce New Users ===========================================================================================================================================================================
 
 
 

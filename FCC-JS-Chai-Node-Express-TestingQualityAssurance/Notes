@@ -854,7 +854,7 @@ To make sure clients continuously have the updated count of current users, you s
   event with the updated count.
 Note: Just like 'disconnect', all other events that a socket can emit to the server should be handled within the connecting listener where we have 'socket' defined.
 
-
+Authentication with Socket.IO =================================================================================================================================================================
 
 
 

@@ -854,11 +854,72 @@ To make sure clients continuously have the updated count of current users, you s
   event with the updated count.
 Note: Just like 'disconnect', all other events that a socket can emit to the server should be handled within the connecting listener where we have 'socket' defined.
 
+Authentication with Socket.IO =================================================================================================================================================================
+Currently, you cannot determine who is connected to your web socket. While req.user contains the user object, that's only when your user interacts with the web server, 
+  and with web sockets you have no req (request) and therefore no user data. One way to solve the problem of knowing who is connected to your web socket is by parsing and
+  decoding the cookie that contains the passport session then deserializing it to obtain the user object. Luckily, there is a package on NPM just for this that turns a once complex 
+  task into something simple!
+passport.socketio@~3.7.0, connect-mongo@~3.2.0, and cookie-parser@~1.4.5 have already been added as dependencies. Require them as passportSocketIo, MongoStore, and cookieParser respectively.
+  Also, we need to initialize a new memory store, from express-session which we previously required. It should look like this:
+const MongoStore = require('connect-mongo')(session);
+const URI = process.env.MONGO_URI;
+const store = new MongoStore({ url: URI });
+Now we just have to tell Socket.IO to use it and set the options. Be sure this is added before the existing socket code and not in the existing connection listener. 
+  For your server, it should look like this:
+io.use(
+  passportSocketIo.authorize({
+    cookieParser: cookieParser,
+    key: 'express.sid',
+    secret: process.env.SESSION_SECRET,
+    store: store,
+    success: onAuthorizeSuccess,
+    fail: onAuthorizeFail
+  })
+);
+Note that configuring Passport authentication for Socket.IO is very similar to the way we configured the session middleware for the API.
+  This is because they are meant to use the same authentication method — get the session id from a cookie and validate it.
+Previously, when we configured the session middleware, we didn't explicitly set the cookie name for session (key). This is because the session package was using the default value.
+  Now that we've added another package which needs access to the same value from the cookies, we need to explicitly set the key value in both configuration objects.
+Be sure to add the key with the cookie name to the session middleware that matches the Socket.IO key. Also, add the store reference to the options, near where we set saveUninitialized: true. 
+  This is necessary to tell Socket.IO which session to relate to.
+Now, define the success, and fail callback functions:
+function onAuthorizeSuccess(data, accept) {
+  console.log('successful connection to socket.io');
+  accept(null, true);
+}
+function onAuthorizeFail(data, message, error, accept) {
+  if (error) throw new Error(message);
+  console.log('failed connection to socket.io:', message);
+  accept(null, false);
+}
+The user object is now accessible on your socket object as socket.request.user. For example, now you can add the following:
+console.log('user ' + socket.request.user.username + ' connected');
+It will log to the server console who has connected!
 
-
-
-
-
+Announce New Users ===========================================================================================================================================================================
+Many chat rooms are able to announce when a user connects or disconnects and then display that to all of the connected users in the chat.
+  Seeing as though you already are emitting an event on connect and disconnect, you will just have to modify this event to support such a feature. 
+  The most logical way of doing so is sending 3 pieces of data with the event: the username of the user who connected/disconnected, the current user count, 
+  and if that username connected or disconnected.
+Change the event name to 'user', and pass an object along containing the fields username, currentUsers, and connected 
+  (to be true in case of connection, or false for disconnection of the user sent). Be sure to change both 'user count' events and set the disconnect one to send false for the field
+  connected instead of true like the event emitted on connect.
+io.emit('user', {
+  username: socket.request.user.username,
+  currentUsers,
+  connected: true
+});
+Now your client will have all the necessary information to correctly display the current user count and announce when a user connects or disconnects! 
+  To handle this event on the client side we should listen for 'user', then update the current user count by using jQuery to change the text of #num-users to '{NUMBER} users online',
+  as well as append a <li> to the unordered list with id messages with '{NAME} has {joined/left} the chat.'.
+An implementation of this could look like the following:
+socket.on('user', data => {
+  $('#num-users').text(data.currentUsers + ' users online');
+  let message =
+    data.username +
+    (data.connected ? ' has joined the chat.' : ' has left the chat.');
+  $('#messages').append($('<li>').html('<b>' + message + '</b>'));
+});
 
 
 

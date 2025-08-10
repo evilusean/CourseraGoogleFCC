@@ -842,7 +842,7 @@ socket.on('user count', function(data) {
 Now, try loading up your app, authenticate, and you should see in your client console '1' representing the current user count! Try loading more clients up, 
   and authenticating to see the number go up.
 
-
+Handle a Disconnect ============================================================================================================================================================================
 
 
 

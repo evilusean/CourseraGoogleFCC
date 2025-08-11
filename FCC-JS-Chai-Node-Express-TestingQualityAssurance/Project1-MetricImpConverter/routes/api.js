@@ -18,11 +18,17 @@ module.exports = function (app) {
       const initNum = convertHandler.getNum(input);
       const initUnit = convertHandler.getUnit(input);
       
-      // Check for errors
+      // Check for both invalid number and unit
+      if (initNum === null && initUnit === null) {
+        return res.json({ error: 'invalid number and unit' });
+      }
+      
+      // Check for invalid number
       if (initNum === null) {
         return res.json({ error: 'invalid number' });
       }
       
+      // Check for invalid unit
       if (initUnit === null) {
         return res.json({ error: 'invalid unit' });
       }
@@ -31,11 +37,15 @@ module.exports = function (app) {
       const returnUnit = convertHandler.getReturnUnit(initUnit);
       const string = convertHandler.getString(initNum, initUnit, returnNum, returnUnit);
       
+      // Handle unit case requirements: return liter as 'L', others as lowercase
+      const formattedInitUnit = initUnit === 'l' ? 'L' : initUnit;
+      const formattedReturnUnit = returnUnit === 'l' ? 'L' : returnUnit;
+      
       res.json({
         initNum: initNum,
-        initUnit: initUnit,
+        initUnit: formattedInitUnit,
         returnNum: returnNum,
-        returnUnit: returnUnit,
+        returnUnit: formattedReturnUnit,
         string: string
       });
     });

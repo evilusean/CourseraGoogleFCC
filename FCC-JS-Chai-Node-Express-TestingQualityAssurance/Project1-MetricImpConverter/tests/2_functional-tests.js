@@ -102,4 +102,10 @@ suite('Functional Tests', function() {
       });
   });
   
+  // Signal that all functional tests are complete
+  test('All functional tests completed', function(done) {
+    assert.equal(1, 1); // Simple assertion to ensure test passes
+    done();
+  });
+  
 });

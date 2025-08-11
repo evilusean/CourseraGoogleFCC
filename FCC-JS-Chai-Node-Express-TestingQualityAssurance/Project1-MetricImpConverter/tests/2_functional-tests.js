@@ -7,11 +7,18 @@ chai.use(chaiHttp);
 
 suite('Functional Tests', function() {
   
+  // Set timeout for all tests in this suite
+  this.timeout(5000);
+  
   test('Convert a valid input such as 10L: GET request to /api/convert', function(done) {
     chai.request(server)
       .get('/api/convert')
       .query({ input: '10L' })
       .end(function(err, res) {
+        if (err) {
+          done(err);
+          return;
+        }
         assert.equal(res.status, 200);
         assert.property(res.body, 'initNum');
         assert.property(res.body, 'initUnit');
@@ -30,6 +37,10 @@ suite('Functional Tests', function() {
       .get('/api/convert')
       .query({ input: '32g' })
       .end(function(err, res) {
+        if (err) {
+          done(err);
+          return;
+        }
         assert.equal(res.status, 200);
         assert.property(res.body, 'error');
         assert.equal(res.body.error, 'invalid unit');
@@ -42,6 +53,10 @@ suite('Functional Tests', function() {
       .get('/api/convert')
       .query({ input: '3/7.2/4kg' })
       .end(function(err, res) {
+        if (err) {
+          done(err);
+          return;
+        }
         assert.equal(res.status, 200);
         assert.property(res.body, 'error');
         assert.equal(res.body.error, 'invalid number');
@@ -54,6 +69,10 @@ suite('Functional Tests', function() {
       .get('/api/convert')
       .query({ input: '3/7.2/4kilomegagram' })
       .end(function(err, res) {
+        if (err) {
+          done(err);
+          return;
+        }
         assert.equal(res.status, 200);
         assert.property(res.body, 'error');
         assert.equal(res.body.error, 'invalid number');
@@ -66,6 +85,10 @@ suite('Functional Tests', function() {
       .get('/api/convert')
       .query({ input: 'kg' })
       .end(function(err, res) {
+        if (err) {
+          done(err);
+          return;
+        }
         assert.equal(res.status, 200);
         assert.property(res.body, 'initNum');
         assert.property(res.body, 'initUnit');

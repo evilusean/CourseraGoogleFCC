@@ -19,7 +19,7 @@ suite('Functional Tests', function() {
         assert.property(res.body, 'returnUnit');
         assert.property(res.body, 'string');
         assert.equal(res.body.initNum, 10);
-        assert.equal(res.body.initUnit, 'l');
+        assert.equal(res.body.initUnit, 'L');
         assert.equal(res.body.returnUnit, 'gal');
         done();
       });

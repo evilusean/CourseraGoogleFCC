@@ -75,7 +75,7 @@ suite('Functional Tests', function() {
         }
         assert.equal(res.status, 200);
         assert.property(res.body, 'error');
-        assert.equal(res.body.error, 'invalid number');
+        assert.equal(res.body.error, 'invalid number and unit');
         done();
       });
   });
@@ -100,12 +100,6 @@ suite('Functional Tests', function() {
         assert.equal(res.body.returnUnit, 'lbs');
         done();
       });
-  });
-  
-  // Signal that all functional tests are complete
-  test('All functional tests completed', function(done) {
-    assert.equal(1, 1); // Simple assertion to ensure test passes
-    done();
   });
   
 });

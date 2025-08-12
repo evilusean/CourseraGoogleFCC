@@ -978,7 +978,7 @@ Convert with no number such as kg: GET request to /api/convert.
 Project 2 - Issue Tracker =====================================================================================================================================================================
 Build a full stack JavaScript app that is functionally similar to this: https://issue-tracker.freecodecamp.rocks/. 
 Working on this project will involve you writing your code using one of the following methods:
-Clone this GitHub repo and complete your project locally.
+Clone this GitHub repo and complete your project locally. : https://github.com/freeCodeCamp/boilerplate-project-issuetracker/
 Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
 Complete the necessary routes in /routes/api.js
 Create all of the functional tests in tests/2_functional-tests.js

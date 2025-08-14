@@ -9,11 +9,13 @@ module.exports = function (app) {
   app.route('/api/issues/:project')
   
     .get(function (req, res){
+      console.log('GET request received for project:', req.params.project);
       let project = req.params.project;
       let query = req.query;
       
       // Filter issues by project
       let projectIssues = issues.filter(issue => issue.project === project);
+      console.log('Found issues for project:', projectIssues.length);
       
       // Apply filters if provided
       if (Object.keys(query).length > 0) {
@@ -33,17 +35,22 @@ module.exports = function (app) {
           }
           return true;
         });
+        console.log('After filtering:', projectIssues.length, 'issues');
       }
       
       res.json(projectIssues);
     })
     
     .post(function (req, res){
+      console.log('POST request received for project:', req.params.project);
+      console.log('Request body:', req.body);
+      
       let project = req.params.project;
       let { issue_title, issue_text, created_by, assigned_to, status_text } = req.body;
       
       // Validate required fields
       if (!issue_title || !issue_text || !created_by) {
+        console.log('Missing required fields');
         return res.json({ error: 'required field(s) missing' });
       }
       
@@ -61,16 +68,22 @@ module.exports = function (app) {
         project
       };
       
+      console.log('Creating new issue:', newIssue);
       issues.push(newIssue);
+      console.log('Total issues:', issues.length);
       res.json(newIssue);
     })
     
     .put(function (req, res){
+      console.log('PUT request received for project:', req.params.project);
+      console.log('Request body:', req.body);
+      
       let project = req.params.project;
       let { _id, ...updateFields } = req.body;
       
       // Validate _id is provided
       if (!_id) {
+        console.log('Missing _id');
         return res.json({ error: 'missing _id' });
       }
       
@@ -84,13 +97,17 @@ module.exports = function (app) {
       }
       
       if (!hasUpdateFields) {
+        console.log('No update fields sent');
         return res.json({ error: 'no update field(s) sent' });
       }
       
       // Find the issue
       let issueIndex = issues.findIndex(issue => issue._id == _id && issue.project === project);
+      console.log('Looking for issue with _id:', _id, 'in project:', project);
+      console.log('Found at index:', issueIndex);
       
       if (issueIndex === -1) {
+        console.log('Issue not found');
         return res.json({ error: 'could not update', '_id': _id });
       }
       
@@ -103,26 +120,35 @@ module.exports = function (app) {
       }
       issue.updated_on = new Date();
       
+      console.log('Issue updated successfully');
       res.json({ result: 'successfully updated', '_id': _id });
     })
     
     .delete(function (req, res){
+      console.log('DELETE request received for project:', req.params.project);
+      console.log('Request body:', req.body);
+      
       let project = req.params.project;
       let { _id } = req.body;
       
       // Validate _id is provided
       if (!_id) {
+        console.log('Missing _id');
         return res.json({ error: 'missing _id' });
       }
       
       // Find and delete the issue
       let issueIndex = issues.findIndex(issue => issue._id == _id && issue.project === project);
+      console.log('Looking for issue with _id:', _id, 'in project:', project);
+      console.log('Found at index:', issueIndex);
       
       if (issueIndex === -1) {
+        console.log('Issue not found');
         return res.json({ error: 'could not delete', '_id': _id });
       }
       
       issues.splice(issueIndex, 1);
+      console.log('Issue deleted successfully');
       res.json({ result: 'successfully deleted', '_id': _id });
     });
     

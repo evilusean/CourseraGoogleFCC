@@ -116,7 +116,7 @@ module.exports = function (app) {
       
       if (issueIndex === -1) {
         console.log('Issue not found');
-        return res.json({ error: 'could not update', '_id': _id });
+        return res.json({ error: 'could not update', '_id': String(_id) });
       }
       
       // Update the issue
@@ -129,7 +129,7 @@ module.exports = function (app) {
       issue.updated_on = new Date();
       
       console.log('Issue updated successfully');
-      res.json({ result: 'successfully updated', '_id': _id });
+      res.json({ result: 'successfully updated', '_id': String(_id) });
     })
     
     .delete(function (req, res){
@@ -152,13 +152,13 @@ module.exports = function (app) {
       
       if (issueIndex === -1) {
         console.log('Issue not found');
-        return res.json({ error: 'could not delete', '_id': _id });
+        return res.json({ error: 'could not delete', '_id': String(_id) });
       }
       
       issues.splice(issueIndex, 1);
       global.issues = issues;
       console.log('Issue deleted successfully');
-      res.json({ result: 'successfully deleted', '_id': _id });
+      res.json({ result: 'successfully deleted', '_id': String(_id) });
     });
     
 };

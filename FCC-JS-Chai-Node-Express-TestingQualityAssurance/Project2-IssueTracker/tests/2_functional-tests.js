@@ -163,6 +163,8 @@ suite('Functional Tests', function() {
   });
   
   test('Update one field on an issue: PUT request to /api/issues/{project}', function(done) {
+    console.log('Running PUT test with issueId:', issueId);
+    
     const updateData = {
       _id: issueId,
       issue_title: 'Updated Test Issue'
@@ -172,6 +174,14 @@ suite('Functional Tests', function() {
       .put(`/api/issues/${projectName}`)
       .send(updateData)
       .end(function(err, res) {
+        if (err) {
+          console.log('Error in PUT test:', err);
+          done(err);
+          return;
+        }
+        
+        console.log('PUT test response:', res.body);
+        
         assert.equal(res.status, 200);
         assert.property(res.body, 'result');
         assert.property(res.body, '_id');

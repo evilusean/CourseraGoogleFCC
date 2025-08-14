@@ -106,7 +106,7 @@ module.exports = function (app) {
       
       if (!hasUpdateFields) {
         console.log('No update fields sent');
-        return res.json({ error: 'no update field(s) sent' });
+        return res.json({ error: 'no update field(s) sent', '_id': String(_id) });
       }
       
       // Find the issue

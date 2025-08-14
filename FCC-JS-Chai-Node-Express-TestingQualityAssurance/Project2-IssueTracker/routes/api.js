@@ -62,7 +62,7 @@ module.exports = function (app) {
       
       // Create new issue
       let newIssue = {
-        _id: nextId++,
+        _id: String(nextId++),
         issue_title,
         issue_text,
         created_by,

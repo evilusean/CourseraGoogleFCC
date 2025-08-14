@@ -123,10 +123,20 @@ suite('Functional Tests', function() {
   });
   
   test('View issues on a project with one filter: GET request to /api/issues/{project}', function(done) {
+    console.log('Running filter test with issueId:', issueId);
+    
     chai.request(server)
       .get(`/api/issues/${projectName}`)
       .query({ issue_title: 'Test Issue' })
       .end(function(err, res) {
+        if (err) {
+          console.log('Error in filter test:', err);
+          done(err);
+          return;
+        }
+        
+        console.log('Filter test response:', res.body);
+        
         assert.equal(res.status, 200);
         assert.isArray(res.body);
         assert.equal(res.body.length, 1);

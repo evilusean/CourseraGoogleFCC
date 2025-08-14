@@ -3,8 +3,14 @@
 module.exports = function (app) {
   
   // Store issues in memory (in a real app, you'd use a database)
-  let issues = [];
-  let nextId = 1;
+  // Use a global variable to ensure persistence across tests
+  if (!global.issues) {
+    global.issues = [];
+    global.nextId = 1;
+  }
+  
+  let issues = global.issues;
+  let nextId = global.nextId;
 
   app.route('/api/issues/:project')
   
@@ -70,6 +76,8 @@ module.exports = function (app) {
       
       console.log('Creating new issue:', newIssue);
       issues.push(newIssue);
+      global.issues = issues;
+      global.nextId = nextId;
       console.log('Total issues:', issues.length);
       res.json(newIssue);
     })
@@ -148,6 +156,7 @@ module.exports = function (app) {
       }
       
       issues.splice(issueIndex, 1);
+      global.issues = issues;
       console.log('Issue deleted successfully');
       res.json({ result: 'successfully deleted', '_id': _id });
     });

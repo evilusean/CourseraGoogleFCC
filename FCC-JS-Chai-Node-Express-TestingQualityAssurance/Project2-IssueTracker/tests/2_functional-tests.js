@@ -263,6 +263,8 @@ suite('Functional Tests', function() {
   });
   
   test('Delete an issue: DELETE request to /api/issues/{project}', function(done) {
+    console.log('Running DELETE test with issueId:', issueId);
+    
     const deleteData = {
       _id: issueId
     };
@@ -271,6 +273,14 @@ suite('Functional Tests', function() {
       .delete(`/api/issues/${projectName}`)
       .send(deleteData)
       .end(function(err, res) {
+        if (err) {
+          console.log('Error in DELETE test:', err);
+          done(err);
+          return;
+        }
+        
+        console.log('DELETE test response:', res.body);
+        
         assert.equal(res.status, 200);
         assert.property(res.body, 'result');
         assert.property(res.body, '_id');

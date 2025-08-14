@@ -21,6 +21,24 @@ suite('Functional Tests', function() {
   
   let issueId;
   
+  // Simple health check test
+  test('API is accessible: GET request to /api/issues/{project}', function(done) {
+    chai.request(server)
+      .get(`/api/issues/${projectName}`)
+      .end(function(err, res) {
+        if (err) {
+          console.log('Health check failed:', err);
+          done(err);
+          return;
+        }
+        
+        console.log('Health check response:', res.status, res.body);
+        assert.equal(res.status, 200);
+        assert.isArray(res.body);
+        done();
+      });
+  });
+  
   test('Create an issue with every field: POST request to /api/issues/{project}', function(done) {
     chai.request(server)
       .post(`/api/issues/${projectName}`)

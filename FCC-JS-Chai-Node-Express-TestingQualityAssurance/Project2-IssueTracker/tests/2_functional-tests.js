@@ -26,6 +26,14 @@ suite('Functional Tests', function() {
       .post(`/api/issues/${projectName}`)
       .send(testIssue)
       .end(function(err, res) {
+        if (err) {
+          console.log('Error in test 1:', err);
+          done(err);
+          return;
+        }
+        
+        console.log('Test 1 response:', res.body);
+        
         assert.equal(res.status, 200);
         assert.property(res.body, '_id');
         assert.property(res.body, 'issue_title');
@@ -47,6 +55,7 @@ suite('Functional Tests', function() {
         assert.equal(res.body.project, projectName);
         
         issueId = res.body._id;
+        console.log('Issue ID set to:', issueId);
         done();
       });
   });

@@ -19,8 +19,16 @@ module.exports = function (app) {
       if (Object.keys(query).length > 0) {
         projectIssues = projectIssues.filter(issue => {
           for (let key in query) {
-            if (query[key] !== '' && issue[key] !== query[key]) {
-              return false;
+            if (query[key] !== '' && query[key] !== undefined) {
+              // Handle boolean conversion for 'open' field
+              if (key === 'open') {
+                let queryValue = query[key] === 'true';
+                if (issue[key] !== queryValue) {
+                  return false;
+                }
+              } else if (issue[key] != query[key]) {
+                return false;
+              }
             }
           }
           return true;
@@ -67,7 +75,15 @@ module.exports = function (app) {
       }
       
       // Check if there are fields to update
-      if (Object.keys(updateFields).length === 0) {
+      let hasUpdateFields = false;
+      for (let key in updateFields) {
+        if (updateFields[key] !== '' && updateFields[key] !== undefined) {
+          hasUpdateFields = true;
+          break;
+        }
+      }
+      
+      if (!hasUpdateFields) {
         return res.json({ error: 'no update field(s) sent' });
       }
       
@@ -81,7 +97,7 @@ module.exports = function (app) {
       // Update the issue
       let issue = issues[issueIndex];
       for (let key in updateFields) {
-        if (updateFields[key] !== '') {
+        if (updateFields[key] !== '' && updateFields[key] !== undefined) {
           issue[key] = updateFields[key];
         }
       }

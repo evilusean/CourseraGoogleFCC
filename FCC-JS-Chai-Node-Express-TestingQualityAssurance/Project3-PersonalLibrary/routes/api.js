@@ -34,12 +34,16 @@ module.exports = function (app) {
 
   // GET /api/books
   app.get('/api/books', async (req, res) => {
-    const books = await Book.find({});
-    res.json(books.map(b => ({
-      _id: b._id,
-      title: b.title,
-      commentcount: b.comments.length
-    })));
+    try {
+      const books = await Book.find({});
+      res.json(books.map(b => ({
+        _id: b._id,
+        title: b.title,
+        commentcount: b.comments.length
+      })));
+    } catch (err) {
+      res.json([]); // Always return an array
+    }
   });
 
   // GET /api/books/:id

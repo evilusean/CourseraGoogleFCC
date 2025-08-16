@@ -42,7 +42,6 @@ module.exports = function (app) {
         commentcount: b.comments.length
       })));
     } catch (err) {
-      // Always return an array, never an object
       res.json([]);
     }
   });

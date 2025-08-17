@@ -1005,6 +1005,7 @@ Project 3 - Sudoku Solver ======================================================
 Build a full stack JavaScript app that is functionally similar to this: https://sudoku-solver.freecodecamp.rocks/.
   Working on this project will involve you writing your code using one of the following methods:
 Clone this GitHub repo and complete your project locally.
+https://github.com/freecodecamp/boilerplate-project-sudoku-solver
 Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
 All puzzle logic can go into /controllers/sudoku-solver.js
 The validate function should take a given puzzle string and check it to see if it has 81 valid characters for the input.

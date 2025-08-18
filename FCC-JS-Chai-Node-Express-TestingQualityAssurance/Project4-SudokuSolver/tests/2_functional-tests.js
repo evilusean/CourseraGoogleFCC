@@ -9,6 +9,7 @@ const validPuzzle = '1.5..2.84..63.12.7.2..5.....9..1....8.2.3674.3.7.2..9..5...
 const invalidCharPuzzle = validPuzzle.slice(0, 80) + 'X'; // 81 chars, last char invalid
 const shortPuzzle = validPuzzle.slice(0, 80); // 80 chars
 const unsolvablePuzzle = '9'.repeat(81); // 81 chars
+const validSolution = '135792468234167925486239157729846351693518274318274695962753841857914632741896253'; // 81 chars
 
 suite('Functional Tests', () => {
   test('Solve a puzzle with valid puzzle string: POST request to /api/solve', function(done) {
@@ -18,6 +19,7 @@ suite('Functional Tests', () => {
       .end((err, res) => {
         assert.equal(res.status, 200);
         assert.property(res.body, 'solution');
+        assert.equal(res.body.solution, validSolution);
         done();
       });
   });

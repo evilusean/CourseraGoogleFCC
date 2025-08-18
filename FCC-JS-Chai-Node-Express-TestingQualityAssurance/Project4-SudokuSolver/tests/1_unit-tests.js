@@ -1,14 +1,14 @@
 const chai = require('chai');
 const assert = chai.assert;
-
 const SudokuSolver = require('../controllers/sudoku-solver.js');
-let solver = new SudokuSolver();
+const solver = new SudokuSolver();
 
-const validPuzzle = '1.5..2.84..63.12.7.2..5.....9..1....8.2.3674.3.7.2..9..5.....1.4.2.3.6.9.7..';
-const invalidCharPuzzle = '1.5..2.84..63.12.7.2..5.....9..1....8.2.3674.3.7.2..9..5.....1.4.2.3.6.9.7X.';
-const shortPuzzle = '1.5..2.84..63.12.7.2..5.....9..1....8.2.3674.3.7.2..9..5.....1.4.2.3.6.9.7';
-const unsolvablePuzzle = '9'.repeat(81); // Example of unsolvable
-const validSolution = '135762984946381257728459613694517832812936745357824196583297461471685329269143578';
+// Use the first puzzle and solution from puzzle-strings.js
+const validPuzzle = '1.5..2.84..63.12.7.2..5.....9..1....8.2.3674.3.7.2..9.47...8..1..16....926914.37.';
+const validSolution = '135762984946381257728459613694517832812936745357824196473298561581673429269145378';
+const invalidCharPuzzle = validPuzzle.slice(0, 80) + 'X'; // 81 chars, last char invalid
+const shortPuzzle = validPuzzle.slice(0, 80); // 80 chars
+const unsolvablePuzzle = '9'.repeat(81); // 81 chars, unsolvable
 
 suite('Unit Tests', () => {
   test('Logic handles a valid puzzle string of 81 characters', () => {
@@ -24,31 +24,37 @@ suite('Unit Tests', () => {
   });
 
   test('Logic handles a valid row placement', () => {
-    assert.isTrue(solver.checkRowPlacement(validPuzzle, 'A', '1', '7'));
+    // Place '3' at A2 (should be valid)
+    assert.isTrue(solver.checkRowPlacement(validPuzzle, 'A', '2', '3'));
   });
 
   test('Logic handles an invalid row placement', () => {
-    assert.isFalse(solver.checkRowPlacement(validPuzzle, 'A', '1', '1'));
+    // Place '6' at A2 (should conflict with row)
+    assert.isFalse(solver.checkRowPlacement(validPuzzle, 'A', '2', '6'));
   });
 
   test('Logic handles a valid column placement', () => {
-    assert.isTrue(solver.checkColPlacement(validPuzzle, 'A', '1', '7'));
+    // Place '3' at A2 (should be valid)
+    assert.isTrue(solver.checkColPlacement(validPuzzle, 'A', '2', '3'));
   });
 
   test('Logic handles an invalid column placement', () => {
-    assert.isFalse(solver.checkColPlacement(validPuzzle, 'A', '1', '1'));
+    // Place '2' at A2 (should conflict with column)
+    assert.isFalse(solver.checkColPlacement(validPuzzle, 'A', '2', '2'));
   });
 
   test('Logic handles a valid region (3x3 grid) placement', () => {
-    assert.isTrue(solver.checkRegionPlacement(validPuzzle, 'A', '1', '7'));
+    // Place '3' at A2 (should be valid)
+    assert.isTrue(solver.checkRegionPlacement(validPuzzle, 'A', '2', '3'));
   });
 
   test('Logic handles an invalid region (3x3 grid) placement', () => {
-    assert.isFalse(solver.checkRegionPlacement(validPuzzle, 'A', '1', '1'));
+    // Place '8' at A2 (should conflict with region)
+    assert.isFalse(solver.checkRegionPlacement(validPuzzle, 'A', '2', '8'));
   });
 
   test('Valid puzzle strings pass the solver', () => {
-    assert.isString(solver.solve(validPuzzle));
+    assert.equal(solver.solve(validPuzzle), validSolution);
   });
 
   test('Invalid puzzle strings fail the solver', () => {

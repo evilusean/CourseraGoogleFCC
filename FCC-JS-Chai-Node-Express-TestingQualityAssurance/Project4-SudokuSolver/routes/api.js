@@ -6,6 +6,20 @@ module.exports = function (app) {
   
   let solver = new SudokuSolver();
 
+  app.route('/api/solve')
+    .post((req, res) => {
+      const { puzzle } = req.body;
+      if (!puzzle) return res.json({ error: 'Required field missing' });
+
+      const valid = solver.validate(puzzle);
+      if (valid !== true) return res.json({ error: valid });
+
+      const solution = solver.solve(puzzle);
+      if (!solution) return res.json({ error: 'Puzzle cannot be solved' });
+
+      res.json({ solution });
+    });
+
   app.route('/api/check')
     .post((req, res) => {
       const { puzzle, coordinate, value } = req.body;
@@ -33,19 +47,5 @@ module.exports = function (app) {
       } else {
         res.json({ valid: false, conflict: conflicts });
       }
-    });
-    
-  app.route('/api/solve')
-    .post((req, res) => {
-      const { puzzle } = req.body;
-      if (!puzzle) return res.json({ error: 'Required field missing' });
-
-      const valid = solver.validate(puzzle);
-      if (valid !== true) return res.json({ error: valid });
-
-      const solution = solver.solve(puzzle);
-      if (!solution) return res.json({ error: 'Puzzle cannot be solved' });
-
-      res.json({ solution });
     });
 };

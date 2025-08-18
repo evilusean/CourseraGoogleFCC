@@ -25,6 +25,7 @@ module.exports = function (app) {
       const { puzzle, coordinate, value } = req.body;
       if (!puzzle || !coordinate || !value) return res.json({ error: 'Required field(s) missing' });
 
+      // Validate puzzle string first
       const valid = solver.validate(puzzle);
       if (valid !== true) return res.json({ error: valid });
 

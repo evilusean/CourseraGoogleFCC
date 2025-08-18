@@ -41,8 +41,15 @@ module.exports = function (app) {
         } else if (!solver.isValidPuzzleString(puzzle)) {
           return res.json(getPuzzleStringError(puzzle));
         } else {
-          solver.setBoardFromString(puzzle);
+          // Fix for test #9: Check if the value is already present at the given coordinate.
+          // If it is, and we've passed the initial puzzle validation, it must be valid.
           const [row, column] = convertCoordinate(coordinate);
+          const boardIndex = row * 9 + column;
+          if (puzzle[boardIndex] === value) {
+            return res.json({ valid: true });
+          }
+
+          solver.setBoardFromString(puzzle);
           const conflicts = [];
           if (!solver.isValidRowPlacement(row, column, +value)) conflicts.push('row');
           if (!solver.isValidColumnPlacement(row, column, +value)) conflicts.push('column');

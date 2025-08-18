@@ -30,52 +30,54 @@ module.exports = function (app) {
 
   app.route('/api/check')
     .post((req, res) => {
-      const {puzzle = null, coordinate = null, value = null} = req.body;
-      if (!puzzle || !coordinate || !value) {
-        res.json({error: 'Required field(s) missing'});
-      } else if (!/^[A-I][1-9]$/.test(coordinate)) {
-        res.json({error: 'Invalid coordinate'});
-      } else if (!/^[1-9]$/.test(value)) {
-        res.json({error: 'Invalid value'});
-      } else if (!solver.isValidPuzzleString(puzzle)) {
-        res.json(getPuzzleStringError(puzzle));
-      } else {
-        solver.setBoardFromString(puzzle);
-        const [row, column] = convertCoordinate(coordinate);
-        const conflicts = [];
-        if (!solver.isValidRowPlacement(row, column, +value)) {
-          conflicts.push('row');
-        }
-        if (!solver.isValidColumnPlacement(row, column, +value)) {
-          conflicts.push('column');
-        }
-        if (!solver.isValidRegionPlacement(row, column, +value)) {
-          conflicts.push('region');
-        }
-        if (!conflicts.length) {
-          res.json({valid: true});
+      try {
+        const {puzzle = null, coordinate = null, value = null} = req.body;
+        if (!puzzle || !coordinate || !value) {
+          return res.json({error: 'Required field(s) missing'});
+        } else if (!/^[A-I][1-9]$/.test(coordinate)) {
+          return res.json({error: 'Invalid coordinate'});
+        } else if (!/^[1-9]$/.test(value)) {
+          return res.json({error: 'Invalid value'});
+        } else if (!solver.isValidPuzzleString(puzzle)) {
+          return res.json(getPuzzleStringError(puzzle));
         } else {
-          res.json({valid: false, conflict: conflicts});
+          solver.setBoardFromString(puzzle);
+          const [row, column] = convertCoordinate(coordinate);
+          const conflicts = [];
+          if (!solver.isValidRowPlacement(row, column, +value)) conflicts.push('row');
+          if (!solver.isValidColumnPlacement(row, column, +value)) conflicts.push('column');
+          if (!solver.isValidRegionPlacement(row, column, +value)) conflicts.push('region');
+          if (!conflicts.length) {
+            return res.json({valid: true});
+          } else {
+            return res.json({valid: false, conflict: conflicts});
+          }
         }
+      } catch (err) {
+        res.status(500).json({error: 'Internal Server Error', details: err.message});
       }
     });
 
   app.route('/api/solve')
     .post((req, res) => {
-      if (!!req.body.puzzle) {
-        const puzzle = req.body.puzzle;
-        if (solver.isValidPuzzleString(puzzle)) {
-          solver.setBoardFromString(puzzle);
-          const solution = solver.solve();
-          const solutionErrorRegEx = /timeout|invalid|Unsolvable/;
-          res.json(solutionErrorRegEx.test(solution)
-            ? {error: 'Puzzle cannot be solved'}
-            : {solution: solution});
+      try {
+        if (!!req.body.puzzle) {
+          const puzzle = req.body.puzzle;
+          if (solver.isValidPuzzleString(puzzle)) {
+            solver.setBoardFromString(puzzle);
+            const solution = solver.solve();
+            const solutionErrorRegEx = /timeout|invalid|Unsolvable/;
+            res.json(solutionErrorRegEx.test(solution)
+              ? {error: 'Puzzle cannot be solved'}
+              : {solution: solution});
+          } else {
+            res.json(getPuzzleStringError(puzzle));
+          }
         } else {
-          res.json(getPuzzleStringError(puzzle));
+          res.json({error: 'Required field missing'});
         }
-      } else {
-        res.json({error: 'Required field missing'});
+      } catch (err) {
+        res.status(500).json({error: 'Internal Server Error', details: err.message});
       }
     });
 };

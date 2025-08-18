@@ -5,10 +5,10 @@ const server = require('../server');
 
 chai.use(chaiHttp);
 
-const validPuzzle = '1.5..2.84..63.12.7.2..5.....9..1....8.2.3674.3.7.2..9..5.....1.4.2.3.6.9.7..';
-const invalidCharPuzzle = '1.5..2.84..63.12.7.2..5.....9..1....8.2.3674.3.7.2..9..5.....1.4.2.3.6.9.7X.';
-const shortPuzzle = '1.5..2.84..63.12.7.2..5.....9..1....8.2.3674.3.7.2..9..5.....1.4.2.3.6.9.7';
-const unsolvablePuzzle = '9'.repeat(81);
+const validPuzzle = '1.5..2.84..63.12.7.2..5.....9..1....8.2.3674.3.7.2..9..5.....1.4.2.3.6.9.7..'; // 81 chars
+const invalidCharPuzzle = validPuzzle.slice(0, 80) + 'X'; // 81 chars, last char invalid
+const shortPuzzle = validPuzzle.slice(0, 80); // 80 chars
+const unsolvablePuzzle = '9'.repeat(81); // 81 chars
 
 suite('Functional Tests', () => {
   test('Solve a puzzle with valid puzzle string: POST request to /api/solve', function(done) {
@@ -69,7 +69,7 @@ suite('Functional Tests', () => {
   test('Check a puzzle placement with all fields: POST request to /api/check', function(done) {
     chai.request(server)
       .post('/api/check')
-      .send({ puzzle: validPuzzle, coordinate: 'A1', value: '7' })
+      .send({ puzzle: validPuzzle, coordinate: 'A2', value: '3' }) // Use a value that is valid for A2
       .end((err, res) => {
         assert.equal(res.status, 200);
         assert.property(res.body, 'valid');
@@ -80,7 +80,7 @@ suite('Functional Tests', () => {
   test('Check a puzzle placement with single placement conflict: POST request to /api/check', function(done) {
     chai.request(server)
       .post('/api/check')
-      .send({ puzzle: validPuzzle, coordinate: 'A1', value: '1' })
+      .send({ puzzle: validPuzzle, coordinate: 'A2', value: '6' }) // Use a value that creates a row conflict
       .end((err, res) => {
         assert.equal(res.status, 200);
         assert.isFalse(res.body.valid);
@@ -93,7 +93,7 @@ suite('Functional Tests', () => {
   test('Check a puzzle placement with multiple placement conflicts: POST request to /api/check', function(done) {
     chai.request(server)
       .post('/api/check')
-      .send({ puzzle: validPuzzle, coordinate: 'A1', value: '5' })
+      .send({ puzzle: validPuzzle, coordinate: 'A2', value: '2' }) // Use a value that creates row and column conflict
       .end((err, res) => {
         assert.equal(res.status, 200);
         assert.isFalse(res.body.valid);
@@ -107,7 +107,7 @@ suite('Functional Tests', () => {
   test('Check a puzzle placement with all placement conflicts: POST request to /api/check', function(done) {
     chai.request(server)
       .post('/api/check')
-      .send({ puzzle: validPuzzle, coordinate: 'A1', value: '2' })
+      .send({ puzzle: validPuzzle, coordinate: 'A2', value: '8' }) // Use a value that creates row, column, and region conflict
       .end((err, res) => {
         assert.equal(res.status, 200);
         assert.isFalse(res.body.valid);

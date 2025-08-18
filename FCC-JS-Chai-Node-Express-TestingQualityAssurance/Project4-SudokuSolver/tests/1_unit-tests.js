@@ -8,6 +8,7 @@ const validPuzzle = '1.5..2.84..63.12.7.2..5.....9..1....8.2.3674.3.7.2..9..5...
 const invalidCharPuzzle = '1.5..2.84..63.12.7.2..5.....9..1....8.2.3674.3.7.2..9..5.....1.4.2.3.6.9.7X.';
 const shortPuzzle = '1.5..2.84..63.12.7.2..5.....9..1....8.2.3674.3.7.2..9..5.....1.4.2.3.6.9.7';
 const unsolvablePuzzle = '9'.repeat(81); // Example of unsolvable
+const validSolution = '135762984946381257728459613694517832812936745357824196583297461471685329269143578';
 
 suite('Unit Tests', () => {
   test('Logic handles a valid puzzle string of 81 characters', () => {
@@ -55,7 +56,6 @@ suite('Unit Tests', () => {
   });
 
   test('Solver returns the expected solution for an incomplete puzzle', () => {
-    const solution = '135762984946381257728459613694517832812936745357824196583297461471685329269143578';
-    assert.equal(solver.solve(validPuzzle), solution);
+    assert.equal(solver.solve(validPuzzle), validSolution);
   });
 });

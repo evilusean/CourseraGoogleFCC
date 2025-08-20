@@ -105,7 +105,7 @@ suite('Functional Tests', () => {
           assert.property(res.body, 'text');
           assert.property(res.body, 'translation');
           assert.equal(res.body.text, "This is a sentence that needs no translation.");
-          assert.equal(res.body.translation, "This is a sentence that needs no translation.");
+ assert.equal(res.body.translation, "Everything looks good to me!");
           done();
         });
     });

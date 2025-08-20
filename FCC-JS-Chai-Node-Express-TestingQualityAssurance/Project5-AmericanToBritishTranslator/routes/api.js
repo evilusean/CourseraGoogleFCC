@@ -22,7 +22,17 @@ module.exports = function (app) {
         return res.json({ error: 'Invalid value for locale field' });
       }
 
-      // Placeholder for now, actual translation logic will be added later
-      res.json({ text: text, translation: 'translation placeholder' });
+      let translatedText;
+      if (locale === 'american-to-british') {
+        translatedText = translator.translateAmericanToBritish(text);
+      } else if (locale === 'british-to-american') {
+        translatedText = translator.translateBritishToAmerican(text);
+      }
+
+      if (translatedText === text) {
+        res.json({ text: text, translation: 'Everything looks good to me!' });
+      } else {
+        res.json({ text: text, translation: translatedText });
+      }
     });
 };

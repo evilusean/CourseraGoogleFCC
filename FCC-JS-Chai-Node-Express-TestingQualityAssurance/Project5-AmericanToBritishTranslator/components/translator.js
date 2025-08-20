@@ -1,7 +1,6 @@
 const americanOnly = require('./american-only.js');
 const americanToBritishSpelling = require('./american-to-british-spelling.js');
 const americanToBritishTitles = require("./american-to-british-titles.js")
-const britishToAmericanTitles = require("./british-to-american-titles.js") // Assuming this file exists or the reverse mapping is needed
 const britishOnly = require('./british-only.js')
 
 class Translator {

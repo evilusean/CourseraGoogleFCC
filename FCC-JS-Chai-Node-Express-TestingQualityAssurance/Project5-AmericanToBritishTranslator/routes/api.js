@@ -8,6 +8,7 @@ module.exports = function (app) {
 
   app.route('/api/translate')
     .post((req, res) => {
+      console.log('Request Body:', req.body);
       const { text, locale } = req.body;
 
       if (text === undefined || locale === undefined) {
@@ -29,6 +30,7 @@ module.exports = function (app) {
         translatedText = translator.translateBritishToAmerican(text);
       }
 
+      console.log('Translated Text:', translatedText);
       if (translatedText === text) {
         res.json({ text: text, translation: 'Everything looks good to me!' });
       } else {

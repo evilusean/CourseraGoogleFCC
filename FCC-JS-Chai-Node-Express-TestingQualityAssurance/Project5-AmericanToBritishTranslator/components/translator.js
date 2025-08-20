@@ -51,7 +51,7 @@ class Translator {
       return "Everything looks good to me!";
     }
 
-    return { text: this.highlightTranslation(text, translatedText, translations), translations };
+    return this.highlightTranslation(text, translatedText, translations);
   }
 
   translateBritishToAmerican(text) {
@@ -101,7 +101,7 @@ class Translator {
       return "Everything looks good to me!";
     }
 
-    return { text: this.highlightTranslation(text, translatedText, translations), translations };
+    return this.highlightTranslation(text, translatedText, translations);
   }
 
   highlightTranslation(original, translated, translations) {

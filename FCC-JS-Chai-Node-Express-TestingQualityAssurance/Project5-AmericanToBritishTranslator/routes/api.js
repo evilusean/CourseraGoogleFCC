@@ -12,8 +12,12 @@ module.exports = function (app) {
       const { text, locale } = req.body;
 
       if (text === undefined || locale === undefined) { // This check should remain as a generic missing field check.
+        console.log('Missing field(s)');
         return res.json({ error: 'Required field(s) missing' });
       }
+      // Specific checks for empty or invalid fields after the general missing check
+      // are now redundant for the functional tests that check for missing fields,
+      // but are needed for tests that specifically check for empty text or invalid locale values.
 
       if (text === '') {
         return res.json({ error: 'No text to translate' });

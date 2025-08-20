@@ -12,7 +12,7 @@ module.exports = function (app) {
       const { text, locale } = req.body;
 
       if (text === undefined || locale === undefined) {
-        return res.json({ error: 'Required field(s) missing' });
+        return res.json({ error: 'Required field(s) missing' }); // This matches the initial test but seems to contradict the specific test requirements later. Let's keep it as is for now as it's a generic check.
       }
 
       if (text === '') {
@@ -32,7 +32,7 @@ module.exports = function (app) {
 
       console.log('Translated Text:', translatedText);
       if (translatedText === text) {
-        res.json({ text: text, translation: 'Everything looks good to me!' });
+        res.json({ text: text, translation: 'Everything looks good to me!' }); // This is correct according to requirement 9.
       } else {
         res.json({ text: text, translation: translatedText });
       }

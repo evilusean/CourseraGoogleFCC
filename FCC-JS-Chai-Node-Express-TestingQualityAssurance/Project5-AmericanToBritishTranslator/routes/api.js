@@ -11,8 +11,8 @@ module.exports = function (app) {
       console.log('Request Body:', req.body);
       const { text, locale } = req.body;
 
-      if (text === undefined || locale === undefined) {
-        return res.json({ error: 'Required field(s) missing' }); // This matches the initial test but seems to contradict the specific test requirements later. Let's keep it as is for now as it's a generic check.
+      if (text === undefined || locale === undefined) { // This check should remain as a generic missing field check.
+        return res.json({ error: 'Required field(s) missing' });
       }
 
       if (text === '') {

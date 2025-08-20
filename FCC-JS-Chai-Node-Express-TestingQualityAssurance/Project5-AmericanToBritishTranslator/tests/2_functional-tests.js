@@ -19,6 +19,7 @@ suite('Functional Tests', () => {
           locale: "american-to-british"
         })
         .end((err, res) => {
+          console.log(res.body);
           assert.equal(res.status, 200);
           assert.property(res.body, 'text');
           assert.property(res.body, 'translation');
@@ -37,6 +38,7 @@ suite('Functional Tests', () => {
           locale: "invalid-locale"
         })
         .end((err, res) => {
+          console.log(res.body);
           assert.equal(res.status, 200);
           assert.property(res.body, 'error');
           assert.equal(res.body.error, 'Invalid value for locale field');
@@ -51,6 +53,7 @@ suite('Functional Tests', () => {
           locale: "american-to-british"
         })
         .end((err, res) => {
+          console.log(res.body);
           assert.equal(res.status, 200);
           assert.property(res.body, 'error');
           assert.equal(res.body.error, 'No text to translate');
@@ -65,6 +68,7 @@ suite('Functional Tests', () => {
           text: "Mangoes are my favorite fruit."
         })
         .end((err, res) => {
+          console.log(res.body);
           assert.equal(res.status, 200);
           assert.property(res.body, 'error');
           assert.equal(res.body.error, 'Invalid value for locale field');
@@ -80,6 +84,7 @@ suite('Functional Tests', () => {
           locale: "american-to-british"
         })
         .end((err, res) => {
+          console.log(res.body);
           assert.equal(res.status, 200);
           assert.property(res.body, 'error');
           assert.equal(res.body.error, 'No text to translate');
@@ -95,6 +100,7 @@ suite('Functional Tests', () => {
           locale: "american-to-british"
         })
         .end((err, res) => {
+          console.log(res.body);
           assert.equal(res.status, 200);
           assert.property(res.body, 'text');
           assert.property(res.body, 'translation');

@@ -1,6 +1,7 @@
 const americanOnly = require('./american-only.js');
 const americanToBritishSpelling = require('./american-to-british-spelling.js');
 const americanToBritishTitles = require("./american-to-british-titles.js")
+const britishToAmericanTitles = require("./british-to-american-titles.js") // Assuming this file exists or the reverse mapping is needed
 const britishOnly = require('./british-only.js')
 
 class Translator {
@@ -28,9 +29,9 @@ class Translator {
 
     // Handle American Titles
     for (const [american, british] of Object.entries(americanToBritishTitles)) {
-      const regex = new RegExp(`\\b${american}`, 'gi');
+      const regex = new RegExp(`(^|\\s)${american}`, 'g'); // Match at the start of the string or after a space, maintain capitalization
       if (regex.test(translatedText)) {
-        translatedText = translatedText.replace(regex, british);
+        translatedText = translatedText.replace(regex, `$1${british}`);
         translations[american] = british;
       }
     }
@@ -41,10 +42,10 @@ class Translator {
     if (timeRegex.test(translatedText)) {
       translatedText = translatedText.replace(timeRegex, '$1.$2');
       if (originalTimes) {
-        originalTimes.forEach(time => {
-          translations[time] = time.replace(':', '.');
-        });
-      }
+      // Store the original time and its British equivalent for highlighting
+      originalTimes.forEach(time => {
+        translations[time] = time.replace(':', '.');
+      });}
     }
 
     if (Object.keys(translations).length === 0) {
@@ -69,7 +70,7 @@ class Translator {
 
     // Handle British to American Spelling (reverse of americanToBritishSpelling)
     for (const [american, british] of Object.entries(americanToBritishSpelling)) {
-      const regex = new RegExp(`\\b${british}\\b`, 'gi');
+        const regex = new RegExp(`\\b${british}\\b`, 'gi'); // Assuming a direct reverse mapping
       if (regex.test(translatedText)) {
         translatedText = translatedText.replace(regex, american);
         translations[british] = american;
@@ -78,9 +79,9 @@ class Translator {
 
     // Handle British Titles (reverse of americanToBritishTitles)
     for (const [american, british] of Object.entries(americanToBritishTitles)) {
-      const regex = new RegExp(`\\b${british}\\b`, 'gi');
+         const regex = new RegExp(`(^|\\s)${british}\\b`, 'g'); // Match at the start of the string or after a space, ensure whole word match
       if (regex.test(translatedText)) {
-        translatedText = translatedText.replace(regex, american);
+        translatedText = translatedText.replace(regex, `$1${american}`);
         translations[british] = american;
       }
     }

@@ -110,6 +110,41 @@ suite('Functional Tests', () => {
         });
     });
 
+    test('Translation of titles in American to British English', (done) => {
+      chai.request(server)
+        .post('/api/translate')
+        .send({
+          text: "Dr. Grosh is here.",
+          locale: "american-to-british"
+        })
+        .end((err, res) => {
+          console.log(res.body);
+          assert.equal(res.status, 200);
+          assert.property(res.body, 'text');
+          assert.property(res.body, 'translation');
+          assert.equal(res.body.text, "Dr. Grosh is here.");
+          assert.equal(res.body.translation, "<span class=\"highlight\">Dr</span> Grosh is here.");
+          done();
+        });
+    });
+
+    test('Translation of titles in British to American English', (done) => {
+      chai.request(server)
+        .post('/api/translate')
+        .send({
+          text: "Mr Smith is here.",
+          locale: "british-to-american"
+        })
+        .end((err, res) => {
+          console.log(res.body);
+          assert.equal(res.status, 200);
+          assert.property(res.body, 'text');
+          assert.property(res.body, 'translation');
+          assert.equal(res.body.text, "Mr Smith is here.");
+          assert.equal(res.body.translation, "<span class=\"highlight\">Mr.</span> Smith is here.");
+          done();
+        });
+    });
   });
 
 });

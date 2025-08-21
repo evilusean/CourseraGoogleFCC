@@ -28,8 +28,8 @@ class Translator {
 
     // Handle American Titles
     for (const [american, british] of Object.entries(americanToBritishTitles)) {
-      const regex = new RegExp(`(^|\\s)${american}`, 'g'); // Match at the start of the string or after a space, maintain capitalization
-      if (regex.test(translatedText)) {
+      const regex = new RegExp(`(^|\\s)${american.replace('.', '\\.')}`, 'gi'); // Match at the start of the string or after a space, escape period, case-insensitive
+       if (regex.test(translatedText)) {
         translatedText = translatedText.replace(regex, `$1${british}`);
         translations[american] = british;
       }
@@ -78,7 +78,7 @@ class Translator {
 
     // Handle British Titles (reverse of americanToBritishTitles)
     for (const [american, british] of Object.entries(americanToBritishTitles)) {
-         const regex = new RegExp(`(^|\\s)${british}\\b`, 'g'); // Match at the start of the string or after a space, ensure whole word match
+         const regex = new RegExp(`(^|\\s)${british}\\b`, 'gi'); // Match at the start of the string or after a space, ensure whole word match, case-insensitive
       if (regex.test(translatedText)) {
         translatedText = translatedText.replace(regex, `$1${american}`);
         translations[british] = american;

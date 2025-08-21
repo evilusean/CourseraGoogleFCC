@@ -56,8 +56,8 @@ suite('Unit Tests', () => {
   test('Translate Like a high tech Rube Goldberg machine. to British English', function(done) {
     const text = "Like a high tech Rube Goldberg machine.";
     const locale = "american-to-british";
-    const translatedText = translator.translateAmericanToBritish(text);
-    assert.equal(translatedText, 'Like a high tech <span class="highlight">Heath Robinson</span> machine.');
+    const translatedText = translator.translateAmericanToBritish(text, locale);
+    assert.equal(translatedText, 'Like a high tech <span class="highlight">Heath Robinson device</span>.');
     done();
   });
 

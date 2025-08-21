@@ -105,9 +105,16 @@ class Translator {
   }
 
   highlightTranslation(original, translated, translations) {
-    let highlightedText = translated;
+    let highlightedText = original;
     for (const [originalWord, translatedWord] of Object.entries(translations)) {
-      const regex = new RegExp(`(?<=\\b|\\s)${translatedWord}(?=\\b|\\s|$)`, 'gi');
+      // Escape special characters in the original word for regex
+      const escapedOriginalWord = originalWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      // Create a regex to find the original word in the text, case-insensitive
+      const regex = new RegExp(`\\b${escapedOriginalWord}\\b`, 'gi');
+
+      // Replace the original word with the highlighted translated word
+      // This approach ensures that the correct word is highlighted and
+      // preserves the surrounding text and punctuation.
       highlightedText = highlightedText.replace(regex, `<span class="highlight">${translatedWord}</span>`);
     }
     return highlightedText;

@@ -1,4 +1,4 @@
-# Learn Laravel by Building a Medium Clone – Tutorial :
+# [Learn PHP Laravel by Building a Medium Clone – Tutorial :](https://github.com/evilusean/CourseraGoogleFCC/tree/main/FCC-PHP-Laraval-MediumClone)
 
 Start : 27August2025</br>
 End :

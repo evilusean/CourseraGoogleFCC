@@ -5,3 +5,6 @@ End :
 
 https://www.freecodecamp.org/news/learn-laravel-by-building-a-medium-clone/
 
+Laravel is a popular PHP web development framework known for its elegant syntax, developer-friendly tools, and built-in features for routing, authentication, and database interactions. It's an excellent choice for both beginners and experienced developers looking to create full-featured web applications quickly and efficiently.
+
+Build a fully-functional Medium clone using the Laravel PHP framework. This in-depth, hands-on course takes you from setting up your Laravel environment to developing advanced features like user profiles, following/unfollowing other users, and managing blog posts. By the end, you'll not only understand Laravel's core features but also how to put them together to build a real-world social publishing platform.

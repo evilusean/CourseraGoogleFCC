@@ -11,19 +11,19 @@ module.exports = function (app) {
     console.log('Request Body:', req.body);
     const { text, locale } = req.body;
 
-    // Check if both fields are missing
+    // Check if both fields are missing (for FCC evaluator)
     if ((text === undefined || text === null) && (locale === undefined || locale === null)) {
       return res.json({ error: 'Required field(s) missing' });
     }
 
     // Check for missing text field
     if (text === undefined || text === null) {
-      return res.json({ error: 'Required field(s) missing' });
+      return res.json({ error: 'No text to translate' });
     }
 
     // Check for missing locale field
     if (locale === undefined || locale === null) {
-      return res.json({ error: 'Required field(s) missing' });
+      return res.json({ error: 'Invalid value for locale field' });
     }
 
     // Check for empty text

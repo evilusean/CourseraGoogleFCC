@@ -30,18 +30,19 @@ class Translator {
     console.log('Checking American titles...');
     for (const [american, british] of Object.entries(americanToBritishTitles)) {
       console.log(`Checking title: "${american}" -> "${british}"`);
-      const regex = new RegExp(`\\b${this.escapeRegex(american)}\\b`, 'gi');
+      // Use a different regex pattern that works better with periods
+      const regex = new RegExp(`(^|\\s)${this.escapeRegex(american)}(?=\\s|$)`, 'gi');
       console.log(`Regex: ${regex}`);
       console.log(`Text to check: "${translatedText}"`);
       if (regex.test(translatedText)) {
         console.log(`Found title: "${american}"`);
         // Find all matches and replace them while preserving case
-        translatedText = translatedText.replace(regex, (match) => {
+        translatedText = translatedText.replace(regex, (match, space, title) => {
           // Preserve the case of the first letter
-          if (match[0] === match[0].toUpperCase()) {
-            return british.charAt(0).toUpperCase() + british.slice(1);
+          if (title[0] === title[0].toUpperCase()) {
+            return space + british.charAt(0).toUpperCase() + british.slice(1);
           } else {
-            return british;
+            return space + british;
           }
         });
         translations[american] = british;

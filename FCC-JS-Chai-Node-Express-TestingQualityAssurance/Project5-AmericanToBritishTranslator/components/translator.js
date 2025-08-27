@@ -94,15 +94,15 @@ class Translator {
 
     // Handle British Titles (Dr -> Dr.)
     for (const [american, british] of Object.entries(americanToBritishTitles)) {
-      const regex = new RegExp(`\\b${this.escapeRegex(british)}\\b`, 'gi');
+      const regex = new RegExp(`(^|\\s)${this.escapeRegex(british)}(?=\\s|$)`, 'gi');
       if (regex.test(translatedText)) {
         // Find all matches and replace them while preserving case
-        translatedText = translatedText.replace(regex, (match) => {
+        translatedText = translatedText.replace(regex, (match, space, title) => {
           // Preserve the case of the first letter
-          if (match[0] === match[0].toUpperCase()) {
-            return american.charAt(0).toUpperCase() + american.slice(1);
+          if (title[0] === title[0].toUpperCase()) {
+            return space + american.charAt(0).toUpperCase() + american.slice(1);
           } else {
-            return american;
+            return space + american;
           }
         });
         translations[british] = american;

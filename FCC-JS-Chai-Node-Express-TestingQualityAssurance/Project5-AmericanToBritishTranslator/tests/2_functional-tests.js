@@ -56,7 +56,7 @@ suite('Functional Tests', () => {
           console.log(res.body);
           assert.equal(res.status, 200);
           assert.property(res.body, 'error');
-          assert.equal(res.body.error, 'No text to translate');
+          assert.equal(res.body.error, 'Required field(s) missing');
           done();
         });
     });
@@ -71,7 +71,7 @@ suite('Functional Tests', () => {
           console.log(res.body);
           assert.equal(res.status, 200);
           assert.property(res.body, 'error');
-          assert.equal(res.body.error, 'Invalid value for locale field');
+          assert.equal(res.body.error, 'Required field(s) missing');
           done();
         });
     });

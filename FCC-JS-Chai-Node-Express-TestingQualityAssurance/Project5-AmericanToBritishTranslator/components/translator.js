@@ -27,9 +27,14 @@ class Translator {
     }
 
     // Handle American Titles (Dr. -> Dr)
+    console.log('Checking American titles...');
     for (const [american, british] of Object.entries(americanToBritishTitles)) {
+      console.log(`Checking title: "${american}" -> "${british}"`);
       const regex = new RegExp(`\\b${this.escapeRegex(american)}\\b`, 'gi');
+      console.log(`Regex: ${regex}`);
+      console.log(`Text to check: "${translatedText}"`);
       if (regex.test(translatedText)) {
+        console.log(`Found title: "${american}"`);
         // Find all matches and replace them while preserving case
         translatedText = translatedText.replace(regex, (match) => {
           // Preserve the case of the first letter
@@ -40,6 +45,9 @@ class Translator {
           }
         });
         translations[american] = british;
+        console.log(`Updated text: "${translatedText}"`);
+      } else {
+        console.log(`Title "${american}" not found`);
       }
     }
 
@@ -87,7 +95,15 @@ class Translator {
     for (const [american, british] of Object.entries(americanToBritishTitles)) {
       const regex = new RegExp(`\\b${this.escapeRegex(british)}\\b`, 'gi');
       if (regex.test(translatedText)) {
-        translatedText = translatedText.replace(regex, american);
+        // Find all matches and replace them while preserving case
+        translatedText = translatedText.replace(regex, (match) => {
+          // Preserve the case of the first letter
+          if (match[0] === match[0].toUpperCase()) {
+            return american.charAt(0).toUpperCase() + american.slice(1);
+          } else {
+            return american;
+          }
+        });
         translations[british] = american;
       }
     }

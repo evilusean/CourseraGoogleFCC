@@ -30,7 +30,15 @@ class Translator {
     for (const [american, british] of Object.entries(americanToBritishTitles)) {
       const regex = new RegExp(`\\b${this.escapeRegex(american)}\\b`, 'gi');
       if (regex.test(translatedText)) {
-        translatedText = translatedText.replace(regex, british);
+        // Find all matches and replace them while preserving case
+        translatedText = translatedText.replace(regex, (match) => {
+          // Preserve the case of the first letter
+          if (match[0] === match[0].toUpperCase()) {
+            return british.charAt(0).toUpperCase() + british.slice(1);
+          } else {
+            return british;
+          }
+        });
         translations[american] = british;
       }
     }

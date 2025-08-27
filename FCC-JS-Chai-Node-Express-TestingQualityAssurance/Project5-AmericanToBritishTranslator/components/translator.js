@@ -1,7 +1,7 @@
 const americanOnly = require('./american-only.js');
 const americanToBritishSpelling = require('./american-to-british-spelling.js');
-const americanToBritishTitles = require("./american-to-british-titles.js")
-const britishOnly = require('./british-only.js')
+const americanToBritishTitles = require("./american-to-british-titles.js");
+const britishOnly = require('./british-only.js');
 
 class Translator {
   translateAmericanToBritish(text) {
@@ -10,7 +10,7 @@ class Translator {
 
     // Handle American to British Spelling
     for (const [american, british] of Object.entries(americanToBritishSpelling)) {
-      const regex = new RegExp(`\\b${american}\\b`, 'gi');
+      const regex = new RegExp(`\\b${this.escapeRegex(american)}\\b`, 'gi');
       if (regex.test(translatedText)) {
         translatedText = translatedText.replace(regex, british);
         translations[american] = british;
@@ -19,32 +19,31 @@ class Translator {
 
     // Handle American Only terms
     for (const [american, british] of Object.entries(americanOnly)) {
-      const regex = new RegExp(`\\b${american}\\b`, 'gi');
+      const regex = new RegExp(`\\b${this.escapeRegex(american)}\\b`, 'gi');
       if (regex.test(translatedText)) {
         translatedText = translatedText.replace(regex, british);
         translations[american] = british;
       }
     }
 
-    // Handle American Titles
+    // Handle American Titles (Dr. -> Dr)
     for (const [american, british] of Object.entries(americanToBritishTitles)) {
-      const regex = new RegExp(`(^|\\s)${american.replace('.', '\\.')}`, 'gi'); // Match at the start of the string or after a space, escape period, case-insensitive
-       if (regex.test(translatedText)) {
-        translatedText = translatedText.replace(regex, `$1${british}`);
+      const regex = new RegExp(`\\b${this.escapeRegex(american)}\\s`, 'gi');
+      if (regex.test(translatedText)) {
+        translatedText = translatedText.replace(regex, `${british} `);
         translations[american] = british;
       }
     }
 
     // Handle American Time (10:30 -> 10.30)
     const timeRegex = /(\d{1,2}):(\d{2})/g;
-    const originalTimes = text.match(timeRegex);
-    if (timeRegex.test(translatedText)) {
-      translatedText = translatedText.replace(timeRegex, '$1.$2');
-      if (originalTimes) {
-      // Store the original time and its British equivalent for highlighting
-      originalTimes.forEach(time => {
-        translations[time] = time.replace(':', '.');
-      });}
+    const timeMatches = translatedText.match(timeRegex);
+    if (timeMatches) {
+      timeMatches.forEach(time => {
+        const britishTime = time.replace(':', '.');
+        translatedText = translatedText.replace(time, britishTime);
+        translations[time] = britishTime;
+      });
     }
 
     if (Object.keys(translations).length === 0) {
@@ -60,7 +59,7 @@ class Translator {
 
     // Handle British Only terms
     for (const [british, american] of Object.entries(britishOnly)) {
-      const regex = new RegExp(`\\b${british}\\b`, 'gi');
+      const regex = new RegExp(`\\b${this.escapeRegex(british)}\\b`, 'gi');
       if (regex.test(translatedText)) {
         translatedText = translatedText.replace(regex, american);
         translations[british] = american;
@@ -69,32 +68,31 @@ class Translator {
 
     // Handle British to American Spelling (reverse of americanToBritishSpelling)
     for (const [american, british] of Object.entries(americanToBritishSpelling)) {
-        const regex = new RegExp(`\\b${british}\\b`, 'gi'); // Assuming a direct reverse mapping
+      const regex = new RegExp(`\\b${this.escapeRegex(british)}\\b`, 'gi');
       if (regex.test(translatedText)) {
         translatedText = translatedText.replace(regex, american);
         translations[british] = american;
       }
     }
 
-    // Handle British Titles (reverse of americanToBritishTitles)
+    // Handle British Titles (Dr -> Dr.)
     for (const [american, british] of Object.entries(americanToBritishTitles)) {
-         const regex = new RegExp(`(^|\\s)${british}\\b`, 'gi'); // Match at the start of the string or after a space, ensure whole word match, case-insensitive
+      const regex = new RegExp(`\\b${this.escapeRegex(british)}\\s`, 'gi');
       if (regex.test(translatedText)) {
-        translatedText = translatedText.replace(regex, `$1${american}`);
+        translatedText = translatedText.replace(regex, `${american} `);
         translations[british] = american;
       }
     }
 
     // Handle British Time (10.30 -> 10:30)
     const timeRegex = /(\d{1,2})\.(\d{2})/g;
-    const originalTimes = text.match(timeRegex);
-    if (timeRegex.test(translatedText)) {
-      translatedText = translatedText.replace(timeRegex, '$1:$2');
-      if (originalTimes) {
-        originalTimes.forEach(time => {
-          translations[time] = time.replace('.', ':');
-        });
-      }
+    const timeMatches = translatedText.match(timeRegex);
+    if (timeMatches) {
+      timeMatches.forEach(time => {
+        const americanTime = time.replace('.', ':');
+        translatedText = translatedText.replace(time, americanTime);
+        translations[time] = americanTime;
+      });
     }
 
     if (Object.keys(translations).length === 0) {
@@ -105,19 +103,22 @@ class Translator {
   }
 
   highlightTranslation(original, translated, translations) {
-    let highlightedText = original;
-    for (const [originalWord, translatedWord] of Object.entries(translations)) {
-      // Escape special characters in the original word for regex
-      const escapedOriginalWord = originalWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      // Create a regex to find the original word in the text, case-insensitive
-      const regex = new RegExp(`\\b${escapedOriginalWord}\\b`, 'gi');
-
-      // Replace the original word with the highlighted translated word
-      // This approach ensures that the correct word is highlighted and
-      // preserves the surrounding text and punctuation.
+    let highlightedText = translated;
+    
+    // Sort translations by length (longest first) to avoid partial replacements
+    const sortedTranslations = Object.entries(translations).sort((a, b) => b[0].length - a[0].length);
+    
+    for (const [originalWord, translatedWord] of sortedTranslations) {
+      const escapedOriginalWord = this.escapeRegex(originalWord);
+      const regex = new RegExp(escapedOriginalWord, 'gi');
       highlightedText = highlightedText.replace(regex, `<span class="highlight">${translatedWord}</span>`);
     }
+    
     return highlightedText;
+  }
+
+  escapeRegex(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 }
 

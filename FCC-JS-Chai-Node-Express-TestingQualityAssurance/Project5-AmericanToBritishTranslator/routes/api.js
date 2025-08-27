@@ -11,23 +11,25 @@ module.exports = function (app) {
     console.log('Request Body:', req.body);
     const { text, locale } = req.body;
 
-    // Add these corrected validation checks
-    if (text === undefined || text === null) { // Check for undefined or null
-      return res.json({ error: 'Required field(s) missing' });
+    // Check for missing text field
+    if (text === undefined || text === null) {
+      return res.json({ error: 'No text to translate' });
     }
 
-    if (locale === undefined || locale === null) { // Check for undefined or null
-      return res.json({ error: 'Required field(s) missing' });
+    // Check for missing locale field
+    if (locale === undefined || locale === null) {
+      return res.json({ error: 'Invalid value for locale field' });
     }
 
+    // Check for empty text
     if (text === '') {
       return res.json({ error: 'No text to translate' });
     }
 
+    // Check for invalid locale
     if (locale !== 'american-to-british' && locale !== 'british-to-american') {
       return res.json({ error: 'Invalid value for locale field' });
     }
-    // End of added validation checks
 
     let translatedText;
     if (locale === 'american-to-british') {
@@ -37,7 +39,7 @@ module.exports = function (app) {
     }
 
     console.log('Translated Text:', translatedText);
-    if (translatedText === text || translatedText === 'Everything looks good to me!') { // Also check for the "no translation" message
+    if (translatedText === text || translatedText === 'Everything looks good to me!') {
       res.json({ text: text, translation: 'Everything looks good to me!' });
     } else {
       res.json({ text: text, translation: translatedText });

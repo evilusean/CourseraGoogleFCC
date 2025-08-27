@@ -97,9 +97,9 @@ class Translator {
       const regex = new RegExp(`(^|\\s)${this.escapeRegex(british)}(?=\\s|$)`, 'gi');
       if (regex.test(translatedText)) {
         // Find all matches and replace them while preserving case
-        translatedText = translatedText.replace(regex, (match, space, title) => {
+        translatedText = translatedText.replace(regex, (match, space) => {
           // Preserve the case of the first letter
-          if (title[0] === title[0].toUpperCase()) {
+          if (british[0] === british[0].toUpperCase()) {
             return space + american.charAt(0).toUpperCase() + american.slice(1);
           } else {
             return space + american;

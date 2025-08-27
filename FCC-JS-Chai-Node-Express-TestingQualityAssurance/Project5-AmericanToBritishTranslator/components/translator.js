@@ -27,15 +27,10 @@ class Translator {
     }
 
     // Handle American Titles (Dr. -> Dr)
-    console.log('Checking American titles...');
     for (const [american, british] of Object.entries(americanToBritishTitles)) {
-      console.log(`Checking title: "${american}" -> "${british}"`);
       // Use a different regex pattern that works better with periods
       const regex = new RegExp(`(^|\\s)${this.escapeRegex(american)}(?=\\s|$)`, 'gi');
-      console.log(`Regex: ${regex}`);
-      console.log(`Text to check: "${translatedText}"`);
       if (regex.test(translatedText)) {
-        console.log(`Found title: "${american}"`);
         // Find all matches and replace them while preserving case
         translatedText = translatedText.replace(regex, (match, space) => {
           // Check if the matched text starts with uppercase
@@ -56,9 +51,6 @@ class Translator {
             : british;
           translations[matchedTitle] = capitalizedBritish;
         }
-        console.log(`Updated text: "${translatedText}"`);
-      } else {
-        console.log(`Title "${american}" not found`);
       }
     }
 
@@ -77,7 +69,6 @@ class Translator {
       return "Everything looks good to me!";
     }
 
-    console.log('Translations object:', translations);
     return this.highlightTranslation(text, translatedText, translations);
   }
 
@@ -121,7 +112,11 @@ class Translator {
         const actualMatch = text.match(new RegExp(`(^|\\s)${this.escapeRegex(british)}(?=\\s|$)`, 'i'));
         if (actualMatch) {
           const matchedTitle = actualMatch[0].trim();
-          translations[matchedTitle] = american;
+          // Store the properly capitalized version for highlighting
+          const capitalizedAmerican = matchedTitle[0] === matchedTitle[0].toUpperCase() 
+            ? american.charAt(0).toUpperCase() + american.slice(1) 
+            : american;
+          translations[matchedTitle] = capitalizedAmerican;
         }
       }
     }

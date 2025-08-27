@@ -1,4 +1,4 @@
-# [Learn Laravel by Building a Medium Clone – Tutorial :](https://www.youtube.com/watch?v=MG1kt_wiIz0)
+# [FreeCodeCamp - Learn Laravel by Building a Medium Clone – Tutorial :](https://www.youtube.com/watch?v=MG1kt_wiIz0)
 
 Start : 27August2025</br>
 End :

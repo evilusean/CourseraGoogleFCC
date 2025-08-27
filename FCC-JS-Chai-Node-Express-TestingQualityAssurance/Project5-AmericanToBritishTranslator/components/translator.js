@@ -37,9 +37,9 @@ class Translator {
       if (regex.test(translatedText)) {
         console.log(`Found title: "${american}"`);
         // Find all matches and replace them while preserving case
-        translatedText = translatedText.replace(regex, (match, space, title) => {
+        translatedText = translatedText.replace(regex, (match, space) => {
           // Preserve the case of the first letter
-          if (title[0] === title[0].toUpperCase()) {
+          if (american[0] === american[0].toUpperCase()) {
             return space + british.charAt(0).toUpperCase() + british.slice(1);
           } else {
             return space + british;

@@ -47,7 +47,11 @@ class Translator {
           }
         });
         // Store the actual matched text for highlighting
-        translations[american] = british;
+        const actualMatch = text.match(new RegExp(`(^|\\s)${this.escapeRegex(american)}(?=\\s|$)`, 'i'));
+        if (actualMatch) {
+          const matchedTitle = actualMatch[0].trim();
+          translations[matchedTitle] = british;
+        }
         console.log(`Updated text: "${translatedText}"`);
       } else {
         console.log(`Title "${american}" not found`);

@@ -50,7 +50,11 @@ class Translator {
         const actualMatch = text.match(new RegExp(`(^|\\s)${this.escapeRegex(american)}(?=\\s|$)`, 'i'));
         if (actualMatch) {
           const matchedTitle = actualMatch[0].trim();
-          translations[matchedTitle] = british;
+          // Store the properly capitalized version for highlighting
+          const capitalizedBritish = matchedTitle[0] === matchedTitle[0].toUpperCase() 
+            ? british.charAt(0).toUpperCase() + british.slice(1) 
+            : british;
+          translations[matchedTitle] = capitalizedBritish;
         }
         console.log(`Updated text: "${translatedText}"`);
       } else {
@@ -73,6 +77,7 @@ class Translator {
       return "Everything looks good to me!";
     }
 
+    console.log('Translations object:', translations);
     return this.highlightTranslation(text, translatedText, translations);
   }
 
@@ -112,7 +117,12 @@ class Translator {
             return space + american;
           }
         });
-        translations[british] = american;
+        // Store the actual matched text for highlighting
+        const actualMatch = text.match(new RegExp(`(^|\\s)${this.escapeRegex(british)}(?=\\s|$)`, 'i'));
+        if (actualMatch) {
+          const matchedTitle = actualMatch[0].trim();
+          translations[matchedTitle] = american;
+        }
       }
     }
 

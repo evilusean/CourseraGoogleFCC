@@ -1,0 +1,32 @@
+0:00:00 Intro & Demo
+0:05:35 Setup Environment & Create Project
+0:15:03 Explore Directory Structure
+0:21:36 Introduce Artisan
+0:23:22 Laravel Configuration
+0:26:27 Create Basic Route
+0:28:01 Registration & Login (Laravel Breeze)
+0:33:31 Email Verification
+0:40:14 Tinker
+0:44:02 Models & Migrations
+0:52:25 Factories & Seeders
+1:05:13 Output Categories & Posts
+1:27:09 Pagination
+1:33:19 Blade Directives
+1:37:46 Components
+1:50:06 Layouts
+2:08:10 Create New Post
+2:54:36 Profile Update Page
+3:21:41 Post Details Page
+3:52:05 User's Public Profile Page
+4:16:44 Implement Follow/Unfollow
+4:56:20 Implement Like/Unlike Post
+5:10:53 Filtering posts by Category
+5:21:36 Show only posts from following users
+5:31:33 Image Resize
+5:57:14 Home Page Optimization
+6:11:38 Editing and Deleting Posts
+6:43:26 Make image optional during Update
+6:44:50 Show post owner in post item
+6:50:30 Use Published At field to publish posts
+6:59:38 Fix profile page avatar
+7:02:03 Conclusion

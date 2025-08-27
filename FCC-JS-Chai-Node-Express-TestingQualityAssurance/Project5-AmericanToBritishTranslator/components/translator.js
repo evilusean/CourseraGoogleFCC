@@ -109,8 +109,9 @@ class Translator {
     const sortedTranslations = Object.entries(translations).sort((a, b) => b[0].length - a[0].length);
     
     for (const [originalWord, translatedWord] of sortedTranslations) {
-      const escapedOriginalWord = this.escapeRegex(originalWord);
-      const regex = new RegExp(escapedOriginalWord, 'gi');
+      // Find the translated word in the translated text and highlight it
+      const escapedTranslatedWord = this.escapeRegex(translatedWord);
+      const regex = new RegExp(escapedTranslatedWord, 'gi');
       highlightedText = highlightedText.replace(regex, `<span class="highlight">${translatedWord}</span>`);
     }
     

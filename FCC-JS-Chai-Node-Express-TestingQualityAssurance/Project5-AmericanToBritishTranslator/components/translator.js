@@ -46,6 +46,7 @@ class Translator {
             return space + british;
           }
         });
+        // Store the actual matched text for highlighting
         translations[american] = british;
         console.log(`Updated text: "${translatedText}"`);
       } else {

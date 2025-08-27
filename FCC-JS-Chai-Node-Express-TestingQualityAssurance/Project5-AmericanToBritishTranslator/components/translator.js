@@ -28,9 +28,9 @@ class Translator {
 
     // Handle American Titles (Dr. -> Dr)
     for (const [american, british] of Object.entries(americanToBritishTitles)) {
-      const regex = new RegExp(`\\b${this.escapeRegex(american)}\\s`, 'gi');
+      const regex = new RegExp(`\\b${this.escapeRegex(american)}\\b`, 'gi');
       if (regex.test(translatedText)) {
-        translatedText = translatedText.replace(regex, `${british} `);
+        translatedText = translatedText.replace(regex, british);
         translations[american] = british;
       }
     }
@@ -77,9 +77,9 @@ class Translator {
 
     // Handle British Titles (Dr -> Dr.)
     for (const [american, british] of Object.entries(americanToBritishTitles)) {
-      const regex = new RegExp(`\\b${this.escapeRegex(british)}\\s`, 'gi');
+      const regex = new RegExp(`\\b${this.escapeRegex(british)}\\b`, 'gi');
       if (regex.test(translatedText)) {
-        translatedText = translatedText.replace(regex, `${american} `);
+        translatedText = translatedText.replace(regex, american);
         translations[british] = american;
       }
     }

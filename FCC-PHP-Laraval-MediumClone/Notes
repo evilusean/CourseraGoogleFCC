@@ -8,9 +8,17 @@ create post requires : an image, title, category, content, publish date
 profile page : change avatar, username, email, bio, password
 
 0:05:35 - Setup Environment & Create Project ==================================================================================================================================================
-Setup Environment - Laravel Herd (NGINX, PHP 8.4, MySQL, Redis) : 
+Setup Environment - Laravel Herd (NGINX, PHP 8.4, MySQL, Redis) Only for windows and mac : 
 https://herd.laravel.com/windows
-
+For Laravel development on Arch Linux, users typically opt for alternative solutions such as:
+Laravel Homestead:
+A pre-packaged Vagrant box providing a complete development environment with PHP, Nginx, databases, and other services within a virtual machine.
+Manual setup:
+Installing and configuring PHP, Nginx (or Apache), Composer, and any required databases (like MySQL or PostgreSQL) directly on the Arch Linux system.
+Docker:
+Utilizing Docker containers to create isolated and portable development environments for Laravel projects.
+Therefore, while Laravel Herd is a powerful tool for its intended platforms, it cannot be directly installed or used on Arch Linux. 
+  Users on Arch Linux should explore the alternative methods mentioned above for setting up their Laravel development environment.
 
 
 

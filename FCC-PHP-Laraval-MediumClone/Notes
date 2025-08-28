@@ -13,6 +13,10 @@ https://herd.laravel.com/windows
 For Laravel development on Arch Linux, users typically opt for alternative solutions such as:
 Laravel Homestead:
 A pre-packaged Vagrant box providing a complete development environment with PHP, Nginx, databases, and other services within a virtual machine.
+https://laravel.com/docs/12.x/homestead
+https://github.com/laravel/homestead
+Laravel Homestead is an official, pre-packaged Vagrant box designed to provide a convenient and consistent development environment for Laravel applications. 
+  It eliminates the need to manually install and configure server software like PHP, Nginx, MySQL, and other tools directly on your local machine.
 Manual setup:
 Installing and configuring PHP, Nginx (or Apache), Composer, and any required databases (like MySQL or PostgreSQL) directly on the Arch Linux system.
 Docker:

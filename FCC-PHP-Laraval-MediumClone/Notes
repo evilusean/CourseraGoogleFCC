@@ -3,9 +3,9 @@ Start : 28 August 2025
 0:00:00 - Intro & Demo ========================================================================================================================================================================
 https://medium.com/ #cloned website
 Course teaches Basic Setup, Advanced Features : User Following, Post Management, Routing, Authentication, Database Operations, Blade Templating
-
-
-
+You can see when the posts are published, when, by whom, likes, estimated read time, date published, category, filter by categories, search by user posts/profiles, followers  
+create post requires : an image, title, category, content, publish date
+profile page : change avatar, username, email, bio, password
 
 
 

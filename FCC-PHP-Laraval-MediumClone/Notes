@@ -57,16 +57,19 @@ Docker:
 Utilizing Docker containers to create isolated and portable development environments for Laravel projects.
 Therefore, while Laravel Herd is a powerful tool for its intended platforms, it cannot be directly installed or used on Arch Linux. 
   Users on Arch Linux should explore the alternative methods mentioned above for setting up their Laravel development environment.
-Arch Linux Install :
+Arch Linux Install (with SQLite) :
 sudo pacman -Syu #update system, reboot
 sudo pacman -S php php-fpm php-gd php-intl #install all php prerequisites
 sudo pacman -S composer #install composer
 sudo pacman -S php-sqlite #project will use sqlite
 sudo nano /etc/php/php.ini # After installation, you need to enable the extension in your php.ini file. 
 # Find the lines for the SQLite extensions and uncomment them by removing the semicolon ; at the beginning of each line. ';extension=pdo_sqlite' ';extension=sqlite3' 
-
- 
-
+sudo systemctl restart php-fpm #Restart the PHP-FPM service for the changes to take effect.
+composer global require laravel/installer # Use Composer to install the Laravel installer globally.
+#Add the Composer vendor bin directory to your system's PATH. This allows you to run the laravel command from any directory. The path is typically ~/.config/composer/vendor/bin on Arch Linux.
+nano ~/.bashrc # Add the following line to the end of the file: 'export PATH="$PATH:$HOME/.config/composer/vendor/bin"'
+source ~/.bashrc #resource, so you can use 'laravel' in terminal anywhere
+laravel new your-project-name # will allow you to now create a new project 
 
 
 

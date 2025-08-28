@@ -11,6 +11,7 @@ End : 20August2025</br>
 https://www.freecodecamp.org/learn/quality-assurance/
 
 Certificate : </br>
+https://www.freecodecamp.org/certification/evilusean/quality-assurance-v7
 
 # [FreeCodeCamp - Back End Development and APIs - Node-Express-MongoDB-Mongoose :](https://github.com/evilusean/CourseraGoogleFCC/tree/main/FCC-BackendAPI-Cert-Node-Express-MongoDB-Mongoose)
 

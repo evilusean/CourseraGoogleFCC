@@ -19,7 +19,8 @@ Docker:
 Utilizing Docker containers to create isolated and portable development environments for Laravel projects.
 Therefore, while Laravel Herd is a powerful tool for its intended platforms, it cannot be directly installed or used on Arch Linux. 
   Users on Arch Linux should explore the alternative methods mentioned above for setting up their Laravel development environment.
-
+Arch Linux Install :
+sudo pacman -S php php-fpm php-gd php-intl php-mbstring php-mysql php-xml php-zip php-curl #install all php prerequisites
 
 
 

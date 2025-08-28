@@ -61,7 +61,11 @@ Arch Linux Install :
 sudo pacman -Syu #update system, reboot
 sudo pacman -S php php-fpm php-gd php-intl #install all php prerequisites
 sudo pacman -S composer #install composer
+sudo pacman -S php-sqlite #project will use sqlite
+sudo nano /etc/php/php.ini # After installation, you need to enable the extension in your php.ini file. 
+# Find the lines for the SQLite extensions and uncomment them by removing the semicolon ; at the beginning of each line. ';extension=pdo_sqlite' ';extension=sqlite3' 
 
+ 
 
 
 

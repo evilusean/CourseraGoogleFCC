@@ -86,8 +86,9 @@ nvm alias default <version_number>
 Finally got everything working, took a day just to setup environment, 
 VSCode vs PHPStorm - He's going over the IDE's - He reccomends PHP Storm, paid app, too poor, maybe future Sean might want. 
 https://www.jetbrains.com/phpstorm/ 
-
-
+VSCode Extensions : 'PHP - Devsense'(Has PHP syntax highlighting, autocomplete, etc) 'Laravel - Laravel' (Official VSCode Extension for Laravel) 
+https://marketplace.visualstudio.com/items?itemName=enkia.tokyo-night 
+https://marketplace.visualstudio.com/items?itemName=AtomMaterial.a-file-icon-vscode
 
 
 

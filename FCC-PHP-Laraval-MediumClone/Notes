@@ -83,8 +83,9 @@ yay -s nvm # idk which one worked
 nvm ls-remote --lts # this was the fix, I installed version 20 globally, but my project was running 16(?) so I had to run these commands in the IDE terminal
 nvm install <version_number>
 nvm alias default <version_number>
-
-
+Finally got everything working, took a day just to setup environment, 
+VSCode vs PHPStorm - He's going over the IDE's - He reccomends PHP Storm, paid app, too poor, maybe future Sean might want. 
+https://www.jetbrains.com/phpstorm/ 
 
 
 

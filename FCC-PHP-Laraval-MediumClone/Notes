@@ -78,6 +78,8 @@ laravel new your-project-name # will allow you to now create a new project
 laravel new FCC-MediumClone # new project, options : No Toolkit(react, etc), SQLite, NPM install, npm run build 
 ERROR : Node is outdated, need version > 20, currently on 16 (did a 'sudo pacmna -Syu' yesterday so idk, need to fix)
 https://github.com/nvm-sh/nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash #install script for NVM
+yay -s nvm # idk which one worked
 
 
 

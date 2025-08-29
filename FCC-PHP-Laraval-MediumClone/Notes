@@ -80,7 +80,9 @@ ERROR : Node is outdated, need version > 20, currently on 16 (did a 'sudo pacmna
 https://github.com/nvm-sh/nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash #install script for NVM
 yay -s nvm # idk which one worked
-
+nvm ls-remote --lts # this was the fix, I installed version 20 globally, but my project was running 16(?) so I had to run these commands in the IDE terminal
+nvm install <version_number>
+nvm alias default <version_number>
 
 
 

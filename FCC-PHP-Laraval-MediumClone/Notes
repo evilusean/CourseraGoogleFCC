@@ -10,6 +10,11 @@ profile page : change avatar, username, email, bio, password
 0:05:35 - Setup Environment & Create Project ==================================================================================================================================================
 Setup Environment - Laravel Herd (NGINX, PHP 8.4, MySQL, Redis) Only for windows and mac : 
 https://herd.laravel.com/windows
+Herd downloads the latest version of PHP-Laravel, NodeJS, NPM, NVM(node version manager), NGINX
+When you open herd, it brings you to a dashboard to view your active services : open sites, general overview, paths, PHP versions, Node versions, 
+Create a new project in herd from the dashboard -> 'open sites' -> '+Add'
+  You can choose to use either React, Vue, or Livewiere for your new project, Name it, and that's it
+Testing Frameworks : Pest Vs PHPUnit
 For Laravel development on Arch Linux, users typically opt for alternative solutions such as:
 Laravel Homestead:
 A pre-packaged Vagrant box providing a complete development environment with PHP, Nginx, databases, and other services within a virtual machine.

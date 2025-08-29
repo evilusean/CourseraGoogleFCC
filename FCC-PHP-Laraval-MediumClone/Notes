@@ -89,8 +89,11 @@ https://www.jetbrains.com/phpstorm/
 VSCode Extensions : 'PHP - Devsense'(Has PHP syntax highlighting, autocomplete, etc) 'Laravel - Laravel' (Official VSCode Extension for Laravel) 
 https://marketplace.visualstudio.com/items?itemName=enkia.tokyo-night 
 https://marketplace.visualstudio.com/items?itemName=AtomMaterial.a-file-icon-vscode
-
-
+'npm install' #the drill
+'composer run dev' # how to start the server on linux
+  This will not work on windows without editing the 'php.ini' file, since I will never use windows again, I never have to worry about this 'EGPCS' -> 'GCPS'
+  Vite server runs with it, 
+'npm run dev' # for windows and mac, linux should user 'composer run dev'
 
 
 

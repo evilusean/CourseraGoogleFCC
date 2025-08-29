@@ -5,6 +5,8 @@ End : 20August2025</br>
 
 Certificate : </br>
 
+https://www.freecodecamp.org/certification/evilusean/quality-assurance-v7
+
 https://www.freecodecamp.org/learn/quality-assurance/
 
 As your programs or web applications become more complex, you'll want to test them to make sure that new changes don't break their original functionality.

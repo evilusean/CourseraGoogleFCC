@@ -1,6 +1,6 @@
 # [FreeCodeCamp - Learn PHP Laravel by Building a Medium Clone – Tutorial :](https://github.com/evilusean/CourseraGoogleFCC/tree/main/FCC-PHP-Laraval-MediumClone)
 
-Start : 27August2025</br>
+Start : 28August2025</br>
 End :
 
 # [FreeCodeCamp - Testing and Quality Assurance - JavaScript-Chai-Node-Express-Socket.IO :](https://github.com/evilusean/CourseraGoogleFCC/tree/main/FCC-JS-Chai-Node-Express-TestingQualityAssurance)
@@ -11,6 +11,7 @@ End : 20August2025</br>
 https://www.freecodecamp.org/learn/quality-assurance/
 
 Certificate : </br>
+https://www.freecodecamp.org/certification/evilusean/quality-assurance-v7
 
 # [FreeCodeCamp - Back End Development and APIs - Node-Express-MongoDB-Mongoose :](https://github.com/evilusean/CourseraGoogleFCC/tree/main/FCC-BackendAPI-Cert-Node-Express-MongoDB-Mongoose)
 

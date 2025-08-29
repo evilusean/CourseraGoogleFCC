@@ -1,0 +1,150 @@
+Start : 28 August 2025
+
+0:00:00 - Intro & Demo ========================================================================================================================================================================
+https://medium.com/ #cloned website
+Course teaches Basic Setup, Advanced Features : User Following, Post Management, Routing, Authentication, Database Operations, Blade Templating
+You can see when the posts are published, when, by whom, likes, estimated read time, date published, category, filter by categories, search by user posts/profiles, followers  
+create post requires : an image, title, category, content, publish date
+profile page : change avatar, username, email, bio, password
+
+0:05:35 - Setup Environment & Create Project ==================================================================================================================================================
+Setup Environment - Laravel Herd (NGINX, PHP 8.4, MySQL, Redis) Only for windows and mac : 
+https://herd.laravel.com/windows
+Herd downloads the latest version of PHP-Laravel, NodeJS, NPM, NVM(node version manager), NGINX
+When you open herd, it brings you to a dashboard to view your active services : open sites, general overview, paths, PHP versions, Node versions, 
+Create a new project in herd from the dashboard -> 'open sites' -> '+Add'
+  You can choose to use either React, Vue, or Livewiere for your new project, Name it, and that's it
+Testing Frameworks : Pest Vs PHPUnit
+For Laravel development on Arch Linux, users typically opt for alternative solutions such as:
+Laravel Homestead:
+A pre-packaged Vagrant box providing a complete development environment with PHP, Nginx, databases, and other services within a virtual machine.
+https://laravel.com/docs/12.x/homestead
+https://github.com/laravel/homestead
+Laravel Homestead is an official, pre-packaged Vagrant box designed to provide a convenient and consistent development environment for Laravel applications. 
+  It eliminates the need to manually install and configure server software like PHP, Nginx, MySQL, and other tools directly on your local machine.
+Arch Linux Homestead Install :
+sudo pacman -S vagrant 
+sudo pacman -S virtualbox
+git clone https://github.com/laravel/homestead.git ~/.local/share/homestead
+cd ~/.local/share/homestead
+git checkout release
+bash init.sh
+Configure Homestead.yaml: Open the generated ~/.local/share/homestead/Homestead.yaml file and configure it to your needs. 
+  This includes setting the provider to virtualbox and mapping your project directories
+Add a hosts file entry: Edit your /etc/hosts file with sudo and add an entry that maps your site's domain to the Homestead IP address (e.g., 192.168.10.10).
+Installing Laravel Homestead on Arch Linux involves a few key steps. Since Homestead is a pre-configured Vagrant box, 
+  you'll first need to install Vagrant and a virtualization provider like VirtualBox.
+Open the generated ~/.local/share/homestead/Homestead.yaml file and configure it to your needs. This includes setting the provider to virtualbox and mapping your project directories.
+YAML
+provider: virtualbox
+folders:
+    - map: ~/Projects/MyProject
+      to: /home/vagrant/MyProject
+sites:
+    - map: myproject.test
+      to: /home/vagrant/MyProject/public
+Add a hosts file entry:
+Edit your /etc/hosts file with sudo and add an entry that maps your site's domain to the Homestead IP address (e.g., 192.168.10.10).
+sudo nano /etc/hosts
+# Add this line to the end of the file
+192.168.10.10 myproject.test
+Launching Homestead :
+After all the configurations are complete, you can launch your virtual machine.
+Navigate to the Homestead directory:
+cd ~/.local/share/homestead
+Start the virtual machine:
+vagrant up # The first time you run this, Vagrant will download the pre-packaged Laravel Homestead box, which may take some time.
+Access the VM: Once it's up, you can SSH into the virtual machine.
+vagrant ssh
+Manual setup:
+Installing and configuring PHP, Nginx (or Apache), Composer, and any required databases (like MySQL or PostgreSQL) directly on the Arch Linux system.
+Docker:
+Utilizing Docker containers to create isolated and portable development environments for Laravel projects.
+Therefore, while Laravel Herd is a powerful tool for its intended platforms, it cannot be directly installed or used on Arch Linux. 
+  Users on Arch Linux should explore the alternative methods mentioned above for setting up their Laravel development environment.
+Arch Linux Install (with SQLite) :
+sudo pacman -Syu #update system, reboot
+sudo pacman -S php php-fpm php-gd php-intl #install all php prerequisites
+sudo pacman -S composer #install composer
+sudo pacman -S php-sqlite #project will use sqlite
+sudo nano /etc/php/php.ini # After installation, you need to enable the extension in your php.ini file. 
+# Find the lines for the SQLite extensions and uncomment them by removing the semicolon ; at the beginning of each line. ';extension=pdo_sqlite' ';extension=sqlite3' 
+sudo systemctl restart php-fpm #Restart the PHP-FPM service for the changes to take effect.
+composer global require laravel/installer # Use Composer to install the Laravel installer globally.
+#Add the Composer vendor bin directory to your system's PATH. This allows you to run the laravel command from any directory. The path is typically ~/.config/composer/vendor/bin on Arch Linux.
+nano ~/.bashrc # Add the following line to the end of the file: 'export PATH="$PATH:$HOME/.config/composer/vendor/bin"'
+source ~/.bashrc #resource, so you can use 'laravel' in terminal anywhere
+laravel new your-project-name # will allow you to now create a new project 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

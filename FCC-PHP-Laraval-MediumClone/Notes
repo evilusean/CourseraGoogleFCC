@@ -136,7 +136,7 @@ https://marketplace.visualstudio.com/items?itemName=AtomMaterial.a-file-icon-vsc
 'vite.config.js' = vite server config (php runs a vite server)
 
 0:21:36 - Introducing Artisan ==============================================================================================================================================================
-
+ERROR : Did a 'yay -Syu' to update my VSCode, and it broke my hyprland setup, spent the last few hours trying to fix, missing my top bar, reinstalling the dot-files to fix
 
 
 

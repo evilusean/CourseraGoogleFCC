@@ -138,7 +138,7 @@ https://marketplace.visualstudio.com/items?itemName=AtomMaterial.a-file-icon-vsc
 0:21:36 - Introducing Artisan ==============================================================================================================================================================
 ERROR : Did a 'yay -Syu' to update my VSCode, and it broke my hyprland setup, spent the last few hours trying to fix, missing my top bar, reinstalling the dot-files to fix
 'yay -S --rebuild quickshell' # It doesn't use waybar, it uses quickshell, this at least get's it to load the search feature
-
+'yay -S --rebuild google-breakpad-git' # in order to rebuild quickshell, I needed to rebuild this thing
 
 
 

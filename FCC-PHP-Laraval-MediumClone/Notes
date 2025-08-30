@@ -115,9 +115,25 @@ https://marketplace.visualstudio.com/items?itemName=AtomMaterial.a-file-icon-vsc
 'resources' folder = contains 'css' (app.css)
   'js' (app.js, bootstrap.js)
   'views' (welcome-blade.php)
-
-
-
+'routes' folder 
+  'console.php' (for console comments)
+  'web.php' (where you define all of the routes that you access in the browser)
+'storage' folder 
+  'app' folder ('private' = contains user uploaded data, 'public' = contains data)
+  'framework forlder' ('cache' 'sessions' 'testing' 'views' = framework generated data)
+  'logs' folder 
+'tests' folder = contains tests (Pest.php, TestCase.php)
+  'Feature'
+  'Unit'
+'vendor' folder = contains all the third party packages
+'.env' = main configuration file with credentials, API keys, etc (other configs found in the 'config' folder)
+'.env.example' = example env
+'artisan' = important file, similar to 'public/index.php' file, requires '/vendor/autoload.php' and '/bootstrap/app.php' -> 'handleCommand(new ArgvInput)' method to start app
+  Artisan is the main command line interface that you use to interact with your php project
+'composer.json' = dependancies 
+'composer.lock' = dependancies
+'package.json' = npm dependancies
+'vite.config.js' = vite server config (php runs a vite server)
 
 
 

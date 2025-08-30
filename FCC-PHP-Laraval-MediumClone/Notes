@@ -96,7 +96,9 @@ https://marketplace.visualstudio.com/items?itemName=AtomMaterial.a-file-icon-vsc
 'npm run dev' # for windows and mac, linux should user 'composer run dev'
 
 0:15:03 - Explore Directory Structure ======================================================================================================================================================
-
+'app' folder = contains 'Http' (Controller.php) 'Models' (User.php) 'Providers' (AppServiceProvider.php)
+'bootstrap' folder = contains 'cache' 'app.php' (this is the main file which initializes the application, confirguration with routing) 'providers.php'
+'config' folder = contains every file needed for configuration
 
 
 

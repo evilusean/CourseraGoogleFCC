@@ -364,10 +364,10 @@ Route::get('/', function () {
 'views -> layouts -> navigation.blade.php' # navigation for authenticated users
 'views -> partials -> edit.blade.php' # allows you to edit your user profile, split into 3 components, update password, profile and delete user form
 # the reason why all this is so cool, is it does the heavy lifting for you, this would all take days to do manually, all you do is set up the scaffolding, and then make it look pretty
-'routes -> auth.php' # added with the command, controllers(which do all of
+'routes -> auth.php' # added with the command, controllers(which do all of the requests like authentication, registration, posts, requests, gets, etc)
 'routes -> web.php' # automatically updated with all the new routes, adds the routes from auth.php automatically added for 'view/get' 'update' 'delete'
 
-
+0:33:31 - Email Verification ================================================================================================================================================================
 
 
 

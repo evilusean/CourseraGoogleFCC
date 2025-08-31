@@ -310,7 +310,26 @@ if you aren't going to make any changes to the 'config' folder files, you can de
 'php artisan config:publish' # will allow you to use your new config files, if the file isn't in the 'config' folder, it will create it and you can edit it 
 
 0:26:27 - Create Basic Route ================================================================================================================================================================== 
-
+'routes -> web.php' 
+<?php
+// The 'Route' facade is a class provided by the framework (e.g., Laravel)
+// that simplifies the process of defining application routes.
+// The 'get' method registers a new route that responds only to
+// HTTP GET requests. This is the most common type of request, used
+// by web browsers to fetch a page.
+// The first argument, '/hello', is the URI (Uniform Resource Identifier)
+// that the application will listen for. When a user visits this path,
+// the code inside the function is executed.
+Route::get('/hello', function() {
+    return 'Hello, World!';
+    // This is an anonymous function (or closure) that acts as the
+    // handler for the route. This function is executed when the
+    // URI '/hello' is requested with a GET method.
+    // The 'return' statement sends the specified value back as the
+    // HTTP response. The framework automatically takes this plain string
+    // and sends it to the user's web browser, which will then
+    // display "Hello, World!" on the screen.
+});
 
 
 

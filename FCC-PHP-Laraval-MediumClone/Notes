@@ -329,7 +329,7 @@ Route::get('/hello', function() {
     // HTTP response. The framework automatically takes this plain string
     // and sends it to the user's web browser, which will then
     // display "Hello, World!" on the screen.
-});
+}); // will return 'Hello, World!' as plain text on the browser screen
 // The 'Route' facade is used to register a new route for the application.
 // The 'get' method specifies that this route should handle HTTP GET requests.
 // The first argument, '/', is the URI. This is a special case that
@@ -346,9 +346,9 @@ Route::get('/', function () {
     // named 'welcome.blade.php' (or similar) inside the 'resources/views'
     // directory. The content of that file will be rendered as the
     // final web page.
-});
+}); // will return a view instead of just plaintext, you can construct entire web pages as views in the file format '_.blade.php' 
 
-
+0:28:01 - Registration & Login (Laravel Breeze) =============================================================================================================================================
 
 
 

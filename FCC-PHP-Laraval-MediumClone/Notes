@@ -311,7 +311,7 @@ if you aren't going to make any changes to the 'config' folder files, you can de
 
 0:26:27 - Create Basic Route ================================================================================================================================================================== 
 'routes -> web.php' 
-<?php
+<?php //this is a opening tag for PHP. It is a special marker that tells the web server that the code that follows is to be interpreted as PHP and not as plain HTML.
 // The 'Route' facade is a class provided by the framework (e.g., Laravel)
 // that simplifies the process of defining application routes.
 // The 'get' method registers a new route that responds only to
@@ -329,8 +329,26 @@ Route::get('/hello', function() {
     // HTTP response. The framework automatically takes this plain string
     // and sends it to the user's web browser, which will then
     // display "Hello, World!" on the screen.
-});
+}); // will return 'Hello, World!' as plain text on the browser screen
+// The 'Route' facade is used to register a new route for the application.
+// The 'get' method specifies that this route should handle HTTP GET requests.
+// The first argument, '/', is the URI. This is a special case that
+// represents the root of the website (e.g., [your-website.com/](https://your-website.com/)).
+Route::get('/', function () {
+    return view('welcome'); // 'welcome' will automatically fetch 'welcome.blade.php' and you don't need to type out the entire folder structure and file name
+    // This is the function that will be executed when a user visits
+    // the root URL.
+    // The 'return' statement sends the result of the 'view()' function
+    // back to the user.
+    // The 'view()' function is a helper function that tells the framework
+    // to find and render an HTML file (called a "view").
+    // The argument 'welcome' tells the framework to look for a file
+    // named 'welcome.blade.php' (or similar) inside the 'resources/views'
+    // directory. The content of that file will be rendered as the
+    // final web page.
+}); // will return a view instead of just plaintext, you can construct entire web pages as views in the file format '_.blade.php' 
 
+0:28:01 - Registration & Login (Laravel Breeze) =============================================================================================================================================
 
 
 

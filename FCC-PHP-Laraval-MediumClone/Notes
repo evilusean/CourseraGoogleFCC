@@ -300,8 +300,14 @@ Available commands:
   view:clear                Clear all compiled view files
 'php artisan about' # tells you about your php/laravel/artisan versions, timezones, confs, caches, drivers, etc
 'php artisan make --help' # --help flag tells you what a command does, and shows you all the commands that can be used with it
+Artisan is your main tool for Laravel-PHP, you can use it to create files, create caches, etc
 
 0:23:22 - Laravel Configuration ============================================================================================================================================================= 
+'.env' # contains your main laravel configurations and not just your API keys in PHP-Laravel
+'config' folder has all the other configurations 'app.php' 'auth.php' 'cache.php' 'database.php' ..... etc, each one corresponds with the config for it's name
+if you aren't going to make any changes to the 'config' folder files, you can delete them, the config files already exist in laravel core, and if they aren't there,
+  the framework will use the laravel core versions, if you only modify one part of one 'config -> _.php' file you can delete everything else in that file aswell, and laravel will use default
+'php artisan config:publish' # will allow you to use your new config files, if the file isn't in the 'config' folder, it will create it and you can edit it 
 
 
 

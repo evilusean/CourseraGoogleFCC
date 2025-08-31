@@ -299,7 +299,9 @@ Available commands:
   view:cache                Compile all of the application's Blade templates
   view:clear                Clear all compiled view files
 'php artisan about' # tells you about your php/laravel/artisan versions, timezones, confs, caches, drivers, etc
-'php artisan make --help' # --help flag tells you what a command does
+'php artisan make --help' # --help flag tells you what a command does, and shows you all the commands that can be used with it
+
+0:23:22 - Laravel Configuration ============================================================================================================================================================= 
 
 
 

@@ -335,7 +335,7 @@ Route::get('/hello', function() {
 // The first argument, '/', is the URI. This is a special case that
 // represents the root of the website (e.g., [your-website.com/](https://your-website.com/)).
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome'); // 'welcome' will automatically fetch 'welcome.blade.php' and you don't need to type out the entire folder structure and file name
     // This is the function that will be executed when a user visits
     // the root URL.
     // The 'return' statement sends the result of the 'view()' function

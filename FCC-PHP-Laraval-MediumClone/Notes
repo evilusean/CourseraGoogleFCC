@@ -349,16 +349,23 @@ Route::get('/', function () {
 }); // will return a view instead of just plaintext, you can construct entire web pages as views in the file format '_.blade.php' 
 
 0:28:01 - Registration & Login (Laravel Breeze) =============================================================================================================================================
-
-
-
-
-
-
-
-
-
-
+'composer require laravel/breeze' # will require and install breeze package, which has everything you need for authentication : registration, login, email verification, password resets, etc
+'php artisan breeze:install' # installs breeze into your project (select 'Blade with Alpine' so you don't introduce any new frameworks, 'No' darkmode, 'Pest' Tests) 
+  #the above command will update composer.json, package.lock, add tonnes of files(scaffolding) for login, auth, etc, 
+'composer run dev' # you will now see 2 new buttons at the top of your screen 'Login' 'Register', pretty cool, 2 commands to set up auth/login/registration/profile/etc
+'views -> welcome.blade.php' will be updated with the new buttons, it literally does all the heavy lifting.... with 2 commands, I had to hook up nothing to the backend, 
+  No email services, no databases, no third parties, no building authentication/login/email/etc pages, it just works... actually pretty cool.
+'views -> dashboard.blade.php' # this is what shows when you have a succesful login
+'views -> auth -> _.blade.php' # adds all the new files/views for your project, automatically, saving days of work, I can see why people like PHP now
+  'login.blade.php' 'register.blade.php' 'confirm-password.blade.php' 'forgot-password.blade.php' 'reset-password.blade.php' 'verify-email.blade.php' 
+'views -> components -> _.blade.php' # all components for auth were added here 'danger-button.blade.php' 'dropdown.blade.php' etc
+'views -> layouts -> app.blade.php' # layout for authenticated users
+'views -> layouts -> guest.blade.php' # this is the layout for unauthenticated users 
+'views -> layouts -> navigation.blade.php' # navigation for authenticated users
+'views -> partials -> edit.blade.php' # allows you to edit your user profile, split into 3 components, update password, profile and delete user form
+# the reason why all this is so cool, is it does the heavy lifting for you, this would all take days to do manually, all you do is set up the scaffolding, and then make it look pretty
+'routes -> auth.php' # added with the command, controllers(which do all of
+'routes -> web.php' # automatically updated with all the new routes, adds the routes from auth.php automatically added for 'view/get' 'update' 'delete'
 
 
 

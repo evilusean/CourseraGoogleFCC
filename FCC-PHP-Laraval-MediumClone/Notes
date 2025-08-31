@@ -309,7 +309,7 @@ if you aren't going to make any changes to the 'config' folder files, you can de
   the framework will use the laravel core versions, if you only modify one part of one 'config -> _.php' file you can delete everything else in that file aswell, and laravel will use default
 'php artisan config:publish' # will allow you to use your new config files, if the file isn't in the 'config' folder, it will create it and you can edit it 
 
-
+0:26:27 - Create Basic Route ================================================================================================================================================================== 
 
 
 

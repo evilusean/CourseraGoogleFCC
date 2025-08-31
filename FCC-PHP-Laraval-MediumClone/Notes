@@ -368,6 +368,8 @@ Route::get('/', function () {
 'routes -> web.php' # automatically updated with all the new routes, adds the routes from auth.php automatically added for 'view/get' 'update' 'delete'
 
 0:33:31 - Email Verification ================================================================================================================================================================
+I'm adding detailed comments for each controller, because I had no idea what was going on before, I actually want to learn PHP, so I might as well learn about this part now, for future Sean
+https://github.com/evilusean/CourseraGoogleFCC/tree/main/FCC-PHP-Laraval-MediumClone/FCC-MediumClone/app/Http/Controllers/Auth
 A class in PHP is very similar to a class in Java. Both are core components of object-oriented programming (OOP).
 What is a Class?
 Think of a class as a blueprint or a template for creating things called objects. It defines a set of properties (variables) and methods (functions) that an object of that class will have.

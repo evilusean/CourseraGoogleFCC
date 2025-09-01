@@ -525,7 +525,7 @@ $user->name = 'SeanTest1' # assigns the name 'Test1' to '$user', and changes the
 $user->save(); # will save the new name to the database
 It's important to remember 'namespace' that get's called as a reference for each command written in php laravel tinker
 
-
+0:44:02 - Models & Migrations ===============================================================================================================================================================
 
 
 

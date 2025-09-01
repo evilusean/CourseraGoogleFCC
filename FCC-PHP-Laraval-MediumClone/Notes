@@ -518,7 +518,61 @@ after installing mailpit, type 'mailpit' in a terminal, it will give you 'http:/
         updated_at: "2025-09-01 21:21:25",
       },
     ],
-  } # this is the return, for tinker command 'User::get' 
+  } # this is the return, for tinker command 'User::get', it has the name, hashed password, date created, verified, 
+Whenever you add a new column into a User table, or new tables, 
+$user = User::first() # will assign $user the first user in the table of 'User'
+$user->name = 'SeanTest1' # assigns the name 'Test1' to '$user', and changes the name(only in the instance of tinker, it needs to be updated to the database
+$user->save(); # will save the new name to the database
+It's important to remember 'namespace' that get's called as a reference for each command written in php laravel tinker
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

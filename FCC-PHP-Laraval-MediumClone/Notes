@@ -458,7 +458,11 @@ class RegisteredUserController extends Controller
 } // got AI to add detailed comments, breaking my own formatting rules by adding more than one new line per lesson, it's hard enough to read as is.
 # used for logging you in, set up by breeze automatically, 
 https://github.com/evilusean/CourseraGoogleFCC/blob/main/FCC-PHP-Laraval-MediumClone/FCC-MediumClone/app/Http/Controllers/Auth/AuthenticatedSessionController.php
-
+When setting up our account originally out of the box, we were able to create a new user without email verification, you need to enable this in 'app -> Models -> User.php'
+change this line in 'User.php' = 'class User extends Authenticatable' -> 'class User extends Authenticatable implements MustVerifyEmail' 
+  to add email verification, that's all you need to do, one line, amazing
+'.env' go to 'MAIL_MAILER=log' # this shows us that our mail is added to log file 'storage -> logs -> laravel.log' - every email sent out will be stored here, 
+  after checking the logs, you can see the verify email address link and click it from the log to verify an account (even if it's a fake email account) and use account
 
 
 

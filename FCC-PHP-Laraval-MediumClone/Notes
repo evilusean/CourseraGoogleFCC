@@ -463,8 +463,13 @@ change this line in 'User.php' = 'class User extends Authenticatable' -> 'class 
   to add email verification, that's all you need to do, one line, amazing
 '.env' go to 'MAIL_MAILER=log' # this shows us that our mail is added to log file 'storage -> logs -> laravel.log' - every email sent out will be stored here, 
   after checking the logs, you can see the verify email address link and click it from the log to verify an account (even if it's a fake email account) and use account
-
-
+MailPit (free way to test your apps with email auth/registration) :
+https://mailpit.axllent.org/
+https://mailpit.axllent.org/docs/
+https://mailpit.axllent.org/docs/install/
+'yay -S mailpit-bin' #install on arch linux
+after installing mailpit, type 'mailpit' in a terminal, it will give you 'http://localhost:8025/' that you can open in a browser to access the emails, now...
+  to get emails sent to it instead of the log file go to '.env' and change 'MAIL_MAILER=log' -> 'MAIL_MAILER=smtp' and change 'MAIL_PORT=1025'
 
 
 

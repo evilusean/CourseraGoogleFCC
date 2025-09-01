@@ -5,9 +5,10 @@ namespace App\Models;
 // This line defines the namespace for the file. Namespaces help organize classes and prevent naming conflicts. 
 // In this case, the User model belongs to the `App\Models` namespace.
 
-// use Illuminate\Database\Eloquent\Factories\HasFactory;
-// use Illuminate\Foundation\Auth\User as Authenticatable;
-// use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 // These lines import other classes that are used in this file.
 // - `HasFactory`: A trait used by Laravel's Eloquent ORM to allow for creating model factories. 
@@ -17,10 +18,20 @@ namespace App\Models;
 // This is essential for features like login and user sessions.
 // - `Notifiable`: A trait that provides functionality for sending notifications to the user model. 
 // It integrates with Laravel's notification system, allowing you to send emails, SMS, or other types of notifications.
+// - `MustVerifyEmail`: This line imports the MustVerifyEmail contract (an interface). A contract in Laravel is essentially a set of predefined methods that a class must implement. By implementing this contract, your User model promises to fulfill the requirements for email verification.
 
 class User extends Authenticatable implements MustVerifyEmail
 {
     // The `User` class extends `Authenticatable`, inheriting all of its authentication-related functionality.
+    // The `implements MustVerifyEmail` part is the key here. It tells Laravel that this model supports email verification.
+    // When you register a new user, Laravel will automatically recognize this interface and
+    // will know to send an email verification link to the user's email address.
+    // This interface also provides the necessary methods like `hasVerifiedEmail()` and `markEmailAsVerified()`
+    // which are used by Laravel's built-in email verification routes and middleware.
+    // For example, the `verified` middleware that protects certain routes checks if the
+    // authenticated user's model implements `MustVerifyEmail` and if their email has been verified.
+    // This is a powerful feature that ensures that users have a valid email address before they can
+    // access specific parts of your application, which is crucial for security and user management.
 
     /** * The `HasFactory` trait allows you to create instances of the `User` model using a factory. 
      * For example, you could run `User::factory()->count(10)->create()` to create 10 fake users.

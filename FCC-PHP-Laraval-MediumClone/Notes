@@ -456,6 +456,8 @@ class RegisteredUserController extends Controller
         return redirect(route('dashboard', absolute: false));
     }
 } // got AI to add detailed comments, breaking my own formatting rules by adding more than one new line per lesson, it's hard enough to read as is.
+# used for logging you in, set up by breeze automatically, 
+https://github.com/evilusean/CourseraGoogleFCC/blob/main/FCC-PHP-Laraval-MediumClone/FCC-MediumClone/app/Http/Controllers/Auth/AuthenticatedSessionController.php
 
 
 

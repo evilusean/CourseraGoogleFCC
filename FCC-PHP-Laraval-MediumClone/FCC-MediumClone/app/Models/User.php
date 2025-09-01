@@ -18,7 +18,7 @@ namespace App\Models;
 // - `Notifiable`: A trait that provides functionality for sending notifications to the user model. 
 // It integrates with Laravel's notification system, allowing you to send emails, SMS, or other types of notifications.
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     // The `User` class extends `Authenticatable`, inheriting all of its authentication-related functionality.
 

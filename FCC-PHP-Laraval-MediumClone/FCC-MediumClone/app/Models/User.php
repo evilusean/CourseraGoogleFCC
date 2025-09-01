@@ -18,7 +18,9 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 // This is essential for features like login and user sessions.
 // - `Notifiable`: A trait that provides functionality for sending notifications to the user model. 
 // It integrates with Laravel's notification system, allowing you to send emails, SMS, or other types of notifications.
-// - `MustVerifyEmail`: This line imports the MustVerifyEmail contract (an interface). A contract in Laravel is essentially a set of predefined methods that a class must implement. By implementing this contract, your User model promises to fulfill the requirements for email verification.
+// - `MustVerifyEmail`: This line imports the MustVerifyEmail contract (an interface). A contract in Laravel is essentially a 
+// set of predefined methods that a class must implement. By implementing this contract, your User model promises to fulfill 
+// the requirements for email verification.
 
 class User extends Authenticatable implements MustVerifyEmail
 {

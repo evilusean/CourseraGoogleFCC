@@ -30,6 +30,8 @@ return new class extends Migration
             // `$table->id()`: This is a shortcut method that adds an auto-incrementing `id` column of type UNSIGNED BIGINT.
             // It automatically sets this column as the primary key for the table.
             $table->id();
+            $table->string('name'); // This line adds a `name` column of type VARCHAR to the table.
+            
 
             // `$table->timestamps()`: This is another shortcut method. It adds two columns to the table:
             // `created_at` and `updated_at`.

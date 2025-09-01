@@ -472,9 +472,53 @@ after installing mailpit, type 'mailpit' in a terminal, it will give you 'http:/
   to get emails sent to it instead of the log file go to '.env' and change 'MAIL_MAILER=log' -> 'MAIL_MAILER=smtp' and change 'MAIL_PORT=1025'
 
 0:40:14 - Tinker ============================================================================================================================================================================
-
-
-
+'php artisan tinker' # interactive readable print loop, write any valid laravel code and will read then give you the output
+'User::get()' # 'User' here is the same as 'app -> Models -> User.php' and will select every user in that database 
+[!] Aliasing 'User' to 'App\Models\User' for this Tinker session.
+= Illuminate\Database\Eloquent\Collection {#1365
+    all: [
+      App\Models\User {#6071
+        id: 1,
+        name: "Test1",
+        email: "test1@fakemail.com",
+        email_verified_at: null,
+        #password: "$2y$12$brMsTWqcWKNid/ash4H30uXdixdt4wFgtom6M5XE/G4EUxpsus02S",
+        #remember_token: null,
+        created_at: "2025-08-31 17:35:29",
+        updated_at: "2025-08-31 17:35:29",
+      },
+      App\Models\User {#6072
+        id: 2,
+        name: "Test",
+        email: "test2@email.com",
+        email_verified_at: "2025-09-01 20:57:25",
+        #password: "$2y$12$0NbjZxWQySPpe5pe9jIGOODmReDNyqYvPAFBFmWYBmoeJYlGyjzzi",
+        #remember_token: null,
+        created_at: "2025-09-01 20:55:43",
+        updated_at: "2025-09-01 20:57:25",
+      },
+      App\Models\User {#6073
+        id: 3,
+        name: "Test3",
+        email: "test3@email.com",
+        email_verified_at: "2025-09-01 21:01:38",
+        #password: "$2y$12$PkzF3n3eJQNhyCsD6SjZk.6PBw/WanjZzOVFfuQRBpAoEAYoSXS4K",
+        #remember_token: null,
+        created_at: "2025-09-01 21:01:26",
+        updated_at: "2025-09-01 21:01:38",
+      },
+      App\Models\User {#6074
+        id: 4,
+        name: "Test4",
+        email: "test4@email.com",
+        email_verified_at: "2025-09-01 21:21:25",
+        #password: "$2y$12$JoF7yvfSv5ryVpMV6FwQq.TdrmS/erwRafmknLkHMfpTzYC.5tADy",
+        #remember_token: null,
+        created_at: "2025-09-01 21:20:39",
+        updated_at: "2025-09-01 21:21:25",
+      },
+    ],
+  } # this is the return, for tinker command 'User::get' 
 
 
 

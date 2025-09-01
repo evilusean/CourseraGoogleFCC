@@ -471,7 +471,7 @@ https://mailpit.axllent.org/docs/install/
 after installing mailpit, type 'mailpit' in a terminal, it will give you 'http://localhost:8025/' that you can open in a browser to access the emails, now...
   to get emails sent to it instead of the log file go to '.env' and change 'MAIL_MAILER=log' -> 'MAIL_MAILER=smtp' and change 'MAIL_PORT=1025'
 
-
+0:40:14 - Tinker ============================================================================================================================================================================
 
 
 

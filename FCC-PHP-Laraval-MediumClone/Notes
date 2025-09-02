@@ -602,9 +602,12 @@ ERROR : 'php artisan db:table' # wasn't working, had to edit 'sudo nvim /etc/php
 'php artisan migrate:rollback --step=1' # how to roll back your migrations, only to the last one (step=1), to get back to where
 'php artisan migrate' # will reapply the migrations that you just rolled back
 the reason why he did this, was he changed the 'images' on 'posts' table to 'image', so you rollback, and then apply your changes
+The purpose is to seed some data, create or update, to the database
+'database -> seeder -> DatabaseSeeder.php' 
 
-
-
+How do you execute the database seeder to actually create the data? 2 ways : 1) During a migration execute the seeder, or seed the database manually
+'php artisan migrate --seed' # add the '--seed' flag to add your seed data to the database
+'php artisan db:seed' # will seed your database with your seeder files 
 
 
 

@@ -615,7 +615,7 @@ The 'DatabaseSeeder.php' is the MAIN seeder, if you want to add other seeders on
 'php artisan tinker' -> '\App\Models\Post::get()' # how to check our newly seeded data, 100 randomized posts, pretty cool, starting to like php
 'php artisan migrate:fresh --seed' # 'migrate:fresh' drops all the tables, and '--seed' flag uses the 'DatabaseSeeder.php' to seed the database
 
-
+1:05:13 - Output Categories & Posts =========================================================================================================================================================
 
 
 

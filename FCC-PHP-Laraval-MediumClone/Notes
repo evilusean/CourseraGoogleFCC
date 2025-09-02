@@ -584,14 +584,22 @@ You can use the 'fake()' function/package to generate fake data for your factory
 'database -> factories -> PostFactory.php' 
 public function definition(): array
     {
+        $title = fake()->sentence();
         return [
-            'title' => fake()->sentence(),
-            'content' => fake()->paragraphs(3, true),
+            'image' => fake()-> imageUrl(),
+            'title' => $title,
+            'slug' => \Illuminate\Support\Str::slug($title),
+            'content' => fake()->paragraphs(5),
+            'category_id' => Category::inRandomOrder()->first()->id,
+            'user_id' => 1,
+            'published_at' => fake()->optional()->dateTime(),
         ];
     }
-}
 ERROR : 'php artisan db:table' # wasn't working, had to edit 'sudo nvim /etc/php/php.ini' '/intl' to search, and uncomment the line ';extension=intl' and now it works 
 'php --ini' # will show you where your configs are for php '/etc/php/php.ini'
+'php artisan migrate:rollback --step=1' # how to roll back your migrations, only to the last one (step=1), to get back to where
+'php artisan migrate' # will reapply the migrations that you just rolled back
+the reason why he did this, was he changed the 'images' on 'posts' table to 'image', so you rollback, and then apply your changes
 
 
 

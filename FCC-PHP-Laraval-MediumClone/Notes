@@ -571,7 +571,7 @@ $table->timestamps();
 'php artisan db:show' # will show information about the database, connection, host, port, schemas, tables, etc.
 'php artisan tinker' '\App\Models\Category::get()' # will get all of the data from the newly created 'Category' table, since we couldn't alias, we explicitly told it to get the model
 
-
+0:52:25 - Factories & Seeders ================================================================================================================================================================
 
 
 

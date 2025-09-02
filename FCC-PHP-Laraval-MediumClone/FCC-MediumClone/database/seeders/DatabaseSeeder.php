@@ -8,6 +8,7 @@ namespace Database\Seeders;
 // we will be creating data for.
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\User;
 
 // This line imports the base `Seeder` class from Laravel's framework.
 // All custom seeder classes must extend this class.
@@ -25,6 +26,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        User::factory()->create([
+            'name' => 'John Doe',
+            'email' => 'test@email.com' ]);
         // This array contains a list of predefined category names.
         $categories = ['Technology', 'Health', 'Travel', 'Food', 'Lifestyle', 'Politics'];
         
@@ -42,5 +46,6 @@ class DatabaseSeeder extends Seeder
         // It's important that this line comes after the categories have been created,
         // because the `PostFactory` relies on existing categories to assign a `category_id` to each post.
         Post::factory(100)->create();
+
     }
 }

@@ -35,7 +35,7 @@ return new class extends Migration
 
             // `$table->string('images')->nullable()`: Creates a `string` column named `images`.
             // The `nullable()` method makes this column optional, allowing it to have a `NULL` value.
-            $table->string('images')->nullable();
+            $table->string('image')->nullable();
 
             // `$table->string('title')`: Creates a `string` column named `title`. This column is required by default.
             $table->string('title');

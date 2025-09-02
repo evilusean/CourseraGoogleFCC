@@ -595,6 +595,8 @@ public function definition(): array
             'published_at' => fake()->optional()->dateTime(),
         ];
     }
+https://github.com/evilusean/CourseraGoogleFCC/blob/main/FCC-PHP-Laraval-MediumClone/FCC-MediumClone/database/factories/PostFactory.php
+# added detailed comments
 ERROR : 'php artisan db:table' # wasn't working, had to edit 'sudo nvim /etc/php/php.ini' '/intl' to search, and uncomment the line ';extension=intl' and now it works 
 'php --ini' # will show you where your configs are for php '/etc/php/php.ini'
 'php artisan migrate:rollback --step=1' # how to roll back your migrations, only to the last one (step=1), to get back to where

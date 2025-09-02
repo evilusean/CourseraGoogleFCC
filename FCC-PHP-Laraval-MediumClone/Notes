@@ -572,11 +572,16 @@ $table->timestamps();
 'php artisan tinker' '\App\Models\Category::get()' # will get all of the data from the newly created 'Category' table, since we couldn't alias, we explicitly told it to get the model
 
 0:52:25 - Factories & Seeders ================================================================================================================================================================
-
-
-
-
-
+'php artisan make:factory PostFactory' # creates a new factory named 'PostFactory' [database/factories/PostFactory.php]
+'php artisan make:model Post -f' # will create a model, with the '-f' flag, it will also create a factory with it
+'app -> Models -> Post.php' add the new factory to the 'Post.php' 'Post' class with the imported trait 'use HasFactory'
+class Post extends Model
+{
+    use HasFactory; 
+}
+The purpose of the factory class is to generate definitions for each fields of the corresponding model or the DB table
+You can use the 'fake()' function/package to generate fake data for your factory
+'database -> factories -> PostFactory.php' 
 
 
 

@@ -582,7 +582,16 @@ class Post extends Model
 The purpose of the factory class is to generate definitions for each fields of the corresponding model or the DB table
 You can use the 'fake()' function/package to generate fake data for your factory
 'database -> factories -> PostFactory.php' 
-
+public function definition(): array
+    {
+        return [
+            'title' => fake()->sentence(),
+            'content' => fake()->paragraphs(3, true),
+        ];
+    }
+}
+ERROR : 'php artisan db:table' # wasn't working, had to edit 'sudo nvim /etc/php/php.ini' '/intl' to search, and uncomment the line ';extension=intl' and now it works 
+'php --ini' # will show you where your configs are for php '/etc/php/php.ini'
 
 
 

@@ -9,6 +9,9 @@ use App\Models\Category;
 // This line imports the base `Factory` class from Laravel's Eloquent. All factories must extend this class.
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+// This line imports the `Str` facade, which provides helper methods for string manipulation, such as creating a slug.
+use Illuminate\Support\Str;
+
 /**
  * The `@extends` docblock is a PHPDoc annotation used by IDEs and static analysis tools.
  * It specifies that this `PostFactory` class is a factory for the `App\Models\Post` model,
@@ -38,12 +41,13 @@ class PostFactory extends Factory
             // `'title' => $title`: Assigns the randomly generated sentence to the `title` column.
             'title' => $title,
             
-            // `'slug' => \Illuminate\Support\Str::slug($title)`: Generates a URL-friendly slug from the post's title.
-            // `\Illuminate\Support\Str` is a Laravel string helper class, and the `slug()` method converts a string into a clean, hyphenated format.
-            'slug' => \Illuminate\Support\Str::slug($title),
+            // `'slug' => Str::slug($title)`: Generates a URL-friendly slug from the post's title.
+            // `Str::slug()` is a Laravel string helper method that converts a string into a clean, hyphenated format. We're using the imported `Str` facade for this.
+            'slug' => Str::slug($title),
             
-            // `'content' => fake()->paragraphs(5)`: Generates an array of 5 fake paragraphs to serve as the post's content.
-            'content' => fake()->paragraphs(5),
+            // `'content' => implode("\n\n", fake()->paragraphs(5))`: Generates an array of 5 fake paragraphs to serve as the post's content.
+            // The `implode()` function is used to convert the array of paragraphs into a single string, separated by newlines, which can be stored in the database.
+            'content' => implode("\n\n", fake()->paragraphs(5)),
             
             // `'category_id' => Category::inRandomOrder()->first()->id`: This line handles the foreign key relationship.
             // `Category::inRandomOrder()`: Retrieves all categories from the database in a random order.

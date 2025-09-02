@@ -604,14 +604,16 @@ ERROR : 'php artisan db:table' # wasn't working, had to edit 'sudo nvim /etc/php
 the reason why he did this, was he changed the 'images' on 'posts' table to 'image', so you rollback, and then apply your changes
 The purpose is to seed some data, create or update, to the database
 'database -> seeder -> DatabaseSeeder.php' 
-
+https://github.com/evilusean/CourseraGoogleFCC/blob/main/FCC-PHP-Laraval-MediumClone/FCC-MediumClone/database/seeders/DatabaseSeeder.php
 How do you execute the database seeder to actually create the data? 2 ways : 1) During a migration execute the seeder, or seed the database manually
 'php artisan migrate --seed' # add the '--seed' flag to add your seed data to the database
 'php artisan db:seed' # will seed your database with your seeder files 
-
-
-
-
+'php artisan make:seeder PostSeeder' # how to make a new sneeder : [database/seeders/PostSeeder.php] created successfully.  
+The 'DatabaseSeeder.php' is the MAIN seeder, if you want to add other seeders onto it, you need to :
+'$this->call([PostSeeder::class,]);' # add this to the end of 'DatabaseSeeder.php' to run 'PostSeeder.php' when you execute the seeding OR :
+'php artisan db:seed --class=PostSeeder' # this is how you do it from the command line, seeding outside of the main 'DatabaseSeeder.php'
+'php artisan tinker' -> '\App\Models\Post::get()' # how to check our newly seeded data, 100 randomized posts, pretty cool, starting to like php
+'php artisan migrate:fresh --seed' # 'migrate:fresh' drops all the tables, and '--seed' flag uses the 'DatabaseSeeder.php' to seed the database
 
 
 

@@ -1,5 +1,3 @@
-PHP
-
 <?php
 
 // This line defines the namespace for the file. Laravel factories are typically located in the `Database\Factories` namespace.

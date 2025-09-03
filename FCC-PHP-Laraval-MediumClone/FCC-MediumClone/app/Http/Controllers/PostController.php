@@ -17,8 +17,12 @@ class PostController extends Controller
         //dump($categories); //dump will print all categories to the console
         //dd($categories); // dump and die, as soon as it prints the categories, the script stops here, it stops the execution
         
+        $posts = Post::get();
         
-        return view('dashboard', ['categories'=> $categories]);
+        return view('dashboard', 
+        ['categories'=> $categories,
+            'posts' => $posts,
+    ]);
     }
 
     /**

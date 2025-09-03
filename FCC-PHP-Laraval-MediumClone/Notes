@@ -616,7 +616,7 @@ The 'DatabaseSeeder.php' is the MAIN seeder, if you want to add other seeders on
 'php artisan migrate:fresh --seed' # 'migrate:fresh' drops all the tables, and '--seed' flag uses the 'DatabaseSeeder.php' to seed the database
 
 1:05:13 - Output Categories & Posts =========================================================================================================================================================
-
+Flowbite (Tailwind CSS Components) : https://flowbite.com/
 
 
 

@@ -17,7 +17,21 @@ class PostController extends Controller
         //dump($categories); //dump will print all categories to the console
         //dd($categories); // dump and die, as soon as it prints the categories, the script stops here, it stops the execution
         
+        // `Post::`: This is a static call to the `Post` Eloquent model. In Laravel, an Eloquent model
+        // corresponds to a database table, so `Post` represents the `posts` table.
         $posts = Post::orderBy('created_at', 'DESC')->get();
+
+        // `orderBy('created_at', 'DESC')`: This is the method that orders the query results.
+        // - The first argument, `'created_at'`, specifies the column to sort by. Laravel automatically
+        //   creates and manages this timestamp column, which tracks when each post was created.
+        // - The second argument, `'DESC'`, specifies the sorting direction as "descending".
+        //   This means the posts will be returned with the most recently created one appearing first.
+        //   To get the posts from oldest to newest, you would use 'ASC' for ascending order.
+
+        // `get()`: This method executes the query and retrieves all the results. It returns the
+        // matched records as an Eloquent Collection, which is a powerful, array-like object
+        // in Laravel that provides many convenient methods for working with the results.
+        // The final result, `$posts`, will be a collection of `Post` model objects.
         
         return view('dashboard', 
         ['categories'=> $categories,

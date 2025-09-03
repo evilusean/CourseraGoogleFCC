@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'John Doe',
             'email' => 'test@email.com' ]);
         // This array contains a list of predefined category names.
-        $categories = ['Technology', 'Health', 'Travel', 'Food', 'Politics'];
+        $categories = ['Technology', 'Health', 'Travel', 'Food', 'Lifestyle', 'Politics'];
         
         // This `foreach` loop iterates through the `$categories` array.
         foreach ($categories as $category) {

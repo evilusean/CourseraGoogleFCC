@@ -13,7 +13,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        $categories = Category::get();
+        $categories = Category::get(); // will get all categories from the database (created by DatabaseSeeder.php)
+        //dump($categories); //dump will print all categories to the console
+        //dd($categories); // dump and die, as soon as it prints the categories, the script stops here, it stops the execution
+        
+        
         return view('dashboard', ['categories'=> $categories]);
     }
 

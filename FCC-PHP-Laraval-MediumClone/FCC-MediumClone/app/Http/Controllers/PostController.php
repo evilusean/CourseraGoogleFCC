@@ -17,7 +17,7 @@ class PostController extends Controller
         //dump($categories); //dump will print all categories to the console
         //dd($categories); // dump and die, as soon as it prints the categories, the script stops here, it stops the execution
         
-        $posts = Post::get();
+        $posts = Post::orderBy('created_at', 'DESC')->get();
         
         return view('dashboard', 
         ['categories'=> $categories,

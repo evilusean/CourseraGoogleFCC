@@ -3,6 +3,7 @@
 // This line imports the `ProfileController` class from its namespace.
 // The `use` statement makes the class available to this file, so we can refer to it directly as `ProfileController`
 // instead of its full namespace `App\Http\Controllers\ProfileController`.
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 
 // This line imports the `Route` facade. The `Route` facade is the primary way to
@@ -35,9 +36,7 @@ Route::get('/', function () {
 // - `'verified'`: Checks if the authenticated user's email has been verified.
 // The `name()` method assigns a unique name to the route (`dashboard`). This allows you to
 // generate URLs to this route using its name (e.g., `route('dashboard')`) which makes your code more flexible.
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [PostController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 // This is a route group. The `Route::middleware('auth')` call applies the `auth` middleware
 // to all routes defined within the closure. This is an efficient way to protect multiple

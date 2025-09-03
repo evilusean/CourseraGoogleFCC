@@ -633,11 +633,13 @@ Route::get('/dashboard', [PostController::class, 'index'])->middleware(['auth', 
   # will import the postcontroller class, removed the old route, and receive the categories array from the 
 public function index()
     {
-        $categories = Category::get(); // will get all categories from the database (created by DatabaseSeeder.php)
+        $categories = Category::get(); // will get all categories from the database (created by DatabaseSeeder.php array)
         //dump($categories); //dump will print all categories to the console
         //dd($categories); // dump and die, as soon as it prints the categories, the script stops here, it stops the execution
         return view('dashboard', ['categories'=> $categories]);
     }
+'Directives' are special keywords that are available inside blade templates which provide certain tasks, can be used for iteration, conditionals, etc.
+the flowbite code we copied had slightly different tabs, tab 4 and 5 were unselectable (I think it does this to give you variety on pre-assembled components) so they were deleted
 
 
 

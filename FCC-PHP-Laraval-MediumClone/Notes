@@ -633,12 +633,23 @@ Route::get('/dashboard', [PostController::class, 'index'])->middleware(['auth', 
   # will import the postcontroller class, removed the old route, and receive the categories array from the 
 public function index()
     {
-        $categories = Category::get(); // will get all categories from the database (created by DatabaseSeeder.php)
+        $categories = Category::get(); // will get all categories from the database (created by DatabaseSeeder.php array)
         //dump($categories); //dump will print all categories to the console
         //dd($categories); // dump and die, as soon as it prints the categories, the script stops here, it stops the execution
         return view('dashboard', ['categories'=> $categories]);
     }
-
+the flowbite code we copied had slightly different tabs, tab 4 and 5 were unselectable (I think it does this to give you variety on pre-assembled components) so they were deleted
+'Directives' are special keywords that are available inside blade templates which provide certain tasks, can be used for iteration, conditionals, etc. Here is one below :
+                        @foreach ($categories as $category)
+                        <li class="me-2">
+                            <a href="#"
+                                class="inline-block px-4 py-3 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white">
+                                {{ $category->name }}
+                            </a>
+                        </li>
+                        @endforeach
+# notice the '@foreach ($categories as $category)' and '@endforeach' inbetween that is a directive that will print off the category name on a tab created for each name in the $categories
+# also notice the {{ }} double curly braces to access the name property for each category object and use it for each new tab
 
 
 

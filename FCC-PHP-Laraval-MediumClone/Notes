@@ -619,11 +619,25 @@ The 'DatabaseSeeder.php' is the MAIN seeder, if you want to add other seeders on
 Flowbite (Tailwind CSS Components) : https://flowbite.com/
 'views -> dashboard.blade.php' # copy and paste 'pills tabs' from flowbite, remove some old boilerplate
 https://flowbite.com/docs/components/tabs/
-
-
-
-
-
+'dashboard.blade.php' renders from 'routes -> web.php' # below will check if you are authenticated when going to the route '/dashboard' and then returns the view 'dashboard.blade.php'
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+'php artisan make:controller PostController --resource' # will make a new controller named 'PostController' the '--resource' flag will generate the controller with predefined methods
+  'app -> Http -> Controllers -> 'PostController.php' # file will be generated here, if you don't use the '--resource' flag, it will be empty
+  even with the '--resource' flag it still needs work, it generates it with 7 unfinished methods
+'php artisan make:controller PostController --resource --model=Post' # will generate the PostController for the model 'Post.php', instead of asking for 'string $id' it will ask for a 
+  'Post $post' instead, 
+'routes -> web.php' also imports controllers for navigation, be sure to add your new one there after it is created 
+Route::get('/dashboard', [PostController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+  # will import the postcontroller class, removed the old route, and receive the categories array from the 
+public function index()
+    {
+        $categories = Category::get(); // will get all categories from the database (created by DatabaseSeeder.php)
+        //dump($categories); //dump will print all categories to the console
+        //dd($categories); // dump and die, as soon as it prints the categories, the script stops here, it stops the execution
+        return view('dashboard', ['categories'=> $categories]);
+    }
 
 
 

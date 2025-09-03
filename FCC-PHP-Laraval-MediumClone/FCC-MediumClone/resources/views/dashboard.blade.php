@@ -22,15 +22,7 @@
                                 class="inline-block px-4 py-3 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white">Tab
                                 3</a>
                         </li>
-                        <li class="me-2">
-                            <a href="#"
-                                class="inline-block px-4 py-3 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white">Tab
-                                4</a>
-                        </li>
-                        <li>
-                            <a class="inline-block px-4 py-3 text-gray-400 cursor-not-allowed dark:text-gray-500">Tab
-                                5</a>
-                        </li>
+                        
                     </ul>
 
                 </div>

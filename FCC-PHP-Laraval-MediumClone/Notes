@@ -707,7 +707,7 @@ In the url it will also display the page as a url parameter '?page=5', it just d
 'tailwind.blade.php' is what we are currently using, you can also customize it by giving a new '_.blade.php' file as argument for the 'links('_blade.php')' and using your own
 'pagination()' that we currently have is numbered, 'simplePaginate()' will only show prev/next
 
-
+1:33:19 - Blade Directives ==================================================================================================================================================================
 
 
 

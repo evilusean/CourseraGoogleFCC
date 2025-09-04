@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="mt-8 text-gray-900">
-                @foreach ($posts as $post)
+                @forelse ($posts as $post)
                     <div
                         class="flex bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mb-8">
                         
@@ -53,7 +53,9 @@
                         </a>
                         </a>
                     </div>
-                @endforeach
+                    @empty
+                        <p class="text-center">No posts found.</p>
+                @endforelse {{-- For else @directive will display no posts found if there are none, and will run a loop for each posts if there are--}}
             </div>
             {{ $posts->onEachSide(2)->links() }} {{-- pagination links --}}
         </div>

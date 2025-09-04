@@ -708,9 +708,15 @@ In the url it will also display the page as a url parameter '?page=5', it just d
 'pagination()' that we currently have is numbered, 'simplePaginate()' will only show prev/next
 
 1:33:19 - Blade Directives ==================================================================================================================================================================
-
-
-
+https://laravel.com/docs/12.x/blade
+notable directives : @auth     // The user is authenticated... @endauth - @guest     // The user is not authenticated... @endguest
+Loops Directives:
+@for ($i = 0; $i < 10; $i++)     The current value is {{ $i }}@endfor
+ @foreach ($users as $user)    <p>This is user {{ $user->id }}</p>@endforeach
+ @forelse ($users as $user)    <li>{{ $user->name }}</li>@empty    <p>No users</p>@endforelse
+ @while (true)    <p>I'm looping forever.</p>@endwhile
+@if (count($records) === 1)    I have one record!@elseif (count($records) > 1)    I have multiple records!@else    I don't have any records!@endif
+Switch statements/cases - theres a tonne, future Sean problems 
 
 
 

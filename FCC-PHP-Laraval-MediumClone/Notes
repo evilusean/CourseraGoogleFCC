@@ -673,7 +673,7 @@ $posts = Post::orderBy('created_at', 'DESC')->get();
                                 </h5>
                             </a>
                             <div class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                                {{ $post->content }}
+                                {{ Str::words($post->content, 15) }} # helper function to reduce the content to 15 words
                             </div>
                             <a href="#"
                                 class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg 
@@ -687,7 +687,7 @@ $posts = Post::orderBy('created_at', 'DESC')->get();
                             </a>
                         </div>
                         <a href="#">
-                            <img class="rounded-r-lg w-48 h-48 object-cover" src="{{ $post->image }}" alt="" />
+                            <img class="rounded-r-lg w-48 h-48 object-cover" src="{{ $post->image }}" alt="" /> # dynamic images
                         </a>
                         </a>
                     </div>

@@ -55,7 +55,7 @@
                     </div>
                 @endforeach
             </div>
-            {{ $posts->links() }} {{-- pagination links --}}
+            {{ $posts->onEachSide(2)->links() }} {{-- pagination links --}}
         </div>
     </div>
 </x-app-layout>

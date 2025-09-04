@@ -20,7 +20,7 @@ class PostController extends Controller
         // `Post::`: This is a static call to the `Post` Eloquent model. In Laravel, an Eloquent model
         // corresponds to a database table, so `Post` represents the `posts` table.
         //$posts = Post::orderBy('created_at', 'DESC')->get(); // will 'get' ALL posts, use paginate below for fewer
-        $posts = Post::orderBy('created_at', 'DESC')->paginate(10);
+        $posts = Post::orderBy('created_at', 'DESC')->paginate(5);
           // `->paginate(10)`: This is the method that executes the query and handles pagination.
         // - `(10)`: This argument specifies that only 10 posts should be returned per page.
         // Instead of fetching all posts at once, Laravel only retrieves a limited number

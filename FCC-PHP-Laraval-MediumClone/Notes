@@ -699,6 +699,13 @@ Our seeder creates 100 posts, so we are displaying 100 posts each time with our 
 'app -> Http -> Controllers -> Auth -> PostController.php' change from 'get()' to '$posts = Post::orderBy('created_at', 'DESC')->paginate(10);' where this will get 10 items per page
   one line of code to implement pagination, not even, one method/function. 2 lines of code to fully implement pagination, one for the controller and one for the blade.php
 'dashboard.blade.php' make sure to add '{{ $posts->links() }} {{-- pagination links --}}' so you can scroll through each page 
+In the url it will also display the page as a url parameter '?page=5', it just does it out of the box, don't have to code it. 
+{{ $posts->onEachSide(2)->links() }} {{-- pagination links --}} # change the amount of posts shown on each side of the current page by putting it through the onEachSide() method
+'php artisan vendor:publish --tag=laravel-pagination' # to edit or view the built in pagination method, so if you want to change it, you can
+  returns : Copying directory [vendor/laravel/framework/src/Illuminate/Pagination/resources/views] to [resources/views/vendor/pagination] ........ DONE
+'resources -> views -> vendor -> pagination' where the files will be, you will see multiple files, after running the above command, you can customize the pagination here
+'tailwind.blade.php' is what we are currently using, you can also customize it by giving a new '_.blade.php' file as argument for the 'links('_blade.php')' and using your own
+'pagination()' that we currently have is numbered, 'simplePaginate()' will only show prev/next
 
 
 

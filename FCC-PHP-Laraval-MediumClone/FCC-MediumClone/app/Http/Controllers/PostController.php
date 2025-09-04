@@ -20,13 +20,26 @@ class PostController extends Controller
         // `Post::`: This is a static call to the `Post` Eloquent model. In Laravel, an Eloquent model
         // corresponds to a database table, so `Post` represents the `posts` table.
         //$posts = Post::orderBy('created_at', 'DESC')->get(); // will 'get' ALL posts, use paginate below for fewer
-        $posts = Post::orderBy('created_at', 'DESC')->paginate(5);
-          // `->paginate(10)`: This is the method that executes the query and handles pagination.
+        
+        //$posts = Post::orderBy('created_at', 'DESC')->paginate(5);
+        // `->paginate(10)`: This is the method that executes the query and handles pagination.
         // - `(10)`: This argument specifies that only 10 posts should be returned per page.
         // Instead of fetching all posts at once, Laravel only retrieves a limited number
         // for the current page, which is crucial for performance with large datasets.
         // This method returns a `LengthAwarePaginator` object that contains the results
         // along with all the necessary information for building pagination links (e.g., total items, current page, etc.).
+        
+        $posts = Post::orderBy('created_at', 'DESC')->simplePaginate(5);
+        // `->simplePaginate(5)`: This is the method that executes the query and handles pagination.
+        // - The argument `(5)` specifies that only 5 posts should be returned per page.
+        // - Unlike the standard `paginate()` method, `simplePaginate()` is more efficient
+        //   because it does not count the total number of items in the database. This makes it
+        //   faster for very large datasets, as it avoids an extra, costly `COUNT(*)` query.
+        // - The trade-off is that it only provides "Next" and "Previous" links in the view;
+        //   it cannot display a full set of page numbers (e.g., 1, 2, 3...).
+        // - This method returns an `Illuminate\Pagination\Paginator` object, which is then
+        //   stored in the `$posts` variable. This object contains the posts for the current page
+        //   and the necessary data to generate pagination links.
 
         // `orderBy('created_at', 'DESC')`: This is the method that orders the query results.
         // - The first argument, `'created_at'`, specifies the column to sort by. Laravel automatically

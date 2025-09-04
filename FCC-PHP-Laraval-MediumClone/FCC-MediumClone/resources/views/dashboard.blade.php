@@ -55,6 +55,7 @@
                     </div>
                 @endforeach
             </div>
+            {{ $posts->links() }} {{-- pagination links --}}
         </div>
     </div>
 </x-app-layout>

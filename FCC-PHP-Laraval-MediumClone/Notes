@@ -694,7 +694,7 @@ $posts = Post::orderBy('created_at', 'DESC')->get();
                 @endforeach
 # again, notice the '@' for a new directive and the '{{ }}' curly braces for placing dynamic values from the DB, even for the <img src="{{ $post->image }}">
 
-
+1:27:09 - Pagination ========================================================================================================================================================================
 
 
 

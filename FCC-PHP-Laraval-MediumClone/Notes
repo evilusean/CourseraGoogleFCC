@@ -737,7 +737,11 @@ Example: A React component for a button would be defined in a .js or .jsx file a
   The button's behavior and appearance are managed by JavaScript in the user's browser.
 Components are reusable pieces of code, mostly related to UI, DRY = don't repeat yourself, create one component and reuse it in your code
 In PHP there are 3 types of components, one is class based(php class associated to a blade file), view only components(only blade file), inline components(only have php class)
-'php artisan make:component PostItem'
+'php artisan make:component PostItem' # will create 2 files Component [app/View/Components/PostItem.php] created successfully.  [resources/views/components/post-item.blade.php] 
+'PostItem.php' # where the functionality of the component can be created, this is where the 'class' is, how you can interact with the database, etc
+'post-item.blade.php' # where the view/visual aspect of the component can be created (both are blank default)
+'php artisan make:component PostItem --view' # will create a component, but only the view part [resources/views/components/post-item.blade.php]
+
 
 
 

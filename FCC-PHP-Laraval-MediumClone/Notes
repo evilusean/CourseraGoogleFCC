@@ -718,7 +718,7 @@ Loops Directives:
 @if (count($records) === 1)    I have one record!@elseif (count($records) > 1)    I have multiple records!@else    I don't have any records!@endif
 Switch statements/cases - theres a tonne, future Sean problems 
 
-
+1:37:46 - Components =========================================================================================================================================================================
 
 
 

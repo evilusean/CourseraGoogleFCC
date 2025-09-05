@@ -720,7 +720,6 @@ Switch statements/cases - theres a tonne, future Sean problems
 
 1:37:46 - Components =========================================================================================================================================================================
 https://laravel.com/docs/12.x/blade#components
-Components are reusable pieces of code, mostly related to UI, 
 Tangent : React Vs Laravel Components, an AI response :
 No, Laravel and React components are not the same; they serve completely different purposes and operate on different parts of the application stack.
 Laravel Components (server side, static) :
@@ -736,7 +735,9 @@ React components are client-side JavaScript functions or classes that render to 
   They are designed for creating rich, interactive user experiences.
 Example: A React component for a button would be defined in a .js or .jsx file and used like this: '<Button onClick={handleClick} />'. 
   The button's behavior and appearance are managed by JavaScript in the user's browser.
-
+Components are reusable pieces of code, mostly related to UI, DRY = don't repeat yourself, create one component and reuse it in your code
+In PHP there are 3 types of components, one is class based(php class associated to a blade file), view only components(only blade file), inline components(only have php class)
+'php artisan make:component PostItem'
 
 
 

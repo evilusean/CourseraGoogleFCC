@@ -720,8 +720,22 @@ Switch statements/cases - theres a tonne, future Sean problems
 
 1:37:46 - Components =========================================================================================================================================================================
 https://laravel.com/docs/12.x/blade#components
-
-
+Components are reusable pieces of code, mostly related to UI, 
+Tangent : React Vs Laravel Components, an AI response :
+No, Laravel and React components are not the same; they serve completely different purposes and operate on different parts of the application stack.
+Laravel Components (server side, static) :
+Laravel components are server-side PHP files that are used to create reusable pieces of a view. 
+  They are processed and rendered on the server before the final HTML is sent to the user's browser. 
+  You use them for things like UI elements (e.g., alerts, buttons) or sections of a page (e.g., a header) that you want to reuse across different Blade templates. 
+  They are simple, static building blocks for a server-rendered application.
+Example: A Blade component for an alert would be defined in a .blade.php file and used like this: '<x-alert type="error" :message="$message" />'. The final output is static HTML.
+React Components (client side, dynamic) :
+React components are client-side JavaScript functions or classes that render to the browser. 
+  They are the fundamental building blocks of a user interface (UI) in a single-page application (SPA). React components are dynamic and interactive,
+  as they can manage their own state and re-render based on user input or data changes without requiring a full page reload from the server. 
+  They are designed for creating rich, interactive user experiences.
+Example: A React component for a button would be defined in a .js or .jsx file and used like this: '<Button onClick={handleClick} />'. 
+  The button's behavior and appearance are managed by JavaScript in the user's browser.
 
 
 

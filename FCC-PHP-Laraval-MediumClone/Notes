@@ -766,6 +766,7 @@ Download a new 'logo.svg' for medium.com - To change the logo from laravel go to
 '{{ __('Profile') }}' # __('Profile'): This is a Laravel translation helper function. The __() function looks up the string 'Profile' in your application's language files 
   (located in the lang directory). If your app is set to English, it will simply output "Profile". If it's set to another language, like Spanish, it will output "Perfil"
   (if you've provided the translation). In short, this code displays the word "Profile" while making your application easy to translate into multiple languages.
+update the routes for the new URL in 'routes -> 'web.php'
 'Route::get('/dashboard', [PostController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');' # changed to below, so instead of the URL needing '/dashboard' it is now '/'
 'Route::get('/', [PostController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');'
 'app.blade.php' is actually a component, typically components are stored in the 'resources -> views components' folder, this one is stored in 'view -> layouts' 

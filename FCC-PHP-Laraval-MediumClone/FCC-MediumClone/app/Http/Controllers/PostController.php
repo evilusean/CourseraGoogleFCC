@@ -54,7 +54,7 @@ class PostController extends Controller
         // The final result, `$posts`, will be a collection of `Post` model objects.
 
         return view(
-            'dashboard',
+            'post.index',
             [
                 'posts' => $posts,
             ]

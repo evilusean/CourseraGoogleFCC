@@ -741,10 +741,14 @@ In PHP there are 3 types of components, one is class based(php class associated 
 'PostItem.php' # where the functionality of the component can be created, this is where the 'class' is, how you can interact with the database, etc
 'post-item.blade.php' # where the view/visual aspect of the component can be created (both are blank default)
 'php artisan make:component PostItem --view' # will create a component, but only the view part [resources/views/components/post-item.blade.php]
-
-
-
-
+'<x-post-item :post="$post" />' # Every component that you use will need to start with 'x' prefix, the ':post="$post"' is how you provide the '$post' variable to the component
+  The way you pass variables in Blade components is very similar to how you pass props in React. 
+  Both systems are designed to make components reusable by allowing you to inject data from a parent into a child component.
+  The ':post' attribute in Blade is the equivalent of the post prop in React. The colon (:) tells Blade to treat the value on the right ("$post") as a PHP variable.
+So whenever you see some code in a '_.blade.php' file starting with '<x-...>' you can know it's a component and find it under 'resources -> views -> components -> _.blade.php'
+'php artisan make:component CategoryTabs' # Component [app/View/Components/CategoryTabs.php] created successfully. [resources/views/components/category-tabs.blade.php] 
+There are 2 ways to pass data from the 'CategoryTabs' class into the blade file, 1) define public properties, 2) variable declaration
+Anything you put in between the <x-component>This Text is Slot Text</x-component> tags will be able to be referenced in the class 'component.php' file as {{ $slot }}
 
 
 

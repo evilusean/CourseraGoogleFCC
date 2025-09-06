@@ -753,7 +753,7 @@ Anything you put in between the <x-component>This Text is Slot Text</x-component
 1:50:06 - Layouts ============================================================================================================================================================================
 Download a new 'logo.svg' for medium.com - To change the logo from laravel go to :
 'resources -> views -> layouts -
-'app.blade.php' =  serves as the master layout for the application, defining a consistent structure like the header, navigation, and footer for authenticated user pages
+'app.blade.php' =  serves as the master layout for the application, defining a consistent structure like the header, navigation, and footer for authenticated user pages, actually a component
 'guest.blade.php' = provides a specific, minimalist layout for pages accessible to guests, such as the login, registration, and password reset pages.
 'navigation.blade.php' = navbar that is then '@include' directive to the 'app.blade.php' as a component
 '<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">' # the 'getLocale()' function gets the local(language) from your '.env' file, which defaults to 'en'
@@ -766,8 +766,9 @@ Download a new 'logo.svg' for medium.com - To change the logo from laravel go to
 '{{ __('Profile') }}' # __('Profile'): This is a Laravel translation helper function. The __() function looks up the string 'Profile' in your application's language files 
   (located in the lang directory). If your app is set to English, it will simply output "Profile". If it's set to another language, like Spanish, it will output "Perfil"
   (if you've provided the translation). In short, this code displays the word "Profile" while making your application easy to translate into multiple languages.
-
-
+'Route::get('/dashboard', [PostController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');' # changed to below, so instead of the URL needing '/dashboard' it is now '/'
+'Route::get('/', [PostController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');'
+'app.blade.php' is actually a component, typically components are stored in the components folder, this one is stored in 'view -> layouts' '<x-app-layout>' is how to reference it
 
 
 

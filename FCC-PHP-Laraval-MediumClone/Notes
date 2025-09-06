@@ -751,8 +751,13 @@ There are 2 ways to pass data from the 'CategoryTabs' class into the blade file,
 Anything you put in between the <x-component>This Text is Slot Text</x-component> tags will be able to be referenced in the class 'component.php' file as {{ $slot }}
 
 1:50:06 - Layouts ============================================================================================================================================================================
-
-
+Download a new 'logo.svg' for medium.com - To change the logo from laravel go to :
+'resources -> views -> layouts -
+'app.blade.php' =  serves as the master layout for the application, defining a consistent structure like the header, navigation, and footer for authenticated user pages
+'guest.blade.php' = provides a specific, minimalist layout for pages accessible to guests, such as the login, registration, and password reset pages.
+'<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">' # the 'getLocale()' function gets the local(language) from your '.env' file, which defaults to 'en'
+'<title>{{ config('app.name', 'Laravel') }}</title>' # this is the title for your website, the default is Laravel, change this in the 'APP_NAME' in the '.env' file
+  'APP_NAME="Medium Clone"' #don't forget to add quotes for spaces when changing your title
 
 
 

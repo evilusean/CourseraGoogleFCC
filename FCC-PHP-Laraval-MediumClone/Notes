@@ -768,7 +768,20 @@ Download a new 'logo.svg' for medium.com - To change the logo from laravel go to
   (if you've provided the translation). In short, this code displays the word "Profile" while making your application easy to translate into multiple languages.
 'Route::get('/dashboard', [PostController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');' # changed to below, so instead of the URL needing '/dashboard' it is now '/'
 'Route::get('/', [PostController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');'
-'app.blade.php' is actually a component, typically components are stored in the components folder, this one is stored in 'view -> layouts' '<x-app-layout>' is how to reference it
+'app.blade.php' is actually a component, typically components are stored in the 'resources -> views components' folder, this one is stored in 'view -> layouts' 
+'<x-app-layout>' which is in the 'app -> View -> Components' folder is how to reference it - that's alot of stuff future Sean won't remember :
+  Basically for the app-layout, it's not in it's normal spot where components are normally stored, it's in another place
+'app -> View -> Components -> AppLayout.php' actyally renders the file below from 'layouts.app' :
+class AppLayout extends Component
+{
+    /**
+     * Get the view / contents that represents the component.
+     */
+    public function render(): View
+    {
+        return view('layouts.app');
+    }
+}
 
 
 

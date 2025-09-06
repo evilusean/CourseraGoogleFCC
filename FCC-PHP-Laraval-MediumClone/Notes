@@ -750,7 +750,7 @@ So whenever you see some code in a '_.blade.php' file starting with '<x-...>' yo
 There are 2 ways to pass data from the 'CategoryTabs' class into the blade file, 1) define public properties, 2) variable declaration
 Anything you put in between the <x-component>This Text is Slot Text</x-component> tags will be able to be referenced in the class 'component.php' file as {{ $slot }}
 
-
+1:50:06 - Layouts ============================================================================================================================================================================
 
 
 

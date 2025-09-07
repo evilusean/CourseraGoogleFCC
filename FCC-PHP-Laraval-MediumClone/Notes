@@ -751,13 +751,38 @@ There are 2 ways to pass data from the 'CategoryTabs' class into the blade file,
 Anything you put in between the <x-component>This Text is Slot Text</x-component> tags will be able to be referenced in the class 'component.php' file as {{ $slot }}
 
 1:50:06 - Layouts ============================================================================================================================================================================
-
-
-
-
-
-
-
+Download a new 'logo.svg' for medium.com - To change the logo from laravel go to :
+'resources -> views -> layouts -
+'app.blade.php' =  serves as the master layout for the application, defining a consistent structure like the header, navigation, and footer for authenticated user pages, actually a component
+'guest.blade.php' = provides a specific, minimalist layout for pages accessible to guests, such as the login, registration, and password reset pages.
+'navigation.blade.php' = navbar that is then '@include' directive to the 'app.blade.php' as a component
+'<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">' # the 'getLocale()' function gets the local(language) from your '.env' file, which defaults to 'en'
+'<title>{{ config('app.name', 'Laravel') }}</title>' # this is the title for your website, the default is Laravel, change this in the 'APP_NAME' in the '.env' file
+  'APP_NAME="Medium Clone"' #don't forget to add quotes for spaces when changing your title
+'@vite(['resources/css/app.css', 'resources/js/app.js'])' # vite directive handles the 'app.css' and the 'app.js', handled by vite server
+'public -> build -> assets' # some wierdly named JS and CSS files here (hashed names), every time you change your CSS/JS it will change your hash, vite will handle the name changes auto
+'@include('layouts.navigation')' # another directive that includes another blade file found in 'resources -> 'layouts -> navigation.blade.php' which is your navbar
+'<div>{{ Auth::user()->name }}</div>' # This code displays the name of the currently authenticated user by accessing the user object through the Auth facade.
+'{{ __('Profile') }}' # __('Profile'): This is a Laravel translation helper function. The __() function looks up the string 'Profile' in your application's language files 
+  (located in the lang directory). If your app is set to English, it will simply output "Profile". If it's set to another language, like Spanish, it will output "Perfil"
+  (if you've provided the translation). In short, this code displays the word "Profile" while making your application easy to translate into multiple languages.
+update the routes for the new URL in 'routes -> 'web.php'
+'Route::get('/dashboard', [PostController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');' # changed to below, so instead of the URL needing '/dashboard' it is now '/'
+'Route::get('/', [PostController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');'
+'app.blade.php' is actually a component, typically components are stored in the 'resources -> views components' folder, this one is stored in 'view -> layouts' 
+'<x-app-layout>' which is in the 'app -> View -> Components' folder is how to reference it - that's alot of stuff future Sean won't remember :
+  Basically for the app-layout, it's not in it's normal spot where components are normally stored, it's in another place
+'app -> View -> Components -> AppLayout.php' actyally renders the file below from 'layouts.app' :
+class AppLayout extends Component
+{
+    /**
+     * Get the view / contents that represents the component.
+     */
+    public function render(): View
+    {
+        return view('layouts.app');
+    }
+}
 
 
 

@@ -36,13 +36,17 @@ Route::get('/', function () {
 // - `'verified'`: Checks if the authenticated user's email has been verified.
 // The `name()` method assigns a unique name to the route (`dashboard`). This allows you to
 // generate URLs to this route using its name (e.g., `route('dashboard')`) which makes your code more flexible.
-Route::get('/', [PostController::class, 'index'])
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
 
-Route::get('/post/create',  [PostController::class, 'create'])
-    ->middleware(['auth', 'verified'])
-    ->name('post.create');
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/', [PostController::class, 'index'])
+        ->name('dashboard');
+
+    Route::get('/post/create', [PostController::class, 'create'])
+        ->name('post.create');
+
+    Route::post('/post', [PostController::class,'store'])->name('post.store');
+});
 
 // This is a route group. The `Route::middleware('auth')` call applies the `auth` middleware
 // to all routes defined within the closure. This is an efficient way to protect multiple
@@ -66,4 +70,4 @@ Route::middleware('auth')->group(function () {
 // break up your routes into separate files for better organization.
 // The `auth.php` file typically contains all the routes related to authentication,
 // such as login, logout, registration, and password reset routes.
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

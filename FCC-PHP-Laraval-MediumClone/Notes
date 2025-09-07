@@ -805,9 +805,16 @@ Route::middleware(['auth', 'verified'])->group(function () {
                         <x-input-error :messages="$errors->get('content')" class="mt-2" />
                     </div>
 # the '@disabled($disabled)' is a directive that if true adds disabled, if false does not, give ':disabled="true' to disable the component (it defaults to false)
-
-
-
+https://flowbite.com/docs/forms/file-input/
+'@csrf' # will generate an unguessable string/hash/token that you can use to submit forms from an authenticated user, this is a submitted form 'dd' notice the "_token" that is the '@csrf'
+array:4 [▼ // app/Http/Controllers/PostController.php:77
+  "_token" => "P3N50Xjb8hA91KrijaiDhkJVgKwBo2TRUDiyWxvL"
+  "image" => "1754684820741985 (1).jpg"
+  "title" => "test"
+  "content" => "1"
+]
+<form action="{{ route('post.store') }}" method="post" enctype="multipart/form-data"> 
+  # 'enctype' tells the browser how to format the data for submission, with multipart/form-data being the required value for forms that include file uploads.
 
 
 

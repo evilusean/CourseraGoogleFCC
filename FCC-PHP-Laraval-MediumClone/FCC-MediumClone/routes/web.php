@@ -36,7 +36,13 @@ Route::get('/', function () {
 // - `'verified'`: Checks if the authenticated user's email has been verified.
 // The `name()` method assigns a unique name to the route (`dashboard`). This allows you to
 // generate URLs to this route using its name (e.g., `route('dashboard')`) which makes your code more flexible.
-Route::get('/', [PostController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/', [PostController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
+
+Route::get('/post/create',  [PostController::class, 'create'])
+    ->middleware(['auth', 'verified'])
+    ->name('post.create');
 
 // This is a route group. The `Route::middleware('auth')` call applies the `auth` middleware
 // to all routes defined within the closure. This is an efficient way to protect multiple

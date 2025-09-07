@@ -45,7 +45,8 @@ class DatabaseSeeder extends Seeder
         // `->create()`: This executes the factory, saving all 100 records to the database.
         // It's important that this line comes after the categories have been created,
         // because the `PostFactory` relies on existing categories to assign a `category_id` to each post.
+        
+        //Disabled due to image problem, see PostFactory.php
         Post::factory(100)->create();
-
     }
 }

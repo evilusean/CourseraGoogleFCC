@@ -36,7 +36,11 @@ class PostFactory extends Factory
         // This array defines the data that will be used to create a new post record in the database.
         return [
             // `'image' => fake()->imageUrl()`: Generates a random image URL using the Faker library. This is a common practice for dummy data.
-            'image' => fake()->imageUrl(),
+            
+            // 'fake()' This was broken, so I replaced it with an actual URL image, 
+            //'image' => fake()->imageUrl(),
+            'image' => 'https://flowbite.com/docs/images/blog/image-1.jpg',
+            // still broken, the helper function adds '/storage' to the front of the URL
             
             // `'title' => $title`: Assigns the randomly generated sentence to the `title` column.
             'title' => $title,

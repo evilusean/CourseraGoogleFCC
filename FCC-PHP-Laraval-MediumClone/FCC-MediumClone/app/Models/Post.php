@@ -24,4 +24,14 @@ class Post extends Model
     // For example, you can now call `Post::factory()->create()` to create a new post record
     // in your database based on the data defined in its corresponding factory file.
     use HasFactory;
+
+    protected $fillable = [
+        'image',
+        'title',
+        'slug',
+        'content',
+        'category_id',
+        'user_id',
+        'published_at',
+    ];
 }

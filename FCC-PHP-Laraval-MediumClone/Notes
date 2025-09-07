@@ -873,8 +873,14 @@ return new class extends Migration
             $table->timestamps();
         });
     }
-
-
+'php artisan storage:link' # The [public/storage] link has been connected to [storage/app/public]. - Creates a symbolic link inside 'public' folder from 'storage/app/public' 
+  'storage/app/public' is where the file is uploaded, but is not accesible by the web, so you need to create a link
+'php artisan tinker ->  $p = \App\Models\Post::latest()->first();' # assigns to '$p' the latest post you uploaded to database, now all you need to type to get newest post is '$p'
+We hardcoded the images because the 'image()' function was broken, so 'post-item.blade.php' now uses dynamic image from the database, 
+<img class="rounded-r-lg w-48 h-full max-h-64 object-cover" src="{{ Storage::url($post->image) }}" alt="" /> # 'src="{{ Storage::url($post->image) }}"' Will get the image from the DB
+# in order to fix the images, he attempted to put the hardcoded URL in the database, but it prefixed it with the '/storage/' because of the link, doesn't matter, we are creating our own
+'php artisan tinker -> \App\Models\Post::where('id', '<101'->update(['image' => 'https://flowbite.com/docs/images/blog/image-1.jpg'])'
+'php artisan migrate:fresh' # start with a new migration now that we got posts to work
 
 
 

@@ -785,7 +785,8 @@ class AppLayout extends Component
 }
 
 2:08:10 - Create New Post ===================================================================================================================================================================
-
+First, add a button to the navbar in 'navigation.blade.php'
+Did a bunch of stuff, forgot to take notes, created 2 new routes in 'web.php' a new 'create.blade.php' and new button, also fixed some tailwind CSS
 
 
 

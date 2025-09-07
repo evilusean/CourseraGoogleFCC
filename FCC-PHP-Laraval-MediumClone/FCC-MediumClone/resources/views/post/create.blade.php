@@ -42,7 +42,9 @@
                     <div class="mt-4">
                         <x-input-label for="content" :value="__('Content')" />
                         <x-input-textarea id="content" class="block mt-1 w-full" name="content"
-                            :value="old('content')" required ></x-input-textarea>
+                            :value="old('content')" required >
+                            {{ old('content') }}
+                            </x-input-textarea>
                         <x-input-error :messages="$errors->get('content')" class="mt-2" />
                     </div>
                     <x-primary-button class="mt-4">

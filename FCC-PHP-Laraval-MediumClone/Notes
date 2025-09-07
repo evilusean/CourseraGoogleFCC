@@ -815,7 +815,31 @@ array:4 [▼ // app/Http/Controllers/PostController.php:77
 ]
 <form action="{{ route('post.store') }}" method="post" enctype="multipart/form-data"> 
   # 'enctype' tells the browser how to format the data for submission, with multipart/form-data being the required value for forms that include file uploads.
-
+#how to validate the form data submitted by user 'PostController.php', add multiple validation rules with the '|' pipe means 'and' or add the rules in an array ['rule1', 'rule2']
+public function store(Request $request)
+    {
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048', 
+            'title' => 'required',
+            'content' => 'required',
+            'category_id' => ['required', 'exists:categories,id'], # the category is required, and needs to exist in the categories table
+        ]);
+    }
+# how to do a dropdown menu with a '@foreach' directive loop 
+<!-- Category -->
+                    <div class="mt-4">
+                        <x-input-label for="category_id" :value="__('Category')" />
+                        <select id="category_id" name="category_id"
+                            class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                            <option value="">Select a category</option>
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id }}"
+                                    {{ old('category_id') == $category->id ? 'selected' : '' }}>
+                                    {{ $category->name }}</option>
+                            @endforeach
+                        </select>
+                        <x-input-error :messages="$errors->get('category_id')" class="mt-2" />
+                    </div>
 
 
 

@@ -787,8 +787,24 @@ class AppLayout extends Component
 2:08:10 - Create New Post ===================================================================================================================================================================
 First, add a button to the navbar in 'navigation.blade.php'
 Did a bunch of stuff, forgot to take notes, created 2 new routes in 'web.php' a new 'create.blade.php' and new button, also fixed some tailwind CSS
-
-
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/', [PostController::class, 'index'])
+        ->name('dashboard');
+    Route::get('/post/create', [PostController::class, 'create'])
+        ->name('post.create');
+}); # instead of having 'Route::middleware(['auth', 'verified'])->group(function ()' in each 'Route::get', you can simply wrap the routes in a 'Route::middleware' that will check for auth
+# below is from a new component we made 'components -> input-textarea', 
+<textarea @disabled($disabled) {{ $attributes->merge(['class' => 'border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm']) }}>
+# the '$attributes' is a special keyword that outputs every attribute that is given to the 'x-input-textarea' from 'create.blade.php' and adds them to the component,  
+  so the 'id' 'class' 'type' 'name' ':value' 'required' etc get added to the component, despite the fact the component is used in the create.blade.php
+# the 'merge()' method takes all of the '$attributes' given to the component and merges them into the 'class' of the component (from child 'class' to parent 'class' and combines them)
+                    <div class="mt-4">
+                        <x-input-label for="content" :value="__('Content')" />
+                        <x-input-textarea id="content" class="block mt-1 w-full" type="text" name="content"
+                            :value="old('content')" required ></x-input-textarea>
+                        <x-input-error :messages="$errors->get('content')" class="mt-2" />
+                    </div>
+# the '@disabled($disabled)' is a directive that if true adds disabled, if false does not, give ':disabled="true' to disable the component (it defaults to false)
 
 
 

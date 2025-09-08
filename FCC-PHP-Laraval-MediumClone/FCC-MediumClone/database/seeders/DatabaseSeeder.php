@@ -47,6 +47,6 @@ class DatabaseSeeder extends Seeder
         // because the `PostFactory` relies on existing categories to assign a `category_id` to each post.
         
         //Disabled due to image problem, see PostFactory.php
-        Post::factory(100)->create();
+        //Post::factory(100)->create();
     }
 }

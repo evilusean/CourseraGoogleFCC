@@ -882,7 +882,7 @@ We hardcoded the images because the 'image()' function was broken, so 'post-item
 'php artisan tinker -> \App\Models\Post::where('id', '<101'->update(['image' => 'https://flowbite.com/docs/images/blog/image-1.jpg'])'
 'php artisan migrate:fresh' # start with a new migration now that we got posts to work
 
-
+2:54:36 - Profile Update Page ===============================================================================================================================================================
 
 
 

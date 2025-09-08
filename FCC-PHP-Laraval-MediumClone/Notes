@@ -883,7 +883,8 @@ We hardcoded the images because the 'image()' function was broken, so 'post-item
 'php artisan migrate:fresh' # start with a new migration now that we got posts to work
 
 2:54:36 - Profile Update Page ===============================================================================================================================================================
-
+'/profile' Add an 'Avatar', 'Username', 'Bio'
+Update an old Migration file or Use a new migration : if you are working locally and not pushing changes, updating an old migration is fine, if you are working in a team, new migration
 
 
 

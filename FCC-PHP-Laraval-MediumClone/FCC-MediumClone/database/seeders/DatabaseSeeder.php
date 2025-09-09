@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Sean Doe',
             'email' => 'test@email.com',
-            'username' => 'seandoe', ]);
+            'username' => 'sean-doe', ]);
         // This array contains a list of predefined category names.
         $categories = ['Technology', 'Health', 'Travel', 'Food', 'Lifestyle', 'Politics'];
         

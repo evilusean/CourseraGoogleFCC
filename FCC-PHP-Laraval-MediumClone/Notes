@@ -933,7 +933,7 @@ medium.com/@user-name/post-name-here-h45h123456789 # how a post appears on mediu
     Route::get('/@{username}/{post}', [PostController::class, 'show'])
         ->name('post.show');
 'components -> post-item.blade.php' # '<a href="#">' will need to be changed on the image, title, and read more to :
-'<a href="{{ route('post.show', ['username' => $post->user->username, $post->slug) }}]">' 
+'<a href="{{ route('post.show', ['username' => $post->user->username, 'post' => $post->slug }}]">' 
 'Post.php' # We need to define a relations, because our URL requires the posts user '@'
     public function user()
     {
@@ -955,7 +955,9 @@ Example:
 ];
 In this array, the string 'name' is the key, and the string 'John Doe' is the value.
 In Laravel, you'll use this operator frequently in configuration files, migrations, and when passing data to views, especially in the ->with() or view() methods.
-
+# since laravel will default look for the 'post' under it's ID, you need to specify '{post:slug}' so it uses the slug and obviously the '@{username}' for the URL
+    Route::get('/@{username}/{post:slug}', [PostController::class, 'show'])
+        ->name('post.show');
 
 
 

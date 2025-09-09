@@ -926,7 +926,7 @@ So we moved the validation information from the controller into a request class
   # the second value '$user->username' is the default value that is given, so in order to save the data, you need to provide it in the dynamic option like below
 ':value="old('bio')"' and '{{ old('bio', $user->bio) }}' # you have to request the bio from '$user' to save it so it persists (this is the slot)
 
-
+3:21:41 - Post Details Page ===================================================================================================================================================================
 
 
 

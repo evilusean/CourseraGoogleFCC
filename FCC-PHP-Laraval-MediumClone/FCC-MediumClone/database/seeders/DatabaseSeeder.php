@@ -27,8 +27,9 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         User::factory()->create([
-            'name' => 'John Doe',
-            'email' => 'test@email.com' ]);
+            'name' => 'Sean Doe',
+            'email' => 'test@email.com',
+            'username' => 'seandoe', ]);
         // This array contains a list of predefined category names.
         $categories = ['Technology', 'Health', 'Travel', 'Food', 'Lifestyle', 'Politics'];
         
@@ -47,6 +48,6 @@ class DatabaseSeeder extends Seeder
         // because the `PostFactory` relies on existing categories to assign a `category_id` to each post.
         
         //Disabled due to image problem, see PostFactory.php
-        //Post::factory(100)->create();
+        Post::factory(100)->create();
     }
 }

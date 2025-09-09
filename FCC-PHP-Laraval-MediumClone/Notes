@@ -916,7 +916,9 @@ public function up(): void
 }
 'php artisan migrate:fresh --seed' # since we changed DB, new migration
 Everytime you add new columns, you need to update your Factory/Seeder, just spent half an hour trying to fix bugs.
-
+'resources -> views -> profile -> edit.blade.php' # where the edit profile that was created is stored, it also imports components from the 'partials' folder in this directory
+'@include('profile.partials.update-profile-information-form')' # component for editing profile found in 'resources -> views -> profile -> partials ->update-profile-information-form.blade.php
+'@method('patch)' # 'method spoofing' in a html typical form element can not be 'patch' it can only 'method="get" or "post" - "patch" updates the profile
 
 
 

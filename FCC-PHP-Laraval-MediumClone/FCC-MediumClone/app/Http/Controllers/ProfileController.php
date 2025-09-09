@@ -46,7 +46,14 @@ class ProfileController extends Controller
         // This is a powerful Eloquent ORM method. It fills the user model with
         // the validated data from the request. The `validated()` method on the
         // form request automatically returns only the validated fields.
-        $request->user()->fill($request->validated());
+        $data = $request->validated();
+        $image = $data['image']?? null;
+
+        if ($image) {
+            $data['image'] = $image->store('avatars', 'public');
+        } 
+
+        $request->user()->fill($data);
 
         // We check if the 'email' field has been changed. The `isDirty()` method
         // on the user model checks if a specific attribute has been modified since it

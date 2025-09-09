@@ -46,6 +46,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
         ->name('post.create');
 
     Route::post('/post/create', [PostController::class,'store'])->name('post.store');
+
+    Route::get('/@{username}/{post}', [PostController::class, 'show'])
+        ->name('post.show');
 });
 
 // This is a route group. The `Route::middleware('auth')` call applies the `auth` middleware

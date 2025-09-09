@@ -17,7 +17,14 @@
         @csrf
         @method('patch')
 
-        <!-- Image -->
+        <!-- Display Current Avatar -->
+        @if ($user->image)
+            <div class="mb-4">
+                <img class="h-20 w-20 rounded-full object-cover" src="{{ Storage::url($user->image) }}" alt="User Avatar">
+            </div>
+        @endif
+
+        <!-- Image Input-->
         <div>
             <x-input-label for="image" :value="__('Avatar')" />
             <x-text-input id="image" class="block mt-1 w-full" type="file" name="image" :value="old('image')"

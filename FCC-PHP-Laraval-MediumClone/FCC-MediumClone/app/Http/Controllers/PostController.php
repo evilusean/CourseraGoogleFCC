@@ -98,7 +98,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return 'Works'.$post->slug;
     }
 
     /**

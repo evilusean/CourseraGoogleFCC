@@ -919,9 +919,12 @@ Everytime you add new columns, you need to update your Factory/Seeder, just spen
 'resources -> views -> profile -> edit.blade.php' # where the edit profile that was created is stored, it also imports components from the 'partials' folder in this directory
 '@include('profile.partials.update-profile-information-form')' # component for editing profile found in 'resources -> views -> profile -> partials ->update-profile-information-form.blade.php
 '@method('patch)' # 'method spoofing' in a html typical form element can not be 'patch' it can only 'method="get" or "post" - "patch" updates the profile
-
-
-
+'php artisan make:request PostCreateRequest' # instead of doing the data validation in the controller or as a '(Request $request)' we can make our own 'ProfileCreateRequest' for validation
+  #  INFO  Request [app/Http/Requests/PostCreateRequest.php] created successfully. Inside 'public function authorize(): bool {return false;}' false by default
+So we moved the validation information from the controller into a request class
+':value="old('username', $user->username)")' # the old function takes the data that was previously submitted and saves it so it persists between submits (IE form wasn't validated correctly)
+  # the second value '$user->username' is the default value that is given, so in order to save the data, you need to provide it in the dynamic option like below
+':value="old('bio')"' and '{{ old('bio', $user->bio) }}' # you have to request the bio from '$user' to save it so it persists (this is the slot)
 
 
 

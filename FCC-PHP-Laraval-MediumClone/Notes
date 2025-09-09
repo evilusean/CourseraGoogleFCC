@@ -927,10 +927,34 @@ So we moved the validation information from the controller into a request class
 ':value="old('bio')"' and '{{ old('bio', $user->bio) }}' # you have to request the bio from '$user' to save it so it persists (this is the slot)
 
 3:21:41 - Post Details Page ===================================================================================================================================================================
-On the actual medium post page it contains title, read time, avatar, follow, date posted, likes, comments, we will need to implement all these features
+On the actual medium post page it contains title, read time, avatar, follow, date posted, likes, we will need to implement all these features
+medium.com/@user-name/post-name-here-h45h123456789 # how a post appears on medium.com, how were going to identify the post through routing, using a username and a slug
+'routes -> web.php' # how the route looks for us, the 'PostController' 'show' method still needs to be built, and is called 'post.show'
+    Route::get('/@{username}/{post}', [PostController::class, 'show'])
+        ->name('post.show');
+'components -> post-item.blade.php' # '<a href="#">' will need to be changed on the image, title, and read more to :
+'<a href="{{ route('post.show', ['username' => $post->user->username, $post->slug) }}]">' 
+'Post.php' # We need to define a relations, because our URL requires the posts user '@'
+    public function user()
+    {
+        return $this->belongsTo(User::class); # 'Post' belongs to the 'User' model/class to which the post belongs to, creating a many to 1 relation, a user has many posts
+    }
+In PHP, -> and => are two different operators with distinct purposes.
+'->' (Object Operator) # The arrow -> is the object operator. You use it to access a method or a property of an object. This is a fundamental part of object-oriented programming (OOP).
+Accessing a property:
+'$user->name;' #This code retrieves the value of the name property from the $user object.
+Calling a method:
+'$post->save();' #This code calls the save() method on the $post object to save it to the database.
+In Laravel, you will see -> used constantly for method chaining with Eloquent models and the Query Builder. Each method call returns the object itself, allowing you to chain another call.
 
-
-
+'=>' (Array Operator) # The double arrow => is the array operator. You use it to assign a value to a specific key in an associative array. The syntax is key => value.
+Example:
+[
+    'name' => 'John Doe',
+    'email' => 'john.doe@example.com'
+];
+In this array, the string 'name' is the key, and the string 'John Doe' is the value.
+In Laravel, you'll use this operator frequently in configuration files, migrations, and when passing data to views, especially in the ->with() or view() methods.
 
 
 

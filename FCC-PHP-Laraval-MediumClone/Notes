@@ -914,8 +914,8 @@ public function up(): void
         $table->text('bio')->nullable()->after('image');
     });
 }
-
-
+'php artisan migrate:fresh --seed' # since we changed DB, new migration
+Everytime you add new columns, you need to update your Factory/Seeder, just spent half an hour trying to fix bugs.
 
 
 

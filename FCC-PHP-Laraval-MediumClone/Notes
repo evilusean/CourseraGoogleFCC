@@ -958,7 +958,13 @@ In Laravel, you'll use this operator frequently in configuration files, migratio
 # since laravel will default look for the 'post' under it's ID, you need to specify '{post:slug}' so it uses the slug and obviously the '@{username}' for the URL
     Route::get('/@{username}/{post:slug}', [PostController::class, 'show'])
         ->name('post.show');
-
+# 'Post.php' Create another function for words per minute, and finding the time it takes to read an article :
+public function readTime($wordsPerMinute = 100)
+    {
+        $wordCount = str_word_count(strip_tags($this->content));
+        $readingTimeMinutes = ceil($wordCount / $wordsPerMinute); // Assuming an average reading speed of 100 words per minute
+        return max (1, $readingTimeMinutes); # will take the maximum integer of either '1' or '$readingTimeMinutes' for small articles
+    }
 
 
 

@@ -98,7 +98,9 @@ class PostController extends Controller
      */
     public function show(string $username, Post $post)
     {
-        return 'Works'.$post->slug;
+        return view('post.show', [
+            'post' => $post,
+        ]);
     }
 
     /**

@@ -28,7 +28,11 @@
                         </div>
                     </div>
                     <!-- Clap Section -->
-                    <div>
+                    <div class="mt-8 border-t border-b">
+                        Some Content
+                    </div>
+                    <!-- Clap Section -->
+                    <div class="mt-4">
                         <img src="{{ $post->imageUrl() }}" alt="{{ $post->title }}" class="w-full">
                     </div>
                     <!-- Content Section -->

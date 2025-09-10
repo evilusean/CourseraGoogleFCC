@@ -7,17 +7,16 @@
                     @if ($post->user->image)
                         <img class="h-12 w-12 rounded-full" src="{{ $post->user->imageUrl() }}" alt={{ $post->user->name }}>
                     @else
-                        <img class="h-12 w-12 rounded-full" src="https://raw.githubusercontent.com/evilusean/DaGram-InstagramClone/refs/heads/main/Images/NP%20Seans/NPC%20SoiFace.png" alt="NPC">
+                        <img class="h-12 w-12 rounded-full"
+                            src="https://raw.githubusercontent.com/evilusean/DaGram-InstagramClone/refs/heads/main/Images/NP%20Seans/NPC%20SoiFace.png"
+                            alt="NPC">
                     @endif
                     <div>
                         <h3>{{ $post->user->name }}</h3>
-                        <div class="flex gap-2">
-                            <span class="text-gray-500">
-                                {{ $post->readTime() }} min read
-                            </span>
-                            <span>
-                                {{ $post->created_at->format('M d, Y') }}
-                            </span>
+                        <div class="flex gap-2 text-gray-500 text-sm">
+                            {{ $post->readTime() }} min read
+                            &middot;
+                            {{ $post->created_at->format('M d, Y') }}
                         </div>
                     </div>
                 </div>

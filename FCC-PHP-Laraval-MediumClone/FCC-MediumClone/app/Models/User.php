@@ -5,6 +5,7 @@ namespace App\Models;
 // This line defines the namespace for the file. Namespaces help organize classes and prevent naming conflicts. 
 // In this case, the User model belongs to the `App\Models` namespace.
 
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -92,5 +93,13 @@ class User extends Authenticatable implements MustVerifyEmail
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function imageUrl()
+    {
+        if ($this->image) {
+            return Storage::url($this->image);
+        }
+        return null;
     }
 }

@@ -2,7 +2,14 @@
     <div class="py-4">
         <div class="max-w-3xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-8">
-                Show Post
+                <h1 class"text-5xl mb-4">{{ $post->title }}</h1>
+                <div class="flex gap-4">
+                    @if ($post->user->image)
+                        <img class="h-12 w-12 rounded-full" src="{{ $post->user->imageUrl() }}" alt={{ $post->user->name }}>
+                    @else
+                        <img class="h-12 w-12 rounded-full" src="https://raw.githubusercontent.com/evilusean/DaGram-InstagramClone/refs/heads/main/Images/NP%20Seans/NPC%20SoiFace.png" alt="NPC">
+                    @endif
+                </div>
             </div>
 
         </div>

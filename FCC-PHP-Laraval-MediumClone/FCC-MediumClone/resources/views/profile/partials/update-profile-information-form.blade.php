@@ -20,7 +20,7 @@
         <!-- Display Current Avatar -->
         @if ($user->image)
             <div class="mb-4">
-                <img class="h-20 w-20 rounded-full object-cover" src="{{ Storage::url($user->image) }}" alt="User Avatar">
+                <img class="h-20 w-20 rounded-full object-cover" src="{{ $user->imageUrl() }}" alt="User Avatar">
             </div>
         @endif
 

@@ -11,6 +11,7 @@
                             src="https://raw.githubusercontent.com/evilusean/DaGram-InstagramClone/refs/heads/main/Images/NP%20Seans/NPC%20SoiFace.png"
                             alt="NPC">
                     @endif
+                    <!-- User Avatar -->
                     <div>
                         <div class="flex gap-2">
                             <h3>{{ $post->user->name }}</h3>
@@ -23,6 +24,15 @@
                             {{ $post->created_at->format('M d, Y') }}
                         </div>
                     </div>
+                    <!-- Clap Section -->
+                    <div>
+                        <img src="{{ $post->imageUrl() }}" alt="{{ $post->title }}" class="w-full">
+                    </div>
+                    <div>
+                        {{ $post->content }}
+                    </div>
+                    <!-- Clap Section -->
+
                 </div>
             </div>
 

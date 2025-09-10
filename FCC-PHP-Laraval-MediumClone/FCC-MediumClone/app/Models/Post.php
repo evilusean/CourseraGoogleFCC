@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 // All custom model classes must extend this base `Model` class to inherit the rich set of functionality
 // for interacting with a database table, such as methods for querying, inserting, updating, and deleting records.
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 // This is the `Post` model class. It represents the `posts` table in your database.
 // By extending `Illuminate\Database\Eloquent\Model`, it gains access to all the features of Eloquent.
@@ -45,5 +46,13 @@ class Post extends Model
         $wordCount = str_word_count(strip_tags($this->content));
         $readingTimeMinutes = ceil($wordCount / $wordsPerMinute); // Assuming an average reading speed of 200 words per minute
         return max (1, $readingTimeMinutes);
+    }
+
+    public function imageUrl()
+    {
+        if ($this->image) {
+            return Storage::url($this->image);
+        }
+        return null;
     }
 }

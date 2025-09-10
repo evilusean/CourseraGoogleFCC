@@ -965,7 +965,8 @@ public function readTime($wordsPerMinute = 100)
         $readingTimeMinutes = ceil($wordCount / $wordsPerMinute); // Assuming an average reading speed of 100 words per minute
         return max (1, $readingTimeMinutes); # will take the maximum integer of either '1' or '$readingTimeMinutes' for small articles
     }
-Future Sean Problem - Leftoff @ 3:43:40 
+Free Icons :
+https://heroicons.com/
 
 
 

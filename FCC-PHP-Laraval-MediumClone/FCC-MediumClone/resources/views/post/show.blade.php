@@ -12,7 +12,12 @@
                     <div>
                         <h3>{{ $post->user->name }}</h3>
                         <div class="flex gap-2">
-                            {{ $post->readTime() }} min read
+                            <span class="text-gray-500">
+                                {{ $post->readTime() }} min read
+                            </span>
+                            <span>
+                                {{ $post->created_at->format('M d, Y') }}
+                            </span>
                         </div>
                     </div>
                 </div>

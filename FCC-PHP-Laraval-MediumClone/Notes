@@ -976,7 +976,8 @@ public function category()
 'php artisan make:component ClapButton --view' # create a new component for our likes/claps [resources/views/components/clap-button.blade.php]
 
 3:52:05 - User's Public Profile Page =======================================================================================================================================================
-
+The user profile page on medium, large name, image on left hand side, number of followers, title, etc
+'ProfileController.php' 
 
 
 

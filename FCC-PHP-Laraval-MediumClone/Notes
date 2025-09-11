@@ -967,8 +967,12 @@ public function readTime($wordsPerMinute = 100)
     }
 Free Icons :
 https://heroicons.com/
-
-
+'{{ $post->category->name }}' # when trying to display our categories on the articles, it broke our code, we need to add the categories to our posts through a relationship
+'Models -> Post.php' # how to add a category to our post class
+public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 
 
 

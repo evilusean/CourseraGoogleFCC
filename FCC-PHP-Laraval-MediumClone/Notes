@@ -977,7 +977,9 @@ public function category()
 
 3:52:05 - User's Public Profile Page =======================================================================================================================================================
 The user profile page on medium, large name, image on left hand side, number of followers, title, etc
-'ProfileController.php' 
+'app -> Http -> Controllers -> ProfileController.php' # right now the controller is set up only for the users profile, and not other users, we need to create public profiles
+'web.php' # you can see here that the user needs to be authenticated to access the profile
+
 
 
 

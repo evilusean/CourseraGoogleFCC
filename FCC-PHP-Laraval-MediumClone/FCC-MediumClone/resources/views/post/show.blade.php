@@ -17,7 +17,7 @@
 
                         <div>
                             <div class="flex gap-2 items-center">
-                                <h3>{{ $post->user->name }}</h3>
+                                <a href="{{ route('profile.show', $post->user) }}">{{ $post->user->name }}</a>
                                 &middot;
                                 <a href="#" class="text-emerald-600">Follow</a>
                             </div>

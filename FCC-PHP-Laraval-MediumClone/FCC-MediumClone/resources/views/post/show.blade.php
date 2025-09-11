@@ -6,18 +6,13 @@
                 <!-- User Avatar -->
                 <div>
                     <div class="flex gap-4">
-                        @if ($post->user->image)
-                            <img class="h-12 w-12 rounded-full" src="{{ $post->user->imageUrl() }}"
-                                alt="{{ $post->user->name }}">
-                        @else
-                            <img class="h-12 w-12 rounded-full"
-                                src="https://raw.githubusercontent.com/evilusean/DaGram-InstagramClone/refs/heads/main/Images/NP%20Seans/NPC%20SoiFace.png"
-                                alt="NPC">
-                        @endif
+                        
 
                         <div>
                             <div class="flex gap-2 items-center">
-                                <a href="{{ route('profile.show', $post->user) }}">{{ $post->user->name }}</a>
+                                <a href="{{ route('profile.show', $post->user) }}"
+                                class="hover:underline"
+                                >{{ $post->user->name }}</a>
                                 &middot;
                                 <a href="#" class="text-emerald-600">Follow</a>
                             </div>

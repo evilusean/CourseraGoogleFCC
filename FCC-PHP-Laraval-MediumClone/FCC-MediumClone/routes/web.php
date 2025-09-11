@@ -30,6 +30,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/@{username}', [PublicProfileController::class, 'show'])
+    ->name('profile.show');
+
 // This route handles GET requests to the `/dashboard` URL.
 // The `middleware()` method specifies which middleware must be run before the request is handled.
 // - `'auth'`: Ensures that only authenticated (logged-in) users can access this route.

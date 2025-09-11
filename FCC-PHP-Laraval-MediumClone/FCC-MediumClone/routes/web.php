@@ -9,6 +9,7 @@ use App\Http\Controllers\ProfileController;
 // This line imports the `Route` facade. The `Route` facade is the primary way to
 // register new routes in a Laravel application. It provides static methods like `get()`, `post()`, etc.,
 // to define how incoming HTTP requests are handled.
+use App\Http\Controllers\PublicProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,7 +31,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/@{username}', [PublicProfileController::class, 'show'])
+Route::get('/@{user:username}', [PublicProfileController::class, 'show'])
     ->name('profile.show');
 
 // This route handles GET requests to the `/dashboard` URL.

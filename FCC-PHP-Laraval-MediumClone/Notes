@@ -978,7 +978,13 @@ public function category()
 3:52:05 - User's Public Profile Page =======================================================================================================================================================
 The user profile page on medium, large name, image on left hand side, number of followers, title, etc
 'app -> Http -> Controllers -> ProfileController.php' # right now the controller is set up only for the users profile, and not other users, we need to create public profiles
-'web.php' # you can see here that the user needs to be authenticated to access the profile
+'web.php' # you can see here that the user needs to be authenticated to access the profile, we need public profile, so when you are not authenticated and access it, you can see the profile
+Route::get('/@{user:username}', [PublicProfileController::class, 'show'])
+    ->name('profile.show'); #new route, get request, listens to the following route '/@{user:username}', uses the 'show' method and is aliased under 'profile.show'
+'php artisan make:controller PublicProfileController' # [app/Http/Controllers/PublicProfileController.php] created successfully.  
+'Route Model Binding' = Binding the Model inside the route - by default laravel is going to use the primary key 'id' to select the user so you provide the username '/@{user:username}'
+'php artisan make:controller PublicProfileController --view' # make a new component for DRY, avatar is on the profile and posts page
+
 
 
 

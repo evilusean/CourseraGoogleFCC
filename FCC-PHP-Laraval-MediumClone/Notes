@@ -984,8 +984,10 @@ Route::get('/@{user:username}', [PublicProfileController::class, 'show'])
 'php artisan make:controller PublicProfileController' # [app/Http/Controllers/PublicProfileController.php] created successfully.  
 'Route Model Binding' = Binding the Model inside the route - by default laravel is going to use the primary key 'id' to select the user so you provide the username '/@{user:username}'
 'php artisan make:controller PublicProfileController --view' # make a new component for DRY, avatar is on the profile and posts page
-
-
+'user-avatar-blade.php' # you can add props and default values like below, will take a 'user' value (for profile navigation) and 'size' prop and has a default w-12 size if none given :
+'@props(['user', 'size' => 'w-12 h-12'])'  #this can then be used as a dynamic variable below in '{{ $size }}'
+'<img class="{{ $size }} rounded-full" src="{{ $user->imageUrl() }}" alt="{{ $user->name }}">' 
+'@auth' '@endauth' and '@guest' '@endguest' # directive for check if a user is authenticated or not, will change what is displayed for them, simply wrap the code in the appropriate '@' 
 
 
 

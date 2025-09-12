@@ -59,6 +59,14 @@
                     </div>
                 @endauth
 
+                @guest
+                    <a href="{{ route('register') }}" class="hidden sm:flex sm:items-center sm:ms-6 px-3 py-6 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition east-in-oit duration-150">
+                        Create an Account
+                    </a>
+                    <a href="{{ route('login') }}" class="hidden sm:flex sm:items-center sm:ms-6 px-3 py-6 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition east-in-oit duration-150">
+                        Login
+                    </a>
+                @endguest
                 <!-- Hamburger -->
                 <div class="-me-2 flex items-center sm:hidden">
                     <button @click="open = ! open"

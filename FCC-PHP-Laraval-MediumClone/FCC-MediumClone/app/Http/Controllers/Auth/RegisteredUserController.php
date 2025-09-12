@@ -53,6 +53,8 @@ class RegisteredUserController extends Controller
             // This rule ensures the 'name' field is required, is a string, and has a maximum length.
             'name' => ['required', 'string', 'max:255'],
 
+            'username' => ['required', 'string', 'max:255', 'unique:users'],
+
             // This rule ensures the 'email' is required, a string, converted to lowercase,
             // is a valid email format, has a max length, and is unique in the 'users' table.
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
@@ -69,6 +71,7 @@ class RegisteredUserController extends Controller
         // 'User::create()' is a powerful Eloquent ORM method.
         $user = User::create([
             'name' => $request->name,
+            'username' => $request->username,
             'email' => $request->email,
             // The password MUST be hashed before storing it for security.
             // 'Hash::make()' uses a secure, one-way algorithm to encrypt the password.

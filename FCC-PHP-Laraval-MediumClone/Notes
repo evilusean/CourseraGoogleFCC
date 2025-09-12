@@ -993,7 +993,7 @@ Route::get('/@{user:username}', [PublicProfileController::class, 'show'])
 First we need to create a model and migration, then we need to introduce a new framework/library 
 https://alpinejs.dev/
 https://alpinejs.dev/start-here
-
+The purpose of 'Alpine.js' is to provide Reactivity and interactivity to your HTML with minimal effort, comapred to VueJS and React, much smaller and simpler
 
 
 

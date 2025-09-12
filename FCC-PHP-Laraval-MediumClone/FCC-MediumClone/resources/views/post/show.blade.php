@@ -6,7 +6,7 @@
                 <!-- User Avatar -->
                 <div>
                     <div class="flex gap-4">
-                        
+                        <x-user-avatar :user="$post->user" />
 
                         <div>
                             <div class="flex gap-2 items-center">

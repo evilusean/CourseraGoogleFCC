@@ -8,7 +8,7 @@
                     
                     </div>
                     <div class="w-[320px] border-l">
-                    
+                        <x-user-avatar :user="$user" />
                     </div>
                </div>
             </div>

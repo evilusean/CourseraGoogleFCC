@@ -991,8 +991,8 @@ Route::get('/@{user:username}', [PublicProfileController::class, 'show'])
 
 4:16:44 - Implement Follow/Unfollow ========================================================================================================================================================
 First we need to create a model and migration, then we need to introduce a new framework/library 
-
-
+https://alpinejs.dev/
+https://alpinejs.dev/start-here
 
 
 

@@ -989,7 +989,7 @@ Route::get('/@{user:username}', [PublicProfileController::class, 'show'])
 '<img class="{{ $size }} rounded-full" src="{{ $user->imageUrl() }}" alt="{{ $user->name }}">' 
 '@auth' '@endauth' and '@guest' '@endguest' # directive for check if a user is authenticated or not, will change what is displayed for them, simply wrap the code in the appropriate '@' 
 
-
+4:16:44 - Implement Follow/Unfollow ========================================================================================================================================================
 
 
 

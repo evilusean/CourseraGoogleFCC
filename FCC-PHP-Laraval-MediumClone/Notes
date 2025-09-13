@@ -1013,7 +1013,8 @@ public function isFollowedBy(User $user)
         return $this->followers()->where('follower_id', $user->id)->exists();
     }
 # Above is not an ideal optimized situation if there are too many followers, future Sean problem
-
+Axios (similar to React) allows greater interactivity with HTML, automatically enabled in laravel :
+https://axios-http.com/docs/intro
 
 
 

@@ -990,11 +990,15 @@ Route::get('/@{user:username}', [PublicProfileController::class, 'show'])
 '@auth' '@endauth' and '@guest' '@endguest' # directive for check if a user is authenticated or not, will change what is displayed for them, simply wrap the code in the appropriate '@' 
 
 4:16:44 - Implement Follow/Unfollow ========================================================================================================================================================
-
-
-
-
-
+First we need to create a model and migration, then we need to introduce a new framework/library 
+https://alpinejs.dev/
+https://alpinejs.dev/start-here
+The purpose of 'Alpine.js' is to provide Reactivity and interactivity to your HTML with minimal effort, comapred to VueJS and React, much smaller and simpler
+  Works well with laravel, by default Alpine.js comes with laravel, to use alpine.js, you simply need to use the syntax 'x-data', below is a simple counter app :
+<div x-data="{ count: 0 }">
+    <button x-on:click="count++">Increment</button>
+    <span x-text="count"></span>
+</div>
 
 
 

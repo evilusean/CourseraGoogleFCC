@@ -1013,12 +1013,12 @@ public function isFollowedBy(User $user)
         return $this->followers()->where('follower_id', $user->id)->exists();
     }
 # Above is not an ideal optimized situation if there are too many followers, future Sean problem
-Axios (similar to React) allows greater interactivity with HTML, automatically enabled in laravel :
+Axios (similar to React) allows async requests with HTML, automatically enabled in laravel :
 https://axios-http.com/docs/intro
 
 4:56:20 - Implement Like/Unlike Post =======================================================================================================================================================
-
-
+'Claps'/'Likes' functionality = save something in database and display it on posts
+'php artisan make:model Claps -m' # create a new model with migration
 
 
 

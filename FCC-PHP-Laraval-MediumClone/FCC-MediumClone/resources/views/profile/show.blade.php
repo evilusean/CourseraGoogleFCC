@@ -16,6 +16,15 @@
                     </div>
                     <div x-data="{
                         following: {{ $user->isFollowedBy(auth()->user()) ? 'true' : 'false' }},
+                        follow() {
+                            this.following = !this.following
+                            axios.post().then(res => {
+                                console.log(res)
+                            )}
+                                .catch(err => {
+                                    console.log(err)
+                                });
+                        }
                     }" class="w-[320px] border-l px-8">
                         <x-user-avatar :user="$user" size="w-24 h-24" />
                         <h3>{{ $user->name }}</h3>
@@ -27,7 +36,7 @@
                         </p>
                         @if (auth()->user() && auth()->user()->id !== $user->id)
                             <div class="mt-4">
-                                <button class="rounded-full px-4 py-2 text-white"
+                                <button @click="follow()" class="rounded-full px-4 py-2 text-white"
                                 x-text="following ? 'Unfollow' : 'Follow'" :class="following ? 'bg-red-600' : 'bg-emerald-600'"
                                 >
                                     

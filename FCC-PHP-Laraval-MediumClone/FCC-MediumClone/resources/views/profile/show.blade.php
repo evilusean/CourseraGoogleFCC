@@ -17,7 +17,9 @@
                     <div class="w-[320px] border-l px-8">
                         <x-user-avatar :user="$user" size="w-24 h-24" />
                         <h3>{{ $user->name }}</h3>
-                        <p class="text-gray-500">26k followers</p>
+                        <p class="text-gray-500">
+                            {{ $user->followers()->count() }} followers
+                        </p>
                         <p>
                             {{ $user->bio }}
                         </p>

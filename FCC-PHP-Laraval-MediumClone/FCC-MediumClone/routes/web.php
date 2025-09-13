@@ -55,7 +55,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/@{username}/{post:slug}', [PostController::class, 'show'])
         ->name('post.show');
 
-    Route::post('/follow/{user:username}', [FollowerController::class, 'followUnfollow'])
+    Route::post('/follow/{user}', [FollowerController::class, 'followUnfollow'])
         ->name('follow');
 });
 

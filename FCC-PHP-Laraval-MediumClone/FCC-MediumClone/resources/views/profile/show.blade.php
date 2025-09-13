@@ -14,7 +14,9 @@
                             @endforelse
                         </div>
                     </div>
-                    <div class="w-[320px] border-l px-8">
+                    <div x-data="{
+                        following: {{ $user->isFollowedBy(auth()->user()) ? 'true' : 'false' }},
+                    }" class="w-[320px] border-l px-8">
                         <x-user-avatar :user="$user" size="w-24 h-24" />
                         <h3>{{ $user->name }}</h3>
                         <p class="text-gray-500">
@@ -23,13 +25,15 @@
                         <p>
                             {{ $user->bio }}
                         </p>
-                        @auth
+                        @if (auth()->user() && auth()->user()->id !== $user->id)
                             <div class="mt-4">
-                                <button class="bg-emerald-600 rounded-full px-4 py-2 text-white">
-                                    Follow
+                                <button class="bg-emerald-600 rounded-full px-4 py-2 text-white"
+                                x-text="following ? 'Unfollow' : 'Follow'"
+                                >
+                                    
                                 </button>
                             </div>
-                        @endauth
+                        @endif
                     </div>
                 </div>
             </div>

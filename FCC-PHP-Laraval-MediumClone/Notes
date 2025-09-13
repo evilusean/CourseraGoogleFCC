@@ -999,7 +999,7 @@ The purpose of 'Alpine.js' is to provide Reactivity and interactivity to your HT
     <button x-on:click="count++">Increment</button>
     <span x-text="count"></span>
 </div>
-
+'php artisan make:model Follower -m' # new model with migration
 
 
 

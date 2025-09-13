@@ -23,11 +23,13 @@
                         <p>
                             {{ $user->bio }}
                         </p>
-                        <div class="mt-4">
-                            <button class="bg-emerald-600 rounded-full px-4 py-2 text-white">
-                                Follow
-                            </button>
-                        </div>
+                        @auth
+                            <div class="mt-4">
+                                <button class="bg-emerald-600 rounded-full px-4 py-2 text-white">
+                                    Follow
+                                </button>
+                            </div>
+                        @endauth
                     </div>
                 </div>
             </div>

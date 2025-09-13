@@ -1000,6 +1000,9 @@ The purpose of 'Alpine.js' is to provide Reactivity and interactivity to your HT
     <span x-text="count"></span>
 </div>
 'php artisan make:model Follower -m' # new model with migration
+'php artisan migrate' # after adding new columns in the table, migrate
+'return $this->belongsToMany(User::class, 'followers', 'user_id', 'follower_id');' # new relation 'belongsToMany' defines a many to many relation through 'Users' table to 'Followers' table
+'php artisan tinker -> \App\Models\Follower::create(['user_id' => 1, 'follower_id' => 2])' # testing our code with our only 2 users 
 
 
 

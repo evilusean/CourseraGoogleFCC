@@ -1019,9 +1019,41 @@ https://axios-http.com/docs/intro
 4:56:20 - Implement Like/Unlike Post =======================================================================================================================================================
 'Claps'/'Likes' functionality = save something in database and display it on posts
 'php artisan make:model Claps -m' # create a new model with migration
-
-
-
+'php artisan make:controller ClapController' # new controller for getting claps/likes data
+class ClapController extends Controller
+{
+    public function clap(Post $post) 
+    {
+        $post->claps()->create([
+            'user_id' => auth()->id(),
+        ]);
+        return response()->json([
+            'clapsCount' => $post->claps()->count(),
+        ]);
+    }
+}
+# 'web.php' and define a new route for the ClapsCount
+    Route::post('/clap/{post}', [ClapController::class, 'clap'])
+        ->name('clap');
+# 'User.php' # to check if the user has clapped
+public function hasClapped(Post $post)
+    {
+        return $post->claps()->where('user_id', $this->id)->exists();
+    }
+# 'clap-button.blade.php' # combines all of the above to create a working component that checks the amount of claps/likes and adds one if the user clicks
+<div x-data="{
+    hasClapped: {{ auth()->user()->hasClapped($post) ? 'true' : 'false' }},
+    count: {{ $post->claps()->count() }},
+    clap() {
+        axios.post('/clap/{{ $post->id }}').then(response => {
+            this.count = response.data.count;
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    }
+}" class="mt-8 p-4 border-t border-b">
+# notice the new 'x-data' tag from 'Alpine.js' to make the button interactive with the 'count:' and 'hasClapped' variables
 
 
 

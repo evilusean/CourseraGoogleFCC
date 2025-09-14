@@ -29,7 +29,7 @@
                         </div>
                     </div>
                     <!-- Clap Section -->
-                    <x-clap-button :count="$post->claps()->count()" />
+                    <x-clap-button :post="$post" />
                     <!-- Image -->
                     <div class="mt-4">
                         <img src="{{ $post->imageUrl() }}" alt="{{ $post->title }}" class="w-full">
@@ -44,7 +44,7 @@
                         </span>
                     </div>
                     <!-- Clap Section -->
-                    <x-clap-button />
+                    <x-clap-button :post="$post" />
                 </div>
             </div>
         </div>

@@ -1,9 +1,10 @@
-@props(['count' => 0])
+@props(['post'])
 
 <div x-data="{
-    count: {{ $count }},
+    hasClapped: {{ auth()->user()->hasClapped($post) ? 'true' : 'false' }},
+    count: {{ $post->claps()->count() }},
     clap() {
-        axios.post().then(response => {
+        axios.post('/clap/{{ $post->id }}').then(response => {
             this.count = response.data.count;
         })
         .catch(error => {

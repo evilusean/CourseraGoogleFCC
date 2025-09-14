@@ -3,6 +3,7 @@
 // This line imports the `ProfileController` class from its namespace.
 // The `use` statement makes the class available to this file, so we can refer to it directly as `ProfileController`
 // instead of its full namespace `App\Http\Controllers\ProfileController`.
+use App\Http\Controllers\ClapController;
 use App\Http\Controllers\FollowerController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
@@ -57,6 +58,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::post('/follow/{user}', [FollowerController::class, 'followUnfollow'])
         ->name('follow');
+
+    Route::post('/clap/{post}', [ClapController::class, 'clap'])
+        ->name('clap');
 });
 
 // This is a route group. The `Route::middleware('auth')` call applies the `auth` middleware

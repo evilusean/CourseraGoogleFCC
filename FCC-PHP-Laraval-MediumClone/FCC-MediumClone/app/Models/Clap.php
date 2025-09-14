@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Clap extends Model
 {
+    public const UPDATED_AT = null;
     
     protected $fillable = ['post_id', 'user_id'];
 

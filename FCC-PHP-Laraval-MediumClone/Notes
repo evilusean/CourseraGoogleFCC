@@ -1093,8 +1093,19 @@ public function hasClapped(Post $post)
 <template x-if="hasClapped"><svg /></template> # new 'Alpine.js' 'x-if' if the user 'hasClapped' show the svg with the thumbs up filled, if not, show the empty
 
 5:10:53 - Filtering posts by Category ============================================================================================================================================================
-
-
+'PostController.php' # create a new controller for pagination, and then add that to 'web.php' to filter by route '/category/(category-name}' also update '/Model/Category.php'
+public function category(Category $category)
+    {
+        $posts = $category->posts()->simplePaginate(5);
+        return view('post.index', [
+            'posts' => $posts,
+        ]);
+    }
+'category-tabs.blade.php' changed the '<a>' tag to be dynamic and list posts with that category name
+<a href="{{ route('post.byCategory', $category) }}"
+                class="inline-block px-4 py-2 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white">
+                {{ $category->name }}
+            </a>
 
 
 

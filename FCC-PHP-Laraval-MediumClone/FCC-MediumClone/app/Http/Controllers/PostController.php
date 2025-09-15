@@ -32,10 +32,13 @@ class PostController extends Controller
         // along with all the necessary information for building pagination links (e.g., total items, current page, etc.).
 
         $user = auth()->user();
+
+        $query = Post::latest();
         if ($user) {
-            $ids = $user->following()->pluck('id');
+            $ids = $user->following()->pluck('users.id');
+            $query->whereIn('user_id', $ids);
         }
-        $posts = Post::latest()->simplePaginate(5);
+        $posts = $query->simplePaginate(5);
         // `->simplePaginate(5)`: This is the method that executes the query and handles pagination.
         // - The argument `(5)` specifies that only 5 posts should be returned per page.
         // - Unlike the standard `paginate()` method, `simplePaginate()` is more efficient

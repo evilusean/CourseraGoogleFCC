@@ -1112,8 +1112,14 @@ https://github.com/evilusean/CourseraGoogleFCC/blob/main/FCC-PHP-Laraval-MediumC
 5:21:36 - Show only posts from following users ==============================================================================================================================================
 Everything within 'Middleware' is only available to authenticated users, something we don't want is that only auth users can read posts :
 'Route::middleware(['auth', 'verified'])->group(function () {' # everything within here will only be available to auth users, if you want guest users to use, put it outside of this
-
-
+# 'pluck' method will simply take 1 column as a single dimensional array
+$user = auth()->user();  # will get all the 'user ids' of the people that the user is 'following', and sort them by latest as '$query'
+        $query = Post::latest();
+        if ($user) {
+            $ids = $user->following()->pluck('users.id');
+            $query->whereIn('user_id', $ids);
+        }
+        $posts = $query->simplePaginate(5);
 
 
 

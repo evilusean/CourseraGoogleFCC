@@ -36,6 +36,13 @@ Route::get('/', function () {
 Route::get('/@{user:username}', [PublicProfileController::class, 'show'])
     ->name('profile.show');
 
+Route::get('/', [PostController::class, 'index'])
+->name('dashboard');
+
+Route::get('/@{username}/{post:slug}', [PostController::class, 'show'])
+        ->name('post.show');
+
+
 // This route handles GET requests to the `/dashboard` URL.
 // The `middleware()` method specifies which middleware must be run before the request is handled.
 // - `'auth'`: Ensures that only authenticated (logged-in) users can access this route.
@@ -56,9 +63,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::post('/post/create', [PostController::class,'store'])->name('post.store');
 
-    Route::get('/@{username}/{post:slug}', [PostController::class, 'show'])
-        ->name('post.show');
-
+    
     Route::post('/follow/{user}', [FollowerController::class, 'followUnfollow'])
         ->name('follow');
 

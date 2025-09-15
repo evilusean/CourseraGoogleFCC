@@ -31,6 +31,10 @@ class PostController extends Controller
         // This method returns a `LengthAwarePaginator` object that contains the results
         // along with all the necessary information for building pagination links (e.g., total items, current page, etc.).
 
+        $user = auth()->user();
+        if ($user) {
+            $ids = $user->following()->pluck('id');
+        }
         $posts = Post::latest()->simplePaginate(5);
         // `->simplePaginate(5)`: This is the method that executes the query and handles pagination.
         // - The argument `(5)` specifies that only 5 posts should be returned per page.

@@ -31,7 +31,7 @@ class PostController extends Controller
         // This method returns a `LengthAwarePaginator` object that contains the results
         // along with all the necessary information for building pagination links (e.g., total items, current page, etc.).
 
-        $posts = Post::orderBy('created_at', 'DESC')->simplePaginate(5);
+        $posts = Post::latest()->simplePaginate(5);
         // `->simplePaginate(5)`: This is the method that executes the query and handles pagination.
         // - The argument `(5)` specifies that only 5 posts should be returned per page.
         // - Unlike the standard `paginate()` method, `simplePaginate()` is more efficient
@@ -128,7 +128,7 @@ class PostController extends Controller
     }
     public function category(Category $category)
     {
-        $posts = $category->posts()->simplePaginate(5);
+        $posts = $category->posts()->latest()->simplePaginate(5);
         return view('post.index', [
             'posts' => $posts,
         ]);

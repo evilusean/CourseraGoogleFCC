@@ -31,7 +31,7 @@ class Post extends Model implements HasMedia
     use InteractsWithMedia;
 
     protected $fillable = [
-        'image',
+        // 'image',
         'title',
         'slug',
         'content',

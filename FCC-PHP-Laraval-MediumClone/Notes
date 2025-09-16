@@ -1122,11 +1122,15 @@ $user = auth()->user();  # will get all the 'user ids' of the people that the us
         $posts = $query->simplePaginate(5);
 
 5:31:33 - Image Resize ======================================================================================================================================================================
-
-
-
-
-
+Spatie - Laravel - Media Library Package - For working with media :
+https://spatie.be/docs/laravel-medialibrary/v11/introduction
+https://github.com/spatie/laravel-medialibrary
+We are going to use 'Spatie - Media Library' to import images into our filesystem and database then resize them
+'composer require "spatie/laravel-medialibrary"' # install the package in laravel 
+ERROR : Had to edit config, in order to install, steps to fix on arch linux below :
+  Locate the PHP configuration file (php.ini). You used the command 'php --ini' to find the correct file path.
+  Enable the exif extension. You opened the 'php.ini' file and uncommented or added the line 'extension=exif' to activate the extension
+  Restart the PHP service. You then ran 'sudo systemctl restart php-fpm' to apply the changes, allowing Composer to proceed with the installation.
 
 
 

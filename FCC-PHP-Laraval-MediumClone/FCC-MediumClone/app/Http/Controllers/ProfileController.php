@@ -46,26 +46,31 @@ class ProfileController extends Controller
         // This is a powerful Eloquent ORM method. It fills the user model with
         // the validated data from the request. The `validated()` method on the
         // form request automatically returns only the validated fields.
+
+        
         $data = $request->validated();
-        $image = $data['image']?? null;
 
-        if ($image) {
-            $data['image'] = $image->store('avatars', 'public');
-        } 
+        //OLD METHOD :
+        // $image = $data['image']?? null;
 
-        $request->user()->fill($data);
+        // if ($image) {
+        //     $data['image'] = $image->store('avatars', 'public');
+        // } 
+
+        $user = $request->user();
+        $user->fill($data);
 
         // We check if the 'email' field has been changed. The `isDirty()` method
         // on the user model checks if a specific attribute has been modified since it
         // was last saved.
-        if ($request->user()->isDirty('email')) {
+        if ($user->isDirty('email')) {
             // If the email has been changed, we set the `email_verified_at` column to null.
             // This is a security measure that forces the user to re-verify their new email address.
-            $request->user()->email_verified_at = null;
+            $user->email_verified_at = null;
         }
 
         // This line saves the changes to the user model to the database.
-        $request->user()->save();
+        $user->save();
 
         // This returns a redirect response. We are redirecting to the route named 'profile.edit'
         // and adding a session-based status message. The `.with('status', 'profile-updated')`

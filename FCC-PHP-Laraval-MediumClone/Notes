@@ -1131,8 +1131,8 @@ ERROR : Had to edit config, in order to install, steps to fix on arch linux belo
   Locate the PHP configuration file (php.ini). You used the command 'php --ini' to find the correct file path.
   Enable the exif extension. You opened the 'php.ini' file and uncommented or added the line 'extension=exif' to activate the extension
   Restart the PHP service. You then ran 'sudo systemctl restart php-fpm' to apply the changes, allowing Composer to proceed with the installation.
-
-
+'php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="medialibrary-migrations"' # set up our database, with migrations 
+'php artisan migrate' # run the migration to create the new tables 
 
 
 

@@ -1160,7 +1160,10 @@ FIX = 'extension=gd' # uncomment this line, same fix as first error of the day
 '$post->getFirstMedia()->getUrl('preview')' # It will keep the original file, and then generate a conversion, add 'preview' as an arg to view the conversion / resized version
 ERROR - Tutorial was wrong here, wasted like 20 minutes trying to fix, here is the correct code :
 'return $this->getFirstMediaUrl('default', 'preview');' # it needs 2 args for some reason
-FUTURE SEAN PROBLEMS : Left off @5:48:00 - Will have 3 more days of work until done tutorial if keep going at current pace, haven't even started Japanese yet
+'Models -> Post.php' # Add the new methods to resize/crop images here for avatars
+'ProfileController.php' # add the new saving method to here 
+'resources -> views -> profile -> edit.blade.php' # add the new avatar output to the edit profile page
+
 
 
 

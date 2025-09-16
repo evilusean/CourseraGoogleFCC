@@ -71,9 +71,13 @@ class Post extends Model implements HasMedia
 
     public function imageUrl()
     {
-        if ($this->image) {
-            return Storage::url($this->image);
-        }
-        return null;
+        // OLD METHOD, KEPT FOR REFERENCE FOR FUTURE SEAN
+        // if ($this->image) {
+        //     return Storage::url($this->image);
+        // }
+        // return null;
+
+        // New method using Spatie Media Library
+    return $this->getFirstMediaUrl('default', 'preview');
     }
 }

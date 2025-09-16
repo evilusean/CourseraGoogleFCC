@@ -14,17 +14,21 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 // for interacting with a database table, such as methods for querying, inserting, updating, and deleting records.
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 // This is the `Post` model class. It represents the `posts` table in your database.
 // By extending `Illuminate\Database\Eloquent\Model`, it gains access to all the features of Eloquent.
 // Each instance of the `Post` class corresponds to a single row in the `posts` table.
-class Post extends Model
+class Post extends Model implements HasMedia
 {
     // The `use HasFactory;` statement includes the `HasFactory` trait within the `Post` model.
     // This gives the `Post` model the ability to use the `::factory()` method.
     // For example, you can now call `Post::factory()->create()` to create a new post record
     // in your database based on the data defined in its corresponding factory file.
     use HasFactory;
+    use InteractsWithMedia;
 
     protected $fillable = [
         'image',
@@ -35,6 +39,13 @@ class Post extends Model
         'user_id',
         'published_at',
     ];
+
+    public function registerMediaConversions(?Media $media = null): void
+    {
+        $this
+            ->addMediaConversion('preview')
+            ->width(400);
+    }
 
     public function user()
     {
@@ -55,7 +66,7 @@ class Post extends Model
     {
         $wordCount = str_word_count(strip_tags($this->content));
         $readingTimeMinutes = ceil($wordCount / $wordsPerMinute); // Assuming an average reading speed of 200 words per minute
-        return max (1, $readingTimeMinutes);
+        return max(1, $readingTimeMinutes);
     }
 
     public function imageUrl()

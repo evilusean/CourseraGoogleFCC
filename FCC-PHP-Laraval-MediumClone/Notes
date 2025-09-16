@@ -1126,6 +1126,7 @@ Spatie - Laravel - Media Library Package - For working with media :
 https://spatie.be/docs/laravel-medialibrary/v11/introduction
 https://github.com/spatie/laravel-medialibrary
 We are going to use 'Spatie - Media Library' to import images into our filesystem and database then resize them
+https://spatie.be/docs/laravel-medialibrary/v11/installation-setup
 'composer require "spatie/laravel-medialibrary"' # install the package in laravel 
 ERROR : Had to edit config, in order to install, steps to fix on arch linux below :
   Locate the PHP configuration file (php.ini). You used the command 'php --ini' to find the correct file path.
@@ -1133,8 +1134,9 @@ ERROR : Had to edit config, in order to install, steps to fix on arch linux belo
   Restart the PHP service. You then ran 'sudo systemctl restart php-fpm' to apply the changes, allowing Composer to proceed with the installation.
 'php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="medialibrary-migrations"' # set up our database, with migrations 
 'php artisan migrate' # run the migration to create the new tables 
-
-
+'class Post extends Model implements HasMedia' # import our new class into 'Models -> Post.php'
+'use InteractsWithMedia;' # also add this, and import it to 'Post.php'
+https://spatie.be/docs/laravel-medialibrary/v11/basic-usage/preparing-your-model # basically, after installing, follow along with this
 
 
 

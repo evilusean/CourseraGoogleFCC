@@ -46,10 +46,9 @@ class Post extends Model implements HasMedia
             ->addMediaConversion('preview')
             ->width(400);
         
-        // COMMENTED FOR REFERENCE, FUTURE SEAN : HOW TO CREATE MULTIPLE SIZES
-        // $this
-        //     ->addMediaConversion('large')
-        //     ->width(1200);
+        $this
+            ->addMediaConversion('large')
+            ->width(1200);
     }
 
     public function user()

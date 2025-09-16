@@ -10,6 +10,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 // These lines import other classes that are used in this file.
 // - `HasFactory`: A trait used by Laravel's Eloquent ORM to allow for creating model factories. 
@@ -23,7 +26,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 // set of predefined methods that a class must implement. By implementing this contract, your User model promises to fulfill 
 // the requirements for email verification.
 
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable implements MustVerifyEmail, HasMedia
 {
     // The `User` class extends `Authenticatable`, inheriting all of its authentication-related functionality.
     // The `implements MustVerifyEmail` part is the key here. It tells Laravel that this model supports email verification.
@@ -40,7 +43,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * For example, you could run `User::factory()->count(10)->create()` to create 10 fake users.
      * The `Notifiable` trait adds methods to the `User` model that enable sending notifications.
      */
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, InteractsWithMedia;
 
     /**
      * The `fillable` property specifies which attributes are allowed to be mass-assigned.
@@ -93,6 +96,13 @@ class User extends Authenticatable implements MustVerifyEmail
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function registerMediaConversions(?Media $media = null): void
+    {
+        $this
+            ->addMediaConversion('avatar')
+            ->crop( 128, 128);
     }
 
     public function posts()

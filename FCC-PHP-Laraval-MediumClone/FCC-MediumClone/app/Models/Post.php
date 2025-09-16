@@ -45,6 +45,11 @@ class Post extends Model implements HasMedia
         $this
             ->addMediaConversion('preview')
             ->width(400);
+        
+        // COMMENTED FOR REFERENCE, FUTURE SEAN : HOW TO CREATE MULTIPLE SIZES
+        // $this
+        //     ->addMediaConversion('large')
+        //     ->width(1200);
     }
 
     public function user()
@@ -69,6 +74,9 @@ class Post extends Model implements HasMedia
         return max(1, $readingTimeMinutes);
     }
 
+
+    //TUTORIAL METHOD, THIS DOESN'T WORK
+    // public function imageUrl($conversionName = '')
     public function imageUrl()
     {
         // OLD METHOD, KEPT FOR REFERENCE FOR FUTURE SEAN
@@ -78,6 +86,12 @@ class Post extends Model implements HasMedia
         // return null;
 
         // New method using Spatie Media Library
-    return $this->getFirstMediaUrl('default', 'preview');
+
+        //TUTORIAL METHOD, THIS DOESN'T WORK
+        // return $this->getFirstMediaUrl()?->getUrl($conversionName);
+
+        //WORKING METHOD 
+        return $this->getFirstMediaUrl('default', 'preview');
+
     }
 }

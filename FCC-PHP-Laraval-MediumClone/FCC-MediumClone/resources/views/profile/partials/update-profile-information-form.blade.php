@@ -20,7 +20,7 @@
         <!-- Display Current Avatar -->
         @if ($user->getFirstMedia())
             <div class="mb-4">
-                <img class="h-20 w-20 rounded-full object-cover" src="{{ $user->getFirstMedia()->getUrl('avatar') }}" alt="User Avatar">
+                <img class="h-20 w-20 rounded-full object-cover" src="{{ $user->imageUrl() }}" alt="User Avatar">
             </div>
         @endif
 

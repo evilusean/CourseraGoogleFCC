@@ -72,6 +72,9 @@ class ProfileController extends Controller
         // This line saves the changes to the user model to the database.
         $user->save();
 
+        $user->addMediaFromRequest('image')
+            ->toMediaCollection();
+
         // This returns a redirect response. We are redirecting to the route named 'profile.edit'
         // and adding a session-based status message. The `.with('status', 'profile-updated')`
         // part makes the `status` variable available in the next request's session, which

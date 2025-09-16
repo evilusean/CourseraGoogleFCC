@@ -1164,7 +1164,7 @@ ERROR - Tutorial was wrong here, wasted like 20 minutes trying to fix, here is t
 'ProfileController.php' # add the new saving method to here 
 'resources -> views -> profile -> edit.blade.php' # add the new avatar output to the edit profile page
 
-
+5:57:14 - Home Page Optimization ============================================================================================================================================================
 
 
 

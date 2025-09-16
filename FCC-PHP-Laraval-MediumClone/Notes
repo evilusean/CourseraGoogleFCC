@@ -1125,7 +1125,8 @@ $user = auth()->user();  # will get all the 'user ids' of the people that the us
 Spatie - Laravel - Media Library Package - For working with media :
 https://spatie.be/docs/laravel-medialibrary/v11/introduction
 https://github.com/spatie/laravel-medialibrary
-
+We are going to use 'Spatie - Media Library' to import images into our filesystem and database then resize them
+'composer require "spatie/laravel-medialibrary"' # install the package in laravel 
 
 
 

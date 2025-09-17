@@ -1196,3 +1196,75 @@ $query = Post::with(['user', 'media'])
         ->withCount('claps')->latest();
 
 6:11:38 - Editing and Deleting Posts =========================================================================================================================================================
+The qeued jobs will not display an image until it is completed on the backend, so if we upload a new image, it won't display until it is resized, to fix this :
+'Models -> User.php' # uses the 'hasGeneratedConversion' method to determine if there is a resize, if not, use the big image with 'return $media->getUrl();' outside the {}'s
+public function imageUrl()
+    {
+        $media = $this->getFirstMedia('avatar');
+        if (!$media) {
+            return null;
+        }
+        if ($media->hasGeneratedConversion('avatar')) {
+            return $media->getUrl('avatar');
+        }
+        return $media->getUrl();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

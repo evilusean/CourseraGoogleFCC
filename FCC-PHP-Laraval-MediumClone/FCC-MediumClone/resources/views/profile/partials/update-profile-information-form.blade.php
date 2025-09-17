@@ -18,7 +18,7 @@
         @method('patch')
 
         <!-- Display Current Avatar -->
-        @if ($user->getFirstMedia('avatar'))
+        @if ($user->imageUrl())
             <div class="mb-4">
                 <img class="h-20 w-20 rounded-full object-cover" src="{{ $user->imageUrl() }}" alt="User Avatar">
             </div>

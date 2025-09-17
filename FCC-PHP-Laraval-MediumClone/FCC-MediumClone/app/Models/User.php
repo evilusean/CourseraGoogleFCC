@@ -102,7 +102,7 @@ class User extends Authenticatable implements MustVerifyEmail, HasMedia
     {
         $this
             ->addMediaConversion('avatar')
-            ->width( 128)
+            ->width(128)
             ->crop(128, 128);
     }
 
@@ -132,7 +132,14 @@ class User extends Authenticatable implements MustVerifyEmail, HasMedia
 
     public function imageUrl()
     {
-       return $this->getFirstMedia('avatar')?->getUrl('avatar');
+        $media = $this->getFirstMedia('avatar');
+        if (!$media) {
+            return null;
+        }
+        if ($media->hasGeneratedConversion('avatar')) {
+            return $media->getUrl('avatar');
+        }
+        return $media->getUrl();
     }
 
     public function isFollowedBy(?User $user)

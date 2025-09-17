@@ -15,6 +15,11 @@ class PostController extends Controller
      */
     public function index()
     {
+
+        \DB::listen(function ($query) {
+            \Log::info($query->sql);
+        }); 
+
         // Only shows followed users posts, commented out for now
         // $user = auth()->user();
         // $query = Post::latest();
@@ -25,7 +30,10 @@ class PostController extends Controller
         // $posts = $query->simplePaginate(5);
 
         // Show all posts, paginated, regardless of follow status
-        $posts = Post::latest()->simplePaginate(5);
+        $query = Post::with('user')
+        ->withCount('claps')->latest();
+
+         $posts = $query->simplePaginate(5);
 
         return view(
             'post.index',

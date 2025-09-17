@@ -1171,6 +1171,25 @@ Add date and claps to displayed posts :
   You can find the logs under 'storage -> logs -> laravel.log' and review the queries there, the amount of queries you do is actually very important for performance
   in order to optimize queries, if any query runs more than once, you should be able to reduce it to once. 
   The more posts you create the more select statements you will run, scale that up to 1,000 users(or whatever, millions), and now you're talking about real numbers 
+# Here is an example from our main page of what the queries look like in the logs from the above '\DB::listen' statement 
+[2025-09-17 00:21:20] local.INFO: select * from "posts" order by "created_at" desc limit 6 offset 0  
+[2025-09-17 00:21:20] local.INFO: select * from "categories"  
+[2025-09-17 00:21:20] local.INFO: select * from "users" where "users"."id" = ? limit 1  
+[2025-09-17 00:21:20] local.INFO: select count(*) as aggregate from "claps" where "claps"."post_id" = ? and "claps"."post_id" is not null  
+[2025-09-17 00:21:20] local.INFO: select * from "media" where "media"."model_id" in (103) and "media"."model_type" = ?  
+[2025-09-17 00:21:20] local.INFO: select * from "users" where "users"."id" = ? limit 1  
+[2025-09-17 00:21:20] local.INFO: select count(*) as aggregate from "claps" where "claps"."post_id" = ? and "claps"."post_id" is not null  
+[2025-09-17 00:21:20] local.INFO: select * from "media" where "media"."model_id" in (102) and "media"."model_type" = ?  
+[2025-09-17 00:21:20] local.INFO: select * from "users" where "users"."id" = ? limit 1  
+[2025-09-17 00:21:20] local.INFO: select count(*) as aggregate from "claps" where "claps"."post_id" = ? and "claps"."post_id" is not null  
+[2025-09-17 00:21:20] local.INFO: select * from "media" where "media"."model_id" in (101) and "media"."model_type" = ?  
+[2025-09-17 00:21:20] local.INFO: select * from "users" where "users"."id" = ? limit 1  
+[2025-09-17 00:21:20] local.INFO: select count(*) as aggregate from "claps" where "claps"."post_id" = ? and "claps"."post_id" is not null  
+[2025-09-17 00:21:20] local.INFO: select * from "media" where "media"."model_id" in (96) and "media"."model_type" = ?  
+[2025-09-17 00:21:20] local.INFO: select * from "users" where "users"."id" = ? limit 1  
+[2025-09-17 00:21:20] local.INFO: select count(*) as aggregate from "claps" where "claps"."post_id" = ? and "claps"."post_id" is not null  
+[2025-09-17 00:21:20] local.INFO: select * from "media" where "media"."model_id" in (97) and "media"."model_type" = ?  
+[2025-09-17 00:21:21] local.INFO: update "sessions" set "payload" = ?, "last_activity" = ?, "user_id" = ?, "ip_address" = ?, "user_agent" = ? where "id" = ?  
 
 
 

@@ -28,10 +28,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="pt-4 border-t border-gray-200">
+                    <div class="border-t border-b border-gray-200 mt-8 py-4">
                         <x-primary-button>
                             Edit Post
                         </x-primary-button>
+                        <x-danger-button>
+                            Delete Post
+                        </x-danger-button>
                     </div>
                     <!-- Clap Section -->
                     <x-clap-button :post="$post" />

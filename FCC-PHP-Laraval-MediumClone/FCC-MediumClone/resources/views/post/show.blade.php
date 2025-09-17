@@ -28,6 +28,11 @@
                             </div>
                         </div>
                     </div>
+                    <div class="pt-4 border-t border-gray-200">
+                        <x-primary-button>
+                            Edit Post
+                        </x-primary-button>
+                    </div>
                     <!-- Clap Section -->
                     <x-clap-button :post="$post" />
                     <!-- Image -->

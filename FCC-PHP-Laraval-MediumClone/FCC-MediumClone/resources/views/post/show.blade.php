@@ -28,6 +28,7 @@
                             </div>
                         </div>
                     </div>
+                    @if ($post->user_id === Auth::id())
                     <div class="border-t border-b border-gray-200 mt-8 py-4">
                         <x-primary-button>
                             Edit Post
@@ -41,6 +42,7 @@
                             Delete Post
                         </x-danger-button>
                     </div>
+                    @endif
                     <!-- Clap Section -->
                     <x-clap-button :post="$post" />
                     <!-- Image -->

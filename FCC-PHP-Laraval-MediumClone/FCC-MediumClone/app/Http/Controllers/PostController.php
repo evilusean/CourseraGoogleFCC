@@ -113,7 +113,11 @@ class PostController extends Controller
     }
     public function category(Category $category)
     {
-        $posts = $category->posts()->latest()->simplePaginate(5);
+        $posts = $category->posts()
+            ->with(['user', 'media'])
+            ->withCount('claps')
+            ->latest()->simplePaginate(5);
+            
         return view('post.index', [
             'posts' => $posts,
         ]);

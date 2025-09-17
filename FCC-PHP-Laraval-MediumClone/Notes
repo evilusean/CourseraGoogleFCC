@@ -1195,4 +1195,4 @@ Add date and claps to displayed posts :
 $query = Post::with(['user', 'media'])
         ->withCount('claps')->latest();
 
-
+6:11:38 - Editing and Deleting Posts =========================================================================================================================================================

@@ -1165,7 +1165,12 @@ ERROR - Tutorial was wrong here, wasted like 20 minutes trying to fix, here is t
 'resources -> views -> profile -> edit.blade.php' # add the new avatar output to the edit profile page
 
 5:57:14 - Home Page Optimization ============================================================================================================================================================
-
+Add date and claps to displayed posts : 
+'views -> components -> post-item.blade.php' # copy svg icon, add it in, dynamic likes loading and same date we used in our post view
+'PostController.php' : '\DB::listen(function ($query) { \Log::info($query->sql);});' # Print the queries in the logs, you can also use dump, show how many queries a page is running
+  You can find the logs under 'storage -> logs -> laravel.log' and review the queries there, the amount of queries you do is actually very important for performance
+  in order to optimize queries, if any query runs more than once, you should be able to reduce it to once. 
+  The more posts you create the more select statements you will run, scale that up to 1,000 users(or whatever, millions), and now you're talking about real numbers 
 
 
 

@@ -122,4 +122,16 @@ class PostController extends Controller
             'posts' => $posts,
         ]);
     }
+    public function myPosts(Category $category)
+    {
+        $user = auth()->user();
+        $posts = $category->posts()
+            ->with(['user', 'media'])
+            ->withCount('claps')
+            ->latest()->simplePaginate(5);
+            
+        return view('post.index', [
+            'posts' => $posts,
+        ]);
+    }
 }

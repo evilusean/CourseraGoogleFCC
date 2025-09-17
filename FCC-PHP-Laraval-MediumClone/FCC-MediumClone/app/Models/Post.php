@@ -76,7 +76,7 @@ class Post extends Model implements HasMedia
 
     //TUTORIAL METHOD, THIS DOESN'T WORK
     // public function imageUrl($conversionName = '')
-    public function imageUrl()
+    public function imageUrl($conversionName = '')
     {
         // OLD METHOD, KEPT FOR REFERENCE FOR FUTURE SEAN
         // if ($this->image) {
@@ -89,8 +89,16 @@ class Post extends Model implements HasMedia
         //TUTORIAL METHOD, THIS DOESN'T WORK
         // return $this->getFirstMediaUrl()?->getUrl($conversionName);
 
-        //WORKING METHOD 
-        return $this->getFirstMediaUrl('default', 'preview');
+        //OLD : WORKING METHOD 
+        //return $this->getFirstMediaUrl('default', 'preview');
 
+        $media = $this->getFirstMedia();
+        if (!$media) {
+            return null;
+        }
+        if ($media->hasGeneratedConversion($conversionName)) {
+            return $media->getUrl($conversionName);
+        }
+        return $media->getUrl();
     }
 }

@@ -16,9 +16,10 @@ class PostController extends Controller
     public function index()
     {
 
-        \DB::listen(function ($query) {
-            \Log::info($query->sql);
-        }); 
+        // HOW TO VIEW QUERIES FOR OPTIMIZATION IN THE 'laravel.log' FILE
+        // \DB::listen(function ($query) {
+        //     \Log::info($query->sql);
+        // }); 
 
         // Only shows followed users posts, commented out for now
         // $user = auth()->user();
@@ -30,7 +31,7 @@ class PostController extends Controller
         // $posts = $query->simplePaginate(5);
 
         // Show all posts, paginated, regardless of follow status
-        $query = Post::with('user')
+        $query = Post::with(['user', 'media'])
         ->withCount('claps')->latest();
 
          $posts = $query->simplePaginate(5);

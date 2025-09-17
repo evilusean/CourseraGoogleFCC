@@ -32,6 +32,11 @@
                         <x-primary-button>
                             Edit Post
                         </x-primary-button>
+                        <form action="{{ route('post.destroy', $post) }}" method="POST" class="inline-block">
+                            @csrf
+                            @method('DELETE')
+                        
+                        </form>
                         <x-danger-button>
                             Delete Post
                         </x-danger-button>

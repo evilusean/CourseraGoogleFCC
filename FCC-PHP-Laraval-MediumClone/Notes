@@ -1209,8 +1209,13 @@ public function imageUrl()
         }
         return $media->getUrl();
     }
-
-
+'PostController.php' 'web.php' 'navigation.blade.php' 'Post.php' # updated all that to create a new 'MyPosts' section, now that we can view our posts, we need to be able to edit them
+When you press a 'Delete' button, the backend should receive a 'delete' method request OR 'post' method request, you can do this with a form, the route is below :
+'routes -> web.php' 'Route::delete('/post/{post}', [PostController::class,'destroy'])->name('post.destroy');' 
+'post -> show.blade.php' # here is how to use a form to do a post/delete request and use the above route to delete a post
+<form action="{{ route('post.destroy', $post) }}" method="POST" class="inline-block">
+                            @csrf
+                            @method('DELETE')
 
 
 

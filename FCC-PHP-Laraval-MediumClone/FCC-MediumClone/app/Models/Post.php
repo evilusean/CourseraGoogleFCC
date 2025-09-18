@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Storage;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Spatie\Sluggable\HasSlug;
+use Spatie\Sluggable\SlugOptions;
 
 // This is the `Post` model class. It represents the `posts` table in your database.
 // By extending `Illuminate\Database\Eloquent\Model`, it gains access to all the features of Eloquent.
@@ -29,6 +31,7 @@ class Post extends Model implements HasMedia
     // in your database based on the data defined in its corresponding factory file.
     use HasFactory;
     use InteractsWithMedia;
+    use HasSlug;
 
     protected $fillable = [
         // 'image',
@@ -43,12 +46,25 @@ class Post extends Model implements HasMedia
     public function registerMediaConversions(?Media $media = null): void
     {
         $this
-            ->addMediaConversion('preview')
+            ->addMediaConversion('image')
             ->width(400);
         
         $this
             ->addMediaConversion('large')
             ->width(1200);
+    }
+
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('default')
+            ->singleFile();
+    }
+
+    public function getSlugOptions() : SlugOptions
+    {
+        return SlugOptions::create()
+            ->generateSlugsFrom('title')
+            ->saveSlugsTo('slug');
     }
 
     public function user()

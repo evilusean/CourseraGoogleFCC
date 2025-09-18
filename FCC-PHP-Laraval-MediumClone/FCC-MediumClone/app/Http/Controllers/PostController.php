@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PostCreateRequest;
-use App\Models\Category;
+use App\Http\Requests\PostUpdateRequest;
 use App\Models\Post;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Str;
-use App\Http\Requests\PostUpdateRequest;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -66,7 +66,9 @@ class PostController extends Controller
         // $image = $data['image'];
         // unset($data['image']);
         $data['user_id'] = auth()->id();
-        $data['slug'] = Str::slug($data['title']);
+        
+        // Old slug generation method, won't allow duplicates, replaced with spatie package
+        // $data['slug'] = Str::slug($data['title']);
 
         // $imagePath = $image->store('posts', 'public');
         // $data['image'] = $imagePath;

@@ -1232,6 +1232,8 @@ https://github.com/spatie/laravel-sluggable
 'composer require spatie/laravel-sluggable' # install the new package into your project
 
 6:43:26 - Make image optional during Update ==================================================================================================================================================
+Currently in our project, when you create a post, an image is required, to change this, go into copy 'PostCreateRequest.php' and :
+  'app -> Http -> Requests -> PostUpdateRequest.php' and change 'required' to 'nullable'
 
 
 

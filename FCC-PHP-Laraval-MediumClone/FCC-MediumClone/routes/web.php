@@ -50,13 +50,12 @@ Route::get('/@{username}/{post:slug}', [PostController::class, 'show'])
 // The `name()` method assigns a unique name to the route (`dashboard`). This allows you to
 // generate URLs to this route using its name (e.g., `route('dashboard')`) which makes your code more flexible.
 
+Route::get('/category/{category}', [PostController::class, 'category'])
+        ->name('post.byCategory');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/', [PostController::class, 'index'])
         ->name('dashboard');
-
-    Route::get('/category/{category}', [PostController::class, 'category'])
-        ->name('post.byCategory');
 
     Route::get('/post/create', [PostController::class, 'create'])
         ->name('post.create');

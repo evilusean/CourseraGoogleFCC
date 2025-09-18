@@ -19,8 +19,9 @@
                 </svg>
             </x-primary-button> --}}
             <div class="">
-                published by
-                <a href="{{ route('profile.show', [ $post->user->username, 'post' => $post->slug]) }}">
+                by
+                <a href="{{ route('profile.show', [ $post->user->username, 'post' => $post->slug]) }}" 
+                class="hover:underline text-white">
                 {{ $post->user->username }}
                 </a>
                 at

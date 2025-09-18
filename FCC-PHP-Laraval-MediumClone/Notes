@@ -1216,9 +1216,16 @@ When you press a 'Delete' button, the backend should receive a 'delete' method r
 <form action="{{ route('post.destroy', $post) }}" method="POST" class="inline-block">
                             @csrf
                             @method('DELETE')
-
-
-
+'Controllers -> PostController.php'  # how to use a controller to delete the post and return to the dashboard, notice the user auth check, to ensure randoms can't delete your posts
+public function destroy(Post $post)
+    {
+        if ($post->user_id !==Auth::id()) {
+            abort(403);
+        }
+        $post->delete();
+        return redirect()->route('dashboard');
+    }
+'views -> post -> edit.blade.php' and 'views -> post -> show.blade.php' # both of these needed editing for the new buttons and creating a new edit view
 
 
 

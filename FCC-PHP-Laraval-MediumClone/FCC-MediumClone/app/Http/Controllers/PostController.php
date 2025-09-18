@@ -6,6 +6,7 @@ use App\Http\Requests\PostCreateRequest;
 use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Str;
 
 class PostController extends Controller
@@ -93,7 +94,12 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        if ($post->user_id !==Auth::id()) {
+            abort(403);
+        }
+        return view('post.edit', [
+            'post' => $post,
+        ]);
     }
 
     /**
@@ -101,7 +107,9 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        if ($post->user_id !==Auth::id()) {
+            abort(403);
+        }
     }
 
     /**

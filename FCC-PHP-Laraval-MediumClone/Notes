@@ -1246,7 +1246,7 @@ edit 'post-item.blade.php' and add the dynamic values
                 {{ $post->created_at->format('M d, Y') }}
             </div>
 
-
+6:50:30 - Use Published At field to publish posts ============================================================================================================================================
 
 
 

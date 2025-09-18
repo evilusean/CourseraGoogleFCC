@@ -9,8 +9,7 @@
         <div class="mb-3 font-normal text-gray-700 dark:text-gray-400">
             {{ Str::words($post->content, 25) }}
         </div>
-        <a href="{{ route('post.show', ['username' => $post->user->username, 'post' => $post->slug]) }}"
-            class="text-gray-400 text-sm flex gap-4 ">
+        <div class="text-gray-400 text-sm flex gap-4 ">
             {{-- <x-primary-button class="bg-blue-900">
                 Read more
                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +20,9 @@
             </x-primary-button> --}}
             <div class="">
                 published by
+                <a href="{{ route('profile.show', [ $post->user->username, 'post' => $post->slug]) }}">
                 {{ $post->user->username }}
+                </a>
                 at
                 {{ $post->created_at->format('M d, Y') }}
             </div>
@@ -34,7 +35,7 @@
                 </svg>
                 {{ $post->claps_count }}
             </span>
-        </a>
+        </div>
     </div>
     <a href="{{ route('post.show', ['username' => $post->user->username, 'post' => $post->slug]) }}">
         <img class="rounded-r-lg w-48 h-full max-h-64 object-cover" src="{{ $post->imageUrl() }}" alt="" />

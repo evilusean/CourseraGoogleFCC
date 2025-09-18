@@ -8,6 +8,7 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Str;
+use App\Http\Requests\PostUpdateRequest;
 
 class PostController extends Controller
 {
@@ -94,24 +95,34 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        if ($post->user_id !==Auth::id()) {
+        if ($post->user_id !== Auth::id()) {
             abort(403);
         }
         $categories = Category::get();
         return view('post.edit', [
             'post' => $post,
-            'categories'=> $categories,
+            'categories' => $categories,
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Post $post)
+     public function update(PostUpdateRequest $request, Post $post)
     {
-        if ($post->user_id !==Auth::id()) {
+        if ($post->user_id !== Auth::id()) {
             abort(403);
         }
+        $data = $request->validated();
+
+        $post->update($data);
+
+        if ($data['image'] ?? false) {
+            $post->addMediaFromRequest('image')
+                ->toMediaCollection();
+        }
+
+        return redirect()->route('myPosts');
     }
 
     /**

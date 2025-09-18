@@ -7,6 +7,11 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-8">
                 <form action="{{ route('post.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
+                    @if ($post->imageUrl())
+                        <div class="mb-8">
+                            <img class="w-full" src="{{ $post->imageUrl() }}" alt={{ $post->title }}>
+                        </div>
+                    @endif
                     <!-- Image -->
                     <div>
                         <x-input-label for="image" :value="__('Image')" />

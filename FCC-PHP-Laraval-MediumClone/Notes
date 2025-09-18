@@ -1236,10 +1236,17 @@ Currently in our project, when you create a post, an image is required, to chang
   'app -> Http -> Requests -> PostUpdateRequest.php' and change 'required' to 'nullable'
 
 6:44:50 - Show post owner in post item =======================================================================================================================================================
+edit 'post-item.blade.php' and add the dynamic values 
+             <div class="">
+                published by
+                <a href="{{ route('profile.show', [ $post->user->username, 'post' => $post->slug]) }}">
+                {{ $post->user->username }}
+                </a>
+                at
+                {{ $post->created_at->format('M d, Y') }}
+            </div>
 
-
-
-
+6:50:30 - Use Published At field to publish posts ============================================================================================================================================
 
 
 

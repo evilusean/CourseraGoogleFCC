@@ -30,7 +30,7 @@
                     </div>
                     @if ($post->user_id === Auth::id())
                     <div class="border-t border-b border-gray-200 mt-8 py-4">
-                        <x-primary-button>
+                        <x-primary-button href="{{ route('post.edit', $post->slug) }}">
                             Edit Post
                         </x-primary-button>
                         <form action="{{ route('post.destroy', $post) }}" method="POST" class="inline-block">

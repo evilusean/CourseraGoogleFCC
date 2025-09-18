@@ -97,8 +97,10 @@ class PostController extends Controller
         if ($post->user_id !==Auth::id()) {
             abort(403);
         }
+        $categories = Category::get();
         return view('post.edit', [
             'post' => $post,
+            'categories'=> $categories,
         ]);
     }
 

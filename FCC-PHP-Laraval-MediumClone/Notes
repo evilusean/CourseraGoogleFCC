@@ -1226,8 +1226,10 @@ public function destroy(Post $post)
         return redirect()->route('dashboard');
     }
 'views -> post -> edit.blade.php' and 'views -> post -> show.blade.php' # both of these needed editing for the new buttons and creating a new edit view
-
-
+SLUGS : Need to be unique, in order to fix this, there is another Spatie package called 'Sluggable' which will allow us to create unique slugs (tried to name a post 'test' twice and error)
+https://www.larablocks.com/package/spatie/laravel-sluggable
+https://github.com/spatie/laravel-sluggable
+'composer require spatie/laravel-sluggable' # install the new package into your project
 
 
 

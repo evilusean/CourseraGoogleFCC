@@ -1235,7 +1235,7 @@ https://github.com/spatie/laravel-sluggable
 Currently in our project, when you create a post, an image is required, to change this, go into copy 'PostCreateRequest.php' and :
   'app -> Http -> Requests -> PostUpdateRequest.php' and change 'required' to 'nullable'
 
-
+6:44:50 - Show post owner in post item =======================================================================================================================================================
 
 
 

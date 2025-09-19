@@ -62,13 +62,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::post('/post/create', [PostController::class,'store'])->name('post.store');
 
-    Route::get('/post/{post:slug}', [PostController::class, 'edit'])
+    Route::get('/post/{post:slug}/edit', [PostController::class, 'edit'])
         ->name('post.edit');
 
-    Route::put('/post/{post}', [PostController::class, 'update'])
+    Route::put('/post/{post:slug}', [PostController::class, 'update'])
         ->name('post.update');
 
-    Route::delete('/post/{post}', [PostController::class,'destroy'])->name('post.destroy');
+    Route::delete('/post/{post:slug}', [PostController::class, 'destroy'])->name('post.destroy');
 
     Route::get('/my-posts', [PostController::class,'myPosts'])->name('myPosts');
 

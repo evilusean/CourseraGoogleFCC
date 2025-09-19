@@ -13,12 +13,11 @@
                             <a href="{{ route('profile.show', $post->user) }}" class="hover:underline">
                                 {{ $post->user->name }}
                             </a>
-                            
+
                             @auth
                                 &middot;
-                                <button x-text="following ? 'Unfollow' : 'Follow'" 
-                                :class="following ? 'text-red-600' : 'text-emerald-600'"
-                                @click="follow()">
+                                <button x-text="following ? 'Unfollow' : 'Follow'"
+                                    :class="following ? 'text-red-600' : 'text-emerald-600'" @click="follow()">
                                 </button>
                             @endauth
                         </x-follow-ctr>
@@ -35,10 +34,12 @@
 
                 @if ($post->user_id === Auth::id())
                     <div class="py-4 mt-8 border-t border-b border-gray-200">
-                        <x-primary-button href="{{ route('post.edit', $post->slug) }}">
-                            Edit Post
-                        </x-primary-button>
-                        <form class="inline-block" action="{{ route('post.destroy', $post) }}" method="post">
+                        <a href="{{ route('post.edit', $post->slug) }}">
+                            <x-primary-button>
+                                Edit Post
+                            </x-primary-button>
+                        </a>
+                        <form class="inline-block" action="{{ route('post.destroy', $post->slug) }}" method="post">
                             @csrf
                             @method('delete')
                             <x-danger-button>

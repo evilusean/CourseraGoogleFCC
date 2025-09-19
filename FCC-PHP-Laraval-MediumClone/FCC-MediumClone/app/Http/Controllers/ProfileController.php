@@ -11,6 +11,7 @@ use Illuminate\Http\Request; // The core class for handling incoming HTTP reques
 use Illuminate\Support\Facades\Auth; // Provides methods for logging users in and out.
 use Illuminate\Support\Facades\Redirect; // A facade for redirecting the user to a new URL.
 use Illuminate\View\View; // A type hint indicating a function will return a server-rendered view.
+use App\Models\Post; // Importing the Post model to access user's posts.
 
 // This line declares the class. `extends Controller` means it inherits functionality
 // from Laravel's base `Controller`, which gives it access to useful built-in features.
@@ -23,14 +24,22 @@ class ProfileController extends Controller
     // The `edit` method accepts a `Request` object and is type-hinted to return a `View` object.
     public function edit(Request $request): View
     {
-        // The `view()` helper function loads a Blade template file. In this case,
-        // it's looking for the file at 'resources/views/profile/edit.blade.php'.
+        // Get the authenticated user
+        $user = $request->user();
+
+        // Get the user's posts, ordered by latest
+        $posts = Post::where('user_id', $user->id)
+            ->latest()
+            ->get();
+
+        // Return the profile edit view, passing user and posts
         return view('profile.edit', [
             // This is how we pass data from the controller to the view.
             // We're creating an array with a key 'user' and its value is the
             // currently authenticated user, which we get from `$request->user()`.
             // The view can then access this data using the variable `$user`.
-            'user' => $request->user(),
+            'user' => $user,
+            'posts' => $posts,
         ]);
     }
 
@@ -43,11 +52,7 @@ class ProfileController extends Controller
     // It is type-hinted to return a `RedirectResponse`.
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        // This is a powerful Eloquent ORM method. It fills the user model with
-        // the validated data from the request. The `validated()` method on the
-        // form request automatically returns only the validated fields.
-
-        
+        // Get validated data from the request
         $data = $request->validated();
 
         //OLD METHOD :
@@ -57,7 +62,10 @@ class ProfileController extends Controller
         //     $data['image'] = $image->store('avatars', 'public');
         // } 
 
+        // Get the authenticated user
         $user = $request->user();
+
+        // Fill the user model with validated data
         $user->fill($data);
 
         // We check if the 'email' field has been changed. The `isDirty()` method
@@ -72,8 +80,14 @@ class ProfileController extends Controller
         // This line saves the changes to the user model to the database.
         $user->save();
 
-        $user->addMediaFromRequest('image')
-            ->toMediaCollection('avatar');
+        // Handle avatar image upload using Spatie Media Library
+        if ($request->hasFile('image')) {
+            // Remove old avatar if exists
+            $user->clearMediaCollection('avatar');
+            // Add new avatar
+            $user->addMediaFromRequest('image')
+                ->toMediaCollection('avatar');
+        }
 
         // This returns a redirect response. We are redirecting to the route named 'profile.edit'
         // and adding a session-based status message. The `.with('status', 'profile-updated')`

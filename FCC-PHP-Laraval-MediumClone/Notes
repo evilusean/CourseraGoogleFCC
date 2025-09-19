@@ -1252,43 +1252,9 @@ Add the new datetime logic to 'PostController.php' so Future Sean can publish
 'php artisan tinker -> \App\Models\Post::query()->Update(['published_at' => '2025-03-18 00:00:00'])' # since we updated our models and controllers, we need to give them all new 'published_at 
   # now we can see all the posts again, because all the posts now have a 'published_at' date
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+6:59:38 - Fix profile page avatar ============================================================================================================================================================
+Just finished everything, need to do a fresh migration and take some pretty pictures and update my completion dates, future sean problems
+'php artisan migrate:fresh' # got to recreate the users and posts with better names and lorem ipsum, instead of 'test1' 'test2', etc. take some pictures and save for posterity
 
 
 

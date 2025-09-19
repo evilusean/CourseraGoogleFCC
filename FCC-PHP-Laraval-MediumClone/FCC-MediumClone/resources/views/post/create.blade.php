@@ -50,7 +50,7 @@
                         <x-input-error :messages="$errors->get('content')" class="mt-2" />
                     </div>
 
-                     <!-- Published At -->
+                    <!-- Published At -->
                     <div class="mt-4">
                         <x-input-label for="published_at" :value="__('Published At')" />
                         <x-text-input id="published_at" class="block mt-1 w-full" type="datetime-local" name="published_at"

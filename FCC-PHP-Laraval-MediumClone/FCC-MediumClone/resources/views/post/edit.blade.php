@@ -7,7 +7,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-8">
                 <form action="{{ route('post.update', $post->id) }}" method="post" enctype="multipart/form-data">
                     @csrf
-                    @method('put')
+                @method('put')
 
                     @if ($post->imageUrl())
                         <div class="mb-8">
@@ -58,6 +58,15 @@
                             </x-input-textarea>
                         <x-input-error :messages="$errors->get('content')" class="mt-2" />
                     </div>
+
+                    <!-- Published At -->
+                    <div class="mt-4">
+                        <x-input-label for="published_at" :value="__('Published At')" />
+                        <x-text-input id="published_at" class="block mt-1 w-full" type="datetime-local" name="published_at"
+                            :value="old('published_at', $post->published_at)" required autofocus />
+                        <x-input-error :messages="$errors->get('published_at')" class="mt-2" />
+                    </div>
+
                     <x-primary-button class="mt-4">
                         Submit
                     </x-primary-button>

@@ -34,7 +34,9 @@ class PostController extends Controller
 
         // Show all posts, paginated, regardless of follow status
         $query = Post::with(['user', 'media'])
-        ->withCount('claps')->latest();
+        ->where('published_at', '<=', now())
+        ->withCount('claps')
+        ->latest();
 
          $posts = $query->simplePaginate(5);
 
@@ -140,11 +142,22 @@ class PostController extends Controller
     }
     public function category(Category $category)
     {
-        $posts = $category->posts()
+        $user = auth()->user();
+
+        $query = $category->posts()
+            ->where('published_at', '<=', now())
             ->with(['user', 'media'])
             ->withCount('claps')
-            ->latest()->simplePaginate(5);
+            ->latest();
+            // ->simplePaginate(5);
+        
+        // only show posts from followed users, commented out for now, saved for future Sean
+        // if ($user) {
+        //     $ids = $user->following()->pluck('users.id');
+        //     $query->whereIn('user_id', $ids); 
+        // }
             
+        $posts = $query->simplePaginate(5);;
         return view('post.index', [
             'posts' => $posts,
         ]);
